@@ -1,0 +1,89 @@
+/* חברותא · הדפסה / ייצוא ל־PDF: A4, RTL, יישור דו־צדדי כמו במסך.
+   body[data-print="all"] = כל הביאור; "part:ID" = פרק אחד; "book" = הפרשה כולה; "card" / "results" = כרטיס או רשימה. בלי data-print: הדפסה רגילה של העמוד. */
+@page {
+  size: A4;
+  margin: 2cm 2cm 2.2cm;
+  @top-left { content: "חברותא · בראשית"; white-space: nowrap; font: 9pt "Assistant", "Liberation Sans", Arial, sans-serif; color: #555; }
+  @bottom-right { content: "טיוטה: נבנה בעזרת בינה מלאכותית, ללא בקרה רבנית"; white-space: nowrap; font: 8pt "Assistant", "Liberation Sans", Arial, sans-serif; color: #666; }
+  @bottom-center { content: "עמוד " counter(page); font: 9pt "Assistant", "Liberation Sans", Arial, sans-serif; color: #555; }
+}
+.phead, #print-area, #book { display: none; }
+@media print {
+  html:root:root:root, html[data-theme="dark"]:root {
+    --paper: #fff; --card: #fff; --paper-2: #f2f2f2; --ink: #000; --ink-2: #222; --ink-3: #555; --rule: #bbb; --rule-2: #ddd; --accent: #5a1a28; --accent-soft: #f3e8ea; --accent-line: #9a6a73; --hl: #fff3b0; color-scheme: light;
+  }
+  * { -webkit-print-color-adjust: exact; print-color-adjust: exact; box-shadow: none !important; animation: none !important; }
+  html { scroll-padding-top: 0; }
+  body { background: #fff; color: #000; font-family: var(--serif); font-size: 11pt; line-height: 1.65; padding: 0; }
+  .draftbar, .top, .bottombar, .toc-fab, .rail, .aside, .progress, .no-print, .backpill, .toast, .tip, .menu, .pal, .skip, .verses, .rounds, .end, .pager, .pcopy, .hero .metaline, .hero .crumbs, .hero .sibling, .hero h1 { display: none !important; }
+  .main, .main.reader { max-width: none; min-height: 0; padding: 0; margin: 0; }
+  .rd { display: block; padding: 0; font-size: 11pt; }
+  .col { width: auto; }
+  .hero { margin: 0 0 8pt; }
+  .hero .lead { font-size: 11pt; margin: 0 0 6pt; color: #000; }
+  .hero .statusline { font-size: 9.5pt; margin: 0 0 10pt; color: #333; }
+  .phead { display: block; border-bottom: 1.2pt solid #000; padding-bottom: 6pt; margin-bottom: 12pt; break-after: avoid; }
+  .phead .ph-top { display: flex; justify-content: space-between; font: 9pt var(--sans); color: #444; margin-bottom: 4pt; }
+  .phead .ph-unit { font: 700 17pt/1.3 var(--serif); margin: 0; }
+  .phead .ph-part { font: 700 13pt/1.4 var(--serif); margin: 4pt 0 0; }
+  .phead .ph-meta { font: 9pt/1.5 var(--sans); color: #444; margin-top: 4pt; }
+  body[data-print^="part:"] .hero { display: none; }
+  body[data-print^="part:"] section.part:not(.print-target) { display: none; }
+  body[data-print^="part:"] section.part.print-target { border: 0; padding: 0; margin: 0; }
+  body[data-print^="part:"] section.part.print-target > .part-head { display: none; }
+  article.biur { font-size: 11pt; line-height: 1.7; container-type: normal; }
+  article.biur section.part { margin: 0 0 14pt; padding-top: 10pt; border-top: .6pt solid #999; }
+  article.biur section.part:first-child, article.biur section.part + section.part { margin-top: 0; }
+  article.biur section.part:first-child { border-top: 0; padding-top: 0; }
+  article.biur h2 { font-size: 14pt; margin: 0 0 6pt; break-after: avoid; }
+  article.biur h3 { font-size: 12.5pt; margin: 14pt 0 4pt; break-after: avoid; }
+  article.biur h4 { font-size: 11.5pt; margin: 10pt 0 3pt; break-after: avoid; }
+  .part-head { display: block; break-after: avoid; }
+  article.biur p { margin: 0 0 7pt; orphans: 3; widows: 3; }
+  article.biur li { margin-bottom: 3pt; orphans: 2; widows: 2; }
+  /* יישור דו־צדדי, אותם כללים כמו במסך */
+  html[data-justify="on"] article.biur section.part > p, html[data-justify="on"] article.biur section.part > ul > li, html[data-justify="on"] article.biur section.part > ol > li,
+  html[data-justify="on"] article.biur section.part > blockquote > p, html[data-justify="on"] article.biur aside.synth > p, html[data-justify="on"] article.biur aside.synth > ul > li,
+  html[data-justify="on"] .book-h .lead, html[data-justify="on"] .hero .lead { text-align: justify; text-justify: inter-word; text-align-last: start; word-spacing: -.03em; }
+  article.biur blockquote { margin: 0 0 8pt; padding: 3pt 9pt 3pt 2pt; font-size: 10.5pt; line-height: 1.65; border-inline-start: 1.5pt solid #777; color: #111; break-inside: avoid-page; }
+  article.biur aside.synth { padding: 3pt 10pt 0 2pt; margin: 8pt 0; break-inside: avoid-page; border-inline-start: .8pt dashed #777; }
+  article.biur .qt.cite, article.biur .qt { border: 0; background: none; }
+  article.biur .smark { font-size: 7pt; border: .6pt solid #777; color: #333; }
+  article.biur [data-conf="likely"] { text-decoration: none; }
+  a, a:visited { color: inherit; text-decoration: underline; }
+  article.biur .scroll { overflow: visible; border: .6pt solid #999; margin: 0 0 10pt; background: none; }
+  article.biur table { min-width: 0 !important; max-width: 100%; width: 100%; font-size: 9.5pt; line-height: 1.45; table-layout: auto; }
+  article.biur th, article.biur td { min-width: 2.4em !important; padding: 3pt 5pt; overflow-wrap: break-word; border-bottom: .5pt solid #bbb; }
+  article.biur td .cell { max-height: none !important; -webkit-mask-image: none !important; mask-image: none !important; overflow: visible; }
+  article.biur .rowtog { display: none; }
+  article.biur thead { display: table-header-group; }
+  article.biur thead th { background: #eee !important; color: #000; font-size: 9pt; }
+  article.biur tr, img { break-inside: avoid; }
+  article.biur .nmatch, article.biur .selel, article.biur .hl { background: none !important; box-shadow: none; outline: 0; }
+  /* אזורי הדפסה נפרדים */
+  body[data-print="book"] #app, body[data-print="card"] #app, body[data-print="results"] #app { display: none !important; }
+  body[data-print="book"] #print-area, body[data-print="card"] #print-area, body[data-print="results"] #print-area { display: block; }
+  body[data-print="book"] #book { display: block; }
+  .book-progress { display: none !important; }
+  .book-cover { display: flex; min-height: 22cm; align-items: center; justify-content: center; text-align: center; break-after: page; }
+  .book-cover .bc-k { font: 600 14pt var(--sans); letter-spacing: .1em; color: #555; margin: 0 0 12pt; }
+  .book-cover h1 { display: block !important; font-size: 44pt; line-height: 1.1; margin: 0 0 14pt; }
+  .book-cover .bc-s { font: 15pt/1.6 var(--serif); margin: 0 0 20pt; }
+  .book-cover .bc-m, .book-cover .bc-d { font: 10pt var(--sans); color: #555; margin: 3pt 0; }
+  .book-toc { break-after: page; }
+  .book-toc h2 { font-size: 20pt; margin: 0 0 12pt; border-bottom: 1.2pt solid #000; padding-bottom: 6pt; }
+  .book-toc h3 { font-size: 12.5pt; margin: 14pt 0 4pt; color: var(--accent); break-after: avoid; }
+  .book-toc h3 small { font: 9pt var(--sans); color: #555; margin-inline-start: 8pt; }
+  .book-toc ol { list-style: none; margin: 0; padding: 0; }
+  .book-toc li { display: grid; grid-template-columns: 1.6cm 1fr auto; gap: 6pt; padding: 2.2pt 0; border-bottom: .4pt dotted #aaa; font-size: 10pt; line-height: 1.4; break-inside: avoid; }
+  .book-toc li.sub { padding-inline-start: 1.6cm; font-size: 9pt; color: #444; }
+  .book-toc .tn { font-family: var(--sans); color: #555; } .book-toc .tw { font-family: var(--sans); color: #555; font-size: 9pt; }
+  .book-doc { break-before: page; }
+  .book-doc .book-h { border-bottom: 1.2pt solid #000; padding-bottom: 6pt; margin-bottom: 12pt; break-after: avoid; }
+  .book-doc .book-h h1 { display: block !important; font-size: 18pt; line-height: 1.3; margin: 0 0 6pt; }
+  .book-doc .bh-w { font: 9pt var(--sans); color: #444; margin: 0 0 3pt; }
+  .book-doc .lead { font-size: 10.5pt; margin: 0 0 4pt; } .book-doc .statusline { font-size: 9pt; margin: 0; color: #444; }
+  .res-it { padding: 5pt 0; border-bottom: .5pt solid #ccc; break-inside: avoid; } .res-it .t { font: 700 11pt var(--serif); } .res-it .m { font: 9pt var(--sans); color: #444; display: flex; gap: 8pt; } .res-it .s { font: 10pt/1.55 var(--serif); }
+  .icard { font-family: var(--sans); } .icard .btn, .icard .acts { display: none !important; }
+  .ihead { display: block; } .ig { display: none; } .ititle { font: 700 14pt var(--serif); } .yrs { display: flex; gap: 14pt; }
+}
