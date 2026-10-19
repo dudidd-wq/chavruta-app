@@ -1,0 +1,877 @@
+{
+ "built": "2026-10-19 03:56:19.214350",
+ "seconds": 53,
+ "total_bytes": 57918771,
+ "data_bytes": 57171205,
+ "sizes": {
+  "b-N04.js": 473553,
+  "tolt-15.js": 320485,
+  "b-A3.js": 321558,
+  "parsha-11.js": 60120,
+  "b-C07.js": 140655,
+  "parsha-22.js": 42908,
+  "parsha-32.js": 57739,
+  "b-U-eden.js": 405175,
+  "tolt-8.js": 240956,
+  "b-C20d.js": 203604,
+  "parsha-53.js": 17532,
+  "b-C03.js": 209043,
+  "parsha-4.js": 63261,
+  "b-G6.js": 351970,
+  "tolt-13.js": 354990,
+  "tolt-25.js": 447781,
+  "parsha-42.js": 53072,
+  "b-C01d.js": 153155,
+  "tree-t.js": 2360607,
+  "parsha-2.js": 68684,
+  "b-C17d.js": 156342,
+  "parsha-24.js": 58653,
+  "tree-u16.js": 210128,
+  "parsha-43.js": 43319,
+  "parsha-50.js": 80227,
+  "parsha-38.js": 70240,
+  "parsha-36.js": 91970,
+  "b-U-toldot.js": 263353,
+  "tree-u5.js": 422844,
+  "tolt-24.js": 456624,
+  "parsha-46.js": 84452,
+  "parsha-35.js": 60285,
+  "parsha-29.js": 53199,
+  "parsha-26.js": 42105,
+  "tree-u19.js": 375141,
+  "tree-u6.js": 414256,
+  "b-N01d.js": 425037,
+  "b-C18d.js": 132701,
+  "core.js": 1250806,
+  "b-C06.js": 702271,
+  "tolt-11.js": 355697,
+  "tolt-26.js": 435212,
+  "tolt-9.js": 367965,
+  "b-U-day5.js": 354973,
+  "b-C12.js": 138142,
+  "tolt-4.js": 216464,
+  "b-G1.js": 426743,
+  "parsha-21.js": 54685,
+  "tree-u1.js": 415519,
+  "parsha-9.js": 71726,
+  "daily.js": 188831,
+  "tolt-22.js": 450579,
+  "b-U-day6.js": 268356,
+  "b-U-shabbat.js": 414666,
+  "parsha-19.js": 48491,
+  "parsha-18.js": 39307,
+  "b-C18.js": 202890,
+  "b-U-ezer.js": 467644,
+  "b-U-isha.js": 348234,
+  "parsha-51.js": 53932,
+  "b-C17.js": 224531,
+  "tolt-18.js": 343601,
+  "parsha-12.js": 58880,
+  "tree-u20.js": 134311,
+  "b-N03.js": 341040,
+  "tolt-19.js": 387842,
+  "b-C10.js": 250559,
+  "b-C19d.js": 129349,
+  "b-A2.js": 324022,
+  "parsha-28.js": 53947,
+  "b-C12d.js": 103013,
+  "kabbalah.js": 351511,
+  "tree-u13.js": 48945,
+  "search.js": 3317405,
+  "tree-u14.js": 671055,
+  "parsha-23.js": 53523,
+  "parsha-7.js": 63893,
+  "parsha-47.js": 43643,
+  "tolt-6.js": 231403,
+  "parsha-40.js": 88656,
+  "b-C10d.js": 162703,
+  "topics.js": 588674,
+  "tolt-1.js": 246750,
+  "b-C05.js": 273552,
+  "parsha-15.js": 124277,
+  "b-U-chet.js": 406004,
+  "tree-u15.js": 419520,
+  "b-C15d.js": 214723,
+  "b-G4.js": 307670,
+  "parsha-1.js": 76327,
+  "b-U-dorot.js": 398625,
+  "b-C06d.js": 708140,
+  "b-C19.js": 196236,
+  "b-C03d.js": 128049,
+  "tree-u18.js": 417767,
+  "b-A5.js": 405032,
+  "tree-u17.js": 785734,
+  "parsha-10.js": 50324,
+  "b-C04.js": 216087,
+  "b-U-kayin.js": 387798,
+  "tree-u8.js": 406736,
+  "b-U-day4.js": 272841,
+  "tolt-7.js": 209718,
+  "tolt-23.js": 402242,
+  "parsha-8.js": 122337,
+  "parsha-41.js": 66566,
+  "parsha-34.js": 81161,
+  "b-C16.js": 282136,
+  "tree-u10.js": 428573,
+  "parsha-25.js": 56611,
+  "parsha-5.js": 53048,
+  "parsha-39.js": 91046,
+  "parsha-48.js": 52515,
+  "b-N04d.js": 401808,
+  "parsha-6.js": 61419,
+  "b-U-day2.js": 392346,
+  "b-C13.js": 153264,
+  "places.js": 3328137,
+  "b-C07d.js": 76389,
+  "tree.js": 220599,
+  "parsha-49.js": 56639,
+  "parsha-13.js": 71471,
+  "b-G3.js": 494602,
+  "b-N02.js": 574088,
+  "new.js": 7726,
+  "parsha-3.js": 54939,
+  "tree-u12.js": 409439,
+  "parsha-52.js": 68889,
+  "parsha-14.js": 79536,
+  "parsha-27.js": 31715,
+  "tree-u9.js": 382256,
+  "tolt-3.js": 201165,
+  "tolt-5.js": 209044,
+  "b-N01.js": 525651,
+  "b-C09d.js": 89176,
+  "tree-u11.js": 197751,
+  "b-A4.js": 314373,
+  "b-G5.js": 653134,
+  "parsha.js": 156061,
+  "tolt-10.js": 300918,
+  "parsha-33.js": 81828,
+  "b-C15.js": 279398,
+  "tolt-14.js": 379411,
+  "parsha-30.js": 68855,
+  "b-C04d.js": 144206,
+  "tolt-17.js": 364886,
+  "parsha-45.js": 65560,
+  "parsha-44.js": 81883,
+  "tolt-16.js": 369502,
+  "b-C16d.js": 201821,
+  "tree-u4.js": 412207,
+  "tolt-0.js": 253021,
+  "parsha-20.js": 73649,
+  "tree-u7.js": 409888,
+  "b-U-day3a.js": 333529,
+  "b-C08.js": 217917,
+  "b-U-1-2.js": 211172,
+  "tolt-20.js": 396805,
+  "b-C14.js": 167618,
+  "b-N03d.js": 202689,
+  "b-U-day1.js": 418728,
+  "parsha-16.js": 86835,
+  "b-N02d.js": 411490,
+  "tanya.js": 1301342,
+  "b-U-day3b.js": 283156,
+  "b-C02d.js": 168050,
+  "b-C05d.js": 161186,
+  "b-C13d.js": 103742,
+  "parsha-31.js": 55211,
+  "tree-u0.js": 408492,
+  "tolt-27.js": 69407,
+  "tree-u3.js": 407119,
+  "b-C11.js": 281535,
+  "b-A1.js": 376395,
+  "b-G2.js": 467088,
+  "b-C01.js": 233100,
+  "b-C02.js": 275154,
+  "parsha-17.js": 76092,
+  "b-C20.js": 293045,
+  "b-C09.js": 156190,
+  "tolt-21.js": 394416,
+  "tolt-12.js": 272095,
+  "b-C08d.js": 145410,
+  "tolt-2.js": 203504,
+  "b-C11d.js": 190134,
+  "b-C14d.js": 113985,
+  "tree-u2.js": 416455,
+  "parsha-37.js": 58190,
+  "links.js": 1793771
+ },
+ "nodes": 633,
+ "edges": 604,
+ "docs": 75,
+ "search_terms": 50759,
+ "search_docs": 12502,
+ "link_stats": {
+  "unresolved": 15,
+  "unresolved_keys": 0,
+  "with_evidence": 477,
+  "quotes": {
+   "total": 34772,
+   "short": 16935,
+   "matched": 17207,
+   "nomatch": 630
+  },
+  "rows": {
+   "total": 830,
+   "matched": 595,
+   "conf_high": 319,
+   "conf_likely": 219,
+   "unmatched": 235,
+   "conf_exact": 57
+  },
+  "refs": {
+   "url": {
+    "node": 819,
+    "vol": 146,
+    "none": 15
+   },
+   "exid": {
+    "ok": 5
+   },
+   "key": {
+    "node": 42
+   }
+  },
+  "rowlinks": 285,
+  "pairs_without_evidence": 19
+ },
+ "parity": {
+  "G1": [
+   84203,
+   84203
+  ],
+  "G2": [
+   92453,
+   92453
+  ],
+  "G3": [
+   95291,
+   95291
+  ],
+  "G4": [
+   66746,
+   66746
+  ],
+  "G5": [
+   130001,
+   130001
+  ],
+  "G6": [
+   62565,
+   62565
+  ],
+  "C01": [
+   42901,
+   42901
+  ],
+  "C01d": [
+   17330,
+   17330
+  ],
+  "C02": [
+   51658,
+   51658
+  ],
+  "C02d": [
+   16497,
+   16497
+  ],
+  "C03": [
+   38954,
+   38954
+  ],
+  "C03d": [
+   13620,
+   13620
+  ],
+  "C04": [
+   39738,
+   39738
+  ],
+  "C04d": [
+   16471,
+   16471
+  ],
+  "C05": [
+   53482,
+   53482
+  ],
+  "C05d": [
+   18338,
+   18338
+  ],
+  "A1": [
+   81427,
+   81427
+  ],
+  "A2": [
+   63836,
+   63836
+  ],
+  "A3": [
+   66094,
+   66094
+  ],
+  "A4": [
+   64749,
+   64749
+  ],
+  "A5": [
+   82420,
+   82420
+  ],
+  "C06": [
+   89920,
+   89920
+  ],
+  "C06d": [
+   80993,
+   80993
+  ],
+  "U-1-2": [
+   45246,
+   45246
+  ],
+  "C07": [
+   28972,
+   28972
+  ],
+  "C07d": [
+   9228,
+   9228
+  ],
+  "C08": [
+   39912,
+   39912
+  ],
+  "C08d": [
+   16247,
+   16247
+  ],
+  "U-day1": [
+   81147,
+   81147
+  ],
+  "C09": [
+   30400,
+   30400
+  ],
+  "C09d": [
+   11233,
+   11233
+  ],
+  "U-day2": [
+   79265,
+   79265
+  ],
+  "U-day3a": [
+   65173,
+   65173
+  ],
+  "U-day3b": [
+   57181,
+   57181
+  ],
+  "U-day4": [
+   57096,
+   57096
+  ],
+  "U-day5": [
+   77805,
+   77805
+  ],
+  "U-day6": [
+   52088,
+   52088
+  ],
+  "C10": [
+   44843,
+   44843
+  ],
+  "C10d": [
+   16470,
+   16470
+  ],
+  "U-shabbat": [
+   77506,
+   77506
+  ],
+  "C11": [
+   50766,
+   50766
+  ],
+  "C11d": [
+   21624,
+   21624
+  ],
+  "C12": [
+   26078,
+   26078
+  ],
+  "C12d": [
+   13507,
+   13507
+  ],
+  "U-toldot": [
+   48565,
+   48565
+  ],
+  "C13": [
+   28168,
+   28168
+  ],
+  "C13d": [
+   12358,
+   12358
+  ],
+  "C14": [
+   30989,
+   30989
+  ],
+  "C14d": [
+   13663,
+   13663
+  ],
+  "C15": [
+   50493,
+   50493
+  ],
+  "C15d": [
+   28030,
+   28030
+  ],
+  "U-eden": [
+   81527,
+   81527
+  ],
+  "C16": [
+   46982,
+   46982
+  ],
+  "C16d": [
+   21774,
+   21774
+  ],
+  "U-ezer": [
+   84398,
+   84398
+  ],
+  "C17": [
+   40813,
+   40813
+  ],
+  "C17d": [
+   17718,
+   17718
+  ],
+  "U-isha": [
+   67319,
+   67319
+  ],
+  "U-chet": [
+   83816,
+   83816
+  ],
+  "C18": [
+   38024,
+   38024
+  ],
+  "C18d": [
+   15332,
+   15332
+  ],
+  "C19": [
+   37825,
+   37825
+  ],
+  "C19d": [
+   18330,
+   18330
+  ],
+  "U-kayin": [
+   76908,
+   76908
+  ],
+  "C20": [
+   55191,
+   55191
+  ],
+  "C20d": [
+   24179,
+   24179
+  ],
+  "U-dorot": [
+   69905,
+   69905
+  ],
+  "N01": [
+   59404,
+   59404
+  ],
+  "N01d": [
+   25904,
+   25904
+  ],
+  "N02": [
+   92510,
+   92510
+  ],
+  "N02d": [
+   35118,
+   35118
+  ],
+  "N03": [
+   63376,
+   63376
+  ],
+  "N03d": [
+   18291,
+   18291
+  ],
+  "N04": [
+   51612,
+   51612
+  ],
+  "N04d": [
+   25512,
+   25512
+  ]
+ },
+ "sources": {
+  "G1": {
+   "path": "data/parsha/בראשית/verses/G1/rewrite/biur.reader.md",
+   "reader": true
+  },
+  "G2": {
+   "path": "data/parsha/בראשית/rewrite/G2/biur.reader.md",
+   "reader": true
+  },
+  "G3": {
+   "path": "data/parsha/בראשית/rewrite/G3/biur.reader.md",
+   "reader": true
+  },
+  "G4": {
+   "path": "data/parsha/בראשית/rewrite/G4/biur.reader.md",
+   "reader": true
+  },
+  "G5": {
+   "path": "data/parsha/בראשית/rewrite/G5/biur.reader.md",
+   "reader": true
+  },
+  "G6": {
+   "path": "data/parsha/בראשית/rewrite/G6/biur.reader.md",
+   "reader": true
+  },
+  "C01": {
+   "path": "data/parsha/בראשית/rewrite/C_ר-חזקי-פתח/biur.reader.md",
+   "reader": true
+  },
+  "C01d": {
+   "path": "data/parsha/בראשית/rewrite/C_ר-חזקי-פתח/dorot.reader.md",
+   "reader": true
+  },
+  "C02": {
+   "path": "data/parsha/בראשית/rewrite/C_השמים-כסאי/biur.reader.md",
+   "reader": true
+  },
+  "C02d": {
+   "path": "data/parsha/בראשית/rewrite/C_השמים-כסאי/dorot.reader.md",
+   "reader": true
+  },
+  "C03": {
+   "path": "data/parsha/בראשית/rewrite/C_הברכות/biur.reader.md",
+   "reader": true
+  },
+  "C03d": {
+   "path": "data/parsha/בראשית/rewrite/C_הברכות/dorot.reader.md",
+   "reader": true
+  },
+  "C04": {
+   "path": "data/parsha/בראשית/rewrite/C_ויאמר-לו-יהונתן/biur.reader.md",
+   "reader": true
+  },
+  "C04d": {
+   "path": "data/parsha/בראשית/rewrite/C_ויאמר-לו-יהונתן/dorot.reader.md",
+   "reader": true
+  },
+  "C05": {
+   "path": "data/parsha/בראשית/rewrite/C_כי-כאשר-השמים/biur.reader.md",
+   "reader": true
+  },
+  "C05d": {
+   "path": "data/parsha/בראשית/rewrite/C_כי-כאשר-השמים/dorot.reader.md",
+   "reader": true
+  },
+  "A1": {
+   "path": "data/parsha/בראשית/rewrite/A1/biur.reader.md",
+   "reader": true
+  },
+  "A2": {
+   "path": "data/parsha/בראשית/rewrite/A2/biur.reader.md",
+   "reader": true
+  },
+  "A3": {
+   "path": "data/parsha/בראשית/rewrite/A3/biur.reader.md",
+   "reader": true
+  },
+  "A4": {
+   "path": "data/parsha/בראשית/rewrite/A4/biur.reader.md",
+   "reader": true
+  },
+  "A5": {
+   "path": "data/parsha/בראשית/rewrite/A5/biur.reader.md",
+   "reader": true
+  },
+  "C06": {
+   "path": "data/parsha/בראשית/rewrite/C_בראשית-ברא/biur.reader.md",
+   "reader": true
+  },
+  "C06d": {
+   "path": "data/parsha/בראשית/rewrite/C_בראשית-ברא/dorot.reader.md",
+   "reader": true
+  },
+  "U-1-2": {
+   "path": "data/parsha/בראשית/rewrite/U-1-2/biur.reader.md",
+   "reader": true
+  },
+  "C07": {
+   "path": "data/parsha/בראשית/rewrite/C_והארץ-היתה-תהו/biur.reader.md",
+   "reader": true
+  },
+  "C07d": {
+   "path": "data/parsha/בראשית/rewrite/C_והארץ-היתה-תהו/dorot.reader.md",
+   "reader": true
+  },
+  "C08": {
+   "path": "data/parsha/בראשית/rewrite/C_ורוח-אלקים/biur.reader.md",
+   "reader": true
+  },
+  "C08d": {
+   "path": "data/parsha/בראשית/rewrite/C_ורוח-אלקים/dorot.reader.md",
+   "reader": true
+  },
+  "U-day1": {
+   "path": "data/parsha/בראשית/rewrite/U-day1/biur.reader.md",
+   "reader": true
+  },
+  "C09": {
+   "path": "data/parsha/בראשית/rewrite/C_יהי-אור/biur.reader.md",
+   "reader": true
+  },
+  "C09d": {
+   "path": "data/parsha/בראשית/rewrite/C_יהי-אור/dorot.reader.md",
+   "reader": true
+  },
+  "U-day2": {
+   "path": "data/parsha/בראשית/rewrite/U-day2/biur.reader.md",
+   "reader": true
+  },
+  "U-day3a": {
+   "path": "data/parsha/בראשית/rewrite/U-day3a/biur.reader.md",
+   "reader": true
+  },
+  "U-day3b": {
+   "path": "data/parsha/בראשית/rewrite/U-day3b/biur.reader.md",
+   "reader": true
+  },
+  "U-day4": {
+   "path": "data/parsha/בראשית/rewrite/U-day4/biur.reader.md",
+   "reader": true
+  },
+  "U-day5": {
+   "path": "data/parsha/בראשית/rewrite/U-day5/biur.reader.md",
+   "reader": true
+  },
+  "U-day6": {
+   "path": "data/parsha/בראשית/rewrite/U-day6/biur.reader.md",
+   "reader": true
+  },
+  "C10": {
+   "path": "data/parsha/בראשית/rewrite/C_נעשה-אדם/biur.reader.md",
+   "reader": true
+  },
+  "C10d": {
+   "path": "data/parsha/בראשית/rewrite/C_נעשה-אדם/dorot.reader.md",
+   "reader": true
+  },
+  "U-shabbat": {
+   "path": "data/parsha/בראשית/rewrite/U-shabbat/biur.reader.md",
+   "reader": true
+  },
+  "C11": {
+   "path": "data/parsha/בראשית/rewrite/C_ויכלו/biur.reader.md",
+   "reader": true
+  },
+  "C11d": {
+   "path": "data/parsha/בראשית/rewrite/C_ויכלו/dorot.reader.md",
+   "reader": true
+  },
+  "C12": {
+   "path": "data/parsha/בראשית/rewrite/C_אשר-ברא/biur.reader.md",
+   "reader": true
+  },
+  "C12d": {
+   "path": "data/parsha/בראשית/rewrite/C_אשר-ברא/dorot.reader.md",
+   "reader": true
+  },
+  "U-toldot": {
+   "path": "data/parsha/בראשית/rewrite/U-toldot/biur.reader.md",
+   "reader": true
+  },
+  "C13": {
+   "path": "data/parsha/בראשית/rewrite/C_אלה-תולדות/biur.reader.md",
+   "reader": true
+  },
+  "C13d": {
+   "path": "data/parsha/בראשית/rewrite/C_אלה-תולדות/dorot.reader.md",
+   "reader": true
+  },
+  "C14": {
+   "path": "data/parsha/בראשית/rewrite/C_וכל-שיח-השדה/biur.reader.md",
+   "reader": true
+  },
+  "C14d": {
+   "path": "data/parsha/בראשית/rewrite/C_וכל-שיח-השדה/dorot.reader.md",
+   "reader": true
+  },
+  "C15": {
+   "path": "data/parsha/בראשית/rewrite/C_וייצר/biur.reader.md",
+   "reader": true
+  },
+  "C15d": {
+   "path": "data/parsha/בראשית/rewrite/C_וייצר/dorot.reader.md",
+   "reader": true
+  },
+  "U-eden": {
+   "path": "data/parsha/בראשית/rewrite/U-eden/biur.reader.md",
+   "reader": true
+  },
+  "C16": {
+   "path": "data/parsha/בראשית/rewrite/C_ויקח-ה-אלקים/biur.reader.md",
+   "reader": true
+  },
+  "C16d": {
+   "path": "data/parsha/בראשית/rewrite/C_ויקח-ה-אלקים/dorot.reader.md",
+   "reader": true
+  },
+  "U-ezer": {
+   "path": "data/parsha/בראשית/rewrite/U-ezer/biur.reader.md",
+   "reader": true
+  },
+  "C17": {
+   "path": "data/parsha/בראשית/rewrite/C_לא-טוב-היות/biur.reader.md",
+   "reader": true
+  },
+  "C17d": {
+   "path": "data/parsha/בראשית/rewrite/C_לא-טוב-היות/dorot.reader.md",
+   "reader": true
+  },
+  "U-isha": {
+   "path": "data/parsha/בראשית/rewrite/U-isha/biur.reader.md",
+   "reader": true
+  },
+  "U-chet": {
+   "path": "data/parsha/בראשית/rewrite/U-chet/biur.reader.md",
+   "reader": true
+  },
+  "C18": {
+   "path": "data/parsha/בראשית/rewrite/C_והנחש-היה-ערום/biur.reader.md",
+   "reader": true
+  },
+  "C18d": {
+   "path": "data/parsha/בראשית/rewrite/C_והנחש-היה-ערום/dorot.reader.md",
+   "reader": true
+  },
+  "C19": {
+   "path": "data/parsha/בראשית/rewrite/C_הן-האדם/biur.reader.md",
+   "reader": true
+  },
+  "C19d": {
+   "path": "data/parsha/בראשית/rewrite/C_הן-האדם/dorot.reader.md",
+   "reader": true
+  },
+  "U-kayin": {
+   "path": "data/parsha/בראשית/rewrite/U-kayin/biur.reader.md",
+   "reader": true
+  },
+  "C20": {
+   "path": "data/parsha/בראשית/rewrite/C_יבל-ותלד-עדה/biur.reader.md",
+   "reader": true
+  },
+  "C20d": {
+   "path": "data/parsha/בראשית/rewrite/C_יבל-ותלד-עדה/dorot.reader.md",
+   "reader": true
+  },
+  "U-dorot": {
+   "path": "data/parsha/בראשית/rewrite/U-dorot/biur.reader.md",
+   "reader": true
+  },
+  "N01": {
+   "path": "data/parsha/נח/chains/אלה-תולדות-נח/biur.md",
+   "reader": true
+  },
+  "N01d": {
+   "path": "data/parsha/נח/chains/אלה-תולדות-נח/dorot.md",
+   "reader": true
+  },
+  "N02": {
+   "path": "data/parsha/נח/chains/עשה-לך-תיבת/biur.md",
+   "reader": true
+  },
+  "N02d": {
+   "path": "data/parsha/נח/chains/עשה-לך-תיבת/dorot.md",
+   "reader": true
+  },
+  "N03": {
+   "path": "data/parsha/נח/chains/זאת-אות-הברית/biur.md",
+   "reader": true
+  },
+  "N03d": {
+   "path": "data/parsha/נח/chains/זאת-אות-הברית/dorot.md",
+   "reader": true
+  },
+  "N04": {
+   "path": "data/parsha/נח/chains/מים-רבים/biur.md",
+   "reader": true
+  },
+  "N04d": {
+   "path": "data/parsha/נח/chains/מים-רבים/dorot.md",
+   "reader": true
+  }
+ },
+ "synth_blocks": 1084,
+ "xref": {
+  "chapter": 775,
+  "section": 119,
+  "station": 237
+ },
+ "plinks": {
+  "נח": {
+   "quotes": {
+    "total": 5335,
+    "short": 2146,
+    "matched": 3183,
+    "fragment": 5,
+    "explained": 1,
+    "nomatch": 0
+   },
+   "rows": {
+    "total": 78,
+    "matched": 78,
+    "conf_high": 58,
+    "conf_likely": 20,
+    "override": 13,
+    "unmatched": 0,
+    "none": 0
+   },
+   "refs": {
+    "url": {
+     "node": 56,
+     "none": 0
+    }
+   },
+   "rowlinks": 84,
+   "unresolved": 0,
+   "twins": 3,
+   "unexplained": 0
+  }
+ }
+}
