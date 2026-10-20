@@ -3,7 +3,7 @@
 @page {
   size: A4;
   margin: 2cm 2cm 2.2cm;
-  @top-left { content: "חברותא · בראשית"; white-space: nowrap; font: 9pt "Assistant", "Liberation Sans", Arial, sans-serif; color: #555; }
+  @top-left { content: "חברותא"; white-space: nowrap; font: 9pt "Assistant", "Liberation Sans", Arial, sans-serif; color: #555; }
   @bottom-right { content: "טיוטה: נבנה בעזרת בינה מלאכותית, ללא בקרה רבנית"; white-space: nowrap; font: 8pt "Assistant", "Liberation Sans", Arial, sans-serif; color: #666; }
   @bottom-center { content: "עמוד " counter(page); font: 9pt "Assistant", "Liberation Sans", Arial, sans-serif; color: #555; }
 }

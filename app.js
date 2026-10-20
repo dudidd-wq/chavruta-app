@@ -327,6 +327,17 @@ function openReadingPreferences() {
     finally { e.target.value = ""; }
   });
   const unsubscribe = P.subscribe(render);
+  dialog.addEventListener("keydown", e => {
+    if (e.key !== "Tab" || e.altKey || e.ctrlKey || e.metaKey) return;
+    const controls = Array.from(dialog.querySelectorAll("button,a[href],input,select,summary")).filter(el => !el.disabled && el.tabIndex >= 0 && el.getClientRects().length);
+    const first = controls[0], last = controls[controls.length - 1];
+    if (!first) return;
+    if (e.shiftKey && (document.activeElement === first || document.activeElement === dialog)) {
+      e.preventDefault(); last.focus();
+    } else if (!e.shiftKey && (document.activeElement === last || document.activeElement === dialog)) {
+      e.preventDefault(); first.focus();
+    }
+  });
   dialog.addEventListener("close", () => { unsubscribe(); document.getElementById("disp-btn")?.setAttribute("aria-expanded", "false"); dialog.remove(); document.getElementById("disp-btn")?.focus({ preventScroll: true }); }, { once: true });
   dialog.addEventListener("click", e => { if (e.target === dialog) { const r = dialog.getBoundingClientRect(); if (e.clientX < r.left || e.clientX > r.right || e.clientY < r.top || e.clientY > r.bottom) dialog.close(); } });
   render(); dialog.showModal(); document.getElementById("disp-btn")?.setAttribute("aria-expanded", "true");
