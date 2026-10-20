@@ -506,7 +506,7 @@ function isSheet() { return MODE === "read" ? innerWidth < 1000 : innerWidth < 9
 function captureAnchor(art = R.view === "biur" ? $("article.biur") : null) {
   const topH = ($("#top")?.classList.contains("hidden") ? 0 : $("#top")?.offsetHeight || 0) + 4;
   if (art) {
-    for (const el of art.querySelectorAll("p[id],li[id],h2[id],h3[id],h4[id],blockquote[id],tr[id],section.part[id]")) {
+    for (const el of art.querySelectorAll("p[id],li[id],h2[id],h3[id],h4[id],blockquote[id],tr[id]")) {
       const r = el.getBoundingClientRect();
       if (r.bottom > topH + 8) return { id: el.id, top: r.top, part: el.closest("section.part")?.dataset.part || null, ratio: null };
     }
