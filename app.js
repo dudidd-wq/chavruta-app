@@ -2347,7 +2347,7 @@ for (const k of ["status", "coverage", "closure"]) VIEWS[k] = async function () 
 };
 
 
-/* Written publications. Publisher dates and discovery dates are kept distinct. */
+/* Written publications; publisher dates and discovery dates stay distinct. */
 const NEW_KIND = { makor: ["מקור", "פרסום חדש של מאמר, שיחה, מכתב או הנחה"], biur: ["ביאור", "מאמר כתוב המבאר מאמר או שיחה"], gilyon: ["גיליון", "גיליון שבועי"] };
 const NEWS_LANG = { he: "עברית", en: "אנגלית", yi: "יידיש", ru: "רוסית", fr: "צרפתית" };
 function newsTime(value) { const t = Date.parse(value || ""); return Number.isFinite(t) ? t : null; }
