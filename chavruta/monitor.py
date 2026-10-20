@@ -37,7 +37,7 @@ from bs4 import BeautifulSoup
 ROOT = Path(__file__).resolve().parent.parent
 CONFIG = ROOT / "config" / "sources.yaml"
 MON = ROOT / "data" / "monitor"
-HEADERS = {"User-Agent": "Mozilla/5.0 (chavruta-monitor)", "Accept-Encoding": "gzip, deflate, br"}
+HEADERS = {"User-Agent": "Mozilla/5.0 (chavruta-monitor)", "Accept-Encoding": "gzip, deflate"}
 MIN_INTERVAL = 1.0
 KEEP_SEEN = 2000
 FIRST_RUN_SURFACE = 5          # בריצה הראשונה: כמה פריטים אחרונים להציג מכל מקור עם פיד
