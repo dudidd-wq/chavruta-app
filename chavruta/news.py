@@ -56,7 +56,7 @@ def project(snapshot, relevance, summaries, observations, *, now=None, media=Non
     cutoff = now - timedelta(days=WINDOW_DAYS)
     media = media or {}
     candidates = []
-    source_rows = snapshot.get("sources", [])
+    source_rows = [s for s in snapshot.get("sources", []) if not s.get("news_excluded") and s["id"] != "taam_hachaim"]
     names = {s["id"]: s for s in source_rows}
     checks = snapshot.get("browser_checks", {})
     for sid, check in checks.items():

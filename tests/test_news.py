@@ -79,6 +79,13 @@ class NewsTests(unittest.TestCase):
         snap['sources'][0]['latest'][0]['url'] = 'javascript:alert(1)'
         self.assertEqual(news.project(snap, {}, {}, {}, now=NOW)['items'], [])
 
+    def test_style_only_reference_is_not_a_news_candidate(self):
+        snap, key = self.fixture()
+        snap['sources'][0]['id'] = 'taam_hachaim'
+        f = news.project(snap, {key: {'cls': 'ביאור'}}, {}, {}, now=NOW, filtered=False)
+        self.assertEqual(f['items'], [])
+        self.assertEqual(f['sources'], 0)
+
 
 if __name__ == '__main__':
     unittest.main()

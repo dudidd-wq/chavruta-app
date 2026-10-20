@@ -49,7 +49,6 @@ analysis:
   - {id: chassidut_org, name: סיכום מאמרי הרבי, lang: he, url: "https://www.chassidut.org/", detect: {type: page_diff, url: "https://www.chassidut.org/"}, medium: text}
   - {id: biurim, name: ביאורים במאמרי רבינו, lang: he, url: "https://biurim.co.il/", detect: {type: rss, url: "https://biurim.co.il/feed/"}, medium: text}
   - {id: hm_monsey, name: היכל מנחם מונסי, lang: he, url: "https://heichalmenachemmonsey.org/", detect: {type: rss, url: "https://heichalmenachemmonsey.org/feed/"}, medium: shiur}
-  - {id: taam_hachaim, name: טעם החיים, lang: he, url: "https://drive.google.com/drive/folders/11yzhI6ZTHhrorblJSj6MPIEyCQoSG7IZ", detect: {type: browser, url: "https://drive.google.com/drive/folders/11yzhI6ZTHhrorblJSj6MPIEyCQoSG7IZ"}, note: "מקור סגנון בלבד לפי כללי הפרויקט", medium: text}
   - {id: hiskashrus, name: התקשרות, lang: he, url: "https://torahtable.com/publications/%D7%94%D7%AA%D7%A7%D7%A9%D7%A8%D7%95%D7%AA", detect: {type: torahtable, url: "https://torahtable.com/publications/%D7%94%D7%AA%D7%A7%D7%A9%D7%A8%D7%95%D7%AA"}, medium: bulletin}
   - {id: lichyot_chassidus, name: "לחיות חסידות — הרב אשר פרקש", lang: he, url: "https://rabbi_osher_farkash_maamarim.captivate.fm", detect: {type: rss, url: "https://feeds.captivate.fm/rabbi_osher_farkash_maamarim/"}, medium: podcast}
   - {id: chabadzoom, name: חב״ד זום, lang: he, url: "https://chabadzoom.co.il/series", detect: {type: page_diff, url: "https://chabadzoom.co.il/series"}, medium: shiur}
