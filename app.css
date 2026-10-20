@@ -284,7 +284,6 @@ em, i:not([class]) { font-style: normal; }
   table.stack.tree-tbl td:not(:first-child):not(:empty) ~ td:not(:empty)::before { content: " · " !important; display: inline; font: inherit; color: var(--ink-3); }
 }
 
-
 /* חברותא · אפליקציית הפרשה — עיצוב ״ספר פתוח״: נייר, גוון אחד (בורדו) בדרגות, גופן סריף לקריאה וסנס קטן לממשק.
    שלושה מצבי עבודה (body[data-mode]): read · links · research. יישור דו־צדדי: html[data-justify]. */
 
@@ -1275,3 +1274,40 @@ article.biur .tp-inline a:hover { border-color: var(--accent-line); color: var(-
   @media (max-width:560px) { .rd { font-size: var(--fs-body); } article.biur .smark::after { font-size: var(--fs-body); } }
 }
 @media print { .reading-preferences, #reading-exit-focus, .mnote-inline { display: none !important; } .reading-review summary { display: none; } }
+
+.source-reader { position: fixed; inset: 0 auto 0 0; margin: 0; padding: 0; width: min(56vw,820px); height: 100dvh; max-width: 100vw; max-height: 100dvh; border: 0; border-inline-start: 1px solid var(--rule); background: var(--paper); color: var(--ink); box-shadow: 10px 0 45px #0003; font: 14px/1.6 var(--sans); overflow: hidden; }
+.source-reader[open] { display: flex; flex-direction: column; }
+.source-reader::backdrop { background: #0003; }
+.source-reader.sr-wide { width: min(1100px,100vw); }
+body.source-reader-open { overflow: hidden; }
+.source-reader .sr-head { display: flex; align-items: start; justify-content: space-between; gap: 16px; padding: 20px 24px 10px; flex: 0 0 auto; }
+.source-reader .sr-head > div { min-width: 0; }
+.source-reader .sr-head small { color: var(--accent); }
+.source-reader .sr-head h2 { font: 600 21px/1.5 var(--sans); margin: 3px 0 0; overflow-wrap: anywhere; }
+.source-reader .sr-head .icon-btn { flex: 0 0 auto; }
+.source-reader .sr-meta { padding: 0 24px 12px; color: var(--ink-3); overflow-wrap: anywhere; font-size: 13px; }
+.source-reader .sr-tabs { display: flex; flex-wrap: wrap; gap: 8px; border-block: 1px solid var(--rule); padding: 10px 24px; flex: 0 0 auto; }
+.source-reader .sr-body { padding: 20px 24px; overflow: auto; overscroll-behavior: contain; flex: 1; min-height: 0; min-width: 0; }
+.source-reader .sr-footer { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 16px; padding: 12px 24px max(12px,env(safe-area-inset-bottom)); border-top: 1px solid var(--rule); background: var(--card); flex: 0 0 auto; }
+.source-reader .sr-footer > a { margin-inline-start: auto; }
+.source-reader .sr-text { font: var(--reading-weight,400) var(--reading-source-size,20px)/var(--reading-source-leading,1.85) var(--reading-source-font,var(--serif)); white-space: pre-wrap; overflow-wrap: anywhere; word-spacing: var(--reading-word,0em); letter-spacing: var(--reading-letter,0em); }
+.source-reader .sr-text p { margin: 0 0 var(--reading-paragraph,1em); }
+:root[data-justify=on] .source-reader .sr-text { text-align: justify; }
+.source-reader .sr-text i { font-style: italic; }
+.source-reader .sr-notice, .source-reader .sr-verified { font: 12px/1.7 var(--sans); color: var(--ink-3); margin: 0 0 18px; }
+.source-reader .sr-excerpt { padding-bottom: 22px; margin-bottom: 22px; border-bottom: 1px solid var(--rule); }
+.source-reader .sr-excerpt h3 { font: 600 14px/1.6 var(--sans); margin: 0 0 14px; }
+.source-reader .sr-excerpt .sr-verified { display: block; margin: 10px 0; }
+.source-reader .sr-empty { padding-block: 20px; }
+.source-reader .sr-empty h3 { font: 600 18px/1.6 var(--sans); }
+.source-reader .sr-scan-tools { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
+.source-reader .sr-scan-tools form { display: flex; align-items: center; gap: 6px; }
+.source-reader .sr-scan-tools input { width: 70px; padding: 6px; }
+.source-reader .sr-scan-tools :is(input,select) { font: inherit; color: var(--ink); background: var(--card); border: 1px solid var(--rule); border-radius: 4px; min-height: 38px; }
+.source-reader .sr-frame { display: block; border: 1px solid var(--rule); width: 100%; height: max(440px,64dvh); background: #fff; }
+.source-reader .sr-file { display: inline-flex; margin-block: 10px; }
+.source-reader :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+@media (max-width:999px) { .source-reader, .source-reader.sr-wide { width: 100vw; } .source-reader .sr-expand { display: none; } }
+@media (max-width:560px) { .source-reader .sr-head { padding: 14px 16px 8px; } .source-reader .sr-head h2 { font-size: 18px; } .source-reader .sr-meta { padding-inline: 16px; } .source-reader .sr-tabs { padding: 8px 16px; } .source-reader .sr-body { padding: 16px; } .source-reader .sr-footer { padding-inline: 16px; } .source-reader .sr-frame { height: 62dvh; } }
+@media (pointer:coarse) { .source-reader :is(button,a,select,input) { min-height: 44px; } }
+@media print { .source-reader { display: none !important; } }
