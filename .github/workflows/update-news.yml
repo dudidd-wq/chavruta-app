@@ -1,0 +1,63 @@
+name: Update written publications
+on:
+  schedule:
+    - cron: '17 4 * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/update-news.yml'
+      - 'chavruta/monitor.py'
+      - 'chavruta/news.py'
+      - 'tools/app/update_news.py'
+      - 'config/sources.yaml'
+      - 'data/monitor/relevance.json'
+      - 'data/monitor/summaries.json'
+      - 'data/monitor/browser_checks.json'
+permissions:
+  contents: write
+  pages: write
+concurrency:
+  group: news-update
+  cancel-in-progress: false
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install collector dependencies
+        run: python -m pip install requests beautifulsoup4 lxml feedparser PyYAML
+      - name: Test news projection and collection reliability
+        run: python -m unittest discover -s tests -p 'test_news*.py'
+      - name: Collect and prepare news only
+        run: python tools/app/update_news.py --collect --output data
+      - name: Record collection health
+        if: always()
+        run: |
+          if [ -f data/monitor/health.json ]; then
+            python - <<'PY' >> "$GITHUB_STEP_SUMMARY"
+          import json
+          from pathlib import Path
+          h=json.loads(Path('data/monitor/health.json').read_text())
+          print('## Written publications')
+          print(f"Scan: {h['generated']}\n\nItems: {h['items']}; pending classification: {h['pending']}\n")
+          print('| Source | Status | Last success |\n| --- | --- | --- |')
+          for s in h['sources']: print(f"| {s['name']} | {s['status']} | {s['lastSuccess']} |")
+          PY
+          fi
+      - name: Commit refreshed news with a branch lease
+        run: |
+          git config user.name 'chavruta-news[bot]'
+          git config user.email 'chavruta-news@users.noreply.github.com'
+          git add data/new.js data/monitor
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'Refresh written publications and source health'
+          git push origin HEAD:main
+      - name: Request publication of the updated branch
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api --method POST "repos/$GITHUB_REPOSITORY/pages/builds" --jq '.status'

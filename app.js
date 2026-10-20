@@ -108,16 +108,17 @@ function chvStackTables(root) {
 
 
 /* חברותא · טעינת נתונים. הנתונים נטענים בתגיות <script> (data/*.js) ולכן עובדים גם מ־file:// וגם מכל אחסון סטטי. */
-const D = { chunks: {}, waiting: {}, loading: {} };
-window.__D = (name, obj) => { D.chunks[name] = obj; (D.waiting[name] || []).forEach(f => f(obj)); D.waiting[name] = []; };
+const D = { chunks: {}, waiting: {}, loading: {}, loadedAt: {} };
+window.__D = (name, obj) => { D.chunks[name] = obj; D.loadedAt[name] = Date.now(); (D.waiting[name] || []).forEach(f => f(obj)); D.waiting[name] = []; };
 function chunkFile(name) { return name.startsWith("b:") ? `data/b-${name.slice(2)}.js` : `data/${name}.js`; }
 function loadChunk(name) {
+  if (name === "new" && D.chunks[name] && Date.now() - D.loadedAt[name] > 3600000) { delete D.chunks[name]; delete D.loading[name]; }
   if (D.chunks[name]) return Promise.resolve(D.chunks[name]);
   if (D.loading[name]) return D.loading[name];
   D.loading[name] = new Promise((res, rej) => {
     (D.waiting[name] = D.waiting[name] || []).push(res);
     const s = document.createElement("script");
-    s.src = chunkFile(name); s.async = true;
+    s.src = chunkFile(name) + (name === "new" ? "?v=" + Math.floor(Date.now() / 3600000) : ""); s.async = true;
     s.onerror = () => { delete D.loading[name]; rej(new Error("לא ניתן לטעון " + chunkFile(name))); };
     document.head.append(s);
   });
@@ -927,494 +928,7 @@ class MapInst {
     this.shown = shown;
     this.drawEdges();
     for (const t of $$("[data-row]", this.svg)) {
-      const g = +t.dataset.row; const tot = this.nodes.filter(n => n.g === g).length, sh = this.nodes.filter(n => n.g === g && this.pass(n)).length;
-      t.textContent = sh === tot ? tot + " פריטים" : sh + " מתוך " + tot;
-    }
-  }
-  firstId() { return this._first ||= this.nodes[0]?.id; }
-  drawEdges() {
-    const g = this.gEdges; g.textContent = "";
-    const showAll = this.o.edges && this.o.edges();
-    const drawn = new Set();
-    const add = (e, on) => {
-      const a = this.L.pos.get(e[0]), b = this.L.pos.get(e[1]); if (!a || !b) return;
-      const key = e[0] + ">" + e[1]; if (drawn.has(key)) return; drawn.add(key);
-      const d = curve(a, b); if (!d) return;
-      sv("path", { class: "edge k" + e[2] + (on ? " on" : ""), d }, g);
-    };
-    if (showAll) for (const e of S.core.edges) { if (this.pass(getNode(e[0])) && this.pass(getNode(e[1]))) add(e, false); }
-    if (this.sel) { for (const e of (S.edgesOut.get(this.sel) || [])) add(e, true); for (const e of (S.edgesIn.get(this.sel) || [])) add(e, true); }
-  }
-  setSel(id, scroll) {
-    this.sel = id; this.refresh();
-    if (scroll && id) this.reveal(id);
-  }
-  setHot(ids) { this.hot = new Set(ids || []); for (const [id, el] of this.els) el.classList.toggle("hot", this.hot.has(id)); }
-  reveal(id) {
-    const p = this.L.pos.get(id), sc = this.host; if (!p) return;
-    if (sc.scrollWidth > sc.clientWidth + 2 || sc.scrollHeight > sc.clientHeight + 2) {
-      const sx = this.svg.getBoundingClientRect().width / this.L.W;
-      // ב־RTL scrollLeft שלילי; מחשבים לפי מיקום יחסי
-      const r = sc.getBoundingClientRect(), s = this.svg.getBoundingClientRect();
-      const targetX = s.left + p.x * sx, targetY = s.top + p.y * sx;
-      const dx = targetX - (r.left + r.width / 2), dy = targetY - (r.top + r.height / 2);
-      sc.scrollBy({ left: dx, top: dy, behavior: "smooth" });
-    }
-  }
-  focusNode(id) { this.els.get(id)?.focus({ preventScroll: true }); }
-  key(e) {
-    const g = e.target.closest?.(".nd"); if (!g) return;
-    const id = g.dataset.id;
-    if (e.key === "Enter" || e.key === " ") { e.preventDefault(); this.o.onSelect?.(id, e); return; }
-    const dirs = { ArrowLeft: [-1, 0], ArrowRight: [1, 0], ArrowUp: [0, -1], ArrowDown: [0, 1] };
-    const d = dirs[e.key]; if (!d) return;
-    e.preventDefault();
-    const p = this.L.pos.get(id); let best = null, bs = 1e9;
-    for (const [oid, q] of this.L.pos) {
-      if (oid === id || !this.pass(getNode(oid))) continue;
-      const dx = q.x - p.x, dy = q.y - p.y;
-      const along = dx * d[0] + dy * d[1]; if (along <= 0.5) continue;
-      const across = Math.abs(d[0] ? dy : dx);
-      const sc = along + across * 2.2;
-      if (sc < bs) { bs = sc; best = oid; }
-    }
-    if (best) { this.focusNode(best); this.els.get(best).setAttribute("tabindex", "0"); g.setAttribute("tabindex", "-1"); }
-  }
-  destroy() { MAPS.delete(this); this.ro?.disconnect(); this.svg.remove(); }
-}
-SelListeners.add((id, o) => {
-  for (const m of MAPS) { if (o && o.hover) m.setHot(o.off ? [] : id ? [id] : []); else if (!o?.hover) m.setSel(id, !!(o && (o.open || o.reveal))); }
-});
-
-
-
-/* חברותא · ספר הביאורים (שער ותוכן) וקורא הביאור: עמודת קריאה אחת, הערות בשוליים, מצבי עבודה */
-
-function stateChip(d) {
-  if (!d.state) return null;
-  return h("span", { class: "tag " + (/^PASS$/.test(d.state) ? "ok" : "warn") }, d.state);
-}
-function genStrip(d) {
-  const ids = (S.links?.d[d.id]) || d.members || [];
-  const cnt = {}; for (const i of ids) { const n = getNode(i); if (n) cnt[n.g] = (cnt[n.g] || 0) + 1; }
-  const mx = Math.max(1, ...Object.values(cnt));
-  return h("span", { class: "gstrip", role: "img", "aria-label": "פריטים לפי דורות: " + GEN_IDS.filter(g => cnt[g]).map(g => `${GS[g]} ${cnt[g]}`).join(", ") },
-    ...GEN_IDS.map(g => h("i", { style: { "--v": (cnt[g] || 0) / mx }, title: `${GS[g]}: ${cnt[g] || 0}` })));
-}
-function readPos(id) { try { return JSON.parse(lsGet("chavruta-pos:" + id) || "null"); } catch (e) { return null; } }
-
-/* ---------- השער והתוכן ---------- */
-function libraryList(host, o = {}) {
-  const groups = bookGroups();
-  for (const g of groups) {
-    if (!g.docs.length) continue;
-    const sec = h("section", { class: "lib-grp" }, h("header", null, h("h2", null, g.title), h("span", null, g.sub)));
-    const ol = h("ol", { class: "lib-list" });
-    for (const d of g.docs) {
-      const mem = (S.links?.d[d.id] || d.members || []).length;
-      const dd = d.kind === "chain" ? S.docs.get(d.id + "d") : null;
-      const pos = readPos(d.id);
-      const vl = d.kind === "chain" ? anchorShort(d) : d.range ? verseLabel(d.range) : "כללי";
-      ol.append(h("li", null, h("a", { class: "lib-i", href: mkHash(["biur", d.id]) },
-        h("span", { class: "lib-v" }, vl, d.kind === "chain" ? h("small", null, "שרשרת") : null),
-        h("span", { class: "lib-c" },
-          h("span", { class: "lib-t" }, d.title),
-          h("span", { class: "lib-m" }, mem + " פריטים", d.state && d.state !== "PASS" ? " · " + d.state : "", pos ? " · בקריאה" : ""),
-          d.intro && !o.compact ? h("span", { class: "lib-p" }, d.intro) : null,
-          MODE === "links" || o.strips ? genStrip(d) : null)),
-        dd ? h("a", { class: "lib-dorot", href: mkHash(["biur", dd.id]) }, "שרשרת הדורות") : null));
-    }
-    sec.append(ol); host.append(sec);
-  }
-}
-/** ״המשך מאיפה שעצרת״: הביאור שנקרא לאחרונה — בפרשה par, או בכל הפרשיות (בשער) */
-function continueLink(par) {
-  let best = null;
-  for (const d of S.core.docs) { if (d.kind === "dorot" || (par && (d.p || S.home) !== par)) continue; const p = readPos(d.id); if (p && (!best || p.t > best.p.t)) best = { d, p }; }
-  if (!best) return null;
-  return h("a", { class: "continue", href: mkHash(["biur", best.d.id, best.p.part || ""].filter((x, i) => i < 2 || x), { a: best.p.id || "" }) }, h("small", null, "המשך מאיפה שעצרת"), h("b", null, trunc(best.d.title, 70)));
-}
-async function renderLibrary(main) {
-  main.className = "main lib";
-  main.textContent = "";
-  const p = S.core.parsha;
-  document.title = "פרשת " + p + " · חברותא";
-  main.append(...parshaHead(p, {
-    lede: `${S.books.length} ביאורים על דברי שבעת הרביים בשבת ${p}, לפי סדר הפסוקים. כל ציטוט מקושר אל מקורו, ואפשר לעבור בין קריאה, קשרים וחקר בלחיצה.`,
-    stats: [[S.verseDocs.length, "יחידות פסוק"], [S.chainDocs.length, "שרשראות דורות"], [S.pnodes.length, "פריטי מקור"], [S.core.built.split("-").reverse().join("."), "עדכון אחרון"]],
-    extra: continueLink(p) }));
-  libraryList(main);
-  main.append(parshaPager(p));
-}
-VIEWS.biurim = async function (rest, q, ctx) {
-  Aside.detach();
-  setPar(S.home);
-  const main = $("#view");
-  if (MODE === "research") { await Workspace.render(main, q, ctx); }
-  else await renderLibrary(main);
-  if (!ctx.keep) window.scrollTo(0, 0);
-};
-VIEWS.biurim.onMode = null;
-
-/* ---------- קורא ---------- */
-const RD = { doc: null, meta: null, data: null, art: null, cur: null, spy: null, onScroll: null, matches: [], sel: null, selEl: null };
-function cleanupReader() { RD.positionCleanup?.(); RD.positionCleanup = null; Tts.close(); RD.spy?.disconnect(); if (RD.onScroll) window.removeEventListener("scroll", RD.onScroll); RD.onScroll = null; Notes.hide?.(); Aside.detach(); $(".backpill")?.remove(); document.body.classList.remove("sheet-open"); }
-
-function readingPositionTracker(d, art) {
-  let timer;
-  const save = () => {
-    clearTimeout(timer);
-    if (RD.art !== art || !art.isConnected) return;
-    const a = captureAnchor(art);
-    if (a.id && scrollY > 200) lsSet("chavruta-pos:" + d.id, JSON.stringify({ id: a.id, part: a.part || RD.cur, t: Date.now() }));
-  };
-  const visibility = () => { if (document.visibilityState === "hidden") save(); };
-  window.addEventListener("pagehide", save);
-  document.addEventListener("visibilitychange", visibility);
-  return {
-    schedule() { clearTimeout(timer); timer = setTimeout(save, 700); },
-    dispose() { save(); window.removeEventListener("pagehide", save); document.removeEventListener("visibilitychange", visibility); },
-  };
-}
-
-function verseStrip(d) {
-  const T = S.core.torah.chapters;
-  const rng = d.range || d.cv; if (!rng) return null;
-  const [c1, v1, c2, v2] = rng;
-  // d.cv נקבע רק לעוגן בספר בראשית (build_app.chain_verse); עוגן מספר אחר (שיר השירים, ישעיה) — בלי רצועה.
-  // נוסח הפסוקים שבידינו: הפרקים שב־core.torah (בראשית); פרק או פסוק חסר — בלי רצועה, ולא רצועה חלקית או שגויה
-  for (let c = c1; c <= c2; c++) if (!T[c]) return null;
-  const items = [];
-  for (let c = c1; c <= c2; c++) { const a = c === c1 ? v1 : 1, b = c === c2 ? v2 : T[c].length; for (let v = a; v <= b; v++) items.push([c, v, T[c][v - 1]]); }
-  if (!items.length || items.some(x => !x[2])) return null;
-  const box = h("details", { class: "verses", open: items.length <= 3 ? "" : null });
-  box.append(h("summary", null, h("b", null, "בראשית " + verseLabel(rng)), h("small", null, `${items.length === 1 ? "פסוק אחד" : items.length + " פסוקים"} · נוסח מנוקד (Sefaria, נחלת הכלל)`)));
-  const vs = h("div", { class: "vs", lang: "he" }); let lastC = null;
-  for (const [c, v, t] of items) { vs.append(h("sup", null, (c !== lastC && c1 !== c2 ? gem(c).replace(/[׳״]/g, "") + ":" : "") + gem(v).replace(/[׳״]/g, "")), t + " "); lastC = c; }
-  box.append(vs);
-  return box;
-}
-
-function wrapCells(art) {
-  for (const td of $$("td", art)) { if (td.firstElementChild?.classList.contains("cell")) continue; const w = h("div", { class: "cell" }); while (td.firstChild) w.append(td.firstChild); td.append(w); }
-  for (const t of $$("table", art)) t.classList.add("clamp");
-}
-function rowToggles(art) {
-  for (const t of $$("table.clamp", art)) for (const tr of $$("tbody tr", t)) {
-    const cells = $$("td .cell", tr);
-    if (!cells.some(c => c.scrollHeight > c.clientHeight + 4)) continue;
-    const first = tr.querySelector("td"); if (!first || first.querySelector(".rowtog")) continue;
-    const b = h("button", { class: "rowtog no-print", "aria-expanded": "false", "aria-label": "הרחבת השורה", onclick: e => { e.stopPropagation(); const o = tr.classList.toggle("open"); b.setAttribute("aria-expanded", o); } }, icon("i-chev"));
-    first.prepend(b);
-  }
-}
-
-function scrollToEl(el, flash, behavior) {
-  if (!el) return;
-  const review = el.closest("details.reading-review") || (el.classList.contains("reading-editorial") && el.querySelector("details.reading-review"));
-  if (review) review.open = true;
-  window.scrollTo({ top: Math.max(0, el.getBoundingClientRect().top + scrollY - 110), behavior: behavior || (matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth") });
-  if (flash) flashEl(el);
-}
-function flashEl(el) { el.classList.remove("hl"); void el.offsetWidth; el.classList.add("hl"); setTimeout(() => el.classList.remove("hl"), 3200); }
-function gotoPart(d, pid, push, anchorId) {
-  const sec = RD.art?.querySelector(`section.part[data-part="${CSS.escape(pid)}"]`); if (!sec) return;
-  const target = anchorId ? RD.art.querySelector("#" + CSS.escape(anchorId)) : null;
-  scrollToEl(target || sec, !!target);
-  if (push) quietHash(mkHash(["biur", d.id, pid], anchorId ? { a: anchorId } : {}));
-}
-function stepPart(dir) {
-  const ps = RD.data?.parts; if (!ps) return;
-  const i = ps.findIndex(p => p.id === RD.cur), t = ps[clamp(i + dir, 0, ps.length - 1)];
-  if (t) gotoPart(RD.meta, t.id, true);
-}
-function stepPara(dir) {
-  const els = $$("p[id],li[id],blockquote[id]", RD.art).filter(e => e.offsetParent);
-  const top = 120;
-  let i = els.findIndex(e => e.getBoundingClientRect().top > top + (dir > 0 ? 6 : -6));
-  if (dir > 0) { if (i < 0) return; } else { i = i < 0 ? els.length - 1 : i - 1; i = Math.max(0, i); const cur = els.findIndex(e => e.getBoundingClientRect().bottom > top); if (cur >= 0) i = Math.max(0, cur - (els[cur].getBoundingClientRect().top < top - 8 ? 0 : 1)); }
-  scrollToEl(els[i], true);
-}
-function markNode(id) {
-  $$(".nmatch", RD.art || document).forEach(e => e.classList.remove("nmatch"));
-  RD.matches = [];
-  if (!id || !RD.art) return;
-  const els = $$(`[data-n="${CSS.escape(id)}"]`, RD.art);
-  els.forEach(e => e.classList.add("nmatch"));
-  RD.matches = els.filter(e => !els.some(o => o !== e && o.contains(e)));
-}
-function markSelEl(el) { $$(".selel", RD.art || document).forEach(e => e.classList.remove("selel")); RD.selEl = el || null; el?.classList.add("selel"); }
-
-/* ---------- קטעי קצה: מי מפנה לכאן, מה עולה ---------- */
-function endMatter(d, doc) {
-  const box = h("footer", { class: "end no-print" });
-  // מי מפנה לכאן
-  const sh = sharedDocs(d.id);
-  const explicit = (S.xref[d.id] || []).map(x => x[0]);
-  const bl = h("section", { class: "end-sec", id: "backlinks" }, h("h2", null, "מי מפנה לכאן"),
-    h("p", { class: "end-note" }, "ביאורים אחרים שנוגעים באותם מקורות, ורשומות שמזכירות ביאור זה במפורש."));
-  if (!sh.length && !explicit.length) bl.append(h("p", { class: "end-empty" }, "אין ביאור אחר החולק פריטים עם ביאור זה."));
-  else {
-    const ul = h("ul", { class: "end-list" });
-    const seen = new Set();
-    const rows = [...explicit.filter(x => S.docs.get(x)).map(x => [x, (sh.find(s => s[0] === x) || [x, []])[1], true]), ...sh.map(s => [s[0], s[1], false])];
-    for (const [id, nodes, exp] of rows) {
-      if (seen.has(id)) continue; seen.add(id);
-      const od = S.docs.get(id);
-      ul.append(h("li", null, h("a", { href: mkHash(["biur", id], nodes[0] ? { n: nodes[0] } : {}) }, docShort(od)),
-        h("small", null, [exp ? "מזכיר ביאור זה" : "", nodes.length ? nodes.length + " פריטים משותפים: " + nodes.slice(0, 2).map(i => trunc(cleanT(getNode(i)?.t), 28)).join("; ") : ""].filter(Boolean).join(" · "))));
-      if (seen.size >= 8) break;
-    }
-    bl.append(ul);
-    if (sh.length + explicit.length > 8) bl.append(h("p", { class: "end-note" }, `ועוד ${sh.length - 8 > 0 ? sh.length - 8 : ""} ביאורים. ב״קשרים״ אפשר לראות לכל פריט איפה עוד הוא מנותח.`));
-  }
-  // מה עולה
-  const mem = (S.links.d[d.id] || []).map(getNode).filter(Boolean);
-  const loose = mem.filter(n => n.cat !== "covered");
-  const open = doc.parts.find(p => p.id === "open" || /פתוח לבקרה|שאלות שנבדקו/.test(p.title));
-  const idx = S.books.findIndex(x => x.id === (d.kind === "dorot" ? d.parent : d.id));
-  const next = S.books[idx + 1], dd = d.kind === "chain" ? S.docs.get(d.id + "d") : null;
-  const up = h("section", { class: "end-sec", id: "whatnext" }, h("h2", null, "מה עולה מכאן"));
-  const ul = h("ul", { class: "end-list" });
-  if (open) ul.append(h("li", null, h("a", { href: mkHash(["biur", d.id, open.id]), onclick: e => { e.preventDefault(); gotoPart(d, open.id, true); } }, "השאלות שנבדקו: מה הוכרע ומה אין בידינו להכריע"), h("small", null, "בסוף הביאור, לפני בדיקה אנושית")));
-  if (loose.length) ul.append(h("li", null, h("a", { href: mkHash(["sources"], { p: d.p || "", unit: d.kind === "verse" ? d.key : "", chain: d.kind !== "verse" ? (d.kind === "dorot" ? S.docs.get(d.parent)?.key : d.key) : "", st: "mentioned" }) }, `${loose.length} פריטים שהוזכרו או הושמטו ולא נותחו במלואם`), h("small", null, loose.slice(0, 3).map(n => trunc(cleanT(n.t), 30)).join("; "))));
-  if (dd) ul.append(h("li", null, h("a", { href: mkHash(["biur", dd.id]) }, "שרשרת הדורות של המאמר"), h("small", null, "אותו מאמר, לפי סדר הדורות")));
-  if (next) ul.append(h("li", null, h("a", { href: mkHash(["biur", next.id]) }, "הביאור הבא: " + trunc(next.title, 60)), h("small", null, docWhere(next))));
-  up.append(ul.children.length ? ul : h("p", { class: "end-empty" }, "אין המשך מסומן."));
-  box.append(bl, up);
-  return box;
-}
-function roundsBox(d) {
-  const det = h("details", { class: "rounds" });
-  det.append(h("summary", null, "סבבי בקרה", stateChip(d), d.rounds?.length ? h("small", null, d.rounds.length + " סבבים") : null));
-  const body = h("div", { class: "rbody" });
-  if (d.rounds?.length) { const t = h("table", null, h("thead", null, h("tr", null, h("th", null, "סבב"), h("th", null, "בוחנים ופסיקה: ממצאים / התקבלו / נדחו")))); const tb = h("tbody"); d.rounds.forEach((r, i) => tb.append(h("tr", null, h("td", null, i + 1), h("td", null, r)))); t.append(tb); body.append(t); }
-  if (d.rdec?.length) { body.append(h("h4", null, "הכרעות המחבר")); for (const r of d.rdec) body.append(h("p", null, h("b", null, r.title + ": "), r.summary)); }
-  if (!d.rounds?.length && !d.rdec?.length) body.append(h("p", null, "אין נתוני סבבים ליחידה זו."));
-  det.append(body); return det;
-}
-function pager(d) {
-  const base = d.kind === "dorot" ? S.docs.get(d.parent) : d;
-  const i = S.books.findIndex(x => x.id === base.id), prev = S.books[i - 1], next = S.books[i + 1];
-  const a = (x, lab) => x ? h("a", { href: mkHash(["biur", x.id]) }, h("small", null, lab), trunc(x.title, 52)) : h("span");
-  return h("nav", { class: "pager no-print", "aria-label": "מעבר בין ביאורים" }, a(next, "הבא ←"), a(prev, "→ הקודם"));
-}
-
-/* ---------- צד הקורא: הערות שוליים / קשרים / חקר ---------- */
-const Aside = {
-  el: null, inner: null,
-  attach(el) { this.el = el; },
-  detach() { this.el = null; this.inner = null; },
-  open() { document.body.classList.add("sheet-open"); },
-  close() { document.body.classList.remove("sheet-open"); },
-  render() {
-    const el = this.el; if (!el) return;
-    Notes.note?.remove(); Notes.note = null;
-    document.body.classList.remove("notes-side", "notes-inline");
-    el.replaceChildren();
-    const x = h("button", { class: "aside-x icon-btn", "aria-label": "סגירה", onclick: () => this.close() }, icon("i-x"));
-    const inner = h("div", { class: "aside-in" }); this.inner = inner;
-    el.append(x, inner);
-    el.dataset.mode = MODE;
-    if (MODE === "read") { inner.append(h("div", { class: "mnotes" })); if (Notes.active) Notes.show(Notes.active.sel, Notes.active.anchor, true); }
-    else if (MODE === "links") Conn.render(inner);
-    else Dock.render(inner);
-  },
-};
-function readingInlineNotes() {
-  const prefs = window.chavrutaPreferences.get();
-  return MODE === "read" && (innerWidth < 1000 || prefs.sourcePlace === "inline" || prefs.focus);
-}
-const Notes = {
-  active: null, note: null,
-  host() { return Aside.inner?.querySelector(".mnotes"); },
-  hide(returnFocus = false) {
-    const anchor = this.active?.anchor;
-    this.note?.remove(); this.note = null; this.active = null;
-    this.host()?.replaceChildren(); document.body.classList.remove("notes-side", "notes-inline");
-    markSelEl(null); if (MODE === "read") Aside.close();
-    if (returnFocus && anchor?.isConnected) { anchor.focus({ preventScroll: true }); anchor.scrollIntoView({ block: "center", behavior: "auto" }); }
-  },
-  show(sel, anchor, keep) {
-    const host = this.host(); if (!host || !anchor?.isConnected) return;
-    this.note?.remove();
-    this.active = { sel, anchor };
-    const note = noteContent(sel); this.note = note;
-    host.replaceChildren(note);
-    const inline = readingInlineNotes();
-    document.body.classList.toggle("notes-inline", inline);
-    document.body.classList.toggle("notes-side", !inline && MODE === "read");
-    if (inline) {
-      const block = anchor.closest("blockquote") || anchor.closest("p,li") || anchor.closest(".scroll") || anchor.closest("table") || anchor;
-      if (block.tagName === "LI") block.append(note); else block.after(note);
-      note.classList.add("mnote-inline", "no-print"); Aside.close();
-      if (!keep) note.scrollIntoView({ block: "nearest", behavior: "auto" });
-      return;
-    }
-    Aside.close(); this.place(note, anchor);
-  },
-  place(note, anchor) {
-    note = note || this.note; anchor = anchor || this.active?.anchor;
-    const host = this.host(); if (!host || !note || !anchor?.isConnected || note.classList.contains("mnote-inline")) return;
-    const top = anchor.getBoundingClientRect().top - host.getBoundingClientRect().top;
-    const max = host.offsetHeight - note.offsetHeight - 8;
-    note.style.top = clamp(top - 6, 0, Math.max(0, max)) + "px";
-    const r = note.getBoundingClientRect(), over = r.bottom - (innerHeight - 12);
-    if (over > 0) note.style.top = Math.max(0, parseFloat(note.style.top) - over) + "px";
-  },
-};
-window.addEventListener("relayout", () => { if (R.view === "biur" && Notes.active) Aside.render(); });
-window.addEventListener("prefchange", () => { if (R.view === "biur" && Notes.active) requestAnimationFrame(() => Aside.render()); });
-
-function noteContent(sel) {
-  const doc = RD.data;
-  const n = sel.node ? getNode(sel.node) : null;
-  const note = h("div", { class: "mnote", role: "note" });
-  note.append(h("button", { class: "mnote-x icon-btn", "aria-label": "סגירת ההערה", onclick: () => Notes.hide(true) }, icon("i-x")));
-  if (sel.ex && doc.ex[sel.ex]) {
-    const [page, pdf, url, node, topic, text, verified, src] = doc.ex[sel.ex];
-    note.append(h("div", { class: "mnote-h" }, h("b", { dir: "ltr" }, sel.ex), h("span", null, [n ? trunc(cleanT(n.t), 44) : src, page ? "ע׳ " + page : "", pdf ? "pdf " + pdf : ""].filter(Boolean).join(" · "))));
-    if (topic) note.append(h("div", { class: "mnote-t" }, topic));
-    note.append(h("p", { class: "mnote-b" }, text));
-    if (verified) note.append(h("small", { class: "mnote-v" }, "אומת: " + verified));
-  } else if (n) {
-    note.append(itemHead(n, { max: 90, noSub: true }));
-  }
-  const acts = h("div", { class: "mnote-a" });
-  if (n) acts.append(h("button", { class: "linkbtn", onclick: () => { setMode("links"); Conn.show(sel); Aside.open(); } }, "הצג קשרים"));
-  const url = sel.ex && doc.ex[sel.ex]?.[2];
-  if (url) acts.append(h("a", { class: "linkbtn", href: url, target: "_blank", rel: "noopener noreferrer" }, "פתח במקור", icon("i-ext")));
-  else if (n?.u) acts.append(h("a", { class: "linkbtn", href: n.u, target: "_blank", rel: "noopener noreferrer" }, "פתח במקור", icon("i-ext")));
-  if (n) acts.append(h("a", { class: "linkbtn", href: mkHash(["item", n.id]) }, "עמוד הפריט"));
-  note.append(acts);
-  return note;
-}
-
-/* ---------- בחירה בטקסט ---------- */
-function pick(sel, el) {
-  RD.sel = sel; markSelEl(el);
-  if (sel.node) { S.selNode = sel.node; markNode(sel.node); }
-  if (MODE === "read") Notes.show(sel, el);
-  else if (MODE === "links") { Conn.show(sel); Aside.open(); }
-  else { Dock.select(sel); Aside.open(); }
-}
-function onArticleClick(ev, d) {
-  if (ev.target.closest(".mnote")) return;
-  const t = ev.target; hideTip();
-  if (t.closest?.("button.rowtog,.pcopy")) return;
-  if (ev.type === "click" && (ev.ctrlKey || ev.metaKey || ev.button === 1) && t.closest("a[href^=http]")) return;
-  const rl = t.closest?.("a.rowlink");
-  if (rl) {
-    ev.preventDefault();
-    const sec = rl.closest("section.part"), n = rl.dataset.row;
-    const tr = sec?.querySelector(`tr[data-row="${CSS.escape(n)}"]`) || RD.art.querySelector(`tr[data-row="${CSS.escape(n)}"]`);
-    if (tr) { tr.classList.add("open"); scrollToEl(tr, true); if (tr.dataset.n) pick({ node: tr.dataset.n }, tr); }
-    return;
-  }
-  if (t.closest("a") && !t.closest("a.nref")) return;
-  const ex = t.closest?.("[data-ex]");
-  if (ex) { ev.preventDefault(); const n = ex.closest("[data-n]")?.dataset.n || RD.data.ex[ex.dataset.ex]?.[3]; pick({ ex: ex.dataset.ex, node: n && getNode(n) ? n : null }, ex); return; }
-  const nel = t.closest?.("[data-n]");
-  if (nel && nel.closest("article")) { ev.preventDefault(); pick({ node: nel.dataset.n }, nel); return; }
-  if (MODE === "links" && !getSelection()?.toString()) {
-    const blk = t.closest?.("p[id],li[id],blockquote[id],tr[id],h3[id],h4[id]");
-    if (blk && RD.art.contains(blk)) pick({ para: blk.id }, blk);
-  }
-}
-function setupPcopy(art, d) {
-  let btn = null, cur = null;
-  const hide = () => { btn?.remove(); btn = null; cur = null; };
-  art.addEventListener("mouseover", e => {
-    if (matchMedia("(hover: none)").matches) return;
-    const blk = e.target.closest?.("p[id],li[id],h3[id],h4[id],blockquote[id]");
-    if (!blk || blk === cur) return;
-    hide(); cur = blk;
-    const sec = blk.closest("section.part"); if (!sec) return;
-    btn = h("button", { class: "pcopy no-print", "aria-label": "העתקת קישור לפסקה זו", title: "העתק קישור לפסקה", onclick: ev => { ev.stopPropagation(); copyText(absUrl(mkHash(["biur", d.id, sec.dataset.part || ""].filter(Boolean), { a: blk.id }))); } }, icon("i-link"));
-    sec.append(btn);
-    btn.style.top = (blk.getBoundingClientRect().top - sec.getBoundingClientRect().top + 4) + "px";
-  });
-  art.addEventListener("mouseleave", e => { if (!e.relatedTarget?.closest?.(".pcopy")) hide(); });
-}
-
-function readingPartTitle(title) {
-  return /נוסח קריאה נעול|שלב [0-9]+ \(ביאורים\)/.test(title) ? "על הביאור והבקרה" : title;
-}
-function readingEditorial(art) {
-  const first = art.querySelector("section.part"), heading = first?.querySelector("h2");
-  if (!first || !heading || readingPartTitle(heading.textContent) === heading.textContent || first.querySelector("p,ul,ol,table,blockquote")) return;
-  first.classList.add("reading-editorial");
-  first.replaceChildren(h("details", { class: "reading-review" }, h("summary", { class: "no-print", "data-reading-ui": "" }, "על הביאור והבקרה"), ...Array.from(first.childNodes)));
-}
-let readingPrintReviews = [];
-window.addEventListener("beforeprint", () => { readingPrintReviews = $$("details.reading-review").map(el => [el, el.open]); readingPrintReviews.forEach(([el]) => { el.open = true; }); });
-window.addEventListener("afterprint", () => { readingPrintReviews.forEach(([el, open]) => { el.open = open; }); readingPrintReviews = []; });
-
-VIEWS.biur = async function (rest, q, ctx) {
-  const docId = rest[0], partId = rest[1] || "";
-  const d = getDoc(docId), main = $("#view");
-  if (!d) { Aside.detach(); main.className = "main"; main.replaceChildren(h("div", { class: "empty" }, h("b", null, "הביאור לא נמצא"), docId, h("br"), h("a", { href: mkHash(["biurim"]) }, "לרשימת הביאורים"))); return; }
-  const anchor = q.get("a") || "", nid = q.get("n") || "";
-  if (ctx.same && RD.doc === d.id && RD.art?.isConnected) { if (ctx.modeChanged) VIEWS.biur.onMode(); afterRender(d, partId, anchor, nid, false, q.get("hl")); backPill(); return; }
-  cleanupReader();
-  main.className = "main"; main.replaceChildren(h("div", { class: "loading" }, "טוען את הביאור…"));
-  let doc;
-  try { [doc] = await Promise.all([loadDoc(d.id), loadLinks()]); } catch (e) { main.replaceChildren(h("div", { class: "empty" }, h("b", null, "שגיאה בטעינה"), String(e.message))); return; }
-  if (!ctx.alive()) return;
-  RD.doc = d.id; RD.meta = d; RD.data = doc; RD.cur = d.parts[0]?.id; RD.sel = null; S.selNode = null; Notes.active = null;
-  document.title = trunc(doc.hero.h1 || d.title, 60) + " · חברותא";
-
-  const art = h("article", { class: "biur", html: doc.html, lang: "he" });
-  RD.art = art;
-  readingEditorial(art);
-  wrapCells(art);
-  chvStackTables(art);
-  for (const e of $$("[data-n]", art)) if (!getNode(e.dataset.n)) { e.removeAttribute("data-n"); e.setAttribute("data-out", "1"); e.classList.remove("nref", "rowref", "srcitem"); }
-  art.addEventListener("click", ev => onArticleClick(ev, d));
-  art.addEventListener("keydown", ev => { if ((ev.key === "Enter" || ev.key === " ") && ev.target.matches?.("li.srcitem,.cite,.exref,.nref")) { ev.preventDefault(); onArticleClick(ev, d); } });
-  for (const e of $$(".cite,.exref", art)) { if (!e.hasAttribute("tabindex")) e.setAttribute("tabindex", "0"); e.setAttribute("role", "button"); }
-  setupPcopy(art, d);
-
-  // כותרת
-  const parent = d.kind === "dorot" ? S.docs.get(d.parent) : null;
-  const nitems = (S.links.d[d.id] || []).length;
-  const hero = h("header", { class: "hero" },
-    h("nav", { class: "crumbs", "aria-label": "מיקום" }, h("a", { href: mkHash(["home"]) }, "חברותא"), h("span", { class: "sep", "aria-hidden": "true" }, "›"), h("a", { href: parshaHrefOf(d.p || S.home) }, "פרשת " + (d.p || S.home)), parent ? [h("span", { class: "sep", "aria-hidden": "true" }, "›"), h("a", { href: mkHash(["biur", parent.id]) }, trunc(parent.title, 40))] : null),
-    h("h1", null, doc.hero.h1 || d.title),
-    h("div", { class: "metaline" }, h("span", null, d.kind === "verse" ? docWhere(d) : d.kind === "chain" ? "שרשרת מאמרים · " + d.anchor : "שרשרת הדורות"), nitems ? h("span", null, nitems + " פריטים") : null, stateChip(d),
-      h("button", { class: "linkbtn no-print", onclick: () => copyText(absUrl(mkHash(["biur", d.id]))) }, icon("i-link"), "העתק קישור"), Tts.button(art)),
-    doc.hero.lead ? h("p", { class: "lead", html: doc.hero.lead }) : null,
-    doc.hero.status ? h("p", { class: "statusline", html: doc.hero.status }) : null);
-  const dd = d.kind === "chain" ? S.docs.get(d.id + "d") : null;
-  if (dd) hero.append(h("p", { class: "no-print sibling" }, h("a", { class: "linkbtn", href: mkHash(["biur", dd.id]) }, "שרשרת הדורות של המאמר הזה")));
-
-  const rail = h("nav", { class: "rail no-print", "aria-label": "תוכן עניינים" });
-  const ol = h("ol");
-  d.parts.forEach((p, i) => {
-    const m = p.title.match(/^([א-ת]{1,3})\.\s/);
-    ol.append(h("li", { "data-part": p.id }, h("a", { href: mkHash(["biur", d.id, p.id]), onclick: e => { e.preventDefault(); gotoPart(d, p.id, true); } }, h("i", { class: "tick" }, m ? m[1] : "·"), h("span", { class: "ttl" }, readingPartTitle(p.title).replace(/^[א-ת]{1,3}\.\s/, "")))));
-  });
-  rail.append(ol);
-  const aside = h("aside", { class: "aside", id: "aside", "aria-label": "הערות וקשרים" });
-  Aside.attach(aside);
-  const col = h("div", { class: "col" }, hero, readingSetupInvite(), verseStrip(d), art, endMatter(d, doc), roundsBox(d), pager(d));
-  const progress = h("div", { class: "progress no-print", "aria-hidden": "true" }, h("i"));
-  main.className = "main reader";
-  main.replaceChildren(progress, h("div", { class: "rd" }, rail, col, aside));
-  Aside.render();
-  requestAnimationFrame(() => rowToggles(art));
-
-  const prog = $("i", progress), position = readingPositionTracker(d, art);
-  RD.positionCleanup = () => position.dispose();
-  RD.onScroll = () => {
-    const r = art.getBoundingClientRect(), tot = r.height - innerHeight * .5;
-    prog.style.width = (clamp((-r.top + innerHeight * .2) / Math.max(tot, 1), 0, 1) * 100).toFixed(1) + "%";
-    position.schedule();
-  };
-  window.addEventListener("scroll", RD.onScroll, { passive: true }); RD.onScroll();
-  const lis = new Map($$("li[data-part]", rail).map(li => [li.dataset.part, li]));
-  RD.spy = new IntersectionObserver(es => {
-    for (const en of es) if (en.isIntersecting) { const pid = en.target.dataset.part; RD.cur = pid; lis.forEach(li => li.classList.remove("cur")); lis.get(pid)?.classList.add("cur"); }
+      const g = +t.dataset.row; const tot = this.nod…8298 tokens truncated…); lis.get(pid)?.classList.add("cur"); }
   }, { rootMargin: "-12% 0px -75% 0px" });
   $$("section.part", art).forEach(s => RD.spy.observe(s));
   topicChips(d, art);
@@ -2346,48 +1860,77 @@ for (const k of ["status", "coverage", "closure"]) VIEWS[k] = async function () 
 };
 
 
-/* חברותא · מה חדש בעולם החסידות: פרסומים כתובים מהחודש האחרון באתרים החיצוניים, עם קישור לפריט המקורי */
+/* Written publications. Publisher dates and discovery dates are kept distinct. */
 const NEW_KIND = { makor: ["מקור", "פרסום חדש של מאמר, שיחה, מכתב או הנחה"], biur: ["ביאור", "מאמר כתוב המבאר מאמר או שיחה"], gilyon: ["גיליון", "גיליון שבועי"] };
+const NEWS_LANG = { he: "עברית", en: "אנגלית", yi: "יידיש", ru: "רוסית", fr: "צרפתית" };
+function newsTime(value) { const t = Date.parse(value || ""); return Number.isFinite(t) ? t : null; }
+function freshNewsItems(feed, now = Date.now()) {
+  const cutoff = now - (feed.window || 30) * 86400000;
+  return (feed.items || []).filter(i => { const t = newsTime(i.sort || i.d || i.seen); return Object.hasOwn(NEW_KIND, i.k) && t != null && t >= cutoff && t <= now + 86400000; })
+    .sort((a, b) => (newsTime(b.sort || b.d || b.seen) || 0) - (newsTime(a.sort || a.d || a.seen) || 0) || a.t.localeCompare(b.t, "he"));
+}
+function newsLanguage(item) { return (item.lang || "").split(/[+, -]/).filter(Boolean); }
+function filterNews(items, filters) {
+  return items.filter(i => (!filters.kind || i.k === filters.kind) && (!filters.source || (i.sid || i.src) === filters.source) && (!filters.lang || newsLanguage(i).includes(filters.lang)));
+}
+function newsDate(value) { const t = newsTime(value); return t == null ? "" : new Intl.DateTimeFormat("he-IL", { day: "2-digit", month: "2-digit", year: "numeric", timeZone: "Asia/Jerusalem" }).format(t); }
 VIEWS.new = async function (rest, q, ctx) {
   const main = $("#view"); main.className = "main page"; main.textContent = "";
   document.title = "מה חדש · חברותא";
   let W;
-  try { W = await loadChunk("new"); } catch (e) { main.append(h("div", { class: "empty" }, h("b", null, "לא ניתן לטעון את המדור"), String(e.message || e))); return; }
+  try { W = await loadChunk("new"); } catch (_) { main.append(h("div", { class: "empty" }, h("b", null, "לא ניתן לטעון את המדור"), h("p", null, "אפשר לנסות שוב בעוד כמה רגעים."), h("button", { class: "btn", onclick: () => route() }, "ניסיון נוסף"))); return; }
   if (!ctx.alive()) return;
-  const gen = (W.generated || "").slice(0, 10).split("-").reverse().join(".");
+  const items = freshNewsItems(W), health = W.health || [];
+  const stale = newsTime(W.generated) == null || Date.now() - newsTime(W.generated) > 3 * 86400000;
   main.append(h("h1", { class: "page-title" }, "מה חדש בעולם החסידות"),
-    h("p", { class: "lede" }, `פרסומים כתובים חדשים מ־${W.sources} אתרים שבמעקב, מ־${W.window} הימים האחרונים: מקורות של הרביים, ביאורים כתובים וגיליונות שבועיים. הקישור בכל פריט מוביל לאתר המפרסם. שיעורים, פודקאסטים והקלטות אינם נכללים. הנתונים נאספו ב־${gen}.`),
-    h("p", { class: "card-note" }, "התקצירים נכתבו בעברית על ידי כלי בינה מלאכותית, אך ורק מתוך התיאור, הכותרות ופתיחת הפריט כפי שהמפרסם נתן אותם, ואין בהם תוכן שנוסף מעבר לכך. הם אינם תחליף לפתיחת הפריט."));
-  let kind = q.get("k") || "";
-  const bar = h("div", { class: "chips", role: "group", "aria-label": "סינון לפי סוג" });
+    h("p", { class: "lede" }, `מקורות של הרביים, ביאורים כתובים וגיליונות מ־${W.window || 30} הימים האחרונים. החדש ביותר מופיע ראשון; כל קישור מוביל לאתר המפרסם.`),
+    h("p", { class: "news-updated" + (stale ? " is-stale" : "") }, "בדיקה אחרונה: ", newsDate(W.generated) || "המועד אינו ידוע", stale ? " · הנתונים ממתינים לעדכון" : ""),
+    h("p", { class: "card-note" }, "כאשר תאריך הפרסום אינו ידוע, מוצג מועד הגילוי ומצוין שאינו תאריך פרסום. תקציר מוצג רק לאחר שנבדק מול פרטי המקור. שיעורים, פודקאסטים והקלטות אינם נכללים."));
+  if (health.length) {
+    const ok = health.filter(s => ["ok", "baseline"].includes(s.status)).length, errors = health.filter(s => s.status === "error").length;
+    const statusLabel = { ok: "נבדק", baseline: "נבדק לראשונה", error: "לא זמין כרגע", browser: "דורש בדיקה בדפדפן", manual: "בדיקה ידנית" };
+    main.append(h("details", { class: "news-health" }, h("summary", null, `${ok} מקורות נבדקו בהצלחה מתוך ${W.sources} מוגדרים${errors ? " · " + errors + " לא זמינים" : ""}`),
+      h("p", { class: "card-note" }, "מקור שלא נבדק אוטומטית אינו נספר כהצלחה. במקרה של תקלה נשמר המידע מהבדיקה התקינה האחרונה, עד תום חלון הפרסום."),
+      h("ul", null, health.map(s => h("li", null, h("b", null, s.name), " — ", statusLabel[s.status] || "טרם נבדק", s.retained ? " · נשמר מידע קודם" : "", s.lastSuccess ? " · הצלחה אחרונה: " + newsDate(s.lastSuccess) : "")))));
+  }
+  const f = { kind: Object.hasOwn(NEW_KIND, q.get("k")) ? q.get("k") : "", source: q.get("src") || "", lang: q.get("lang") || "" };
+  const sources = [...new Map(items.map(i => [i.sid || i.src, i.src])).entries()].sort((a, b) => a[1].localeCompare(b[1], "he"));
+  const langs = [...new Set(items.flatMap(newsLanguage))].sort();
+  if (!sources.some(([id]) => id === f.source)) f.source = "";
+  if (!langs.includes(f.lang)) f.lang = "";
+  const controls = h("div", { class: "news-filters" }), bar = h("div", { class: "chips", role: "group", "aria-label": "סינון לפי סוג" });
+  const source = h("select", { "aria-label": "סינון לפי מקור" }, h("option", { value: "" }, "כל המקורות"), sources.map(([id, name]) => h("option", { value: id }, name)));
+  const lang = h("select", { "aria-label": "סינון לפי שפה" }, h("option", { value: "" }, "כל השפות"), langs.map(id => h("option", { value: id }, NEWS_LANG[id] || id)));
+  const count = h("p", { class: "news-count", role: "status", "aria-live": "polite" });
   const list = h("div", { class: "newlist" });
   const draw = () => {
-    bar.textContent = "";
-    for (const [k, lbl] of [["", "הכול"], ["makor", "מקורות"], ["biur", "ביאורים"], ["gilyon", "גיליונות"]]) {
-      const n = k ? W.n[k] : W.items.length;
-      bar.append(h("button", { class: "fchip", "aria-pressed": kind === k, onclick: () => { kind = k; quietHash(mkHash(["new"], kind ? { k: kind } : {})); draw(); } }, lbl, h("small", null, n)));
+    source.value = f.source; lang.value = f.lang;
+    quietHash(mkHash(["new"], { ...(f.kind ? { k: f.kind } : {}), ...(f.source ? { src: f.source } : {}), ...(f.lang ? { lang: f.lang } : {}) }));
+    bar.replaceChildren();
+    const scoped = filterNews(items, { ...f, kind: "" });
+    for (const [kind, label] of [["", "הכול"], ["makor", "מקורות"], ["biur", "ביאורים"], ["gilyon", "גיליונות"]]) {
+      const n = scoped.filter(i => !kind || i.k === kind).length;
+      bar.append(h("button", { class: "fchip", "aria-pressed": f.kind === kind, onclick: () => { f.kind = kind; draw(); } }, label, h("small", null, n)));
     }
-    list.textContent = "";
-    const items = W.items.filter(i => !kind || i.k === kind);
-    if (!items.length) list.append(h("div", { class: "empty" }, "אין פריטים בסוג הזה."));
-    // לפי אתר: קבוצות לפי סדר הופעה
-    const groups = new Map();
-    for (const i of items) { if (!groups.has(i.src)) groups.set(i.src, []); groups.get(i.src).push(i); }
-    for (const [src, its] of groups) {
-      list.append(h("div", { class: "sec-h" }, h("h2", null, src), h("span", { class: "chip mute" }, its.length)));
-      for (const i of its) {
-        list.append(h("article", { class: "newitem" },
-          h("div", { class: "ni-meta" }, h("span", { class: "chip " + (i.k === "makor" ? "acc" : "mute"), title: NEW_KIND[i.k][1] }, NEW_KIND[i.k][0]), i.ds ? h("span", { class: "ni-date" }, i.ds) : null),
-          h("h3", { class: "ni-t" }, h("a", { href: i.u, target: "_blank", rel: "noopener", dir: i.lang === "he" ? "rtl" : "auto" }, i.t, " ", icon("i-ext"))),
-          i.s ? h("p", { class: "ni-s" }, i.s) : null,
-          i.pdf ? h("a", { class: "btn sm", href: i.pdf, target: "_blank", rel: "noopener" }, icon("i-pdf"), "קובץ PDF") : null));
-      }
+    const shown = filterNews(items, f); count.textContent = `${shown.length} פריטים מוצגים מתוך ${items.length}`;
+    list.replaceChildren();
+    if (!shown.length) list.append(h("div", { class: "empty" }, items.length ? "אין פריטים שמתאימים לסינון שבחרת." : "לא נמצאו כרגע פרסומים בחלון הזמן הזה.", h("button", { class: "btn", onclick: () => { f.kind = f.source = f.lang = ""; draw(); } }, "הצגת הכול")));
+    for (const i of shown) {
+      const date = i.d ? "פורסם: " + newsDate(i.d) : "נמצא: " + newsDate(i.seen) + " · תאריך הפרסום לא ידוע";
+      list.append(h("article", { class: "newitem", "data-news-id": i.id || i.u },
+        h("div", { class: "ni-meta" }, h("span", { class: "chip " + (i.k === "makor" ? "acc" : "mute"), title: NEW_KIND[i.k][1] }, NEW_KIND[i.k][0]), h("span", null, i.src), h("span", { class: "ni-date" }, date)),
+        h("h2", { class: "ni-t" }, h("a", { href: i.u, target: "_blank", rel: "noopener", dir: i.lang === "he" ? "rtl" : "auto" }, i.t, " ", icon("i-ext"))),
+        i.checked === true && i.s ? h("p", { class: "ni-s" }, i.s) : null,
+        i.stale ? h("p", { class: "card-note" }, "המקור לא היה זמין בבדיקה האחרונה; פרטי הפרסום נשמרו מבדיקה קודמת.") : null,
+        i.pdf ? h("a", { class: "btn sm", href: i.pdf, target: "_blank", rel: "noopener" }, icon("i-pdf"), "קובץ PDF") : null));
     }
   };
-  main.append(bar, list); draw();
+  source.addEventListener("change", () => { f.source = source.value; draw(); });
+  lang.addEventListener("change", () => { f.lang = lang.value; draw(); });
+  controls.append(h("label", null, "מקור", source), h("label", null, "שפה", lang));
+  main.append(controls, bar, count, list); draw();
   if (!ctx.keep) window.scrollTo(0, 0);
 };
-
 
 /* חברותא · לימוד יומי: תניא יומי (חלוקה וטקסט מ־Sefaria, קה״ת) ולוח תורה אור ולקוטי תורה תשפ״ז */
 const LUACH_PDF = "https://chabad.info/wp-content/uploads/2026/10/10-10-2026-17-36-06-%D7%9E%D7%95%D7%A8%D7%94-%D7%A9%D7%99%D7%A2%D7%95%D7%A8-%D7%AA%D7%A9%D7%A4%D7%96-%D7%9C%D7%94%D7%A4%D7%A6%D7%94-1.pdf";
@@ -3181,7 +2724,10 @@ VIEWS.home = async function (rest, q, ctx) {
     }));
 
   // לימוד יומי · מה חדש · עץ הידע
-  const N = site.new || {}, T = site.tree || {};
+  const freshFeed = await loadChunk("new").catch(() => null);
+  if (!ctx.alive()) return;
+  const newsItems = freshFeed ? freshNewsItems(freshFeed) : [];
+  const N = { generated: (freshFeed?.generated || "").slice(0, 10), n: newsItems.length, sources: freshFeed?.sources || 0, top: newsItems }, T = site.tree || {};
   const trio = h("section", { class: "h-sec h-trio", "aria-label": "עוד בחברותא" },
     h("article", { class: "hx" },
       h("p", { class: "hx-k" }, icon("i-sun"), "היום", hd ? h("span", { class: "hx-d" }, hd) : null),
@@ -3192,7 +2738,7 @@ VIEWS.home = async function (rest, q, ctx) {
       h("p", { class: "hx-k" }, icon("i-flag"), "מה חדש", N.generated ? h("span", { class: "hx-d" }, N.generated.split("-").reverse().join(".")) : null),
       h("h2", null, h("a", { href: mkHash(["new"]) }, "מה חדש בעולם החסידות")),
       (N.top || []).length ? h("ul", { class: "hx-list" }, N.top.slice(0, 3).map(i => h("li", null, h("a", { href: i.u, target: "_blank", rel: "noopener", dir: i.lang === "he" ? "rtl" : "auto" }, i.t), h("small", null, i.src)))) : h("p", null, "פרסומים כתובים חדשים מן האתרים שבמעקב."),
-      h("p", { class: "hx-go" }, h("a", { href: mkHash(["new"]) }, N.n ? `כל ${N.n} הפריטים מ־${N.sources} אתרים ←` : "לכל הפריטים ←"))),
+      h("p", { class: "hx-go" }, h("a", { href: mkHash(["new"]) }, N.n ? `כל ${N.n} הפריטים · ${N.sources} מקורות במעקב ←` : "לכל הפריטים ←"))),
     h("article", { class: "hx" },
       h("p", { class: "hx-k" }, icon("i-tree"), "קטלוג"),
       h("h2", null, h("a", { href: mkHash(["tree"]) }, "עץ הידע")),

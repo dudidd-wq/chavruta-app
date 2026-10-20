@@ -1,0 +1,1766 @@
+{
+ "generated_at": "2026-10-18T04:52:51+00:00",
+ "sources": [
+  {
+   "id": "chabadlibrary",
+   "name": "ספריית חב״ד",
+   "role": "primary",
+   "lang": "he",
+   "site": "https://www.chabadlibrary.org/books/",
+   "detect": "none",
+   "sections": [
+    "primary"
+   ],
+   "checked_at": "2026-10-18T04:51:28+00:00",
+   "status": "manual",
+   "new": [],
+   "latest": [],
+   "total": 0
+  },
+  {
+   "id": "lahak",
+   "name": "לה״ק — ועד הנחות בלשון הקודש",
+   "role": "primary",
+   "lang": "he",
+   "site": "https://www.lahak.org/",
+   "detect": "browser",
+   "sections": [
+    "primary",
+    "whatsnew"
+   ],
+   "checked_at": "2026-10-18T04:51:28+00:00",
+   "status": "browser",
+   "new": [],
+   "latest": [],
+   "total": 0
+  },
+  {
+   "id": "chassidutbehirah",
+   "name": "חסידות בהירה",
+   "role": "primary",
+   "lang": "he",
+   "site": "https://chassidutbehirah.com/",
+   "detect": "none",
+   "sections": [
+    "primary"
+   ],
+   "checked_at": "2026-10-18T04:51:28+00:00",
+   "status": "manual",
+   "new": [],
+   "latest": [],
+   "total": 0
+  },
+  {
+   "id": "hebrewbooks",
+   "name": "היברובוקס",
+   "role": "primary",
+   "lang": "he",
+   "site": "https://hebrewbooks.org/",
+   "detect": "none",
+   "sections": [
+    "primary"
+   ],
+   "checked_at": "2026-10-18T04:51:28+00:00",
+   "status": "manual",
+   "new": [],
+   "latest": [],
+   "total": 0
+  },
+  {
+   "id": "kehot_kuntreisim",
+   "name": "הוצאת קה״ת (קונטרסים)",
+   "role": "primary",
+   "lang": "he",
+   "site": "https://www.kehot.org/Kuntreisim",
+   "detect": "kehot_kuntreisim",
+   "sections": [
+    "primary",
+    "whatsnew"
+   ],
+   "checked_at": "2026-10-18T04:51:28+00:00",
+   "status": "ok",
+   "new": [],
+   "latest": [],
+   "total": 0
+  },
+  {
+   "id": "chabadlibrarybooks",
+   "name": "ספריית חב״ד ספרים",
+   "role": "primary",
+   "lang": "he",
+   "site": "http://chabadlibrarybooks.com/",
+   "detect": "none",
+   "sections": [
+    "primary"
+   ],
+   "checked_at": "2026-10-18T04:51:29+00:00",
+   "status": "manual",
+   "new": [],
+   "latest": [],
+   "total": 0
+  },
+  {
+   "id": "maamarim_com",
+   "name": "מאמרים — The Rebbe's Maamarim",
+   "role": "analysis",
+   "lang": "he",
+   "site": "https://maamarim.com",
+   "detect": "json_catalog",
+   "sections": [
+    "trigger",
+    "whatsnew"
+   ],
+   "checked_at": "2026-10-18T04:51:29+00:00",
+   "status": "error",
+   "new": [],
+   "latest": [],
+   "total": 0,
+   "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)"
+  },
+  {
+   "id": "chassidut_org",
+   "name": "סיכום מאמרי הרבי",
+   "role": "analysis",
+   "lang": "he",
+   "site": "https://www.chassidut.org/",
+   "detect": "page_diff",
+   "sections": [
+    "trigger",
+    "whatsnew"
+   ],
+   "checked_at": "2026-10-18T04:51:30+00:00",
+   "status": "ok",
+   "new": [],
+   "latest": [],
+   "total": 4
+  },
+  {
+   "id": "biurim",
+   "name": "ביאורים במאמרי רבינו",
+   "role": "analysis",
+   "lang": "he",
+   "site": "https://biurim.co.il/",
+   "detect": "rss",
+   "sections": [
+    "trigger",
+    "whatsnew"
+   ],
+   "checked_at": "2026-10-18T04:51:32+00:00",
+   "status": "ok",
+   "new": [],
+   "latest": [],
+   "total": 0
+  },
+  {
+   "id": "hm_monsey",
+   "name": "היכל מנחם מונסי",
+   "role": "analysis",
+   "lang": "he",
+   "site": "https://heichalmenachemmonsey.org/",
+   "detect": "rss",
+   "sections": [
+    "trigger",
+    "whatsnew"
+   ],
+   "checked_at": "2026-10-18T04:51:34+00:00",
+   "status": "ok",
+   "new": [],
+   "latest": [
+    {
+     "id": "https://heichalmenachemmonsey.org/?p=7899",
+     "title": "לעבן מיט די פרשה על פי חסידות – הרב אשר פרקש (מתעדכן)",
+     "url": "https://heichalmenachemmonsey.org/reb_osher_forkosh_weekly/",
+     "date": "Tue, 13 Oct 2026 17:00:35 +0000",
+     "blurb": "צהר תעשה לתיבה ואל אמה תכלינה מלמעלה: אויך די כלים גיט מען מלמעלה (פרשת נח תשפ”ז) מקורות: ד”ה צהר תעשה לתיבה תרצ”א; לקוטי שיחות חלק א פרשת נח; לקוטי שיחות חלק כו, בשלח ב..."
+    },
+    {
+     "id": "https://heichalmenachemmonsey.org/?p=9775",
+     "title": "דרך מצותיך – הרב יוסף קליין (מתעדכן)",
+     "url": "https://heichalmenachemmonsey.org/derech_mitzvosech_klyne/",
+     "date": "Tue, 13 Oct 2026 12:30:57 +0000",
+     "blurb": "סדרת שיעורים שנמסרו למשתתפי רשת כוללי בוקר ללימוד החסידות, בבית מדרש “בית מנחם” – בארא-פארק, בבית מדרש “היכל מנחם” – מאנסי, בבית מדרש “היכל החסידות” – לייקוואוד, ב”אוק-ענד-וויין”, “בוויליאמסבורג”, ב”קרית-יואל” וב”לאנדאן” כל יום שלישי..."
+    },
+    {
+     "id": "https://heichalmenachemmonsey.org/?p=9269",
+     "title": "המשך בשעה שהקדימו תער”ב חלק ג [מאמרים נז-צג] – הרב לימא וילהעלם (מתעדכן)",
+     "url": "https://heichalmenachemmonsey.org/ayen_beis_vol_3_shiurim/",
+     "date": "Tue, 13 Oct 2026 03:30:37 +0000",
+     "blurb": "כל יום שני 9:45-10:45 בערב להמשך תער”ב חלק ראשון לחצו כאן להמשך תער”ב חלק שני לחצו כאן להורדת השיעורים בפורמט MP3 לחצו כאן להורדת חוברת המאמרים: “וידבר וגו’ המטות”, “ציון במשפט תפדה”, “ואתחנן”, “והי’..."
+    },
+    {
+     "id": "https://heichalmenachemmonsey.org/?p=9896",
+     "title": "תורה אור-לקוטי תורה – הרב לימא ווילהעלם {לשמיעה בלבד} (מתעדכן)",
+     "url": "https://heichalmenachemmonsey.org/likutei_torah_lima/",
+     "date": "Mon, 12 Oct 2026 02:30:23 +0000",
+     "blurb": "שיעור שבועי שנמסר ב’היכל התורה – תפארת דוד’, עירמאנט כל יום רביעי שיעור 7: מאמר ד”ה מים רבים [פרשת נח, דף 16] – איך אפשר שדאגות הפרנסה לא יבלבל לעבודת ה’ (כ”ה תשרי תשפ”ז)..."
+    },
+    {
+     "id": "https://heichalmenachemmonsey.org/?p=10037",
+     "title": "התוועדות שמחת בית השואבה (ליל ג’ דחול המועד) תשפ”ז – הרב יוסף יצחק פלטיאל",
+     "url": "https://heichalmenachemmonsey.org/sbh873/",
+     "date": "Thu, 01 Oct 2026 03:30:35 +0000",
+     "blurb": ""
+    }
+   ],
+   "total": 10
+  },
+  {
+   "id": "taam_hachaim",
+   "name": "טעם החיים",
+   "role": "analysis",
+   "lang": "he",
+   "site": "https://drive.google.com/drive/folders/11yzhI6ZTHhrorblJSj6MPIEyCQoSG7IZ",
+   "detect": "browser",
+   "sections": [
+    "trigger",
+    "whatsnew"
+   ],
+   "checked_at": "2026-10-18T04:51:36+00:00",
+   "status": "browser",
+   "new": [],
+   "latest": [],
+   "total": 0
+  },
+  {
+   "id": "hiskashrus",
+   "name": "התקשרות",
+   "role": "analysis",
+   "lang": "he",
+   "site": "https://torahtable.com/publications/%D7%94%D7%AA%D7%A7%D7%A9%D7%A8%D7%95%D7%AA",
+   "detect": "torahtable",
+   "sections": [
+    "trigger",
+    "whatsnew"
+   ],
+   "checked_at": "2026-10-18T04:51:36+00:00",
+   "status": "ok",
+   "new": [],
+   "latest": [],
+   "total": 0
+  },
+  {
+   "id": "lichyot_chassidus",
+   "name": "לחיות חסידות — הרב אשר פרקש",
+   "role": "analysis",
+   "lang": "he",
+   "site": "https://rabbi_osher_farkash_maamarim.captivate.fm",
+   "detect": "rss",
+   "sections": [
+    "trigger",
+    "whatsnew"
+   ],
+   "checked_at": "2026-10-18T04:51:38+00:00",
+   "status": "ok",
+   "new": [],
+   "latest": [
+    {
+     "id": "e153e8d6-ea48-4806-bf4c-14c7eddea566",
+     "title": "מאמר ד\"ה וכל העם רואים תרס\"ה - חלק א",
+     "url": "https://rabbi_osher_farkash_maamarim.captivate.fm",
+     "date": "Wed, 14 Oct 2026 04:00:00 -0400",
+     "blurb": "המשך שבועות: שאלות המאמר, התחדשות במתן תורה"
+    },
+    {
+     "id": "f5329444-5b1a-4dd8-b36c-628423930038",
+     "title": "מאמר ד\"ה נעשה אדם תשי\"ז (סיכום)",
+     "url": "https://rabbi_osher_farkash_maamarim.captivate.fm",
+     "date": "Thu, 08 Oct 2026 04:00:00 -0400",
+     "blurb": "מעלת הנשמות על מלאכים, יצרנהו כאישון עינו, חיבור הנשמה שבגוף עם שורשה בבחינת טהורה היא, דירה בתחתונים בכח הנשמות דוקא."
+    },
+    {
+     "id": "a6885725-70b4-4519-af36-ff5400804e3a",
+     "title": "מאמר ד\"ה תורה צוה לנו משה תשי\"ז (סיכום)",
+     "url": "https://rabbi_osher_farkash_maamarim.captivate.fm",
+     "date": "Thu, 01 Oct 2026 04:00:00 -0400",
+     "blurb": "ישראל מקבלים מהתורה וגם משפיעים בהתורה, חתן וכלה. ביאור ענין תורה לשמה."
+    },
+    {
+     "id": "1bc67775-3ac9-4311-82d0-0d6776a68b2c",
+     "title": "מאמר ד״ה וטהר לבנו לעבדך באמת תשי״ז (המשך)",
+     "url": "https://rabbi_osher_farkash_maamarim.captivate.fm",
+     "date": "Tue, 22 Sep 2026 04:00:00 -0400",
+     "blurb": "פנימיות הלב וחיצוניות הלב ופעולתם זה על זה. אש שחורה ואש לבנה."
+    },
+    {
+     "id": "9bae90b0-5703-4306-86f5-1a04123975e2",
+     "title": "מאמר ד\"ה שובה ישראל תשל\"ו - חלק ב",
+     "url": "https://rabbi_osher_farkash_maamarim.captivate.fm",
+     "date": "Thu, 17 Sep 2026 04:00:00 -0400",
+     "blurb": "ונשלמה פרים שפתינו, ביאור הענין והקשר לעבודת התשובה"
+    }
+   ],
+   "total": 1000
+  },
+  {
+   "id": "chabadzoom",
+   "name": "חב״ד זום",
+   "role": "analysis",
+   "lang": "he",
+   "site": "https://chabadzoom.co.il/series",
+   "detect": "page_diff",
+   "sections": [
+    "trigger",
+    "whatsnew"
+   ],
+   "checked_at": "2026-10-18T04:51:41+00:00",
+   "status": "ok",
+   "new": [
+    {
+     "id": "content:308cff135ad9f4b6",
+     "title": "עדכון בתוכן הדף",
+     "url": "https://chabadzoom.co.il/series",
+     "date": ""
+    }
+   ],
+   "latest": [
+    {
+     "id": "content:308cff135ad9f4b6",
+     "title": "עדכון בתוכן הדף",
+     "url": "https://chabadzoom.co.il/series",
+     "date": ""
+    }
+   ],
+   "total": 1
+  },
+  {
+   "id": "kovtzimdrive",
+   "name": "KovtzimDrive",
+   "role": "analysis",
+   "lang": "he",
+   "site": "https://www.kovtzimdrive.com",
+   "detect": "sitemap",
+   "sections": [
+    "trigger",
+    "whatsnew"
+   ],
+   "checked_at": "2026-10-18T04:51:42+00:00",
+   "status": "error",
+   "new": [],
+   "latest": [],
+   "total": 0,
+   "error": "HTTPError: 429 Client Error: Too Many Requests for url: https://www.kovtzimdrive.com/sitemap.xml"
+  },
+  {
+   "id": "avita",
+   "name": "אביטה",
+   "role": "analysis",
+   "lang": "he",
+   "site": "https://col.org.il/news/129343",
+   "detect": "none",
+   "sections": [
+    "trigger",
+    "whatsnew"
+   ],
+   "checked_at": "2026-10-18T04:51:43+00:00",
+   "status": "manual",
+   "new": [],
+   "latest": [],
+   "total": 0
+  },
+  {
+   "id": "plt",
+   "name": "Project Likkutei Torah",
+   "role": "analysis",
+   "lang": "he+en",
+   "site": "https://projectlikkuteitorah.org/",
+   "detect": "rss",
+   "sections": [
+    "trigger",
+    "whatsnew"
+   ],
+   "checked_at": "2026-10-18T04:51:43+00:00",
+   "status": "ok",
+   "new": [],
+   "latest": [
+    {
+     "id": "https://projectlikkuteitorah.org/?p=1189",
+     "title": "",
+     "url": "https://projectlikkuteitorah.org/2024/01/11/1189/",
+     "date": "Thu, 11 Jan 2024 21:39:02 +0000",
+     "blurb": "Basi-Legani Download"
+    },
+    {
+     "id": "https://projectlikkuteitorah.org/?p=592",
+     "title": "3 Year Learning Cycle",
+     "url": "https://projectlikkuteitorah.org/2023/09/22/3-year-learning-cycle/",
+     "date": "Fri, 22 Sep 2023 01:13:52 +0000",
+     "blurb": "This revolutionary learning cycle is taking the Chassidic world by storm. Rabbi Avraham Katz from learnchassidus.com brilliantly divides the entire Likkutei Torah into manageable weekly portions of 2-3 maamarim (discourses) per week (on average), that are also connected with the parsha / time of year in order to complete the entire Torah Ohr and Likkutei Continue reading \"3 Year Learning Cycle\""
+    }
+   ],
+   "total": 2
+  },
+  {
+   "id": "dvarmalchus770",
+   "name": "Dvar Malchus 770",
+   "role": "analysis",
+   "lang": "en",
+   "site": "https://dvarmalchus770.org",
+   "detect": "rss",
+   "sections": [
+    "trigger",
+    "whatsnew"
+   ],
+   "checked_at": "2026-10-18T04:51:45+00:00",
+   "status": "ok",
+   "new": [],
+   "latest": [],
+   "total": 0
+  },
+  {
+   "id": "soulwords",
+   "name": "SoulWords",
+   "role": "analysis",
+   "lang": "en",
+   "site": "https://www.soulwords.org/category/likkutei-sichos/",
+   "detect": "rss",
+   "sections": [
+    "trigger",
+    "whatsnew"
+   ],
+   "checked_at": "2026-10-18T04:51:47+00:00",
+   "status": "ok",
+   "new": [
+    {
+     "id": "https://www.soulwords.org/?p=17527",
+     "title": "Noah Building the Ark | Beyond the Story: Noach (Ep. 2)",
+     "url": "https://www.soulwords.org/noah-building-the-ark-beyond-the-story-noach-ep-2/",
+     "date": "Fri, 16 Oct 2026 14:17:41 +0000",
+     "blurb": "Why did Noach spend 120 years building the teivah and work around the clock feeding its animals while so much of his mission unfolded miraculously? Understanding when Hashem requires human effort and when He provides without it reveals the true relationship between hishtadlus and bitachon: our work creates a vessel, while the blessing comes entirely from Hashem. Teachings and stories from the Baal Shem Tov and other tzaddikim show why blessings come through natural channels, where our energy belongs, and how to recognize whether our trust in Hashem has reached beyond our intellect into our hearts. Rediscover the Torah stories you’ve known since childhood. In this weekly live class, Rabbi Shais Taub uncovers their deeper mystical and spiritual meaning, revealing practical lessons for our relationships, challenges, and everyday lives. PDF Material: https://www.soulwords.org/wp-content/uploads/2026/10/Animals-Enter-Teiva_compressed.pdf"
+    }
+   ],
+   "latest": [
+    {
+     "id": "https://www.soulwords.org/?p=17527",
+     "title": "Noah Building the Ark | Beyond the Story: Noach (Ep. 2)",
+     "url": "https://www.soulwords.org/noah-building-the-ark-beyond-the-story-noach-ep-2/",
+     "date": "Fri, 16 Oct 2026 14:17:41 +0000",
+     "blurb": "Why did Noach spend 120 years building the teivah and work around the clock feeding its animals while so much of his mission unfolded miraculously? Understanding when Hashem requires human effort and when He provides without it reveals the true relationship between hishtadlus and bitachon: our work creates a vessel, while the blessing comes entirely from Hashem. Teachings and stories from the Baal Shem Tov and other tzaddikim show why blessings come through natural channels, where our energy belongs, and how to recognize whether our trust in Hashem has reached beyond our intellect into our hearts. Rediscover the Torah stories you’ve known since childhood. In this weekly live class, Rabbi Shais Taub uncovers their deeper mystical and spiritual meaning, revealing practical lessons for our relationships, challenges, and everyday lives. PDF Material: https://www.soulwords.org/wp-content/uploads/2026/10/Animals-Enter-Teiva_compressed.pdf"
+    },
+    {
+     "id": "https://www.soulwords.org/?p=17496",
+     "title": "Adam Naming the Animals | Beyond the Story: Bereishis (Ep. 1)",
+     "url": "https://www.soulwords.org/adam-naming-the-animals-beyond-the-story-bereishis-ep-1/",
+     "date": "Fri, 09 Oct 2026 16:16:23 +0000",
+     "blurb": "Why was Adam’s ability to name the animals proof that his wisdom surpassed that of the angels? In the first episode of BEYOND the STORY, Rabbi Shais Taub explores the deeper meaning of this familiar Torah story—and what it reveals about our ability to recognize the Divine within physical life. Rediscover the Torah stories you’ve known since childhood. In this weekly live class, Rabbi Shais Taub uncovers their deeper mystical and spiritual meaning, revealing practical lessons for our relationships, challenges, and everyday lives."
+    },
+    {
+     "id": "https://www.soulwords.org/?p=17469",
+     "title": "Likkutei Sichos: Simchas Torah",
+     "url": "https://www.soulwords.org/likkutei-sichos-simchas-torah/",
+     "date": "Thu, 01 Oct 2026 18:43:50 +0000",
+     "blurb": "Shemini Atzeres reveals the essential unity of the Jewish people that endures beyond Yom Tov. Dancing with our feet and a closed Torah scroll expresses an unlimited connection to Hashem that transcends intellect. Connecting the Torah’s end, “l’einei kol Yisrael,” back to its beginning, “B’reishis bara Elokim,” demands that we reveal the G-dliness within ourselves and the world, with unconditional Ahavas Yisrael as the ultimate sign that our soul’s essence has been revealed. This class, taught by Rabbi Shais Taub, is based on Shemini Atzeres / Simchas Torah in Likkutei Sichos Vol. 2. 📄 PDF of Sicha: https://heyzine.com/flip-book/2d93343... 📄 PDF of Sicha in English by SIE: https://drive.google.com/file/d/1tlaz... 📖 Buy Likkutei Sichos Vol. 2 at Kehot: https://store.kehotonline.com/prodinf..."
+    },
+    {
+     "id": "https://www.soulwords.org/?p=17432",
+     "title": "Likkutei Sichos: Sukkos",
+     "url": "https://www.soulwords.org/likkutei-sichos-sukkos/",
+     "date": "Thu, 24 Sep 2026 16:16:31 +0000",
+     "blurb": "The festival of Sukkos is named after the sukkah because it is the mitzvah that encompasses the entire person from the very start of Yom Tov, enabling us to elevate even our most ordinary activities into Divine service throughout the year. True joy comes from drawing on the infinite Source through kabbalas ol, rather than relying on our own limited capacities. The incomparable joy of Simchas Beis Hashoevah comes from transcending our usual boundaries, as even the highest human faculty—the intellect—finds its fulfillment in submitting to what lies beyond reason. The story of the Sadducean priest who denigrated the water libation and was pelted with esrogim shows how kabbalas ol gives intellect its proper foundation and allows it to reach its full potential. Without the Beis Hamikdash and its sacrificial offerings, the mitzvah to rejoice physically on Yom Tov is fulfilled through drinking wine, including on Chol HaMoed. This class, taught by Rabbi Shais Taub, is based on Sukkos in Likkutei Sichos Vol. 2. 📄 PDF of Sicha: https://heyzine.com/flip-book/ad3ca1b... 📄 PDF of Sicha in English by SIE: https://drive.google.com/file/d/1p7J3... 📖 Buy Likkutei Sichos Vol. 2 at Kehot: https://store.kehotonline.com/prodinf."
+    },
+    {
+     "id": "https://www.soulwords.org/?p=17365",
+     "title": "Likkutei Sichos: Haazinu",
+     "url": "https://www.soulwords.org/likkutei-sichos-haazinu/",
+     "date": "Thu, 17 Sep 2026 20:51:11 +0000",
+     "blurb": "When the Jewish people align their will with Hashem's will through good resolutions during the Ten Days of Repentance, heaven and earth yield to them so they can elevate abundant material blessings into spiritual purpose. By examining why Moshe and Yeshayahu used inverted expressions of closeness and distance when addressing heaven and earth, we see how true spiritual harmony requires mutual integration of transcendent holiness and practical action. This class, taught by Rabbi Shais Taub, is based on Haazinu in Likkutei Sichos Vol. 2. 📄 PDF of Sicha: https://heyzine.com/flip-book/f5ffaed... 📄 PDF of Sicha in English by SIE: https://drive.google.com/file/d/1lJez... 📖 Buy Likkutei Sichos Vol. 2 at Kehot: https://store.kehotonline.com/prodinf..."
+    }
+   ],
+   "total": 10
+  },
+  {
+   "id": "sie_weekly",
+   "name": "SIE Weekly",
+   "role": "analysis",
+   "lang": "en",
+   "site": "https://shop.sie.org/pages/weekly",
+   "detect": "page_diff",
+   "sections": [
+    "trigger",
+    "whatsnew"
+   ],
+   "checked_at": "2026-10-18T04:51:48+00:00",
+   "status": "ok",
+   "new": [
+    {
+     "id": "content:9b3454160e5f7053",
+     "title": "עדכון בתוכן הדף",
+     "url": "https://shop.sie.org/pages/weekly",
+     "date": ""
+    }
+   ],
+   "latest": [
+    {
+     "id": "content:9b3454160e5f7053",
+     "title": "עדכון בתוכן הדף",
+     "url": "https://shop.sie.org/pages/weekly",
+     "date": ""
+    }
+   ],
+   "total": 1
+  },
+  {
+   "id": "pls",
+   "name": "Project Likkutei Sichos",
+   "role": "analysis",
+   "lang": "en",
+   "site": "https://projectlikkuteisichos.org/",
+   "detect": "rss",
+   "sections": [
+    "trigger",
+    "whatsnew"
+   ],
+   "checked_at": "2026-10-18T04:51:50+00:00",
+   "status": "ok",
+   "new": [
+    {
+     "id": "72fa53e4-1afd-4a9b-a371-d5e4caffb697",
+     "title": "Chelek 30, Lech Lecha 1 - Rabbi Yaakov Moshe Wolberg",
+     "url": "https://sichaindepth.captivate.fm",
+     "date": "Sat, 17 Oct 2026 21:40:00 -0400",
+     "blurb": "Chelek 30, Lech Lecha 1 - Rabbi Yaakov Moshe Wolberg"
+    },
+    {
+     "id": "9a58a532-197d-4cfc-880e-f5da064703e8",
+     "title": "Chelek 25, Lech Lecha 3 - Rabbi Yaakov Moshe Wolberg",
+     "url": "https://sichaindepth.captivate.fm",
+     "date": "Sat, 17 Oct 2026 21:25:00 -0400",
+     "blurb": "Chelek 25, Lech Lecha 3 - Rabbi Yaakov Moshe Wolberg"
+    }
+   ],
+   "latest": [
+    {
+     "id": "72fa53e4-1afd-4a9b-a371-d5e4caffb697",
+     "title": "Chelek 30, Lech Lecha 1 - Rabbi Yaakov Moshe Wolberg",
+     "url": "https://sichaindepth.captivate.fm",
+     "date": "Sat, 17 Oct 2026 21:40:00 -0400",
+     "blurb": "Chelek 30, Lech Lecha 1 - Rabbi Yaakov Moshe Wolberg"
+    },
+    {
+     "id": "9a58a532-197d-4cfc-880e-f5da064703e8",
+     "title": "Chelek 25, Lech Lecha 3 - Rabbi Yaakov Moshe Wolberg",
+     "url": "https://sichaindepth.captivate.fm",
+     "date": "Sat, 17 Oct 2026 21:25:00 -0400",
+     "blurb": "Chelek 25, Lech Lecha 3 - Rabbi Yaakov Moshe Wolberg"
+    },
+    {
+     "id": "ac8c3859-162d-43d2-bd5d-8a853b474f54",
+     "title": "Chelek 25, Noach - 7 Cheshvan - Rabbi Yaakov Moshe Wolberg",
+     "url": "https://sichaindepth.captivate.fm",
+     "date": "Sun, 11 Oct 2026 19:50:00 -0400",
+     "blurb": "Chelek 25, Noach - 7 Cheshvan - Rabbi Yaakov Moshe Wolberg"
+    },
+    {
+     "id": "702869ec-79af-47e6-b1f6-d5cbb16de044",
+     "title": "Chelek 25, Noach 3 - Rabbi Yaakov Moshe Wolberg",
+     "url": "https://sichaindepth.captivate.fm",
+     "date": "Fri, 09 Oct 2026 12:55:00 -0400",
+     "blurb": "Chelek 25, Noach 3 - Rabbi Yaakov Moshe Wolberg"
+    },
+    {
+     "id": "dee6f6cf-3f9f-44a2-9649-ae03ce1dffb9",
+     "title": "Chelek 30, Bereishis 1 - Rabbi Yaakov Moshe Wolberg",
+     "url": "https://sichaindepth.captivate.fm",
+     "date": "Thu, 08 Oct 2026 01:15:00 -0400",
+     "blurb": "Chelek 30, Bereishis 1 - Rabbi Yaakov Moshe Wolberg"
+    }
+   ],
+   "total": 200
+  },
+  {
+   "id": "chayenu_ls",
+   "name": "Chayenu — לקוטי שיחות",
+   "role": "analysis",
+   "lang": "en",
+   "site": "https://chayenu.org/chayenu-section/likkutei-sichos",
+   "detect": "page_diff",
+   "sections": [
+    "trigger",
+    "whatsnew"
+   ],
+   "checked_at": "2026-10-18T04:51:52+00:00",
+   "status": "ok",
+   "new": [
+    {
+     "id": "content:c9bbc88fed40de20",
+     "title": "עדכון בתוכן הדף",
+     "url": "https://chayenu.org/chayenu-section/likkutei-sichos",
+     "date": ""
+    }
+   ],
+   "latest": [
+    {
+     "id": "content:c9bbc88fed40de20",
+     "title": "עדכון בתוכן הדף",
+     "url": "https://chayenu.org/chayenu-section/likkutei-sichos",
+     "date": ""
+    }
+   ],
+   "total": 1
+  },
+  {
+   "id": "weekly_sicha",
+   "name": "The Weekly Sicha",
+   "role": "analysis",
+   "lang": "en",
+   "site": "https://theweeklysicha.org/",
+   "detect": "sitemap",
+   "sections": [
+    "trigger",
+    "whatsnew"
+   ],
+   "checked_at": "2026-10-18T04:51:53+00:00",
+   "status": "ok",
+   "new": [],
+   "latest": [
+    {
+     "id": "https://theweeklysicha.org/episode/tws-haazinu-87",
+     "title": "tws haazinu 87",
+     "url": "https://theweeklysicha.org/episode/tws-haazinu-87",
+     "date": "2026-09-21T16:00:44.803Z"
+    },
+    {
+     "id": "https://theweeklysicha.org/episode/tws-rosh-hashana-87",
+     "title": "tws rosh hashana 87",
+     "url": "https://theweeklysicha.org/episode/tws-rosh-hashana-87",
+     "date": "2026-09-15T04:00:45.378Z"
+    },
+    {
+     "id": "https://theweeklysicha.org/episode/tws-nitzavim-vayeilech-86",
+     "title": "tws nitzavim vayeilech 86",
+     "url": "https://theweeklysicha.org/episode/tws-nitzavim-vayeilech-86",
+     "date": "2026-09-06T13:00:45.450Z"
+    },
+    {
+     "id": "https://theweeklysicha.org/episode/tws-ki-tavo-86",
+     "title": "tws ki tavo 86",
+     "url": "https://theweeklysicha.org/episode/tws-ki-tavo-86",
+     "date": "2026-08-27T18:00:43.259Z"
+    },
+    {
+     "id": "https://theweeklysicha.org/episode/tws-ki-teitzei-86",
+     "title": "tws ki teitzei 86",
+     "url": "https://theweeklysicha.org/episode/tws-ki-teitzei-86",
+     "date": "2026-08-23T06:00:44.400Z"
+    }
+   ],
+   "total": 116
+  },
+  {
+   "id": "theyeshiva",
+   "name": "TheYeshiva.net",
+   "role": "analysis",
+   "lang": "en",
+   "site": "https://www.theyeshiva.net",
+   "detect": "rss",
+   "sections": [
+    "trigger",
+    "whatsnew"
+   ],
+   "checked_at": "2026-10-18T04:51:55+00:00",
+   "status": "ok",
+   "new": [],
+   "latest": [],
+   "total": 0
+  },
+  {
+   "id": "chassidus_applied",
+   "name": "Chassidus Applied",
+   "role": "analysis",
+   "lang": "en",
+   "site": "https://www.chassidusapplied.com/samachvav",
+   "detect": "rss",
+   "sections": [
+    "trigger",
+    "whatsnew"
+   ],
+   "checked_at": "2026-10-18T04:51:56+00:00",
+   "status": "error",
+   "new": [],
+   "latest": [],
+   "total": 0,
+   "error": "HTTPError: 404 Client Error: Not Found for url: https://www.youtube.com/feeds/videos.xml?channel_id=UCX5tj50hTwF_80XQ9JBMDYQ"
+  },
+  {
+   "id": "neirot",
+   "name": "Neirot",
+   "role": "analysis",
+   "lang": "en",
+   "site": "https://neirot.com/",
+   "detect": "wp_media",
+   "sections": [
+    "trigger",
+    "whatsnew"
+   ],
+   "checked_at": "2026-10-18T04:51:58+00:00",
+   "status": "ok",
+   "new": [],
+   "latest": [
+    {
+     "id": "8172",
+     "title": "The Teachings of The Rebbe – 5736 – Volume 2 – Final",
+     "url": "https://neirot.com/wp-content/uploads/2026/09/The-Teachings-of-The-Rebbe-5736-Volume-2-Final.pdf",
+     "date": "2026-09-20T22:11:13",
+     "blurb": ""
+    },
+    {
+     "id": "8035",
+     "title": "Hemshech Samech Vav – Volume 4",
+     "url": "https://neirot.com/wp-content/uploads/2026/09/Hemshech-Samech-Vav-Volume-4.pdf",
+     "date": "2026-09-01T15:45:48",
+     "blurb": ""
+    },
+    {
+     "id": "7824",
+     "title": "Hemshech Samech Vav – Volume 3",
+     "url": "https://neirot.com/wp-content/uploads/2026/08/Hemshech-Samech-Vav-Volume-3.pdf",
+     "date": "2026-08-03T18:02:18",
+     "blurb": ""
+    },
+    {
+     "id": "7429",
+     "title": "Hemshech Samech Vav – Volume 2",
+     "url": "https://neirot.com/wp-content/uploads/2026/07/Hemshech-Samech-Vav-Volume-2.pdf",
+     "date": "2026-07-01T18:25:41",
+     "blurb": ""
+    },
+    {
+     "id": "7262",
+     "title": "Hemshech Samech Vav – Vol 1",
+     "url": "https://neirot.com/wp-content/uploads/2026/06/Hemshech-Samech-Vav-Vol-1.pdf",
+     "date": "2026-06-10T16:57:58",
+     "blurb": ""
+    }
+   ],
+   "total": 10
+  },
+  {
+   "id": "chassidus_explained",
+   "name": "Chassidus Explained",
+   "role": "analysis",
+   "lang": "en",
+   "site": "https://podcasters.spotify.com/pod/show/chassidus-explained",
+   "detect": "rss",
+   "sections": [
+    "trigger",
+    "whatsnew"
+   ],
+   "checked_at": "2026-10-18T04:52:00+00:00",
+   "status": "ok",
+   "new": [],
+   "latest": [
+    {
+     "id": "fcfb1509-4666-44c0-8e6d-8eeaf5cf047b",
+     "title": "Ani Ledodi 5746 אני לדודי תשמ\"ו part 2/2 (end of Se'if 4-Se'if 8)",
+     "url": "https://podcasters.spotify.com/pod/show/chassidus-explained/episodes/Ani-Ledodi-5746----part-22-end-of-Seif-4-Seif-8-e3og7gv",
+     "date": "Mon, 07 Sep 2026 21:17:02 GMT",
+     "blurb": "Finishing the מאמר, the רבי answers the questions from סעיף ג, using the theme of the המלך בשדה as the \"לב\" of אלול to explain the connection of the אלול to פרשת ראה and to פרשת שופטים, while at the same time explaining why there is no פרשת שופטים in לקוטי תורה! The explanation is based on understanding the specialty of the \"field\" as it relates to the עבודה of אידן, and how that will be expressed when משיח comes."
+    },
+    {
+     "id": "85661cd9-aac8-4217-8c2e-788d7b2c5b2a",
+     "title": "Ani Ledodi 5746 אני לדודי תשמ\"ו part 1/2 (Se'if 1-4)",
+     "url": "https://podcasters.spotify.com/pod/show/chassidus-explained/episodes/Ani-Ledodi-5746----part-12-Seif-1-4-e3o9qnh",
+     "date": "Thu, 03 Sep 2026 14:31:27 GMT",
+     "blurb": "In this powerful מאמר, the רבי focuses us on the point of the אלטער רבי's משל of המלך בשדה, highlighting the beautiful connection of Hashem and the אידן made available during the month of אלול. The רבי explains this with a wonderful דיוק of the fact that the משל is printed on דף ל\"ב - heart - of לקוטי תורה חומש דברים: The \"heart\" of אלול is the beautiful connection of Hashem and the אידן as they become the heart of one another - and that is dependent on the אידן feeling this heartfelt connection with one another!"
+    },
+    {
+     "id": "85b54bf7-9b69-43b3-8121-e81bd8851c7f",
+     "title": "Nosato Lirei'echo 5736 נתת ליראיך תשל\"ו part 4/5 (Se'if 7-9)",
+     "url": "https://podcasters.spotify.com/pod/show/chassidus-explained/episodes/Nosato-Lireiecho-5736----part-45-Seif-7-9-e3lgdtj",
+     "date": "Wed, 01 Jul 2026 00:45:03 GMT",
+     "blurb": "Continuing along the theme of ירידת הנשמה למטה, the רבי uses the rule of \"כל הגבוה ביותר יורד למטה יותר\" - whatever has a higher source falls lower - to demonstrate how a נסיון requires the most strength from the person to overcome: Being that in a נסיון, the sparks of קדושה are the most concealed, they are on the lowest level, thus showing on the power of their source, and the power of the נשמה of the איד necessary to use against the נסיון. To explain that, the רבי takes us through the עבודות of: fulfilling מצות עשה, pushing away לא תעשה, transforming לא תעשה, and ultimately נסיונות, ultimately showing us how נסיונות is incomparably different than עבודת הבירורים - even that of a לא תעשה."
+    },
+    {
+     "id": "6ba25d94-a971-4e42-96f5-92acf0ecc178",
+     "title": "Nosato Lirei'echo 5736 נתת ליראיך תשל\"ו part 3/5 (Se'if 5-6)",
+     "url": "https://podcasters.spotify.com/pod/show/chassidus-explained/episodes/Nosato-Lireiecho-5736----part-35-Seif-5-6-e3lb03p",
+     "date": "Fri, 26 Jun 2026 22:07:10 GMT",
+     "blurb": "Contrasting בירורים (even by מצות לא תעשה) with נסיונות, the רבי explains how נסיונות are not a true existence - as by the 'river' in the story of the עקידה - and that is how a איד passes tests - by remembering that they are only passing tests! This explains the עבודה of the פריערדיקער רבי in prison, making a firm resolution not to be intimidated by them - being that they are not a true existence. (See linked שיחה.) Continuing on into the main part of the מאמר, the רבי sets out to explain at length the difference between בירורים and נסיונות, beginning with the overall explanation of the reason for the נשמה's drastic descent into this world."
+    },
+    {
+     "id": "dbcdb319-413b-461a-ad8a-0a02c9519034",
+     "title": "Nosato Lirei'echo 5736 נתת ליראיך תשל\"ו part 2/5 (Se'if 3-4)",
+     "url": "https://podcasters.spotify.com/pod/show/chassidus-explained/episodes/Nosato-Lireiecho-5736----part-25-Seif-3-4-e3kneud",
+     "date": "Fri, 12 Jun 2026 21:07:24 GMT",
+     "blurb": "The רבי finishes the מאמר's opening part by showing how אברהם's עבודה of מסירות נפש came from his יחידה. This opens up the מאמר's discussion of the difference between the עבודה of בירורים and that of נסיונות: While בירורים means to work with the object, נסיונות is to distance oneself from it. Whereas בירורים is engagement with this world, נסיונות is the disengagement from it."
+    }
+   ],
+   "total": 134
+  },
+  {
+   "id": "melukat",
+   "name": "Project Melukat",
+   "role": "analysis",
+   "lang": "en",
+   "site": "https://projectmelukat.org",
+   "detect": "sitemap",
+   "sections": [
+    "trigger",
+    "whatsnew"
+   ],
+   "checked_at": "2026-10-18T04:52:02+00:00",
+   "status": "ok",
+   "new": [],
+   "latest": [
+    {
+     "id": "https://projectmelukat.org/mayim-rabim-5738",
+     "title": "mayim rabim 5738",
+     "url": "https://projectmelukat.org/mayim-rabim-5738",
+     "date": "2026-10-08"
+    },
+    {
+     "id": "https://projectmelukat.org/breishis-boro-5738",
+     "title": "breishis boro 5738",
+     "url": "https://projectmelukat.org/breishis-boro-5738",
+     "date": "2026-10-05"
+    },
+    {
+     "id": "https://projectmelukat.org/lhavin-inyan-simchas-torah-5738",
+     "title": "lhavin inyan simchas torah 5738",
+     "url": "https://projectmelukat.org/lhavin-inyan-simchas-torah-5738",
+     "date": "2026-09-29"
+    },
+    {
+     "id": "https://projectmelukat.org/basukos-teishvu-5738",
+     "title": "basukos teishvu 5738",
+     "url": "https://projectmelukat.org/basukos-teishvu-5738",
+     "date": "2026-09-24"
+    },
+    {
+     "id": "https://projectmelukat.org/nasata-liraiecha-5736",
+     "title": "nasata liraiecha 5736",
+     "url": "https://projectmelukat.org/nasata-liraiecha-5736",
+     "date": "2026-09-17"
+    }
+   ],
+   "total": 166
+  },
+  {
+   "id": "daily_maamar",
+   "name": "Daily Maamar",
+   "role": "analysis",
+   "lang": "en",
+   "site": "https://feeds.transistor.fm/daily-maamar",
+   "detect": "rss",
+   "sections": [
+    "trigger",
+    "whatsnew"
+   ],
+   "checked_at": "2026-10-18T04:52:03+00:00",
+   "status": "ok",
+   "new": [
+    {
+     "id": "53764d68-e41d-445d-9c3a-ac72fa2f2e53",
+     "title": "Shabbos Parshas Noach Beis D’Rosh Chodesh Marcheshvan , 5727, Toras Menachem, Vol. 48 – Episode 3",
+     "url": "https://share.transistor.fm/s/b7672ffd",
+     "date": "Fri, 16 Oct 2026 09:21:02 -0400",
+     "blurb": "This episode covers from Chapter 5 through the end of the Maamar. Why liyah L'regel happened only Yom Tov and why the change to Shabbos and Rosh Chodesh L'asid lavo."
+    }
+   ],
+   "latest": [
+    {
+     "id": "53764d68-e41d-445d-9c3a-ac72fa2f2e53",
+     "title": "Shabbos Parshas Noach Beis D’Rosh Chodesh Marcheshvan , 5727, Toras Menachem, Vol. 48 – Episode 3",
+     "url": "https://share.transistor.fm/s/b7672ffd",
+     "date": "Fri, 16 Oct 2026 09:21:02 -0400",
+     "blurb": "This episode covers from Chapter 5 through the end of the Maamar. Why liyah L'regel happened only Yom Tov and why the change to Shabbos and Rosh Chodesh L'asid lavo."
+    },
+    {
+     "id": "e881904d-3bfa-4d70-a972-a3a1bef64e88",
+     "title": "Shabbos Parshas Noach Beis D’Rosh Chodesh Marcheshvan , 5727, Toras Menachem, Vol. 48 – Episode 2",
+     "url": "https://share.transistor.fm/s/ebd4317c",
+     "date": "Thu, 15 Oct 2026 09:23:18 -0400",
+     "blurb": "This episode covers from Chapter 3 through Chapter 4. 3 Levels: Workdays, Shabbos, Rosh Chodesh. The difference between tem and why/"
+    },
+    {
+     "id": "841760fd-d419-46c0-a626-e76cdb911eac",
+     "title": "Shabbos Parshas Noach Beis D’Rosh Chodesh Marcheshvan , 5727, Toras Menachem, Vol. 48 – Episode 1",
+     "url": "https://share.transistor.fm/s/7ef116dc",
+     "date": "Wed, 14 Oct 2026 09:35:50 -0400",
+     "blurb": "This episode covers from Chapter 1 through Chapter 2. WHy we need permission from Torah to work during the week and why it is foerbidden to work on Shabbos.."
+    },
+    {
+     "id": "3ec59141-7a20-42a4-aa8c-726bbf188064",
+     "title": "Shabbos Parshas Breishis, Mvh”ch Marcheshvan (H.2), 5727, Toras Menachem, Vol. 48 – Episode 5",
+     "url": "https://share.transistor.fm/s/eea6dad9",
+     "date": "Tue, 13 Oct 2026 06:49:13 -0400",
+     "blurb": "This episode covers from Chapter 6 through the end of the Maamar. The higher level of Torah."
+    },
+    {
+     "id": "0a0f8be9-6df0-4a01-aa85-81b058506457",
+     "title": "Shabbos Parshas Breishis, Mvh”ch Marcheshvan (H.2), 5727, Toras Menachem, Vol. 48 – Episode 4",
+     "url": "https://share.transistor.fm/s/7e9e9b4e",
+     "date": "Mon, 12 Oct 2026 09:23:09 -0400",
+     "blurb": "This episode covers from the 2nd paragraph in Chapter 5 through Chapter 5. How we inherit the world that is connected to ESAV"
+    }
+   ],
+   "total": 340
+  },
+  {
+   "id": "wellsprings",
+   "name": "Wellsprings of Chassidus",
+   "role": "analysis",
+   "lang": "en",
+   "site": "https://wellspringsofchassidus.com",
+   "detect": "rss",
+   "sections": [
+    "trigger",
+    "whatsnew"
+   ],
+   "checked_at": "2026-10-18T04:52:05+00:00",
+   "status": "ok",
+   "new": [],
+   "latest": [
+    {
+     "id": "046c362d-e61c-43e3-908d-142938a84295",
+     "title": "Ultimate Delight: Formed Now, Experienced In the Future - Alpayim Shana 5711: Shiur 11",
+     "url": "https://podcasters.spotify.com/pod/show/wellsprings-of-chassidus/episodes/Ultimate-Delight-Formed-Now--Experienced-In-the-Future---Alpayim-Shana-5711-Shiur-11-e3jn0ij",
+     "date": "Sun, 19 Jul 2026 12:00:00 GMT",
+     "blurb": "The ultimate form of Torah study, applying it to real-life, is the ultimate form of Hashem's delight in Torah. It is formed now when we study, but will only be experienced when Moshiach comes. This is the final of 11 Shiurim on the Maamar Alpayim Shana, delivered on Shavuos 5711. It explores many levels of Torah study, and uncovers why the highest form of Torah is brought about through our study down here in this world."
+    },
+    {
+     "id": "ab76b5fb-6e13-4bb1-b69c-7bd8aa550a4b",
+     "title": "Pleasure as a State of Being - Alpayim Shana 5711: Shiur 10",
+     "url": "https://podcasters.spotify.com/pod/show/wellsprings-of-chassidus/episodes/Pleasure-as-a-State-of-Being---Alpayim-Shana-5711-Shiur-10-e3jn0i9",
+     "date": "Fri, 17 Jul 2026 11:30:00 GMT",
+     "blurb": "The highest form of delight isn't activated by outside triggers, rather, it is a state of being. This is the pleasure that we tap into when we learn Torah in order to apply it to our lives. This is the tenth of 11 Shiurim on the Maamar Alpayim Shana, delivered on Shavuos 5711. It explores many levels of Torah study, and uncovers why the highest form of Torah is brought about through our study down here in this world."
+    },
+    {
+     "id": "691c1238-825e-4db4-af33-99cba89a9a57",
+     "title": "Applying Torah Practically Brings Heightened Scrutiny, and Heightened Pleasure - Alpayim Shana 5711: Shiur 9",
+     "url": "https://podcasters.spotify.com/pod/show/wellsprings-of-chassidus/episodes/Applying-Torah-Practically-Brings-Heightened-Scrutiny--and-Heightened-Pleasure---Alpayim-Shana-5711-Shiur-9-e3jn0hh",
+     "date": "Fri, 17 Jul 2026 11:00:00 GMT",
+     "blurb": "Applying Torah to real life brings pressure to get it right, but it is also an opportunity for a deeper enjoyment of Torah study. The enjoyment you can experience is the pleasure Hashem derives from the fulfillment of His will. This is the ninth of 11 Shiurim on the Maamar Alpayim Shana, delivered on Shavuos 5711. It explores many levels of Torah study, and uncovers why the highest form of Torah is brought about through our study down here in this world."
+    },
+    {
+     "id": "ba4df1e3-12fb-462c-9789-08ca312427cb",
+     "title": "Why Struggling in Learning is Greater - Alpayim Shana 5711: Shiur 8",
+     "url": "https://podcasters.spotify.com/pod/show/wellsprings-of-chassidus/episodes/Why-Struggling-in-Learning-is-Greater---Alpayim-Shana-5711-Shiur-8-e3jn0h4",
+     "date": "Thu, 16 Jul 2026 23:30:34 GMT",
+     "blurb": "The difference between those who find learning easy and those who struggle. There are advantages to both. This is the eighth of 11 Shiurim on the Maamar Alpayim Shana, delivered on Shavuos 5711. It explores many levels of Torah study, and uncovers why the highest form of Torah is brought about through our study down here in this world."
+    },
+    {
+     "id": "2c0bc5b3-3469-464b-9da5-8f0f03fd53a5",
+     "title": "Torah is More Than Wisdom; It's Bliss! - Alpayim Shana 5711: Shiur 7",
+     "url": "https://podcasters.spotify.com/pod/show/wellsprings-of-chassidus/episodes/Torah-is-More-Than-Wisdom-Its-Bliss----Alpayim-Shana-5711-Shiur-7-e3jn0ge",
+     "date": "Thu, 16 Jul 2026 23:15:53 GMT",
+     "blurb": "The Kabbalistic take on why torah is much more than an intellectual study, it is the ultimate source of delight. This is the seventh of 11 Shiurim on the Maamar Alpayim Shana, delivered on Shavuos 5711. It explores many levels of Torah study, and uncovers why the highest form of Torah is brought about through our study down here in this world."
+    }
+   ],
+   "total": 125
+  },
+  {
+   "id": "daily_sicha",
+   "name": "The Daily Sicha",
+   "role": "analysis",
+   "lang": "yi+he",
+   "site": "https://thedailysicha.com",
+   "detect": "rss",
+   "sections": [
+    "trigger",
+    "whatsnew"
+   ],
+   "checked_at": "2026-10-18T04:52:06+00:00",
+   "status": "ok",
+   "new": [
+    {
+     "id": "2026.10.18",
+     "title": "יום א' פ' לך לך, ז' מרחשון, ה'תשפ\"ז",
+     "url": "",
+     "date": "Sun, 18 Oct 2026 12:00:00 GMT",
+     "blurb": "התוכן ההוראה [הנ\"ל בהתוועדות] שיש להוסיף בענין דאהבת ואחדות ישראל נוגע במיוחד לאחרי חודש תשרי. כי בחודש תשרי ה\"מרובה במועדות\" ישנם ריבוי הזדמנויות שבהם נפגשים רבים מישראל בביהכנ\"ס וכיו\"ב, אבל לאחרי חודש תשרי, כאשר כאו\"א חוזר למקומו ולעסקיו, יש צורך לעורר במיוחד להמשיך גם אז ו\"לחיות\" עם אווירת האחדות והשמחה דחודש תשרי. איתא בש\"ך, שגם בימינו אלו כשכותבים בשטרות \"אחר הרגל\" פירושו ז' מרחשון ! היינו, שגם בזמן הגלות נמשך ה\"רגל\" עד ו' מרחשון, וא\"כ עד ו' מרחשון אין חידוש שעדיין נמשכת אווירת האחדות דחודש תשרי, ואין צורך עדיין \"להזכר\" על זה – זה \"מונח\" לנגד עיניו..., החידוש הוא, שגם \" אחר הרגל\", ז' מרחשון , יודעים שאי\"ז באופן שעוזבים את הרגל אלא אדרבה, באים בהמשך ל\" רגל \", וניכר שזה \"אחר הרגל \" דשמחת תורה, וממשיכים באווירת האחדות והשמחה ובתומ\"צ בימים שלאח\"ז. משיחת אור ליום ג' פ' לך, ז' מרחשון ה'תשמ\"ו ל\"הנחה פרטית\" או התרגום ללה\"ק של השיחה: https://thedailysicha.com/?date=18-10-2026 Synopsis This lesson, that one must increase in Ahavas Yisroel and Jewish unity, is particularly relevant after the month of Tishrei. Because during Tishrei (which is “abundant in festivals”) Jews constantly meet each in other in shul etc., but after Tishrei, when everyone returns home to their own affairs, there is a particular need to inspire people to continue live with the atmosphere of unity and joy of the month of Tishrei. The Shach states that even nowadays, when one writes “after the festival” in a legal document, it means 7 Cheshvan . Meaning: Even during the time of exile, the festival continues th"
+    }
+   ],
+   "latest": [
+    {
+     "id": "2026.10.18",
+     "title": "יום א' פ' לך לך, ז' מרחשון, ה'תשפ\"ז",
+     "url": "",
+     "date": "Sun, 18 Oct 2026 12:00:00 GMT",
+     "blurb": "התוכן ההוראה [הנ\"ל בהתוועדות] שיש להוסיף בענין דאהבת ואחדות ישראל נוגע במיוחד לאחרי חודש תשרי. כי בחודש תשרי ה\"מרובה במועדות\" ישנם ריבוי הזדמנויות שבהם נפגשים רבים מישראל בביהכנ\"ס וכיו\"ב, אבל לאחרי חודש תשרי, כאשר כאו\"א חוזר למקומו ולעסקיו, יש צורך לעורר במיוחד להמשיך גם אז ו\"לחיות\" עם אווירת האחדות והשמחה דחודש תשרי. איתא בש\"ך, שגם בימינו אלו כשכותבים בשטרות \"אחר הרגל\" פירושו ז' מרחשון ! היינו, שגם בזמן הגלות נמשך ה\"רגל\" עד ו' מרחשון, וא\"כ עד ו' מרחשון אין חידוש שעדיין נמשכת אווירת האחדות דחודש תשרי, ואין צורך עדיין \"להזכר\" על זה – זה \"מונח\" לנגד עיניו..., החידוש הוא, שגם \" אחר הרגל\", ז' מרחשון , יודעים שאי\"ז באופן שעוזבים את הרגל אלא אדרבה, באים בהמשך ל\" רגל \", וניכר שזה \"אחר הרגל \" דשמחת תורה, וממשיכים באווירת האחדות והשמחה ובתומ\"צ בימים שלאח\"ז. משיחת אור ליום ג' פ' לך, ז' מרחשון ה'תשמ\"ו ל\"הנחה פרטית\" או התרגום ללה\"ק של השיחה: https://thedailysicha.com/?date=18-10-2026 Synopsis This lesson, that one must increase in Ahavas Yisroel and Jewish unity, is particularly relevant after the month of Tishrei. Because during Tishrei (which is “abundant in festivals”) Jews constantly meet each in other in shul etc., but after Tishrei, when everyone returns home to their own affairs, there is a particular need to inspire people to continue live with the atmosphere of unity and joy of the month of Tishrei. The Shach states that even nowadays, when one writes “after the festival” in a legal document, it means 7 Cheshvan . Meaning: Even during the time of exile, the festival continues th"
+    },
+    {
+     "id": "2026.10.16",
+     "title": "יום ועש\"ק פ' נח, ה' מרחשון, ה'תשפ\"ז",
+     "url": "",
+     "date": "Fri, 16 Oct 2026 12:00:00 GMT",
+     "blurb": "התוכן עה\"פ \"מים רבים לא יוכלו לכבות את האהבה ונהרות לא ישטפוה\" מבאר בזה אדה\"ז [ראה תו\"א פ' נח], עפמ\"ש במדרש, שהקב\"ה מבטיח ו\"הקב\"ה עוזרו\" שה\" מים רבים \", שקאי על עניני עוה\"ז \"מים הזידונים\", לא יוכלו לכבות את ה\" אהבה \" המסותרת בלב כאו\"א ישראל שיש לו בירושה מאברהם אבינו! שענינו הי' לפרסם אלקות בעולם ועד\"ז צוה \"את בניו ואת ביתו אחריו\". ומצד השני, ה\"מים רבים\" של קדושה , ה\"אהבה רבה\" להקב\"ה, כן מכבים ושוטפים את ה\"אהבה\" של קליפה , האהבות והתשוקה לעניני עוה\"ז. וזה הי' ענין ה\" מבול \" ששטף את ה\"ומלאה הארץ חמס\" ע\"ד מקוה טהרה וכו'. משיחת י\"ג תמוז ה'תשי\"ט ל\"הנחה פרטית\" או התרגום ללה\"ק של השיחה: https://thedailysicha.com/?date=16-10-2026 Synopsis On the verse, “Many waters cannot extinguish the love, and rivers cannot wash it away,” the Alter Rebbe explains (see Torah Or, Parashas Noach), based on the Midrash, that Hashem promises (“Hashem helps him”) that the “ many waters ,” referring to worldly matters (which can become “wicked waters”) cannot extinguish the hidden love in the heart of every Jew, which he possesses as an inheritance from Avraham Avinu, whose publicized G-dliness throughout the world and similarly “commanded his children and his household after him.” On the other hand, the “many waters” of holiness (the “great love” for Hashem) do extinguish and wash away the love of kelipah – the loves and desires for worldly matters. This was the purpose of the Mabul , which cleansed the world (which had been “filled with robbery”) like a purifying mikveh etc. Excerpt from sichah of 13 "
+    },
+    {
+     "id": "2026.10.15",
+     "title": "יום ה' פ' נח, ד' מרחשון, ה'תשפ\"ז",
+     "url": "",
+     "date": "Thu, 15 Oct 2026 12:00:00 GMT",
+     "blurb": "התוכן המעלה מיוחדת של קיום הציווי \" הוי גולה למקום תורה \" שייך גם למי שלומד בישיבה שנמצאת בעיר שהוריו דרים ואוכל ויושן בביתם, ע\"י ש\"גולה\" מענינים אלו ועושה אותם ענינים חיצוניים בלבד, ומהותו ופנימיותו נמצאת ב\"מקום תורה\". ויש לקשר את הענין המיוחד דתלמידי הישיבות למ\"ש ברביעי דפ' נח בו נאמר הציווי לנח \" צא מן התיבה \": האדם צ\"ל חדור ומוקף באמונה ואהבת ויראת ה', שהם בדוגמת ה\"תיבה\" שהאדם נמצא בו. אבל כדי שלימוד התורה שלו (שע\"י נעשה היציאה את העולם האמיתי – \"אסתכל באורייתא וברא עלמא\") יהא כדרוש, זה צ\"ל באופן כזה שהוא מתייגע להבין התורה בשכלו , ואז אין האמונה בה' וכו' יכולה להיות בגלוי – \" צא מן התיבה\". רק שהלימוד צ\"ל מיוסד על ההקדמה של ה\"תיבה\" – אמונה וכו', כדי שזה לא יהא באופן של נצחנות, ולהסיר כל הענינים שיכולים להזיק ל\"יחוד נפלא\" שנעשה בין שכלו להקב\"ה ע\"י לימוד התורה. משיחת בדר\"ח מרחשון ה'תשמ\"ט, בעת ה\"יחידות כללית\" לתלמידי הישיבה שיחיו ל\"הנחה פרטית\" או התרגום ללה\"ק של השיחה: https://thedailysicha.com/?date=15-10-2026 Synopsis Even one who studies in a local yeshivah and eats and sleeps in his parents’ home can achieve the quality of “ Exiling yourself to a place of Torah ” – by “exiling” himself from mundane matters and making them external aspects of his life, while placing his inner being “in a place of Torah.” This relates to the verse in revi’i of parashas Noach, “ Go out from the teivah ”: A person must be permeated and surrounded by faith in Hashem, love of Hashem, and fear of Hashem, which are like a “ teivah .” But in order for his Torah study (through which he goes out in"
+    },
+    {
+     "id": "2026.10.14",
+     "title": "יום ד' פ' נח, ג' מרחשון, ה'תשפ\"ז",
+     "url": "",
+     "date": "Wed, 14 Oct 2026 12:00:00 GMT",
+     "blurb": "התוכן יש להשפיע על אומות העולם לקיים השבע מצוות דבני נח . ואין זה \"המצאה\" ח\"ו אלא פס\"ד ברור ברמב\"ם: \"צוה משה רבינו מפי הגבורה לכוף את כל באי העולם לקבל מצוות שנצטוו בני נח\". וזה שבמשך השנים לא עסקו בנ\"י בזה הוא מפני שהדבר הי' כרוך בסכנת נפשות וכו', אבל בדורנו רואים במוחש שנהי' שינוי במצב העולם ולא זו בלבד שאין בכך שום סכנת נפשות, אלא אדרבה‏ – ‏כשא' יגש לאינו-יהודי ויגלה לו שהקב\"ה נתן לב\"נ ז' מצוות שבהם תלוי קיום העולם, יכיר לו טובה ע\"ז וימצא חן בעיניו כשרואה שמתכוון לטובתו וכו', ומובן שאין מקום כלל לטענה \"וכי זהו הדבר היחיד שחסר?! הרי ישנם עוד דברים...\", כי ע\"י גישה כזו אפשר להמנע ר\"ל מקיום כל המצוות, כיון שביחס לכל אחד מהם יטען שעסוק במצווה אחרת... ‏משיחת פורים ה'תשמ\"ז ל\"הנחה פרטית\" או התרגום ללה\"ק של השיחה: https://thedailysicha.com/?date=14-10-2026 Synopsis It is incumbent upon us to influence the nations of the world to observe the Sheva Mitzvos Bnei Noach , and this is not chas v’shalom some new innovation, but a clear halachic ruling of the Rambam: “Moshe Rabbeinu was commanded by the Almi-ghty to compel all the inhabitants of the world to accept the mitzvos commanded to the Bnei Noach.” The reason it was not done throughout the generations is because it would have been dangerous to attempt to speak to gentiles about relgion etc., and saving lives takes precedence. But in our generation we see plainly that the world has changed, and now, not only is there no danger involved, but on the contrary – when one approaches a non-Jew and shows him that Hashem gave him seven mit"
+    },
+    {
+     "id": "2026.10.13",
+     "title": "יום ג' פ' נח, ב' מרחשון, ה'תשפ\"ז",
+     "url": "",
+     "date": "Tue, 13 Oct 2026 12:00:00 GMT",
+     "blurb": "התוכן שם פ' נח, שמראה על תוכנה , הוא \" נח \", אף שבה מדובר אודות המבול – שהוא היפך המנוחה ! ויובן עפ\"י המבואר הטעם שהמבול נק' \"כי מי נוח זאת לי\", כי בפנימיות בא המבול לטהר את הארץ, ועי\"ז נפעל \" עולם חדש \" ו\" נייחא בעליונים ובתחתונים \". ובעבודה : ל\"נייחא\" זו באים ע\"י שיש ענין המבול והעלמות והסתרים ויהודי מתגבר ע\"ז ע\"י הכניסה ל\" תיבה \", דקאי על תיבות התורה והתפלה. דעי\"ז, לא רק שאינו נפגע מה\"מים רבים\", אלא בונה \" עולם חדש \". וזהו מ\"ש \"מים רבים לא יוכלו לכבות את האהבה וגו'\": אפי' אם יהודי הוא טרוד בפרנסתו – \" מים רבים \", [במקום שזאת תהי' באופן של \"יגיע כפיך כי תאכל\" וה\" ראש \" מונח בעניני תומ\"צ ], ו\"מים רבים\" אלו שרשם נעלה ביותר , בכל זאת, לא יוכלו \"מים רבים\" אלו לכבות את אהבתו המסותרת לה', כי שרש הנשמה הוא נעלה עוד יותר [ ואדרבה : דוקא ע\"י ה\"מים רבים\" מתעלה לדרגא נעלית יותר !] משיחת מוצש\"ק פ' נח ה'תשל\"ח בחדרו הק' ל\"הנחה פרטית\" או התרגום ללה\"ק של השיחה: https://thedailysicha.com/?date=13-10-2026 Synopsis The name of Parsahas Noach (which expresses its content) is Noach (“tranquility”), even though it speaks about the Mabul , which seems to be the very opposite of tranquility . This can be understood based on the reason the Mabul is called “the Waters of Noach ” – because the deeper purpose of the Mabul was to purify the earth, bringing about a “ new world ” and “ tranquility Above and tranquility below .” In terms of divine service: This tranquility is attained precisely when there is a Mabul (concealment over G-dliness), and a Jew overcomes it by entering the “ Teivah ,” meaning t"
+    }
+   ],
+   "total": 1404
+  },
+  {
+   "id": "learnchassidus",
+   "name": "Learn Chassidus",
+   "role": "analysis",
+   "lang": "en",
+   "site": "https://learnchassidus.com/",
+   "detect": "page_diff",
+   "sections": [
+    "trigger",
+    "whatsnew"
+   ],
+   "checked_at": "2026-10-18T04:52:12+00:00",
+   "status": "ok",
+   "new": [],
+   "latest": [],
+   "total": 5
+  },
+  {
+   "id": "simplychassidus",
+   "name": "Simply Chassidus",
+   "role": "analysis",
+   "lang": "en",
+   "site": "https://www.simplychassidus.com/",
+   "detect": "page_diff",
+   "sections": [
+    "trigger",
+    "whatsnew"
+   ],
+   "checked_at": "2026-10-18T04:52:13+00:00",
+   "status": "ok",
+   "new": [
+    {
+     "id": "content:8cb28c1359122d5b",
+     "title": "עדכון בתוכן הדף",
+     "url": "https://www.simplychassidus.com/",
+     "date": ""
+    }
+   ],
+   "latest": [
+    {
+     "id": "content:8cb28c1359122d5b",
+     "title": "עדכון בתוכן הדף",
+     "url": "https://www.simplychassidus.com/",
+     "date": ""
+    }
+   ],
+   "total": 1
+  },
+  {
+   "id": "alonei_chabad",
+   "name": "עלוני חב״ד ישראל",
+   "role": "whatsnew",
+   "lang": "he",
+   "site": "https://chabadisrael.co.il/alonichabad/",
+   "detect": "browser",
+   "sections": [
+    "whatsnew"
+   ],
+   "checked_at": "2026-10-18T04:52:14+00:00",
+   "status": "browser",
+   "new": [],
+   "latest": [],
+   "total": 0
+  },
+  {
+   "id": "sichas_hashavua",
+   "name": "שיחת השבוע",
+   "role": "whatsnew",
+   "lang": "he",
+   "site": "https://www.chabad.org.il/Magazines/Articles.asp?CategoryID=30",
+   "detect": "browser",
+   "sections": [
+    "whatsnew"
+   ],
+   "checked_at": "2026-10-18T04:52:14+00:00",
+   "status": "browser",
+   "new": [],
+   "latest": [],
+   "total": 0
+  },
+  {
+   "id": "lmaan_yishmeu",
+   "name": "למען ישמעו",
+   "role": "whatsnew",
+   "lang": "he",
+   "site": "http://www.lmaanyishmeu.com/archives.htm",
+   "detect": "page_diff",
+   "sections": [
+    "whatsnew"
+   ],
+   "checked_at": "2026-10-18T04:52:14+00:00",
+   "status": "ok",
+   "new": [
+    {
+     "id": "content:245c1423049ccb51",
+     "title": "עדכון בתוכן הדף",
+     "url": "http://www.lmaanyishmeu.com/archives.htm",
+     "date": ""
+    }
+   ],
+   "latest": [
+    {
+     "id": "content:245c1423049ccb51",
+     "title": "עדכון בתוכן הדף",
+     "url": "http://www.lmaanyishmeu.com/archives.htm",
+     "date": ""
+    }
+   ],
+   "total": 1
+  },
+  {
+   "id": "lchaim",
+   "name": "L'Chaim Weekly",
+   "role": "whatsnew",
+   "lang": "he",
+   "site": "https://torahtable.com/publications/LChaim",
+   "detect": "torahtable",
+   "sections": [
+    "whatsnew"
+   ],
+   "checked_at": "2026-10-18T04:52:15+00:00",
+   "status": "ok",
+   "new": [],
+   "latest": [],
+   "total": 0
+  },
+  {
+   "id": "one_point",
+   "name": "One Point",
+   "role": "whatsnew",
+   "lang": "he",
+   "site": "https://torahtable.com/publications/One-Point",
+   "detect": "torahtable",
+   "sections": [
+    "whatsnew"
+   ],
+   "checked_at": "2026-10-18T04:52:17+00:00",
+   "status": "ok",
+   "new": [],
+   "latest": [],
+   "total": 0
+  },
+  {
+   "id": "derher",
+   "name": "Derher",
+   "role": "whatsnew",
+   "lang": "he",
+   "site": "https://derher.org/",
+   "detect": "browser",
+   "sections": [
+    "whatsnew"
+   ],
+   "checked_at": "2026-10-18T04:52:19+00:00",
+   "status": "browser",
+   "new": [],
+   "latest": [],
+   "total": 0
+  },
+  {
+   "id": "beitchabad",
+   "name": "בית חב״ד",
+   "role": "whatsnew",
+   "lang": "he",
+   "site": "https://he.chabad.org/",
+   "detect": "none",
+   "sections": [
+    "whatsnew"
+   ],
+   "checked_at": "2026-10-18T04:52:19+00:00",
+   "status": "manual",
+   "new": [],
+   "latest": [],
+   "total": 0
+  },
+  {
+   "id": "dvarmalchus_org",
+   "name": "dvarmalchus.org",
+   "role": "whatsnew",
+   "lang": "he",
+   "site": "https://dvarmalchus.org",
+   "detect": "page_diff",
+   "sections": [
+    "whatsnew"
+   ],
+   "checked_at": "2026-10-18T04:52:19+00:00",
+   "status": "ok",
+   "new": [
+    {
+     "id": "content:830792579f4b9b9b",
+     "title": "עדכון בתוכן הדף",
+     "url": "https://dvarmalchus.org",
+     "date": ""
+    }
+   ],
+   "latest": [
+    {
+     "id": "content:830792579f4b9b9b",
+     "title": "עדכון בתוכן הדף",
+     "url": "https://dvarmalchus.org",
+     "date": ""
+    }
+   ],
+   "total": 5
+  },
+  {
+   "id": "maynotecha_inst",
+   "name": "מכון מעיינותיך",
+   "role": "whatsnew",
+   "lang": "he",
+   "site": "https://toratchabad.com/about-us",
+   "detect": "none",
+   "sections": [
+    "whatsnew"
+   ],
+   "checked_at": "2026-10-18T04:52:21+00:00",
+   "status": "manual",
+   "new": [],
+   "latest": [],
+   "total": 0
+  },
+  {
+   "id": "chabad_org_magazine",
+   "name": "Chabad.org — Torah Texts (מגזין)",
+   "role": "whatsnew",
+   "lang": "he",
+   "site": "https://www.chabad.org/torah-texts/",
+   "detect": "rss",
+   "sections": [
+    "whatsnew"
+   ],
+   "checked_at": "2026-10-18T04:52:21+00:00",
+   "status": "ok",
+   "new": [],
+   "latest": [],
+   "total": 0
+  },
+  {
+   "id": "anash",
+   "name": "Anash.org",
+   "role": "whatsnew",
+   "lang": "he",
+   "site": "https://anash.org/",
+   "detect": "rss",
+   "sections": [
+    "whatsnew"
+   ],
+   "checked_at": "2026-10-18T04:52:22+00:00",
+   "status": "ok",
+   "new": [
+    {
+     "id": "https://anash.org/?p=1123511",
+     "title": "Thirst for Tanya Draws Hundreds in Boro Park and Monsey",
+     "url": "https://anash.org/thirst-for-tanya-draws-hundreds-in-boro-park-and-monsey/",
+     "date": "Sat, 17 Oct 2026 23:04:00 +0000",
+     "blurb": "Hundreds of Chassidishe bochurim and yungeleit gathered this past week in Boro Park and Monsey for two gatherings celebrating the completion of a cycle of Tanya study and the beginning of a new one, organized by the Irgun Limud Hatanya."
+    },
+    {
+     "id": "https://anash.org/?p=1124091",
+     "title": "‘The Rebbe Does It, But That Doesn’t Mean You Should’",
+     "url": "https://anash.org/the-rebbe-does-it-but-that-doesnt-mean-you-should/",
+     "date": "Sat, 17 Oct 2026 23:01:00 +0000",
+     "blurb": "A wealthy chossid from Riga, R. Chaim Yaakov Rashal was a mekushar of the Rebbe Rashab. When someone questioned the Rebbe's unique tekios, he had a ready answer for them."
+    }
+   ],
+   "latest": [
+    {
+     "id": "https://anash.org/?p=1123511",
+     "title": "Thirst for Tanya Draws Hundreds in Boro Park and Monsey",
+     "url": "https://anash.org/thirst-for-tanya-draws-hundreds-in-boro-park-and-monsey/",
+     "date": "Sat, 17 Oct 2026 23:04:00 +0000",
+     "blurb": "Hundreds of Chassidishe bochurim and yungeleit gathered this past week in Boro Park and Monsey for two gatherings celebrating the completion of a cycle of Tanya study and the beginning of a new one, organized by the Irgun Limud Hatanya."
+    },
+    {
+     "id": "https://anash.org/?p=1124091",
+     "title": "‘The Rebbe Does It, But That Doesn’t Mean You Should’",
+     "url": "https://anash.org/the-rebbe-does-it-but-that-doesnt-mean-you-should/",
+     "date": "Sat, 17 Oct 2026 23:01:00 +0000",
+     "blurb": "A wealthy chossid from Riga, R. Chaim Yaakov Rashal was a mekushar of the Rebbe Rashab. When someone questioned the Rebbe's unique tekios, he had a ready answer for them."
+    },
+    {
+     "id": "https://anash.org/?p=1123744",
+     "title": "Over 150 Bochurim Conclude Tishrei at the Rebbe’s Ohel",
+     "url": "https://anash.org/over-150-bochurim-conclude-tishrei-at-the-rebbes-ohel/",
+     "date": "Fri, 16 Oct 2026 01:45:00 +0000",
+     "blurb": "More than 150 bochurim from Eretz Yisroel spent the entire month of Tishrei near the Rebbe’s Ohel, enjoying a full program of learning, farbrengens, meals, and accommodations provided by Hachnosas Orchim."
+    },
+    {
+     "id": "https://anash.org/?p=1123201",
+     "title": "50 Lamed-Vov’niks Share Their Most Memorable Moment With the Rebbe",
+     "url": "https://anash.org/50-classmates-share-their-most-memorable-moment-with-the-rebbe/",
+     "date": "Thu, 15 Oct 2026 21:24:31 +0000",
+     "blurb": "Fifty classmates born in the year 5736 share personal memories and stories of their encounters with the Rebbe, from childhood visits to 770 and their first time seeing the Rebbe to experiences as bochurim and the lasting lessons they took with them."
+    },
+    {
+     "id": "https://anash.org/?p=1123820",
+     "title": "Chabad.AI Opens a New Frontier in Learning Chassidus",
+     "url": "https://anash.org/chabad-ai-opens-a-new-frontier-in-learning-chassidus/",
+     "date": "Thu, 15 Oct 2026 18:15:00 +0000",
+     "blurb": "Fifty years after the Rebbe’s historic sicha on harnessing technology for hafatzas hamaayanos, Chabad publishers have joined forces to launch a groundbreaking AI platform that opens new possibilities for exploring, understanding, and learning Chassidus."
+    }
+   ],
+   "total": 7
+  },
+  {
+   "id": "chabadinfo",
+   "name": "חב״ד אינפו",
+   "role": "whatsnew",
+   "lang": "he",
+   "site": "https://chabad.info/category/beis-medrash/",
+   "detect": "browser",
+   "sections": [
+    "whatsnew"
+   ],
+   "checked_at": "2026-10-18T04:52:24+00:00",
+   "status": "browser",
+   "new": [],
+   "latest": [],
+   "total": 0
+  },
+  {
+   "id": "hageula",
+   "name": "hageula.com",
+   "role": "whatsnew",
+   "lang": "he",
+   "site": "https://hageula.com",
+   "detect": "none",
+   "sections": [
+    "whatsnew"
+   ],
+   "checked_at": "2026-10-18T04:52:24+00:00",
+   "status": "manual",
+   "new": [],
+   "latest": [],
+   "total": 0
+  },
+  {
+   "id": "abc770",
+   "name": "abc770",
+   "role": "whatsnew",
+   "lang": "he",
+   "site": "https://abc770.org/articles/",
+   "detect": "rss",
+   "sections": [
+    "whatsnew"
+   ],
+   "checked_at": "2026-10-18T04:52:24+00:00",
+   "status": "ok",
+   "new": [],
+   "latest": [
+    {
+     "id": "https://abc770.org/?p=20848",
+     "title": "\"קונטרס העבודה\" לרבי הרש\"ב פרק ב'",
+     "url": "https://abc770.org/%d7%a7%d7%95%d7%a0%d7%98%d7%a8%d7%a1-%d7%94%d7%a2%d7%91%d7%95%d7%93%d7%94-%d7%9c%d7%a8%d7%91%d7%99-%d7%94%d7%a8%d7%a9%d7%91-%d7%a4%d7%a8%d7%a7-%d7%91/?utm_source=rss&utm_medium=rss&utm_campaign=%25d7%25a7%25d7%2595%25d7%25a0%25d7%2598%25d7%25a8%25d7%25a1-%25d7%2594%25d7%25a2%25d7%2591%25d7%2595%25d7%2593%25d7%2594-%25d7%259c%25d7%25a8%25d7%2591%25d7%2599-%25d7%2594%25d7%25a8%25d7%25a9%25d7%2591-%25d7%25a4%25d7%25a8%25d7%25a7-%25d7%2591",
+     "date": "Wed, 30 Jul 2025 11:17:51 +0000",
+     "blurb": "ודאי שצריך להיות גם יראה ואדרבא היא מוכרחת ואי אפשר להיות בלעדה והיינו בחינת יראה תתאה וקבלת עול מלכות שמים להגדיר עצמו בכל החושים שלו מצד קבלת עול מלכות שמים ויראת אלקים שבו, והיינו בהחושים דראיה ושמיעה ודיבור. The post \"קונטרס העבודה\" לרבי הרש\"ב פרק ב' first appeared on חב\"ד - אור אין סוף ."
+    },
+    {
+     "id": "https://abc770.org/?p=20535",
+     "title": "דרך מצוותיך ארוץ – כמה יקרה כל מצוה!",
+     "url": "https://abc770.org/%d7%93%d7%a8%d7%9a-%d7%9e%d7%a6%d7%95%d7%95%d7%aa%d7%99%d7%9a-%d7%90%d7%a8%d7%95%d7%a5-%d7%9b%d7%9e%d7%94-%d7%99%d7%a7%d7%a8%d7%94-%d7%9b%d7%9c-%d7%9e%d7%a6%d7%95%d7%94/?utm_source=rss&utm_medium=rss&utm_campaign=%25d7%2593%25d7%25a8%25d7%259a-%25d7%259e%25d7%25a6%25d7%2595%25d7%2595%25d7%25aa%25d7%2599%25d7%259a-%25d7%2590%25d7%25a8%25d7%2595%25d7%25a5-%25d7%259b%25d7%259e%25d7%2594-%25d7%2599%25d7%25a7%25d7%25a8%25d7%2594-%25d7%259b%25d7%259c-%25d7%259e%25d7%25a6%25d7%2595%25d7%2594",
+     "date": "Wed, 29 May 2024 18:14:09 +0000",
+     "blurb": "מצווה הנעשית בשמחה משפיעה רבות הן בעולמות העליונים והן בעולמות התחתונים ובמיוחד על האדם המקיים את המצוה. The post דרך מצוותיך ארוץ – כמה יקרה כל מצוה! first appeared on חב\"ד - אור אין סוף ."
+    },
+    {
+     "id": "https://abc770.org/?p=20508",
+     "title": "והעיקר לא לפחד כלל",
+     "url": "https://abc770.org/%d7%95%d7%94%d7%a2%d7%99%d7%a7%d7%a8-%d7%9c%d7%90-%d7%9c%d7%a4%d7%97%d7%93-%d7%9b%d7%9c%d7%9c/?utm_source=rss&utm_medium=rss&utm_campaign=%25d7%2595%25d7%2594%25d7%25a2%25d7%2599%25d7%25a7%25d7%25a8-%25d7%259c%25d7%2590-%25d7%259c%25d7%25a4%25d7%2597%25d7%2593-%25d7%259b%25d7%259c%25d7%259c",
+     "date": "Thu, 23 Nov 2023 13:26:16 +0000",
+     "blurb": "על דבר מבוקשו נידון המורך לב כו' הגם על חנם ממש. לא מנעתי מלכתוב בזה אשר עם לבבי. ודאי שיש לבקש מה׳ על שמחת הנפש כמאמר שמח נפש עבדך וכן והסר ממנו יגון ואנחה כו'. עם כל זה יש גם כן פחד שהאדם גורם לעצמו והבחירה ורשות נתונה לו למנוע עצמו ממנו. The post והעיקר לא לפחד כלל first appeared on חב\"ד - אור אין סוף ."
+    },
+    {
+     "id": "https://abc770.org/?p=20442",
+     "title": "פרשת דברים – תכלית הגלות גאולה כללית ופרטית",
+     "url": "https://abc770.org/%d7%a4%d7%a8%d7%a9%d7%aa-%d7%93%d7%91%d7%a8%d7%99%d7%9d-%d7%aa%d7%9b%d7%9c%d7%99%d7%aa-%d7%94%d7%92%d7%9c%d7%95%d7%aa-%d7%92%d7%90%d7%95%d7%9c%d7%94-%d7%9b%d7%9c%d7%9c%d7%99%d7%aa-%d7%95/?utm_source=rss&utm_medium=rss&utm_campaign=%25d7%25a4%25d7%25a8%25d7%25a9%25d7%25aa-%25d7%2593%25d7%2591%25d7%25a8%25d7%2599%25d7%259d-%25d7%25aa%25d7%259b%25d7%259c%25d7%2599%25d7%25aa-%25d7%2594%25d7%2592%25d7%259c%25d7%2595%25d7%25aa-%25d7%2592%25d7%2590%25d7%2595%25d7%259c%25d7%2594-%25d7%259b%25d7%259c%25d7%259c%25d7%2599%25d7%25aa-%25d7%2595",
+     "date": "Thu, 20 Jul 2023 20:46:00 +0000",
+     "blurb": "למרות חושך הגלות, והעבודה שהגלות מתגברת והולכת עד ש\"המלכות תהפך למינות, חושך שלא היה כמותו מעולם – אין בכל זאת להתרשם מכך, מתוך ידיעה שככל שגדל החושך – הוא בא משום ההתקרבות אל אור הגאולה. The post פרשת דברים – תכלית הגלות גאולה כללית ופרטית first appeared on חב\"ד - אור אין סוף ."
+    },
+    {
+     "id": "https://abc770.org/?p=20434",
+     "title": "פרשת מסעי – על פי השם יחנו ועל פי השם יסעו",
+     "url": "https://abc770.org/20434-2/?utm_source=rss&utm_medium=rss&utm_campaign=20434-2",
+     "date": "Tue, 11 Jul 2023 16:34:55 +0000",
+     "blurb": "כל יהודי במשך כל ימי חייו עובר מ\"ב מסעות. ונכתבו בתורה להורות לנו מהי הדרך הישרה ללכת ממסע למסע, ובכל חניה לחוש \"כאן ועכשיו\"; כי כל מה שקורה בחיים זה מסע, פרק בחיים, תהליך שעוברים; כי החיים דומים לסולם שהאדם צריך לטפס בו, כדי לשנות את העולם ולברוא עולם חדש ומתוקן. The post פרשת מסעי – על פי השם יחנו ועל פי השם יסעו first appeared on חב\"ד - אור אין סוף ."
+    }
+   ],
+   "total": 10
+  },
+  {
+   "id": "kehot",
+   "name": "הוצאת קה״ת (חנות)",
+   "role": "whatsnew",
+   "lang": "he",
+   "site": "https://store.kehotonline.com/departments.asp?dept=334",
+   "detect": "kehot",
+   "sections": [
+    "whatsnew"
+   ],
+   "checked_at": "2026-10-18T04:52:27+00:00",
+   "status": "ok",
+   "new": [],
+   "latest": [
+    {
+     "id": "HL-SMICR",
+     "title": "Smichas Rabboseinu",
+     "url": "https://store.kehotonline.com/products.asp?dept=344",
+     "date": "2026-10-18"
+    },
+    {
+     "id": "HAR-RABBN",
+     "title": "Rabbosainu Nesiainu Admur Hazaken",
+     "url": "https://store.kehotonline.com/products.asp?dept=344",
+     "date": "2026-10-18"
+    },
+    {
+     "id": "HAR-SHULOBH318",
+     "title": "Shulchan Aruch - Biurei HaShulchan, Shabbos, Simanim 318-344",
+     "url": "https://store.kehotonline.com/products.asp?dept=344",
+     "date": "2026-10-18"
+    },
+    {
+     "id": "HAR-SHULOM3",
+     "title": "Shulchan Aruch HaMevoar #3 (Chapters 89-131 & 155-156)",
+     "url": "https://store.kehotonline.com/products.asp?dept=344",
+     "date": "2026-10-18"
+    },
+    {
+     "id": "HAR-SHULOM4",
+     "title": "Shulchan Aruch HaMevoar #4 (Chapters 158-215)",
+     "url": "https://store.kehotonline.com/products.asp?dept=344",
+     "date": "2026-10-18"
+    },
+    {
+     "id": "HAR-SHULOMM",
+     "title": "Shulchan Aruch HaMevoar - Hilchos Muktzeh",
+     "url": "https://store.kehotonline.com/products.asp?dept=344",
+     "date": "2026-10-18"
+    },
+    {
+     "id": "HAR-SHULOMYT",
+     "title": "Shulchan Aruch HaMevoar - Hilchos Yom Tov",
+     "url": "https://store.kehotonline.com/products.asp?dept=344",
+     "date": "2026-10-18"
+    },
+    {
+     "id": "HO-HARE5",
+     "title": "HaRebbe Yimtza Et HaDerech Keitzad Laanot #5",
+     "url": "https://store.kehotonline.com/products.asp?dept=344",
+     "date": "2026-10-18"
+    },
+    {
+     "id": "HRE-OTSALSGM",
+     "title": "Otsar Likkutei Sichos - Geulah U'Mashiach U'Beis HaMikdash",
+     "url": "https://store.kehotonline.com/products.asp?dept=344",
+     "date": "2026-10-18"
+    },
+    {
+     "id": "HY-LIKUD3",
+     "title": "Likkutei Dibburim LaNoar #3",
+     "url": "https://store.kehotonline.com/products.asp?dept=344",
+     "date": "2026-10-18"
+    },
+    {
+     "id": "F-SUBB",
+     "title": "Subbota - My Twenty Years in Soviet Prison (Avraham Netzach) - French",
+     "url": "https://store.kehotonline.com/products.asp?dept=344",
+     "date": "2026-10-18"
+    },
+    {
+     "id": "HAR-SHULOM1",
+     "title": "Shulchan Aruch HaMevoar #1 (Chapters 1-7 & 46-88)",
+     "url": "https://store.kehotonline.com/products.asp?dept=344",
+     "date": "2026-10-18"
+    },
+    {
+     "id": "HAR-SHULOM2",
+     "title": "Shulchan Aruch HaMevoar #2 (Chapters 8-45)",
+     "url": "https://store.kehotonline.com/products.asp?dept=344",
+     "date": "2026-10-18"
+    },
+    {
+     "id": "HP-STH.PFWT",
+     "title": "Siddur Pocket with Tehillim Flexi-Cover Classic Ed. 4 x 5½",
+     "url": "https://store.kehotonline.com/products.asp?dept=344",
+     "date": "2026-10-18"
+    },
+    {
+     "id": "ESE-CHUM.SB",
+     "title": "Chumash 5 Volume Slipcased Set",
+     "url": "https://store.kehotonline.com/products.asp?dept=344",
+     "date": "2026-10-18"
+    },
+    {
+     "id": "HP-ORHA11",
+     "title": "Or Hatfilah Vol. 11",
+     "url": "https://store.kehotonline.com/products.asp?dept=344",
+     "date": "2026-10-18"
+    },
+    {
+     "id": "HRE-MAAY",
+     "title": "Toras Menachem - Maaynei HaYeshuah",
+     "url": "https://store.kehotonline.com/products.asp?dept=343",
+     "date": "2026-09-30"
+    },
+    {
+     "id": "HRE-TMHRS",
+     "title": "Toras Menachem - Hadronim Al HaRambam V'Shas",
+     "url": "https://store.kehotonline.com/products.asp?dept=343",
+     "date": "2026-09-30"
+    },
+    {
+     "id": "ELE-CHUM.SEL09",
+     "title": "Chumash Standard Size - Synagogue Edition - Leather Mahogany",
+     "url": "https://store.kehotonline.com/products.asp?dept=343",
+     "date": "2026-09-30"
+    },
+    {
+     "id": "ELE-SHAAH.L09",
+     "title": "Shaar HaBitachon - Gate of Trust - Leather Mahogany 7 x 9½",
+     "url": "https://store.kehotonline.com/products.asp?dept=343",
+     "date": "2026-09-30"
+    },
+    {
+     "id": "ELE-SHAAH.L10",
+     "title": "Shaar HaBitachon - Gate of Trust - Leather White 7 x 9½",
+     "url": "https://store.kehotonline.com/products.asp?dept=343",
+     "date": "2026-09-30"
+    },
+    {
+     "id": "ELE-SHAAH.L12",
+     "title": "Shaar HaBitachon - Gate of Trust - Leather Blue 7 x 9½",
+     "url": "https://store.kehotonline.com/products.asp?dept=343",
+     "date": "2026-09-30"
+    },
+    {
+     "id": "ELE-SHAAH.L70",
+     "title": "Shaar HaBitachon - Gate of Trust - Leather Pearl-Pink 7 x 9½",
+     "url": "https://store.kehotonline.com/products.asp?dept=343",
+     "date": "2026-09-30"
+    },
+    {
+     "id": "HLE-KALL.S10",
+     "title": "Kallah Set Leather White Medium Size",
+     "url": "https://store.kehotonline.com/products.asp?dept=343",
+     "date": "2026-09-30"
+    },
+    {
+     "id": "HLE-KALL.S12",
+     "title": "Kallah Set Leather Blue Medium Size",
+     "url": "https://store.kehotonline.com/products.asp?dept=343",
+     "date": "2026-09-30"
+    },
+    {
+     "id": "HLE-MISHT.09",
+     "title": "Mishneh Torah HaShalem - Leather Mahogany",
+     "url": "https://store.kehotonline.com/products.asp?dept=343",
+     "date": "2026-09-30"
+    },
+    {
+     "id": "HLE-MISHT.12",
+     "title": "Mishneh Torah HaShalem - Leather Blue",
+     "url": "https://store.kehotonline.com/products.asp?dept=343",
+     "date": "2026-09-30"
+    },
+    {
+     "id": "HLE-TEHIC.C10",
+     "title": "Tehillim Hebrew Chazan Leather Clear Edition White 8 x 11",
+     "url": "https://store.kehotonline.com/products.asp?dept=343",
+     "date": "2026-09-30"
+    },
+    {
+     "id": "HLE-TEHIC.C12",
+     "title": "Tehillim Hebrew Chazan Leather Clear Edition Blue 8 x 11",
+     "url": "https://store.kehotonline.com/products.asp?dept=343",
+     "date": "2026-09-30"
+    },
+    {
+     "id": "HLE-TEHIC.C19",
+     "title": "Tehillim Hebrew Chazan Leather Clear Edition Cherry 8 x 11",
+     "url": "https://store.kehotonline.com/products.asp?dept=343",
+     "date": "2026-09-30"
+    },
+    {
+     "id": "HLE-TEHIC.C70",
+     "title": "Tehillim Hebrew Chazan Leather Clear Edition Pearl-Pink 8 x 11",
+     "url": "https://store.kehotonline.com/products.asp?dept=343",
+     "date": "2026-09-30"
+    },
+    {
+     "id": "HKO-OHRY93",
+     "title": "Ohr Yisroel - Kovetz Leinyanei Halachah U'Minhag vol. 93 (Tishrei 5787)",
+     "url": "https://store.kehotonline.com/products.asp?dept=343",
+     "date": "2026-09-30"
+    }
+   ],
+   "total": 189
+  }
+ ],
+ "browser_checks": {
+  "lahak": {
+   "checked_at": "2026-10-18T04:53:19+00:00",
+   "items": [
+    {
+     "id": "7504924",
+     "title": "מאמר ד\"ה לך לך גו', ה'תשמ\"ב",
+     "issued_for": "יוצא לאור לש\"פ לך לך, י\"ג מרחשון, ה'תשפ\"ז",
+     "url": "https://www.lahak.org/templates/lahak/article_cdo/aid/7504924/jewish/page.htm",
+     "pdf": "https://www.lahak.org/media/pdf/1389/yfmk13895277.pdf",
+     "genre": "הנחה",
+     "mugah": "לבדוק בקונטרס",
+     "sections": [
+      "primary",
+      "whatsnew"
+     ],
+     "new": true
+    },
+    {
+     "id": "7504922",
+     "title": "מאמר ד\"ה אלה תולדות נח, ה'תשמ\"ב",
+     "issued_for": "יוצא לאור לש\"פ נח, ו' מרחשון, ה'תשפ\"ז",
+     "url": "https://www.lahak.org/templates/lahak/article_cdo/aid/7504922/jewish/page.htm",
+     "pdf": "https://www.lahak.org/media/pdf/1389/XAdt13895274.pdf",
+     "genre": "הנחה",
+     "mugah": "לבדוק בקונטרס",
+     "sections": [
+      "primary",
+      "whatsnew"
+     ],
+     "new": false
+    },
+    {
+     "id": "7504942",
+     "title": "מאמר ד\"ה בראשית ברא, ה'תשמ\"ב",
+     "issued_for": "יוצא לאור לש\"פ בראשית, מבה\"ח וער\"ח מרחשון, ה'תשפ\"ז",
+     "url": "https://www.lahak.org/templates/lahak/article_cdo/aid/7504942/jewish/page.htm",
+     "pdf": "https://www.lahak.org/media/pdf/1385/BhWQ13853691.pdf",
+     "genre": "הנחה",
+     "mugah": "לבדוק בקונטרס",
+     "sections": [
+      "primary",
+      "whatsnew"
+     ],
+     "new": false
+    },
+    {
+     "id": "7504920",
+     "title": "חלק שביעי מהתוועדות יום שמחת תורה, ה'תשל\"ז",
+     "issued_for": "יוצא לאור לשמיני עצרת ושמחת תורה. ה'תשפ\"ז",
+     "url": "https://www.lahak.org/templates/lahak/article_cdo/aid/7504920/jewish/page.htm",
+     "pdf": "https://www.lahak.org/media/pdf/1385/cCdm13853689.pdf",
+     "genre": "הנחה",
+     "mugah": "לבדוק בקונטרס",
+     "sections": [
+      "primary",
+      "whatsnew"
+     ],
+     "new": false
+    }
+   ],
+   "note": ""
+  },
+  "taam_hachaim": {
+   "checked_at": "2026-10-01T12:03:16+00:00",
+   "items": [
+    {
+     "id": "18EqCs0QImnyzYbhewARJogyAG98G_saF",
+     "title": "טעם החיים 135 — שופטים / אלול",
+     "url": "https://drive.google.com/file/d/18EqCs0QImnyzYbhewARJogyAG98G_saF/view",
+     "sections": [
+      "style"
+     ],
+     "new": false
+    }
+   ],
+   "note": "מקור סגנון בלבד. התיקייה ממוינת לפי שם; גליונות חדשים נבדקים ידנית דרך הדפדפן או לפי מזהה קובץ."
+  },
+  "alonei_chabad": {
+   "checked_at": "2026-10-12T19:23:21+00:00",
+   "items": [
+    {
+     "id": "ZnQ5MHplYWZo",
+     "title": "שיחת השבוע · בראשית - 2075 E",
+     "url": "https://player.flipsnack.com/?hash=QkU4RjZCRjU2OUIrZnQ5MHplYWZo",
+     "lang": "he",
+     "genre": "גיליון",
+     "sections": [
+      "whatsnew"
+     ],
+     "new": false,
+     "date": "2026-10-12"
+    },
+    {
+     "id": "ejB5YXBtYQ==",
+     "title": "פרשה · בראשית - 310 R",
+     "url": "https://player.flipsnack.com/?hash=QkU4RjZCRjU2OUIrY21hejB5YXBtYQ==",
+     "lang": "he",
+     "genre": "גיליון",
+     "sections": [
+      "whatsnew"
+     ],
+     "new": false,
+     "date": "2026-10-12"
+    },
+    {
+     "id": "ZnUxdDZyaA==",
+     "title": "התקשרות · בראשית - 1670 R",
+     "url": "https://player.flipsnack.com/?hash=QkU4RjZCRjU2OUIrdnRwZnUxdDZyaA==",
+     "lang": "he",
+     "genre": "גיליון",
+     "sections": [
+      "whatsnew"
+     ],
+     "new": false,
+     "date": "2026-10-12"
+    },
+    {
+     "id": "ZnRucXp5MGx1",
+     "title": "Living Jewish · Bereshit - 5787",
+     "url": "https://player.flipsnack.com/?hash=QkU4RjZCRjU2OUIrZnRucXp5MGx1",
+     "lang": "en",
+     "genre": "גיליון",
+     "sections": [
+      "whatsnew"
+     ],
+     "new": false,
+     "date": "2026-10-12"
+    },
+    {
+     "id": "ZmRjM3dpOXBv",
+     "title": "ВОСХОЖДЕНИЕ · Jews Gazette 1876 IS",
+     "url": "https://player.flipsnack.com/?hash=QkU4RjZCRjU2OUIrZmRjM3dpOXBv",
+     "lang": "ru",
+     "genre": "גיליון",
+     "sections": [
+      "whatsnew"
+     ],
+     "new": false,
+     "date": "2026-10-12"
+    },
+    {
+     "id": "dHdlYXBtYQ==",
+     "title": "La Paracha · 315 - בראשית",
+     "url": "https://player.flipsnack.com/?hash=QkU4RjZCRjU2OUIrZG5xdHdlYXBtYQ==",
+     "lang": "fr",
+     "genre": "גיליון",
+     "sections": [
+      "whatsnew"
+     ],
+     "new": false,
+     "date": "2026-10-12"
+    }
+   ],
+   "note": ""
+  }
+ }
+}

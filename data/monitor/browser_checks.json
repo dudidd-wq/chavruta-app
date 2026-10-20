@@ -1,0 +1,157 @@
+{
+ "lahak": {
+  "checked_at": "2026-10-18T04:53:19+00:00",
+  "items": [
+   {
+    "id": "7504924",
+    "title": "מאמר ד\"ה לך לך גו', ה'תשמ\"ב",
+    "issued_for": "יוצא לאור לש\"פ לך לך, י\"ג מרחשון, ה'תשפ\"ז",
+    "url": "https://www.lahak.org/templates/lahak/article_cdo/aid/7504924/jewish/page.htm",
+    "pdf": "https://www.lahak.org/media/pdf/1389/yfmk13895277.pdf",
+    "genre": "הנחה",
+    "mugah": "לבדוק בקונטרס",
+    "sections": [
+     "primary",
+     "whatsnew"
+    ],
+    "new": true
+   },
+   {
+    "id": "7504922",
+    "title": "מאמר ד\"ה אלה תולדות נח, ה'תשמ\"ב",
+    "issued_for": "יוצא לאור לש\"פ נח, ו' מרחשון, ה'תשפ\"ז",
+    "url": "https://www.lahak.org/templates/lahak/article_cdo/aid/7504922/jewish/page.htm",
+    "pdf": "https://www.lahak.org/media/pdf/1389/XAdt13895274.pdf",
+    "genre": "הנחה",
+    "mugah": "לבדוק בקונטרס",
+    "sections": [
+     "primary",
+     "whatsnew"
+    ],
+    "new": false
+   },
+   {
+    "id": "7504942",
+    "title": "מאמר ד\"ה בראשית ברא, ה'תשמ\"ב",
+    "issued_for": "יוצא לאור לש\"פ בראשית, מבה\"ח וער\"ח מרחשון, ה'תשפ\"ז",
+    "url": "https://www.lahak.org/templates/lahak/article_cdo/aid/7504942/jewish/page.htm",
+    "pdf": "https://www.lahak.org/media/pdf/1385/BhWQ13853691.pdf",
+    "genre": "הנחה",
+    "mugah": "לבדוק בקונטרס",
+    "sections": [
+     "primary",
+     "whatsnew"
+    ],
+    "new": false
+   },
+   {
+    "id": "7504920",
+    "title": "חלק שביעי מהתוועדות יום שמחת תורה, ה'תשל\"ז",
+    "issued_for": "יוצא לאור לשמיני עצרת ושמחת תורה. ה'תשפ\"ז",
+    "url": "https://www.lahak.org/templates/lahak/article_cdo/aid/7504920/jewish/page.htm",
+    "pdf": "https://www.lahak.org/media/pdf/1385/cCdm13853689.pdf",
+    "genre": "הנחה",
+    "mugah": "לבדוק בקונטרס",
+    "sections": [
+     "primary",
+     "whatsnew"
+    ],
+    "new": false
+   }
+  ],
+  "note": ""
+ },
+ "taam_hachaim": {
+  "checked_at": "2026-10-01T12:03:16+00:00",
+  "items": [
+   {
+    "id": "18EqCs0QImnyzYbhewARJogyAG98G_saF",
+    "title": "טעם החיים 135 — שופטים / אלול",
+    "url": "https://drive.google.com/file/d/18EqCs0QImnyzYbhewARJogyAG98G_saF/view",
+    "sections": [
+     "style"
+    ],
+    "new": false
+   }
+  ],
+  "note": "מקור סגנון בלבד. התיקייה ממוינת לפי שם; גליונות חדשים נבדקים ידנית דרך הדפדפן או לפי מזהה קובץ."
+ },
+ "alonei_chabad": {
+  "checked_at": "2026-10-12T19:23:21+00:00",
+  "items": [
+   {
+    "id": "ZnQ5MHplYWZo",
+    "title": "שיחת השבוע · בראשית - 2075 E",
+    "url": "https://player.flipsnack.com/?hash=QkU4RjZCRjU2OUIrZnQ5MHplYWZo",
+    "lang": "he",
+    "genre": "גיליון",
+    "sections": [
+     "whatsnew"
+    ],
+    "new": false,
+    "date": "2026-10-12"
+   },
+   {
+    "id": "ejB5YXBtYQ==",
+    "title": "פרשה · בראשית - 310 R",
+    "url": "https://player.flipsnack.com/?hash=QkU4RjZCRjU2OUIrY21hejB5YXBtYQ==",
+    "lang": "he",
+    "genre": "גיליון",
+    "sections": [
+     "whatsnew"
+    ],
+    "new": false,
+    "date": "2026-10-12"
+   },
+   {
+    "id": "ZnUxdDZyaA==",
+    "title": "התקשרות · בראשית - 1670 R",
+    "url": "https://player.flipsnack.com/?hash=QkU4RjZCRjU2OUIrdnRwZnUxdDZyaA==",
+    "lang": "he",
+    "genre": "גיליון",
+    "sections": [
+     "whatsnew"
+    ],
+    "new": false,
+    "date": "2026-10-12"
+   },
+   {
+    "id": "ZnRucXp5MGx1",
+    "title": "Living Jewish · Bereshit - 5787",
+    "url": "https://player.flipsnack.com/?hash=QkU4RjZCRjU2OUIrZnRucXp5MGx1",
+    "lang": "en",
+    "genre": "גיליון",
+    "sections": [
+     "whatsnew"
+    ],
+    "new": false,
+    "date": "2026-10-12"
+   },
+   {
+    "id": "ZmRjM3dpOXBv",
+    "title": "ВОСХОЖДЕНИЕ · Jews Gazette 1876 IS",
+    "url": "https://player.flipsnack.com/?hash=QkU4RjZCRjU2OUIrZmRjM3dpOXBv",
+    "lang": "ru",
+    "genre": "גיליון",
+    "sections": [
+     "whatsnew"
+    ],
+    "new": false,
+    "date": "2026-10-12"
+   },
+   {
+    "id": "dHdlYXBtYQ==",
+    "title": "La Paracha · 315 - בראשית",
+    "url": "https://player.flipsnack.com/?hash=QkU4RjZCRjU2OUIrZG5xdHdlYXBtYQ==",
+    "lang": "fr",
+    "genre": "גיליון",
+    "sections": [
+     "whatsnew"
+    ],
+    "new": false,
+    "date": "2026-10-12"
+   }
+  ],
+  "note": ""
+ }
+}

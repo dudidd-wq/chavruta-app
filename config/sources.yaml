@@ -1,0 +1,95 @@
+# מקורות שנעקבים — אתר חברותא
+# role:
+#   primary   — מקור ראשוני: ממנו בונים את הניתוח
+#   analysis  — אתר שמנתח או מסכם מאמרים ושיחות: טריגר לנושא + קישור וקרדיט
+#   whatsnew  — מקור למדור "מה חדש בעולם החסידות" בלבד (לא בונים ממנו ניתוח)
+#   archive   — מאגר עיון: לאימות ולקישור, לא נעקב
+# medium (סוג התוכן — קובע את הסיווג למדור "מה חדש", ראו style/takzir-ma-chadash.md):
+#   text            — אתר כתוב: כל פריט מסווג לגופו
+#   news            — אתר חדשות: כל פריט מסווג לגופו (רוב הפריטים יוצאים)
+#   bulletin        — גיליון שבועי: נכנס תמיד כ"גיליון"
+#   rebbe_recording — הקלטה של הרבי (שמע/וידאו): לא נכנס — המדור כתוב בלבד
+#   shiur | podcast — שיעורים בעל־פה (שמע/וידאו) ופודקאסטים: לא נכנסים
+# detect.type:
+#   rss | json_catalog | wp_media | sitemap (filter/follow) | torahtable (נתוני הדף) | page_diff | browser (נחסם לקוד; נבדק דרך הדפדפן) | none
+
+primary:
+  - id: chabadlibrary
+    name: ספריית חב״ד
+    url: "https://www.chabadlibrary.org/books/"
+    ingest: api            # /books/api/main?path=/<id>
+  - id: lahak
+    name: לה״ק — ועד הנחות בלשון הקודש
+    url: "https://www.lahak.org/"
+    ingest: pdf            # קונטרס שבועי; האתר חוסם קוד (403) — נבדק דרך הדפדפן
+    detect: {type: browser, url: "https://www.lahak.org/"}
+    whatsnew: true
+  - id: chassidutbehirah
+    name: חסידות בהירה
+    url: "https://chassidutbehirah.com/"
+    ingest: wp_rest        # /wp-json/wp/v2/pages
+  - id: hebrewbooks
+    name: היברובוקס
+    url: "https://hebrewbooks.org/"
+    ingest: manual_pdf     # חוסם בוטים
+  - id: kehot_kuntreisim
+    name: הוצאת קה״ת (קונטרסים)
+    url: "https://www.kehot.org/Kuntreisim"
+    ingest: pdf            # קובצי PDF של מאמרים ושיחות של הרבנים; תאריך ההעלאה בנתיב הקובץ
+    detect: {type: kehot_kuntreisim, url: "https://www.kehot.org/Kuntreisim"}
+    medium: text
+    whatsnew: true
+  - id: chabadlibrarybooks
+    name: ספריית חב״ד ספרים
+    url: "http://chabadlibrarybooks.com/"
+    ingest: manual_pdf     # robots אוסר גישה אוטומטית
+
+analysis:
+  - {id: maamarim_com, name: "מאמרים — The Rebbe's Maamarim", lang: he, url: "https://maamarim.com", detect: {type: json_catalog, url: "https://maamarim.com/data/_catalog.json", item_url: "https://maamarim.com/maamar.html?id={id}"}, medium: text}
+  - {id: chassidut_org, name: סיכום מאמרי הרבי, lang: he, url: "https://www.chassidut.org/", detect: {type: page_diff, url: "https://www.chassidut.org/"}, medium: text}
+  - {id: biurim, name: ביאורים במאמרי רבינו, lang: he, url: "https://biurim.co.il/", detect: {type: rss, url: "https://biurim.co.il/feed/"}, medium: text}
+  - {id: hm_monsey, name: היכל מנחם מונסי, lang: he, url: "https://heichalmenachemmonsey.org/", detect: {type: rss, url: "https://heichalmenachemmonsey.org/feed/"}, medium: shiur}
+  - {id: taam_hachaim, name: טעם החיים, lang: he, url: "https://drive.google.com/drive/folders/11yzhI6ZTHhrorblJSj6MPIEyCQoSG7IZ", detect: {type: browser, url: "https://drive.google.com/drive/folders/11yzhI6ZTHhrorblJSj6MPIEyCQoSG7IZ"}, note: "מקור סגנון בלבד לפי כללי הפרויקט", medium: text}
+  - {id: hiskashrus, name: התקשרות, lang: he, url: "https://torahtable.com/publications/%D7%94%D7%AA%D7%A7%D7%A9%D7%A8%D7%95%D7%AA", detect: {type: torahtable, url: "https://torahtable.com/publications/%D7%94%D7%AA%D7%A7%D7%A9%D7%A8%D7%95%D7%AA"}, medium: bulletin}
+  - {id: lichyot_chassidus, name: "לחיות חסידות — הרב אשר פרקש", lang: he, url: "https://rabbi_osher_farkash_maamarim.captivate.fm", detect: {type: rss, url: "https://feeds.captivate.fm/rabbi_osher_farkash_maamarim/"}, medium: podcast}
+  - {id: chabadzoom, name: חב״ד זום, lang: he, url: "https://chabadzoom.co.il/series", detect: {type: page_diff, url: "https://chabadzoom.co.il/series"}, medium: shiur}
+  - {id: kovtzimdrive, name: KovtzimDrive, lang: he, url: "https://www.kovtzimdrive.com", detect: {type: sitemap, url: "https://www.kovtzimdrive.com/sitemap.xml", follow: "dynamic-posts"}, medium: news}
+  - {id: avita, name: אביטה, lang: he, url: "https://col.org.il/news/129343", detect: {type: none}, medium: text}
+  - {id: plt, name: Project Likkutei Torah, lang: he+en, url: "https://projectlikkuteitorah.org/", detect: {type: rss, url: "https://projectlikkuteitorah.org/feed/"}, medium: text}
+  - {id: dvarmalchus770, name: Dvar Malchus 770, lang: en, url: "https://dvarmalchus770.org", detect: {type: rss, url: "https://dvarmalchus770.org/feed/"}, medium: text}
+  - {id: soulwords, name: SoulWords, lang: en, url: "https://www.soulwords.org/category/likkutei-sichos/", detect: {type: rss, url: "https://www.soulwords.org/feed/"}, medium: shiur}
+  - {id: sie_weekly, name: SIE Weekly, lang: en, url: "https://shop.sie.org/pages/weekly", detect: {type: page_diff, url: "https://shop.sie.org/pages/weekly"}, medium: bulletin}
+  - {id: pls, name: Project Likkutei Sichos, lang: en, url: "https://projectlikkuteisichos.org/", detect: {type: rss, url: "https://feeds.captivate.fm/sichaindepth/"}, medium: podcast}
+  - {id: chayenu_ls, name: Chayenu — לקוטי שיחות, lang: en, url: "https://chayenu.org/chayenu-section/likkutei-sichos", detect: {type: page_diff, url: "https://chayenu.org/chayenu-section/likkutei-sichos"}, medium: text}
+  - {id: weekly_sicha, name: The Weekly Sicha, lang: en, url: "https://theweeklysicha.org/", detect: {type: sitemap, url: "https://theweeklysicha.org/sitemap.xml", filter: "/episode/"}, medium: rebbe_recording}
+  - {id: theyeshiva, name: TheYeshiva.net, lang: en, url: "https://www.theyeshiva.net", detect: {type: rss, url: "https://portal.theyeshiva.net/api/itunes/podcasts/33"}, medium: podcast}
+  - {id: chassidus_applied, name: Chassidus Applied, lang: en, url: "https://www.chassidusapplied.com/samachvav", detect: {type: rss, url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCX5tj50hTwF_80XQ9JBMDYQ"}, medium: shiur}
+  - {id: neirot, name: Neirot, lang: en, url: "https://neirot.com/", detect: {type: wp_media, url: "https://neirot.com/wp-json/wp/v2/media?mime_type=application/pdf&per_page=10"}, medium: text}
+  - {id: chassidus_explained, name: Chassidus Explained, lang: en, url: "https://podcasters.spotify.com/pod/show/chassidus-explained", detect: {type: rss, url: "https://anchor.fm/s/c4efdc8c/podcast/rss"}, medium: podcast}
+  - {id: melukat, name: Project Melukat, lang: en, url: "https://projectmelukat.org", detect: {type: sitemap, url: "https://projectmelukat.org/sitemap.xml", filter: "^https://projectmelukat.org/[^/]+$"}, medium: shiur}
+  - {id: daily_maamar, name: Daily Maamar, lang: en, url: "https://feeds.transistor.fm/daily-maamar", detect: {type: rss, url: "https://feeds.transistor.fm/daily-maamar"}, medium: podcast}
+  - {id: wellsprings, name: Wellsprings of Chassidus, lang: en, url: "https://wellspringsofchassidus.com", detect: {type: rss, url: "https://anchor.fm/s/f8570fa0/podcast/rss"}, medium: podcast}
+  - {id: daily_sicha, name: The Daily Sicha, lang: yi+he, url: "https://thedailysicha.com", detect: {type: rss, url: "https://podcast.thedailysicha.com/feed.xml"}, medium: rebbe_recording}
+  - {id: learnchassidus, name: Learn Chassidus, lang: en, url: "https://learnchassidus.com/", detect: {type: page_diff, url: "https://learnchassidus.com/"}, medium: shiur}
+  - {id: simplychassidus, name: Simply Chassidus, lang: en, url: "https://www.simplychassidus.com/", detect: {type: page_diff, url: "https://www.simplychassidus.com/"}, medium: text}
+
+whatsnew:
+  - {id: alonei_chabad, name: עלוני חב״ד ישראל, url: "https://chabadisrael.co.il/alonichabad/", detect: {type: browser, url: "https://chabadisrael.co.il/alonichabad/"}, medium: bulletin}
+  - {id: sichas_hashavua, name: שיחת השבוע, url: "https://www.chabad.org.il/Magazines/Articles.asp?CategoryID=30", detect: {type: browser, url: "https://www.chabad.org.il/Magazines/Articles.asp?CategoryID=30"}, medium: bulletin}
+  - {id: lmaan_yishmeu, name: למען ישמעו, url: "http://www.lmaanyishmeu.com/archives.htm", detect: {type: page_diff, url: "http://www.lmaanyishmeu.com/archives.htm"}, medium: bulletin}
+  - {id: lchaim, name: L'Chaim Weekly, url: "https://torahtable.com/publications/LChaim", detect: {type: torahtable, url: "https://torahtable.com/publications/LChaim"}, medium: bulletin}
+  - {id: one_point, name: One Point, url: "https://torahtable.com/publications/One-Point", detect: {type: torahtable, url: "https://torahtable.com/publications/One-Point"}, medium: text}
+  - {id: derher, name: Derher, url: "https://derher.org/", detect: {type: browser, url: "https://derher.org/"}, medium: bulletin}
+  - {id: beitchabad, name: בית חב״ד, url: "https://he.chabad.org/", detect: {type: none}, medium: text}
+  - {id: dvarmalchus_org, name: dvarmalchus.org, url: "https://dvarmalchus.org", detect: {type: page_diff, url: "https://dvarmalchus.org"}, medium: bulletin}
+  - {id: maynotecha_inst, name: מכון מעיינותיך, url: "https://toratchabad.com/about-us", detect: {type: none}, medium: text}
+  - {id: chabad_org_magazine, name: "Chabad.org — Torah Texts (מגזין)", url: "https://www.chabad.org/torah-texts/", detect: {type: rss, url: "https://www.chabad.org/tools/rss/magazine_rss.xml", keep: "(?i)chassidus|chasidic|chassidic|hasidic|maamar|sicha|sichos|farbreng|kuntres|likkutei|tanya|torah ohr|hemshech|the rebbe|rebbe's|teachings|lubavitcher|alter rebbe|mitteler|tzemach|rashab|previous rebbe|frierdiker|\u05d7\u05e1\u05d9\u05d3|\u05e8\u05d1\u05d9|\u05de\u05d0\u05de\u05e8|\u05e9\u05d9\u05d7\u05d4"}, medium: news}
+  - {id: anash, name: Anash.org, url: "https://anash.org/", detect: {type: rss, url: "https://anash.org/feed/", keep: "(?i)chassidus|maamar|sicha|sichos|farbreng|kuntres|sefer|seforim|likkutei|tanya|torah ohr|hemshech|shiur|lahak|teachings|the rebbe"}, medium: news}
+  - {id: chabadinfo, name: חב״ד אינפו, url: "https://chabad.info/category/beis-medrash/", detect: {type: browser, url: "https://chabad.info/category/beis-medrash/"}, medium: news}
+  - {id: hageula, name: hageula.com, url: "https://hageula.com", detect: {type: none}, medium: text}
+  - {id: abc770, name: abc770, url: "https://abc770.org/articles/", detect: {type: rss, url: "https://abc770.org/feed/"}, medium: text}
+  - {id: kehot, name: הוצאת קה״ת (חנות), url: "https://store.kehotonline.com/departments.asp?dept=334", detect: {type: kehot, url: "https://store.kehotonline.com/departments.asp?dept=334"}, medium: text}
+
+excluded:
+  - {name: גל עיני, reason: "לפי הנחיית המשתמש"}
+  - {name: "אתרים שאינם חב״דיים", reason: "מחוץ לתחום"}
