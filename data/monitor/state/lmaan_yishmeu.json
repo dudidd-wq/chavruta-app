@@ -1,15 +1,5 @@
 {
  "seen": [
-  "content:f9ed8b71bbafe643",
-  "content:e1dede5f43aa3367",
-  "content:245c1423049ccb51",
-  "content:455410e07433ac84",
-  "content:73458be608f54334",
-  "content:5eb943850a82de15",
-  "content:5620b53d143a574c",
-  "content:d1cb90215dbab416",
-  "content:e04c34f89fd53984",
-  "content:95271db13743ac53",
   "content:48e2b079a240e2d6",
   "http://www.lmaanyishmeu.com/audio/What Can I Do - Part 1.mp3",
   "http://www.lmaanyishmeu.com/audio/The Path to Prosperity.mp3",
@@ -312,8 +302,18 @@
   "http://www.lmaanyishmeu.com/pdf/193 - Preparing for Pesach.pdf",
   "http://www.lmaanyishmeu.com/pdf/195 - Toiling in Torah -2.pdf",
   "http://www.lmaanyishmeu.com/audio/195 - Toiling in Torah.mp3",
-  "http://www.lmaanyishmeu.com/audio/196 - Recognizing the Enemy.mp3"
+  "http://www.lmaanyishmeu.com/audio/196 - Recognizing the Enemy.mp3",
+  "content:f9ed8b71bbafe643",
+  "content:e1dede5f43aa3367",
+  "content:245c1423049ccb51",
+  "content:455410e07433ac84",
+  "content:73458be608f54334",
+  "content:5eb943850a82de15",
+  "content:5620b53d143a574c",
+  "content:d1cb90215dbab416",
+  "content:e04c34f89fd53984",
+  "content:95271db13743ac53"
  ],
- "updated": "2026-10-20T07:52:32+00:00",
- "count": 1
+ "updated": "2026-10-20T08:00:12+00:00",
+ "count": 303
 }

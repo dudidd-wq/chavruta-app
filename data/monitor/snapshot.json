@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-20T07:53:01+00:00",
+ "generated_at": "2026-10-20T08:00:39+00:00",
  "sources": [
   {
    "id": "chabadlibrary",
@@ -12,7 +12,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-10-20T07:51:46+00:00",
+   "checked_at": "2026-10-20T07:59:26+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -30,7 +30,7 @@
     "primary",
     "whatsnew"
    ],
-   "checked_at": "2026-10-20T07:51:46+00:00",
+   "checked_at": "2026-10-20T07:59:26+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -47,7 +47,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-10-20T07:51:46+00:00",
+   "checked_at": "2026-10-20T07:59:26+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -64,7 +64,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-10-20T07:51:46+00:00",
+   "checked_at": "2026-10-20T07:59:26+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -82,12 +82,27 @@
     "primary",
     "whatsnew"
    ],
-   "checked_at": "2026-10-20T07:51:46+00:00",
+   "checked_at": "2026-10-20T07:59:26+00:00",
    "status": "ok",
    "new": [],
-   "latest": [],
-   "total": 0,
-   "last_success_at": "2026-10-20T07:51:46+00:00"
+   "latest": [
+    {
+     "id": "/Content/kuntreisim/9/22/2026/-7-5680.pdf",
+     "title": "מאמרי למען דעת, ורוח אלקים מרחפת פר\"ת",
+     "url": "https://www.kehot.org/Content/kuntreisim/9/22/2026/-7-5680.pdf",
+     "date": "2026-09-22",
+     "first_seen": "2026-10-20T07:59:26+00:00"
+    },
+    {
+     "id": "/Content/kuntreisim/9/8/2026/--.pdf",
+     "title": "מאמר אני ישנה ולבי ער",
+     "url": "https://www.kehot.org/Content/kuntreisim/9/8/2026/--.pdf",
+     "date": "2026-09-08",
+     "first_seen": "2026-10-20T07:59:26+00:00"
+    }
+   ],
+   "total": 132,
+   "last_success_at": "2026-10-20T07:59:26+00:00"
   },
   {
    "id": "chabadlibrarybooks",
@@ -100,7 +115,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-10-20T07:51:47+00:00",
+   "checked_at": "2026-10-20T07:59:27+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -118,14 +133,12 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-20T07:51:47+00:00",
-   "status": "error",
+   "checked_at": "2026-10-20T07:59:27+00:00",
+   "status": "ok",
    "new": [],
    "latest": [],
-   "total": 0,
-   "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
-   "last_success_at": "",
-   "retained": false
+   "total": 1501,
+   "last_success_at": "2026-10-20T07:59:27+00:00"
   },
   {
    "id": "chassidut_org",
@@ -139,12 +152,12 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-20T07:51:48+00:00",
+   "checked_at": "2026-10-20T07:59:29+00:00",
    "status": "ok",
    "new": [],
    "latest": [],
    "total": 4,
-   "last_success_at": "2026-10-20T07:51:48+00:00"
+   "last_success_at": "2026-10-20T07:59:29+00:00"
   },
   {
    "id": "biurim",
@@ -158,12 +171,53 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-20T07:51:50+00:00",
+   "checked_at": "2026-10-20T07:59:30+00:00",
    "status": "ok",
    "new": [],
-   "latest": [],
-   "total": 0,
-   "last_success_at": "2026-10-20T07:51:50+00:00"
+   "latest": [
+    {
+     "id": "https://biurim.co.il/?p=2271",
+     "title": "ציון במשפט תפדה גו' ה׳תשמ\"א",
+     "url": "https://biurim.co.il/tzion-bemishpaot-5741/",
+     "date": "Sun, 12 Jul 2026 21:21:02 +0000",
+     "blurb": "הפוסט ציון במשפט תפדה גו' ה׳תשמ\"א הופיע לראשונה ב- ביאורים במאמרי רבינו .",
+     "first_seen": "2026-10-20T07:59:30+00:00"
+    },
+    {
+     "id": "https://biurim.co.il/?p=593",
+     "title": "בחודש השלישי גו' ה'תשכ\"ט",
+     "url": "https://biurim.co.il/bachodesh-hashlishi-5729/",
+     "date": "Wed, 13 May 2026 08:47:48 +0000",
+     "blurb": "הפוסט בחודש השלישי גו' ה'תשכ\"ט הופיע לראשונה ב- ביאורים במאמרי רבינו .",
+     "first_seen": "2026-10-20T07:59:30+00:00"
+    },
+    {
+     "id": "https://biurim.co.il/?p=2221",
+     "title": "בלילה ההוא תשד\"מ",
+     "url": "https://biurim.co.il/balaila-hahu-5744/",
+     "date": "Mon, 23 Feb 2026 08:22:28 +0000",
+     "blurb": "הפוסט בלילה ההוא תשד\"מ הופיע לראשונה ב- ביאורים במאמרי רבינו .",
+     "first_seen": "2026-10-20T07:59:30+00:00"
+    },
+    {
+     "id": "https://biurim.co.il/?p=2212",
+     "title": "וחזקת והיית לאיש ה'תשכ\"ח",
+     "url": "https://biurim.co.il/vechozakto/",
+     "date": "Tue, 20 Jan 2026 19:13:41 +0000",
+     "blurb": "הפוסט וחזקת והיית לאיש ה'תשכ\"ח הופיע לראשונה ב- ביאורים במאמרי רבינו .",
+     "first_seen": "2026-10-20T07:59:30+00:00"
+    },
+    {
+     "id": "https://biurim.co.il/?p=2205",
+     "title": "ואתה ברחמיך הרבים כו' ה'תשמ\"ח",
+     "url": "https://biurim.co.il/veato-brachamecho-horabim/",
+     "date": "Tue, 20 Jan 2026 19:07:54 +0000",
+     "blurb": "הפוסט ואתה ברחמיך הרבים כו' ה'תשמ\"ח הופיע לראשונה ב- ביאורים במאמרי רבינו .",
+     "first_seen": "2026-10-20T07:59:30+00:00"
+    }
+   ],
+   "total": 10,
+   "last_success_at": "2026-10-20T07:59:30+00:00"
   },
   {
    "id": "hm_monsey",
@@ -177,7 +231,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-20T07:51:52+00:00",
+   "checked_at": "2026-10-20T07:59:32+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -223,7 +277,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-10-20T07:51:52+00:00"
+   "last_success_at": "2026-10-20T07:59:32+00:00"
   },
   {
    "id": "hiskashrus",
@@ -237,12 +291,56 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-20T07:51:53+00:00",
+   "checked_at": "2026-10-20T07:59:33+00:00",
    "status": "ok",
-   "new": [],
-   "latest": [],
-   "total": 0,
-   "last_success_at": "2026-10-20T07:51:53+00:00"
+   "new": [
+    {
+     "id": "37188",
+     "title": "Noach · 5787 · קונטרס שבועי לאנ\"ש חסידי חב\"ד לחיזוק ההתקשרות לכ\"ק אדמו\"ר רבי מנחם מענדל בהרה\"ק רלו\"י מליובאוויטש",
+     "url": "https://torahprint.nyc3.cdn.digitaloceanspaces.com/pdfFiles/1791977117564_o5qpe_.pdf",
+     "date": "2026-10-16T00:00:00.000Z",
+     "first_seen": "2026-10-20T07:59:33+00:00"
+    }
+   ],
+   "latest": [
+    {
+     "id": "37188",
+     "title": "Noach · 5787 · קונטרס שבועי לאנ\"ש חסידי חב\"ד לחיזוק ההתקשרות לכ\"ק אדמו\"ר רבי מנחם מענדל בהרה\"ק רלו\"י מליובאוויטש",
+     "url": "https://torahprint.nyc3.cdn.digitaloceanspaces.com/pdfFiles/1791977117564_o5qpe_.pdf",
+     "date": "2026-10-16T00:00:00.000Z",
+     "first_seen": "2026-10-20T07:59:33+00:00"
+    },
+    {
+     "id": "36883",
+     "title": "Bereishis · 5787 · קונטרס שבועי לאנ\"ש חסידי חב\"ד לחיזוק ההתקשרות לכ\"ק אדמו\"ר רבי מנחם מענדל בהרה\"ק רלו\"י מליובאוויטש",
+     "url": "https://torahprint.nyc3.cdn.digitaloceanspaces.com/pdfFiles/1791367466697_0s7rb_-_1670_r.pdf",
+     "date": "2026-10-09T00:00:00.000Z",
+     "first_seen": "2026-10-20T07:59:33+00:00"
+    },
+    {
+     "id": "36075",
+     "title": "Ha'azinu · 5787 · גיליון שבועי של התקשרות לפרשת האזינו ושבת שובה, כולל מאמרים, הלכות ומנהגים לימי התשובה ויום הכיפורים.",
+     "url": "https://torahprint.nyc3.cdn.digitaloceanspaces.com/pdfFiles/1790165333067_yfvq4_.pdf",
+     "date": "2026-09-25T01:22:56.382Z",
+     "first_seen": "2026-10-20T07:59:33+00:00"
+    },
+    {
+     "id": "35966",
+     "title": "Sukkos · 5787 · גיליון התקשרות לחג הסוכות ושמחת תורה",
+     "url": "https://torahprint.nyc3.cdn.digitaloceanspaces.com/pdfFiles/1790161110785_v33ud_-_1669_r.pdf",
+     "date": "2026-09-23T14:28:34.653Z",
+     "first_seen": "2026-10-20T07:59:33+00:00"
+    },
+    {
+     "id": "35889",
+     "title": "Ha'azinu · 5787 · גיליון התקשרות לשבת פרשת האזינו ועשרת ימי תשובה, הכולל פניני חסידות, הלכות ומנהגים.",
+     "url": "https://torahprint.nyc3.cdn.digitaloceanspaces.com/pdfFiles/התקשרות האזינו (1).pdf",
+     "date": "2026-09-18T16:05:18.809Z",
+     "first_seen": "2026-10-20T07:59:33+00:00"
+    }
+   ],
+   "total": 251,
+   "last_success_at": "2026-10-20T07:59:33+00:00"
   },
   {
    "id": "lichyot_chassidus",
@@ -256,7 +354,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-20T07:51:55+00:00",
+   "checked_at": "2026-10-20T07:59:35+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -318,7 +416,7 @@
     }
    ],
    "total": 1000,
-   "last_success_at": "2026-10-20T07:51:55+00:00"
+   "last_success_at": "2026-10-20T07:59:35+00:00"
   },
   {
    "id": "chabadzoom",
@@ -332,18 +430,53 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-20T07:51:57+00:00",
+   "checked_at": "2026-10-20T07:59:37+00:00",
    "status": "ok",
    "new": [
     {
-     "id": "content:fd97c33fad4b4d6a",
+     "id": "content:e49261fd22300c99",
      "title": "עדכון בתוכן הדף",
      "url": "https://chabadzoom.co.il/series",
      "date": "",
-     "first_seen": "2026-10-20T07:51:57+00:00"
+     "first_seen": "2026-10-20T07:59:37+00:00"
+    },
+    {
+     "id": "https://chabadzoom.co.il/article/%d7%90%d7%9c%d7%94-%d7%aa%d7%95%d7%9c%d7%93%d7%95%d7%aa-%d7%a0%d7%97",
+     "title": "אלה תולדות נח",
+     "url": "https://chabadzoom.co.il/article/%d7%90%d7%9c%d7%94-%d7%aa%d7%95%d7%9c%d7%93%d7%95%d7%aa-%d7%a0%d7%97",
+     "date": "",
+     "first_seen": "2026-10-20T07:59:37+00:00"
+    },
+    {
+     "id": "https://chabadzoom.co.il/article/%d7%90%d7%9c%d7%94-%d7%aa%d7%95%d7%9c%d7%93%d7%95%d7%aa-%d7%a0%d7%97-%d7%94%d7%a8%d7%91-%d7%97%d7%99%d7%99%d7%9d-%d7%a4%d7%a8%d7%95%d7%a1",
+     "title": "אלה תולדות נח - הרב חיים פרוס",
+     "url": "https://chabadzoom.co.il/article/%d7%90%d7%9c%d7%94-%d7%aa%d7%95%d7%9c%d7%93%d7%95%d7%aa-%d7%a0%d7%97-%d7%94%d7%a8%d7%91-%d7%97%d7%99%d7%99%d7%9d-%d7%a4%d7%a8%d7%95%d7%a1",
+     "date": "",
+     "first_seen": "2026-10-20T07:59:37+00:00"
     }
    ],
    "latest": [
+    {
+     "id": "content:e49261fd22300c99",
+     "title": "עדכון בתוכן הדף",
+     "url": "https://chabadzoom.co.il/series",
+     "date": "",
+     "first_seen": "2026-10-20T07:59:37+00:00"
+    },
+    {
+     "id": "https://chabadzoom.co.il/article/%d7%90%d7%9c%d7%94-%d7%aa%d7%95%d7%9c%d7%93%d7%95%d7%aa-%d7%a0%d7%97",
+     "title": "אלה תולדות נח",
+     "url": "https://chabadzoom.co.il/article/%d7%90%d7%9c%d7%94-%d7%aa%d7%95%d7%9c%d7%93%d7%95%d7%aa-%d7%a0%d7%97",
+     "date": "",
+     "first_seen": "2026-10-20T07:59:37+00:00"
+    },
+    {
+     "id": "https://chabadzoom.co.il/article/%d7%90%d7%9c%d7%94-%d7%aa%d7%95%d7%9c%d7%93%d7%95%d7%aa-%d7%a0%d7%97-%d7%94%d7%a8%d7%91-%d7%97%d7%99%d7%99%d7%9d-%d7%a4%d7%a8%d7%95%d7%a1",
+     "title": "אלה תולדות נח - הרב חיים פרוס",
+     "url": "https://chabadzoom.co.il/article/%d7%90%d7%9c%d7%94-%d7%aa%d7%95%d7%9c%d7%93%d7%95%d7%aa-%d7%a0%d7%97-%d7%94%d7%a8%d7%91-%d7%97%d7%99%d7%99%d7%9d-%d7%a4%d7%a8%d7%95%d7%a1",
+     "date": "",
+     "first_seen": "2026-10-20T07:59:37+00:00"
+    },
     {
      "id": "content:fd97c33fad4b4d6a",
      "title": "עדכון בתוכן הדף",
@@ -366,8 +499,8 @@
      "first_seen": "2026-10-18T04:51:41+00:00"
     }
    ],
-   "total": 1,
-   "last_success_at": "2026-10-20T07:51:57+00:00"
+   "total": 557,
+   "last_success_at": "2026-10-20T07:59:37+00:00"
   },
   {
    "id": "kovtzimdrive",
@@ -381,12 +514,20 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-20T07:52:00+00:00",
+   "checked_at": "2026-10-20T07:59:38+00:00",
    "status": "ok",
    "new": [],
-   "latest": [],
-   "total": 0,
-   "last_success_at": "2026-10-20T07:52:00+00:00"
+   "latest": [
+    {
+     "id": "https://www.kovtzimdrive.com/posts/bochurim-build-database-of-thousands-of-%E2%80%98he%E2%80%99aros%E2%80%99",
+     "title": "bochurim build database of thousands of ‘he’aros’",
+     "url": "https://www.kovtzimdrive.com/posts/bochurim-build-database-of-thousands-of-%E2%80%98he%E2%80%99aros%E2%80%99",
+     "date": "2026-10-20",
+     "first_seen": "2026-10-20T07:59:38+00:00"
+    }
+   ],
+   "total": 1,
+   "last_success_at": "2026-10-20T07:59:38+00:00"
   },
   {
    "id": "avita",
@@ -400,7 +541,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-20T07:52:02+00:00",
+   "checked_at": "2026-10-20T07:59:41+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -418,7 +559,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-20T07:52:02+00:00",
+   "checked_at": "2026-10-20T07:59:41+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -440,7 +581,7 @@
     }
    ],
    "total": 2,
-   "last_success_at": "2026-10-20T07:52:02+00:00"
+   "last_success_at": "2026-10-20T07:59:41+00:00"
   },
   {
    "id": "dvarmalchus770",
@@ -454,12 +595,78 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-20T07:52:04+00:00",
+   "checked_at": "2026-10-20T07:59:42+00:00",
    "status": "ok",
-   "new": [],
-   "latest": [],
-   "total": 0,
-   "last_success_at": "2026-10-20T07:52:04+00:00"
+   "new": [
+    {
+     "id": "http://dvarmalchus770.org/?p=5693",
+     "title": "Lech Lecho: Conquering the 3 Lands Peacefully",
+     "url": "https://dvarmalchus770.org/2026/10/17/lech-lecho-conquering-the-3-lands-peacefully/",
+     "date": "Sat, 17 Oct 2026 23:56:00 +0000",
+     "blurb": "The Rebbe mentions in the Dvar Malchus of Parshas Lech Lecho that Avraham Avinu is promised by Hashem that his descendants will inherit the land. Hashem made a covenant with Avraham, stating: “To your seed I have given this land, from the river of Egypt until the great river, the Euphrates river. The Keni, the […]",
+     "first_seen": "2026-10-20T07:59:42+00:00"
+    },
+    {
+     "id": "http://dvarmalchus770.org/?p=5692",
+     "title": "Noach 5752: Geuloh is Dependent Only on Moshiach Himself",
+     "url": "https://dvarmalchus770.org/2026/10/15/noach-5752-geuloh-is-dependent-only-on-moshiach-himself-3/",
+     "date": "Thu, 15 Oct 2026 14:00:00 +0000",
+     "blurb": "The chosid R’ Zushya Willemovsky, “The Partisan”, was told by the Rebbe in a private audience in the 1960s that there remained 20 or 21 things that needed to be accomplished in order for Moshiach to come. From this we learn the significance of the sichos of Dvar Malchus in general, and parshas Noach in […]",
+     "first_seen": "2026-10-20T07:59:42+00:00"
+    },
+    {
+     "id": "http://dvarmalchus770.org/?p=5691",
+     "title": "Noach “Saw a New World”",
+     "url": "https://dvarmalchus770.org/2026/10/10/noach-saw-a-new-world-3/",
+     "date": "Sat, 10 Oct 2026 23:55:00 +0000",
+     "blurb": "The opening verse in Parshas Noach says that “נֹ֗חַ אִ֥ישׁ צַדִּ֛יק תָּמִ֥ים הָיָ֖ה בְּדֹֽרֹתָ֑יו” “Noach was a righteous man, he was perfect in his generations”. The Midrash on this posuk (Midrash Rabba Noach, 30:8) says in the name of R’ Levi: “Whoever it is said about them ‘he was’ saw a new world.” The Midrash then […]",
+     "first_seen": "2026-10-20T07:59:42+00:00"
+    }
+   ],
+   "latest": [
+    {
+     "id": "http://dvarmalchus770.org/?p=5693",
+     "title": "Lech Lecho: Conquering the 3 Lands Peacefully",
+     "url": "https://dvarmalchus770.org/2026/10/17/lech-lecho-conquering-the-3-lands-peacefully/",
+     "date": "Sat, 17 Oct 2026 23:56:00 +0000",
+     "blurb": "The Rebbe mentions in the Dvar Malchus of Parshas Lech Lecho that Avraham Avinu is promised by Hashem that his descendants will inherit the land. Hashem made a covenant with Avraham, stating: “To your seed I have given this land, from the river of Egypt until the great river, the Euphrates river. The Keni, the […]",
+     "first_seen": "2026-10-20T07:59:42+00:00"
+    },
+    {
+     "id": "http://dvarmalchus770.org/?p=5692",
+     "title": "Noach 5752: Geuloh is Dependent Only on Moshiach Himself",
+     "url": "https://dvarmalchus770.org/2026/10/15/noach-5752-geuloh-is-dependent-only-on-moshiach-himself-3/",
+     "date": "Thu, 15 Oct 2026 14:00:00 +0000",
+     "blurb": "The chosid R’ Zushya Willemovsky, “The Partisan”, was told by the Rebbe in a private audience in the 1960s that there remained 20 or 21 things that needed to be accomplished in order for Moshiach to come. From this we learn the significance of the sichos of Dvar Malchus in general, and parshas Noach in […]",
+     "first_seen": "2026-10-20T07:59:42+00:00"
+    },
+    {
+     "id": "http://dvarmalchus770.org/?p=5691",
+     "title": "Noach “Saw a New World”",
+     "url": "https://dvarmalchus770.org/2026/10/10/noach-saw-a-new-world-3/",
+     "date": "Sat, 10 Oct 2026 23:55:00 +0000",
+     "blurb": "The opening verse in Parshas Noach says that “נֹ֗חַ אִ֥ישׁ צַדִּ֛יק תָּמִ֥ים הָיָ֖ה בְּדֹֽרֹתָ֑יו” “Noach was a righteous man, he was perfect in his generations”. The Midrash on this posuk (Midrash Rabba Noach, 30:8) says in the name of R’ Levi: “Whoever it is said about them ‘he was’ saw a new world.” The Midrash then […]",
+     "first_seen": "2026-10-20T07:59:42+00:00"
+    },
+    {
+     "id": "http://dvarmalchus770.org/?p=5690",
+     "title": "Bereishis 5752: Servitude to the Nations is Finished",
+     "url": "https://dvarmalchus770.org/2026/10/05/bereishis-5752-servitude-to-the-nations-is-finished-2/",
+     "date": "Mon, 05 Oct 2026 14:00:21 +0000",
+     "blurb": "The Rambam, in his “Laws of Kings and Their Wars and Melech HaMoshiach”, declares that the coming of Moshiach and the process of redemption are not dependent upon the miraculous: “Do not expect that in the Days of Moshiach the pattern of conduct of the world will change, but rather the word will conduct itself […]",
+     "first_seen": "2026-10-20T07:59:42+00:00"
+    },
+    {
+     "id": "http://dvarmalchus770.org/?p=5759",
+     "title": "Hoshana Raba: the Title “Admur”",
+     "url": "https://dvarmalchus770.org/2026/09/30/hoshana-raba-the-title-admur/",
+     "date": "Wed, 30 Sep 2026 18:41:39 +0000",
+     "blurb": "One of the lesser known Sichos of Dvar Malchus (recorded on tape, but not printed), this is a Sicha that has a unique — and maybe even earthshaking — expression by the Rebbe that demands our attention. To appreciate the way the Rebbe frames it, we need first to understand the following: According to the […]",
+     "first_seen": "2026-10-20T07:59:42+00:00"
+    }
+   ],
+   "total": 10,
+   "last_success_at": "2026-10-20T07:59:42+00:00"
   },
   {
    "id": "soulwords",
@@ -473,7 +680,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-20T07:52:05+00:00",
+   "checked_at": "2026-10-20T07:59:43+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -519,7 +726,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-10-20T07:52:05+00:00"
+   "last_success_at": "2026-10-20T07:59:43+00:00"
   },
   {
    "id": "sie_weekly",
@@ -533,18 +740,39 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-20T07:52:07+00:00",
+   "checked_at": "2026-10-20T07:59:45+00:00",
    "status": "ok",
    "new": [
     {
-     "id": "content:309803f361b22b46",
-     "title": "עדכון בתוכן הדף",
-     "url": "https://shop.sie.org/pages/weekly",
+     "id": "https://drive.google.com/file/d/1QzULk5KamxPtFQF3IdLa9CxSzaWEUUZ5/view",
+     "title": "Download",
+     "url": "https://drive.google.com/file/d/1QzULk5KamxPtFQF3IdLa9CxSzaWEUUZ5/view",
      "date": "",
-     "first_seen": "2026-10-20T07:52:07+00:00"
+     "first_seen": "2026-10-20T07:59:45+00:00"
+    },
+    {
+     "id": "https://drive.google.com/file/d/1HqbBVAs0OF_E2U40N2NuVpBzZsoKUHAJ/view",
+     "title": "Download",
+     "url": "https://drive.google.com/file/d/1HqbBVAs0OF_E2U40N2NuVpBzZsoKUHAJ/view",
+     "date": "",
+     "first_seen": "2026-10-20T07:59:45+00:00"
     }
    ],
    "latest": [
+    {
+     "id": "https://drive.google.com/file/d/1QzULk5KamxPtFQF3IdLa9CxSzaWEUUZ5/view",
+     "title": "Download",
+     "url": "https://drive.google.com/file/d/1QzULk5KamxPtFQF3IdLa9CxSzaWEUUZ5/view",
+     "date": "",
+     "first_seen": "2026-10-20T07:59:45+00:00"
+    },
+    {
+     "id": "https://drive.google.com/file/d/1HqbBVAs0OF_E2U40N2NuVpBzZsoKUHAJ/view",
+     "title": "Download",
+     "url": "https://drive.google.com/file/d/1HqbBVAs0OF_E2U40N2NuVpBzZsoKUHAJ/view",
+     "date": "",
+     "first_seen": "2026-10-20T07:59:45+00:00"
+    },
     {
      "id": "content:309803f361b22b46",
      "title": "עדכון בתוכן הדף",
@@ -567,8 +795,8 @@
      "first_seen": "2026-10-18T04:51:48+00:00"
     }
    ],
-   "total": 1,
-   "last_success_at": "2026-10-20T07:52:07+00:00"
+   "total": 114,
+   "last_success_at": "2026-10-20T07:59:45+00:00"
   },
   {
    "id": "pls",
@@ -582,7 +810,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-20T07:52:08+00:00",
+   "checked_at": "2026-10-20T07:59:47+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -628,7 +856,7 @@
     }
    ],
    "total": 200,
-   "last_success_at": "2026-10-20T07:52:08+00:00"
+   "last_success_at": "2026-10-20T07:59:47+00:00"
   },
   {
    "id": "chayenu_ls",
@@ -642,17 +870,9 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-20T07:52:10+00:00",
+   "checked_at": "2026-10-20T07:59:49+00:00",
    "status": "ok",
-   "new": [
-    {
-     "id": "content:033047088813eed5",
-     "title": "עדכון בתוכן הדף",
-     "url": "https://chayenu.org/chayenu-section/likkutei-sichos",
-     "date": "",
-     "first_seen": "2026-10-20T07:52:10+00:00"
-    }
-   ],
+   "new": [],
    "latest": [
     {
      "id": "content:033047088813eed5",
@@ -676,8 +896,8 @@
      "first_seen": "2026-10-18T04:51:52+00:00"
     }
    ],
-   "total": 1,
-   "last_success_at": "2026-10-20T07:52:10+00:00"
+   "total": 2,
+   "last_success_at": "2026-10-20T07:59:49+00:00"
   },
   {
    "id": "weekly_sicha",
@@ -691,7 +911,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-20T07:52:11+00:00",
+   "checked_at": "2026-10-20T07:59:50+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -732,7 +952,7 @@
     }
    ],
    "total": 116,
-   "last_success_at": "2026-10-20T07:52:11+00:00"
+   "last_success_at": "2026-10-20T07:59:50+00:00"
   },
   {
    "id": "theyeshiva",
@@ -746,12 +966,129 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-20T07:52:12+00:00",
+   "checked_at": "2026-10-20T07:59:51+00:00",
    "status": "ok",
-   "new": [],
-   "latest": [],
-   "total": 0,
-   "last_success_at": "2026-10-20T07:52:12+00:00"
+   "new": [
+    {
+     "id": "https://www.theyeshiva.net/item/10008",
+     "title": "This is the Moment G-d Has Been Waiting for Since Before Creation - Monday: Mayim Rabim 5738 #3",
+     "url": "https://www.theyeshiva.net/item/10008",
+     "date": "Mon, 19 Oct 2026 08:00:00 -0400",
+     "blurb": "Six Thousand Years of History, Infinite Worlds, and Unimaginable Sacrifice—All Waiting for You to Choose Love over Fear Before there was time, space, or existence, G-d dreamed of one moment: the moment you would turn toward Him. What if your next choice changes everything—even for G-d? The astonishing secret of how your smallest act of love and truth constitutes the purpose of everything. This class is the third in a series on the Maamar Mayim Rabim, said by the Lubavitcher Rebbe on Motzei Shabbos Parshas Noach, 3 Cheshvan, 5738, October 15, 1977, in his room. This class was presented by Rabbi YY Jacobson on Monday, 8 Cheshvan, 5787, October 19, 2026, at Bais Medrash Ohr Chaim in Monsey, NY. View Source Sheets: https://portal.theyeshiva.net/api/source-sheets/10008",
+     "first_seen": "2026-10-20T07:59:51+00:00"
+    },
+    {
+     "id": "https://www.theyeshiva.net/item/10005",
+     "title": "What If Your Anxiety Is Leading You to Your Deepest Love? - Thursday: Mayim Rabim 5738 #2",
+     "url": "https://www.theyeshiva.net/item/10005",
+     "date": "Thu, 15 Oct 2026 08:00:00 -0400",
+     "blurb": "What You’re Most Ashamed Of May Be Your Greatest Gift The flood within you may not be trying to erase your soul. Beneath the anxiety, shame, brokenness, and overwhelm may lie an intensity of light that once exceeded your vessels. Your deepest work is not to destroy that energy, but to build the vessels that can finally receive its love. This class is the second in a series on the Maamar Mayim Rabim, said by the Lubavitcher Rebbe on Motzei Shabbos Parshas Noach, 3 Cheshvan, 5738, October 15, 1977, in his room. This class was presented by Rabbi YY Jacobson on Thursday, Parshas Noach, 4 Cheshvan, 5787, October 15, 2026, at Bais Medrash Ohr Chaim in Monsey, NY. View Source Sheets: https://portal.theyeshiva.net/api/source-sheets/10005",
+     "first_seen": "2026-10-20T07:59:51+00:00"
+    },
+    {
+     "id": "https://www.theyeshiva.net/item/10007",
+     "title": "I'm Still Single, and It's Breaking My Heart - Conversarion with Older Singels, United Kingdom",
+     "url": "https://www.theyeshiva.net/item/10007",
+     "date": "Wed, 14 Oct 2026 23:54:55 -0400",
+     "blurb": "Does Anyone Understand the Pain of Being Single? Has Hashem Forgotten Me? Rabbi YY Jacobson addressed older singles in the United Kingdom on the pain, challenge, and opportunity of being single. Ohel Sarah and Bonei Olam UK arranged the lecture, followed by Q and A, on Wednesday, 3 Cheshvan, 5787, October 14, 2026.",
+     "first_seen": "2026-10-20T07:59:51+00:00"
+    },
+    {
+     "id": "https://www.theyeshiva.net/item/10004",
+     "title": "Before the Shame, You Already Had a Name: The Tower of Babel - Women's Noach Class",
+     "url": "https://www.theyeshiva.net/item/10004",
+     "date": "Tue, 13 Oct 2026 09:30:00 -0400",
+     "blurb": "Stop Building Towers to Prove You Exist: The Burden of Shame, and the Search for Your True Name View Source Sheets: https://portal.theyeshiva.net/api/source-sheets/10004",
+     "first_seen": "2026-10-20T07:59:51+00:00"
+    },
+    {
+     "id": "https://www.theyeshiva.net/item/10003",
+     "title": "Your Soul Is Worth More than 100 Million:  Balancing Work and Life - Mayim Rabim 5738 #1",
+     "url": "https://www.theyeshiva.net/item/10003",
+     "date": "Mon, 12 Oct 2026 08:00:00 -0400",
+     "blurb": "Don't Let Your Violin Become a Doorstop: Work Hard, But Don't Surrendering Your Integrity & Serenity This class is the first in a series on the Maamar Mayim Rabim, said by the Lubavitcher Rebbe on Motzei Shabos Parshas Noach, 3 Cheshvan, 5738, October 15, 1977, in his room. Presented by Rabbi YY Jacobson on 1 Cheshvan, 5787, October 12, 2026, at Bais Medrash Ohr Chaim in Monsey, NY. Do not use your violin as a doorstep, and your telescope as a soup mixer. View Source Sheets: https://portal.theyeshiva.net/api/source-sheets/10003",
+     "first_seen": "2026-10-20T07:59:51+00:00"
+    },
+    {
+     "id": "https://www.theyeshiva.net/item/6014",
+     "title": "Every Person Is Your Mirror. Really? - Women's Noach Class",
+     "url": "https://www.theyeshiva.net/item/6014",
+     "date": "Tue, 9 Oct 2018 02:49:00 -0400",
+     "blurb": "How to Deal with Difficult People This Women's class was presented by Rabbi YY Jacobson on Tuesday, 30 Tishrei, 5779, September 9, 2018, at Ohr Chaim Shul, Monsey, NY"
+    },
+    {
+     "id": "https://www.theyeshiva.net/item/2579",
+     "title": "The Power of Peace - Torah Or Noach Maamar Vayomer Hashem #4",
+     "url": "https://www.theyeshiva.net/item/2579",
+     "date": "Mon, 2 Nov 2015 00:00:00 -0500",
+     "blurb": "The Secret of the Dor Haflagah Torah Or Noach Maamar Vayomer Hashem class 4, last class in the series. The Power of Peace. View Source Sheets: https://portal.theyeshiva.net/api/source-sheets/2579"
+    },
+    {
+     "id": "https://www.theyeshiva.net/item/2553",
+     "title": "Alexander The Great Discovers Idealism In The African Mountains - Class Noach",
+     "url": "https://www.theyeshiva.net/item/2553",
+     "date": "Sat, 10 Oct 2015 19:31:00 -0400",
+     "blurb": "The Battle of the Two Souls within the Human Psyche This class, presented to women, Noach 2011/5772, explores a peculiar story in the Midrash Rabah on Noach. Alexander the Great visiting the King of Keitza to see how he runs his country. He observes how the monarch deals with two people coming to the king because one found a treasure in a newly bought filed and wants to return it. The seller refuses to accept it. The story may serve as an allegory to appreciate the tension in the human psyche between the two souls within us."
+    },
+    {
+     "id": "https://www.theyeshiva.net/item/2555",
+     "title": "Lunar Flood, Solar Year: Synchronizing Light and Darkness - Class Noach",
+     "url": "https://www.theyeshiva.net/item/2555",
+     "date": "Wed, 17 Oct 2012 07:34:00 -0400",
+     "blurb": "Why the Flood Had to Last for a Complete Solar Year This class presented to women on Noach 2012/5773 explores the timing of the flood. Noah’s Flood commenced on the 17th of Cheshvan in the year 1656 from creation, and ended on Cheshvan 27 of the following year. The biblical commentaries explain that the Flood lasted exactly one year, and that the 11-day discrepancy in the dates represents the 11-day difference between the solar and lunar years. But why was it important to have a full solar year? Because it is the harmony between the “sun” and the “moon” in the human psyche that is the key to healing and rebirth, to eliminate the causes of the flood."
+    },
+    {
+     "id": "https://www.theyeshiva.net/item/81",
+     "title": "The Raven & The Dove - Class Noach",
+     "url": "https://www.theyeshiva.net/item/81",
+     "date": "Mon, 19 Oct 2009 20:31:00 -0400",
+     "blurb": "When Cynicism Replaces Innocence The Raven & The Dove: The Flood Recedes and Noah Sends Out a Raven Followed by a Dove. Why These Two Birds? And What Does This Story Tell Us of the Journey Necessary for people Recovering from Personal “Floods?” When Cynicism Replaces Innocence. View Source Sheets: https://portal.theyeshiva.net/api/source-sheets/81"
+    }
+   ],
+   "latest": [
+    {
+     "id": "https://www.theyeshiva.net/item/10008",
+     "title": "This is the Moment G-d Has Been Waiting for Since Before Creation - Monday: Mayim Rabim 5738 #3",
+     "url": "https://www.theyeshiva.net/item/10008",
+     "date": "Mon, 19 Oct 2026 08:00:00 -0400",
+     "blurb": "Six Thousand Years of History, Infinite Worlds, and Unimaginable Sacrifice—All Waiting for You to Choose Love over Fear Before there was time, space, or existence, G-d dreamed of one moment: the moment you would turn toward Him. What if your next choice changes everything—even for G-d? The astonishing secret of how your smallest act of love and truth constitutes the purpose of everything. This class is the third in a series on the Maamar Mayim Rabim, said by the Lubavitcher Rebbe on Motzei Shabbos Parshas Noach, 3 Cheshvan, 5738, October 15, 1977, in his room. This class was presented by Rabbi YY Jacobson on Monday, 8 Cheshvan, 5787, October 19, 2026, at Bais Medrash Ohr Chaim in Monsey, NY. View Source Sheets: https://portal.theyeshiva.net/api/source-sheets/10008",
+     "first_seen": "2026-10-20T07:59:51+00:00"
+    },
+    {
+     "id": "https://www.theyeshiva.net/item/10005",
+     "title": "What If Your Anxiety Is Leading You to Your Deepest Love? - Thursday: Mayim Rabim 5738 #2",
+     "url": "https://www.theyeshiva.net/item/10005",
+     "date": "Thu, 15 Oct 2026 08:00:00 -0400",
+     "blurb": "What You’re Most Ashamed Of May Be Your Greatest Gift The flood within you may not be trying to erase your soul. Beneath the anxiety, shame, brokenness, and overwhelm may lie an intensity of light that once exceeded your vessels. Your deepest work is not to destroy that energy, but to build the vessels that can finally receive its love. This class is the second in a series on the Maamar Mayim Rabim, said by the Lubavitcher Rebbe on Motzei Shabbos Parshas Noach, 3 Cheshvan, 5738, October 15, 1977, in his room. This class was presented by Rabbi YY Jacobson on Thursday, Parshas Noach, 4 Cheshvan, 5787, October 15, 2026, at Bais Medrash Ohr Chaim in Monsey, NY. View Source Sheets: https://portal.theyeshiva.net/api/source-sheets/10005",
+     "first_seen": "2026-10-20T07:59:51+00:00"
+    },
+    {
+     "id": "https://www.theyeshiva.net/item/10007",
+     "title": "I'm Still Single, and It's Breaking My Heart - Conversarion with Older Singels, United Kingdom",
+     "url": "https://www.theyeshiva.net/item/10007",
+     "date": "Wed, 14 Oct 2026 23:54:55 -0400",
+     "blurb": "Does Anyone Understand the Pain of Being Single? Has Hashem Forgotten Me? Rabbi YY Jacobson addressed older singles in the United Kingdom on the pain, challenge, and opportunity of being single. Ohel Sarah and Bonei Olam UK arranged the lecture, followed by Q and A, on Wednesday, 3 Cheshvan, 5787, October 14, 2026.",
+     "first_seen": "2026-10-20T07:59:51+00:00"
+    },
+    {
+     "id": "https://www.theyeshiva.net/item/10004",
+     "title": "Before the Shame, You Already Had a Name: The Tower of Babel - Women's Noach Class",
+     "url": "https://www.theyeshiva.net/item/10004",
+     "date": "Tue, 13 Oct 2026 09:30:00 -0400",
+     "blurb": "Stop Building Towers to Prove You Exist: The Burden of Shame, and the Search for Your True Name View Source Sheets: https://portal.theyeshiva.net/api/source-sheets/10004",
+     "first_seen": "2026-10-20T07:59:51+00:00"
+    },
+    {
+     "id": "https://www.theyeshiva.net/item/10003",
+     "title": "Your Soul Is Worth More than 100 Million:  Balancing Work and Life - Mayim Rabim 5738 #1",
+     "url": "https://www.theyeshiva.net/item/10003",
+     "date": "Mon, 12 Oct 2026 08:00:00 -0400",
+     "blurb": "Don't Let Your Violin Become a Doorstop: Work Hard, But Don't Surrendering Your Integrity & Serenity This class is the first in a series on the Maamar Mayim Rabim, said by the Lubavitcher Rebbe on Motzei Shabos Parshas Noach, 3 Cheshvan, 5738, October 15, 1977, in his room. Presented by Rabbi YY Jacobson on 1 Cheshvan, 5787, October 12, 2026, at Bais Medrash Ohr Chaim in Monsey, NY. Do not use your violin as a doorstep, and your telescope as a soup mixer. View Source Sheets: https://portal.theyeshiva.net/api/source-sheets/10003",
+     "first_seen": "2026-10-20T07:59:51+00:00"
+    }
+   ],
+   "total": 1536,
+   "last_success_at": "2026-10-20T07:59:51+00:00"
   },
   {
    "id": "chassidus_applied",
@@ -765,7 +1102,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-20T07:52:14+00:00",
+   "checked_at": "2026-10-20T07:59:55+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -811,7 +1148,7 @@
     }
    ],
    "total": 15,
-   "last_success_at": "2026-10-20T07:52:14+00:00"
+   "last_success_at": "2026-10-20T07:59:55+00:00"
   },
   {
    "id": "neirot",
@@ -825,7 +1162,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-20T07:52:15+00:00",
+   "checked_at": "2026-10-20T07:59:55+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -871,7 +1208,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-10-20T07:52:15+00:00"
+   "last_success_at": "2026-10-20T07:59:55+00:00"
   },
   {
    "id": "chassidus_explained",
@@ -885,7 +1222,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-20T07:52:18+00:00",
+   "checked_at": "2026-10-20T07:59:59+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -931,7 +1268,7 @@
     }
    ],
    "total": 134,
-   "last_success_at": "2026-10-20T07:52:18+00:00"
+   "last_success_at": "2026-10-20T07:59:59+00:00"
   },
   {
    "id": "melukat",
@@ -945,7 +1282,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-20T07:52:19+00:00",
+   "checked_at": "2026-10-20T08:00:00+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -993,7 +1330,7 @@
     }
    ],
    "total": 167,
-   "last_success_at": "2026-10-20T07:52:19+00:00"
+   "last_success_at": "2026-10-20T08:00:00+00:00"
   },
   {
    "id": "daily_maamar",
@@ -1007,7 +1344,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-20T07:52:20+00:00",
+   "checked_at": "2026-10-20T08:00:01+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1069,7 +1406,7 @@
     }
    ],
    "total": 342,
-   "last_success_at": "2026-10-20T07:52:20+00:00"
+   "last_success_at": "2026-10-20T08:00:01+00:00"
   },
   {
    "id": "wellsprings",
@@ -1083,7 +1420,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-20T07:52:22+00:00",
+   "checked_at": "2026-10-20T08:00:03+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1129,7 +1466,7 @@
     }
    ],
    "total": 125,
-   "last_success_at": "2026-10-20T07:52:22+00:00"
+   "last_success_at": "2026-10-20T08:00:03+00:00"
   },
   {
    "id": "daily_sicha",
@@ -1143,7 +1480,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-20T07:52:23+00:00",
+   "checked_at": "2026-10-20T08:00:04+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1205,7 +1542,7 @@
     }
    ],
    "total": 1406,
-   "last_success_at": "2026-10-20T07:52:23+00:00"
+   "last_success_at": "2026-10-20T08:00:04+00:00"
   },
   {
    "id": "learnchassidus",
@@ -1219,12 +1556,12 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-20T07:52:29+00:00",
+   "checked_at": "2026-10-20T08:00:09+00:00",
    "status": "ok",
    "new": [],
    "latest": [],
    "total": 5,
-   "last_success_at": "2026-10-20T07:52:29+00:00"
+   "last_success_at": "2026-10-20T08:00:09+00:00"
   },
   {
    "id": "simplychassidus",
@@ -1238,17 +1575,9 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-20T07:52:30+00:00",
+   "checked_at": "2026-10-20T08:00:09+00:00",
    "status": "ok",
-   "new": [
-    {
-     "id": "content:8eea7d2a427c278b",
-     "title": "עדכון בתוכן הדף",
-     "url": "https://www.simplychassidus.com/",
-     "date": "",
-     "first_seen": "2026-10-20T07:52:30+00:00"
-    }
-   ],
+   "new": [],
    "latest": [
     {
      "id": "content:8eea7d2a427c278b",
@@ -1272,8 +1601,8 @@
      "first_seen": "2026-10-18T04:52:13+00:00"
     }
    ],
-   "total": 1,
-   "last_success_at": "2026-10-20T07:52:30+00:00"
+   "total": 4,
+   "last_success_at": "2026-10-20T08:00:09+00:00"
   },
   {
    "id": "alonei_chabad",
@@ -1286,7 +1615,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-20T07:52:31+00:00",
+   "checked_at": "2026-10-20T08:00:10+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -1303,7 +1632,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-20T07:52:31+00:00",
+   "checked_at": "2026-10-20T08:00:10+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -1320,17 +1649,9 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-20T07:52:31+00:00",
+   "checked_at": "2026-10-20T08:00:10+00:00",
    "status": "ok",
-   "new": [
-    {
-     "id": "content:f9ed8b71bbafe643",
-     "title": "עדכון בתוכן הדף",
-     "url": "http://www.lmaanyishmeu.com/archives.htm",
-     "date": "",
-     "first_seen": "2026-10-20T07:52:31+00:00"
-    }
-   ],
+   "new": [],
    "latest": [
     {
      "id": "content:f9ed8b71bbafe643",
@@ -1354,8 +1675,8 @@
      "first_seen": "2026-10-18T04:52:14+00:00"
     }
    ],
-   "total": 1,
-   "last_success_at": "2026-10-20T07:52:31+00:00"
+   "total": 303,
+   "last_success_at": "2026-10-20T08:00:10+00:00"
   },
   {
    "id": "lchaim",
@@ -1368,12 +1689,63 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-20T07:52:32+00:00",
+   "checked_at": "2026-10-20T08:00:12+00:00",
    "status": "ok",
-   "new": [],
-   "latest": [],
-   "total": 0,
-   "last_success_at": "2026-10-20T07:52:32+00:00"
+   "new": [
+    {
+     "id": "37050",
+     "title": "Noach · 5787 · The Weekly Publication for Every Jewish Person",
+     "url": "https://torahprint.nyc3.cdn.digitaloceanspaces.com/pdfFiles/1791665200359_cgv6m_1944_-_sd.pdf",
+     "date": "2026-10-16T00:00:00.000Z",
+     "first_seen": "2026-10-20T08:00:12+00:00"
+    },
+    {
+     "id": "37005",
+     "title": "Bereishis · 5787 · A weekly publication from the Chabad Jewish Centre of Georgina featuring Torah insights, stories, and local Shabbat times.",
+     "url": "https://torahprint.nyc3.cdn.digitaloceanspaces.com/pdfFiles/1791526962321_oj0u1_document.pdf",
+     "date": "2026-10-09T00:00:00.000Z",
+     "first_seen": "2026-10-20T08:00:12+00:00"
+    }
+   ],
+   "latest": [
+    {
+     "id": "37050",
+     "title": "Noach · 5787 · The Weekly Publication for Every Jewish Person",
+     "url": "https://torahprint.nyc3.cdn.digitaloceanspaces.com/pdfFiles/1791665200359_cgv6m_1944_-_sd.pdf",
+     "date": "2026-10-16T00:00:00.000Z",
+     "first_seen": "2026-10-20T08:00:12+00:00"
+    },
+    {
+     "id": "37005",
+     "title": "Bereishis · 5787 · A weekly publication from the Chabad Jewish Centre of Georgina featuring Torah insights, stories, and local Shabbat times.",
+     "url": "https://torahprint.nyc3.cdn.digitaloceanspaces.com/pdfFiles/1791526962321_oj0u1_document.pdf",
+     "date": "2026-10-09T00:00:00.000Z",
+     "first_seen": "2026-10-20T08:00:12+00:00"
+    },
+    {
+     "id": "36880",
+     "title": "Bereishis · 5787 · The Weekly Publication for Every Jewish Person",
+     "url": "https://torahprint.nyc3.cdn.digitaloceanspaces.com/pdfFiles/1791363292353_32g5t_17e656_bd65bde7f6e944809622fb553da3ab27.pdf",
+     "date": "2026-10-09T00:00:00.000Z",
+     "first_seen": "2026-10-20T08:00:12+00:00"
+    },
+    {
+     "id": "36377",
+     "title": "Sukkos · 5787 · A weekly publication featuring teachings on Sukkot, stories, and insights.",
+     "url": "https://torahprint.nyc3.cdn.digitaloceanspaces.com/pdfFiles/1790305926030_ivvzj_lchaim_1942_-_sd.pdf",
+     "date": "2026-09-25T00:00:00.000Z",
+     "first_seen": "2026-10-20T08:00:12+00:00"
+    },
+    {
+     "id": "36212",
+     "title": "Sukkos · 5787 · The Weekly Publication for Every Jewish Person",
+     "url": "https://torahprint.nyc3.cdn.digitaloceanspaces.com/pdfFiles/1790166703407_bwlq6_lchaim_1942_-_sd.pdf",
+     "date": "2026-09-25T00:00:00.000Z",
+     "first_seen": "2026-10-20T08:00:12+00:00"
+    }
+   ],
+   "total": 191,
+   "last_success_at": "2026-10-20T08:00:12+00:00"
   },
   {
    "id": "one_point",
@@ -1386,12 +1758,48 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-20T07:52:34+00:00",
+   "checked_at": "2026-10-20T08:00:13+00:00",
    "status": "ok",
    "new": [],
-   "latest": [],
-   "total": 0,
-   "last_success_at": "2026-10-20T07:52:34+00:00"
+   "latest": [
+    {
+     "id": "35525",
+     "title": "Devorim · 5786",
+     "url": "https://torahprint.nyc3.cdn.digitaloceanspaces.com/pdfFiles/1784222898304_dikp2_ls29_shabbos_chazon_mashal_of_garment_instead_of_house.pdf",
+     "date": "2026-07-16T17:28:18.462Z",
+     "first_seen": "2026-10-20T08:00:13+00:00"
+    },
+    {
+     "id": "35391",
+     "title": "Matos-Massei · 5784",
+     "url": "https://torahprint.nyc3.cdn.digitaloceanspaces.com/pdfFiles/1783612461830_om4lc_ls28_09_10_matos_masei_menashe_given_land_by_moshe_east_of_the_yarden_.pdf",
+     "date": "2026-07-09T15:54:21.963Z",
+     "first_seen": "2026-10-20T08:00:13+00:00"
+    },
+    {
+     "id": "35312",
+     "title": "Pinchas · 5782",
+     "url": "https://torahprint.nyc3.cdn.digitaloceanspaces.com/pdfFiles/1783099455665_mrbvm_ls33_08_pinchas_2_bnei_korach.pdf",
+     "date": "2026-07-03T17:24:15.805Z",
+     "first_seen": "2026-10-20T08:00:13+00:00"
+    },
+    {
+     "id": "35001",
+     "title": "Korach · 5785",
+     "url": "https://torahprint.nyc3.cdn.digitaloceanspaces.com/pdfFiles/1781800000943_igoem_ls28_05_korach_2_one_point_keser_torah_like_keser_kehunah_and_malchus.pdf",
+     "date": "2026-06-18T16:26:41.085Z",
+     "first_seen": "2026-10-20T08:00:13+00:00"
+    },
+    {
+     "id": "34934",
+     "title": "Shlach/Korach · 5786",
+     "url": "https://torahprint.nyc3.cdn.digitaloceanspaces.com/pdfFiles/1781292909324_dlnqk_ls33_04_shelach_1_atzas_meraglim.pdf",
+     "date": "2026-06-12T19:35:09.483Z",
+     "first_seen": "2026-10-20T08:00:13+00:00"
+    }
+   ],
+   "total": 184,
+   "last_success_at": "2026-10-20T08:00:13+00:00"
   },
   {
    "id": "derher",
@@ -1404,7 +1812,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-20T07:52:35+00:00",
+   "checked_at": "2026-10-20T08:00:15+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -1421,7 +1829,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-20T07:52:35+00:00",
+   "checked_at": "2026-10-20T08:00:15+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -1438,7 +1846,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-20T07:52:35+00:00",
+   "checked_at": "2026-10-20T08:00:15+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1451,7 +1859,7 @@
     }
    ],
    "total": 5,
-   "last_success_at": "2026-10-20T07:52:35+00:00"
+   "last_success_at": "2026-10-20T08:00:15+00:00"
   },
   {
    "id": "maynotecha_inst",
@@ -1464,7 +1872,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-20T07:52:37+00:00",
+   "checked_at": "2026-10-20T08:00:17+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -1481,12 +1889,12 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-20T07:52:37+00:00",
+   "checked_at": "2026-10-20T08:00:17+00:00",
    "status": "ok",
    "new": [],
    "latest": [],
    "total": 0,
-   "last_success_at": "2026-10-20T07:52:37+00:00"
+   "last_success_at": "2026-10-20T08:00:17+00:00"
   },
   {
    "id": "anash",
@@ -1499,7 +1907,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-20T07:52:38+00:00",
+   "checked_at": "2026-10-20T08:00:18+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1545,7 +1953,7 @@
     }
    ],
    "total": 2,
-   "last_success_at": "2026-10-20T07:52:38+00:00"
+   "last_success_at": "2026-10-20T08:00:18+00:00"
   },
   {
    "id": "chabadinfo",
@@ -1558,7 +1966,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-20T07:52:40+00:00",
+   "checked_at": "2026-10-20T08:00:19+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -1575,7 +1983,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-20T07:52:40+00:00",
+   "checked_at": "2026-10-20T08:00:19+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -1592,7 +2000,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-20T07:52:40+00:00",
+   "checked_at": "2026-10-20T08:00:19+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1638,7 +2046,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-10-20T07:52:40+00:00"
+   "last_success_at": "2026-10-20T08:00:19+00:00"
   },
   {
    "id": "kehot",
@@ -1651,7 +2059,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-20T07:52:45+00:00",
+   "checked_at": "2026-10-20T08:00:22+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1913,7 +2321,7 @@
     }
    ],
    "total": 189,
-   "last_success_at": "2026-10-20T07:52:45+00:00"
+   "last_success_at": "2026-10-20T08:00:22+00:00"
   }
  ],
  "browser_checks": {
