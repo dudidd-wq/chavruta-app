@@ -7,6 +7,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import re
 from collections import Counter
 from datetime import datetime, timedelta, timezone
 from email.utils import parsedate_to_datetime
@@ -88,9 +89,13 @@ def project(snapshot, relevance, summaries, observations, *, now=None, media=Non
         published = when(raw.get("published_at") if browser else raw.get("date")) if src.get("detect") != "kehot" else None
         discovered = when(first)
         effective = published or discovered
-        cls = relevance.get(key, {}).get("cls", "")
-        if not cls and item["medium"] == "bulletin":
+        generic_title = bool(re.fullmatch(r"download(?: pdf)?|read more|pdf|להורדה|הורדה|לחצו כאן", item["title"].strip(), re.I))
+        cls = "" if generic_title else relevance.get(key, {}).get("cls", "")
+        if not cls and item["medium"] == "bulletin" and not generic_title:
             cls = "גיליון"
+        issue_year = re.search(r"·\s*(5[78]\d\d)\s*·", item["title"]) if item["medium"] == "bulletin" else None
+        if issue_year and effective and int(issue_year[1]) < effective.year + 3760:
+            cls = "ישן"
         summary = summaries.get(key, {})
         fresh = bool(effective and cutoff <= effective <= now + timedelta(days=1))
         item.update(key=key, date=published, date_s=published.strftime("%d.%m.%Y") if published else "",

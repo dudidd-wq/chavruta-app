@@ -86,6 +86,20 @@ class NewsTests(unittest.TestCase):
         self.assertEqual(f['items'], [])
         self.assertEqual(f['sources'], 0)
 
+    def test_download_button_is_not_an_identified_publication(self):
+        snap, key = self.fixture(medium='bulletin')
+        snap['sources'][0]['latest'][0]['title'] = 'Download'
+        f = news.project(snap, {}, {}, {}, now=NOW)
+        self.assertEqual(f['items'], [])
+        self.assertEqual(f['n_unclassified'], 1)
+
+    def test_old_bulletin_year_does_not_become_a_new_issue(self):
+        snap, key = self.fixture(medium='bulletin')
+        snap['sources'][0]['latest'][0]['title'] = 'Pinchas · 5782 · Weekly'
+        f = news.project(snap, {}, {}, {}, now=NOW)
+        self.assertEqual(f['items'], [])
+        self.assertEqual(f['n_reupload'], 1)
+
 
 if __name__ == '__main__':
     unittest.main()
