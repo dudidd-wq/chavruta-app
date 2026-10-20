@@ -1,13 +1,28 @@
 """Update only news; learning data and presentation assets are never rebuilt."""
 from __future__ import annotations
 import argparse
+import hashlib
 import json
+import re
 import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT))
 from chavruta import news
+
+
+def stamp_news_version(index, payload):
+    if not index.exists():
+        return
+    digest = hashlib.sha256(json.dumps(payload, ensure_ascii=False, sort_keys=True).encode()).hexdigest()[:12]
+    tag = '<meta name="chavruta-news-version" content="' + digest + '">'
+    page = index.read_text(encoding="utf-8")
+    if 'name="chavruta-news-version"' in page:
+        page = re.sub(r'<meta name="chavruta-news-version" content="[^"]*">', tag, page)
+    else:
+        page = page.replace('<head>', '<head>\n' + tag, 1)
+    index.write_text(page, encoding="utf-8")
 
 
 def update(output, collect=False):
@@ -35,6 +50,7 @@ def update(output, collect=False):
     output.mkdir(parents=True, exist_ok=True)
     serialized = json.dumps(payload, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/").replace("\u2028", "\\u2028").replace("\u2029", "\\u2029")
     (output / "new.js").write_text('window.__D("new",' + serialized + ');\n', encoding="utf-8")
+    stamp_news_version(output.parent / "index.html", payload)
     report = {"generated": payload["generated"], "items": len(payload["items"]), "pending": len(pending),
               "counts": feed["counts"], "sources": payload["health"]}
     (mon / "health.json").write_text(json.dumps(report, ensure_ascii=False, indent=1), encoding="utf-8")

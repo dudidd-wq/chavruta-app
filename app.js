@@ -112,13 +112,14 @@ const D = { chunks: {}, waiting: {}, loading: {}, loadedAt: {} };
 window.__D = (name, obj) => { D.chunks[name] = obj; D.loadedAt[name] = Date.now(); (D.waiting[name] || []).forEach(f => f(obj)); D.waiting[name] = []; };
 function chunkFile(name) { return name.startsWith("b:") ? `data/b-${name.slice(2)}.js` : `data/${name}.js`; }
 function loadChunk(name) {
-  if (name === "new" && D.chunks[name] && Date.now() - D.loadedAt[name] > 3600000) { delete D.chunks[name]; delete D.loading[name]; }
+  if (name === "new" && D.chunks[name] && Date.now() - D.loadedAt[name] > 300000) { delete D.chunks[name]; delete D.loading[name]; }
   if (D.chunks[name]) return Promise.resolve(D.chunks[name]);
   if (D.loading[name]) return D.loading[name];
   D.loading[name] = new Promise((res, rej) => {
     (D.waiting[name] = D.waiting[name] || []).push(res);
     const s = document.createElement("script");
-    s.src = chunkFile(name) + (name === "new" ? "?v=" + Math.floor(Date.now() / 3600000) : ""); s.async = true;
+    const newsVersion = document.querySelector('meta[name="chavruta-news-version"]')?.content || "news";
+    s.src = chunkFile(name) + (name === "new" ? "?v=" + newsVersion + "-" + Math.floor(Date.now() / 300000) : ""); s.async = true;
     s.onerror = () => { delete D.loading[name]; rej(new Error("לא ניתן לטעון " + chunkFile(name))); };
     document.head.append(s);
   });

@@ -1,4 +1,7 @@
 import unittest
+import importlib.util
+import tempfile
+from pathlib import Path
 from datetime import datetime, timezone, timedelta
 from chavruta import news
 
@@ -99,6 +102,21 @@ class NewsTests(unittest.TestCase):
         f = news.project(snap, {}, {}, {}, now=NOW)
         self.assertEqual(f['items'], [])
         self.assertEqual(f['n_reupload'], 1)
+
+    def test_new_scan_changes_the_browser_news_cache_version(self):
+        path = Path(__file__).resolve().parents[1] / 'tools/app/update_news.py'
+        spec = importlib.util.spec_from_file_location('news_update_test', path)
+        module = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(module)
+        with tempfile.TemporaryDirectory(dir=Path(__file__).resolve().parents[1]) as tmp:
+            index = Path(tmp) / 'index.html'
+            index.write_text('<html><head></head><body></body></html>', encoding='utf-8')
+            module.stamp_news_version(index, {'generated':'first','items':[]})
+            first = index.read_text(encoding='utf-8')
+            module.stamp_news_version(index, {'generated':'second','items':[]})
+            second = index.read_text(encoding='utf-8')
+            self.assertNotEqual(first, second)
+            self.assertEqual(second.count('name="chavruta-news-version"'), 1)
 
 
 if __name__ == '__main__':
