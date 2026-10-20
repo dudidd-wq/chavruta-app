@@ -1306,6 +1306,22 @@ body.source-reader-open { overflow: hidden; }
 .source-reader .sr-scan-tools :is(input,select) { font: inherit; color: var(--ink); background: var(--card); border: 1px solid var(--rule); border-radius: 4px; min-height: 38px; }
 .source-reader .sr-frame { display: block; border: 1px solid var(--rule); width: 100%; height: max(440px,64dvh); background: #fff; }
 .source-reader .sr-file { display: inline-flex; margin-block: 10px; }
+.source-reader .sr-canvas-wrap { overflow: auto; max-width: 100%; background: #fff; border: 1px solid var(--rule); }
+.source-reader canvas { display: block; margin: auto; }
+.source-reader .sr-notes { margin-block: 28px; padding-top: 20px; border-top: 1px solid var(--rule); font-size: calc(var(--reading-source-size,20px) * .85); }
+.source-reader .sr-footnote { margin-bottom: 14px; scroll-margin-block: 20px; }
+.source-reader .sr-note-back { display: inline-block; font: 12px/1.5 var(--sans); margin-inline-start: 10px; }
+.source-reader .sr-text sup a { color: var(--accent); padding-inline: 3px; }
+.source-reader .sr-text :is(h2,h3,h4,h5,h6) { font-size: 1.05em; margin-block: 1em; }
+.source-reader .sr-scan-tools select { max-width: 100%; min-width: 0; }
+.source-reader .sr-save { display: flex; align-items: center; flex-wrap: wrap; gap: 6px 12px; flex-basis: 100%; }
+.source-reader .sr-save-status { font: 12px/1.6 var(--sans); color: var(--ink-3); }
+.saved-sources ul { list-style: none; padding: 0; }
+.saved-sources li { display: flex; align-items: start; justify-content: space-between; gap: 18px; border-bottom: 1px solid var(--rule); padding-block: 18px; }
+.saved-sources li > div { min-width: 0; overflow-wrap: anywhere; }
+.saved-sources li > div > a { font-size: 20px; }
+.saved-sources li p { margin-block: 6px 0; }
+.saved-sources li button { flex-shrink: 0; min-height: 44px; }
 .source-reader :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 @media (max-width:999px) { .source-reader, .source-reader.sr-wide { width: 100vw; } .source-reader .sr-expand { display: none; } }
 @media (max-width:560px) { .source-reader .sr-head { padding: 14px 16px 8px; } .source-reader .sr-head h2 { font-size: 18px; } .source-reader .sr-meta { padding-inline: 16px; } .source-reader .sr-tabs { padding: 8px 16px; } .source-reader .sr-body { padding: 16px; } .source-reader .sr-footer { padding-inline: 16px; } .source-reader .sr-frame { height: 62dvh; } }
