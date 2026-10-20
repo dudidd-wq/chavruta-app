@@ -11,8 +11,8 @@
 @media print {
   /* הדפסה: תמיד נייר בהיר ודיו שחור, בכל ערכה ובכל תאורה (הספציפיות גבוהה מכללי הערכות) */
   html:root:root:root:root, html[data-theme="dark"]:root:root:root {
-    --paper: #fff; --card: #fff; --paper-2: #f2f2f2; --ink: #000; --ink-2: #222; --ink-3: #555; --rule: #bbb; --rule-2: #ddd; --accent: #5a1a28; --accent-2: #3d111b; --accent-soft: #f3e8ea; --accent-line: #9a6a73; --hl: #fff3b0;
-    --quote-bg: #f2f2f2; --quote-ink: #000; --ok: #2f6a45; --warn: #7f520c; --bad: #8d3a2e; --ok-soft: #e4eee6; --warn-soft: #f5ebd0; --bad-soft: #f3dfda; color-scheme: light;
+    --paper: #fff !important; --card: #fff !important; --paper-2: #f2f2f2 !important; --ink: #000 !important; --ink-2: #222 !important; --ink-3: #555 !important; --rule: #bbb !important; --rule-2: #ddd !important; --accent: #5a1a28 !important; --accent-2: #3d111b !important; --accent-soft: #f3e8ea !important; --accent-line: #9a6a73 !important; --hl: #fff3b0 !important;
+    --quote-bg: #f2f2f2 !important; --quote-ink: #000 !important; --ok: #2f6a45 !important; --warn: #7f520c !important; --bad: #8d3a2e !important; --ok-soft: #e4eee6 !important; --warn-soft: #f5ebd0 !important; --bad-soft: #f3dfda !important; color-scheme: light; --fs-body: 11pt !important;
   }
   * { -webkit-print-color-adjust: exact; print-color-adjust: exact; box-shadow: none !important; animation: none !important; }
   html { scroll-padding-top: 0; }
@@ -89,3 +89,4 @@
   .icard { font-family: var(--sans); } .icard .btn, .icard .acts { display: none !important; }
   .ihead { display: block; } .ig { display: none; } .ititle { font: 700 14pt var(--serif); } .yrs { display: flex; gap: 14pt; }
 }
+
