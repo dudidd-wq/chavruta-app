@@ -639,6 +639,102 @@ document.addEventListener("keydown", e => {
 window.addEventListener("resize", debounce(() => { updateModeUI(); window.dispatchEvent(new Event("relayout")); }, 150));
 
 
+/* Text location is a literal comparison, never an assertion about attribution. */
+function sourceFold(value) {
+  let offset = 0, space = true; const chars = [], start = [], end = [];
+  for (const c of String(value || "")) {
+    const from = offset; offset += c.length;
+    if (/\p{M}/u.test(c)) { if (end.length && !space) end[end.length - 1] = offset; continue; }
+    if (/["'׳״‘’“”]/u.test(c)) continue;
+    const out = /[\p{L}\p{N}]/u.test(c) ? c.toLowerCase() : " ";
+    if (out === " " && space) continue;
+    chars.push(out); space = out === " "; for (let i = 0; i < out.length; i++) { start.push(from); end.push(offset); }
+  }
+  if (space && chars.length) { chars.pop(); start.pop(); end.pop(); }
+  return { text: chars.join(""), start, end };
+}
+function sourceFindRanges(index, query, words = false) {
+  const needle = sourceFold(query).text, ranges = []; let position = 0, limited = false;
+  if (!needle) return { ranges, limited };
+  while ((position = index.text.indexOf(needle, position)) >= 0) {
+    const finish = position + needle.length;
+    if (!words || ((!position || index.text[position - 1] === " ") && (finish === index.text.length || index.text[finish] === " "))) {
+      if (ranges.length === 100) { limited = true; break; }
+      ranges.push({ start: index.start[position], end: index.end[finish - 1] });
+    }
+    position = finish;
+  }
+  return { ranges, limited };
+}
+function sourceLocateQuote(index, quote) {
+  const pieces = String(quote || "").split(/\.{3,}|…/).map(x => ({ raw: x.trim(), norm: sourceFold(x).text })).filter(x => x.norm.length >= 24 && x.norm.split(" ").length >= 5).sort((a, b) => b.norm.length - a.norm.length);
+  for (const piece of pieces) {
+    const found = sourceFindRanges(index, piece.raw, true);
+    if (found.ranges.length) return { ...found, query: piece.raw, partial: /\.{3,}|…/.test(quote) };
+  }
+  return { ranges: [], limited: false, query: "", partial: false };
+}
+function sourceTextIndex(root) {
+  const chunks = [], nodes = []; let length = 0, truncated = false;
+  const add = (text, node) => { if (length >= 400000) { truncated = true; return; } const part = text.slice(0, 400000 - length); if (node) nodes.push({ node, start: length, end: length + part.length }); chunks.push(part); length += part.length; if (part.length < text.length) truncated = true; };
+  const visit = node => {
+    if (truncated) return;
+    if (node.nodeType === 3) { add(node.textContent, node); return; }
+    if (node.nodeType !== 1 || node.tagName === "SUP") return;
+    const block = /^(P|DIV|H[1-6]|BLOCKQUOTE|LI|BR)$/.test(node.tagName);
+    if (block) add("\n"); for (const child of node.childNodes) visit(child); if (block) add("\n");
+  };
+  visit(root); return { ...sourceFold(chunks.join("")), nodes, truncated };
+}
+function sourceTextFind(reader, article) {
+  const body = reader.body, quote = String(reader.quote || "");
+  const input = h("input", { type: "search", maxlength: "300", placeholder: "מילים מתוך המקור", "aria-label": "חיפוש בטקסט המקור" });
+  const status = h("p", { class: "sr-find-status", role: "status", "aria-live": "polite" });
+  const count = h("span", { class: "sr-find-count", "aria-live": "polite", "aria-atomic": "true" });
+  const prev = h("button", { class: "btn sm", type: "button", disabled: true, "aria-label": "התאמה קודמת", onclick: () => step(-1) }, "הקודם");
+  const next = h("button", { class: "btn sm", type: "button", disabled: true, "aria-label": "התאמה הבאה", onclick: () => step(1) }, "הבא");
+  let groups = [], current = -1, active = "";
+  const clearMarks = () => { for (const mark of article.querySelectorAll("mark.sr-hit")) { const parent = mark.parentNode; mark.replaceWith(document.createTextNode(mark.textContent)); parent.normalize(); } groups = []; current = -1; count.textContent = ""; prev.disabled = next.disabled = true; };
+  const scroll = () => { const mark = groups[current]?.[0]; if (mark) body.scrollTop += mark.getBoundingClientRect().top - body.getBoundingClientRect().top - toolbar.offsetHeight - 24; };
+  function step(delta) {
+    if (!groups.length) return;
+    for (const mark of groups[current] || []) mark.classList.remove("sr-current-hit");
+    current = current < 0 ? delta < 0 ? groups.length - 1 : 0 : (current + delta + groups.length) % groups.length;
+    for (const mark of groups[current]) mark.classList.add("sr-current-hit");
+    count.textContent = (current + 1) + " מתוך " + groups.length; scroll();
+  }
+  const paint = (index, ranges) => {
+    groups = ranges.map(() => []);
+    for (const entry of index.nodes) {
+      const matches = ranges.map((range, i) => ({ start: Math.max(0, range.start - entry.start), end: Math.min(entry.node.textContent.length, range.end - entry.start), i })).filter(x => x.end > x.start);
+      if (!matches.length) continue;
+      const fragment = document.createDocumentFragment(), text = entry.node.textContent; let offset = 0;
+      for (const m of matches) { fragment.append(document.createTextNode(text.slice(offset, m.start))); const mark = h("mark", { class: "sr-hit" }, text.slice(m.start, m.end)); fragment.append(mark); groups[m.i].push(mark); offset = m.end; }
+      fragment.append(document.createTextNode(text.slice(offset))); entry.node.replaceWith(fragment);
+    }
+    prev.disabled = next.disabled = groups.length < 2;
+  };
+  const run = (value, automatic = false) => {
+    clearMarks(); const index = sourceTextIndex(article);
+    const result = automatic ? sourceLocateQuote(index, quote) : sourceFindRanges(index, value);
+    active = automatic ? "" : value; reader.findTerm = automatic ? null : value;
+    if (!automatic && !sourceFold(value).text) { status.textContent = "החיפוש בטקסט של הדף המוצג, ללא הערות השוליים."; return; }
+    paint(index, result.ranges);
+    const scope = index.truncated ? " החיפוש הוגבל לחלק הראשון של הטקסט הארוך." : "";
+    if (!groups.length) { status.textContent = (automatic ? "לא נמצאה התאמה מילולית לציטוט בדף המוצג. אפשר לחפש מילים ממנו." : "לא נמצאו התאמות בטקסט הדף המוצג.") + scope; return; }
+    const label = automatic ? result.partial ? "נמצא חלק מילולי מהציטוט" : "נמצאה התאמה מילולית לציטוט" : "נמצאו התאמות בטקסט";
+    status.textContent = label + (groups.length > 1 ? " · " + groups.length + (result.limited ? "+" : "") + " מופעים. אפשר לעבור ביניהם בחצים." : ".") + scope;
+    if (!automatic || groups.length === 1) step(1); else count.textContent = groups.length + " התאמות";
+  };
+  const clear = () => { input.value = ""; run(""); input.focus({ preventScroll: true }); };
+  const form = h("form", { class: "sr-find-form", role: "search", "aria-label": "חיפוש בדף המקור", onsubmit: e => { e.preventDefault(); if (input.value && input.value === active && groups.length) step(1); else run(input.value); } }, input, h("button", { type: "submit", class: "btn sm" }, "חיפוש"), prev, next, count, h("button", { type: "button", class: "linkbtn", onclick: clear }, "ניקוי"));
+  if (quote) form.append(h("button", { type: "button", class: "linkbtn", onclick: () => { input.value = ""; run("", true); } }, "איתור הציטוט"));
+  const toolbar = h("div", { class: "sr-find" }, form, status); article.before(toolbar);
+  input.addEventListener("keydown", e => { if (e.key === "Escape" && input.value) { e.preventDefault(); e.stopPropagation(); clear(); } else if (e.key === "Enter" && e.shiftKey) { e.preventDefault(); step(-1); } });
+  if (reader.findTerm !== null && reader.findTerm !== undefined) { input.value = reader.findTerm; run(reader.findTerm); }
+  else if (quote) run("", true); else run("");
+}
+
 /* חברותא · קורא מקורות ציבוריים. מטמון המקורות הפרטי אינו מועבר לקורא. */
 function sourceGateway() {
   const value = document.querySelector?.('meta[name="chavruta-source-gateway"]')?.content;
@@ -681,7 +777,7 @@ function sourceFromSelection(sel) {
   const row = sel.ex && RD.data?.ex?.[sel.ex];
   return { node: n?.id, title: n ? cleanT(n.t) : row?.[7] || "מקור", author: n?.rb, book: n?.col || n?.bk,
     url: row?.[2] || n?.u, page: row?.[0] || n?.pg, pdfPage: row?.[1] || n?.pgs,
-    excerpts: row ? [sourceExcerpt(sel.ex, row)] : [] };
+    quote: sel.quote || row?.[5] || "", excerpts: row ? [sourceExcerpt(sel.ex, row)] : [] };
 }
 function sourceFromNode(n, url = n.u) {
   return { node: n.id, title: cleanT(n.t), author: n.rb, book: n.col || n.bk, url, page: n.pg, pdfPage: n.pgs };
@@ -745,7 +841,7 @@ const SourceReader = {
     }
   },
   async open(info, opener) {
-    this.close(false); this.info = { ...info }; this.opener = opener || document.activeElement; this.openerHref = this.opener?.getAttribute("href"); this.pending = false; this.original = null;
+    this.close(false); this.info = { ...info }; this.quote = info.quote || ""; this.findTerm = null; this.opener = opener || document.activeElement; this.openerHref = this.opener?.getAttribute("href"); this.pending = false; this.original = null;
     this.position = { x: scrollX, y: scrollY }; this.anchor = captureAnchor(); this.page = 1; this.zoom = "page-width";
     this.target = sourceTarget(info.url, info.pdfPage); this.excerpts = (info.excerpts || []).filter(x => x.text);
     const ticket = ++this.ticket;
@@ -805,6 +901,7 @@ const SourceReader = {
     for (const row of this.excerpts) {
       const section = h("section", { class: "sr-excerpt" }, h("h3", null, [row.topic || row.id, row.page ? "ע׳ " + row.page : ""].filter(Boolean).join(" · ")), h("div", { class: "sr-text", dir: "auto" }, row.text), row.verified ? h("small", { class: "sr-verified" }, "אומת: " + row.verified) : null);
       const target = sourceTarget(row.url, row.pdfPage);
+      if (target?.kind === "sefaria" || (target?.kind === "library" && sourceGateway())) section.append(h("button", { type: "button", class: "linkbtn", onclick: () => { this.quote = row.text; this.findTerm = null; this.target = target; this.libraryRoot = null; this.libraryPage = target.id; if (this.original) this.original.href = row.url; this.mode = "text"; this.render(); } }, "למקום הקטע בטקסט המלא"));
       if (["hebrewbooks", "pdf"].includes(target?.kind)) section.append(h("button", { type: "button", class: "linkbtn", onclick: () => { this.target = target; this.page = target.page; if (this.original) this.original.href = row.url; this.mode = "scan"; this.render(); } }, "לצילום של הקטע הזה"));
       this.body.append(section);
     }
@@ -890,9 +987,10 @@ const SourceReader = {
       }
       if (!data.html) { body.append(h("p", null, "בחרו דף לקריאה. הטקסט וההערות יופיעו כאן.")); return; }
       const prefix = "sr-library-" + data.id;
-      body.append(h("article", { class: "sr-text", dir: "rtl" }, sourceSafeHTML(sourceLibraryMarkup(data.html), prefix)));
+      const article = h("article", { class: "sr-text", dir: "rtl" }, sourceSafeHTML(sourceLibraryMarkup(data.html), prefix)); body.append(article);
       if (data.footnotes) body.append(h("section", { class: "sr-text sr-notes", "aria-label": "הערות המקור" }, h("h3", null, "הערות המקור"), sourceSafeHTML(sourceLibraryMarkup(data.footnotes, true), prefix)));
       body.append(h("p", { class: "sr-notice" }, "הנוסח וההערות כפי שהתקבלו מספריית חב״ד. מוצגת יחידת המקור שנבחרה; אין בכך אימות של זיהוי הציטוט בביאור."));
+      sourceTextFind(this, article);
     } catch (_) {
       if (!this.dialog || this.mode !== "text" || this.controller !== controller) return;
       body.replaceChildren(h("div", { class: "sr-empty", role: "status" }, h("h3", null, "לא ניתן לטעון כעת את המקור מספריית חב״ד"), h("p", null, "אפשר לנסות שוב או לפתוח באתר המקור."), h("button", { type: "button", class: "btn", onclick: () => this.render() }, "ניסיון נוסף")));
@@ -913,6 +1011,7 @@ const SourceReader = {
       const article = h("article", { class: "sr-text", dir: version.direction === "ltr" ? "ltr" : "rtl" });
       for (const block of blocks) article.append(h("p", null, sourceSafeHTML(block)));
       body.append(article, h("p", { class: "sr-notice" }, "הנוסח מוצג כפי שהתקבל מספריא. אין בכך אישור להתאמת המהדורה או לזיהוי הציטוט בביאור."));
+      sourceTextFind(this, article);
     } catch (_) {
       if (!this.dialog || this.mode !== "text" || this.controller !== controller) return;
       body.replaceChildren(h("div", { class: "sr-empty" }, h("h3", null, "לא ניתן לטעון כעת את טקסט המקור"), h("p", null, "אפשר לנסות שוב או לפתוח את המקור באתר ספריא."), h("button", { type: "button", class: "btn", onclick: () => this.render() }, "ניסיון נוסף")));
@@ -1659,7 +1758,7 @@ function onArticleClick(ev, d) {
   }
   if (t.closest("a") && !t.closest("a.nref")) return;
   const ex = t.closest?.("[data-ex]");
-  if (ex) { ev.preventDefault(); const n = ex.closest("[data-n]")?.dataset.n || RD.data.ex[ex.dataset.ex]?.[3]; pick({ ex: ex.dataset.ex, node: n && getNode(n) ? n : null }, ex); return; }
+  if (ex) { ev.preventDefault(); const n = ex.closest("[data-n]")?.dataset.n || RD.data.ex[ex.dataset.ex]?.[3]; pick({ ex: ex.dataset.ex, node: n && getNode(n) ? n : null, quote: ex.matches(".cite") ? ex.textContent : "" }, ex); return; }
   const nel = t.closest?.("[data-n]");
   if (nel && nel.closest("article")) { ev.preventDefault(); pick({ node: nel.dataset.n }, nel); return; }
   if (MODE === "links" && !getSelection()?.toString()) {
