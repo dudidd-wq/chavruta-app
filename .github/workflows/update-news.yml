@@ -14,6 +14,7 @@ on:
       - 'data/monitor/relevance.json'
       - 'data/monitor/summaries.json'
       - 'data/monitor/browser_checks.json'
+      - 'tests/test_news*.py'
 permissions:
   contents: write
   pages: write

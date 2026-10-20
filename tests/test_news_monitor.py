@@ -36,7 +36,7 @@ class MonitorTests(unittest.TestCase):
     def test_new_items_get_current_first_seen_while_old_links_keep_theirs(self):
         with tempfile.TemporaryDirectory() as tmp:
             mon=Path(tmp)
-            old={'id':'s','name':'Source','role':'analysis','status':'ok','checked_at':'2026-10-01T00:00:00Z','new':[],
+            old={'id':'s','name':'Source','role':'analysis','status':'ok','checked_at':'2026-10-01T00:00:00Z','new':[], 'total':1,
                  'latest':[{'id':'old','title':'Old','url':'https://example.org/old','first_seen':'2026-09-30T00:00:00Z'}]}
             (mon/'snapshot.json').write_text(json.dumps({'sources':[old]}),encoding='utf-8')
             fresh={**old,'checked_at':'2026-10-20T00:00:00Z','latest':[{'id':'new','title':'New','url':'https://example.org/new'}]}
