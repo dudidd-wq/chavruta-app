@@ -255,12 +255,29 @@ function stateClass(st) { return st === "PASS" ? "ok" : st === "PASS בתנאי"
 
 
 /* Personal reading environment. The dialog is rendered only when requested. */
-function openReadingPreferences() {
+const READING_SETUP_KEY = "chavruta-reading-setup-v1";
+let readingSetupDismissed = false;
+function readingSetupPending() { return !readingSetupDismissed && !lsGet(READING_SETUP_KEY); }
+function completeReadingSetup() {
+  readingSetupDismissed = true; lsSet(READING_SETUP_KEY, "done");
+  const anchor = captureAnchor();
+  document.querySelectorAll(".reading-setup-invite").forEach(el => el.remove());
+  requestAnimationFrame(() => restoreAnchor(anchor));
+}
+function readingSetupInvite() {
+  if (!readingSetupPending()) return null;
+  return h("aside", { class: "reading-setup-invite no-print", "aria-label": "התאמת הקריאה הראשונה" },
+    h("div", null, h("h2", null, "סביבת לימוד שנוחה לך"), h("p", null, "בחירה קצרה של גופן, גודל וצבעים — ואפשר להתחיל ללמוד.")),
+    h("div", { class: "reading-setup-actions" },
+      h("button", { type: "button", class: "btn", onclick: () => openReadingPreferences({ quickStart: true }) }, "להתאמת הקריאה"),
+      h("button", { type: "button", class: "linkbtn", onclick: completeReadingSetup }, "אפשר גם אחר כך")));
+}
+function openReadingPreferences(options = {}) {
   const P = window.chavrutaPreferences;
   if (!P) return;
   document.getElementById("reading-preferences")?.close();
   const dialog = h("dialog", { id: "reading-preferences", class: "reading-preferences no-print", "aria-labelledby": "chv-preferences-title" });
-  const markup = "    <section class=\"reading-preferences-content\" id=\"reading-preferences-content\" aria-labelledby=\"chv-preferences-title\">\n      <div class=\"chv-preferences-heading\"><div><h2 id=\"chv-preferences-title\">סביבת הלימוד שלי</h2><p class=\"chv-pref-status\" role=\"status\" aria-live=\"polite\">כל שינוי מופיע מיד בקריאה.</p><p class=\"chv-pref-error\" role=\"alert\" hidden></p></div><button type=\"button\" data-action=\"type\" >סיום התאמה</button></div>\n      <div class=\"chv-pref-columns\">\n        <details open><summary>אותיות וריווח</summary><div class=\"chv-pref-fields\">\n          <label>גופן הקריאה<select data-pref=\"family\"><option value=\"frank\">פרנק ריהל ליברה</option><option value=\"assistant\">אסיסטנט</option><option value=\"arial\">Arial — מהמכשיר</option><option value=\"david\">David — אם מותקן</option><option value=\"narkisim\">Narkisim — אם מותקן</option><option value=\"times\">Times New Roman — אם מותקן</option></select></label>\n          <label for=\"chv-pref-font\">גודל האות <output aria-hidden=\"true\" data-value=\"font\">21</output><input type=\"range\" min=\"16\" max=\"36\" step=\"1\" value=\"21\" data-setting=\"font\" data-pref=\"font\" id=\"chv-pref-font\"></label>\n          <label>משקל האות<select data-pref=\"weight\"><option value=\"400\">רגיל</option><option value=\"500\">מודגש מעט</option></select></label>\n          <label for=\"chv-pref-leading\">מרווח בין שורות <output aria-hidden=\"true\" data-value=\"leading\">1.9</output><input type=\"range\" min=\"1.35\" max=\"2.5\" step=\"0.05\" value=\"1.9\" data-pref=\"leading\" id=\"chv-pref-leading\"></label>\n          <label for=\"chv-pref-paragraph\">מרווח בין פסקאות <output aria-hidden=\"true\" data-value=\"paragraph\">1</output><input type=\"range\" min=\"0.4\" max=\"2.5\" step=\"0.1\" value=\"1\" data-pref=\"paragraph\" id=\"chv-pref-paragraph\"></label>\n          <label for=\"chv-pref-word\">מרווח בין מילים <output aria-hidden=\"true\" data-value=\"word\">0</output><input type=\"range\" min=\"0\" max=\"0.5\" step=\"0.025\" value=\"0\" data-pref=\"word\" id=\"chv-pref-word\"></label>\n          <label for=\"chv-pref-letter\">מרווח בין אותיות <output aria-hidden=\"true\" data-value=\"letter\">0</output><input type=\"range\" min=\"0\" max=\"0.12\" step=\"0.01\" value=\"0\" data-pref=\"letter\" id=\"chv-pref-letter\"></label>\n          <label>יישור הטקסט<select data-pref=\"alignment\"><option value=\"justify\">לשני הצדדים</option><option value=\"right\">לימין</option></select></label>\n        </div></details>\n        <details><summary>צבעים ותאורה</summary><div class=\"chv-pref-fields\">\n          <label>תאורה<select data-pref=\"theme\"><option value=\"system\">לפי המכשיר</option><option value=\"light\">בהירה</option><option value=\"dark\">כהה</option></select></label>\n          <div class=\"chv-pref-wide\"><span>ערכת צבעים</span><div class=\"chv-palette-choices\" role=\"group\" aria-label=\"ערכת צבעים\"><button type=\"button\" data-palette=\"sefer\" aria-pressed=\"true\" >ספר</button><button type=\"button\" data-palette=\"techelet\" aria-pressed=\"false\" >תכלת</button><button type=\"button\" data-palette=\"zayit\" aria-pressed=\"false\" >זית</button><button type=\"button\" data-palette=\"dyo\" aria-pressed=\"false\" >ניגודיות</button></div></div>\n          <p class=\"chv-pref-caption chv-pref-wide\">הצבעים האישיים נשמרים בנפרד לתאורה בהירה וכהה. בחירת ערכה מחליפה את הצבעים האישיים.</p>\n          <label class=\"chv-color-field\">רקע הקריאה<input type=\"color\" data-color=\"paper\" value=\"#faf7f0\"></label>\n          <label class=\"chv-color-field\">צבע האותיות<input type=\"color\" data-color=\"ink\" value=\"#26211b\"></label>\n          <label class=\"chv-color-field\">קישורים והדגשות<input type=\"color\" data-color=\"accent\" value=\"#76283a\"></label>\n          <label class=\"chv-color-field\">רקע המקור<input type=\"color\" data-color=\"surface\" value=\"#fffdf9\"></label>\n          <label class=\"chv-color-field\">רקע הציטוט הנבחר<input type=\"color\" data-color=\"soft\" value=\"#f1e3e1\"></label>\n          <div class=\"chv-contrast chv-pref-wide\"><span class=\"chv-contrast-text\" aria-live=\"polite\"></span><button type=\"button\" data-personal=\"repair-contrast\"  hidden>שיפור ניגודיות</button></div>\n        </div></details>\n        <details><summary>פריסה ומקורות</summary><div class=\"chv-pref-fields\">\n          <label for=\"chv-pref-width\">רוחב שורת הקריאה <output aria-hidden=\"true\" data-value=\"width\">66 תווים בקירוב</output><input type=\"range\" min=\"40\" max=\"100\" step=\"2\" value=\"66\" data-pref=\"width\" id=\"chv-pref-width\"></label>\n          <label for=\"chv-pref-margin\">שוליים <output aria-hidden=\"true\" data-value=\"margin\">30</output><input type=\"range\" min=\"12\" max=\"64\" step=\"2\" value=\"30\" data-pref=\"margin\" id=\"chv-pref-margin\"></label>\n          <label>פתיחת מקור<select data-pref=\"sourcePlace\"><option value=\"auto\">לצד הטקסט, ובנייד מתחת לציטוט</option><option value=\"inline\">תמיד מתחת לציטוט</option></select></label>\n          <label class=\"chv-check\"><input type=\"checkbox\" data-pref=\"toc\" checked> תוכן עניינים</label>\n          <label class=\"chv-check\"><input type=\"checkbox\" data-pref=\"focus\"> מיקוד בקריאה</label>\n          <label class=\"chv-check\"><input type=\"checkbox\" data-pref=\"quoteTint\" checked> רקע לאזורי ציטוט</label>\n          <label class=\"chv-check chv-pref-wide\"><input type=\"checkbox\" data-pref=\"sourceLinked\" checked> אותם גופן, גודל וריווח גם במקור</label>\n          <div class=\"chv-source-prefs chv-pref-wide\" hidden><label>גופן המקור<select data-pref=\"sourceFamily\"><option value=\"frank\">פרנק ריהל ליברה</option><option value=\"assistant\">אסיסטנט</option><option value=\"arial\">Arial — מהמכשיר</option><option value=\"david\">David — אם מותקן</option><option value=\"narkisim\">Narkisim — אם מותקן</option><option value=\"times\">Times New Roman — אם מותקן</option></select></label><label for=\"chv-pref-sourceFont\">גודל המקור <output aria-hidden=\"true\" data-value=\"sourceFont\">20</output><input type=\"range\" min=\"16\" max=\"36\" step=\"1\" value=\"20\" data-pref=\"sourceFont\" id=\"chv-pref-sourceFont\"></label><label for=\"chv-pref-sourceLeading\">מרווח שורות במקור <output aria-hidden=\"true\" data-value=\"sourceLeading\">1.85</output><input type=\"range\" min=\"1.35\" max=\"2.5\" step=\"0.05\" value=\"1.85\" data-pref=\"sourceLeading\" id=\"chv-pref-sourceLeading\"></label></div>\n        </div></details>\n        <details><summary>הסביבות השמורות שלי</summary><div class=\"chv-pref-fields\">\n          <label class=\"chv-pref-wide\">שם לסביבה<input type=\"text\" class=\"chv-profile-name\" maxlength=\"40\" placeholder=\"למשל: לימוד ערב\"></label>\n          <button type=\"button\" data-personal=\"save-profile\" >שמירת סביבה חדשה</button>\n          <label class=\"chv-pref-wide\">סביבה שמורה<select class=\"chv-profile-select\"><option value=\"\">בחירת סביבה</option></select></label>\n          <div class=\"chv-pref-actions chv-pref-wide\"><button type=\"button\" data-personal=\"update-profile\"  disabled>עדכון הסביבה שנבחרה</button><button type=\"button\" data-personal=\"delete-profile\"  disabled>מחיקה</button></div>\n          <div class=\"chv-pref-actions chv-pref-wide\"><button type=\"button\" data-personal=\"export\" >ייצוא העדפות</button><label class=\"chv-import\">ייבוא העדפות<input type=\"file\" accept=\"application/json,.json\" class=\"chv-import-file\"></label></div>\n          <p class=\"chv-pref-caption chv-pref-wide\">השמירה היא בדפדפן הזה. להעברה למכשיר אחר אפשר לייצא ולייבא את ההעדפות.</p>\n        </div></details>\n      </div>\n      <div class=\"chv-preferences-footer\"><button type=\"button\" data-personal=\"reset\" >חזרה לעיצוב המקורי</button><button type=\"button\" data-personal=\"undo-reset\"  hidden>ביטול האיפוס</button><span>נוסח הלימוד נשאר כפי שהוא.</span></div>\n    </section>\n";
+  const markup = "    <section class=\"reading-preferences-content\" id=\"reading-preferences-content\" aria-labelledby=\"chv-preferences-title\">\n      <div class=\"chv-preferences-heading\"><div><h2 id=\"chv-preferences-title\">סביבת הלימוד שלי</h2><p class=\"chv-pref-status\" role=\"status\" aria-live=\"polite\">כל שינוי מופיע מיד בקריאה.</p><p class=\"chv-pref-error\" role=\"alert\" hidden></p></div><div class=\"chv-heading-actions\"><button type=\"button\" data-action=\"type\">סיום התאמה</button><button type=\"button\" data-action=\"quick-start\">התאמה מהירה</button></div></div>\n      <section class=\"chv-quick-preview\" aria-label=\"תצוגת קריאה מקדימה\" hidden><p>אפשר ללמוד בקצב שלך, בגופן ובצבעים שנוחים לך. התצוגה מתעדכנת עם כל בחירה.</p></section>\n      <div class=\"chv-pref-columns\">\n        <details open><summary>אותיות וריווח</summary><div class=\"chv-pref-fields\">\n          <label class=\"chv-quick-control\">גופן הקריאה<select data-pref=\"family\"><option value=\"frank\">פרנק ריהל ליברה</option><option value=\"assistant\">אסיסטנט</option><option value=\"arial\">Arial — מהמכשיר</option><option value=\"david\">David — אם מותקן</option><option value=\"narkisim\">Narkisim — אם מותקן</option><option value=\"times\">Times New Roman — אם מותקן</option></select></label>\n          <label class=\"chv-quick-control\" for=\"chv-pref-font\">גודל האות <output aria-hidden=\"true\" data-value=\"font\">21</output><input type=\"range\" min=\"16\" max=\"36\" step=\"1\" value=\"21\" data-setting=\"font\" data-pref=\"font\" id=\"chv-pref-font\"></label>\n          <label>משקל האות<select data-pref=\"weight\"><option value=\"400\">רגיל</option><option value=\"500\">מודגש מעט</option></select></label>\n          <label for=\"chv-pref-leading\">מרווח בין שורות <output aria-hidden=\"true\" data-value=\"leading\">1.9</output><input type=\"range\" min=\"1.35\" max=\"2.5\" step=\"0.05\" value=\"1.9\" data-pref=\"leading\" id=\"chv-pref-leading\"></label>\n          <label for=\"chv-pref-paragraph\">מרווח בין פסקאות <output aria-hidden=\"true\" data-value=\"paragraph\">1</output><input type=\"range\" min=\"0.4\" max=\"2.5\" step=\"0.1\" value=\"1\" data-pref=\"paragraph\" id=\"chv-pref-paragraph\"></label>\n          <label for=\"chv-pref-word\">מרווח בין מילים <output aria-hidden=\"true\" data-value=\"word\">0</output><input type=\"range\" min=\"0\" max=\"0.5\" step=\"0.025\" value=\"0\" data-pref=\"word\" id=\"chv-pref-word\"></label>\n          <label for=\"chv-pref-letter\">מרווח בין אותיות <output aria-hidden=\"true\" data-value=\"letter\">0</output><input type=\"range\" min=\"0\" max=\"0.12\" step=\"0.01\" value=\"0\" data-pref=\"letter\" id=\"chv-pref-letter\"></label>\n          <label>יישור הטקסט<select data-pref=\"alignment\"><option value=\"justify\">לשני הצדדים</option><option value=\"right\">לימין</option></select></label>\n        </div></details>\n        <details><summary>צבעים ותאורה</summary><div class=\"chv-pref-fields\">\n          <label class=\"chv-quick-control\">תאורה<select data-pref=\"theme\"><option value=\"system\">לפי המכשיר</option><option value=\"light\">בהירה</option><option value=\"dark\">כהה</option></select></label>\n          <div class=\"chv-pref-wide chv-quick-control\"><span>ערכת צבעים</span><div class=\"chv-palette-choices\" role=\"group\" aria-label=\"ערכת צבעים\"><button type=\"button\" data-palette=\"sefer\" aria-pressed=\"true\" >ספר</button><button type=\"button\" data-palette=\"techelet\" aria-pressed=\"false\" >תכלת</button><button type=\"button\" data-palette=\"zayit\" aria-pressed=\"false\" >זית</button><button type=\"button\" data-palette=\"dyo\" aria-pressed=\"false\" >ניגודיות</button></div></div>\n          <p class=\"chv-pref-caption chv-pref-wide\">הצבעים האישיים נשמרים בנפרד לתאורה בהירה וכהה. בחירת ערכה מחליפה את הצבעים האישיים.</p>\n          <label class=\"chv-color-field\">רקע הקריאה<input type=\"color\" data-color=\"paper\" value=\"#faf7f0\"></label>\n          <label class=\"chv-color-field\">צבע האותיות<input type=\"color\" data-color=\"ink\" value=\"#26211b\"></label>\n          <label class=\"chv-color-field\">קישורים והדגשות<input type=\"color\" data-color=\"accent\" value=\"#76283a\"></label>\n          <label class=\"chv-color-field\">רקע המקור<input type=\"color\" data-color=\"surface\" value=\"#fffdf9\"></label>\n          <label class=\"chv-color-field\">רקע הציטוט הנבחר<input type=\"color\" data-color=\"soft\" value=\"#f1e3e1\"></label>\n          <div class=\"chv-contrast chv-pref-wide\"><span class=\"chv-contrast-text\" aria-live=\"polite\"></span><button type=\"button\" data-personal=\"repair-contrast\"  hidden>שיפור ניגודיות</button></div>\n        </div></details>\n        <details><summary>פריסה ומקורות</summary><div class=\"chv-pref-fields\">\n          <label for=\"chv-pref-width\">רוחב שורת הקריאה <output aria-hidden=\"true\" data-value=\"width\">66 תווים בקירוב</output><input type=\"range\" min=\"40\" max=\"100\" step=\"2\" value=\"66\" data-pref=\"width\" id=\"chv-pref-width\"></label>\n          <label for=\"chv-pref-margin\">שוליים <output aria-hidden=\"true\" data-value=\"margin\">30</output><input type=\"range\" min=\"12\" max=\"64\" step=\"2\" value=\"30\" data-pref=\"margin\" id=\"chv-pref-margin\"></label>\n          <label>פתיחת מקור<select data-pref=\"sourcePlace\"><option value=\"auto\">לצד הטקסט, ובנייד מתחת לציטוט</option><option value=\"inline\">תמיד מתחת לציטוט</option></select></label>\n          <label class=\"chv-check\"><input type=\"checkbox\" data-pref=\"toc\" checked> תוכן עניינים</label>\n          <label class=\"chv-check\"><input type=\"checkbox\" data-pref=\"focus\"> מיקוד בקריאה</label>\n          <label class=\"chv-check\"><input type=\"checkbox\" data-pref=\"quoteTint\" checked> רקע לאזורי ציטוט</label>\n          <label class=\"chv-check chv-pref-wide\"><input type=\"checkbox\" data-pref=\"sourceLinked\" checked> אותם גופן, גודל וריווח גם במקור</label>\n          <div class=\"chv-source-prefs chv-pref-wide\" hidden><label>גופן המקור<select data-pref=\"sourceFamily\"><option value=\"frank\">פרנק ריהל ליברה</option><option value=\"assistant\">אסיסטנט</option><option value=\"arial\">Arial — מהמכשיר</option><option value=\"david\">David — אם מותקן</option><option value=\"narkisim\">Narkisim — אם מותקן</option><option value=\"times\">Times New Roman — אם מותקן</option></select></label><label for=\"chv-pref-sourceFont\">גודל המקור <output aria-hidden=\"true\" data-value=\"sourceFont\">20</output><input type=\"range\" min=\"16\" max=\"36\" step=\"1\" value=\"20\" data-pref=\"sourceFont\" id=\"chv-pref-sourceFont\"></label><label for=\"chv-pref-sourceLeading\">מרווח שורות במקור <output aria-hidden=\"true\" data-value=\"sourceLeading\">1.85</output><input type=\"range\" min=\"1.35\" max=\"2.5\" step=\"0.05\" value=\"1.85\" data-pref=\"sourceLeading\" id=\"chv-pref-sourceLeading\"></label></div>\n        </div></details>\n        <details><summary>הסביבות השמורות שלי</summary><div class=\"chv-pref-fields\">\n          <label class=\"chv-pref-wide\">שם לסביבה<input type=\"text\" class=\"chv-profile-name\" maxlength=\"40\" placeholder=\"למשל: לימוד ערב\"></label>\n          <button type=\"button\" data-personal=\"save-profile\" >שמירת סביבה חדשה</button>\n          <label class=\"chv-pref-wide\">סביבה שמורה<select class=\"chv-profile-select\"><option value=\"\">בחירת סביבה</option></select></label>\n          <div class=\"chv-pref-actions chv-pref-wide\"><button type=\"button\" data-personal=\"update-profile\"  disabled>עדכון הסביבה שנבחרה</button><button type=\"button\" data-personal=\"delete-profile\"  disabled>מחיקה</button></div>\n          <div class=\"chv-pref-actions chv-pref-wide\"><button type=\"button\" data-personal=\"export\" >ייצוא העדפות</button><label class=\"chv-import\">ייבוא העדפות<input type=\"file\" accept=\"application/json,.json\" class=\"chv-import-file\"></label></div>\n          <p class=\"chv-pref-caption chv-pref-wide\">השמירה היא בדפדפן הזה. להעברה למכשיר אחר אפשר לייצא ולייבא את ההעדפות.</p>\n        </div></details>\n      </div>\n      <div class=\"chv-quick-actions\" hidden><button type=\"button\" data-action=\"type\">נוח לי, אפשר ללמוד</button><button type=\"button\" data-action=\"all-settings\">כל אפשרויות ההתאמה</button><p class=\"chv-pref-caption\">ההעדפות נשמרות בדפדפן הזה. אפשר לחזור להתאמה דרך הכפתור שבראש האתר.</p></div>\n      <div class=\"chv-preferences-footer\"><button type=\"button\" data-personal=\"reset\" >חזרה לעיצוב המקורי</button><button type=\"button\" data-personal=\"undo-reset\"  hidden>ביטול האיפוס</button><span>נוסח הלימוד נשאר כפי שהוא.</span></div>\n    </section>\n";
   dialog.append(h("div", { html: markup }));
   const shortcuts = h("nav", { class: "reading-shortcuts", "aria-label": "מצב לימוד וקישורי האתר" }, h("div", { class: "modesw sm", role: "radiogroup", "aria-label": "מצב עבודה" }, ...MODES.map(m => { const button = modeBtn(m); button.addEventListener("click", () => dialog.close()); return button; })));
   for (const [label, target] of [["סטטוס הביאורים", "status"], ["כיסוי המפה", "coverage"], ["מפתח עניינים", "topics"], ["אודות ושיטת העבודה", "about"]]) shortcuts.append(h("a", { href: mkHash([target]), onclick: () => dialog.close() }, label));
@@ -303,7 +320,17 @@ function openReadingPreferences() {
   }));
   all("[data-color]").forEach(input => input.addEventListener("input", () => { const custom = P.get().custom; custom[P.tone()][input.dataset.color] = input.value; change(() => P.update({ custom })); }));
   all("[data-palette]").forEach(button => button.addEventListener("click", () => change(() => P.update({ palette: button.dataset.palette, custom: { light: {}, dark: {} } }))));
-  all('[data-action="type"]').forEach(button => button.addEventListener("click", () => dialog.close()));
+  all('[data-action="type"]').forEach(button => button.addEventListener("click", () => { completeReadingSetup(); dialog.close(); }));
+  function quickStart(on) {
+    dialog.classList.toggle("reading-quickstart", on);
+    query("#chv-preferences-title").textContent = on ? "ניצור סביבה שנוחה לך" : "סביבת הלימוד שלי";
+    query(".chv-quick-preview").hidden = !on;
+    query(".chv-quick-actions").hidden = !on;
+    all('[data-action="type"]').forEach(b => b.textContent = on ? "נוח לי, אפשר ללמוד" : "סיום התאמה");
+    if (on) all(".chv-pref-columns > details").slice(0, 2).forEach(el => el.open = true);
+  }
+  query('[data-action="quick-start"]').addEventListener("click", () => { quickStart(true); query('[data-action="type"]').focus(); });
+  query('[data-action="all-settings"]').addEventListener("click", () => { quickStart(false); query('[data-action="type"]').focus(); });
   query(".chv-profile-select").addEventListener("change", e => { selected = e.target.value; const profile = P.profiles().find(x => x.id === selected); if (profile) { query(".chv-profile-name").value = profile.name; change(() => P.update(profile.prefs)); } else render(); });
   all("[data-personal]").forEach(button => button.addEventListener("click", () => {
     const action = button.dataset.personal;
@@ -340,7 +367,7 @@ function openReadingPreferences() {
   });
   dialog.addEventListener("close", () => { unsubscribe(); document.getElementById("disp-btn")?.setAttribute("aria-expanded", "false"); dialog.remove(); document.getElementById("disp-btn")?.focus({ preventScroll: true }); }, { once: true });
   dialog.addEventListener("click", e => { if (e.target === dialog) { const r = dialog.getBoundingClientRect(); if (e.clientX < r.left || e.clientX > r.right || e.clientY < r.top || e.clientY > r.bottom) dialog.close(); } });
-  render(); dialog.showModal(); document.getElementById("disp-btn")?.setAttribute("aria-expanded", "true");
+  render(); quickStart(options.quickStart === true); dialog.showModal(); document.getElementById("disp-btn")?.setAttribute("aria-expanded", "true");
 }
 
 /* חברותא · מעטפת: סרגל עליון, מתג מצבי עבודה, העדפות תצוגה, ניתוב, קיצורי מקלדת, גיליון תחתון */
@@ -476,13 +503,12 @@ function updateModeUI() {
 function isSheet() { return MODE === "read" ? innerWidth < 1000 : innerWidth < 900; }
 
 /* ---------- מעבר מצב ללא איבוד מקום הקריאה ---------- */
-function captureAnchor() {
-  const art = $("article.biur");
+function captureAnchor(art = R.view === "biur" ? $("article.biur") : null) {
   const topH = ($("#top")?.classList.contains("hidden") ? 0 : $("#top")?.offsetHeight || 0) + 4;
-  if (art && R.view === "biur") {
+  if (art) {
     for (const el of art.querySelectorAll("p[id],li[id],h2[id],h3[id],h4[id],blockquote[id],tr[id],section.part[id]")) {
       const r = el.getBoundingClientRect();
-      if (r.bottom > topH + 8) return { id: el.id, top: r.top, ratio: null };
+      if (r.bottom > topH + 8) return { id: el.id, top: r.top, part: el.closest("section.part")?.dataset.part || null, ratio: null };
     }
   }
   const mx = document.documentElement.scrollHeight - innerHeight;
@@ -1032,7 +1058,24 @@ VIEWS.biurim.onMode = null;
 
 /* ---------- קורא ---------- */
 const RD = { doc: null, meta: null, data: null, art: null, cur: null, spy: null, onScroll: null, matches: [], sel: null, selEl: null };
-function cleanupReader() { Tts.close(); RD.spy?.disconnect(); if (RD.onScroll) window.removeEventListener("scroll", RD.onScroll); RD.onScroll = null; Notes.hide?.(); Aside.detach(); $(".backpill")?.remove(); document.body.classList.remove("sheet-open"); }
+function cleanupReader() { RD.positionCleanup?.(); RD.positionCleanup = null; Tts.close(); RD.spy?.disconnect(); if (RD.onScroll) window.removeEventListener("scroll", RD.onScroll); RD.onScroll = null; Notes.hide?.(); Aside.detach(); $(".backpill")?.remove(); document.body.classList.remove("sheet-open"); }
+
+function readingPositionTracker(d, art) {
+  let timer;
+  const save = () => {
+    clearTimeout(timer);
+    if (RD.art !== art || !art.isConnected) return;
+    const a = captureAnchor(art);
+    if (a.id && scrollY > 200) lsSet("chavruta-pos:" + d.id, JSON.stringify({ id: a.id, part: a.part || RD.cur, t: Date.now() }));
+  };
+  const visibility = () => { if (document.visibilityState === "hidden") save(); };
+  window.addEventListener("pagehide", save);
+  document.addEventListener("visibilitychange", visibility);
+  return {
+    schedule() { clearTimeout(timer); timer = setTimeout(save, 700); },
+    dispose() { save(); window.removeEventListener("pagehide", save); document.removeEventListener("visibilitychange", visibility); },
+  };
+}
 
 function verseStrip(d) {
   const T = S.core.torah.chapters;
@@ -1066,11 +1109,11 @@ function rowToggles(art) {
   }
 }
 
-function scrollToEl(el, flash) {
+function scrollToEl(el, flash, behavior) {
   if (!el) return;
   const review = el.closest("details.reading-review") || (el.classList.contains("reading-editorial") && el.querySelector("details.reading-review"));
   if (review) review.open = true;
-  window.scrollTo({ top: Math.max(0, el.getBoundingClientRect().top + scrollY - 110), behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" });
+  window.scrollTo({ top: Math.max(0, el.getBoundingClientRect().top + scrollY - 110), behavior: behavior || (matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth") });
   if (flash) flashEl(el);
 }
 function flashEl(el) { el.classList.remove("hl"); void el.offsetWidth; el.classList.add("hl"); setTimeout(() => el.classList.remove("hl"), 3200); }
@@ -1354,18 +1397,19 @@ VIEWS.biur = async function (rest, q, ctx) {
   rail.append(ol);
   const aside = h("aside", { class: "aside", id: "aside", "aria-label": "הערות וקשרים" });
   Aside.attach(aside);
-  const col = h("div", { class: "col" }, hero, verseStrip(d), art, endMatter(d, doc), roundsBox(d), pager(d));
+  const col = h("div", { class: "col" }, hero, readingSetupInvite(), verseStrip(d), art, endMatter(d, doc), roundsBox(d), pager(d));
   const progress = h("div", { class: "progress no-print", "aria-hidden": "true" }, h("i"));
   main.className = "main reader";
   main.replaceChildren(progress, h("div", { class: "rd" }, rail, col, aside));
   Aside.render();
   requestAnimationFrame(() => rowToggles(art));
 
-  const prog = $("i", progress); let saveT;
+  const prog = $("i", progress), position = readingPositionTracker(d, art);
+  RD.positionCleanup = () => position.dispose();
   RD.onScroll = () => {
     const r = art.getBoundingClientRect(), tot = r.height - innerHeight * .5;
     prog.style.width = (clamp((-r.top + innerHeight * .2) / Math.max(tot, 1), 0, 1) * 100).toFixed(1) + "%";
-    clearTimeout(saveT); saveT = setTimeout(() => { const a = captureAnchor(); if (a.id && scrollY > 200) lsSet("chavruta-pos:" + d.id, JSON.stringify({ id: a.id, part: RD.cur, t: Date.now() })); }, 700);
+    position.schedule();
   };
   window.addEventListener("scroll", RD.onScroll, { passive: true }); RD.onScroll();
   const lis = new Map($$("li[data-part]", rail).map(li => [li.dataset.part, li]));
@@ -1390,7 +1434,11 @@ function afterRender(d, partId, anchor, nid, first, hl) {
     if (el) { requestAnimationFrame(() => { const tr = el.closest("tr"); if (tr) tr.classList.add("open"); scrollToEl(el, true); }); return; }
   }
   if (partId) { const sec = RD.art.querySelector(`section.part[data-part="${CSS.escape(partId)}"]`); if (sec) { requestAnimationFrame(() => scrollToEl(sec, false)); return; } }
-  if (first) window.scrollTo(0, 0);
+  if (first) {
+    const saved = readPos(d.id), target = saved?.id ? RD.art.querySelector("#" + CSS.escape(saved.id)) : null;
+    if (target) requestAnimationFrame(() => scrollToEl(target, false, "auto"));
+    else window.scrollTo(0, 0);
+  }
 }
 SelListeners.add((id, o) => {
   if (R.view !== "biur" || o?.inDoc || !id) return;
@@ -3165,7 +3213,7 @@ VIEWS.home = async function (rest, q, ctx) {
       research: "שלשלת הדורות, מטריצת פסוק × דור, ומפת המקורות על ציר הזמן.",
     }[m.id]), h("kbd", { title: "קיצור מקלדת" }, m.n)))));
 
-  main.append(hero, parshiyot, trio, how);
+  main.append(hero, readingSetupInvite(), parshiyot, trio, how);
   if (!ctx.keep) window.scrollTo(0, 0);
 };
 
