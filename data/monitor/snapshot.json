@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-20T07:44:05+00:00",
+ "generated_at": "2026-10-20T07:53:01+00:00",
  "sources": [
   {
    "id": "chabadlibrary",
@@ -12,7 +12,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-10-20T07:42:52+00:00",
+   "checked_at": "2026-10-20T07:51:46+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -30,7 +30,7 @@
     "primary",
     "whatsnew"
    ],
-   "checked_at": "2026-10-20T07:42:52+00:00",
+   "checked_at": "2026-10-20T07:51:46+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -47,7 +47,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-10-20T07:42:52+00:00",
+   "checked_at": "2026-10-20T07:51:46+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -64,7 +64,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-10-20T07:42:52+00:00",
+   "checked_at": "2026-10-20T07:51:46+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -82,12 +82,12 @@
     "primary",
     "whatsnew"
    ],
-   "checked_at": "2026-10-20T07:42:52+00:00",
+   "checked_at": "2026-10-20T07:51:46+00:00",
    "status": "ok",
    "new": [],
    "latest": [],
    "total": 0,
-   "last_success_at": "2026-10-20T07:42:52+00:00"
+   "last_success_at": "2026-10-20T07:51:46+00:00"
   },
   {
    "id": "chabadlibrarybooks",
@@ -100,7 +100,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-10-20T07:42:56+00:00",
+   "checked_at": "2026-10-20T07:51:47+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -118,7 +118,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-20T07:42:56+00:00",
+   "checked_at": "2026-10-20T07:51:47+00:00",
    "status": "error",
    "new": [],
    "latest": [],
@@ -139,12 +139,12 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-20T07:42:57+00:00",
+   "checked_at": "2026-10-20T07:51:48+00:00",
    "status": "ok",
    "new": [],
    "latest": [],
    "total": 4,
-   "last_success_at": "2026-10-20T07:42:57+00:00"
+   "last_success_at": "2026-10-20T07:51:48+00:00"
   },
   {
    "id": "biurim",
@@ -158,12 +158,12 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-20T07:42:58+00:00",
+   "checked_at": "2026-10-20T07:51:50+00:00",
    "status": "ok",
    "new": [],
    "latest": [],
    "total": 0,
-   "last_success_at": "2026-10-20T07:42:58+00:00"
+   "last_success_at": "2026-10-20T07:51:50+00:00"
   },
   {
    "id": "hm_monsey",
@@ -177,7 +177,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-20T07:43:00+00:00",
+   "checked_at": "2026-10-20T07:51:52+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -223,7 +223,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-10-20T07:43:00+00:00"
+   "last_success_at": "2026-10-20T07:51:52+00:00"
   },
   {
    "id": "hiskashrus",
@@ -237,12 +237,12 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-20T07:43:02+00:00",
+   "checked_at": "2026-10-20T07:51:53+00:00",
    "status": "ok",
    "new": [],
    "latest": [],
    "total": 0,
-   "last_success_at": "2026-10-20T07:43:02+00:00"
+   "last_success_at": "2026-10-20T07:51:53+00:00"
   },
   {
    "id": "lichyot_chassidus",
@@ -256,26 +256,9 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-20T07:43:04+00:00",
+   "checked_at": "2026-10-20T07:51:55+00:00",
    "status": "ok",
-   "new": [
-    {
-     "id": "14faccf6-3da0-4b05-a608-b33a311163c4",
-     "title": "מאמר ד\"ה וכל העם רואים תרס\"ה - חלק ב",
-     "url": "https://rabbi_osher_farkash_maamarim.captivate.fm",
-     "date": "Sun, 18 Oct 2026 09:15:00 -0400",
-     "blurb": "",
-     "first_seen": "2026-10-20T07:43:04+00:00"
-    },
-    {
-     "id": "14b0d40c-8da7-4c97-a813-4457c5a59b92",
-     "title": "מאמר ד\"ה אמר רבי עקיבא אשריכם תשי\"ז - חלק א' (סיכום)",
-     "url": "https://rabbi_osher_farkash_maamarim.captivate.fm",
-     "date": "Sun, 18 Oct 2026 09:00:00 -0400",
-     "blurb": "שייכות מקוה לתשובה וביאור לשון המשנה, כוונת המקוה ועניינו בנשמה",
-     "first_seen": "2026-10-20T07:43:04+00:00"
-    }
-   ],
+   "new": [],
    "latest": [
     {
      "id": "14faccf6-3da0-4b05-a608-b33a311163c4",
@@ -335,7 +318,7 @@
     }
    ],
    "total": 1000,
-   "last_success_at": "2026-10-20T07:43:04+00:00"
+   "last_success_at": "2026-10-20T07:51:55+00:00"
   },
   {
    "id": "chabadzoom",
@@ -349,18 +332,25 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-20T07:43:06+00:00",
+   "checked_at": "2026-10-20T07:51:57+00:00",
    "status": "ok",
    "new": [
     {
-     "id": "content:f51d8acef5228e36",
+     "id": "content:fd97c33fad4b4d6a",
      "title": "עדכון בתוכן הדף",
      "url": "https://chabadzoom.co.il/series",
      "date": "",
-     "first_seen": "2026-10-20T07:43:06+00:00"
+     "first_seen": "2026-10-20T07:51:57+00:00"
     }
    ],
    "latest": [
+    {
+     "id": "content:fd97c33fad4b4d6a",
+     "title": "עדכון בתוכן הדף",
+     "url": "https://chabadzoom.co.il/series",
+     "date": "",
+     "first_seen": "2026-10-20T07:51:57+00:00"
+    },
     {
      "id": "content:f51d8acef5228e36",
      "title": "עדכון בתוכן הדף",
@@ -377,7 +367,7 @@
     }
    ],
    "total": 1,
-   "last_success_at": "2026-10-20T07:43:06+00:00"
+   "last_success_at": "2026-10-20T07:51:57+00:00"
   },
   {
    "id": "kovtzimdrive",
@@ -391,12 +381,12 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-20T07:43:08+00:00",
+   "checked_at": "2026-10-20T07:52:00+00:00",
    "status": "ok",
    "new": [],
    "latest": [],
    "total": 0,
-   "last_success_at": "2026-10-20T07:43:08+00:00"
+   "last_success_at": "2026-10-20T07:52:00+00:00"
   },
   {
    "id": "avita",
@@ -410,7 +400,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-20T07:43:09+00:00",
+   "checked_at": "2026-10-20T07:52:02+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -428,7 +418,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-20T07:43:09+00:00",
+   "checked_at": "2026-10-20T07:52:02+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -450,7 +440,7 @@
     }
    ],
    "total": 2,
-   "last_success_at": "2026-10-20T07:43:09+00:00"
+   "last_success_at": "2026-10-20T07:52:02+00:00"
   },
   {
    "id": "dvarmalchus770",
@@ -464,12 +454,12 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-20T07:43:11+00:00",
+   "checked_at": "2026-10-20T07:52:04+00:00",
    "status": "ok",
    "new": [],
    "latest": [],
    "total": 0,
-   "last_success_at": "2026-10-20T07:43:11+00:00"
+   "last_success_at": "2026-10-20T07:52:04+00:00"
   },
   {
    "id": "soulwords",
@@ -483,7 +473,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-20T07:43:13+00:00",
+   "checked_at": "2026-10-20T07:52:05+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -529,7 +519,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-10-20T07:43:13+00:00"
+   "last_success_at": "2026-10-20T07:52:05+00:00"
   },
   {
    "id": "sie_weekly",
@@ -543,18 +533,25 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-20T07:43:14+00:00",
+   "checked_at": "2026-10-20T07:52:07+00:00",
    "status": "ok",
    "new": [
     {
-     "id": "content:78bc83888a861efa",
+     "id": "content:309803f361b22b46",
      "title": "עדכון בתוכן הדף",
      "url": "https://shop.sie.org/pages/weekly",
      "date": "",
-     "first_seen": "2026-10-20T07:43:14+00:00"
+     "first_seen": "2026-10-20T07:52:07+00:00"
     }
    ],
    "latest": [
+    {
+     "id": "content:309803f361b22b46",
+     "title": "עדכון בתוכן הדף",
+     "url": "https://shop.sie.org/pages/weekly",
+     "date": "",
+     "first_seen": "2026-10-20T07:52:07+00:00"
+    },
     {
      "id": "content:78bc83888a861efa",
      "title": "עדכון בתוכן הדף",
@@ -571,7 +568,7 @@
     }
    ],
    "total": 1,
-   "last_success_at": "2026-10-20T07:43:14+00:00"
+   "last_success_at": "2026-10-20T07:52:07+00:00"
   },
   {
    "id": "pls",
@@ -585,7 +582,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-20T07:43:16+00:00",
+   "checked_at": "2026-10-20T07:52:08+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -631,7 +628,7 @@
     }
    ],
    "total": 200,
-   "last_success_at": "2026-10-20T07:43:16+00:00"
+   "last_success_at": "2026-10-20T07:52:08+00:00"
   },
   {
    "id": "chayenu_ls",
@@ -645,18 +642,25 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-20T07:43:17+00:00",
+   "checked_at": "2026-10-20T07:52:10+00:00",
    "status": "ok",
    "new": [
     {
-     "id": "content:a9567b8ea51bd46d",
+     "id": "content:033047088813eed5",
      "title": "עדכון בתוכן הדף",
      "url": "https://chayenu.org/chayenu-section/likkutei-sichos",
      "date": "",
-     "first_seen": "2026-10-20T07:43:17+00:00"
+     "first_seen": "2026-10-20T07:52:10+00:00"
     }
    ],
    "latest": [
+    {
+     "id": "content:033047088813eed5",
+     "title": "עדכון בתוכן הדף",
+     "url": "https://chayenu.org/chayenu-section/likkutei-sichos",
+     "date": "",
+     "first_seen": "2026-10-20T07:52:10+00:00"
+    },
     {
      "id": "content:a9567b8ea51bd46d",
      "title": "עדכון בתוכן הדף",
@@ -673,7 +677,7 @@
     }
    ],
    "total": 1,
-   "last_success_at": "2026-10-20T07:43:17+00:00"
+   "last_success_at": "2026-10-20T07:52:10+00:00"
   },
   {
    "id": "weekly_sicha",
@@ -687,7 +691,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-20T07:43:18+00:00",
+   "checked_at": "2026-10-20T07:52:11+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -728,7 +732,7 @@
     }
    ],
    "total": 116,
-   "last_success_at": "2026-10-20T07:43:18+00:00"
+   "last_success_at": "2026-10-20T07:52:11+00:00"
   },
   {
    "id": "theyeshiva",
@@ -742,12 +746,12 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-20T07:43:19+00:00",
+   "checked_at": "2026-10-20T07:52:12+00:00",
    "status": "ok",
    "new": [],
    "latest": [],
    "total": 0,
-   "last_success_at": "2026-10-20T07:43:19+00:00"
+   "last_success_at": "2026-10-20T07:52:12+00:00"
   },
   {
    "id": "chassidus_applied",
@@ -761,64 +765,9 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-20T07:43:20+00:00",
+   "checked_at": "2026-10-20T07:52:14+00:00",
    "status": "ok",
-   "new": [
-    {
-     "id": "yt:video:EYW-xFEbCsM",
-     "title": "Samach Vav Part 224:",
-     "url": "https://www.youtube.com/watch?v=EYW-xFEbCsM",
-     "date": "2026-10-20T02:58:13+00:00",
-     "blurb": "Samach Vav p. 184-185: Thus, the actual product, and the benefit it provides, has an advantage over the potential (power) of the producer; it completes (adds shleimus to) the producer, who on his own is lacking the value of the product. it contributes (adds) an essential completeness (sh’leimus) that the producer (koach ha’poel) himself lacks. Without the vessel, the producer remains incomplete By contrast, sunlight, for example, has no existence of its own without its source, the sun. And is therefore always dependent on the sun. Additionally, sunlight and all its qualities exist within its source, the sun, with even more intensity than outside the sun. However, the light is nullified there in the presence of its source. In sum, a man-made product differs from (is the opposite of) sunlight (by virtue of) in it not being a new entity, it being separate from, and being able to exist without, the producer, and it does not exist within its source, the producer, whereas sunlight is a new entity (from the perspective of earth), it cannot exist without the sun (due to it being a new entity as well as it being attached to its source), it has no shleimus without the sun, and even as it extends, its very personality exists within the source, and the source has the shleimus of the light. The moral (nimshal) of this above: All the creations are new -- in a state of hischadshus -- existence created from utter non-existence (yesh m'ayin ha'muchlat). It therefore is always dependent on its",
-     "first_seen": "2026-10-20T07:43:20+00:00"
-    },
-    {
-     "id": "yt:video:xkf2yya2mDY",
-     "title": "Ep. 609: Would the Rebbe Discourage Us From Using AI to Help Write Torah Thoughts?",
-     "url": "https://www.youtube.com/watch?v=xkf2yya2mDY",
-     "date": "2026-10-19T00:00:06+00:00",
-     "blurb": "Rabbi Jacobson will discuss the following topics: Zayin Cheshvan • What happened on this day and what lessons do we learn from it? 0:56 • What should our focus be during this time of the year? 4:23 • What are ways we can express in today’s day and age a similar level of Ahavas Yisroel as was manifest on Zayin Cheshvan? 9:27 Lech Lecha • What lessons do we learn from living with the times, with this week’s Torah parsha? 12:40 • Why does the story of Abraham begin with Lech Lecha? 19:57 • What was the bris bein ha’besarim? 21:31 • Why is this type of covenant not practiced today? 23:38 • What is the significance of the letter Hei added to Abraham and Sarah’s names? 24:17 • Is there a connection between Abraham and Sarah not having a child until after Abraham was circumcised? 26:00 • Why don’t we find G-d discussing the coming of Moshiach or the World to Come with Abraham? 27:21 Noach • Why did Noah get drunk and uncover himself? 32:02 • Why was it considered inappropriate behavior? 32:44 • Why did Cham disgrace his father? 36:00 • What was the sin of building the Tower of Babel? 37:50 • Why is “making a name for yourself” such a terrible thing? 39:05 • Why doesn’t G-d intervene when other transgressions are done as he did by the Tower of Babel? 46:15 • Is there anything positive about the creation of different languages by different nations? 49:32 • What lessons does the Tower of Babel offer us regarding building AI today? 53:18 • What is the purpose of other religions? And if ",
-     "first_seen": "2026-10-20T07:43:20+00:00"
-    },
-    {
-     "id": "yt:video:YotiTg9ZdJQ",
-     "title": "Torah Empowers us to Manifest the Divine Essence",
-     "url": "https://www.youtube.com/watch?v=YotiTg9ZdJQ",
-     "date": "2026-10-18T17:20:08+00:00",
-     "blurb": "Tanya Chapter 36.07: Torah Empowers us to Manifest the Divine Essence The Tanya Applied radio show is broadcast every Saturday night, 10–10:30PM ET on WSNR 620 AM – Metro NY area WJPR 1640 AM — Highland Park and Edison, NJ Online: www.talklinenetwork.com By phone: Listen Line: 641-741-0389 Many of us may be familiar with some of the central ideas in Tanya – including the battle of the two souls; what defines man and makes us tick; how we can control our temptations; how we can become more loving; what we can do to curb and harness our vices, like anger, jealousy, and depression; the formula for growth; how we can develop a healthy relationship with G-d; and why we are here. In this 30-minute program, you will learn how these ideas can be applied to your life today. You will discover secrets to a successful life that will transform you and your relationships. Rabbi Simon Jacobson is the best-selling author of Toward a Meaningful Life, and he is the creator of the acclaimed and popular MyLife: Chassidus Applied series, which has empowered and transformed hundreds of thousands through Torah and Chassidus. Now, Rabbi Jacobson brings his vast scholarship and years of experience to Tanya. Please join Rabbi Simon Jacobson for this exhilarating journey into your psyche and soul. You will come away with life-changing practical guidance and direction, addressing all the issues and challenges you face in life. For more info: www.chassidusapplied.com/tanya Music by Zalman Goldstein • www",
-     "first_seen": "2026-10-20T07:43:20+00:00"
-    },
-    {
-     "id": "yt:video:Ey8CoxleklM",
-     "title": "Samach Vav Part 223: Difference between a man-made product, sunlight and the Divine creation",
-     "url": "https://www.youtube.com/watch?v=Ey8CoxleklM",
-     "date": "2026-10-17T02:49:31+00:00",
-     "blurb": "Samach Vav p. 183-184: Thus, the actual product, and the benefit it provides, has an advantage over the potential (power) of the producer; it completes (adds shleimus to) the producer, who on his own is lacking the value of the product. it contributes (adds) an essential completeness (sh’leimus) that the producer (koach ha’poel) himself lacks. Without the vessel, the producer remains incomplete By contrast, sunlight, for example, has no existence of its own without its source, the sun. And is therefore always dependent on the sun. Additionally, sunlight and all its qualities exist within its source, the sun, with even more intensity than outside the sun. However, the light is nullified there in the presence of its source. In sum, a man-made product differs from (is the opposite of) sunlight (by virtue of) in it not being a new entity, it being separate from, and being able to exist without, the producer, and it does not exist within its source, the producer, whereas sunlight is a new entity (from the perspective of earth), it cannot exist without the sun (due to it being a new entity as well as it being attached to its source), it has no shleimus without the sun, and even as it extends, its very personality exists within the source, and the source has the shleimus of the light. The moral (nimshal) of this above: All the creations are new -- in a state of hischadshus -- existence created from utter non-existence (yesh m'ayin ha'muchlat). It therefore is always dependent on its",
-     "first_seen": "2026-10-20T07:43:20+00:00"
-    },
-    {
-     "id": "yt:video:tMVxpWDBMEg",
-     "title": "Samach Vav Part 222:  We invoke the angels' passion to impact the animal soul, rooted in the angels",
-     "url": "https://www.youtube.com/watch?v=tMVxpWDBMEg",
-     "date": "2026-10-16T02:55:00+00:00",
-     "blurb": "Samach Vav p. 182-183: Why do we need to invoke the angels (in the blessings before Shema) to appreciate the greatness of the Divine, especially considering that souls are greater than angels, so why do we get excited by the angels' excitement? Answer: Invoking the angels' praise and love is to impact the animal soul, which stems from these angels. The angels' excitement results from their contemplation about the source and manner of their creation (in addition to them being created from a mere reflection). This contemplation consists of the following: The Divine creation of existence is fundamentally different from a man-made creation, which essentially consists of reshaping an existing entity (yesh m'yesh), not a creation of existence from non-existence (yesh m'ayin). As such, a man-made product, though the producer applies himself to producing the product and his power manifests in the product, yet after the product is produced, it is a separate, self-contained entity and is no longer in need of the producer, since it was an existent entity (in its raw form) even before it was reshaped by the producer. Vice versa as well: The very raw matter of the product, as well as its reshaped state and the benefit and function of this newly shaped product, does not exist within the power of the producer.",
-     "first_seen": "2026-10-20T07:43:20+00:00"
-    },
-    {
-     "id": "yt:video:8gUScCi5iqo",
-     "title": "Samach Vav Part 221: The fire above relating to the animal soul is contemplating the angels' bittul",
-     "url": "https://www.youtube.com/watch?v=8gUScCi5iqo",
-     "date": "2026-10-15T02:47:18+00:00",
-     "blurb": "Samach Vav p. 182 [Beginning of discourse 17:] Questions: 1. Why does it say Vayeilech Ish? 2. What is the meaning of the Zohar explaining this verse, that she was diminished by song, and he came to elevate her? 3. What are the three expressions used? To reach ahava rabba one first needs the avodah pnimiyus of the mind and heart, and of refining the animal soul. Prayer refines the animal soul with the fire below, the fire above that relates to the animal soul, and the fire above that relates to the divine soul. We explained that the fire below is Pesukei D'zimrah -- the contemplation on the awesome power of creation, which ignites the soul's fiery passion. We will now explain the fire above that relates to the animal soul: The animal soul is rooted in the angels above, the animals in the divine chariot. Thus, contemplating the bittul of the angels in the blessings before the Shema -- how they are ablaze with fiery passion to be subsumed and absorbed in the Divine energy within them -- this contemplation impacts the power of desire (koach ha'misaveh) of the animal soul, which originates in these angels, to redirect its love and passion for material pleasures to a love and passion for G-dliness."
-    },
-    {
-     "id": "yt:video:VcHiaRgLXQk",
-     "title": "Samach Vav Part 220: The stages of prayer ignite the fire below and above to refine the animal soul",
-     "url": "https://www.youtube.com/watch?v=VcHiaRgLXQk",
-     "date": "2026-10-14T02:44:06+00:00",
-     "blurb": "Samach Vav p. 180-181: (Fire from above and fire from below are necessary to ignite) Igniting the fiery passion of the divine soul, which consumes the animal soul, requires fire from above and fire from below, corresponding to the different stages of prayer: Fire from below is the contemplation in Pesukei D'Zimrah on the awesome Divine power of creation, the process of creation and the multitude and magnitude of the creations, as well as the creation being perpetually renewed (as reflected in a person's renewal of life each morning). This contemplation ignites the soul's passion (a person gets excited when he experiences renewal), which elevates and uplifts his spirit above the crassness of the mundane. This is followed by the blessings before the Shema – the fire from above that elevates the animal soul, and then the Shema – the fire from above of the Divine soul, which utterly consumes the animal soul (as will be discussed later). And then he receives his reward from above -- ahava rabba in Shemone Esreih. [End of discourse 16: Answers to the questions asked at the beginning of the discourse:] Yehuda is bittul atzmi of the ahava rabba in Shemone Esreih. But to reach that level, we first need the avodah of his brothers (yo'ducha achicha) Reuven -- Pesukei D'Zimrah, Shimeon -- blessings before Shema and Shema, and Levi -- Emes V’yatziv. \"His hand will be on the throat of his enemy\" refers to the birur of the animal soul achieved by the avodah pnimiyus of the divine soul in Pe"
-    }
-   ],
+   "new": [],
    "latest": [
     {
      "id": "yt:video:EYW-xFEbCsM",
@@ -862,7 +811,7 @@
     }
    ],
    "total": 15,
-   "last_success_at": "2026-10-20T07:43:20+00:00"
+   "last_success_at": "2026-10-20T07:52:14+00:00"
   },
   {
    "id": "neirot",
@@ -876,7 +825,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-20T07:43:21+00:00",
+   "checked_at": "2026-10-20T07:52:15+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -922,7 +871,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-10-20T07:43:21+00:00"
+   "last_success_at": "2026-10-20T07:52:15+00:00"
   },
   {
    "id": "chassidus_explained",
@@ -936,7 +885,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-20T07:43:23+00:00",
+   "checked_at": "2026-10-20T07:52:18+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -982,7 +931,7 @@
     }
    ],
    "total": 134,
-   "last_success_at": "2026-10-20T07:43:23+00:00"
+   "last_success_at": "2026-10-20T07:52:18+00:00"
   },
   {
    "id": "melukat",
@@ -996,17 +945,9 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-20T07:43:25+00:00",
+   "checked_at": "2026-10-20T07:52:19+00:00",
    "status": "ok",
-   "new": [
-    {
-     "id": "https://projectmelukat.org/maamar-vayomer-hashem-el-avraham-5738",
-     "title": "maamar vayomer hashem el avraham 5738",
-     "url": "https://projectmelukat.org/maamar-vayomer-hashem-el-avraham-5738",
-     "date": "2026-10-19",
-     "first_seen": "2026-10-20T07:43:25+00:00"
-    }
-   ],
+   "new": [],
    "latest": [
     {
      "id": "https://projectmelukat.org/maamar-vayomer-hashem-el-avraham-5738",
@@ -1052,7 +993,7 @@
     }
    ],
    "total": 167,
-   "last_success_at": "2026-10-20T07:43:25+00:00"
+   "last_success_at": "2026-10-20T07:52:19+00:00"
   },
   {
    "id": "daily_maamar",
@@ -1066,26 +1007,9 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-20T07:43:25+00:00",
+   "checked_at": "2026-10-20T07:52:20+00:00",
    "status": "ok",
-   "new": [
-    {
-     "id": "6b7671a7-b01d-46fc-aefe-65a04e69dd38",
-     "title": "Motzaei Shabbos Noach (B’chedro) 5738, Maamorim Melukatim Vol. 1 – Episode 2",
-     "url": "https://share.transistor.fm/s/7613b309",
-     "date": "Mon, 19 Oct 2026 09:25:37 -0400",
-     "blurb": "This episode covers from Chapter 4 through the end of the Maamar. The goal: to be a Baal Teshuvah. This is accomplished by the Mayim Rabim.",
-     "first_seen": "2026-10-20T07:43:25+00:00"
-    },
-    {
-     "id": "28c17b64-0aba-4e41-bbb3-41aa62b0236b",
-     "title": "Motzaei Shabbos Noach (B’chedro) 5738, Maamorim Melukatim Vol. 1 – Episode 1",
-     "url": "https://share.transistor.fm/s/ce709083",
-     "date": "Sun, 18 Oct 2026 09:21:37 -0400",
-     "blurb": "This episode covers from Chapter 1 through Chapter 3. WHere the worry for Parnasah comes from and why it doesn't extinguish the inner hidden love of a Jew.",
-     "first_seen": "2026-10-20T07:43:25+00:00"
-    }
-   ],
+   "new": [],
    "latest": [
     {
      "id": "6b7671a7-b01d-46fc-aefe-65a04e69dd38",
@@ -1145,7 +1069,7 @@
     }
    ],
    "total": 342,
-   "last_success_at": "2026-10-20T07:43:25+00:00"
+   "last_success_at": "2026-10-20T07:52:20+00:00"
   },
   {
    "id": "wellsprings",
@@ -1159,7 +1083,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-20T07:43:27+00:00",
+   "checked_at": "2026-10-20T07:52:22+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1205,7 +1129,7 @@
     }
    ],
    "total": 125,
-   "last_success_at": "2026-10-20T07:43:27+00:00"
+   "last_success_at": "2026-10-20T07:52:22+00:00"
   },
   {
    "id": "daily_sicha",
@@ -1219,26 +1143,9 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-20T07:43:28+00:00",
+   "checked_at": "2026-10-20T07:52:23+00:00",
    "status": "ok",
-   "new": [
-    {
-     "id": "2026.10.20",
-     "title": "יום ג' פ' לך לך, ט' מרחשון, ה'תשפ\"ז",
-     "url": "",
-     "date": "Tue, 20 Oct 2026 12:00:00 GMT",
-     "blurb": "התוכן יסוד האיתן והאמיתי של חינוך הנוער להנהגה של צדק ויושר, הוא – הידיעה ש\" יש בעה\"ב לבירה זו \", שהקב\"ה הוא בורא העולם ומנהיגו ההשגחה פרטית. דהנה הקב\"ה ברא את האדם גם עם יצה\"ר, ויתכן שאיום בעונשים בלבד לא יצליח להרתיע את האדם מעשיית דבר בלתי-רצוי, כי יהי' מוכן לסבול העונש וכיו\"ב. העצה היחידה להבטיח שהיצה\"ר לא יתגבר עליו, ואת קיומם של כל הציווים העיקריים הנוגעים לעצם קיומה של האנושות כולה כמו \"לא תרצח\" ו\"לא תגנוב\", היא – להחדיר לתודעת הילד מצעירותו , \"חנוך לנער \", ש\" יש בעה\"ב לבירה זו \", שהקב\"ה, שהוא \"למעלה\" מכל דבר וכל א', הוא אלוק האישי שלו, ו\"עין רואה ואוזן שומעת\" הנהג תו (וכמדובר כמ\"פ ההוכחה מאותה מדינה שבה התפתחה ביותר חכמת המדע וממנה באה ההנהגה באופן דהיפך האנושות לגמרי ..., כי חכמתם לא היתה מבוססת על הידיעה ש\"יש בעה\"ב לבירה זו\") [המשך יבוא] משיחת יו\"ד שבט ה'תשמ\"ג ל\"הנחה פרטית\" או התרגום ללה\"ק של השיחה: https://thedailysicha.com/?date=20-10-2026 Synopsis The firm and true foundation for educating young people to conduct themselves with justice and integrity etc. is the knowledge that “ This palace has an Owner ” – that Hashem is the Creator of the world and that He runs the world with Hashgacha Protis . Hashem created man with a yetzer hara , and it is possible that the threat of punishment alone will not deter a person from doing something he shouldn’t (because he may be prepared to suffer the punishment, or he may try to evade the punishment etc.). Therefore, the only way to ensure that the yetzer hara does not overcome him, and to preserve the observance of the funda",
-     "first_seen": "2026-10-20T07:43:28+00:00"
-    },
-    {
-     "id": "2026.10.19",
-     "title": "יום ב' פ' לך לך, ח' מרחשון, ה'תשפ\"ז",
-     "url": "",
-     "date": "Mon, 19 Oct 2026 12:00:00 GMT",
-     "blurb": "התוכן 1) פ' לך לך בא לאחרי פ' נח . והביאור: כדי להגיע להליכה אמיתית שלא בערך, \" לך לך \" – לעצמיות הנשמה, ה\"ז דוקא מכח המנגד – קשיים ונסיונות, \" מים רבים \", ונעמדים נגדם. ועי\"ז – \"ואגדלה שמך וגו'\". וזוהי השליחות דכאו\"א: \" ללכת \" ולעזוב את \" ארצך \" – רצונות האישיים, \" מולדתך \" – הרגיליות, ו\" בית אביך \" – \"באַלעבאַטישע\" הנחות שכליות, ואז מובטחים שלא רק שה\"מים רבים לא יוכלו לכבות את האהבה\", ואדרבה – \"והי' ברכה\". 2) המקום והזמן משפיע על האדם , ולכן עבודתו צ\"ל בהתאם למעמד ומצב של אותו מקום וזמן. א' ההוכחות לזה היא ממ\"ש [בראשון דפ' לך לך] שכאשר אברהם הגיע למצרים אמר לשרה \" הנה נא ידעתי כי אשה יפת מראה את\", ו\"עד עכשיו לא הכיר בה מתוך צניעות וכו'\". והקשו, דא\"כ מה גרם לו להסתכל בה אז ?! אלא מכיון שזו היתה הקליפה של מצרים, ה\"ז השפיע אפי' על אברהם ! וכידוע הסיפור שאדה\"ז הבטיח לנכדו אחרי חתונתו שאם יוריד את ה\"קאָלנער\" (צאורון) מה\"קאַטינקע\" שלו ה\"ה מבטיח לו \" אתי עמי במחיצתו \"! מפני שבמדינה ההיא היתה אז התגברות הקליפה של לבושים ואדה\"ז רצה לשבור אותה בעניו זה . 1) ב' חלקים משיחת מוצש\"ק פ' נח, אור לז' מרחשון ה'תש\"מ 2) משיחת י\"ט כסלו ה'תשכ\"ג ל\"הנחה פרטית\" או התרגום ללה\"ק של השיחה: https://thedailysicha.com/?date=19-10-2026 Synopsis (1) Parashas Lech Lecha comes after parashas Noach : In order to truly advance in a manner beyond all proportion – “ Lech lecha ” – to the essence of the soul – one must face the “ mighty waters ” (opposition, challenges and tests etc.) and stand firm against thim. Then, as a result, “I will make your name great...” This is the mission of every individual: to “ go ",
-     "first_seen": "2026-10-20T07:43:28+00:00"
-    }
-   ],
+   "new": [],
    "latest": [
     {
      "id": "2026.10.20",
@@ -1298,7 +1205,7 @@
     }
    ],
    "total": 1406,
-   "last_success_at": "2026-10-20T07:43:28+00:00"
+   "last_success_at": "2026-10-20T07:52:23+00:00"
   },
   {
    "id": "learnchassidus",
@@ -1312,12 +1219,12 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-20T07:43:34+00:00",
+   "checked_at": "2026-10-20T07:52:29+00:00",
    "status": "ok",
    "new": [],
    "latest": [],
    "total": 5,
-   "last_success_at": "2026-10-20T07:43:34+00:00"
+   "last_success_at": "2026-10-20T07:52:29+00:00"
   },
   {
    "id": "simplychassidus",
@@ -1331,18 +1238,25 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-20T07:43:35+00:00",
+   "checked_at": "2026-10-20T07:52:30+00:00",
    "status": "ok",
    "new": [
     {
-     "id": "content:1f744d7c124f1d33",
+     "id": "content:8eea7d2a427c278b",
      "title": "עדכון בתוכן הדף",
      "url": "https://www.simplychassidus.com/",
      "date": "",
-     "first_seen": "2026-10-20T07:43:35+00:00"
+     "first_seen": "2026-10-20T07:52:30+00:00"
     }
    ],
    "latest": [
+    {
+     "id": "content:8eea7d2a427c278b",
+     "title": "עדכון בתוכן הדף",
+     "url": "https://www.simplychassidus.com/",
+     "date": "",
+     "first_seen": "2026-10-20T07:52:30+00:00"
+    },
     {
      "id": "content:1f744d7c124f1d33",
      "title": "עדכון בתוכן הדף",
@@ -1359,7 +1273,7 @@
     }
    ],
    "total": 1,
-   "last_success_at": "2026-10-20T07:43:35+00:00"
+   "last_success_at": "2026-10-20T07:52:30+00:00"
   },
   {
    "id": "alonei_chabad",
@@ -1372,7 +1286,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-20T07:43:36+00:00",
+   "checked_at": "2026-10-20T07:52:31+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -1389,7 +1303,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-20T07:43:36+00:00",
+   "checked_at": "2026-10-20T07:52:31+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -1406,18 +1320,25 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-20T07:43:36+00:00",
+   "checked_at": "2026-10-20T07:52:31+00:00",
    "status": "ok",
    "new": [
     {
-     "id": "content:e1dede5f43aa3367",
+     "id": "content:f9ed8b71bbafe643",
      "title": "עדכון בתוכן הדף",
      "url": "http://www.lmaanyishmeu.com/archives.htm",
      "date": "",
-     "first_seen": "2026-10-20T07:43:36+00:00"
+     "first_seen": "2026-10-20T07:52:31+00:00"
     }
    ],
    "latest": [
+    {
+     "id": "content:f9ed8b71bbafe643",
+     "title": "עדכון בתוכן הדף",
+     "url": "http://www.lmaanyishmeu.com/archives.htm",
+     "date": "",
+     "first_seen": "2026-10-20T07:52:31+00:00"
+    },
     {
      "id": "content:e1dede5f43aa3367",
      "title": "עדכון בתוכן הדף",
@@ -1434,7 +1355,7 @@
     }
    ],
    "total": 1,
-   "last_success_at": "2026-10-20T07:43:36+00:00"
+   "last_success_at": "2026-10-20T07:52:31+00:00"
   },
   {
    "id": "lchaim",
@@ -1447,12 +1368,12 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-20T07:43:37+00:00",
+   "checked_at": "2026-10-20T07:52:32+00:00",
    "status": "ok",
    "new": [],
    "latest": [],
    "total": 0,
-   "last_success_at": "2026-10-20T07:43:37+00:00"
+   "last_success_at": "2026-10-20T07:52:32+00:00"
   },
   {
    "id": "one_point",
@@ -1465,12 +1386,12 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-20T07:43:38+00:00",
+   "checked_at": "2026-10-20T07:52:34+00:00",
    "status": "ok",
    "new": [],
    "latest": [],
    "total": 0,
-   "last_success_at": "2026-10-20T07:43:38+00:00"
+   "last_success_at": "2026-10-20T07:52:34+00:00"
   },
   {
    "id": "derher",
@@ -1483,7 +1404,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-20T07:43:40+00:00",
+   "checked_at": "2026-10-20T07:52:35+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -1500,7 +1421,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-20T07:43:40+00:00",
+   "checked_at": "2026-10-20T07:52:35+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -1517,7 +1438,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-20T07:43:40+00:00",
+   "checked_at": "2026-10-20T07:52:35+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1530,7 +1451,7 @@
     }
    ],
    "total": 5,
-   "last_success_at": "2026-10-20T07:43:40+00:00"
+   "last_success_at": "2026-10-20T07:52:35+00:00"
   },
   {
    "id": "maynotecha_inst",
@@ -1543,7 +1464,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-20T07:43:42+00:00",
+   "checked_at": "2026-10-20T07:52:37+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -1560,12 +1481,12 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-20T07:43:42+00:00",
+   "checked_at": "2026-10-20T07:52:37+00:00",
    "status": "ok",
    "new": [],
    "latest": [],
    "total": 0,
-   "last_success_at": "2026-10-20T07:43:42+00:00"
+   "last_success_at": "2026-10-20T07:52:37+00:00"
   },
   {
    "id": "anash",
@@ -1578,7 +1499,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-20T07:43:43+00:00",
+   "checked_at": "2026-10-20T07:52:38+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1624,7 +1545,7 @@
     }
    ],
    "total": 2,
-   "last_success_at": "2026-10-20T07:43:43+00:00"
+   "last_success_at": "2026-10-20T07:52:38+00:00"
   },
   {
    "id": "chabadinfo",
@@ -1637,7 +1558,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-20T07:43:44+00:00",
+   "checked_at": "2026-10-20T07:52:40+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -1654,7 +1575,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-20T07:43:44+00:00",
+   "checked_at": "2026-10-20T07:52:40+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -1671,7 +1592,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-20T07:43:44+00:00",
+   "checked_at": "2026-10-20T07:52:40+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1717,7 +1638,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-10-20T07:43:44+00:00"
+   "last_success_at": "2026-10-20T07:52:40+00:00"
   },
   {
    "id": "kehot",
@@ -1730,7 +1651,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-20T07:43:47+00:00",
+   "checked_at": "2026-10-20T07:52:45+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1992,7 +1913,7 @@
     }
    ],
    "total": 189,
-   "last_success_at": "2026-10-20T07:43:47+00:00"
+   "last_success_at": "2026-10-20T07:52:45+00:00"
   }
  ],
  "browser_checks": {
