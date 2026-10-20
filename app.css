@@ -1241,6 +1241,7 @@ article.biur .tp-inline a:hover { border-color: var(--accent-line); color: var(-
   @media (max-width:999px) {
     body[data-mode=read] .rd, body[data-mode=read].notes-side .rd { grid-template-columns: minmax(0,var(--measure)); }
     .rd { padding-inline: var(--reading-gutter,30px); }
+    article.biur .pcopy { inset-inline-end: calc(4px - var(--reading-gutter,30px)); }
   }
   @media (max-width:560px) { .rd { font-size: var(--fs-body); } article.biur .smark::after { font-size: var(--fs-body); } }
 }
