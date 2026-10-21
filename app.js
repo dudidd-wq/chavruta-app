@@ -281,7 +281,7 @@ function openReadingPreferences(options = {}) {
   const markup = "    <section class=\"reading-preferences-content\" id=\"reading-preferences-content\" aria-labelledby=\"chv-preferences-title\">\n      <div class=\"chv-preferences-heading\"><div><h2 id=\"chv-preferences-title\">סביבת הלימוד שלי</h2><p class=\"chv-pref-status\" role=\"status\" aria-live=\"polite\">כל שינוי מופיע מיד בקריאה.</p><p class=\"chv-pref-error\" role=\"alert\" hidden></p></div><div class=\"chv-heading-actions\"><button type=\"button\" data-action=\"type\">סיום התאמה</button><button type=\"button\" data-action=\"quick-start\">התאמה מהירה</button></div></div>\n      <section class=\"chv-quick-preview\" aria-label=\"תצוגת קריאה מקדימה\" hidden><p>אפשר ללמוד בקצב שלך, בגופן ובצבעים שנוחים לך. התצוגה מתעדכנת עם כל בחירה.</p></section>\n      <div class=\"chv-pref-columns\">\n        <details open><summary>אותיות וריווח</summary><div class=\"chv-pref-fields\">\n          <label class=\"chv-quick-control\">גופן הקריאה<select data-pref=\"family\"><option value=\"frank\">פרנק ריהל ליברה</option><option value=\"assistant\">אסיסטנט</option><option value=\"arial\">Arial — מהמכשיר</option><option value=\"david\">David — אם מותקן</option><option value=\"narkisim\">Narkisim — אם מותקן</option><option value=\"times\">Times New Roman — אם מותקן</option></select></label>\n          <label class=\"chv-quick-control\" for=\"chv-pref-font\">גודל האות <output aria-hidden=\"true\" data-value=\"font\">21</output><input type=\"range\" min=\"16\" max=\"36\" step=\"1\" value=\"21\" data-setting=\"font\" data-pref=\"font\" id=\"chv-pref-font\"></label>\n          <label>משקל האות<select data-pref=\"weight\"><option value=\"400\">רגיל</option><option value=\"500\">מודגש מעט</option></select></label>\n          <label for=\"chv-pref-leading\">מרווח בין שורות <output aria-hidden=\"true\" data-value=\"leading\">1.9</output><input type=\"range\" min=\"1.35\" max=\"2.5\" step=\"0.05\" value=\"1.9\" data-pref=\"leading\" id=\"chv-pref-leading\"></label>\n          <label for=\"chv-pref-paragraph\">מרווח בין פסקאות <output aria-hidden=\"true\" data-value=\"paragraph\">1</output><input type=\"range\" min=\"0.4\" max=\"2.5\" step=\"0.1\" value=\"1\" data-pref=\"paragraph\" id=\"chv-pref-paragraph\"></label>\n          <label for=\"chv-pref-word\">מרווח בין מילים <output aria-hidden=\"true\" data-value=\"word\">0</output><input type=\"range\" min=\"0\" max=\"0.5\" step=\"0.025\" value=\"0\" data-pref=\"word\" id=\"chv-pref-word\"></label>\n          <label for=\"chv-pref-letter\">מרווח בין אותיות <output aria-hidden=\"true\" data-value=\"letter\">0</output><input type=\"range\" min=\"0\" max=\"0.12\" step=\"0.01\" value=\"0\" data-pref=\"letter\" id=\"chv-pref-letter\"></label>\n          <label>יישור הטקסט<select data-pref=\"alignment\"><option value=\"justify\">לשני הצדדים</option><option value=\"right\">לימין</option></select></label>\n        </div></details>\n        <details><summary>צבעים ותאורה</summary><div class=\"chv-pref-fields\">\n          <label class=\"chv-quick-control\">תאורה<select data-pref=\"theme\"><option value=\"system\">לפי המכשיר</option><option value=\"light\">בהירה</option><option value=\"dark\">כהה</option></select></label>\n          <div class=\"chv-pref-wide chv-quick-control\"><span>ערכת צבעים</span><div class=\"chv-palette-choices\" role=\"group\" aria-label=\"ערכת צבעים\"><button type=\"button\" data-palette=\"sefer\" aria-pressed=\"true\" >ספר</button><button type=\"button\" data-palette=\"techelet\" aria-pressed=\"false\" >תכלת</button><button type=\"button\" data-palette=\"zayit\" aria-pressed=\"false\" >זית</button><button type=\"button\" data-palette=\"dyo\" aria-pressed=\"false\" >ניגודיות</button></div></div>\n          <p class=\"chv-pref-caption chv-pref-wide\">הצבעים האישיים נשמרים בנפרד לתאורה בהירה וכהה. בחירת ערכה מחליפה את הצבעים האישיים.</p>\n          <label class=\"chv-color-field\">רקע הקריאה<input type=\"color\" data-color=\"paper\" value=\"#faf7f0\"></label>\n          <label class=\"chv-color-field\">צבע האותיות<input type=\"color\" data-color=\"ink\" value=\"#26211b\"></label>\n          <label class=\"chv-color-field\">קישורים והדגשות<input type=\"color\" data-color=\"accent\" value=\"#76283a\"></label>\n          <label class=\"chv-color-field\">רקע המקור<input type=\"color\" data-color=\"surface\" value=\"#fffdf9\"></label>\n          <label class=\"chv-color-field\">רקע הציטוט הנבחר<input type=\"color\" data-color=\"soft\" value=\"#f1e3e1\"></label>\n          <div class=\"chv-contrast chv-pref-wide\"><span class=\"chv-contrast-text\" aria-live=\"polite\"></span><button type=\"button\" data-personal=\"repair-contrast\"  hidden>שיפור ניגודיות</button></div>\n        </div></details>\n        <details><summary>פריסה ומקורות</summary><div class=\"chv-pref-fields\">\n          <label for=\"chv-pref-width\">רוחב שורת הקריאה <output aria-hidden=\"true\" data-value=\"width\">66 תווים בקירוב</output><input type=\"range\" min=\"40\" max=\"100\" step=\"2\" value=\"66\" data-pref=\"width\" id=\"chv-pref-width\"></label>\n          <label for=\"chv-pref-margin\">שוליים <output aria-hidden=\"true\" data-value=\"margin\">30</output><input type=\"range\" min=\"12\" max=\"64\" step=\"2\" value=\"30\" data-pref=\"margin\" id=\"chv-pref-margin\"></label>\n          <label>פתיחת מקור<select data-pref=\"sourcePlace\"><option value=\"auto\">לצד הטקסט, ובנייד מתחת לציטוט</option><option value=\"inline\">תמיד מתחת לציטוט</option></select></label>\n          <label class=\"chv-check\"><input type=\"checkbox\" data-pref=\"toc\" checked> תוכן עניינים</label>\n          <label class=\"chv-check\"><input type=\"checkbox\" data-pref=\"focus\"> מיקוד בקריאה</label>\n          <label class=\"chv-check\"><input type=\"checkbox\" data-pref=\"quoteTint\" checked> רקע לאזורי ציטוט</label>\n          <label class=\"chv-check chv-pref-wide\"><input type=\"checkbox\" data-pref=\"sourceLinked\" checked> אותם גופן, גודל וריווח גם במקור</label>\n          <div class=\"chv-source-prefs chv-pref-wide\" hidden><label>גופן המקור<select data-pref=\"sourceFamily\"><option value=\"frank\">פרנק ריהל ליברה</option><option value=\"assistant\">אסיסטנט</option><option value=\"arial\">Arial — מהמכשיר</option><option value=\"david\">David — אם מותקן</option><option value=\"narkisim\">Narkisim — אם מותקן</option><option value=\"times\">Times New Roman — אם מותקן</option></select></label><label for=\"chv-pref-sourceFont\">גודל המקור <output aria-hidden=\"true\" data-value=\"sourceFont\">20</output><input type=\"range\" min=\"16\" max=\"36\" step=\"1\" value=\"20\" data-pref=\"sourceFont\" id=\"chv-pref-sourceFont\"></label><label for=\"chv-pref-sourceLeading\">מרווח שורות במקור <output aria-hidden=\"true\" data-value=\"sourceLeading\">1.85</output><input type=\"range\" min=\"1.35\" max=\"2.5\" step=\"0.05\" value=\"1.85\" data-pref=\"sourceLeading\" id=\"chv-pref-sourceLeading\"></label></div>\n        </div></details>\n        <details><summary>הסביבות השמורות שלי</summary><div class=\"chv-pref-fields\">\n          <label class=\"chv-pref-wide\">שם לסביבה<input type=\"text\" class=\"chv-profile-name\" maxlength=\"40\" placeholder=\"למשל: לימוד ערב\"></label>\n          <button type=\"button\" data-personal=\"save-profile\" >שמירת סביבה חדשה</button>\n          <label class=\"chv-pref-wide\">סביבה שמורה<select class=\"chv-profile-select\"><option value=\"\">בחירת סביבה</option></select></label>\n          <div class=\"chv-pref-actions chv-pref-wide\"><button type=\"button\" data-personal=\"update-profile\"  disabled>עדכון הסביבה שנבחרה</button><button type=\"button\" data-personal=\"delete-profile\"  disabled>מחיקה</button></div>\n          <div class=\"chv-pref-actions chv-pref-wide\"><button type=\"button\" data-personal=\"export\" >ייצוא העדפות</button><label class=\"chv-import\">ייבוא העדפות<input type=\"file\" accept=\"application/json,.json\" class=\"chv-import-file\"></label></div>\n          <p class=\"chv-pref-caption chv-pref-wide\">השמירה היא בדפדפן הזה. להעברה למכשיר אחר אפשר לייצא ולייבא את ההעדפות.</p>\n        </div></details>\n      </div>\n      <div class=\"chv-quick-actions\" hidden><button type=\"button\" data-action=\"type\">נוח לי, אפשר ללמוד</button><button type=\"button\" data-action=\"all-settings\">כל אפשרויות ההתאמה</button><p class=\"chv-pref-caption\">ההעדפות נשמרות בדפדפן הזה. אפשר לחזור להתאמה דרך הכפתור שבראש האתר.</p></div>\n      <div class=\"chv-preferences-footer\"><button type=\"button\" data-personal=\"reset\" >חזרה לעיצוב המקורי</button><button type=\"button\" data-personal=\"undo-reset\"  hidden>ביטול האיפוס</button><span>נוסח הלימוד נשאר כפי שהוא.</span></div>\n    </section>\n";
   dialog.append(h("div", { html: markup }));
   const shortcuts = h("nav", { class: "reading-shortcuts", "aria-label": "מצב לימוד וקישורי האתר" }, h("div", { class: "modesw sm", role: "radiogroup", "aria-label": "מצב עבודה" }, ...MODES.map(m => { const button = modeBtn(m); button.addEventListener("click", () => dialog.close()); return button; })));
-  for (const [label, target] of [["המקורות שלי", "saved"], ["סטטוס הביאורים", "status"], ["כיסוי המפה", "coverage"], ["מפתח עניינים", "topics"], ["אודות ושיטת העבודה", "about"]]) shortcuts.append(h("a", { href: mkHash([target]), onclick: () => dialog.close() }, label));
+  for (const [label, target] of [["מחברת הלימוד והגיבוי", "notebook"], ["לקריאה בהמשך", "later"], ["המקורות שלי", "saved"], ["סטטוס הביאורים", "status"], ["כיסוי המפה", "coverage"], ["מפתח עניינים", "topics"], ["אודות ושיטת העבודה", "about"]]) shortcuts.append(h("a", { href: mkHash([target]), onclick: () => dialog.close() }, label));
   shortcuts.append(h("button", { type: "button", onclick: () => { dialog.close(); requestAnimationFrame(showHelp); } }, "קיצורי מקלדת"));
   dialog.append(shortcuts);
   document.body.append(dialog);
@@ -615,7 +615,7 @@ function showHelp() {
 
 /* ---------- מקלדת ---------- */
 document.addEventListener("keydown", e => {
-  if (document.querySelector("#reading-preferences[open],#source-reader[open]")) return;
+  if (document.querySelector("#reading-preferences[open],#source-reader[open],.notebook-editor[open]")) return;
   const tag = document.activeElement?.tagName, typing = /^(INPUT|TEXTAREA|SELECT)$/.test(tag || "") || document.activeElement?.isContentEditable;
   if (e.key === "Escape") {
     if ($(".help")) { $(".help").remove(); return; }
@@ -694,7 +694,7 @@ function sourceTextFind(reader, article) {
   const prev = h("button", { class: "btn sm", type: "button", disabled: true, "aria-label": "התאמה קודמת", onclick: () => step(-1) }, "הקודם");
   const next = h("button", { class: "btn sm", type: "button", disabled: true, "aria-label": "התאמה הבאה", onclick: () => step(1) }, "הבא");
   let groups = [], current = -1, active = "";
-  const clearMarks = () => { for (const mark of article.querySelectorAll("mark.sr-hit")) { const parent = mark.parentNode; mark.replaceWith(document.createTextNode(mark.textContent)); parent.normalize(); } groups = []; current = -1; count.textContent = ""; prev.disabled = next.disabled = true; };
+  const clearMarks = () => { for (const mark of article.querySelectorAll("mark.sr-hit")) { const parent = mark.parentNode; mark.replaceWith(document.createTextNode(mark.textContent)); parent.normalize(); } groups = []; current = -1; count.textContent = ""; prev.disabled = next.disabled = true; window.dispatchEvent(new Event("notebookpaint")); };
   const scroll = () => { const mark = groups[current]?.[0]; if (mark) body.scrollTop += mark.getBoundingClientRect().top - body.getBoundingClientRect().top - toolbar.offsetHeight - 24; };
   function step(delta) {
     if (!groups.length) return;
@@ -713,6 +713,7 @@ function sourceTextFind(reader, article) {
       fragment.append(document.createTextNode(text.slice(offset))); entry.node.replaceWith(fragment);
     }
     prev.disabled = next.disabled = groups.length < 2;
+    window.dispatchEvent(new Event("notebookpaint"));
   };
   const run = (value, automatic = false) => {
     clearMarks(); const index = sourceTextIndex(article);
@@ -733,6 +734,79 @@ function sourceTextFind(reader, article) {
   input.addEventListener("keydown", e => { if (e.key === "Escape" && input.value) { e.preventDefault(); e.stopPropagation(); clear(); } else if (e.key === "Enter" && e.shiftKey) { e.preventDefault(); step(-1); } });
   if (reader.findTerm !== null && reader.findTerm !== undefined) { input.value = reader.findTerm; run(reader.findTerm); }
   else if (quote) run("", true); else run("");
+}
+
+/* Follow only a publisher's explicit numeric page list, with bounded requests. */
+function sourceFollowingPages(children, id, limit = 8) {
+  const seen = new Set();
+  const rows = (Array.isArray(children) ? children : []).filter(x => {
+    const id = String(x?.id || "");
+    if (!/^\d{1,12}$/.test(id) || seen.has(id)) return false;
+    seen.add(id); return true;
+  });
+  const at = rows.findIndex(x => String(x.id) === String(id));
+  return at < 0 ? [] : rows.slice(at + 1, at + 1 + Math.min(12, Math.max(0, limit)));
+}
+async function sourcePageFetch(id, signal) {
+  if (!/^\d{1,12}$/.test(String(id))) throw Error("invalid-page");
+  const response = await fetch(sourceGateway() + "/v1/library/" + id, { signal, credentials: "omit", referrerPolicy: "no-referrer" });
+  if (!response.ok) throw Error("unavailable"); const data = await response.json();
+  const target = sourceTarget(data.url);
+  if (String(data.id) !== String(id) || target?.kind !== "library" || target.id !== String(id)) throw Error("invalid-page");
+  return data;
+}
+function sourcePageText(data) {
+  const root = h("article", null, sourceSafeHTML(sourceLibraryMarkup(data.html || "")));
+  return sourceTextIndex(root);
+}
+function sourceLibraryPages(reader, initial) {
+  const body = reader.body, holder = h("section", { class: "sr-page-continuation no-print", "aria-label": "המשך המקור" }), status = h("p", { role: "status", "aria-live": "polite" });
+  let last = initial, appended = 0, busy = false, searching = false;
+  body.append(holder);
+  const current = () => reader.dialog && reader.body === body && holder.isConnected && reader.mode === "text";
+  const fetchOne = async (id, controller) => { const timer = setTimeout(() => controller.abort(), 18000); try { return await sourcePageFetch(id, controller.signal); } finally { clearTimeout(timer); } };
+  const action = async fn => {
+    if (busy) return; busy = true; const controller = new AbortController(); reader.pagesController = controller; draw();
+    try { await fn(controller); }
+    catch (_) { if (current()) status.textContent = controller.signal.aborted ? "הפעולה נעצרה. הטקסט שכבר נטען נשאר לקריאה." : "לא ניתן לטעון את המשך המקור כרגע. אפשר לנסות שוב."; }
+    finally { if (reader.pagesController === controller) reader.pagesController = null; busy = searching = false; if (current()) draw(); }
+  };
+  const append = data => {
+    if (!data.html) throw Error("no-page-text");
+    const section = h("section", { class: "sr-next-page", "data-source-page": data.id }, h("h3", null, data.title || "הדף הבא"), h("a", { class: "linkbtn", href: data.url, target: "_blank", rel: "noopener noreferrer" }, "דף זה באתר המקור"));
+    const article = h("article", { class: "sr-text", dir: "rtl", "data-source-url": data.url }, sourceSafeHTML(sourceLibraryMarkup(data.html || ""), "sr-library-" + data.id)); section.append(article);
+    if (data.footnotes) section.append(h("section", { class: "sr-text sr-notes", "aria-label": "הערות המקור" }, h("h3", null, "הערות המקור"), sourceSafeHTML(sourceLibraryMarkup(data.footnotes, true), "sr-library-" + data.id)));
+    holder.before(section);
+    const pageReader = { body, quote: "", findTerm: null }; sourceTextFind(pageReader, article);
+    const cleanup = notebookMount(article, { kind: "source", title: String(data.title || reader.info.title).slice(0, 300), url: data.url, quote: "" });
+    (reader.pageNoteCleanups ||= []).push(cleanup);
+    last = data; appended++; reader.libraryPage = data.id; if (reader.original) reader.original.href = data.url; reader.refreshSave?.();
+    status.textContent = "נוסף דף לקריאה הרציפה. הדפים הקודמים נשארו למעלה.";
+    body.scrollTop += section.getBoundingClientRect().top - body.getBoundingClientRect().top - 16;
+  };
+  const draw = () => {
+    if (!current()) return;
+    holder.replaceChildren(h("h3", null, "המשך המקור"), status);
+    const root = reader.libraryRoot;
+    if (!root) {
+      const parent = initial.breadcrumb?.at(-2);
+      if (!/^\d{1,12}$/.test(String(parent?.id || ""))) { status.textContent = "לא נמצאה רשימת דפים סמוכים במקור הזה."; return; }
+      holder.append(h("button", { class: "btn sm", type: "button", disabled: busy, onclick: () => action(async controller => { status.textContent = "טוען את רשימת הדפים הסמוכים…"; const data = await fetchOne(parent.id, controller); if (!current() || controller.signal.aborted) return; if (!data.children?.some(x => String(x.id) === String(initial.id))) { status.textContent = "המקור אינו מספק רשימת דפים הכוללת את הדף הזה."; return; } reader.libraryRoot = data; status.textContent = "רשימת הדפים נטענה."; }) }, "טעינת דפים סמוכים"));
+    } else {
+      const next = sourceFollowingPages(root.children, last.id, 1)[0];
+      holder.append(h("p", { class: "sr-notice" }, "אפשר להוסיף עד 12 דפים לקריאה רציפה. כל חיפוש מילים מתייחס לדף שלצדו הוא מוצג."), h("button", { class: "btn sm", type: "button", disabled: busy || !next || appended >= 12, onclick: () => action(async controller => { status.textContent = "טוען את הדף הבא…"; const data = await fetchOne(next.id, controller); if (current() && !controller.signal.aborted) append(data); }) }, "הוספת הדף הבא לקריאה"));
+      if (!next) holder.append(h("p", null, "הגעת לסוף רשימת הדפים הזמינה."));
+      if (reader.quote && sourceFollowingPages(root.children, initial.id).length) holder.append(h("button", { class: "btn sm", type: "button", disabled: busy, onclick: () => action(async controller => {
+        searching = true; draw(); const pages = sourceFollowingPages(root.children, initial.id), deadline = setTimeout(() => controller.abort(), 60000); let checked = 0;
+        try { for (const page of pages) { status.textContent = `מחפש התאמה מילולית לציטוט בדפים הבאים: ${++checked} מתוך ${pages.length}…`; const data = await fetchOne(page.id, controller); if (!current() || controller.signal.aborted) return;
+          const found = sourceLocateQuote(sourcePageText(data), reader.quote);
+          if (found.ranges.length) { reader.libraryPage = data.id; reader.findTerm = null; reader.render(); return; }
+        } status.textContent = `לא נמצאה התאמה מילולית ב־${checked} הדפים הבאים שנבדקו. שאר המקור לא נבדק.`;
+        } finally { clearTimeout(deadline); }
+      }) }, "איתור הציטוט בדפים הבאים"));
+    }
+    if (busy) holder.append(h("button", { class: "linkbtn", type: "button", onclick: () => reader.pagesController?.abort() }, searching ? "עצירת האיתור" : "עצירת הטעינה"));
+  }; draw();
 }
 
 /* חברותא · קורא מקורות ציבוריים. מטמון המקורות הפרטי אינו מועבר לקורא. */
@@ -827,11 +901,14 @@ function sourceSafeHTML(value, prefix = "") {
 const SourceReader = {
   dialog: null, ticket: 0, cache: new Map(), controller: null, scanSeq: 0, pdfBytes: new Map(),
   stop() {
+    this.pagesController?.abort(); this.pagesController = null;
     this.controller?.abort(); this.controller = null; clearTimeout(this.scanTimer); ++this.scanSeq;
     this.pdfRender?.cancel(); this.pdfRender = null; this.pdfLoading?.destroy().catch(() => {}); this.pdfLoading = null;
   },
   close(restore = true) {
     if (!this.dialog) return;
+    this.noteCleanup?.(); this.noteCleanup = null;
+    for (const cleanup of this.pageNoteCleanups || []) cleanup(); this.pageNoteCleanups = [];
     const d = this.dialog; this.dialog = null; ++this.ticket; this.stop();
     d.close(); d.remove(); document.body.classList.remove("source-reader-open");
     if (restore) {
@@ -855,7 +932,7 @@ const SourceReader = {
     this.body = h("div", { class: "sr-body", tabindex: "0", "aria-label": "תוכן המקור" });
     const footer = h("footer", { class: "sr-footer" }, expand, h("button", { type: "button", class: "btn sm", onclick: () => openReadingPreferences() }, "התאמת הקריאה"));
     if (sourceURL(info.url)) footer.append(this.original = h("a", { class: "linkbtn", href: info.url, target: "_blank", rel: "noopener noreferrer" }, "לאתר המקור", icon("i-ext")));
-    footer.prepend(sourceSaveControl(this)); footer.append(h("a", { class: "linkbtn", href: mkHash(["saved"]) }, "המקורות שלי"));
+    footer.prepend(sourceSaveControl(this)); footer.append(notebookSourceControl(this)); footer.append(h("a", { class: "linkbtn", href: mkHash(["saved"]) }, "המקורות שלי"));
     d.append(this.bar, this.body, footer); document.body.append(d);
     d.addEventListener("cancel", e => { e.preventDefault(); this.close(); });
     d.addEventListener("click", e => { if (e.target === d) { const r = d.getBoundingClientRect(); if (e.clientX < r.left || e.clientX > r.right || e.clientY < r.top || e.clientY > r.bottom) this.close(); } });
@@ -892,6 +969,8 @@ const SourceReader = {
     if (this.target?.kind === "sefaria" || (this.target?.kind === "library" && sourceGateway())) modes.push(["text", "טקסט המקור"]);
     if (["pdf", "hebrewbooks"].includes(this.target?.kind)) modes.push(["scan", this.target.kind === "hebrewbooks" ? "צילום הדף" : "מסמך המקור"]);
     this.bar.replaceChildren(...modes.map(([mode, label]) => h("button", { type: "button", class: "fchip", "aria-pressed": this.mode === mode, onclick: () => { if (this.mode !== mode) { this.mode = mode; this.render(); } } }, label)));
+    this.noteCleanup?.(); this.noteCleanup = null;
+    for (const cleanup of this.pageNoteCleanups || []) cleanup(); this.pageNoteCleanups = [];
     this.body.replaceChildren(); this.body.scrollTop = 0;
     if (this.mode === "scan") return this.renderScan();
     if (this.mode === "text") return this.target.kind === "library" ? this.renderLibrary() : this.renderText();
@@ -991,6 +1070,10 @@ const SourceReader = {
       if (data.footnotes) body.append(h("section", { class: "sr-text sr-notes", "aria-label": "הערות המקור" }, h("h3", null, "הערות המקור"), sourceSafeHTML(sourceLibraryMarkup(data.footnotes, true), prefix)));
       body.append(h("p", { class: "sr-notice" }, "הנוסח וההערות כפי שהתקבלו מספריית חב״ד. מוצגת יחידת המקור שנבחרה; אין בכך אימות של זיהוי הציטוט בביאור."));
       sourceTextFind(this, article);
+      this.noteCleanup = notebookMount(article, notebookSourceBase(this));
+      article.dataset.sourceUrl = this.original?.href || this.info.url;
+      notebookSourceRestore(this, article);
+      sourceLibraryPages(this, data);
     } catch (_) {
       if (!this.dialog || this.mode !== "text" || this.controller !== controller) return;
       body.replaceChildren(h("div", { class: "sr-empty", role: "status" }, h("h3", null, "לא ניתן לטעון כעת את המקור מספריית חב״ד"), h("p", null, "אפשר לנסות שוב או לפתוח באתר המקור."), h("button", { type: "button", class: "btn", onclick: () => this.render() }, "ניסיון נוסף")));
@@ -1012,6 +1095,9 @@ const SourceReader = {
       for (const block of blocks) article.append(h("p", null, sourceSafeHTML(block)));
       body.append(article, h("p", { class: "sr-notice" }, "הנוסח מוצג כפי שהתקבל מספריא. אין בכך אישור להתאמת המהדורה או לזיהוי הציטוט בביאור."));
       sourceTextFind(this, article);
+      this.noteCleanup = notebookMount(article, notebookSourceBase(this));
+      article.dataset.sourceUrl = this.original?.href || this.info.url;
+      notebookSourceRestore(this, article);
     } catch (_) {
       if (!this.dialog || this.mode !== "text" || this.controller !== controller) return;
       body.replaceChildren(h("div", { class: "sr-empty" }, h("h3", null, "לא ניתן לטעון כעת את טקסט המקור"), h("p", null, "אפשר לנסות שוב או לפתוח את המקור באתר ספריא."), h("button", { type: "button", class: "btn", onclick: () => this.render() }, "ניסיון נוסף")));
@@ -1068,6 +1154,7 @@ function sourceSaveControl(reader) {
 VIEWS.saved = function () {
   const main = $("#view"); main.className = "main page"; main.replaceChildren(); document.title = "המקורות שלי · חברותא";
   main.append(h("h1", { class: "page-title" }, "המקורות שלי"), h("p", { class: "lede" }, "מקורות ששמרת לחזרה בהמשך. הרשימה נשמרת בדפדפן הזה, ללא סנכרון בין מכשירים."));
+  main.append(h("a", { class: "btn", href: mkHash(["notebook"]) }, "למחברת הלימוד ולגיבוי"));
   const content = h("div", { class: "saved-sources" }), notice = h("p", { role: "status" }); main.append(notice, content);
   const render = () => {
     const rows = savedSourceRows(); content.replaceChildren();
@@ -1082,6 +1169,338 @@ VIEWS.saved = function () {
     }
     content.append(list);
   }; render(); window.scrollTo(0, 0);
+};
+
+/* User-authored notes and small text anchors only. Nothing is sent to a server. */
+const NOTEBOOK_KEY = "chavruta-notebook-v1";
+const NOTEBOOK_LIMIT = 500;
+const NOTE_COLORS = { gold: "צהוב", green: "ירוק", blue: "כחול", rose: "ורוד" };
+function notebookString(value, max) { return typeof value === "string" && value.length <= max ? value : null; }
+function notebookRecord(value) {
+  if (!value || typeof value !== "object" || typeof value.id !== "string" || !/^[a-zA-Z0-9-]{1,90}$/.test(value.id)) return null;
+  const a = value.anchor;
+  if (!a || !["biur", "source"].includes(a.kind) || !Object.hasOwn(NOTE_COLORS, value.color)) return null;
+  const text = notebookString(value.text, 8000), title = notebookString(a.title, 300), quote = notebookString(a.quote, 2000);
+  if (text === null || title === null || quote === null || (!text.trim() && !quote.trim())) return null;
+  if (![value.created, value.updated].every(t => Number.isSafeInteger(t) && t > 0 && t <= 8640000000000000)) return null;
+  const anchor = { kind: a.kind, title, quote };
+  if (a.kind === "biur") {
+    for (const key of ["doc", "part", "block"]) {
+      if (notebookString(a[key], 180) === null || (key === "doc" && !a[key]) || /[\u0000-\u001f]/.test(a[key])) return null;
+      anchor[key] = a[key];
+    }
+  } else {
+    const u = sourceURL(a.url); if (!u || u.href.length > 2048) return null;
+    anchor.url = u.href;
+  }
+  if (Number.isSafeInteger(a.start) && a.start >= 0 && Number.isSafeInteger(a.end) && a.end > a.start && a.end <= 400000) {
+    anchor.start = a.start; anchor.end = a.end;
+    for (const key of ["prefix", "suffix"]) anchor[key] = notebookString(a[key] || "", 80) ?? "";
+  }
+  return { id: value.id, anchor, text, color: value.color, created: value.created, updated: value.updated };
+}
+function notebookRows() {
+  const raw = localStorage.getItem(NOTEBOOK_KEY); if (!raw) return [];
+  const rows = JSON.parse(raw);
+  if (!Array.isArray(rows) || rows.length > NOTEBOOK_LIMIT || rows.some(row => !notebookRecord(row)) || new Set(rows.map(x => x.id)).size !== rows.length) throw Error("notebook-unreadable");
+  return rows.map(notebookRecord);
+}
+function notebookWrite(rows) {
+  if (rows.length > NOTEBOOK_LIMIT || rows.some(row => !notebookRecord(row)) || new Set(rows.map(x => x.id)).size !== rows.length) throw Error("notebook-limit");
+  localStorage.setItem(NOTEBOOK_KEY, JSON.stringify(rows));
+  window.dispatchEvent(new Event("notebookchange"));
+}
+function notebookID() { return "n-" + (typeof crypto.randomUUID === "function" ? crypto.randomUUID() : Date.now().toString(36) + "-" + Math.random().toString(36).slice(2)); }
+function notebookSignature(row) { return JSON.stringify([row.anchor, row.text, row.color]); }
+function notebookMerge(current, incoming) {
+  const rows = current.map(notebookRecord), signatures = new Set(rows.map(notebookSignature)), ids = new Set(rows.map(x => x.id));
+  for (const item of incoming) {
+    const row = notebookRecord(item); if (!row) throw Error("invalid-note");
+    const signature = notebookSignature(row); if (signatures.has(signature)) continue;
+    if (ids.has(row.id)) row.id = notebookID();
+    rows.push(row); ids.add(row.id); signatures.add(signature);
+  }
+  if (rows.length > NOTEBOOK_LIMIT) throw Error("notebook-limit");
+  return rows;
+}
+/* Prefer an exact offset+context; otherwise only an unambiguous literal match. */
+function notebookLocate(raw, anchor) {
+  if (!anchor.quote) return null;
+  const { start, end, prefix = "", suffix = "" } = anchor;
+  if (Number.isSafeInteger(start) && raw.slice(start, end) === anchor.quote && raw.slice(Math.max(0, start - prefix.length), start) === prefix && raw.slice(end, end + suffix.length) === suffix) return { start, end };
+  const matches = []; let at = -1;
+  while ((at = raw.indexOf(anchor.quote, at + 1)) >= 0) {
+    const finish = at + anchor.quote.length;
+    if ((!prefix || raw.slice(Math.max(0, at - prefix.length), at) === prefix) && (!suffix || raw.slice(finish, finish + suffix.length) === suffix)) matches.push({ start: at, end: finish });
+    if (matches.length > 1) return null;
+  }
+  return matches[0] || null;
+}
+
+const NEWS_PERSONAL_KEY = "chavruta-news-personal-v1";
+function newsPersonalClean(value) {
+  if (!value || typeof value !== "object" || !Array.isArray(value.terms) || value.terms.length > 8 || value.terms.some(x => typeof x !== "string" || x.length > 60) || !Array.isArray(value.saved) || value.saved.length > 100) throw Error("invalid-news-personal");
+  const saved = [], seen = new Set();
+  for (const item of value.saved) {
+    const u = sourceURL(item?.u), pdf = item?.pdf ? sourceURL(item.pdf) : null;
+    if (!u || u.href.length > 2048 || typeof item.t !== "string" || item.t.length > 300 || (item.pdf && !pdf)) throw Error("invalid-news-item");
+    if (seen.has(u.href)) continue; seen.add(u.href);
+    saved.push({ t: item.t, u: u.href, ...(pdf ? { pdf: pdf.href } : {}), src: String(item.src || "").slice(0, 150) });
+  }
+  return { terms: [...new Set(value.terms.map(x => x.trim()).filter(Boolean))], saved };
+}
+function newsPersonalRead() { const raw = localStorage.getItem(NEWS_PERSONAL_KEY); return raw ? newsPersonalClean(JSON.parse(raw)) : { terms: [], saved: [] }; }
+function newsPersonalWrite(value) { localStorage.setItem(NEWS_PERSONAL_KEY, JSON.stringify(newsPersonalClean(value))); }
+function newsInterestMatch(item, terms) {
+  const text = sourceFold([item.t, item.checked === true ? item.s : "", ...(Array.isArray(item.tags) ? item.tags : [])].filter(Boolean).join(" ")).text;
+  return terms.some(term => sourceFold(term).text && text.includes(sourceFold(term).text));
+}
+function newsSaveButton(item) {
+  const status = h("span", { role: "status" }), button = h("button", { type: "button", class: "btn sm" });
+  const render = () => { try { const saved = newsPersonalRead().saved.some(x => x.u === sourceURL(item.u)?.href); button.textContent = saved ? "הסרה מהקריאה להמשך" : "שמירה לקריאה בהמשך"; button.setAttribute("aria-pressed", String(saved)); } catch (_) { button.textContent = "שמירה לקריאה בהמשך"; } };
+  button.addEventListener("click", () => { try {
+    const value = newsPersonalRead(), url = sourceURL(item.u)?.href, saved = value.saved.some(x => x.u === url);
+    if (!saved && value.saved.length >= 100) { status.textContent = "אפשר לשמור עד 100 פרסומים."; return; }
+    value.saved = saved ? value.saved.filter(x => x.u !== url) : [{ t: item.t, u: item.u, pdf: item.pdf, src: item.src }, ...value.saved]; newsPersonalWrite(value); render(); status.textContent = saved ? "הוסר מהרשימה" : "נשמר לקריאה בהמשך בדפדפן הזה";
+  } catch (_) { status.textContent = "השמירה בדפדפן אינה זמינה. הרשימה לא עודכנה."; } }); render();
+  return h("div", { class: "notebook-actions news-save" }, button, status);
+}
+function newsPersonalControls(onchange) {
+  let initial; try { initial = newsPersonalRead().terms; } catch (_) { initial = []; }
+  const input = h("input", { type: "text", maxlength: "480", value: initial.join(", "), placeholder: "למשל: בראשית, תפילה, אהבת ישראל", "aria-label": "הפרשות והנושאים שמעניינים אותי" }), status = h("p", { role: "status" });
+  return h("details", { class: "news-personal no-print" }, h("summary", null, "הפרשות והנושאים שלי"), h("p", null, "עד שמונה מילים או ביטויים, מופרדים בפסיקים. הסינון מחפש אותם בכותרת, בתגיות ובתקציר שנבדק. פרסום ללא אזכור מפורש עשוי שלא להופיע."),
+    h("form", { onsubmit: e => { e.preventDefault(); const terms = input.value.split(/[,،\n]/).map(x => x.trim()).filter(Boolean); if (terms.length > 8 || terms.some(x => x.length > 60)) { status.textContent = "אפשר לבחור עד שמונה ביטויים, עד 60 תווים לביטוי."; return; } try { const value = newsPersonalRead(); value.terms = terms; newsPersonalWrite(value); status.textContent = "הנושאים נשמרו בדפדפן הזה"; onchange(terms); } catch (_) { status.textContent = "לא ניתן לשמור את הנושאים בדפדפן הזה."; } } }, input, h("button", { class: "btn sm", type: "submit" }, "שמירת הנושאים")), status, h("a", { href: mkHash(["later"]) }, "הפרסומים ששמרתי לקריאה בהמשך"));
+}
+VIEWS.later = function () {
+  const main = $("#view"); main.className = "main page"; main.replaceChildren(h("h1", { class: "page-title" }, "לקריאה בהמשך"), h("p", { class: "lede" }, "פרסומים ששמרת מתוך ׳מה חדש׳. הקישורים נשמרים בדפדפן הזה גם לאחר שהפרסום יוצא מחלון העדכונים."), h("a", { class: "btn", href: mkHash(["new"]) }, "בחזרה למה חדש"));
+  const notice = h("p", { role: "status" }), list = h("div", { class: "newlist" }); main.append(notice, list);
+  const draw = () => { list.replaceChildren(); try {
+    const rows = newsPersonalRead().saved;
+    if (!rows.length) list.append(h("p", null, "עוד אין כאן פרסומים. אפשר לשמור פריטים מתוך ׳מה חדש׳."));
+    for (const row of rows) list.append(h("article", { class: "newitem" }, h("h2", null, h("a", { href: row.u, target: "_blank", rel: "noopener noreferrer", dir: "auto" }, row.t)), h("p", { class: "muted" }, row.src), row.pdf ? sourceLink({ title: row.t, url: row.pdf }, "קריאת PDF כאן", { class: "btn sm" }) : null, h("button", { class: "linkbtn", type: "button", onclick: () => { try { const value = newsPersonalRead(); value.saved = value.saved.filter(x => x.u !== row.u); newsPersonalWrite(value); draw(); notice.replaceChildren("הפרסום הוסר. ", h("button", { class: "linkbtn", type: "button", onclick: () => { try { const value = newsPersonalRead(); if (value.saved.length >= 100) throw Error("limit"); if (!value.saved.some(x => x.u === row.u)) value.saved.unshift(row); newsPersonalWrite(value); draw(); notice.textContent = "הפרסום הוחזר"; } catch (_) { notice.textContent = "לא ניתן להחזיר את הפרסום כעת."; } } }, "ביטול ההסרה")); } catch (_) { notice.textContent = "לא ניתן לעדכן את הרשימה."; } } }, "הסרה")));
+  } catch (_) { notice.textContent = "לא ניתן לקרוא את הרשימה השמורה. הנתונים הקיימים לא שונו."; } }; draw(); window.scrollTo(0, 0);
+};
+
+/* Validate the entire import before writing; merge never silently discards notes. */
+function personalSavedSources() {
+  const raw = localStorage.getItem(SOURCE_SAVED_KEY); if (!raw) return [];
+  const rows = JSON.parse(raw);
+  if (!Array.isArray(rows) || rows.length > 100 || rows.some(row => !savedSourceRecord(row))) throw Error("unreadable-sources");
+  return rows.map(savedSourceRecord);
+}
+function personalPositions() {
+  const rows = {};
+  for (const doc of S.core.docs) { const raw = localStorage.getItem("chavruta-pos:" + doc.id); if (raw) { const value = JSON.parse(raw); if (value) rows[doc.id] = value; } }
+  return rows;
+}
+function personalBackupData() {
+  return { format: "chavruta-personal-backup", version: 1, exported: new Date().toISOString(), notes: notebookRows(), sources: personalSavedSources(), reading: window.chavrutaPreferences.exportData(), positions: personalPositions(), news: newsPersonalRead() };
+}
+function personalBackupValidate(data) {
+  if (!data || data.format !== "chavruta-personal-backup" || data.version !== 1 || !Array.isArray(data.notes) || data.notes.length > NOTEBOOK_LIMIT || !Array.isArray(data.sources) || data.sources.length > 100) throw Error("invalid-backup");
+  const notes = data.notes.map(notebookRecord); if (notes.some(x => !x) || new Set(notes.map(x => x.id)).size !== notes.length) throw Error("invalid-notes");
+  const sources = data.sources.map(savedSourceRecord); if (sources.some(x => !x)) throw Error("invalid-sources");
+  const P = window.chavrutaPreferences, r = data.reading;
+  if (!r || r.format !== "chavruta-reading-preferences" || r.version !== 1 || !r.preferences || typeof r.preferences !== "object" || Array.isArray(r.preferences) || !Array.isArray(r.profiles) || r.profiles.length > 8) throw Error("invalid-preferences");
+  const reading = { format: r.format, version: 1, preferences: P.model.sanitize(r.preferences), profiles: P.model.cleanProfiles(r.profiles) };
+  if (!data.positions || typeof data.positions !== "object" || Array.isArray(data.positions) || Object.keys(data.positions).length > 1000) throw Error("invalid-positions");
+  const positions = {};
+  for (const [id, value] of Object.entries(data.positions)) {
+    if (!/^[\w-]{1,180}$/.test(id) || ["__proto__", "constructor", "prototype"].includes(id) || !value || notebookString(value.id, 180) === null || notebookString(value.part || "", 180) === null || !Number.isSafeInteger(value.t) || value.t <= 0) throw Error("invalid-position");
+    positions[id] = { id: value.id, part: value.part || "", t: value.t };
+  }
+  return { notes, sources, reading, positions, news: newsPersonalClean(data.news) };
+}
+function personalBackupImport(data, applyReading = false) {
+  const clean = personalBackupValidate(data), P = window.chavrutaPreferences;
+  const notes = notebookMerge(notebookRows(), clean.notes), currentSources = personalSavedSources(), sources = [...currentSources], urls = new Set(sources.map(x => x.url));
+  for (const source of clean.sources) if (!urls.has(source.url)) { sources.push(source); urls.add(source.url); }
+  if (sources.length > 100) throw Error("source-limit");
+  const currentNews = newsPersonalRead(), news = { terms: [...new Set([...currentNews.terms, ...clean.news.terms])], saved: [...currentNews.saved] };
+  if (news.terms.length > 8) throw Error("news-interest-limit");
+  for (const row of clean.news.saved) if (!news.saved.some(x => x.u === row.u)) news.saved.push(row);
+  if (news.saved.length > 100) throw Error("news-limit");
+  let reading = P.exportData();
+  if (applyReading) {
+    const profiles = [...reading.profiles];
+    for (const profile of clean.reading.profiles) if (!profiles.some(x => x.name === profile.name && JSON.stringify(x.prefs) === JSON.stringify(profile.prefs))) profiles.push(profile);
+    if (profiles.length > 8) throw Error("profile-limit");
+    reading = { ...clean.reading, profiles: P.model.cleanProfiles(profiles) };
+  }
+  const writes = new Map([[NOTEBOOK_KEY, JSON.stringify(notes)], [SOURCE_SAVED_KEY, JSON.stringify(sources)], [NEWS_PERSONAL_KEY, JSON.stringify(news)]]);
+  const known = new Set(S.core.docs.map(x => x.id));
+  for (const [id, row] of Object.entries(clean.positions)) if (known.has(id)) {
+    const key = "chavruta-pos:" + id, raw = localStorage.getItem(key), current = raw ? JSON.parse(raw) : null;
+    if (!current || row.t > current.t) writes.set(key, JSON.stringify(row));
+  }
+  if (applyReading) writes.set("chavruta-reading-preferences-v1", JSON.stringify({ version: 1, preferences: reading.preferences, profiles: reading.profiles }));
+  const before = new Map([...writes.keys()].map(k => [k, localStorage.getItem(k)]));
+  try { for (const [key, value] of writes) localStorage.setItem(key, value); }
+  catch (_) {
+    let restored = true;
+    for (const key of writes.keys()) { try { localStorage.removeItem(key); } catch (_) { restored = false; } }
+    for (const [key, value] of before) if (value !== null) { try { localStorage.setItem(key, value); } catch (_) { restored = false; } }
+    throw Error(restored ? "storage-failed" : "partial-import");
+  }
+  if (applyReading) P.importData(reading);
+  window.dispatchEvent(new Event("notebookchange"));
+  return { notes: notes.length - beforeCount(before.get(NOTEBOOK_KEY)), sources: sources.length - currentSources.length, news: news.saved.length - currentNews.saved.length };
+}
+function beforeCount(raw) { return raw ? JSON.parse(raw).length : 0; }
+function personalDownload(data, filename) {
+  const url = URL.createObjectURL(new Blob([JSON.stringify(data, null, 2)], { type: "application/json" })), link = h("a", { href: url, download: filename }); document.body.append(link); link.click(); link.remove(); setTimeout(() => URL.revokeObjectURL(url), 1000);
+}
+function personalBackupPanel(onImported) {
+  const status = h("p", { role: "status" }), apply = h("input", { type: "checkbox" }), file = h("input", { type: "file", accept: ".json,application/json", "aria-label": "בחירת קובץ גיבוי אישי" }); let pending = null;
+  const importButton = h("button", { type: "button", class: "btn", disabled: true, onclick: () => {
+    try { const result = personalBackupImport(pending, apply.checked); status.textContent = `הגיבוי יובא: ${result.notes} רשומות חדשות, ${result.sources} מקורות ו־${result.news} פרסומים. רשומות קיימות נשמרו.`; pending = null; importButton.disabled = true; file.value = ""; onImported?.(); }
+    catch (e) { status.textContent = e.message === "partial-import" ? "הייבוא נעצר ולא ניתן היה לשחזר את כל המצב הקודם. הורד עותק גולמי של הנתונים ושמור גם את קובץ הגיבוי המקורי." : /limit/.test(e.message) ? "המיזוג עובר את מגבלת הרשומות או הסביבות. לא בוצעו שינויים; אפשר לייצא את המידע הקיים ולפנות מקום." : "הייבוא לא בוצע. הקובץ אינו תקין או שהשמירה בדפדפן אינה זמינה. הנתונים הקיימים נשמרו."; }
+  } }, "מיזוג הגיבוי");
+  file.addEventListener("change", async () => {
+    pending = null; importButton.disabled = true;
+    try { const chosen = file.files?.[0]; if (!chosen) return; if (chosen.size > 10 * 1024 * 1024) throw Error("size"); const data = JSON.parse(await chosen.text()), clean = personalBackupValidate(data); pending = data; importButton.disabled = false; status.textContent = `הקובץ מוכן: ${clean.notes.length} רשומות, ${clean.sources.length} מקורות ו־${clean.news.saved.length} פרסומים. לחץ על ׳מיזוג הגיבוי׳ כדי לייבא.`; }
+    catch (_) { status.textContent = "הקובץ לא נקרא. בחר גיבוי אישי של חברותא בגודל עד 10MB. לא בוצעו שינויים."; }
+  });
+  return h("details", { class: "personal-backup no-print" }, h("summary", null, "גיבוי והעברה למכשיר אחר"), h("p", null, "הגיבוי כולל את המחברת, המקורות השמורים, הפרסומים לקריאה בהמשך, מיקום הקריאה והעדפות התצוגה. הקובץ נשמר אצלך; אין סנכרון אוטומטי בין מכשירים."),
+  h("div", { class: "notebook-actions" }, h("button", { type: "button", class: "btn", onclick: () => { try { personalDownload(personalBackupData(), "chavruta-personal-backup-" + new Date().toISOString().slice(0, 10) + ".json"); status.textContent = "קובץ הגיבוי הוכן להורדה."; } catch (_) { status.textContent = "לא ניתן להכין גיבוי רגיל. אפשר להוריד עותק גולמי לשחזור."; } } }, "הורדת גיבוי אישי"), h("button", { type: "button", class: "linkbtn", onclick: () => { try { const keys = [NOTEBOOK_KEY, SOURCE_SAVED_KEY, NEWS_PERSONAL_KEY, "chavruta-reading-preferences-v1", ...S.core.docs.map(x => "chavruta-pos:" + x.id)]; personalDownload({ format: "chavruta-raw-recovery", values: Object.fromEntries(keys.map(k => [k, localStorage.getItem(k)])) }, "chavruta-raw-recovery.json"); status.textContent = "עותק גולמי הוכן להורדה. הוא מיועד לשחזור ואינו קובץ ייבוא רגיל."; } catch (_) { status.textContent = "אין גישה לנתוני הדפדפן."; } } }, "הורדת עותק גולמי לשחזור")),
+  h("h3", null, "ייבוא גיבוי"), file, h("label", { class: "backup-reading-option" }, apply, " להחיל גם את העדפות הקריאה מהקובץ ולמזג סביבות שמורות"), h("p", { class: "card-note" }, "הערות ומקורות מתמזגים. גרסאות שונות של הערה נשמרות בנפרד. מקום קריאה חדש יותר נשמר."), importButton, status);
+}
+
+/* Annotation overlays use DOM Ranges; the original wording and links stay intact. */
+const notebookMounts = new Set();
+function notebookText(root) {
+  const nodes = []; let raw = "";
+  const visit = node => {
+    if (raw.length >= 400000) return;
+    if (node.nodeType === 3) { const text = node.textContent.slice(0, 400000 - raw.length); nodes.push({ node, start: raw.length, end: raw.length + text.length }); raw += text; return; }
+    if (node.nodeType !== 1 || node.matches("sup,button,.no-print,.mnote,[data-reading-ui],.part-tools,.topic-chips")) return;
+    for (const child of node.childNodes) visit(child);
+  }; visit(root); return { raw, nodes };
+}
+function notebookRange(index, location) {
+  const first = index.nodes.find(x => location.start >= x.start && location.start < x.end), last = index.nodes.find(x => location.end > x.start && location.end <= x.end);
+  if (!first || !last) return null;
+  const range = document.createRange(); range.setStart(first.node, location.start - first.start); range.setEnd(last.node, location.end - last.start); return range;
+}
+function notebookPaint() {
+  if (!window.CSS?.highlights || typeof Highlight === "undefined") return;
+  const colors = Object.fromEntries(Object.keys(NOTE_COLORS).map(k => [k, []])); let rows;
+  try { rows = notebookRows(); } catch (_) { for (const color of Object.keys(NOTE_COLORS)) CSS.highlights.delete("notebook-" + color); return; }
+  const indexes = new Map();
+  for (const mount of notebookMounts) {
+    if (!mount.root.isConnected) { notebookMounts.delete(mount); continue; }
+    for (const row of rows.filter(x => mount.matches(x.anchor))) {
+      const root = row.anchor.kind === "biur" && row.anchor.block ? mount.root.querySelector("#" + CSS.escape(row.anchor.block)) : mount.root;
+      if (!root) continue;
+      if (!indexes.has(root)) indexes.set(root, notebookText(root));
+      const index = indexes.get(root), found = notebookLocate(index.raw, row.anchor);
+      const range = found && notebookRange(index, found); if (range) colors[row.color].push(range);
+    }
+  }
+  for (const [color, ranges] of Object.entries(colors)) CSS.highlights.set("notebook-" + color, new Highlight(...ranges));
+}
+window.addEventListener("notebookchange", notebookPaint);
+window.addEventListener("notebookpaint", notebookPaint);
+function notebookSelection(root, base) {
+  const selection = getSelection(); if (!selection?.rangeCount || selection.isCollapsed) return { ...base, quote: "" };
+  const range = selection.getRangeAt(0);
+  if (!root.contains(range.startContainer) || !root.contains(range.endContainer)) return { ...base, quote: "" };
+  const startElement = range.startContainer.nodeType === 1 ? range.startContainer : range.startContainer.parentElement;
+  const block = base.kind === "biur" ? startElement.closest("p[id],li[id],blockquote[id],td[id],section.part") : null;
+  const scope = block?.contains(range.endContainer) ? block : root;
+  const index = notebookText(scope), selected = index.nodes.filter(x => range.intersectsNode(x.node));
+  if (!selected.length) return { ...base, quote: "" };
+  const first = selected[0], last = selected[selected.length - 1];
+  const start = first.start + (range.startContainer === first.node ? range.startOffset : 0), end = last.start + (range.endContainer === last.node ? range.endOffset : last.node.length);
+  const quote = index.raw.slice(start, end); if (quote.length > 2000) throw Error("selection-too-long");
+  return { ...base, ...(base.kind === "biur" ? { block: scope === root ? "" : scope.id, part: startElement.closest("section.part")?.dataset.part || base.part } : {}), quote, start, end, prefix: index.raw.slice(Math.max(0, start - 60), start), suffix: index.raw.slice(end, end + 60) };
+}
+function notebookEditor(anchor, existing, afterSave) {
+  const opener = document.activeElement;
+  const dialog = h("dialog", { class: "notebook-editor no-print", "aria-labelledby": "notebook-editor-title", dir: "rtl" });
+  const text = h("textarea", { id: "notebook-note-text", rows: "7", maxlength: "8000", placeholder: "מחשבה, שאלה או נקודה לחזרה…" }, existing?.text || "");
+  let color = existing?.color || "gold";
+  const colors = h("div", { class: "notebook-colors", role: "group", "aria-label": "צבע הסימון" });
+  for (const [key, name] of Object.entries(NOTE_COLORS)) colors.append(h("button", { type: "button", class: "note-color note-" + key, "aria-label": name, "aria-pressed": key === color, onclick: () => { color = key; for (const b of colors.children) b.setAttribute("aria-pressed", String(b.getAttribute("aria-label") === name)); } }, name));
+  const error = h("p", { role: "alert" });
+  const form = h("form", { onsubmit: e => {
+    e.preventDefault(); if (!text.value.trim() && !anchor.quote) { error.textContent = "יש לכתוב הערה או לבחור קטע לסימון."; text.focus(); return; }
+    try {
+      const rows = notebookRows(), now = Date.now();
+      const record = notebookRecord({ id: existing?.id || notebookID(), anchor, text: text.value.trim(), color, created: existing?.created || now, updated: now });
+      if (!record) throw Error("invalid-note");
+      const at = existing && rows.findIndex(x => x.id === existing.id);
+      if (existing && at >= 0) rows[at] = record; else rows.unshift(record);
+      notebookWrite(rows); dialog.close(); toast("נשמר במחברת הלימוד"); afterSave?.();
+    } catch (e) { error.textContent = e.message === "notebook-limit" ? "המחברת מוגבלת ל־500 רשומות. אפשר לייצא גיבוי ולהסיר רשומות." : "ההערה לא נשמרה. השמירה בדפדפן אינה זמינה או שנתוני המחברת אינם תקינים. הטקסט שלך נשאר כאן להעתקה."; }
+  } }, h("h2", { id: "notebook-editor-title" }, existing ? "עריכת הערה אישית" : "הערה אישית"), h("p", { class: "muted" }, anchor.title), anchor.quote ? h("blockquote", { class: "notebook-quote" }, anchor.quote) : h("p", { class: "card-note" }, "ההערה תקושר למקום הקריאה הנוכחי. לסימון מדויק אפשר לבחור מילים לפני פתיחת ההערה."),
+  h("label", { for: "notebook-note-text" }, "ההערה שלי"), text, colors, h("p", { class: "card-note" }, "נשמר בדפדפן הזה. מומלץ להוריד גיבוי מהמחברת."), error,
+  h("div", { class: "notebook-actions" }, h("button", { class: "btn", type: "submit" }, "שמירה במחברת"), h("button", { class: "btn", type: "button", onclick: () => dialog.close() }, "ביטול")));
+  dialog.append(form); document.body.append(dialog); dialog.addEventListener("close", () => { dialog.remove(); opener?.isConnected && opener.focus({ preventScroll: true }); }, { once: true }); dialog.showModal(); text.focus();
+}
+function notebookControl(root, getBase) {
+  let captured;
+  const button = h("button", { class: "btn sm no-print", type: "button", onpointerdown: () => { try { captured = notebookSelection(root, getBase()); } catch (_) { captured = null; } }, onclick: () => {
+    try { const anchor = captured || notebookSelection(root, getBase()); captured = null; notebookEditor(anchor); }
+    catch (_) { toast("אפשר לסמן עד 2,000 תווים בכל רשומה. בחר קטע קצר יותר."); }
+  } }, "הערה אישית");
+  return button;
+}
+function notebookMount(root, base) {
+  const matches = a => a.kind === base.kind && (a.kind === "biur" ? a.doc === base.doc : a.url === base.url);
+  const mount = { root, matches }; notebookMounts.add(mount);
+  const getBase = () => {
+    if (base.kind !== "biur") return base;
+    const a = captureAnchor(root); return { ...base, block: a.id || "", part: a.part || "" };
+  };
+  const floating = h("div", { class: "notebook-selection no-print", hidden: true }, notebookControl(root, getBase)); root.parentNode.append(floating);
+  const selected = () => { const s = getSelection(); floating.hidden = !s?.rangeCount || s.isCollapsed || !root.contains(s.anchorNode) || !root.contains(s.focusNode) || !!document.querySelector(".notebook-editor[open]"); };
+  document.addEventListener("selectionchange", selected);
+  notebookPaint();
+  return () => { document.removeEventListener("selectionchange", selected); floating.remove(); notebookMounts.delete(mount); notebookPaint(); };
+}
+function notebookSourceBase(reader) { return { kind: "source", title: String(reader.info.title || "מקור").slice(0, 300), url: reader.original?.href || reader.info.url, quote: "" }; }
+function notebookSourceRestore(reader, article) {
+  if (!reader.info.note) return;
+  try {
+    const note = notebookRows().find(x => x.id === reader.info.note && x.anchor.kind === "source" && x.anchor.url === article.dataset.sourceUrl);
+    if (!note) return;
+    const index = notebookText(article), found = notebookLocate(index.raw, note.anchor), range = found && notebookRange(index, found);
+    if (range) requestAnimationFrame(() => { const target = range.startContainer.parentElement; reader.body.scrollTop += target.getBoundingClientRect().top - reader.body.getBoundingClientRect().top - (reader.body.querySelector(".sr-find")?.offsetHeight || 0) - 24; notebookPaint(); });
+    else if (note.anchor.quote) article.before(h("p", { role: "status", class: "sr-notice" }, "הקטע המדויק שסימנת לא אותר בנוסח הנוכחי. ההערה נשמרת במחברת."));
+  } catch (_) {}
+}
+function notebookSourceControl(reader) {
+  return h("button", { class: "btn sm", type: "button", onclick: () => {
+    const selected = getSelection()?.anchorNode, element = selected?.nodeType === 1 ? selected : selected?.parentElement;
+    const article = element?.closest("article.sr-text") || reader.body.querySelector("article.sr-text:last-of-type"), base = { ...notebookSourceBase(reader), ...(element?.closest("article[data-source-url]") ? { url: element.closest("article[data-source-url]").dataset.sourceUrl } : {}) };
+    try { notebookEditor(article ? notebookSelection(article, base) : base); } catch (_) { toast("אפשר לסמן עד 2,000 תווים בכל רשומה."); }
+  } }, "הערה למקור");
+}
+function notebookOpen(row, opener) {
+  if (row.anchor.kind === "biur") { location.hash = mkHash(["biur", row.anchor.doc, row.anchor.part].filter(Boolean), { a: row.anchor.block, note: row.id }); }
+  else SourceReader.open({ title: row.anchor.title, url: row.anchor.url, quote: row.anchor.quote, note: row.id }, opener);
+}
+VIEWS.notebook = function () {
+  const main = $("#view"); main.className = "main page notebook-page"; main.replaceChildren(); document.title = "מחברת הלימוד שלי · חברותא";
+  main.append(h("h1", { class: "page-title" }, "מחברת הלימוד שלי"), h("p", { class: "lede" }, "המחשבות, השאלות והקטעים שסימנת. נשמרים בדפדפן הזה; גיבוי מאפשר להעביר אותם למכשיר אחר."));
+  const query = h("input", { type: "search", "aria-label": "חיפוש במחברת", placeholder: "חיפוש בהערות ובקטעים שסימנת" }), count = h("p", { role: "status" }), notice = h("p", { role: "status" }), list = h("div", { class: "notebook-list" });
+  main.append(personalBackupPanel(() => draw()), h("div", { class: "notebook-actions no-print" }, h("a", { class: "btn", href: mkHash(["saved"]) }, "המקורות שלי"), h("button", { type: "button", class: "btn", onclick: () => window.print() }, "הדפסת המחברת")), query, count, notice, list);
+  const draw = () => {
+    list.replaceChildren(); let rows;
+    try { rows = notebookRows(); } catch (_) { count.textContent = "לא ניתן לקרוא את המחברת. הנתונים הקיימים לא שונו. אפשר להוריד עותק גולמי דרך הגיבוי."; return; }
+    const term = sourceFold(query.value).text;
+    const shown = rows.filter(row => !term || sourceFold(row.anchor.title + " " + row.anchor.quote + " " + row.text).text.includes(term)).sort((a, b) => b.updated - a.updated);
+    count.textContent = shown.length + " רשומות" + (term ? " מתוך " + rows.length : "");
+    if (!shown.length) list.append(h("p", null, rows.length ? "אין רשומות התואמות לחיפוש." : "כדי להתחיל, סמן מילים בביאור או במקור ובחר ׳הערה אישית׳. אפשר גם לכתוב הערה ללא סימון."));
+    for (const row of shown) {
+      const open = h("button", { class: "linkbtn", type: "button", onclick: () => notebookOpen(row, open) }, row.anchor.kind === "biur" ? "חזרה למקום בביאור" : "פתיחת דף המקור");
+      list.append(h("article", { class: "notebook-entry note-" + row.color, "data-note-id": row.id }, h("p", { class: "muted" }, row.anchor.kind === "biur" ? "מתוך ביאור" : "מתוך מקור", " · ", new Date(row.updated).toLocaleDateString("he-IL")), h("h2", null, row.anchor.title), row.anchor.quote ? h("blockquote", null, row.anchor.quote) : null, row.text ? h("p", { class: "notebook-text" }, row.text) : null,
+      h("div", { class: "notebook-actions no-print" }, open, h("button", { class: "linkbtn", type: "button", onclick: () => notebookEditor(row.anchor, row, draw) }, "עריכה"), h("button", { class: "linkbtn", type: "button", onclick: () => {
+        try { notebookWrite(notebookRows().filter(x => x.id !== row.id)); draw(); notice.replaceChildren("הרשומה הוסרה. ", h("button", { class: "linkbtn", type: "button", onclick: () => { try { notebookWrite(notebookMerge(notebookRows(), [row])); draw(); notice.textContent = "הרשומה הוחזרה"; } catch (_) { notice.textContent = "לא ניתן להחזיר את הרשומה כעת."; } } }, "ביטול ההסרה")); } catch (_) { notice.textContent = "לא ניתן לעדכן את המחברת."; }
+      } }, "הסרה"))));
+    }
+  }; query.addEventListener("input", draw); draw(); window.scrollTo(0, 0);
 };
 
 /* חברותא · סמל הפריט, כרטיס הפריט וקפיצה אל המקום המדויק בביאור */
@@ -1504,7 +1923,7 @@ VIEWS.biurim.onMode = null;
 
 /* ---------- קורא ---------- */
 const RD = { doc: null, meta: null, data: null, art: null, cur: null, spy: null, onScroll: null, matches: [], sel: null, selEl: null };
-function cleanupReader() { RD.positionCleanup?.(); RD.positionCleanup = null; Tts.close(); RD.spy?.disconnect(); if (RD.onScroll) window.removeEventListener("scroll", RD.onScroll); RD.onScroll = null; Notes.hide?.(); Aside.detach(); $(".backpill")?.remove(); document.body.classList.remove("sheet-open"); }
+function cleanupReader() { RD.notebookCleanup?.(); RD.notebookCleanup = null; RD.positionCleanup?.(); RD.positionCleanup = null; Tts.close(); RD.spy?.disconnect(); if (RD.onScroll) window.removeEventListener("scroll", RD.onScroll); RD.onScroll = null; Notes.hide?.(); Aside.detach(); $(".backpill")?.remove(); document.body.classList.remove("sheet-open"); }
 
 function readingPositionTracker(d, art) {
   let timer;
@@ -1846,6 +2265,9 @@ VIEWS.biur = async function (rest, q, ctx) {
   const progress = h("div", { class: "progress no-print", "aria-hidden": "true" }, h("i"));
   main.className = "main reader";
   main.replaceChildren(progress, h("div", { class: "rd" }, rail, col, aside));
+  const noteBase = { kind: "biur", doc: d.id, part: "", block: "", title: String(d.title).slice(0, 300), quote: "" };
+  hero.append(h("nav", { class: "notebook-reader-tools no-print", "aria-label": "מחברת אישית" }, notebookControl(art, () => { const a = captureAnchor(art); return { ...noteBase, block: a.id || "", part: a.part || "" }; }), h("a", { href: mkHash(["notebook"]) }, "מחברת הלימוד שלי")));
+  RD.notebookCleanup = notebookMount(art, noteBase);
   Aside.render();
   requestAnimationFrame(() => rowToggles(art));
 
@@ -1870,6 +2292,9 @@ VIEWS.biur = async function (rest, q, ctx) {
 VIEWS.biur.onMode = function () { Notes.active = Notes.active; Aside.close(); Aside.render(); if (RD.sel && MODE === "links") Conn.show(RD.sel, { quiet: true }); if (RD.sel && MODE === "research") Dock.select(RD.sel, true); };
 
 function afterRender(d, partId, anchor, nid, first, hl) {
+  const noteId = R.cur.q.get("note");
+  if (noteId) { try { const note = notebookRows().find(x => x.id === noteId && x.anchor.kind === "biur" && x.anchor.doc === d.id); if (note) { const scope = note.anchor.block ? RD.art.querySelector("#" + CSS.escape(note.anchor.block)) : RD.art; if (scope) { const index = notebookText(scope), found = notebookLocate(index.raw, note.anchor), range = found && notebookRange(index, found); requestAnimationFrame(() => { const el = range?.startContainer.parentElement || scope; el.closest("details")?.setAttribute("open", ""); el.closest("tr")?.classList.add("open"); scrollToEl(el, true); notebookPaint(); toast(found ? "הקטע שסימנת במחברת" : note.anchor.quote ? "הסימון המדויק לא אותר; מוצג המקום המקושר. ההערה נשמרת במחברת." : "המקום המקושר להערה שלך"); }); return; } } } catch (_) {}
+  }
   const exId = R.cur.q.get("ex");
   if (exId) { const el = RD.art.querySelector(`[data-ex="${CSS.escape(exId)}"]`); if (el) { requestAnimationFrame(() => { el.closest("tr")?.classList.add("open"); scrollToEl(el, true); const nn = el.closest("[data-n]")?.dataset.n || RD.data.ex[exId]?.[3]; pick({ ex: exId, node: nn && getNode(nn) ? nn : null }, el); }); return; } }
   if (hl) { const sec = partId ? RD.art.querySelector(`section.part[data-part="${CSS.escape(partId)}"]`) : RD.art; if (sec && highlightWordsIn(sec, hl)) { const m = sec.querySelector("mark.sh"); if (m) { requestAnimationFrame(() => scrollToEl(m, false)); return; } } }
@@ -2808,6 +3233,8 @@ VIEWS.new = async function (rest, q, ctx) {
   try { W = await loadChunk("new"); } catch (_) { main.append(h("div", { class: "empty" }, h("b", null, "לא ניתן לטעון את המדור"), h("p", null, "אפשר לנסות שוב בעוד כמה רגעים."), h("button", { class: "btn", onclick: () => route() }, "ניסיון נוסף"))); return; }
   if (!ctx.alive()) return;
   const items = freshNewsItems(W), health = W.health || [];
+  let interests = []; try { interests = newsPersonalRead().terms; } catch (_) {}
+  let personalOnly = q.get("mine") === "1";
   const stale = newsTime(W.generated) == null || Date.now() - newsTime(W.generated) > 3 * 86400000;
   main.append(h("h1", { class: "page-title" }, "מה חדש בעולם החסידות"),
     h("p", { class: "lede" }, `מקורות של הרביים, ביאורים כתובים וגיליונות מ־${W.window || 30} הימים האחרונים. החדש ביותר מופיע ראשון; כל קישור מוביל לאתר המפרסם.`),
@@ -2830,18 +3257,22 @@ VIEWS.new = async function (rest, q, ctx) {
   const lang = h("select", { "aria-label": "סינון לפי שפה" }, h("option", { value: "" }, "כל השפות"), langs.map(id => h("option", { value: id }, NEWS_LANG[id] || id)));
   const count = h("p", { class: "news-count", role: "status", "aria-live": "polite" });
   const list = h("div", { class: "newlist" });
+  const personalToggle = h("button", { class: "btn sm", type: "button", onclick: () => { personalOnly = !personalOnly; draw(); } });
+  main.append(newsPersonalControls(terms => { interests = terms; personalOnly = terms.length > 0; draw(); }), h("div", { class: "notebook-actions no-print" }, personalToggle, h("a", { href: mkHash(["later"]) }, "לקריאה בהמשך")));
   const draw = () => {
+    personalToggle.textContent = personalOnly ? "הנושאים שלי" : "כל הפרסומים"; personalToggle.setAttribute("aria-pressed", String(personalOnly));
     source.value = f.source; lang.value = f.lang;
-    quietHash(mkHash(["new"], { ...(f.kind ? { k: f.kind } : {}), ...(f.source ? { src: f.source } : {}), ...(f.lang ? { lang: f.lang } : {}) }));
+    quietHash(mkHash(["new"], { ...(f.kind ? { k: f.kind } : {}), ...(f.source ? { src: f.source } : {}), ...(f.lang ? { lang: f.lang } : {}), ...(personalOnly ? { mine: "1" } : {}) }));
     bar.replaceChildren();
-    const scoped = filterNews(items, { ...f, kind: "" });
+    const available = personalOnly ? items.filter(i => newsInterestMatch(i, interests)) : items;
+    const scoped = filterNews(available, { ...f, kind: "" });
     for (const [kind, label] of [["", "הכול"], ["makor", "מקורות"], ["biur", "ביאורים"], ["gilyon", "גיליונות"]]) {
       const n = scoped.filter(i => !kind || i.k === kind).length;
       bar.append(h("button", { class: "fchip", "aria-pressed": f.kind === kind, onclick: () => { f.kind = kind; draw(); } }, label, h("small", null, n)));
     }
-    const shown = filterNews(items, f); count.textContent = `${shown.length} פריטים מוצגים מתוך ${items.length}`;
+    const shown = filterNews(available, f); count.textContent = `${shown.length} פריטים מוצגים מתוך ${items.length}`;
     list.replaceChildren();
-    if (!shown.length) list.append(h("div", { class: "empty" }, items.length ? "אין פריטים שמתאימים לסינון שבחרת." : "לא נמצאו כרגע פרסומים בחלון הזמן הזה.", h("button", { class: "btn", onclick: () => { f.kind = f.source = f.lang = ""; draw(); } }, "הצגת הכול")));
+    if (!shown.length) list.append(h("div", { class: "empty" }, personalOnly ? interests.length ? "אין פרסומים שמזכירים כרגע את הנושאים שלך." : "כדי לסנן, הוסף פרשה או נושא ב׳הפרשות והנושאים שלי׳." : items.length ? "אין פריטים שמתאימים לסינון שבחרת." : "לא נמצאו כרגע פרסומים בחלון הזמן הזה.", h("button", { class: "btn", onclick: () => { f.kind = f.source = f.lang = ""; personalOnly = false; draw(); } }, "הצגת הכול")));
     for (const i of shown) {
       const date = i.d ? "פורסם: " + newsDate(i.d) : "נמצא: " + newsDate(i.seen) + " · תאריך הפרסום לא ידוע";
       list.append(h("article", { class: "newitem", "data-news-id": i.id || i.u },
@@ -2849,7 +3280,7 @@ VIEWS.new = async function (rest, q, ctx) {
         h("h2", { class: "ni-t" }, i.pdf || (sourceTarget(i.u) && sourceTarget(i.u).kind !== "link") ? sourceLink({ title: i.t, url: i.pdf || i.u }, i.t, { dir: i.lang === "he" ? "rtl" : "auto" }) : h("a", { href: i.u, target: "_blank", rel: "noopener", dir: i.lang === "he" ? "rtl" : "auto" }, i.t, " ", icon("i-ext"))),
         i.checked === true && i.s ? h("p", { class: "ni-s" }, i.s) : null,
         i.stale ? h("p", { class: "card-note" }, "המקור לא היה זמין בבדיקה האחרונה; פרטי הפרסום נשמרו מבדיקה קודמת.") : null,
-        i.pdf ? sourceLink({ title: i.t, url: i.pdf }, "קריאת PDF כאן", { class: "btn sm" }) : null));
+        i.pdf ? sourceLink({ title: i.t, url: i.pdf }, "קריאת PDF כאן", { class: "btn sm" }) : null, newsSaveButton(i)));
     }
   };
   source.addEventListener("change", () => { f.source = source.value; draw(); });
