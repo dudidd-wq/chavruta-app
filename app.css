@@ -318,6 +318,32 @@ em, i:not([class]) { font-style: normal; }
 .switch[aria-checked="true"] i { inset-inline-start: calc(100% - 1.4rem + 2px); }
 
 /* ===== סרגל עליון ===== */
+.historynav { display: flex; align-items: center; gap: 2px; flex: none; }
+.history-arrow { display: inline-grid; place-items: center; width: 44px; height: 44px; border-radius: 999px; color: var(--ink-2); }
+.history-arrow svg { width: 20px; height: 20px; }
+.history-forward svg { transform: rotate(180deg); }
+.history-arrow:hover:enabled { background: var(--paper-2); color: var(--ink); }
+.history-arrow:disabled { opacity: .35; cursor: default; }
+.history-topics { display: none; align-items: center; gap: .4rem; min-height: 44px; color: var(--ink-2); text-decoration: none; padding-inline: .6rem; border-radius: 999px; font-size: .9rem; }
+.history-topics svg { width: 1.15rem; height: 1.15rem; }
+.history-topics[aria-current="page"] { color: var(--accent); background: var(--accent-soft); font-weight: 600; }
+.top .mainnav .nav-i[data-nav="topics"] .lbl { display: inline; }
+@media (max-width: 1699px) {
+  body.has-modes .top .nav-i .lbl, body.has-modes .top .tool .lbl { display: none; }
+  body.has-modes .top .nav-i { padding: .45rem .55rem; }
+}
+@media (max-width: 1399px) {
+  .top .nav-i .lbl { display: none; }
+  .top .nav-i { padding: .45rem .55rem; }
+}
+@media (max-width: 1199px) { .top .mode-btn .lbl { display: none; } .top .mode-btn { padding: .45rem .55rem; } }
+@media (max-width: 1100px) {
+  :root { --top-h: 6.1rem; }
+  .top { flex-wrap: wrap; gap: .2rem .35rem; }
+  .historynav { order: 10; flex: 1 0 100%; border-top: 1px solid var(--rule-2); }
+  .history-topics { display: inline-flex; margin-inline-start: auto; }
+  .top .mainnav [data-nav="topics"] { display: none; }
+}
 .modesw { display: inline-flex; padding: 3px; gap: 2px; border-radius: 999px; background: var(--paper-2); border: 1px solid var(--rule); margin-inline: auto; }
 .top .modesw { margin-inline: auto; }
 .mode-btn { display: inline-flex; align-items: center; gap: .45rem; padding: .38rem .95rem .38rem .85rem; border-radius: 999px; font-size: .94rem; font-weight: 600; color: var(--ink-3); transition: background .15s, color .15s; }

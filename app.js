@@ -443,11 +443,27 @@ const NAVITEMS = [
   { id: "home", icon: "i-read", label: "פרשיות", href: () => mkHash(["home"]) },
   { id: "sources", icon: "i-list", label: "מקורות", href: () => mkHash(["sources"]) },
   { id: "tree", icon: "i-tree", label: "עץ הידע", href: () => mkHash(["tree"]) },
+  { id: "topics", icon: "i-toc", label: "מפתח עניינים", href: () => mkHash(["topics"]) },
   { id: "daily", icon: "i-sun", label: "לימוד יומי", href: () => mkHash(["daily"]) },
   { id: "new", icon: "i-flag", label: "מה חדש", href: () => mkHash(["new"]) },
   { id: "search", icon: "i-search", label: "חיפוש", act: () => openPalette(), kbd: "/" },
 ];
-function viewToNav(v) { return { home: "home", biurim: "home", biur: "home", parsha: "home", sources: "sources", item: "sources", search: "search", new: "new", daily: "daily", tree: R.cur.seg[1] === "p" ? "home" : "tree", status: "", coverage: "", closure: "" }[v] ?? ""; }
+function viewToNav(v) { return { home: "home", biurim: "home", biur: "home", parsha: "home", sources: "sources", item: "sources", topics: "topics", search: "search", new: "new", daily: "daily", tree: R.cur.seg[1] === "p" ? "home" : "tree", status: "", coverage: "", closure: "" }[v] ?? ""; }
+function buildHistoryNavigation() {
+  const host = $("#historynav"); if (!host || host.dataset.ready) return;
+  host.dataset.ready = "1";
+  const back = h("button", { type: "button", class: "history-arrow", "aria-label": "אחורה לעמוד הקודם", title: "אחורה לעמוד הקודם", onclick: () => history.back() }, icon("i-back"));
+  const forward = h("button", { type: "button", class: "history-arrow history-forward", "aria-label": "קדימה לעמוד הבא", title: "קדימה לעמוד הבא", onclick: () => history.forward() }, icon("i-back"));
+  const sync = () => {
+    const nav = window.navigation;
+    back.disabled = typeof nav?.canGoBack === "boolean" ? !nav.canGoBack : history.length < 2;
+    forward.disabled = typeof nav?.canGoForward === "boolean" ? !nav.canGoForward : false;
+  };
+  host.append(back, forward, h("a", { class: "history-topics", "data-nav": "topics", href: mkHash(["topics"]) }, icon("i-toc"), "מפתח עניינים"));
+  window.navigation?.addEventListener?.("currententrychange", sync);
+  for (const event of ["hashchange", "popstate", "pageshow"]) window.addEventListener(event, sync);
+  sync();
+}
 function modeBtn(m) {
   return h("button", { class: "mode-btn", role: "radio", "aria-checked": m.id === MODE, "data-mode": m.id, title: `${m.hint} (${m.n})`, onclick: () => setMode(m.id) }, icon(m.icon), h("span", { class: "lbl" }, m.label));
 }
@@ -479,6 +495,7 @@ function buildParshaSel() {
   document.addEventListener("keydown", e => { if (e.key === "Escape" && d.open) { d.open = false; d.querySelector("summary")?.focus(); } });
 }
 function buildChrome() {
+  buildHistoryNavigation();
   const nav = $("#mainnav"); nav.textContent = "";
   for (const it of NAVITEMS) nav.append(h(it.act ? "button" : "a", { class: "nav-i", "data-nav": it.id, href: it.act ? null : it.href(), onclick: it.act ? it.act : null, title: it.kbd ? "קיצור: " + it.kbd : it.label, "aria-label": it.label }, icon(it.icon), h("span", { class: "lbl", "aria-hidden": "true" }, it.label)));
   const bn = $("#bn"); if (bn) { bn.textContent = ""; for (const it of NAVITEMS) bn.append(h(it.act ? "button" : "a", { class: "bn-i", "data-nav": it.id, href: it.act ? null : it.href(), onclick: it.act ? it.act : null }, icon(it.icon), h("span", null, it.label))); }
@@ -491,7 +508,7 @@ function buildChrome() {
 }
 function updateChrome() {
   const cur = viewToNav(R.view);
-  $$(".nav-i, .bn-i").forEach(a => { if (a.dataset.nav === cur) a.setAttribute("aria-current", "page"); else a.removeAttribute("aria-current"); });
+  $$(".nav-i, .bn-i, .history-topics").forEach(a => { if (a.dataset.nav === cur) a.setAttribute("aria-current", "page"); else a.removeAttribute("aria-current"); });
   updateModeUI();
   document.body.dataset.view = R.view || "";
   document.body.classList.toggle("has-modes", R.view === "biur" || R.view === "biurim" || (R.view === "parsha" && hasDocs(R.cur.seg[1])));
