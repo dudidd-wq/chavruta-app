@@ -281,7 +281,7 @@ function openReadingPreferences(options = {}) {
   const markup = "    <section class=\"reading-preferences-content\" id=\"reading-preferences-content\" aria-labelledby=\"chv-preferences-title\">\n      <div class=\"chv-preferences-heading\"><div><h2 id=\"chv-preferences-title\">סביבת הלימוד שלי</h2><p class=\"chv-pref-status\" role=\"status\" aria-live=\"polite\">כל שינוי מופיע מיד בקריאה.</p><p class=\"chv-pref-error\" role=\"alert\" hidden></p></div><div class=\"chv-heading-actions\"><button type=\"button\" data-action=\"type\">סיום התאמה</button><button type=\"button\" data-action=\"quick-start\">התאמה מהירה</button></div></div>\n      <section class=\"chv-quick-preview\" aria-label=\"תצוגת קריאה מקדימה\" hidden><p>אפשר ללמוד בקצב שלך, בגופן ובצבעים שנוחים לך. התצוגה מתעדכנת עם כל בחירה.</p></section>\n      <div class=\"chv-pref-columns\">\n        <details open><summary>אותיות וריווח</summary><div class=\"chv-pref-fields\">\n          <label class=\"chv-quick-control\">גופן הקריאה<select data-pref=\"family\"><option value=\"frank\">פרנק ריהל ליברה</option><option value=\"assistant\">אסיסטנט</option><option value=\"arial\">Arial — מהמכשיר</option><option value=\"david\">David — אם מותקן</option><option value=\"narkisim\">Narkisim — אם מותקן</option><option value=\"times\">Times New Roman — אם מותקן</option></select></label>\n          <label class=\"chv-quick-control\" for=\"chv-pref-font\">גודל האות <output aria-hidden=\"true\" data-value=\"font\">21</output><input type=\"range\" min=\"16\" max=\"36\" step=\"1\" value=\"21\" data-setting=\"font\" data-pref=\"font\" id=\"chv-pref-font\"></label>\n          <label>משקל האות<select data-pref=\"weight\"><option value=\"400\">רגיל</option><option value=\"500\">מודגש מעט</option></select></label>\n          <label for=\"chv-pref-leading\">מרווח בין שורות <output aria-hidden=\"true\" data-value=\"leading\">1.9</output><input type=\"range\" min=\"1.35\" max=\"2.5\" step=\"0.05\" value=\"1.9\" data-pref=\"leading\" id=\"chv-pref-leading\"></label>\n          <label for=\"chv-pref-paragraph\">מרווח בין פסקאות <output aria-hidden=\"true\" data-value=\"paragraph\">1</output><input type=\"range\" min=\"0.4\" max=\"2.5\" step=\"0.1\" value=\"1\" data-pref=\"paragraph\" id=\"chv-pref-paragraph\"></label>\n          <label for=\"chv-pref-word\">מרווח בין מילים <output aria-hidden=\"true\" data-value=\"word\">0</output><input type=\"range\" min=\"0\" max=\"0.5\" step=\"0.025\" value=\"0\" data-pref=\"word\" id=\"chv-pref-word\"></label>\n          <label for=\"chv-pref-letter\">מרווח בין אותיות <output aria-hidden=\"true\" data-value=\"letter\">0</output><input type=\"range\" min=\"0\" max=\"0.12\" step=\"0.01\" value=\"0\" data-pref=\"letter\" id=\"chv-pref-letter\"></label>\n          <label>יישור הטקסט<select data-pref=\"alignment\"><option value=\"justify\">לשני הצדדים</option><option value=\"right\">לימין</option></select></label>\n        </div></details>\n        <details><summary>צבעים ותאורה</summary><div class=\"chv-pref-fields\">\n          <label class=\"chv-quick-control\">תאורה<select data-pref=\"theme\"><option value=\"system\">לפי המכשיר</option><option value=\"light\">בהירה</option><option value=\"dark\">כהה</option></select></label>\n          <div class=\"chv-pref-wide chv-quick-control\"><span>ערכת צבעים</span><div class=\"chv-palette-choices\" role=\"group\" aria-label=\"ערכת צבעים\"><button type=\"button\" data-palette=\"sefer\" aria-pressed=\"true\" >ספר</button><button type=\"button\" data-palette=\"techelet\" aria-pressed=\"false\" >תכלת</button><button type=\"button\" data-palette=\"zayit\" aria-pressed=\"false\" >זית</button><button type=\"button\" data-palette=\"dyo\" aria-pressed=\"false\" >ניגודיות</button></div></div>\n          <p class=\"chv-pref-caption chv-pref-wide\">הצבעים האישיים נשמרים בנפרד לתאורה בהירה וכהה. בחירת ערכה מחליפה את הצבעים האישיים.</p>\n          <label class=\"chv-color-field\">רקע הקריאה<input type=\"color\" data-color=\"paper\" value=\"#faf7f0\"></label>\n          <label class=\"chv-color-field\">צבע האותיות<input type=\"color\" data-color=\"ink\" value=\"#26211b\"></label>\n          <label class=\"chv-color-field\">קישורים והדגשות<input type=\"color\" data-color=\"accent\" value=\"#76283a\"></label>\n          <label class=\"chv-color-field\">רקע המקור<input type=\"color\" data-color=\"surface\" value=\"#fffdf9\"></label>\n          <label class=\"chv-color-field\">רקע הציטוט הנבחר<input type=\"color\" data-color=\"soft\" value=\"#f1e3e1\"></label>\n          <div class=\"chv-contrast chv-pref-wide\"><span class=\"chv-contrast-text\" aria-live=\"polite\"></span><button type=\"button\" data-personal=\"repair-contrast\"  hidden>שיפור ניגודיות</button></div>\n        </div></details>\n        <details><summary>פריסה ומקורות</summary><div class=\"chv-pref-fields\">\n          <label for=\"chv-pref-width\">רוחב שורת הקריאה <output aria-hidden=\"true\" data-value=\"width\">66 תווים בקירוב</output><input type=\"range\" min=\"40\" max=\"100\" step=\"2\" value=\"66\" data-pref=\"width\" id=\"chv-pref-width\"></label>\n          <label for=\"chv-pref-margin\">שוליים <output aria-hidden=\"true\" data-value=\"margin\">30</output><input type=\"range\" min=\"12\" max=\"64\" step=\"2\" value=\"30\" data-pref=\"margin\" id=\"chv-pref-margin\"></label>\n          <label>פתיחת מקור<select data-pref=\"sourcePlace\"><option value=\"auto\">לצד הטקסט, ובנייד מתחת לציטוט</option><option value=\"inline\">תמיד מתחת לציטוט</option></select></label>\n          <label class=\"chv-check\"><input type=\"checkbox\" data-pref=\"toc\" checked> תוכן עניינים</label>\n          <label class=\"chv-check\"><input type=\"checkbox\" data-pref=\"focus\"> מיקוד בקריאה</label>\n          <label class=\"chv-check\"><input type=\"checkbox\" data-pref=\"quoteTint\" checked> רקע לאזורי ציטוט</label>\n          <label class=\"chv-check chv-pref-wide\"><input type=\"checkbox\" data-pref=\"sourceLinked\" checked> אותם גופן, גודל וריווח גם במקור</label>\n          <div class=\"chv-source-prefs chv-pref-wide\" hidden><label>גופן המקור<select data-pref=\"sourceFamily\"><option value=\"frank\">פרנק ריהל ליברה</option><option value=\"assistant\">אסיסטנט</option><option value=\"arial\">Arial — מהמכשיר</option><option value=\"david\">David — אם מותקן</option><option value=\"narkisim\">Narkisim — אם מותקן</option><option value=\"times\">Times New Roman — אם מותקן</option></select></label><label for=\"chv-pref-sourceFont\">גודל המקור <output aria-hidden=\"true\" data-value=\"sourceFont\">20</output><input type=\"range\" min=\"16\" max=\"36\" step=\"1\" value=\"20\" data-pref=\"sourceFont\" id=\"chv-pref-sourceFont\"></label><label for=\"chv-pref-sourceLeading\">מרווח שורות במקור <output aria-hidden=\"true\" data-value=\"sourceLeading\">1.85</output><input type=\"range\" min=\"1.35\" max=\"2.5\" step=\"0.05\" value=\"1.85\" data-pref=\"sourceLeading\" id=\"chv-pref-sourceLeading\"></label></div>\n        </div></details>\n        <details><summary>הסביבות השמורות שלי</summary><div class=\"chv-pref-fields\">\n          <label class=\"chv-pref-wide\">שם לסביבה<input type=\"text\" class=\"chv-profile-name\" maxlength=\"40\" placeholder=\"למשל: לימוד ערב\"></label>\n          <button type=\"button\" data-personal=\"save-profile\" >שמירת סביבה חדשה</button>\n          <label class=\"chv-pref-wide\">סביבה שמורה<select class=\"chv-profile-select\"><option value=\"\">בחירת סביבה</option></select></label>\n          <div class=\"chv-pref-actions chv-pref-wide\"><button type=\"button\" data-personal=\"update-profile\"  disabled>עדכון הסביבה שנבחרה</button><button type=\"button\" data-personal=\"delete-profile\"  disabled>מחיקה</button></div>\n          <div class=\"chv-pref-actions chv-pref-wide\"><button type=\"button\" data-personal=\"export\" >ייצוא העדפות</button><label class=\"chv-import\">ייבוא העדפות<input type=\"file\" accept=\"application/json,.json\" class=\"chv-import-file\"></label></div>\n          <p class=\"chv-pref-caption chv-pref-wide\">השמירה היא בדפדפן הזה. להעברה למכשיר אחר אפשר לייצא ולייבא את ההעדפות.</p>\n        </div></details>\n      </div>\n      <div class=\"chv-quick-actions\" hidden><button type=\"button\" data-action=\"type\">נוח לי, אפשר ללמוד</button><button type=\"button\" data-action=\"all-settings\">כל אפשרויות ההתאמה</button><p class=\"chv-pref-caption\">ההעדפות נשמרות בדפדפן הזה. אפשר לחזור להתאמה דרך הכפתור שבראש האתר.</p></div>\n      <div class=\"chv-preferences-footer\"><button type=\"button\" data-personal=\"reset\" >חזרה לעיצוב המקורי</button><button type=\"button\" data-personal=\"undo-reset\"  hidden>ביטול האיפוס</button><span>נוסח הלימוד נשאר כפי שהוא.</span></div>\n    </section>\n";
   dialog.append(h("div", { html: markup }));
   const shortcuts = h("nav", { class: "reading-shortcuts", "aria-label": "מצב לימוד וקישורי האתר" }, h("div", { class: "modesw sm", role: "radiogroup", "aria-label": "מצב עבודה" }, ...MODES.map(m => { const button = modeBtn(m); button.addEventListener("click", () => dialog.close()); return button; })));
-  for (const [label, target] of [["מחברת הלימוד והגיבוי", "notebook"], ["לקריאה בהמשך", "later"], ["המקורות שלי", "saved"], ["סטטוס הביאורים", "status"], ["כיסוי המפה", "coverage"], ["מפתח עניינים", "topics"], ["אודות ושיטת העבודה", "about"]]) shortcuts.append(h("a", { href: mkHash([target]), onclick: () => dialog.close() }, label));
+  for (const [label, target] of [["הלימוד שלי", "study"], ["מחברת הלימוד והגיבוי", "notebook"], ["לקריאה בהמשך", "later"], ["המקורות שלי", "saved"], ["סטטוס הביאורים", "status"], ["כיסוי המפה", "coverage"], ["מפתח עניינים", "topics"], ["אודות ושיטת העבודה", "about"]]) shortcuts.append(h("a", { href: mkHash([target]), onclick: () => dialog.close() }, label));
   shortcuts.append(h("button", { type: "button", onclick: () => { dialog.close(); requestAnimationFrame(showHelp); } }, "קיצורי מקלדת"));
   dialog.append(shortcuts);
   document.body.append(dialog);
@@ -774,7 +774,7 @@ function sourceLibraryPages(reader, initial) {
   const append = data => {
     if (!data.html) throw Error("no-page-text");
     const section = h("section", { class: "sr-next-page", "data-source-page": data.id }, h("h3", null, data.title || "הדף הבא"), h("a", { class: "linkbtn", href: data.url, target: "_blank", rel: "noopener noreferrer" }, "דף זה באתר המקור"));
-    const article = h("article", { class: "sr-text", dir: "rtl", "data-source-url": data.url }, sourceSafeHTML(sourceLibraryMarkup(data.html || ""), "sr-library-" + data.id)); section.append(article);
+    const article = h("article", { class: "sr-text", dir: "rtl", "data-source-url": data.url }, sourceSafeHTML(sourceLibraryMarkup(data.html || ""), "sr-library-" + data.id)); section.append(h("p", { class: "no-print" }, notebookContextControl(() => ({ kind: "source", title: data.title || reader.info.title, url: data.url }))), article);
     if (data.footnotes) section.append(h("section", { class: "sr-text sr-notes", "aria-label": "הערות המקור" }, h("h3", null, "הערות המקור"), sourceSafeHTML(sourceLibraryMarkup(data.footnotes, true), "sr-library-" + data.id)));
     holder.before(section);
     const pageReader = { body, quote: "", findTerm: null }; sourceTextFind(pageReader, article);
@@ -932,7 +932,7 @@ const SourceReader = {
     this.body = h("div", { class: "sr-body", tabindex: "0", "aria-label": "תוכן המקור" });
     const footer = h("footer", { class: "sr-footer" }, expand, h("button", { type: "button", class: "btn sm", onclick: () => openReadingPreferences() }, "התאמת הקריאה"));
     if (sourceURL(info.url)) footer.append(this.original = h("a", { class: "linkbtn", href: info.url, target: "_blank", rel: "noopener noreferrer" }, "לאתר המקור", icon("i-ext")));
-    footer.prepend(sourceSaveControl(this)); footer.append(notebookSourceControl(this)); footer.append(h("a", { class: "linkbtn", href: mkHash(["saved"]) }, "המקורות שלי"));
+    footer.prepend(sourceSaveControl(this)); footer.append(notebookSourceControl(this), notebookContextControl(() => notebookSourceBase(this))); footer.append(h("a", { class: "linkbtn", href: mkHash(["saved"]) }, "המקורות שלי"));
     d.append(this.bar, this.body, footer); document.body.append(d);
     d.addEventListener("cancel", e => { e.preventDefault(); this.close(); });
     d.addEventListener("click", e => { if (e.target === d) { const r = d.getBoundingClientRect(); if (e.clientX < r.left || e.clientX > r.right || e.clientY < r.top || e.clientY > r.bottom) this.close(); } });
@@ -1212,6 +1212,11 @@ function notebookWrite(rows) {
 }
 function notebookID() { return "n-" + (typeof crypto.randomUUID === "function" ? crypto.randomUUID() : Date.now().toString(36) + "-" + Math.random().toString(36).slice(2)); }
 function notebookSignature(row) { return JSON.stringify([row.anchor, row.text, row.color]); }
+function notebookContextRows(rows, base) {
+  if (base?.kind === "biur" && typeof base.doc === "string" && base.doc) return rows.filter(row => row.anchor.kind === "biur" && row.anchor.doc === base.doc);
+  const url = base?.kind === "source" && sourceURL(base.url)?.href;
+  return url ? rows.filter(row => row.anchor.kind === "source" && row.anchor.url === url) : [];
+}
 function notebookMerge(current, incoming) {
   const rows = current.map(notebookRecord), signatures = new Set(rows.map(notebookSignature)), ids = new Set(rows.map(x => x.id));
   for (const item of incoming) {
@@ -1481,16 +1486,45 @@ function notebookOpen(row, opener) {
   if (row.anchor.kind === "biur") { location.hash = mkHash(["biur", row.anchor.doc, row.anchor.part].filter(Boolean), { a: row.anchor.block, note: row.id }); }
   else SourceReader.open({ title: row.anchor.title, url: row.anchor.url, quote: row.anchor.quote, note: row.id }, opener);
 }
-VIEWS.notebook = function () {
+function notebookContextControl(getBase) {
+  const button = h("button", { type: "button", class: "btn sm", "aria-haspopup": "dialog", onclick: () => notebookContextOpen(getBase(), button) }, "ההערות שלי כאן");
+  return button;
+}
+function notebookContextOpen(base, opener) {
+  const dialog = h("dialog", { class: "notebook-editor notebook-context no-print", dir: "rtl", "aria-labelledby": "notebook-context-title" });
+  const close = h("button", { class: "btn sm", type: "button", onclick: () => dialog.close() }, "סגירה וחזרה ללימוד");
+  const count = h("p", { role: "status" }), list = h("div", { class: "notebook-list" });
+  dialog.append(h("h2", { id: "notebook-context-title" }, "ההערות שלי כאן"), h("p", null, base.title || ""), close, count, list, h("a", { href: mkHash(["notebook"], base.kind === "biur" ? { doc: base.doc } : { source: base.url }), onclick: () => dialog.close() }, "למחברת ולגיבוי"));
+  const draw = () => {
+    list.replaceChildren(); let rows;
+    try { rows = notebookContextRows(notebookRows(), base).sort((a, b) => b.updated - a.updated); }
+    catch (_) { count.textContent = "לא ניתן לקרוא את ההערות. הנתונים הקיימים לא שונו; אפשר להוריד עותק לשחזור במחברת."; return; }
+    count.textContent = rows.length + " הערות וסימונים";
+    if (!rows.length) list.append(h("p", null, "עוד אין הערות למקום הזה. אפשר לסמן מילים בלימוד או לבחור ׳הערה אישית׳."));
+    for (const row of rows) {
+      const open = h("button", { class: "linkbtn", type: "button", onclick: () => { dialog.close(); notebookOpen(row, opener); } }, "למקום המסומן");
+      list.append(h("article", { class: "notebook-entry note-" + row.color }, row.anchor.quote ? h("blockquote", null, row.anchor.quote) : null, row.text ? h("p", { class: "notebook-text" }, row.text) : null,
+        h("div", { class: "notebook-actions" }, h("button", { class: "btn sm", type: "button", onclick: () => notebookEditor(row.anchor, row) }, "עריכת ההערה"), open)));
+    }
+  };
+  const leave = () => dialog.close();
+  dialog.addEventListener("close", () => { window.removeEventListener("notebookchange", draw); window.removeEventListener("hashchange", leave); dialog.remove(); if (opener?.isConnected) opener.focus({ preventScroll: true }); }, { once: true });
+  window.addEventListener("notebookchange", draw); window.addEventListener("hashchange", leave);
+  document.body.append(dialog); draw(); dialog.showModal(); close.focus();
+}
+VIEWS.notebook = function (rest, q = new URLSearchParams()) {
   const main = $("#view"); main.className = "main page notebook-page"; main.replaceChildren(); document.title = "מחברת הלימוד שלי · חברותא";
   main.append(h("h1", { class: "page-title" }, "מחברת הלימוד שלי"), h("p", { class: "lede" }, "המחשבות, השאלות והקטעים שסימנת. נשמרים בדפדפן הזה; גיבוי מאפשר להעביר אותם למכשיר אחר."));
   const query = h("input", { type: "search", "aria-label": "חיפוש במחברת", placeholder: "חיפוש בהערות ובקטעים שסימנת" }), count = h("p", { role: "status" }), notice = h("p", { role: "status" }), list = h("div", { class: "notebook-list" });
   main.append(personalBackupPanel(() => draw()), h("div", { class: "notebook-actions no-print" }, h("a", { class: "btn", href: mkHash(["saved"]) }, "המקורות שלי"), h("button", { type: "button", class: "btn", onclick: () => window.print() }, "הדפסת המחברת")), query, count, notice, list);
+  const base = q.get("doc") ? { kind: "biur", doc: q.get("doc") } : q.get("source") ? { kind: "source", url: q.get("source") } : null;
+  if (base) main.append(h("p", { class: "notebook-scope" }, "מוצגות ההערות ", base.kind === "biur" ? "לביאור שנבחר." : "לדף המקור שנבחר.", " ", h("a", { href: mkHash(["notebook"]) }, "לכל המחברת")));
   const draw = () => {
     list.replaceChildren(); let rows;
     try { rows = notebookRows(); } catch (_) { count.textContent = "לא ניתן לקרוא את המחברת. הנתונים הקיימים לא שונו. אפשר להוריד עותק גולמי דרך הגיבוי."; return; }
     const term = sourceFold(query.value).text;
-    const shown = rows.filter(row => !term || sourceFold(row.anchor.title + " " + row.anchor.quote + " " + row.text).text.includes(term)).sort((a, b) => b.updated - a.updated);
+    const scoped = base ? notebookContextRows(rows, base) : rows;
+    const shown = scoped.filter(row => !term || sourceFold(row.anchor.title + " " + row.anchor.quote + " " + row.text).text.includes(term)).sort((a, b) => b.updated - a.updated);
     count.textContent = shown.length + " רשומות" + (term ? " מתוך " + rows.length : "");
     if (!shown.length) list.append(h("p", null, rows.length ? "אין רשומות התואמות לחיפוש." : "כדי להתחיל, סמן מילים בביאור או במקור ובחר ׳הערה אישית׳. אפשר גם לכתוב הערה ללא סימון."));
     for (const row of shown) {
@@ -1501,6 +1535,43 @@ VIEWS.notebook = function () {
       } }, "הסרה"))));
     }
   }; query.addEventListener("input", draw); draw(); window.scrollTo(0, 0);
+};
+
+/* Reuse saved reading positions; the study hub adds no browsing-history store. */
+function studyRecent(docs, position, now = Date.now(), limit = 20) {
+  const rows = [];
+  const safe = value => typeof value === "string" && value.length <= 180 && !/[\u0000-\u001f]/.test(value);
+  for (const doc of docs || []) {
+    if (!doc || !safe(doc.id) || !doc.id || doc.kind === "dorot") continue;
+    let p; try { p = position(doc.id); } catch (_) { continue; }
+    if (!p || !safe(p.id) || !p.id || !safe(p.part ?? "") || !Number.isSafeInteger(p.t) || p.t <= 0 || p.t > now + 86400000) continue;
+    rows.push({ d: doc, p: { id: p.id, part: p.part ?? "", t: p.t } });
+  }
+  return rows.sort((a, b) => b.p.t - a.p.t || a.d.id.localeCompare(b.d.id)).slice(0, Math.min(20, Math.max(0, limit)));
+}
+function studyHref(row) { return mkHash(["biur", row.d.id, row.p.part].filter(Boolean), { a: row.p.id }); }
+function studyDate(t) { return new Intl.DateTimeFormat("he-IL", { day: "numeric", month: "long", hour: "2-digit", minute: "2-digit", timeZone: "Asia/Jerusalem" }).format(t); }
+function studyLinks() {
+  return h("nav", { class: "study-links no-print", "aria-label": "הלימוד האישי שלי" },
+    [["study", "הלימוד שלי"], ["notebook", "מחברת וגיבוי"], ["saved", "המקורות שלי"], ["later", "לקריאה בהמשך"]].map(([view, title]) => h("a", { class: "btn sm", href: mkHash([view]) }, title)));
+}
+function studyShelf() {
+  const rows = studyRecent(S.core.docs, readPos, Date.now(), 3);
+  return h("section", { class: "h-sec study-shelf", "aria-labelledby": "study-shelf-title" },
+    h("h2", { id: "study-shelf-title" }, "הלימוד שלי"), studyLinks(),
+    rows.length ? h("ul", { class: "study-recent" }, rows.map(row => h("li", null, h("a", { href: studyHref(row) }, row.d.title), h("small", null, "מקום קריאה נשמר · " + studyDate(row.p.t))))) : h("p", null, "מקום הקריאה בביאור נשמר במהלך הלימוד. אפשר לחזור מכאן גם למחברת ולמקורות השמורים."));
+}
+VIEWS.study = function () {
+  const main = $("#view"); main.className = "main page study-page";
+  document.title = "הלימוד שלי · חברותא";
+  main.replaceChildren(h("h1", { class: "page-title" }, "הלימוד שלי"), h("p", { class: "lede" }, "חזרה למקום הקריאה, להערות ולמקורות ששמרת בדפדפן הזה."), studyLinks(), h("h2", null, "הביאורים האחרונים שקראת"), h("p", { class: "card-note" }, "עד 20 ביאורים שיש בהם מקום קריאה שמור. הרשימה אינה מעידה על השלמת הלימוד."));
+  const list = h("ol", { class: "study-recent" }), rows = studyRecent(S.core.docs, readPos);
+  for (const row of rows) list.append(h("li", null,
+    h("a", { href: studyHref(row) }, row.d.title), h("small", null, [row.d.p || S.home, studyDate(row.p.t)].filter(Boolean).join(" · ")),
+    h("a", { class: "linkbtn study-notes", href: mkHash(["notebook"], { doc: row.d.id }) }, "ההערות לביאור הזה")));
+  main.append(rows.length ? list : h("p", null, "עדיין אין מקום קריאה שמור. לאחר גלילה בביאור אפשר לחזור אליו מכאן."));
+  main.append(h("p", null, h("a", { href: mkHash(["notebook"]) }, "גיבוי והעברה למכשיר אחר")));
+  window.scrollTo(0, 0);
 };
 
 /* חברותא · סמל הפריט, כרטיס הפריט וקפיצה אל המקום המדויק בביאור */
@@ -1894,8 +1965,7 @@ function libraryList(host, o = {}) {
 }
 /** ״המשך מאיפה שעצרת״: הביאור שנקרא לאחרונה — בפרשה par, או בכל הפרשיות (בשער) */
 function continueLink(par) {
-  let best = null;
-  for (const d of S.core.docs) { if (d.kind === "dorot" || (par && (d.p || S.home) !== par)) continue; const p = readPos(d.id); if (p && (!best || p.t > best.p.t)) best = { d, p }; }
+  const best = studyRecent(S.core.docs.filter(d => !par || (d.p || S.home) === par), readPos, Date.now(), 1)[0];
   if (!best) return null;
   return h("a", { class: "continue", href: mkHash(["biur", best.d.id, best.p.part || ""].filter((x, i) => i < 2 || x), { a: best.p.id || "" }) }, h("small", null, "המשך מאיפה שעצרת"), h("b", null, trunc(best.d.title, 70)));
 }
@@ -2266,7 +2336,7 @@ VIEWS.biur = async function (rest, q, ctx) {
   main.className = "main reader";
   main.replaceChildren(progress, h("div", { class: "rd" }, rail, col, aside));
   const noteBase = { kind: "biur", doc: d.id, part: "", block: "", title: String(d.title).slice(0, 300), quote: "" };
-  hero.append(h("nav", { class: "notebook-reader-tools no-print", "aria-label": "מחברת אישית" }, notebookControl(art, () => { const a = captureAnchor(art); return { ...noteBase, block: a.id || "", part: a.part || "" }; }), h("a", { href: mkHash(["notebook"]) }, "מחברת הלימוד שלי")));
+  hero.append(h("nav", { class: "notebook-reader-tools no-print", "aria-label": "מחברת אישית" }, notebookControl(art, () => { const a = captureAnchor(art); return { ...noteBase, block: a.id || "", part: a.part || "" }; }), notebookContextControl(() => noteBase), h("a", { href: mkHash(["notebook"], { doc: d.id }) }, "מחברת הביאור הזה")));
   RD.notebookCleanup = notebookMount(art, noteBase);
   Aside.render();
   requestAnimationFrame(() => rowToggles(art));
@@ -4116,7 +4186,7 @@ VIEWS.home = async function (rest, q, ctx) {
       research: "שלשלת הדורות, מטריצת פסוק × דור, ומפת המקורות על ציר הזמן.",
     }[m.id]), h("kbd", { title: "קיצור מקלדת" }, m.n)))));
 
-  main.append(hero, readingSetupInvite(), parshiyot, trio, how);
+  main.append(hero, readingSetupInvite(), studyShelf(), parshiyot, trio, how);
   if (!ctx.keep) window.scrollTo(0, 0);
 };
 

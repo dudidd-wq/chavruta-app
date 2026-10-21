@@ -1354,6 +1354,14 @@ body.source-reader-open { overflow: hidden; }
 .notebook-page > input[type=search] { width: 100%; box-sizing: border-box; margin-top: 20px; padding: 12px; font: inherit; background: var(--card); color: var(--ink); border: 1px solid var(--rule); border-radius: 6px; }
 .personal-backup, .news-personal { border: 1px solid var(--rule); background: var(--card); border-radius: 8px; padding: 16px; margin-block: 20px; }.personal-backup summary, .news-personal summary { cursor: pointer; font-weight: 600; }.backup-reading-option { display: block; margin-block: 16px; }.personal-backup input[type=file] { max-width: 100%; }.news-personal form { display: flex; gap: 12px; flex-wrap: wrap; }.news-personal input { flex: 1; min-width: min(220px,100%); padding: 8px; font: inherit; color: var(--ink); background: var(--paper); border: 1px solid var(--rule); }.news-save { margin-top: 12px; }.news-save [role=status] { font-size: .85rem; }
 .notebook-reader-tools { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; margin-block: 16px; font: 14px var(--sans); }
+.study-links { display: flex; flex-wrap: wrap; gap: 10px; margin-block: 16px; }
+.study-recent { padding-inline-start: 24px; margin-block: 20px; }
+.study-recent li { margin-block: 14px; padding-block: 8px; overflow-wrap: anywhere; }
+.study-recent a { font-family: var(--serif); line-height: 1.6; }
+.study-recent small { display: block; margin-block: 4px; color: var(--ink-2); }
+.study-notes { font-family: var(--sans) !important; font-size: .9rem; }
+.notebook-context > .btn { position: sticky; top: 0; z-index: 1; background: var(--paper); }
+.notebook-scope { padding: 12px; border-inline-start: 3px solid var(--accent); }
 .sr-page-continuation { border-top: 1px solid var(--rule); margin-top: 30px; padding-top: 18px; }.sr-page-continuation > button { margin: 6px; }.sr-next-page { border-top: 2px solid var(--rule); margin-top: 30px; padding-top: 18px; }.sr-next-page h3 { font-family: var(--serif); }.sr-next-page > a { font-size: .85rem; }
 @media (max-width: 600px) { .notebook-editor { padding: 16px; }.notebook-entry { padding: 15px; }.notebook-actions .btn, .notebook-actions button, .note-color { min-height: 44px; }.personal-backup { padding: 12px; } }
 @media print { .notebook-page > input, .notebook-page > [role=status], .notebook-entry .muted { display: none; }.notebook-list { display: block; }.notebook-entry { break-inside: avoid; background: white; margin-block: 12pt; }.notebook-entry h2 { break-after: avoid; }.notebook-entry blockquote { font-size: 10pt; }.notebook-text { font-size: 11pt; orphans: 3; widows: 3; } }
