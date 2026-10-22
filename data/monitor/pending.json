@@ -1,5 +1,16 @@
 [
  {
+  "key": "8cb9ce81ae4c0022",
+  "source": "הוצאת קה״ת (חנות)",
+  "source_id": "kehot",
+  "title": "Siddur Pocket (No Tehillim) Flexi-Cover Classic Ed. 4 x 5½",
+  "url": "https://store.kehotonline.com/products.asp?dept=344",
+  "lang": "he",
+  "blurb": "",
+  "medium": "text",
+  "first_seen": "2026-10-22T05:10:35+00:00"
+ },
+ {
   "key": "eec3713c148b16bc",
   "source": "SIE Weekly",
   "source_id": "sie_weekly",
@@ -20,5 +31,16 @@
   "blurb": "",
   "medium": "bulletin",
   "first_seen": "2026-10-20T07:59:45+00:00"
+ },
+ {
+  "key": "d05959c90584762c",
+  "source": "Chabad.org — Torah Texts (מגזין)",
+  "source_id": "chabad_org_magazine",
+  "title": "Jewish News: New Emissaries to Historic Chassidic Town of Gomel, Belarus, Find Jews Ready to Dance By Shloimy Galperin",
+  "url": "https://www.chabad.org/article.asp?aid=7556614",
+  "lang": "en",
+  "blurb": "",
+  "medium": "news",
+  "first_seen": "2026-10-22T05:10:29+00:00"
  }
 ]
