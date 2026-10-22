@@ -77,99 +77,127 @@
  "06d6edfa51875e29": {
   "he": "מאמר באנגלית על שיחת דבר מלכות לפרשת לך לך, ובפרט סעיף י״ב. פתיחתו מציגה את הבטחת עשר הארצות לאברהם ואת ההבחנה בין שבע הארצות לשלוש הנוספות, ובהמשך נדונה עבודת המוחין.",
   "basis": "תוכן הדף",
-  "checked": false,
+  "checked": true,
   "drafted_at": "2026-10-21T05:56:28+00:00",
-  "source_url": "https://dvarmalchus770.org/2026/10/17/lech-lecho-conquering-the-3-lands-peacefully/"
+  "source_url": "https://dvarmalchus770.org/2026/10/17/lech-lecho-conquering-the-3-lands-peacefully/",
+  "reviewed_at": "2026-10-22T05:08:02+00:00"
  },
  "e3dbc4daea19669d": {
   "he": "מאמר באנגלית על שיחת דבר מלכות לפרשת נח תשנ״ב. בפתיחתו מוצג הקשר בין השלמת העבודה לקראת הגאולה לבין חשבון צדק אישי, איתור עניינים הדורשים תיקון ועשייתו מתוך שמחה.",
   "basis": "תוכן הדף",
-  "checked": false,
+  "checked": true,
   "drafted_at": "2026-10-21T05:56:28+00:00",
-  "source_url": "https://dvarmalchus770.org/2026/10/15/noach-5752-geuloh-is-dependent-only-on-moshiach-himself-3/"
+  "source_url": "https://dvarmalchus770.org/2026/10/15/noach-5752-geuloh-is-dependent-only-on-moshiach-himself-3/",
+  "reviewed_at": "2026-10-22T05:08:02+00:00"
  },
  "1cfe0fd9a96c0550": {
   "he": "מאמר כתוב באנגלית על שיחת נח תשנ״ב, השואל באיזה מובן ראה נח עולם חדש לאחר המבול. הפתיחה מציגה את הפסוק ואת דברי המדרש, ובהמשך נדונה ראיית העולם ומשמעות ההסתר האלוקי.",
   "basis": "תוכן הדף",
-  "checked": false,
+  "checked": true,
   "drafted_at": "2026-10-21T05:56:28+00:00",
-  "source_url": "https://dvarmalchus770.org/2026/10/10/noach-saw-a-new-world-3/"
+  "source_url": "https://dvarmalchus770.org/2026/10/10/noach-saw-a-new-world-3/",
+  "reviewed_at": "2026-10-22T05:08:02+00:00"
  },
  "19e1aa72f52db512": {
   "he": "גיליון שיחת השבוע 2077 לפרשת לך לך, תשפ״ז. בכותרותיו: ״סיפורי הניסיונות – מסר לדורות״ במדור שלחן שבת, המבוסס על שיחת הרבי; הציווי ״לך לך״; ״שלב חדש במסע״ במדור גאולהפדיה; והלכות מילה אחרי השקיעה.",
   "basis": "כותרות הגיליון",
-  "checked": false,
+  "checked": true,
   "drafted_at": "2026-10-21T05:56:28+00:00",
-  "source_url": "https://www.chabad.org.il/Magazines/Articles.asp?CategoryID=5171"
+  "source_url": "https://www.chabad.org.il/Magazines/Articles.asp?CategoryID=5171",
+  "reviewed_at": "2026-10-22T05:08:02+00:00"
  },
  "a34ea98fe5931929": {
   "he": "חוברת שבועית של ״דברי משיח״ ובה חלק שני מהתוועדות שבת פרשת נח תשמ״ג. לפי תיאור המפרסם, נוספו בה גם דברים מהיחידות לגבירים בז׳ בתשרי תנש״א, המתפרסמים לראשונה.",
   "basis": "תוכן הדף",
-  "checked": false,
+  "checked": true,
   "drafted_at": "2026-10-21T05:56:28+00:00",
-  "source_url": "https://hageula.com/news/press/28199.htm"
+  "source_url": "https://hageula.com/news/press/28199.htm",
+  "reviewed_at": "2026-10-22T05:08:02+00:00"
  },
  "2ace8d02342782c0": {
   "he": "תשורה ובה עלי הגהה של הרבי לשיחת שבת פרשת נח תשמ״ז. לפי תיאור המפרסם, ההגהות מופיעות בפרסום ראשון, והכתבה מקשרת לקובץ לקריאה ולהורדה.",
   "basis": "תיאור",
-  "checked": false,
+  "checked": true,
   "drafted_at": "2026-10-21T05:56:28+00:00",
-  "source_url": "https://hageula.com/news/press/28195.htm"
+  "source_url": "https://hageula.com/news/press/28195.htm",
+  "reviewed_at": "2026-10-22T05:08:02+00:00"
  },
  "6326245a15d75f90": {
   "he": "קובצי PDF לפרשת נח בעיבוד הרב מנחם מענדל רייצעס, ובהם חוברות ״עומק הפשט״ ורעיונות על פי תורת מנחם. תיאור הפרסום מציג שאלות על בניית התיבה בידי נח ועל עלה הזית שהביאה היונה.",
   "basis": "תיאור",
-  "checked": false,
+  "checked": true,
   "drafted_at": "2026-10-21T05:56:28+00:00",
-  "source_url": "https://chabad.info/beis-medrash/1375415/"
+  "source_url": "https://chabad.info/beis-medrash/1375415/",
+  "reviewed_at": "2026-10-22T05:08:02+00:00"
  },
  "9a5ed27abfb71689": {
   "he": "קטע משיחת דבר מלכות לשבת פרשת נח תשנ״ב, במדור ״יין מלכות״. התיאור עוסק ביחס שבין השלמת עבודת כלל ישראל לבין תיקון עניינים אישיים, ובחשבון צדק הנעשה מתוך שמחה.",
   "basis": "תיאור",
-  "checked": false,
+  "checked": true,
   "drafted_at": "2026-10-21T05:56:28+00:00",
-  "source_url": "https://hageula.com/sichat_hageula/royal_wine/28182.htm"
+  "source_url": "https://hageula.com/sichat_hageula/royal_wine/28182.htm",
+  "reviewed_at": "2026-10-22T05:08:02+00:00"
  },
  "acf4f5de2cf5bf78": {
   "he": "מאמר כתוב מאת שלום דובער ישראלי, על פי שיחת מוצאי שבת בראשית תשל״ב. פתיחתו עוסקת במעבר מחגי תשרי לשגרה, ובתיבת נח כמשל לשמירת הקדושה ולהשפעה על הסביבה.",
   "basis": "תוכן הדף",
-  "checked": false,
+  "checked": true,
   "drafted_at": "2026-10-21T05:56:28+00:00",
-  "source_url": "https://hageula.com/sichat_hageula/moshiah_weekly_idea/28181.htm"
+  "source_url": "https://hageula.com/sichat_hageula/moshiah_weekly_idea/28181.htm",
+  "reviewed_at": "2026-10-22T05:08:02+00:00"
  },
  "97833e3227726595": {
   "he": "ביאור כתוב מאת הרב אסף דפנה לשיחת דבר מלכות לפרשת לך לך. בפתיחתו נשאלת משמעותו של הציווי לאחר מתן תורה, ובהמשך מתוארת ההכנה לתורה החדשה והקריאה לצאת מהרגלים וממגבלות.",
   "basis": "תוכן הדף",
-  "checked": false,
+  "checked": true,
   "drafted_at": "2026-10-21T05:56:28+00:00",
-  "source_url": "https://hageula.com/torah/3/28198.htm"
+  "source_url": "https://hageula.com/torah/3/28198.htm",
+  "reviewed_at": "2026-10-22T05:08:02+00:00"
  },
  "e26cfb75cb8d9e25": {
   "he": "קובץ ״הערות התמימים ואנ״ש 770 בית משיח״, היוצא לאור בידי תלמידי הישיבה המרכזית. לפי התיאור בעמוד, בראש הקובץ נדפס מכתב של הרבי בפרסום ראשון; הכתבה מקשרת להורדתו.",
   "basis": "תוכן הדף",
-  "checked": false,
+  "checked": true,
   "drafted_at": "2026-10-21T05:56:28+00:00",
-  "source_url": "https://hageula.com/news/press/28196.htm"
+  "source_url": "https://hageula.com/news/press/28196.htm",
+  "reviewed_at": "2026-10-22T05:08:02+00:00"
  },
  "e383f3fb83b708c2": {
   "he": "פרסום באנגלית על שלושה מכתבים חדשים של הרבי בנוגע למקווה באיסט פלטבוש. לפי התיאור, המכתבים עוסקים בצורכי השכונה, ביוזמת הרבי לגייס מימון ובהדגשת הדחיפות בהקמת המקווה; מצורף קישור לנוסחם המלא.",
   "basis": "תיאור",
-  "checked": false,
+  "checked": true,
   "drafted_at": "2026-10-21T05:59:49+00:00",
-  "source_url": "https://anash.org/the-rebbe-saw-east-flatbushs-potential-64-years-ago/"
+  "source_url": "https://anash.org/the-rebbe-saw-east-flatbushs-potential-64-years-ago/",
+  "reviewed_at": "2026-10-22T05:08:02+00:00"
  },
  "2323b8dff77b14e1": {
   "he": "כרך ראשון של The Teachings of The Rebbe, בתרגום ועיבוד לאנגלית של ספר המאמרים תשל״ז (PDF). בשער הקובץ מצוינים המעבדים הרב Amiram Markel והרב Yehudah S. Markel.",
   "basis": "פתיחת הקובץ",
-  "checked": false,
+  "checked": true,
   "drafted_at": "2026-10-21T05:59:49+00:00",
-  "source_url": "https://neirot.com/wp-content/uploads/2026/10/The-Teachings-of-The-Rebbe-5737-Volume-1.pdf"
+  "source_url": "https://neirot.com/wp-content/uploads/2026/10/The-Teachings-of-The-Rebbe-5737-Volume-1.pdf",
+  "reviewed_at": "2026-10-22T05:08:02+00:00"
  },
  "d21a87fa6b13d9b9": {
   "he": "מאמר כתוב באנגלית המבוסס על מאמר אדמו״ר האמצעי Al Totzar es Moav. פתיחתו מציגה את הדיון בקץ הגלות ובגאולה, ואת הסברת הדעות בגמרא על הדרך להבאתה. מצורף גם קובץ PDF.",
   "basis": "תוכן הדף",
-  "checked": false,
+  "checked": true,
   "drafted_at": "2026-10-21T05:59:49+00:00",
-  "source_url": "https://dvarmalchus770.org/2026/10/20/mitteler-rebbe-reveals-the-end-time-2/"
+  "source_url": "https://dvarmalchus770.org/2026/10/20/mitteler-rebbe-reveals-the-end-time-2/",
+  "reviewed_at": "2026-10-22T05:08:02+00:00"
+ },
+ "e7d68c99b6cd3c77": {
+  "he": "תרגום לאנגלית של שיחת נח מתוך לקוטי שיחות חלק ג׳, במסגרת SIE Weekly (PDF). בשער החוברת מצוין שהיא כוללת את עמודים 750–757 בכרך המקורי.",
+  "basis": "פתיחת הקובץ",
+  "checked": false,
+  "drafted_at": "2026-10-22T05:08:02+00:00",
+  "source_url": "https://drive.google.com/file/d/1QzULk5KamxPtFQF3IdLa9CxSzaWEUUZ5/view"
+ },
+ "5c0d4987080c0674": {
+  "he": "תרגום לאנגלית של שיחת לך לך מתוך לקוטי שיחות חלק ג׳, במסגרת SIE Weekly (PDF). בשער החוברת מצוין שהיא כוללת את עמודים 757–764 בכרך המקורי.",
+  "basis": "פתיחת הקובץ",
+  "checked": false,
+  "drafted_at": "2026-10-22T05:08:02+00:00",
+  "source_url": "https://drive.google.com/file/d/1HqbBVAs0OF_E2U40N2NuVpBzZsoKUHAJ/view"
  }
 }
