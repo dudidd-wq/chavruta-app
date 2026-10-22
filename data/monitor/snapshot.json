@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-22T05:10:51+00:00",
+ "generated_at": "2026-10-22T05:13:36+00:00",
  "sources": [
   {
    "id": "chabadlibrary",
@@ -12,7 +12,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-10-22T05:09:24+00:00",
+   "checked_at": "2026-10-22T05:12:23+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -30,7 +30,7 @@
     "primary",
     "whatsnew"
    ],
-   "checked_at": "2026-10-22T05:09:24+00:00",
+   "checked_at": "2026-10-22T05:12:23+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -47,7 +47,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-10-22T05:09:24+00:00",
+   "checked_at": "2026-10-22T05:12:23+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -64,7 +64,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-10-22T05:09:24+00:00",
+   "checked_at": "2026-10-22T05:12:23+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -82,7 +82,7 @@
     "primary",
     "whatsnew"
    ],
-   "checked_at": "2026-10-22T05:09:24+00:00",
+   "checked_at": "2026-10-22T05:12:23+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -102,7 +102,7 @@
     }
    ],
    "total": 132,
-   "last_success_at": "2026-10-22T05:09:24+00:00"
+   "last_success_at": "2026-10-22T05:12:23+00:00"
   },
   {
    "id": "chabadlibrarybooks",
@@ -115,7 +115,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-10-22T05:09:25+00:00",
+   "checked_at": "2026-10-22T05:12:23+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -133,12 +133,12 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-22T05:09:25+00:00",
+   "checked_at": "2026-10-22T05:12:23+00:00",
    "status": "ok",
    "new": [],
    "latest": [],
    "total": 1501,
-   "last_success_at": "2026-10-22T05:09:25+00:00"
+   "last_success_at": "2026-10-22T05:12:23+00:00"
   },
   {
    "id": "chassidut_org",
@@ -152,12 +152,12 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-22T05:09:26+00:00",
+   "checked_at": "2026-10-22T05:12:25+00:00",
    "status": "ok",
    "new": [],
    "latest": [],
    "total": 4,
-   "last_success_at": "2026-10-22T05:09:26+00:00"
+   "last_success_at": "2026-10-22T05:12:25+00:00"
   },
   {
    "id": "biurim",
@@ -171,7 +171,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-22T05:09:28+00:00",
+   "checked_at": "2026-10-22T05:12:26+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -217,7 +217,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-10-22T05:09:28+00:00"
+   "last_success_at": "2026-10-22T05:12:26+00:00"
   },
   {
    "id": "hm_monsey",
@@ -231,7 +231,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-22T05:09:30+00:00",
+   "checked_at": "2026-10-22T05:12:28+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -277,7 +277,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-10-22T05:09:30+00:00"
+   "last_success_at": "2026-10-22T05:12:28+00:00"
   },
   {
    "id": "hiskashrus",
@@ -291,17 +291,9 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-22T05:09:31+00:00",
+   "checked_at": "2026-10-22T05:12:29+00:00",
    "status": "ok",
-   "new": [
-    {
-     "id": "37659",
-     "title": "Lech-Lecha · 5787 · קונטרס שבועי לאנ\"ש חסידי חב\"ד לחיזוק ההתקשרות לכ\"ק אדמו\"ר רבי מנחם מענדל בהרה\"ק רלו\"י מליובאוויטש",
-     "url": "https://torahprint.nyc3.cdn.digitaloceanspaces.com/pdfFiles/1792588384099_1xivd_.pdf",
-     "date": "2026-10-23T00:00:00.000Z",
-     "first_seen": "2026-10-22T05:09:31+00:00"
-    }
-   ],
+   "new": [],
    "latest": [
     {
      "id": "37659",
@@ -347,7 +339,7 @@
     }
    ],
    "total": 252,
-   "last_success_at": "2026-10-22T05:09:31+00:00"
+   "last_success_at": "2026-10-22T05:12:29+00:00"
   },
   {
    "id": "lichyot_chassidus",
@@ -361,18 +353,9 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-22T05:09:33+00:00",
+   "checked_at": "2026-10-22T05:12:31+00:00",
    "status": "ok",
-   "new": [
-    {
-     "id": "e293d96b-d29a-4e2a-a633-fc92afc4f4cc",
-     "title": "מאמר ד\"ה וכל העם רואים תרס\"ה - חלק ג",
-     "url": "https://rabbi_osher_farkash_maamarim.captivate.fm",
-     "date": "Wed, 21 Oct 2026 04:45:00 -0400",
-     "blurb": "התחדשות בתורה והתחדשות בעולמות",
-     "first_seen": "2026-10-22T05:09:33+00:00"
-    }
-   ],
+   "new": [],
    "latest": [
     {
      "id": "e293d96b-d29a-4e2a-a633-fc92afc4f4cc",
@@ -440,7 +423,7 @@
     }
    ],
    "total": 1000,
-   "last_success_at": "2026-10-22T05:09:33+00:00"
+   "last_success_at": "2026-10-22T05:12:31+00:00"
   },
   {
    "id": "chabadzoom",
@@ -454,7 +437,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-22T05:09:35+00:00",
+   "checked_at": "2026-10-22T05:12:34+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -502,7 +485,7 @@
     }
    ],
    "total": 557,
-   "last_success_at": "2026-10-22T05:09:35+00:00"
+   "last_success_at": "2026-10-22T05:12:34+00:00"
   },
   {
    "id": "kovtzimdrive",
@@ -516,7 +499,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-22T05:09:38+00:00",
+   "checked_at": "2026-10-22T05:12:34+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -529,7 +512,7 @@
     }
    ],
    "total": 1,
-   "last_success_at": "2026-10-22T05:09:38+00:00"
+   "last_success_at": "2026-10-22T05:12:34+00:00"
   },
   {
    "id": "avita",
@@ -543,7 +526,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-22T05:09:40+00:00",
+   "checked_at": "2026-10-22T05:12:36+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -561,7 +544,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-22T05:09:40+00:00",
+   "checked_at": "2026-10-22T05:12:36+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -583,7 +566,7 @@
     }
    ],
    "total": 2,
-   "last_success_at": "2026-10-22T05:09:40+00:00"
+   "last_success_at": "2026-10-22T05:12:36+00:00"
   },
   {
    "id": "dvarmalchus770",
@@ -597,7 +580,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-22T05:09:42+00:00",
+   "checked_at": "2026-10-22T05:12:38+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -651,7 +634,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-10-22T05:09:42+00:00"
+   "last_success_at": "2026-10-22T05:12:38+00:00"
   },
   {
    "id": "soulwords",
@@ -665,7 +648,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-22T05:09:43+00:00",
+   "checked_at": "2026-10-22T05:12:40+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -711,7 +694,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-10-22T05:09:43+00:00"
+   "last_success_at": "2026-10-22T05:12:40+00:00"
   },
   {
    "id": "sie_weekly",
@@ -725,7 +708,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-22T05:09:45+00:00",
+   "checked_at": "2026-10-22T05:12:41+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -766,7 +749,7 @@
     }
    ],
    "total": 114,
-   "last_success_at": "2026-10-22T05:09:45+00:00"
+   "last_success_at": "2026-10-22T05:12:41+00:00"
   },
   {
    "id": "pls",
@@ -780,7 +763,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-22T05:09:47+00:00",
+   "checked_at": "2026-10-22T05:12:43+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -826,7 +809,7 @@
     }
    ],
    "total": 200,
-   "last_success_at": "2026-10-22T05:09:47+00:00"
+   "last_success_at": "2026-10-22T05:12:43+00:00"
   },
   {
    "id": "chayenu_ls",
@@ -840,7 +823,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-22T05:09:48+00:00",
+   "checked_at": "2026-10-22T05:12:45+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -867,7 +850,7 @@
     }
    ],
    "total": 2,
-   "last_success_at": "2026-10-22T05:09:48+00:00"
+   "last_success_at": "2026-10-22T05:12:45+00:00"
   },
   {
    "id": "weekly_sicha",
@@ -881,7 +864,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-22T05:09:50+00:00",
+   "checked_at": "2026-10-22T05:12:46+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -922,7 +905,7 @@
     }
    ],
    "total": 116,
-   "last_success_at": "2026-10-22T05:09:50+00:00"
+   "last_success_at": "2026-10-22T05:12:46+00:00"
   },
   {
    "id": "theyeshiva",
@@ -936,7 +919,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-22T05:09:51+00:00",
+   "checked_at": "2026-10-22T05:12:47+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -990,7 +973,7 @@
     }
    ],
    "total": 1537,
-   "last_success_at": "2026-10-22T05:09:51+00:00"
+   "last_success_at": "2026-10-22T05:12:47+00:00"
   },
   {
    "id": "chassidus_applied",
@@ -1004,7 +987,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-22T05:09:54+00:00",
+   "checked_at": "2026-10-22T05:12:51+00:00",
    "status": "error",
    "new": [],
    "latest": [
@@ -1074,7 +1057,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-22T05:09:54+00:00",
+   "checked_at": "2026-10-22T05:12:51+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1128,7 +1111,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-10-22T05:09:54+00:00"
+   "last_success_at": "2026-10-22T05:12:51+00:00"
   },
   {
    "id": "chassidus_explained",
@@ -1142,7 +1125,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-22T05:10:09+00:00",
+   "checked_at": "2026-10-22T05:12:54+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1196,7 +1179,7 @@
     }
    ],
    "total": 135,
-   "last_success_at": "2026-10-22T05:10:09+00:00"
+   "last_success_at": "2026-10-22T05:12:54+00:00"
   },
   {
    "id": "melukat",
@@ -1210,7 +1193,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-22T05:10:11+00:00",
+   "checked_at": "2026-10-22T05:12:56+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1258,7 +1241,7 @@
     }
    ],
    "total": 167,
-   "last_success_at": "2026-10-22T05:10:11+00:00"
+   "last_success_at": "2026-10-22T05:12:56+00:00"
   },
   {
    "id": "daily_maamar",
@@ -1272,18 +1255,9 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-22T05:10:12+00:00",
+   "checked_at": "2026-10-22T05:12:57+00:00",
    "status": "ok",
-   "new": [
-    {
-     "id": "651a7272-32e9-4c39-a039-582d836f4aab",
-     "title": "Motzaei Shabbos Lech Lcha (B’chedro) 5738, Maamorim Melukatim Vol. 1 – Episode 2",
-     "url": "https://share.transistor.fm/s/68c5eee6",
-     "date": "Wed, 21 Oct 2026 09:25:24 -0400",
-     "blurb": "This episode covers from Chapter 3 through Chapter 4. Lech Lcha, V'yaakov Halach Ldarko, B'eiver hnahar yashvu avoisichem, all have dual meanings, 1 - descent, 2 - ascent",
-     "first_seen": "2026-10-22T05:10:12+00:00"
-    }
-   ],
+   "new": [],
    "latest": [
     {
      "id": "651a7272-32e9-4c39-a039-582d836f4aab",
@@ -1359,7 +1333,7 @@
     }
    ],
    "total": 344,
-   "last_success_at": "2026-10-22T05:10:12+00:00"
+   "last_success_at": "2026-10-22T05:12:57+00:00"
   },
   {
    "id": "wellsprings",
@@ -1373,7 +1347,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-22T05:10:14+00:00",
+   "checked_at": "2026-10-22T05:12:58+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1419,7 +1393,7 @@
     }
    ],
    "total": 125,
-   "last_success_at": "2026-10-22T05:10:14+00:00"
+   "last_success_at": "2026-10-22T05:12:58+00:00"
   },
   {
    "id": "daily_sicha",
@@ -1433,18 +1407,9 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-22T05:10:15+00:00",
+   "checked_at": "2026-10-22T05:12:59+00:00",
    "status": "ok",
-   "new": [
-    {
-     "id": "2026.10.22",
-     "title": "יום ה' פ' לך לך, י\"א מרחשון, ה'תשפ\"ז",
-     "url": "",
-     "date": "Thu, 22 Oct 2026 12:00:00 GMT",
-     "blurb": "התוכן [המשך] יש להנהיג בכל בתי-הספר בתחילת היום, עכ\"פ רגע אחד, להחדרת האמונה בבורא העולם בנוסח השוה לכל נפש, ועכ\"פ \"רגע של שתיקה \" – רגע של התבוננות ותפלה ב\"דממה\" לבורא עולם ומנהיגו; חבל על כל יום שעובר ללא תיקון הדרוש; כמה שידברו בענין זה אי\"ז מספיק בהתחשב עם רצינות הדבר; כל השקו\"ט והפלפול אם ענין זה הוא בהתאם ל\"חוקת-היסוד\" אינו רלוונטי, כי ב\"חוקת-היסוד\" עצמה נאמר ש\"חוקה\" זו נקבעה על ידי האומה לטובתה של האומה , ואם טובתה של האומה בהוה היא שונה ממה שהי' לפני 200 שנה – יש להתנהג בהתאם לזה: ה\"סטטיסטיקה\" מראה שאחוז ההנהגה היפך הדרך הישרה אצל אלו שנתחנכו בבתי ספר שבהם לא מזכירים שמו של בורא העולם – הוא שלא בערך כלל בהשוואה לאלו שנתחנכו בבתי ספר פרטיים שבהם ישנו חופש הדת. ולכן, בהכרח לשנות המצב הקיים ולקבוע בחוק שבכל בתי ספר הממשלתיים יזכירו אודות מציאותו של בורא העולם, \"עין רואה ואוזן שומעת\"! משיחת יו\"ד שבט ה'תשמ\"ג ל\"הנחה פרטית\" או התרגום ללה\"ק של השיחה: https://thedailysicha.com/?date=22-10-2026 Synopsis (Continued.) At the beginning of the school day, at least a moment should be devoted to instilling faith in the Creator of the world, in words equally appropriate for everyone, and at the very least a moment of silence and silent prayr to contemplate the Creator and Ruler of the world. Every day that passes without this necessary correction being made is a pity, and no matter how much is said about the matter, it is not enough due to how serious it is. And the whole discussion as to whether this is consistent with the Constitution is irrelevant: The Constitution itself states th",
-     "first_seen": "2026-10-22T05:10:15+00:00"
-    }
-   ],
+   "new": [],
    "latest": [
     {
      "id": "2026.10.22",
@@ -1520,7 +1485,7 @@
     }
    ],
    "total": 1408,
-   "last_success_at": "2026-10-22T05:10:15+00:00"
+   "last_success_at": "2026-10-22T05:12:59+00:00"
   },
   {
    "id": "learnchassidus",
@@ -1534,12 +1499,12 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-22T05:10:21+00:00",
+   "checked_at": "2026-10-22T05:13:05+00:00",
    "status": "ok",
    "new": [],
    "latest": [],
    "total": 5,
-   "last_success_at": "2026-10-22T05:10:21+00:00"
+   "last_success_at": "2026-10-22T05:13:05+00:00"
   },
   {
    "id": "simplychassidus",
@@ -1553,7 +1518,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-22T05:10:21+00:00",
+   "checked_at": "2026-10-22T05:13:06+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1580,7 +1545,7 @@
     }
    ],
    "total": 4,
-   "last_success_at": "2026-10-22T05:10:21+00:00"
+   "last_success_at": "2026-10-22T05:13:06+00:00"
   },
   {
    "id": "alonei_chabad",
@@ -1593,7 +1558,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-22T05:10:23+00:00",
+   "checked_at": "2026-10-22T05:13:07+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -1610,7 +1575,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-22T05:10:23+00:00",
+   "checked_at": "2026-10-22T05:13:07+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -1627,7 +1592,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-22T05:10:23+00:00",
+   "checked_at": "2026-10-22T05:13:07+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1654,7 +1619,7 @@
     }
    ],
    "total": 303,
-   "last_success_at": "2026-10-22T05:10:23+00:00"
+   "last_success_at": "2026-10-22T05:13:07+00:00"
   },
   {
    "id": "lchaim",
@@ -1667,7 +1632,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-22T05:10:24+00:00",
+   "checked_at": "2026-10-22T05:13:08+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1708,7 +1673,7 @@
     }
    ],
    "total": 191,
-   "last_success_at": "2026-10-22T05:10:24+00:00"
+   "last_success_at": "2026-10-22T05:13:08+00:00"
   },
   {
    "id": "one_point",
@@ -1721,7 +1686,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-22T05:10:25+00:00",
+   "checked_at": "2026-10-22T05:13:10+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1762,7 +1727,7 @@
     }
    ],
    "total": 184,
-   "last_success_at": "2026-10-22T05:10:25+00:00"
+   "last_success_at": "2026-10-22T05:13:10+00:00"
   },
   {
    "id": "derher",
@@ -1775,7 +1740,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-22T05:10:27+00:00",
+   "checked_at": "2026-10-22T05:13:11+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -1792,7 +1757,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-22T05:10:27+00:00",
+   "checked_at": "2026-10-22T05:13:11+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -1809,7 +1774,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-22T05:10:27+00:00",
+   "checked_at": "2026-10-22T05:13:11+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1822,7 +1787,7 @@
     }
    ],
    "total": 5,
-   "last_success_at": "2026-10-22T05:10:27+00:00"
+   "last_success_at": "2026-10-22T05:13:11+00:00"
   },
   {
    "id": "maynotecha_inst",
@@ -1835,7 +1800,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-22T05:10:29+00:00",
+   "checked_at": "2026-10-22T05:13:13+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -1852,18 +1817,9 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-22T05:10:29+00:00",
+   "checked_at": "2026-10-22T05:13:13+00:00",
    "status": "ok",
-   "new": [
-    {
-     "id": "https://www.chabad.org/article.asp?aid=7556614",
-     "title": "Jewish News: New Emissaries to Historic Chassidic Town of Gomel, Belarus, Find Jews Ready to Dance By Shloimy Galperin",
-     "url": "https://www.chabad.org/article.asp?aid=7556614",
-     "date": "Sat, 17 Oct 2026 12:00:00 EST",
-     "blurb": "",
-     "first_seen": "2026-10-22T05:10:29+00:00"
-    }
-   ],
+   "new": [],
    "latest": [
     {
      "id": "https://www.chabad.org/article.asp?aid=7556614",
@@ -1875,7 +1831,7 @@
     }
    ],
    "total": 1,
-   "last_success_at": "2026-10-22T05:10:29+00:00"
+   "last_success_at": "2026-10-22T05:13:13+00:00"
   },
   {
    "id": "anash",
@@ -1888,7 +1844,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-22T05:10:30+00:00",
+   "checked_at": "2026-10-22T05:13:14+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1966,7 +1922,7 @@
     }
    ],
    "total": 4,
-   "last_success_at": "2026-10-22T05:10:30+00:00"
+   "last_success_at": "2026-10-22T05:13:14+00:00"
   },
   {
    "id": "chabadinfo",
@@ -1979,7 +1935,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-22T05:10:32+00:00",
+   "checked_at": "2026-10-22T05:13:15+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -1996,7 +1952,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-22T05:10:32+00:00",
+   "checked_at": "2026-10-22T05:13:15+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -2013,7 +1969,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-22T05:10:32+00:00",
+   "checked_at": "2026-10-22T05:13:15+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2059,7 +2015,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-10-22T05:10:32+00:00"
+   "last_success_at": "2026-10-22T05:13:15+00:00"
   },
   {
    "id": "kehot",
@@ -2072,18 +2028,9 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-22T05:10:35+00:00",
+   "checked_at": "2026-10-22T05:13:18+00:00",
    "status": "ok",
-   "new": [
-    {
-     "id": "HP-STH.PFNT",
-     "title": "Siddur Pocket (No Tehillim) Flexi-Cover Classic Ed. 4 x 5½",
-     "url": "https://store.kehotonline.com/products.asp?dept=344",
-     "date": "",
-     "catalog_month": "2026-10",
-     "first_seen": "2026-10-22T05:10:35+00:00"
-    }
-   ],
+   "new": [],
    "latest": [
     {
      "id": "HL-SMICR",
@@ -2351,7 +2298,7 @@
     }
    ],
    "total": 190,
-   "last_success_at": "2026-10-22T05:10:35+00:00"
+   "last_success_at": "2026-10-22T05:13:18+00:00"
   }
  ],
  "browser_checks": {
