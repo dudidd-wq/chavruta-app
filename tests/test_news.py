@@ -1,6 +1,8 @@
 import unittest
 import importlib.util
 import tempfile
+import json
+from unittest.mock import patch
 from pathlib import Path
 from datetime import datetime, timezone, timedelta
 from chavruta import news
@@ -96,6 +98,68 @@ class NewsTests(unittest.TestCase):
         self.assertEqual(f['items'], [])
         self.assertEqual(f['n_unclassified'], 1)
 
+    def test_generic_titles_keep_explicit_exclusion_decisions(self):
+        for title in ('Download', ' download PDF ', 'PDF', 'Read More', 'להורדה', 'הורדה', 'לחצו כאן'):
+            for cls in ('כפול', 'לא רלוונטי', 'ישן'):
+                with self.subTest(title=title, cls=cls):
+                    snap, _ = self.fixture(medium='bulletin')
+                    raw = snap['sources'][0]['latest'][0]
+                    raw['title'] = title
+                    key = news.item_key(raw)
+                    f = news.project(snap, {key: {'cls': cls}}, {}, {}, now=NOW)
+                    self.assertEqual(f['items'], [])
+                    self.assertEqual(f['n_unclassified'], 0)
+                    all_items = news.project(snap, {key: {'cls': cls}}, {}, {}, now=NOW, filtered=False)['items']
+                    self.assertEqual(all_items[0]['cls'], cls)
+
+    def test_generic_titles_cannot_be_published_by_positive_or_unknown_classification(self):
+        for cls in ('מקור', 'ביאור', 'גיליון', 'unknown', ''):
+            with self.subTest(cls=cls):
+                snap, _ = self.fixture(medium='bulletin')
+                raw = snap['sources'][0]['latest'][0]
+                raw['title'] = 'Download'
+                key = news.item_key(raw)
+                f = news.project(snap, {key: {'cls': cls}}, {}, {}, now=NOW)
+                self.assertEqual(f['items'], [])
+                self.assertEqual(f['n_unclassified'], 1)
+
+    def test_repeated_updates_keep_identified_sie_items_without_requeuing_duplicates(self):
+        path = Path(__file__).resolve().parents[1] / 'tools/app/update_news.py'
+        spec = importlib.util.spec_from_file_location('news_update_sie_test', path)
+        module = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(module)
+        first_seen = (datetime.now(timezone.utc) - timedelta(days=1)).isoformat()
+        generic, identified, relevance, summaries = [], [], {}, {}
+        observations = {}
+        for title, file_id in (('Noach', '1QzULk5KamxPtFQF3IdLa9CxSzaWEUUZ5'),
+                               ('Lech Lecha', '1HqbBVAs0OF_E2U40N2NuVpBzZsoKUHAJ')):
+            raw = {'title': 'Download', 'url': f'https://drive.google.com/file/d/{file_id}/view', 'first_seen': first_seen}
+            named = {**raw, 'title': f'SIE Weekly · {title} · Likkutei Sichos Volume 3'}
+            generic.append(raw)
+            identified.append(named)
+            relevance[news.item_key(raw)] = {'cls': 'כפול'}
+            relevance[news.item_key(named)] = {'cls': 'מקור'}
+            summaries[news.item_key(named)] = {'he': 'draft', 'checked': False}
+            observations.update({news.item_key(raw): first_seen, news.item_key(named): first_seen})
+        src = {'id': 'sie_weekly', 'name': 'SIE Weekly', 'role': 'analysis', 'medium': 'bulletin',
+               'status': 'ok', 'checked_at': first_seen, 'latest': generic}
+        snapshot = {'generated_at': first_seen, 'sources': [src],
+                    'browser_checks': {'sie_weekly': {'checked_at': first_seen, 'items': identified}}}
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            mon = root / 'data/monitor'
+            mon.mkdir(parents=True)
+            for name, value in (('snapshot', snapshot), ('relevance', relevance), ('summaries', summaries), ('observations', observations)):
+                (mon / f'{name}.json').write_text(json.dumps(value), encoding='utf-8')
+            with patch.object(module, 'ROOT', root), patch.object(news, 'source_media', return_value={}):
+                for _ in range(2):
+                    payload = module.update(root / 'data')
+                    self.assertEqual(json.loads((mon / 'pending.json').read_text()), [])
+                    self.assertEqual(json.loads((mon / 'health.json').read_text())['pending'], 0)
+                    self.assertEqual({i['id'] for i in payload['items']}, {news.item_key(i) for i in identified})
+                    self.assertTrue(all(i['s'] == '' and not i['checked'] for i in payload['items']))
+                    self.assertEqual(json.loads((mon / 'observations.json').read_text()), observations)
+
     def test_old_bulletin_year_does_not_become_a_new_issue(self):
         snap, key = self.fixture(medium='bulletin')
         snap['sources'][0]['latest'][0]['title'] = 'Pinchas · 5782 · Weekly'
@@ -121,3 +185,4 @@ class NewsTests(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
+

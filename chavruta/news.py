@@ -90,7 +90,11 @@ def project(snapshot, relevance, summaries, observations, *, now=None, media=Non
         discovered = when(first)
         effective = published or discovered
         generic_title = bool(re.fullmatch(r"download(?: pdf)?|read more|pdf|להורדה|הורדה|לחצו כאן", item["title"].strip(), re.I))
-        cls = "" if generic_title else relevance.get(key, {}).get("cls", "")
+        cls = relevance.get(key, {}).get("cls", "")
+        # Generic link labels still require identification before publication,
+        # but an explicit exclusion must not return to the classification queue.
+        if generic_title and cls not in ("כפול", "לא רלוונטי", "ישן"):
+            cls = ""
         if not cls and item["medium"] == "bulletin" and not generic_title:
             cls = "גיליון"
         issue_year = re.search(r"·\s*(5[78]\d\d)\s*·", item["title"]) if item["medium"] == "bulletin" else None
@@ -138,3 +142,4 @@ def pack(feed):
             "generated": feed["generated"], "sources": feed["sources"], "window": feed["window"],
             "n": {"makor": feed["n_makor"], "biur": feed["n_biur"], "gilyon": feed["n_gilyon"]},
             "health": feed["health"], "pending": feed["n_unclassified"]}
+
