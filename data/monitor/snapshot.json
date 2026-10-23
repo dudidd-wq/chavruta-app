@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-22T09:25:10+00:00",
+ "generated_at": "2026-10-23T05:51:41+00:00",
  "sources": [
   {
    "id": "chabadlibrary",
@@ -12,7 +12,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-10-22T09:23:55+00:00",
+   "checked_at": "2026-10-23T05:42:06+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -30,7 +30,7 @@
     "primary",
     "whatsnew"
    ],
-   "checked_at": "2026-10-22T09:23:55+00:00",
+   "checked_at": "2026-10-23T05:42:06+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -47,7 +47,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-10-22T09:23:55+00:00",
+   "checked_at": "2026-10-23T05:42:06+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -64,7 +64,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-10-22T09:23:55+00:00",
+   "checked_at": "2026-10-23T05:42:06+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -82,7 +82,7 @@
     "primary",
     "whatsnew"
    ],
-   "checked_at": "2026-10-22T09:23:55+00:00",
+   "checked_at": "2026-10-23T05:42:06+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -102,7 +102,7 @@
     }
    ],
    "total": 132,
-   "last_success_at": "2026-10-22T09:23:55+00:00"
+   "last_success_at": "2026-10-23T05:42:06+00:00"
   },
   {
    "id": "chabadlibrarybooks",
@@ -115,7 +115,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-10-22T09:23:55+00:00",
+   "checked_at": "2026-10-23T05:42:06+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -133,12 +133,12 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-22T09:23:55+00:00",
+   "checked_at": "2026-10-23T05:42:06+00:00",
    "status": "ok",
    "new": [],
    "latest": [],
    "total": 1501,
-   "last_success_at": "2026-10-22T09:23:55+00:00"
+   "last_success_at": "2026-10-23T05:42:06+00:00"
   },
   {
    "id": "chassidut_org",
@@ -152,12 +152,12 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-22T09:23:57+00:00",
+   "checked_at": "2026-10-23T05:42:07+00:00",
    "status": "ok",
    "new": [],
    "latest": [],
    "total": 4,
-   "last_success_at": "2026-10-22T09:23:57+00:00"
+   "last_success_at": "2026-10-23T05:42:07+00:00"
   },
   {
    "id": "biurim",
@@ -171,7 +171,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-22T09:23:58+00:00",
+   "checked_at": "2026-10-23T05:42:08+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -217,7 +217,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-10-22T09:23:58+00:00"
+   "last_success_at": "2026-10-23T05:42:08+00:00"
   },
   {
    "id": "hm_monsey",
@@ -231,7 +231,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-22T09:24:00+00:00",
+   "checked_at": "2026-10-23T05:42:11+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -277,7 +277,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-10-22T09:24:00+00:00"
+   "last_success_at": "2026-10-23T05:42:11+00:00"
   },
   {
    "id": "hiskashrus",
@@ -291,7 +291,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-22T09:24:02+00:00",
+   "checked_at": "2026-10-23T05:42:13+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -339,7 +339,7 @@
     }
    ],
    "total": 252,
-   "last_success_at": "2026-10-22T09:24:02+00:00"
+   "last_success_at": "2026-10-23T05:42:13+00:00"
   },
   {
    "id": "lichyot_chassidus",
@@ -353,7 +353,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-22T09:24:06+00:00",
+   "checked_at": "2026-10-23T05:42:14+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -423,7 +423,7 @@
     }
    ],
    "total": 1000,
-   "last_success_at": "2026-10-22T09:24:06+00:00"
+   "last_success_at": "2026-10-23T05:42:14+00:00"
   },
   {
    "id": "chabadzoom",
@@ -437,10 +437,39 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-22T09:24:08+00:00",
+   "checked_at": "2026-10-23T05:42:16+00:00",
    "status": "ok",
-   "new": [],
+   "new": [
+    {
+     "id": "content:2b14853e308a0c44",
+     "title": "עדכון בתוכן הדף",
+     "url": "https://chabadzoom.co.il/series",
+     "date": "",
+     "first_seen": "2026-10-23T05:42:16+00:00"
+    },
+    {
+     "id": "https://chabadzoom.co.il/article/%d7%9e%d7%90%d7%9e%d7%a8-%d7%95%d7%94-%d7%90%d7%9e%d7%a8-%d7%94%d7%9e%d7%9b%d7%a1%d7%94-%d7%92%d7%95-%d7%94%d7%a8%d7%91-%d7%97%d7%99%d7%99%d7%9d-%d7%a4%d7%a8%d7%95%d7%a1",
+     "title": "מאמר: וה' אמר המכסה גו' - הרב חיים פרוס",
+     "url": "https://chabadzoom.co.il/article/%d7%9e%d7%90%d7%9e%d7%a8-%d7%95%d7%94-%d7%90%d7%9e%d7%a8-%d7%94%d7%9e%d7%9b%d7%a1%d7%94-%d7%92%d7%95-%d7%94%d7%a8%d7%91-%d7%97%d7%99%d7%99%d7%9d-%d7%a4%d7%a8%d7%95%d7%a1",
+     "date": "",
+     "first_seen": "2026-10-23T05:42:16+00:00"
+    }
+   ],
    "latest": [
+    {
+     "id": "content:2b14853e308a0c44",
+     "title": "עדכון בתוכן הדף",
+     "url": "https://chabadzoom.co.il/series",
+     "date": "",
+     "first_seen": "2026-10-23T05:42:16+00:00"
+    },
+    {
+     "id": "https://chabadzoom.co.il/article/%d7%9e%d7%90%d7%9e%d7%a8-%d7%95%d7%94-%d7%90%d7%9e%d7%a8-%d7%94%d7%9e%d7%9b%d7%a1%d7%94-%d7%92%d7%95-%d7%94%d7%a8%d7%91-%d7%97%d7%99%d7%99%d7%9d-%d7%a4%d7%a8%d7%95%d7%a1",
+     "title": "מאמר: וה' אמר המכסה גו' - הרב חיים פרוס",
+     "url": "https://chabadzoom.co.il/article/%d7%9e%d7%90%d7%9e%d7%a8-%d7%95%d7%94-%d7%90%d7%9e%d7%a8-%d7%94%d7%9e%d7%9b%d7%a1%d7%94-%d7%92%d7%95-%d7%94%d7%a8%d7%91-%d7%97%d7%99%d7%99%d7%9d-%d7%a4%d7%a8%d7%95%d7%a1",
+     "date": "",
+     "first_seen": "2026-10-23T05:42:16+00:00"
+    },
     {
      "id": "content:e49261fd22300c99",
      "title": "עדכון בתוכן הדף",
@@ -484,8 +513,8 @@
      "first_seen": "2026-10-18T04:51:41+00:00"
     }
    ],
-   "total": 557,
-   "last_success_at": "2026-10-22T09:24:08+00:00"
+   "total": 558,
+   "last_success_at": "2026-10-23T05:42:16+00:00"
   },
   {
    "id": "kovtzimdrive",
@@ -499,7 +528,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-22T09:24:11+00:00",
+   "checked_at": "2026-10-23T05:42:18+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -512,7 +541,7 @@
     }
    ],
    "total": 1,
-   "last_success_at": "2026-10-22T09:24:11+00:00"
+   "last_success_at": "2026-10-23T05:42:18+00:00"
   },
   {
    "id": "avita",
@@ -526,7 +555,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-22T09:24:13+00:00",
+   "checked_at": "2026-10-23T05:42:20+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -544,7 +573,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-22T09:24:13+00:00",
+   "checked_at": "2026-10-23T05:42:20+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -566,7 +595,7 @@
     }
    ],
    "total": 2,
-   "last_success_at": "2026-10-22T09:24:13+00:00"
+   "last_success_at": "2026-10-23T05:42:20+00:00"
   },
   {
    "id": "dvarmalchus770",
@@ -580,10 +609,27 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-22T09:24:16+00:00",
+   "checked_at": "2026-10-23T05:42:22+00:00",
    "status": "ok",
-   "new": [],
+   "new": [
+    {
+     "id": "http://dvarmalchus770.org/?p=5694",
+     "title": "Lech Lecho: The 3 Nations and Geuloh",
+     "url": "https://dvarmalchus770.org/2026/10/22/lech-lecho-the-3-nations-and-geuloh/",
+     "date": "Thu, 22 Oct 2026 13:56:12 +0000",
+     "blurb": "We present this worked-over translation of a maamer of the Tzemach Tzedek to give a deeper understanding of the land of the 3 nations mentioned in Dvar Malchus and the connection to Geuloh. The Borders of the Land of Israel in the Future We are promised in the Torah that in the time to come […]",
+     "first_seen": "2026-10-23T05:42:22+00:00"
+    }
+   ],
    "latest": [
+    {
+     "id": "http://dvarmalchus770.org/?p=5694",
+     "title": "Lech Lecho: The 3 Nations and Geuloh",
+     "url": "https://dvarmalchus770.org/2026/10/22/lech-lecho-the-3-nations-and-geuloh/",
+     "date": "Thu, 22 Oct 2026 13:56:12 +0000",
+     "blurb": "We present this worked-over translation of a maamer of the Tzemach Tzedek to give a deeper understanding of the land of the 3 nations mentioned in Dvar Malchus and the connection to Geuloh. The Borders of the Land of Israel in the Future We are promised in the Torah that in the time to come […]",
+     "first_seen": "2026-10-23T05:42:22+00:00"
+    },
     {
      "id": "http://dvarmalchus770.org/?p=5741",
      "title": "Mitteler Rebbe Reveals the End Time!",
@@ -634,7 +680,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-10-22T09:24:16+00:00"
+   "last_success_at": "2026-10-23T05:42:22+00:00"
   },
   {
    "id": "soulwords",
@@ -648,7 +694,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-22T09:24:17+00:00",
+   "checked_at": "2026-10-23T05:42:23+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -694,7 +740,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-10-22T09:24:17+00:00"
+   "last_success_at": "2026-10-23T05:42:23+00:00"
   },
   {
    "id": "sie_weekly",
@@ -708,7 +754,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-22T09:24:19+00:00",
+   "checked_at": "2026-10-23T05:42:25+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -749,7 +795,7 @@
     }
    ],
    "total": 114,
-   "last_success_at": "2026-10-22T09:24:19+00:00"
+   "last_success_at": "2026-10-23T05:42:25+00:00"
   },
   {
    "id": "pls",
@@ -763,7 +809,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-22T09:24:20+00:00",
+   "checked_at": "2026-10-23T05:42:26+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -809,7 +855,7 @@
     }
    ],
    "total": 200,
-   "last_success_at": "2026-10-22T09:24:20+00:00"
+   "last_success_at": "2026-10-23T05:42:26+00:00"
   },
   {
    "id": "chayenu_ls",
@@ -823,7 +869,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-22T09:24:22+00:00",
+   "checked_at": "2026-10-23T05:42:28+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -850,7 +896,7 @@
     }
    ],
    "total": 2,
-   "last_success_at": "2026-10-22T09:24:22+00:00"
+   "last_success_at": "2026-10-23T05:42:28+00:00"
   },
   {
    "id": "weekly_sicha",
@@ -864,7 +910,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-22T09:24:23+00:00",
+   "checked_at": "2026-10-23T05:42:29+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -905,7 +951,7 @@
     }
    ],
    "total": 116,
-   "last_success_at": "2026-10-22T09:24:23+00:00"
+   "last_success_at": "2026-10-23T05:42:29+00:00"
   },
   {
    "id": "theyeshiva",
@@ -919,10 +965,27 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-22T09:24:24+00:00",
+   "checked_at": "2026-10-23T05:42:30+00:00",
    "status": "ok",
-   "new": [],
+   "new": [
+    {
+     "id": "https://www.theyeshiva.net/item/10011",
+     "title": "The Secret the Rebbe Revealed to Heal a Broken Generation - Thursday: Mayim Rabim 5738 #4",
+     "url": "https://www.theyeshiva.net/item/10011",
+     "date": "Thu, 22 Oct 2026 08:00:00 -0400",
+     "blurb": "If You Could See What G-d Sees in You, Would You Ever Feel Worthless Again? This class is the fourth in a series on the Maamar Mayim Rabim, said by the Lubavitcher Rebbe on Motzei Shabbos Parshas Noach, 3 Cheshvan, 5738, October 15, 1977, in his room. This class was presented by Rabbi YY Jacobson on 11 Cheshvan, 5787, October 22, 2026, at Bais Medrash Ohr Chaim in Monsey, NY. View Source Sheets: https://portal.theyeshiva.net/api/source-sheets/10011",
+     "first_seen": "2026-10-23T05:42:30+00:00"
+    }
+   ],
    "latest": [
+    {
+     "id": "https://www.theyeshiva.net/item/10011",
+     "title": "The Secret the Rebbe Revealed to Heal a Broken Generation - Thursday: Mayim Rabim 5738 #4",
+     "url": "https://www.theyeshiva.net/item/10011",
+     "date": "Thu, 22 Oct 2026 08:00:00 -0400",
+     "blurb": "If You Could See What G-d Sees in You, Would You Ever Feel Worthless Again? This class is the fourth in a series on the Maamar Mayim Rabim, said by the Lubavitcher Rebbe on Motzei Shabbos Parshas Noach, 3 Cheshvan, 5738, October 15, 1977, in his room. This class was presented by Rabbi YY Jacobson on 11 Cheshvan, 5787, October 22, 2026, at Bais Medrash Ohr Chaim in Monsey, NY. View Source Sheets: https://portal.theyeshiva.net/api/source-sheets/10011",
+     "first_seen": "2026-10-23T05:42:30+00:00"
+    },
     {
      "id": "https://www.theyeshiva.net/item/10009",
      "title": "What If Everything Going Wrong Is Part of Something Going Right? - Women's Lech Lecha Class",
@@ -972,8 +1035,8 @@
      "first_seen": "2026-10-20T07:59:51+00:00"
     }
    ],
-   "total": 1537,
-   "last_success_at": "2026-10-22T09:24:24+00:00"
+   "total": 1538,
+   "last_success_at": "2026-10-23T05:42:30+00:00"
   },
   {
    "id": "chassidus_applied",
@@ -987,18 +1050,9 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-22T09:24:27+00:00",
-   "status": "ok",
-   "new": [
-    {
-     "id": "yt:video:-ZJnTPGaAdE",
-     "title": "Samach Vav Part 226: Two elements in the bittul of creation to the Creator",
-     "url": "https://www.youtube.com/watch?v=-ZJnTPGaAdE",
-     "date": "2026-10-22T02:41:56+00:00",
-     "blurb": "Samach Vav p. 185: This bittul of sunlight to the sun consists of two aspects: 1. The light is constantly dependent on its source, and is not an independent entity. 2. The luminary -- besides being utterly superior and of a completely higher caliber of shleimus than its reflection -- is not lacking even the mehus of the reflection's shleimus (the ten sefiros above), being that it is encompassed in the source with even more intensity than its reflection on earth. So too, the bittul of the creation to the Creator consists of two elements: 1. It is constantly dependent on its source, and is not an independent entity. 2. The source is not lacking any of the different elements of shleimus in Aby\"a; it all exists in the source as light exists in the luminary.",
-     "first_seen": "2026-10-22T09:24:27+00:00"
-    }
-   ],
+   "checked_at": "2026-10-23T05:42:33+00:00",
+   "status": "error",
+   "new": [],
    "latest": [
     {
      "id": "yt:video:-ZJnTPGaAdE",
@@ -1058,7 +1112,9 @@
     }
    ],
    "total": 15,
-   "last_success_at": "2026-10-22T09:24:27+00:00"
+   "error": "HTTPError: 404 Client Error: Not Found for url: https://www.youtube.com/feeds/videos.xml?channel_id=UCX5tj50hTwF_80XQ9JBMDYQ",
+   "last_success_at": "2026-10-22T09:24:27+00:00",
+   "retained": true
   },
   {
    "id": "neirot",
@@ -1072,7 +1128,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-22T09:24:28+00:00",
+   "checked_at": "2026-10-23T05:42:33+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1126,7 +1182,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-10-22T09:24:28+00:00"
+   "last_success_at": "2026-10-23T05:42:33+00:00"
   },
   {
    "id": "chassidus_explained",
@@ -1140,7 +1196,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-22T09:24:30+00:00",
+   "checked_at": "2026-10-23T05:42:38+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1194,7 +1250,7 @@
     }
    ],
    "total": 135,
-   "last_success_at": "2026-10-22T09:24:30+00:00"
+   "last_success_at": "2026-10-23T05:42:38+00:00"
   },
   {
    "id": "melukat",
@@ -1208,17 +1264,9 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-22T09:24:31+00:00",
+   "checked_at": "2026-10-23T05:42:39+00:00",
    "status": "ok",
-   "new": [
-    {
-     "id": "https://projectmelukat.org/maamar-vayomer-hashem-el-avraham-lech-lecha-5738",
-     "title": "maamar vayomer hashem el avraham lech lecha 5738",
-     "url": "https://projectmelukat.org/maamar-vayomer-hashem-el-avraham-lech-lecha-5738",
-     "date": "2026-10-22",
-     "first_seen": "2026-10-22T09:24:31+00:00"
-    }
-   ],
+   "new": [],
    "latest": [
     {
      "id": "https://projectmelukat.org/maamar-vayomer-hashem-el-avraham-lech-lecha-5738",
@@ -1271,7 +1319,7 @@
     }
    ],
    "total": 167,
-   "last_success_at": "2026-10-22T09:24:31+00:00"
+   "last_success_at": "2026-10-23T05:42:39+00:00"
   },
   {
    "id": "daily_maamar",
@@ -1285,10 +1333,27 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-22T09:24:32+00:00",
+   "checked_at": "2026-10-23T05:42:40+00:00",
    "status": "ok",
-   "new": [],
+   "new": [
+    {
+     "id": "3ae8d75c-9e7b-4623-8107-bccb7bedb137",
+     "title": "Motzaei Shabbos Lech Lcha (B’chedro) 5738, Maamorim Melukatim Vol. 1 – Episode 3",
+     "url": "https://share.transistor.fm/s/43084e48",
+     "date": "Thu, 22 Oct 2026 09:24:28 -0400",
+     "blurb": "This episode covers from Chapter 5 through the end of the Maamar. How the Shnas Ha'Ibur represents the ultimate in Avoda.",
+     "first_seen": "2026-10-23T05:42:40+00:00"
+    }
+   ],
    "latest": [
+    {
+     "id": "3ae8d75c-9e7b-4623-8107-bccb7bedb137",
+     "title": "Motzaei Shabbos Lech Lcha (B’chedro) 5738, Maamorim Melukatim Vol. 1 – Episode 3",
+     "url": "https://share.transistor.fm/s/43084e48",
+     "date": "Thu, 22 Oct 2026 09:24:28 -0400",
+     "blurb": "This episode covers from Chapter 5 through the end of the Maamar. How the Shnas Ha'Ibur represents the ultimate in Avoda.",
+     "first_seen": "2026-10-23T05:42:40+00:00"
+    },
     {
      "id": "651a7272-32e9-4c39-a039-582d836f4aab",
      "title": "Motzaei Shabbos Lech Lcha (B’chedro) 5738, Maamorim Melukatim Vol. 1 – Episode 2",
@@ -1362,8 +1427,8 @@
      "first_seen": "2026-10-18T04:52:03+00:00"
     }
    ],
-   "total": 344,
-   "last_success_at": "2026-10-22T09:24:32+00:00"
+   "total": 345,
+   "last_success_at": "2026-10-23T05:42:40+00:00"
   },
   {
    "id": "wellsprings",
@@ -1377,7 +1442,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-22T09:24:34+00:00",
+   "checked_at": "2026-10-23T05:42:42+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1423,7 +1488,7 @@
     }
    ],
    "total": 125,
-   "last_success_at": "2026-10-22T09:24:34+00:00"
+   "last_success_at": "2026-10-23T05:42:42+00:00"
   },
   {
    "id": "daily_sicha",
@@ -1437,10 +1502,27 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-22T09:24:35+00:00",
+   "checked_at": "2026-10-23T05:42:43+00:00",
    "status": "ok",
-   "new": [],
+   "new": [
+    {
+     "id": "2026.10.23",
+     "title": "יום ועש\"ק פ' לך לך, י\"ב מרחשון, ה'תשפ\"ז",
+     "url": "",
+     "date": "Fri, 23 Oct 2026 12:00:00 GMT",
+     "blurb": "התוכן ב' אופנים בפירוש הפסוק \"ויאמר ה' אל אברם לך לך וגו'\" [שבתחילת פ' לך לך]: א) מלמעלה למטה : \"אברם\" - אב רם - בחי' \"שכל הנעלם מכל רעיון\", וממקום זה הי' צ\"ל ירידת נשמת אברם עד לארץ הלזו התחתונה. והסדר הוא: \"מארצך\" - בחי' הרצון, ואח\"ז \"וממולדתך\" - מדות הנולדים מן המוחין, ואח\"ז \"מבית אביך\" דרגא שלמטה יותר (כמבואר בכ\"מ), ואח\"ז \"אל הארץ\" - בחי' המלכות. ועד\"ז הוא בירידת כל נשמה מאיגרא רמא לבירא עמיקתא. אבל ע\"י הירידה נעשה \" אשר אראך \" - מתגלה מעלות הנשמה וכו'. ב) מלמטה למעלה : כבפשטות הענין שאברם עלה מחרן לארץ ישראל. וברוחניות ה\"ז העלי' (מתחיל) ממקום שהוא \"חרון אף של עולם\" ולמעלה. והסדר הוא: \"מארצך\" - רצון בלתי רצוי, ואח\"ז \"וממולדתך\" - רגיליות, ואח\"ז \"מבית אביך\" - מוחין ומדות, וכו' עד שהוא מתעלה \"אל הארץ אשר אראך\" - רצון האמיתי, רצון קונו. חלק מהמאמר ד\"ה לך לך מארצך וגו', אור לז' מרחשון ה'תשמ\"ו ל\"הנחה פרטית\" או התרגום ללה\"ק של השיחה: https://thedailysicha.com/?date=23-10-2026 Synopsis There are two explanations of the verse, “Hashem said to Avram: Lech lecha (‘Go forth’)…” (1) From above downward: “Avram” means Av Ram (Lofty Father), which represents the level of “intellect hidden from any perception.” Avraham’s soul had to descend from this level down to this lowest world. And the order is: “from your land” (one’s will); then “from your birthplace” (the middos born from the intellect); then “from your father’s house” (an even lower level); and then “to the land” (Malchus). The same applies to the descent of every soul. But as a result of this descent, “I will show you” (the rev",
+     "first_seen": "2026-10-23T05:42:43+00:00"
+    }
+   ],
    "latest": [
+    {
+     "id": "2026.10.23",
+     "title": "יום ועש\"ק פ' לך לך, י\"ב מרחשון, ה'תשפ\"ז",
+     "url": "",
+     "date": "Fri, 23 Oct 2026 12:00:00 GMT",
+     "blurb": "התוכן ב' אופנים בפירוש הפסוק \"ויאמר ה' אל אברם לך לך וגו'\" [שבתחילת פ' לך לך]: א) מלמעלה למטה : \"אברם\" - אב רם - בחי' \"שכל הנעלם מכל רעיון\", וממקום זה הי' צ\"ל ירידת נשמת אברם עד לארץ הלזו התחתונה. והסדר הוא: \"מארצך\" - בחי' הרצון, ואח\"ז \"וממולדתך\" - מדות הנולדים מן המוחין, ואח\"ז \"מבית אביך\" דרגא שלמטה יותר (כמבואר בכ\"מ), ואח\"ז \"אל הארץ\" - בחי' המלכות. ועד\"ז הוא בירידת כל נשמה מאיגרא רמא לבירא עמיקתא. אבל ע\"י הירידה נעשה \" אשר אראך \" - מתגלה מעלות הנשמה וכו'. ב) מלמטה למעלה : כבפשטות הענין שאברם עלה מחרן לארץ ישראל. וברוחניות ה\"ז העלי' (מתחיל) ממקום שהוא \"חרון אף של עולם\" ולמעלה. והסדר הוא: \"מארצך\" - רצון בלתי רצוי, ואח\"ז \"וממולדתך\" - רגיליות, ואח\"ז \"מבית אביך\" - מוחין ומדות, וכו' עד שהוא מתעלה \"אל הארץ אשר אראך\" - רצון האמיתי, רצון קונו. חלק מהמאמר ד\"ה לך לך מארצך וגו', אור לז' מרחשון ה'תשמ\"ו ל\"הנחה פרטית\" או התרגום ללה\"ק של השיחה: https://thedailysicha.com/?date=23-10-2026 Synopsis There are two explanations of the verse, “Hashem said to Avram: Lech lecha (‘Go forth’)…” (1) From above downward: “Avram” means Av Ram (Lofty Father), which represents the level of “intellect hidden from any perception.” Avraham’s soul had to descend from this level down to this lowest world. And the order is: “from your land” (one’s will); then “from your birthplace” (the middos born from the intellect); then “from your father’s house” (an even lower level); and then “to the land” (Malchus). The same applies to the descent of every soul. But as a result of this descent, “I will show you” (the rev",
+     "first_seen": "2026-10-23T05:42:43+00:00"
+    },
     {
      "id": "2026.10.22",
      "title": "יום ה' פ' לך לך, י\"א מרחשון, ה'תשפ\"ז",
@@ -1514,8 +1596,8 @@
      "first_seen": "2026-10-18T04:52:06+00:00"
     }
    ],
-   "total": 1408,
-   "last_success_at": "2026-10-22T09:24:35+00:00"
+   "total": 1409,
+   "last_success_at": "2026-10-23T05:42:43+00:00"
   },
   {
    "id": "learnchassidus",
@@ -1529,12 +1611,12 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-22T09:24:40+00:00",
+   "checked_at": "2026-10-23T05:51:11+00:00",
    "status": "ok",
    "new": [],
    "latest": [],
    "total": 5,
-   "last_success_at": "2026-10-22T09:24:40+00:00"
+   "last_success_at": "2026-10-23T05:51:11+00:00"
   },
   {
    "id": "simplychassidus",
@@ -1548,7 +1630,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-22T09:24:41+00:00",
+   "checked_at": "2026-10-23T05:51:12+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1575,7 +1657,7 @@
     }
    ],
    "total": 4,
-   "last_success_at": "2026-10-22T09:24:41+00:00"
+   "last_success_at": "2026-10-23T05:51:12+00:00"
   },
   {
    "id": "alonei_chabad",
@@ -1588,7 +1670,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-22T09:24:42+00:00",
+   "checked_at": "2026-10-23T05:51:13+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -1605,7 +1687,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-22T09:24:42+00:00",
+   "checked_at": "2026-10-23T05:51:13+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -1622,7 +1704,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-22T09:24:42+00:00",
+   "checked_at": "2026-10-23T05:51:13+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1649,7 +1731,7 @@
     }
    ],
    "total": 303,
-   "last_success_at": "2026-10-22T09:24:42+00:00"
+   "last_success_at": "2026-10-23T05:51:13+00:00"
   },
   {
    "id": "lchaim",
@@ -1662,7 +1744,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-22T09:24:43+00:00",
+   "checked_at": "2026-10-23T05:51:14+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1703,7 +1785,7 @@
     }
    ],
    "total": 191,
-   "last_success_at": "2026-10-22T09:24:43+00:00"
+   "last_success_at": "2026-10-23T05:51:14+00:00"
   },
   {
    "id": "one_point",
@@ -1716,7 +1798,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-22T09:24:45+00:00",
+   "checked_at": "2026-10-23T05:51:15+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1757,7 +1839,7 @@
     }
    ],
    "total": 184,
-   "last_success_at": "2026-10-22T09:24:45+00:00"
+   "last_success_at": "2026-10-23T05:51:15+00:00"
   },
   {
    "id": "derher",
@@ -1770,7 +1852,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-22T09:24:46+00:00",
+   "checked_at": "2026-10-23T05:51:17+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -1787,7 +1869,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-22T09:24:46+00:00",
+   "checked_at": "2026-10-23T05:51:17+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -1804,10 +1886,25 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-22T09:24:46+00:00",
+   "checked_at": "2026-10-23T05:51:17+00:00",
    "status": "ok",
-   "new": [],
+   "new": [
+    {
+     "id": "content:20679c70def00364",
+     "title": "עדכון בתוכן הדף",
+     "url": "https://dvarmalchus.org",
+     "date": "",
+     "first_seen": "2026-10-23T05:51:17+00:00"
+    }
+   ],
    "latest": [
+    {
+     "id": "content:20679c70def00364",
+     "title": "עדכון בתוכן הדף",
+     "url": "https://dvarmalchus.org",
+     "date": "",
+     "first_seen": "2026-10-23T05:51:17+00:00"
+    },
     {
      "id": "content:830792579f4b9b9b",
      "title": "עדכון בתוכן הדף",
@@ -1817,7 +1914,7 @@
     }
    ],
    "total": 5,
-   "last_success_at": "2026-10-22T09:24:46+00:00"
+   "last_success_at": "2026-10-23T05:51:17+00:00"
   },
   {
    "id": "maynotecha_inst",
@@ -1830,7 +1927,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-22T09:24:48+00:00",
+   "checked_at": "2026-10-23T05:51:19+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -1847,7 +1944,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-22T09:24:48+00:00",
+   "checked_at": "2026-10-23T05:51:19+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1861,7 +1958,7 @@
     }
    ],
    "total": 1,
-   "last_success_at": "2026-10-22T09:24:48+00:00"
+   "last_success_at": "2026-10-23T05:51:19+00:00"
   },
   {
    "id": "anash",
@@ -1874,10 +1971,43 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-22T09:24:50+00:00",
+   "checked_at": "2026-10-23T05:51:20+00:00",
    "status": "ok",
-   "new": [],
+   "new": [
+    {
+     "id": "https://anash.org/?p=1124805",
+     "title": "The Rebbe Maharash’s Eldest Son Who Burned His Writings",
+     "url": "https://anash.org/the-rebbe-rashabs-brother-who-said-his-own-maamarim-2/",
+     "date": "Thu, 22 Oct 2026 15:43:00 +0000",
+     "blurb": "Today, 11 Cheshvan, marks the yahrtzeit of the RaZA, Reb Schneur Zalman Aron Schneersohn, eldest son of the Rebbe Maharash. He was a great talmid chochom who wrote many chiddushei Torah, though he burned his writings and asked that the ashes be buried alongside him.",
+     "first_seen": "2026-10-23T05:51:20+00:00"
+    },
+    {
+     "id": "https://anash.org/?p=1125321",
+     "title": "I Sent My Son to Crown Heights for Shiur Daled",
+     "url": "https://anash.org/i-sent-my-son-to-crown-heights-for-shiur-daled/",
+     "date": "Thu, 22 Oct 2026 13:03:00 +0000",
+     "blurb": "An out-of-town Lubavitcher parent describes his dismay at the spiritual atmosphere his son encountered in Crown Heights during Shiur Daled and calls on the community to take responsibility for restoring the kedushah of the Rebbe’s shechunah.",
+     "first_seen": "2026-10-23T05:51:20+00:00"
+    }
+   ],
    "latest": [
+    {
+     "id": "https://anash.org/?p=1124805",
+     "title": "The Rebbe Maharash’s Eldest Son Who Burned His Writings",
+     "url": "https://anash.org/the-rebbe-rashabs-brother-who-said-his-own-maamarim-2/",
+     "date": "Thu, 22 Oct 2026 15:43:00 +0000",
+     "blurb": "Today, 11 Cheshvan, marks the yahrtzeit of the RaZA, Reb Schneur Zalman Aron Schneersohn, eldest son of the Rebbe Maharash. He was a great talmid chochom who wrote many chiddushei Torah, though he burned his writings and asked that the ashes be buried alongside him.",
+     "first_seen": "2026-10-23T05:51:20+00:00"
+    },
+    {
+     "id": "https://anash.org/?p=1125321",
+     "title": "I Sent My Son to Crown Heights for Shiur Daled",
+     "url": "https://anash.org/i-sent-my-son-to-crown-heights-for-shiur-daled/",
+     "date": "Thu, 22 Oct 2026 13:03:00 +0000",
+     "blurb": "An out-of-town Lubavitcher parent describes his dismay at the spiritual atmosphere his son encountered in Crown Heights during Shiur Daled and calls on the community to take responsibility for restoring the kedushah of the Rebbe’s shechunah.",
+     "first_seen": "2026-10-23T05:51:20+00:00"
+    },
     {
      "id": "https://anash.org/?p=1124564",
      "title": "12th Sefer Torah Hakloli to Be Completed in Buenos Aires",
@@ -1951,8 +2081,8 @@
      "first_seen": "2026-10-18T04:52:22+00:00"
     }
    ],
-   "total": 4,
-   "last_success_at": "2026-10-22T09:24:50+00:00"
+   "total": 5,
+   "last_success_at": "2026-10-23T05:51:20+00:00"
   },
   {
    "id": "chabadinfo",
@@ -1965,7 +2095,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-22T09:24:51+00:00",
+   "checked_at": "2026-10-23T05:51:21+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -1982,7 +2112,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-22T09:24:51+00:00",
+   "checked_at": "2026-10-23T05:51:21+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -1999,7 +2129,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-22T09:24:51+00:00",
+   "checked_at": "2026-10-23T05:51:21+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2045,7 +2175,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-10-22T09:24:51+00:00"
+   "last_success_at": "2026-10-23T05:51:21+00:00"
   },
   {
    "id": "kehot",
@@ -2058,7 +2188,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-22T09:24:54+00:00",
+   "checked_at": "2026-10-23T05:51:24+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2328,12 +2458,12 @@
     }
    ],
    "total": 190,
-   "last_success_at": "2026-10-22T09:24:54+00:00"
+   "last_success_at": "2026-10-23T05:51:24+00:00"
   }
  ],
  "browser_checks": {
   "lahak": {
-   "checked_at": "2026-10-22T05:08:02+00:00",
+   "checked_at": "2026-10-23T05:40:44+00:00",
    "items": [
     {
      "id": "7504924",
@@ -2392,10 +2522,10 @@
      "new": false
     }
    ],
-   "note": "עמוד הבית נטען בפועל; ארבעת הקונטרסים וכותרותיהם ללא שינוי. תשמ״ב ותשל״ז הן שנות אמירה ולא מועדי פרסום חדש."
+   "note": "עמוד המקור נטען בפועל; ארבעת הקונטרסים וכותרותיהם ללא שינוי. תשמ״ב ותשל״ז הן שנות אמירה, לא מועדי פרסום חדש."
   },
   "alonei_chabad": {
-   "checked_at": "2026-10-22T05:08:02+00:00",
+   "checked_at": "2026-10-23T05:40:44+00:00",
    "items": [
     {
      "id": "ZnQ5MHplYWZo",
@@ -2470,7 +2600,7 @@
      "date": "2026-10-12"
     }
    ],
-   "note": "עמוד העלונים ועמוד הקריאה נטענו בפועל; אותם שישה קישורי Flipsnack. המסגרות לא הציגו תוכן שניתן לאמת, ולכן כותרות הגיליונות ותאריכיהם לא עודכנו."
+   "note": "עמוד העלונים ועמוד הקריאה נטענו; ששת קישורי Flipsnack נשארו זהים. המסגרות לא מסרו תוכן ניתן לאימות, ולכן כותרות הגיליונות ותאריכיהם נשמרו ולא עודכנו."
   },
   "sichas_hashavua": {
    "items": [
@@ -2482,28 +2612,28 @@
      "issued_for": "ערב שבת קודש פרשת לך לך, י\"ב במרחשון תשפ\"ז (23.10.2026)"
     }
    ],
-   "checked_at": "2026-10-22T05:08:02+00:00",
-   "note": "עמוד המקור וגיליון 2077 נטענו מחדש, ותוכן העניינים אומת. 23.10.2026 הוא מועד הגיליון המיועד; מועד הגילוי הראשון נשמר בנפרד."
+   "checked_at": "2026-10-23T05:40:44+00:00",
+   "note": "עמוד המקור וגיליון 2077 נטענו; תוכן העניינים אומת. 23.10.2026 הוא מועד הגיליון המיועד; מועד הגילוי הראשון נשמר."
   },
   "derher": {
    "items": [],
-   "checked_at": "2026-10-22T05:08:02+00:00",
-   "note": "עמוד הבית, אינדקס המאמרים וארכיון הגיליונות נטענו בפועל; בארכיון מופיעים קישורים עד תשפ״ו. לא אומת גיליון חדש לתשפ״ז."
+   "checked_at": "2026-10-23T05:40:44+00:00",
+   "note": "עמוד הבית, אינדקס המאמרים וארכיון הגיליונות נטענו; בארכיון מופיעים קישורים עד תשפ״ו. לא אומת גיליון חדש לתשפ״ז."
   },
   "avita": {
    "items": [],
-   "checked_at": "2026-10-22T05:08:02+00:00",
-   "note": "העמוד המקורי נטען; תאריך הכתבה 15.02.2021. לא זוהה פרסום חדש בעמוד."
+   "checked_at": "2026-10-23T05:40:44+00:00",
+   "note": "עמוד המקור נטען ותאריך הכתבה 15.02.2021 אומת; לא זוהה בעמוד פרסום חדש."
   },
   "beitchabad": {
    "items": [],
-   "checked_at": "2026-10-22T05:08:02+00:00",
-   "note": "עמוד הבית והמאמר האינטרס הקדוש נטענו. לא אותרו במאמר מקור לשיחה מסוימת או מועד פרסום חדש מאומת; לא נוסף למדור."
+   "checked_at": "2026-10-23T05:40:44+00:00",
+   "note": "עמוד הבית והמאמר האינטרס הקדוש נטענו. לא זוהו במאמר מקור לשיחה מסוימת או מועד פרסום חדש מאומת; לא נוסף למדור. שיעורי הווידאו הוחרגו."
   },
   "maynotecha_inst": {
    "items": [],
-   "checked_at": "2026-10-22T05:08:02+00:00",
-   "note": "עמוד האודות נטען מחדש; תיאור ההוצאה והגיליונות אינו מזהה פרסום חדש מתוארך."
+   "checked_at": "2026-10-23T05:40:44+00:00",
+   "note": "עמוד האודות המקורי נטען; תיאור ההוצאה והגיליונות אינו מזהה פרסום חדש מתוארך."
   },
   "hageula": {
    "items": [
@@ -2554,10 +2684,26 @@
      "first_seen": "2026-10-21T05:56:28+00:00",
      "published_at": "2026-10-19",
      "publisher_timestamp": "2026-10-19T03:02:00+03:00"
+    },
+    {
+     "title": "מענות קודש משנות הכ\"ף בפרסום ראשון: תשורה היידינגספעלד לקריאה והורדה",
+     "url": "https://hageula.com/news/press/28212.htm",
+     "lang": "he",
+     "published_at": "2026-10-22",
+     "publisher_timestamp": "2026-10-22T21:43:00+03:00",
+     "first_seen": "2026-10-23T05:40:44+00:00"
+    },
+    {
+     "title": "פרסום ראשון: מאמר ויאמר . . לך לך תרמ\"ב",
+     "url": "https://hageula.com/news/press/28211.htm",
+     "lang": "he",
+     "published_at": "2026-10-22",
+     "publisher_timestamp": "2026-10-22T19:13:00+03:00",
+     "first_seen": "2026-10-23T05:40:44+00:00"
     }
    ],
-   "checked_at": "2026-10-22T05:08:02+00:00",
-   "note": "עמוד הבית והפרסומים שכבר תועדו נבדקו; תאריכי הפרסום והגילוי הראשון נשמרו. תשורת מדר (https://hageula.com/news/press/28201.htm) נבדקה ולא נוספה: המכתבים הם זיכרונות התמימים מבית חיינו, ולא מכתבי אדמו״ר. שיעורי שמע ווידאו הוחרגו."
+   "checked_at": "2026-10-23T05:40:44+00:00",
+   "note": "עמוד הבית, מדור ההוצאה לאור ושני עמודי הפרסום החדשים נטענו: תשורת היידינגספעלד ומאמר ויאמר . . לך לך תרמ״ב. תאריכי 22.10.2026 נלקחו מעמודי הכתבות; תרמ״ב היא שנת אמירת המאמר. מועדי הגילוי הקודמים נשמרו. זיכרונות, שמע ווידאו הוחרגו."
   },
   "chabadinfo": {
    "items": [
@@ -2569,23 +2715,24 @@
      "published_at": "2026-10-16"
     }
    ],
-   "checked_at": "2026-10-22T05:08:02+00:00",
-   "note": "עמוד בית המדרש ועמוד עומק הפשט לפרשת נח נטענו בפועל. אומתו התיאור וקישורי חוברות עומק הפשט ושני רעיונות על פי תורת מנחם. הפריטים החדשים בעמוד הם שיעורי שמע/וידאו והוחרגו."
+   "checked_at": "2026-10-23T05:40:44+00:00",
+   "note": "עמוד בית המדרש וכתבת סודות הסיפור נטענו; הספר עוסק בסיפורים ולא זוהה בו ביאור של מאמר, שיחה או מכתב מסוים ולכן לא נוסף. שיעורי שמע ווידאו הוחרגו. נשמרו הפריטים ומועדי הגילוי הקיימים."
   },
   "chabadlibrary": {
    "items": [],
-   "checked_at": "2026-10-22T05:08:02+00:00",
-   "note": "עמוד הספרים נטען בדפדפן כולל קטגוריות הספרים; אין בו מועדי הוספה המאפשרים לאמת פרסום חדש."
+   "checked_at": "2026-10-23T05:40:44+00:00",
+   "note": "עמוד הספרים נטען בדפדפן כולל קטגוריות הספרים; אינו מציג מועדי הוספה המאפשרים לאמת פרסום חדש."
   },
   "chassidutbehirah": {
    "items": [],
-   "checked_at": "2026-10-22T05:08:02+00:00",
-   "note": "עמוד המקור נטען בפועל; מוצג קטלוג מאמרים וקבצים ללא מועדי פרסום חדשים מאומתים. שנות המאמרים לא שימשו כתאריך פרסום."
+   "checked_at": "2026-10-23T05:40:44+00:00",
+   "note": "עמוד המקור נטען; מוצג קטלוג מאמרים וקבצים ללא מועדי פרסום חדשים מאומתים. שנות המאמרים אינן תאריכי פרסום."
   },
   "chabadlibrarybooks": {
    "items": [],
    "checked_at": "2026-10-22T05:08:02+00:00",
-   "note": "עמוד המקור נטען בפועל ומציג ממשק חיפוש בספרים; לא זוהתה רשימת פרסומים חדשים מתוארכים."
+   "note": "המקור לא נטען: כשל חיבור גם בבדיקה חוזרת אחת. מועד הבדיקה המוצלחת הקודם והנתונים הקיימים נשמרו.",
+   "last_attempt_at": "2026-10-23T05:40:44+00:00"
   },
   "sie_weekly": {
    "checked_at": "2026-10-22T05:08:02+00:00",
@@ -2611,10 +2758,11 @@
      ]
     }
    ],
-   "note": "עמוד SIE Weekly ושני קובצי PDF נטענו בפועל. הכותרות זוהו בשער הקבצים: נח, חלק ג׳ עמ׳ 750–757; לך לך, חלק ג׳ עמ׳ 757–764. מועד הגילוי הועתק מהרשומות המקוריות בעלות הכותרת Download; מועד פרסום לא אומת ולא הומצא."
+   "note": "אימות שני קובצי SIE לא הושלם: כלי הקריאה לא הצליח לפתוח אותם ובדיקת ההרשאות האוטומטית חסמה פתיחה בדפדפן של Google Drive מחשש לגישה לתוכן פרטי. לא בוצעה עקיפה; checked_at, פרטי הקבצים ומועדי הגילוי הקודמים נשמרו. שתי הטיוטות נשארו לא מאושרות.",
+   "last_attempt_at": "2026-10-23T05:40:44+00:00"
   },
   "hiskashrus": {
-   "checked_at": "2026-10-22T05:13:58+00:00",
+   "checked_at": "2026-10-23T05:40:44+00:00",
    "items": [
     {
      "title": "Lech-Lecha · 5787 · קונטרס שבועי לאנ\"ש חסידי חב\"ד לחיזוק ההתקשרות לכ\"ק אדמו\"ר רבי מנחם מענדל בהרה\"ק רלו\"י מליובאוויטש",
@@ -2625,7 +2773,12 @@
      "genre": "גיליון"
     }
    ],
-   "note": "עמוד הפרסום ב־Torah Table וקובץ PDF בן 32 עמודים נטענו בפועל. אומתו שער גיליון 1672, דבר הפתיחה ותוכן העניינים. 23.10.2026 הוא מועד הגיליון המיועד; אין לייחסו למועד ההעלאה. מועד הגילוי הראשון נשמר מהאיסוף האוטומטי."
+   "note": "קובץ PDF בן 32 עמודים נטען בפועל; שער גיליון 1672, דבר הפתיחה ותוכן העניינים נבדקו חזותית בעמודים 1–2. הטיוטה מההרצה הקודמת אומתה ואושרה; מועד הגילוי ותאריך הגיליון המיועד נשמרו."
+  },
+  "hebrewbooks": {
+   "items": [],
+   "checked_at": "2026-10-23T05:40:44+00:00",
+   "note": "עמוד הבית המקורי נטען בדפדפן. העדכון האחרון המוצהר הוא הוספת 50 ספרים בר״ח אלול תשפ״ו; לא זוהה פרסום חדש בחלון של 30 יום."
   }
  }
 }
