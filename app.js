@@ -857,7 +857,7 @@ function sourceTarget(value, pdfPage, book = false) {
   }
   if (host === "chabadlibrary.org" && /^\/books\/\d{1,12}\/?$/.test(u.pathname)) return { kind: "library", provider: "ספריית חב״ד", id: u.pathname.split("/")[2] };
   if (/\.pdf$/i.test(u.pathname)) { const page = Number(pdfPage) || Number(new URLSearchParams(u.hash.slice(1)).get("page")) || 1; return { kind: "pdf", provider: host, url: u.href, page: Number.isSafeInteger(page) && page > 0 ? page : 1 }; }
-  if ((host === "maamarim.com" && u.pathname === "/maamar.html" && /^\d+$/.test(u.searchParams.get("id") || "")) || (host === "mafteiach.app" && /^\/all\/\d{4}-\d{2}-\d{2}\/?$/.test(u.pathname))) return { kind: "web", provider: host === "maamarim.com" ? "מאמרים" : "מפתח", url: u.href };
+  if ((host === "maamarim.com" && u.pathname === "/maamar.html" && /^(?:\d+|(?:pdf|lahak)_\d+)$/.test(u.searchParams.get("id") || "")) || (host === "mafteiach.app" && /^\/all\/\d{4}-\d{2}-\d{2}[a-z]?\/?$/.test(u.pathname))) return { kind: "web", provider: host === "maamarim.com" ? "מאמרים" : "מפתח", url: u.href };
   return { kind: "link", provider: host === "chabadlibrary.org" ? "ספריית חב״ד" : host };
 }
 function sourcePDF(target, page = target?.page, zoom = "page-width") {
