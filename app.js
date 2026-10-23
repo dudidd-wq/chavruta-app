@@ -841,18 +841,23 @@ function sourcePDFLibrary() {
 function sourceURL(value) {
   try { const u = new URL(String(value || "")); return u.protocol === "https:" && !u.username && !u.password ? u : null; } catch (_) { return null; }
 }
-function sourceTarget(value, pdfPage) {
+function sourceTarget(value, pdfPage, book = false) {
   const u = sourceURL(value); if (!u) return null;
   const host = u.hostname.replace(/^www\./, "");
+  if (host === "hebrewbooks.org" && /^\/\d{1,8}\/?$/.test(u.pathname)) {
+    const page = Number(pdfPage || 1);
+    if (Number.isSafeInteger(page) && page > 0 && page < 100000) return { kind: "hebrewbooks", provider: "היברובוקס", book: u.pathname.split("/")[1], page };
+  }
   if (host === "hebrewbooks.org" && /^\/pdfpager\.aspx$/i.test(u.pathname)) {
     const book = u.searchParams.get("req"), page = Number(u.searchParams.get("pgnum") || pdfPage || 1);
     if (/^\d+$/.test(book || "") && Number.isSafeInteger(page) && page > 0 && page < 100000) return { kind: "hebrewbooks", provider: "היברובוקס", book, page };
   }
   if (host === "sefaria.org" && u.pathname.length > 1 && !/^\/(api|sheets|search|topics|texts|collections)(\/|$)/.test(u.pathname)) {
-    try { const ref = decodeURIComponent(u.pathname.slice(1)).replace(/_/g, " "); return /\d/.test(ref) ? { kind: "sefaria", provider: "ספריא", ref } : { kind: "link", provider: "ספריא" }; } catch (_) { return null; }
+    try { const ref = decodeURIComponent(u.pathname.slice(1)).replace(/_/g, " "); return /\d/.test(ref) || book ? { kind: "sefaria", provider: "ספריא", ref } : { kind: "link", provider: "ספריא" }; } catch (_) { return null; }
   }
   if (host === "chabadlibrary.org" && /^\/books\/\d{1,12}\/?$/.test(u.pathname)) return { kind: "library", provider: "ספריית חב״ד", id: u.pathname.split("/")[2] };
   if (/\.pdf$/i.test(u.pathname)) { const page = Number(pdfPage) || Number(new URLSearchParams(u.hash.slice(1)).get("page")) || 1; return { kind: "pdf", provider: host, url: u.href, page: Number.isSafeInteger(page) && page > 0 ? page : 1 }; }
+  if ((host === "maamarim.com" && u.pathname === "/maamar.html" && /^\d+$/.test(u.searchParams.get("id") || "")) || (host === "mafteiach.app" && /^\/all\/\d{4}-\d{2}-\d{2}\/?$/.test(u.pathname))) return { kind: "web", provider: host === "maamarim.com" ? "מאמרים" : "מפתח", url: u.href };
   return { kind: "link", provider: host === "chabadlibrary.org" ? "ספריית חב״ד" : host };
 }
 function sourcePDF(target, page = target?.page, zoom = "page-width") {
@@ -937,7 +942,7 @@ const SourceReader = {
   async open(info, opener) {
     this.close(false); this.info = { ...info }; this.quote = info.quote || ""; this.findTerm = null; this.opener = opener || document.activeElement; this.openerHref = this.opener?.getAttribute("href"); this.pending = false; this.original = null;
     this.position = { x: scrollX, y: scrollY }; this.anchor = captureAnchor(); this.page = 1; this.zoom = "page-width";
-    this.target = sourceTarget(info.url, info.pdfPage); this.excerpts = (info.excerpts || []).filter(x => x.text);
+    this.target = sourceTarget(info.url, info.pdfPage, !!info.book); this.excerpts = (info.excerpts || []).filter(x => x.text);
     const ticket = ++this.ticket;
     const d = h("dialog", { class: "source-reader no-print", id: "source-reader", dir: "rtl", "aria-labelledby": "source-reader-title" });
     this.dialog = d;
@@ -955,7 +960,7 @@ const SourceReader = {
     d.addEventListener("click", e => { if (e.target === d) { const r = d.getBoundingClientRect(); if (e.clientX < r.left || e.clientX > r.right || e.clientY < r.top || e.clientY > r.bottom) this.close(); } });
     d.showModal(); document.body.classList.add("source-reader-open"); close.focus({ preventScroll: true });
     this.libraryRoot = null; this.libraryPage = this.target?.id;
-    this.mode = this.excerpts.length ? "excerpt" : this.target?.kind === "sefaria" || (this.target?.kind === "library" && sourceGateway()) ? "text" : ["pdf", "hebrewbooks"].includes(this.target?.kind) ? "scan" : "excerpt";
+    this.mode = this.excerpts.length ? "excerpt" : this.target?.kind === "sefaria" || (this.target?.kind === "library" && sourceGateway()) ? "text" : ["pdf", "hebrewbooks"].includes(this.target?.kind) ? "scan" : this.target?.kind === "web" ? "web" : "excerpt";
     this.page = this.target?.page || 1; this.render();
     if (!this.excerpts.length && info.node) {
       this.pending = true; this.render();
@@ -985,12 +990,14 @@ const SourceReader = {
     const modes = this.excerpts.length || this.info.node || this.mode === "excerpt" ? [["excerpt", "קטעים בביאור"]] : [];
     if (this.target?.kind === "sefaria" || (this.target?.kind === "library" && sourceGateway())) modes.push(["text", "טקסט המקור"]);
     if (["pdf", "hebrewbooks"].includes(this.target?.kind)) modes.push(["scan", this.target.kind === "hebrewbooks" ? "צילום הדף" : "מסמך המקור"]);
+    if (this.target?.kind === "web") modes.push(["web", "אתר המקור"]);
     this.bar.replaceChildren(...modes.map(([mode, label]) => h("button", { type: "button", class: "fchip", "aria-pressed": this.mode === mode, onclick: () => { if (this.mode !== mode) { this.mode = mode; this.render(); } } }, label)));
     this.noteCleanup?.(); this.noteCleanup = null;
     for (const cleanup of this.pageNoteCleanups || []) cleanup(); this.pageNoteCleanups = [];
     this.body.replaceChildren(); this.body.scrollTop = 0;
     if (this.mode === "scan") return this.renderScan();
     if (this.mode === "text") return this.target.kind === "library" ? this.renderLibrary() : this.renderText();
+    if (this.mode === "web") return this.renderWeb();
     if (this.pending && !this.excerpts.length) { this.body.append(h("p", { class: "sr-status", role: "status" }, "טוען קטעי מקור מהביאורים…")); return; }
     if (!this.excerpts.length) { this.body.append(h("div", { class: "sr-empty" }, h("h3", null, "אין כרגע טקסט זמין לקריאה בחלון"), h("p", null, modes.length > 1 ? "אפשר לעבור לתצוגת המקור למעלה." : "עדיין אין בחברותא תצוגה ישירה למקור הזה. אפשר לפתוח אותו באתר המקור."))); return; }
     this.body.append(h("p", { class: "sr-notice" }, "קטעי המקור המשולבים בביאורים. אלה קטעים נבחרים, ולא נוסח המקור המלא."));
@@ -1001,6 +1008,12 @@ const SourceReader = {
       if (["hebrewbooks", "pdf"].includes(target?.kind)) section.append(h("button", { type: "button", class: "linkbtn", onclick: () => { this.target = target; this.page = target.page; if (this.original) this.original.href = row.url; this.mode = "scan"; this.render(); } }, "לצילום של הקטע הזה"));
       this.body.append(section);
     }
+  },
+  renderWeb() {
+    const seq = this.scanSeq;
+    const status = h("p", { class: "sr-status", role: "status" }, "תצוגת אתר המקור בתוך הקורא. אם התצוגה חסומה, אפשר לבחור ׳לאתר המקור׳ למטה.");
+    const frame = h("iframe", { class: "sr-frame", src: this.target.url, title: this.info.title || "אתר המקור", sandbox: "allow-scripts allow-same-origin", referrerpolicy: "no-referrer", onerror: () => { if (seq === this.scanSeq) status.textContent = "האתר אינו זמין בתצוגה המובנית. אפשר לבחור ׳לאתר המקור׳ למטה."; } });
+    this.body.append(status, frame, h("button", { type: "button", class: "btn sm", onclick: () => this.render() }, "טעינה מחדש"));
   },
   renderScan() {
     const target = this.target;
@@ -1103,11 +1116,18 @@ const SourceReader = {
     try {
       const response = await fetch("https://www.sefaria.org/api/v3/texts/" + encodeURIComponent(target.ref) + "?version=primary&return_format=default", { signal: controller.signal, credentials: "omit", referrerPolicy: "no-referrer" });
       if (!response.ok) throw new Error("source unavailable");
-      const data = await response.json(); if (controller.signal.aborted || !this.dialog || this.mode !== "text") return;
+      const data = await response.json(); if (this.controller !== controller || controller.signal.aborted || !this.dialog || this.mode !== "text") return;
       const version = data.versions?.[0], blocks = sourceTextBlocks(version?.text);
       if (!blocks.length) throw new Error("empty source");
       const license = version.license && version.license !== "unknown" ? version.license : "";
       body.replaceChildren(h("p", { class: "sr-notice" }, [data.heRef || data.ref || target.ref, version.versionTitle, license].filter(Boolean).join(" · ")));
+      if (typeof data.ref === "string" && data.ref) {
+        if (this.original) this.original.href = "https://www.sefaria.org/" + encodeURIComponent(data.ref.replace(/ /g, "_"));
+        this.refreshSave?.();
+      }
+      const move = ref => { this.target = { ...target, ref }; this.render(); };
+      const validRef = ref => typeof ref === "string" && ref.trim() && ref.length < 500;
+      if (validRef(data.prev) || validRef(data.next)) body.append(h("div", { class: "sr-scan-tools" }, h("button", { type: "button", class: "btn sm", disabled: !validRef(data.prev), onclick: () => { if (validRef(data.prev)) move(data.prev); } }, "הקטע הקודם"), h("button", { type: "button", class: "btn sm", disabled: !validRef(data.next), onclick: () => { if (validRef(data.next)) move(data.next); } }, "הקטע הבא")));
       const article = h("article", { class: "sr-text", dir: version.direction === "ltr" ? "ltr" : "rtl" });
       for (const block of blocks) article.append(h("p", null, sourceSafeHTML(block)));
       body.append(article, h("p", { class: "sr-notice" }, "הנוסח מוצג כפי שהתקבל מספריא. אין בכך אישור להתאמת המהדורה או לזיהוי הציטוט בביאור."));
@@ -1138,7 +1158,7 @@ const SOURCE_SAVED_KEY = "chavruta-sources-saved-v1";
 function savedSourceRecord(info) {
   const u = sourceURL(info?.url); if (!u) return null;
   const target = sourceTarget(u.href, info.pdfPage);
-  if (target?.kind === "hebrewbooks") { u.search = "req=" + target.book + "&pgnum=" + target.page; u.hash = ""; }
+  if (target?.kind === "hebrewbooks") { u.pathname = "/pdfpager.aspx"; u.search = "req=" + target.book + "&pgnum=" + target.page; u.hash = ""; }
   else if (target?.kind === "library") { u.search = ""; u.hash = ""; }
   else if (target?.kind === "pdf") u.hash = "page=" + Math.max(1, Number(info.pdfPage) || Number(new URLSearchParams(u.hash.slice(1)).get("page")) || 1);
   const row = { url: u.href, title: String(info.title || "מקור").slice(0, 300) };
@@ -3591,6 +3611,10 @@ VIEWS.daily = async function (rest, q, ctx) {
 const TREE_GEN = [0, 0, 1, 2, 3, 4, 5, 6, 7];
 const TREE_WHERE = w => !w ? null : w.startsWith("hb:") ? { t: "היברובוקס", u: "https://hebrewbooks.org/" + w.slice(3) } : w === "cl" ? { t: "ספריית חב״ד", u: "" } : null;
 const treeUrl = u => u.startsWith("cl:") ? "https://www.chabadlibrary.org/books/" + u.slice(3) : u.startsWith("mm:") ? "https://maamarim.com/maamar.html?id=" + u.slice(3) : u;
+function treeSourceLink(label, url, info = {}) {
+  const normalized = sourceURL(treeUrl(String(url || "")));
+  return normalized ? sourceLink({ ...info, title: info.title || label, url: normalized.href }, label) : label;
+}
 const TREE_PAGE = 150;
 
 /* ---- היחידות בחלקים: data/tree-u<k>.js = {s: מזהה ראשון, u: [יחידות]} (build_app.py: write_tree_chunks) ---- */
@@ -3708,15 +3732,16 @@ function treeRebbe(main, T, r, q) {
     if (s.st) det.append(h("p", null, s.st));
     if (s.pub) det.append(h("p", { class: "muted" }, "הוצאה: " + s.pub));
     if (s.notes) det.append(h("p", { class: "muted" }, s.notes));
+    if (s.cl) det.append(h("p", null, treeSourceLink("קריאה בספריית חב״ד", "cl:" + s.cl, { title: s.n, author: name, book: s.n })));
     if (s.vols.length) {
       const tb = h("tbody");
-      for (const [v, c, w] of s.vols) { const W = TREE_WHERE(w); tb.append(h("tr", null, h("td", null, v), h("td", null, c), h("td", null, W ? (W.u ? h("a", { href: W.u, target: "_blank", rel: "noopener" }, W.t) : W.t) : h("span", { class: "muted" }, "—")))); }
+      for (const [v, c, w] of s.vols) { const W = TREE_WHERE(w); tb.append(h("tr", null, h("td", null, v), h("td", null, c), h("td", null, W ? (W.u ? treeSourceLink(W.t, W.u, { title: s.n + " · " + v, author: name, book: s.n }) : W.t) : h("span", { class: "muted" }, "—")))); }
       det.append(h("div", { class: "tbl-wrap" }, h("table", { class: "tree-tbl" }, h("thead", null, h("tr", null, h("th", null, "כרך"), h("th", null, "תוכן"), h("th", null, "ברשת"))), tb)));
     }
     if (s.col && s.col.length) {
       const ul = h("ul", { class: "tree-col" });
-      for (const [t, u] of s.col) ul.append(h("li", null, h("a", { href: "https://media.col.org.il/files/uploads/original/" + u, target: "_blank", rel: "noopener" }, t, " ", icon("i-ext"))));
-      det.append(h("p", { class: "muted" }, "קובצי PDF להורדה — מאגר האינדקסים של חב״ד און ליין:"), ul);
+      for (const [t, u] of s.col) ul.append(h("li", null, treeSourceLink(t, "https://media.col.org.il/files/uploads/original/" + u, { author: name, book: s.n })));
+      det.append(h("p", { class: "muted" }, "קובצי PDF לקריאה — מאגר האינדקסים של חב״ד און ליין:"), ul);
     }
     if (s.url) det.append(h("p", null, h("a", { href: s.url, target: "_blank", rel: "noopener" }, "הערך בחב״דפדיה ", icon("i-ext"))));
     main.append(det);
@@ -3777,7 +3802,7 @@ function treeTable(T, ids, showBook) {
     const tags = [u[6] ? "פרשת " + u[6] : "", u[7]].filter(Boolean).join(" · ");
     tb.append(h("tr", null,
       showBook ? h("td", null, treeDot(bk[0]), " ", h("a", { href: mkHash(["tree", "b", u[0]]) }, bk[1])) : null,
-      h("td", null, u[8] ? h("a", { href: treeUrl(u[8]), target: "_blank", rel: "noopener" }, u[2] || "(ללא כותרת)") : (u[2] || "(ללא כותרת)"), u[3] ? h("div", { class: "muted sm" }, u[3]) : null),
+      h("td", null, treeSourceLink(u[2] || "(ללא כותרת)", u[8], { author: T.rebbeim[bk[0]], book: bk[1], page: u[4] }), u[3] ? h("div", { class: "muted sm" }, u[3]) : null),
       h("td", null, T.genres[u[1]]), h("td", null, u[5]), h("td", null, u[4]), h("td", null, tags)));
   }
   return h("div", { class: "tbl-wrap" }, h("table", { class: "tree-tbl" },
@@ -3897,7 +3922,7 @@ function parshaSources(main, T, p, rows) {
       xs.sort((a, b) => String(a[2]).localeCompare(String(b[2]), "he") || String(a[4] || "").localeCompare(String(b[4] || ""), "he") || pgNum(a[5]) - pgNum(b[5]));
       for (const [, g, book, t0, y, pg, how, vv, url, fill] of xs) {
         const t = treeT(t0);
-        tb.append(h("tr", null, h("td", null, url ? h("a", { href: url, target: "_blank", rel: "noopener" }, t) : t), h("td", null, book), h("td", null, g), h("td", null, y), h("td", null, pg ? "ע׳ " + pg : ""), howCell(how, vv, fill)));
+        tb.append(h("tr", null, h("td", null, treeSourceLink(t, url, { author: T.rebbeim[r], book, page: pg })), h("td", null, book), h("td", null, g), h("td", null, y), h("td", null, pg ? "ע׳ " + pg : ""), howCell(how, vv, fill)));
       }
       box.append(h("div", { class: "tbl-wrap" }, h("table", { class: "tree-tbl" }, h("thead", null, h("tr", null, h("th", null, "כותרת / ד״ה"), h("th", null, "ספר"), h("th", null, "סוג"), h("th", null, "שנה"), h("th", null, "עמוד"), h("th", null, "איך שויך"))), tb)));
     }
@@ -3943,7 +3968,7 @@ function placeMap(main, P, kind, name) {
     const tb = h("tbody");
     for (const [, g, book, t0, y, pg, occ, url] of xs) {
       const t = treeT(t0);
-      tb.append(h("tr", null, h("td", null, url ? h("a", { href: treeUrl(url), target: "_blank", rel: "noopener" }, t) : t), h("td", null, book), h("td", null, g), h("td", null, y), h("td", null, pg ? "ע׳ " + pg : ""), h("td", null, occ)));
+      tb.append(h("tr", null, h("td", null, treeSourceLink(t, url, { author: P.rebbeim[r], book, page: pg })), h("td", null, book), h("td", null, g), h("td", null, y), h("td", null, pg ? "ע׳ " + pg : ""), h("td", null, occ)));
     }
     main.append(h("div", { class: "tbl-wrap" }, h("table", { class: "tree-tbl" }, h("thead", null, h("tr", null, h("th", null, "כותרת / ד״ה"), h("th", null, "ספר"), h("th", null, "סוג"), h("th", null, "שנה"), h("th", null, "עמוד"), h("th", null, kind === "נ״ך" ? "פסוק" : "זמן אמירה / שיוך"))), tb)));
   }
@@ -3970,7 +3995,7 @@ const KTIER = { 1: "יחידות ומפתח הפוך", 2: "יחידות ומפת
 function kRebbeChips(K, by) {
   return by.map((n, i) => n ? h("span", { class: "chip mute" }, treeDot(i), " ", `${K.rebbeim[i]} ${n.toLocaleString("he")}`) : null).filter(Boolean);
 }
-function kLink(label, url) { return url ? h("a", { href: url, target: "_blank", rel: "noopener" }, label) : label; }
+function kLink(label, url, book) { return treeSourceLink(label, url, { book }); }
 async function treeKabbalah(main, rest, q, ctx) {
   let K;
   try { K = await loadChunk("kabbalah"); } catch (e) { main.append(h("div", { class: "empty" }, h("b", null, "לא ניתן לטעון את עץ הקבלה"), String(e.message || e))); return; }
@@ -3994,7 +4019,7 @@ async function treeKabbalah(main, rest, q, ctx) {
     for (const w of ws) tb.append(h("tr", null,
       h("td", null, w.nr && tier < 3 ? h("a", { href: mkHash(["tree", "k", "w", w.id]) }, w.he) : w.he),
       h("td", null, w.unit || KTIER[tier]), h("td", null, w.nu ? w.nu.toLocaleString("he") : "—"), h("td", null, w.nr ? w.nr.toLocaleString("he") : "—"),
-      h("td", null, w.url ? h("a", { href: w.url, target: "_blank", rel: "noopener" }, "ספריא ", icon("i-ext")) : "—")));
+      h("td", null, w.url ? treeSourceLink("קריאה בספר", w.url, { title: w.he, book: w.he }) : "—")));
     main.append(h("div", { class: "tbl-wrap" }, h("table", { class: "tree-tbl" },
       h("thead", null, h("tr", null, h("th", null, "ספר"), h("th", null, "יחידת רישום"), h("th", null, "יחידות"), h("th", null, "הפניות"), h("th", null, "ברשת"))), tb)));
   }
@@ -4012,13 +4037,13 @@ function kWork(main, K, wid) {
   document.title = w.he + " · עץ הקבלה · חברותא";
   treeHead(main, w.he, [["עץ הקבלה", mkHash(["tree", "k"])], [w.he, null]],
     `יחידת רישום: ${w.unit || "—"} · ${w.nu.toLocaleString("he")} יחידות · ${w.nr.toLocaleString("he")} הפניות בספרי רבותינו.`);
-  if (w.url) main.append(h("p", null, h("a", { href: w.url, target: "_blank", rel: "noopener" }, "הספר בספריא ", icon("i-ext"))));
+  if (w.url) main.append(h("p", null, treeSourceLink("קריאת הספר כאן", w.url, { title: w.he, book: w.he })));
   main.append(h("div", { class: "chips" }, kRebbeChips(K, w.by)));
   const rows = (K.top || {})[wid] || [];
   main.append(h("div", { class: "sec-h" }, h("h2", null, "היחידות המצוטטות ביותר"), h("span", { class: "tag" }, rows.length)));
   if (!rows.length) { main.append(h("p", { class: "muted" }, "ההפניות לספר זה נספרו בלי יחידה (הפניה כללית, או מקום שאין לו מיפוי).")); return; }
   const tb = h("tbody");
-  for (const [label, url, sec, n, by] of rows) tb.append(h("tr", null, h("td", null, kLink(label, url)), h("td", null, sec), h("td", null, n.toLocaleString("he")),
+  for (const [label, url, sec, n, by] of rows) tb.append(h("tr", null, h("td", null, kLink(label, url, w.he)), h("td", null, sec), h("td", null, n.toLocaleString("he")),
     h("td", null, by.map((c, i) => c ? `${K.rebbeim[i]} ${c}` : null).filter(Boolean).join(" · "))));
   main.append(h("div", { class: "tbl-wrap" }, h("table", { class: "tree-tbl" },
     h("thead", null, h("tr", null, h("th", null, "מקום"), h("th", null, "פרשה / שער"), h("th", null, "הפניות"), h("th", null, "אצל"))), tb)));
@@ -4039,14 +4064,15 @@ function kParsha(main, K, p) {
     const xs = byW.get(wid);
     main.append(h("div", { class: "sec-h sub" }, h("h3", null, wname[wid] || wid), h("span", { class: "tag mute" }, xs.length)));
     const tb = h("tbody");
-    for (const [label, url, sec, , cites] of xs) tb.append(h("tr", null, h("td", null, kLink(label, url)), h("td", null, sec),
-      h("td", null, ...cites.flatMap(([r, t, y, u], i) => [i ? "; " : "", treeDot(r), " ", K.rebbeim[r] || "", " — ", u ? h("a", { href: u, target: "_blank", rel: "noopener" }, treeT(t) + (y ? " " + y : "")) : treeT(t)]))));
+    for (const [label, url, sec, , cites] of xs) tb.append(h("tr", null, h("td", null, kLink(label, url, wname[wid])), h("td", null, sec),
+      h("td", null, ...cites.flatMap(([r, t, y, u], i) => [i ? "; " : "", treeDot(r), " ", K.rebbeim[r] || "", " — ", treeSourceLink(treeT(t) + (y ? " " + y : ""), u, { author: K.rebbeim[r] })]))));
     main.append(h("div", { class: "tbl-wrap" }, h("table", { class: "tree-tbl" },
       h("thead", null, h("tr", null, h("th", null, "מקום"), h("th", null, "פרשה / שער"), h("th", null, "מצוטט אצל"))), tb)));
   }
   chvStackTables?.(main);
   window.scrollTo(0, 0);
 }
+
 
 
 /* חברותא · שער האתר (#/home): מה זה חברותא, הפרשיות (כל פרשה — כרטיס), פרשת השבוע, הלימוד היומי, מה חדש, עץ הידע, ואיך לומדים כאן.
