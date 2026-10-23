@@ -1318,6 +1318,10 @@ body.source-reader-open { overflow: hidden; }
 .source-reader .sr-footer > a { margin-inline-start: auto; }
 .source-reader .sr-text { font: var(--reading-weight,400) var(--reading-source-size,20px)/var(--reading-source-leading,1.85) var(--reading-source-font,var(--serif)); white-space: pre-wrap; overflow-wrap: anywhere; word-spacing: var(--reading-word,0em); letter-spacing: var(--reading-letter,0em); }
 .source-reader .sr-text p { margin: 0 0 var(--reading-paragraph,1em); }
+.source-reader .sr-text section[data-source-section] { margin-bottom: var(--reading-paragraph,1em); }
+.source-reader .sr-source-choices { list-style: none; padding: 0; }
+.source-reader .sr-source-choices li { padding-block: 12px; border-bottom: 1px solid var(--rule); }
+.source-reader .sr-source-choices button { max-width: 100%; white-space: normal; text-align: start; overflow-wrap: anywhere; }
 :root[data-justify=on] .source-reader .sr-text { text-align: justify; }
 .source-reader .sr-text i { font-style: italic; }
 .source-reader .sr-notice, .source-reader .sr-verified { font: 12px/1.7 var(--sans); color: var(--ink-3); margin: 0 0 18px; }

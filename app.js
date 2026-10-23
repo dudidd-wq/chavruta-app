@@ -857,14 +857,22 @@ function sourceTarget(value, pdfPage, book = false) {
   }
   if (host === "chabadlibrary.org" && /^\/books\/\d{1,12}\/?$/.test(u.pathname)) return { kind: "library", provider: "ספריית חב״ד", id: u.pathname.split("/")[2] };
   if (/\.pdf$/i.test(u.pathname)) { const page = Number(pdfPage) || Number(new URLSearchParams(u.hash.slice(1)).get("page")) || 1; return { kind: "pdf", provider: host, url: u.href, page: Number.isSafeInteger(page) && page > 0 ? page : 1 }; }
-  if ((host === "maamarim.com" && u.pathname === "/maamar.html" && /^(?:\d+|(?:pdf|lahak)_\d+)$/.test(u.searchParams.get("id") || "")) || (host === "mafteiach.app" && /^\/all\/\d{4}-\d{2}-\d{2}[a-z]?\/?$/.test(u.pathname))) return { kind: "web", provider: host === "maamarim.com" ? "מאמרים" : "מפתח", url: u.href };
+  if (host === "maamarim.com" && u.pathname === "/maamar.html" && /^(?:\d{1,12}|(?:pdf|lahak|gb)_\d{1,12})$/.test(u.searchParams.get("id") || "")) return { kind: "maamarim", provider: "מאמרים", id: u.searchParams.get("id"), url: u.href };
+  if (host === "mafteiach.app" && /^\/all\/\d{4}-\d{2}-\d{2}[a-z]?\/?$/.test(u.pathname)) return { kind: "mafteiach", provider: "מפתח", id: u.pathname.split("/")[2], url: u.href };
+  if (host === "drive.google.com" || host === "docs.google.com") {
+    const match = u.pathname.match(/^\/(?:file|document)\/d\/([A-Za-z0-9_-]{10,180})(?:\/(?:view|edit|preview))?\/?$/), id = match?.[1] || (u.pathname === "/open" ? u.searchParams.get("id") : null);
+    if (/^[A-Za-z0-9_-]{10,180}$/.test(id || "")) { const preview = new URL("https://" + host + (host === "docs.google.com" ? "/document/d/" : "/file/d/") + id + "/preview"); if (u.searchParams.get("resourcekey")) preview.searchParams.set("resourcekey", u.searchParams.get("resourcekey")); return { kind: "drive", provider: "מסמך המקור", url: u.href, preview: preview.href }; }
+  }
   return { kind: "link", provider: host === "chabadlibrary.org" ? "ספריית חב״ד" : host };
 }
 function sourcePDF(target, page = target?.page, zoom = "page-width") {
+  if (target?.kind === "drive") return target.preview;
   if (target?.kind === "hebrewbooks") return `https://beta.hebrewbooks.org/pagefeed/hebrewbooks_org_${target.book}_${page}.pdf#toolbar=1&navpanes=0&view=FitH&zoom=${zoom}`;
   if (target?.kind === "pdf") { const u = new URL(target.url); u.hash = `page=${Math.max(1, Number(page) || 1)}&toolbar=1&navpanes=0&zoom=${zoom}`; return u.href; }
   return "";
 }
+function sourceSection(value) { return typeof value === "string" && /^[A-Za-z][\w-]{0,79}$/.test(value) ? value : null; }
+function sourceReaderMode(target) { return target?.kind === "sefaria" || (sourceGateway() && ["library", "maamarim", "mafteiach"].includes(target?.kind)) ? "text" : ["pdf", "hebrewbooks", "drive"].includes(target?.kind) ? "scan" : ["web", "maamarim", "mafteiach"].includes(target?.kind) ? "web" : "excerpt"; }
 function sourceExcerpt(id, row) {
   return { id, page: row[0], pdfPage: row[1], url: row[2], node: row[3], topic: row[4], text: row[5], verified: row[6], provider: row[7] };
 }
@@ -941,7 +949,7 @@ const SourceReader = {
   },
   async open(info, opener) {
     this.close(false); this.info = { ...info }; this.quote = info.quote || ""; this.findTerm = null; this.opener = opener || document.activeElement; this.openerHref = this.opener?.getAttribute("href"); this.pending = false; this.original = null;
-    this.position = { x: scrollX, y: scrollY }; this.anchor = captureAnchor(); this.page = 1; this.zoom = "page-width";
+    this.position = { x: scrollX, y: scrollY }; this.anchor = captureAnchor(); this.page = 1; this.zoom = "page-width"; this.section = sourceSection(info.section); this.remoteData = null; this.remoteAll = false; this.providerParent = null;
     this.target = sourceTarget(info.url, info.pdfPage, !!info.book); this.excerpts = (info.excerpts || []).filter(x => x.text);
     const ticket = ++this.ticket;
     const d = h("dialog", { class: "source-reader no-print", id: "source-reader", dir: "rtl", "aria-labelledby": "source-reader-title" });
@@ -960,7 +968,7 @@ const SourceReader = {
     d.addEventListener("click", e => { if (e.target === d) { const r = d.getBoundingClientRect(); if (e.clientX < r.left || e.clientX > r.right || e.clientY < r.top || e.clientY > r.bottom) this.close(); } });
     d.showModal(); document.body.classList.add("source-reader-open"); close.focus({ preventScroll: true });
     this.libraryRoot = null; this.libraryPage = this.target?.id;
-    this.mode = this.excerpts.length ? "excerpt" : this.target?.kind === "sefaria" || (this.target?.kind === "library" && sourceGateway()) ? "text" : ["pdf", "hebrewbooks"].includes(this.target?.kind) ? "scan" : this.target?.kind === "web" ? "web" : "excerpt";
+    this.mode = this.excerpts.length ? "excerpt" : sourceReaderMode(this.target);
     this.page = this.target?.page || 1; this.render();
     if (!this.excerpts.length && info.node) {
       this.pending = true; this.render();
@@ -988,15 +996,16 @@ const SourceReader = {
     if (!this.dialog) return;
     this.stop(); this.pending = !!this.pending;
     const modes = this.excerpts.length || this.info.node || this.mode === "excerpt" ? [["excerpt", "קטעים בביאור"]] : [];
-    if (this.target?.kind === "sefaria" || (this.target?.kind === "library" && sourceGateway())) modes.push(["text", "טקסט המקור"]);
-    if (["pdf", "hebrewbooks"].includes(this.target?.kind)) modes.push(["scan", this.target.kind === "hebrewbooks" ? "צילום הדף" : "מסמך המקור"]);
-    if (this.target?.kind === "web") modes.push(["web", "אתר המקור"]);
+    if (this.target?.kind === "sefaria" || (["library", "maamarim", "mafteiach"].includes(this.target?.kind) && sourceGateway())) modes.push(["text", this.target.kind === "mafteiach" ? "בחירת נוסח ומסמך" : "טקסט המקור"]);
+    if (["pdf", "hebrewbooks", "drive"].includes(this.target?.kind)) modes.push(["scan", this.target.kind === "hebrewbooks" ? "צילום הדף" : "מסמך המקור"]);
+    if (this.target?.kind === "web" || (!sourceGateway() && ["maamarim", "mafteiach"].includes(this.target?.kind))) modes.push(["web", "אתר המקור"]);
     this.bar.replaceChildren(...modes.map(([mode, label]) => h("button", { type: "button", class: "fchip", "aria-pressed": this.mode === mode, onclick: () => { if (this.mode !== mode) { this.mode = mode; this.render(); } } }, label)));
+    if (this.providerParent) this.bar.prepend(h("button", { type: "button", class: "btn sm", onclick: () => { const p = this.providerParent; this.providerParent = null; this.info = p.info; this.target = p.target; this.remoteData = p.data; this.mode = "text"; this.providerCaption(); this.render(); } }, "חזרה לרשימת המסמכים"));
     this.noteCleanup?.(); this.noteCleanup = null;
     for (const cleanup of this.pageNoteCleanups || []) cleanup(); this.pageNoteCleanups = [];
     this.body.replaceChildren(); this.body.scrollTop = 0;
     if (this.mode === "scan") return this.renderScan();
-    if (this.mode === "text") return this.target.kind === "library" ? this.renderLibrary() : this.renderText();
+    if (this.mode === "text") return ["maamarim", "mafteiach"].includes(this.target.kind) ? this.renderRemote() : this.target.kind === "library" ? this.renderLibrary() : this.renderText();
     if (this.mode === "web") return this.renderWeb();
     if (this.pending && !this.excerpts.length) { this.body.append(h("p", { class: "sr-status", role: "status" }, "טוען קטעי מקור מהביאורים…")); return; }
     if (!this.excerpts.length) { this.body.append(h("div", { class: "sr-empty" }, h("h3", null, "אין כרגע טקסט זמין לקריאה בחלון"), h("p", null, modes.length > 1 ? "אפשר לעבור לתצוגת המקור למעלה." : "עדיין אין בחברותא תצוגה ישירה למקור הזה. אפשר לפתוח אותו באתר המקור."))); return; }
@@ -1015,6 +1024,67 @@ const SourceReader = {
     const frame = h("iframe", { class: "sr-frame", src: this.target.url, title: this.info.title || "אתר המקור", sandbox: "allow-scripts allow-same-origin", referrerpolicy: "no-referrer", onerror: () => { if (seq === this.scanSeq) status.textContent = "האתר אינו זמין בתצוגה המובנית. אפשר לבחור ׳לאתר המקור׳ למטה."; } });
     this.body.append(status, frame, h("button", { type: "button", class: "btn sm", onclick: () => this.render() }, "טעינה מחדש"));
   },
+  providerCaption() {
+    if (this.original) this.original.href = this.info.url;
+    const title = this.dialog?.querySelector?.("#source-reader-title"), meta = this.dialog?.querySelector?.(".sr-meta");
+    if (title) title.textContent = this.info.title || "מקור";
+    if (meta) meta.textContent = [this.info.author, this.info.book, this.target?.provider].filter(Boolean).join(" · ");
+    this.refreshSave?.();
+  },
+  async renderRemote() {
+    const target = this.target, body = this.body;
+    if (this.remoteData?.provider === target.kind && this.remoteData.id === target.id) return this.renderRemoteData(this.remoteData);
+    const controller = new AbortController(); this.controller = controller;
+    body.append(h("p", { role: "status" }, target.kind === "maamarim" ? "טוען את נוסח המאמר והערותיו…" : "טוען את רשימת הנוסחים והמסמכים ממפתח…"));
+    const timeout = setTimeout(() => controller.abort(), 22000);
+    try {
+      const response = await fetch(sourceGateway() + "/v1/" + target.kind + "/" + encodeURIComponent(target.id), { signal: controller.signal, credentials: "omit", referrerPolicy: "no-referrer" });
+      if (!response.ok) throw Error("unavailable"); const data = await response.json();
+      if (this.controller !== controller || controller.signal.aborted || !this.dialog || this.mode !== "text") return;
+      if (data.provider !== target.kind || data.id !== target.id) throw Error("wrong source");
+      this.remoteData = data; this.renderRemoteData(data);
+    } catch (_) {
+      if (this.controller !== controller || !this.dialog || this.mode !== "text") return;
+      this.remoteData = null; body.replaceChildren(h("div", { class: "sr-empty", role: "status" }, h("h3", null, "לא ניתן לטעון כעת את המקור"), h("p", null, "אפשר לנסות שוב או לפתוח באתר המקור."), h("button", { class: "btn", type: "button", onclick: () => this.render() }, "ניסיון נוסף")));
+    } finally { clearTimeout(timeout); }
+  },
+  renderRemoteData(data) {
+    if (data.provider === "maamarim") return this.renderMaamarim(data);
+    if (!Array.isArray(data.choices) || !data.choices.length || data.choices.length > 200) throw Error("invalid index");
+    this.body.replaceChildren(h("p", { class: "sr-notice" }, [data.title, data.id].filter(Boolean).join(" · ")), h("h3", null, "בחירת נוסח ומסמך"), h("p", null, "אלה המסמכים שמפתח מקשר אליהם בתאריך שנבחר. בחרו את הפרסום הרצוי לקריאה."));
+    const list = h("ul", { class: "sr-source-choices" });
+    for (const choice of data.choices) {
+      const url = sourceURL(choice.url); if (!url || typeof choice.label !== "string") continue;
+      list.append(h("li", null, h("p", { class: "sr-notice" }, choice.context || ""), h("button", { type: "button", class: "btn", onclick: () => {
+        this.providerParent = { target: this.target, info: this.info, data };
+        this.info = { title: choice.label, book: choice.context, url: url.href }; this.target = sourceTarget(url.href); this.section = null; this.remoteData = null; this.mode = sourceReaderMode(this.target); this.page = this.target?.page || 1; this.providerCaption(); this.render();
+      } }, choice.label)));
+    }
+    this.body.append(list);
+  },
+  renderMaamarim(data) {
+    if (!Array.isArray(data.paragraphs) || !data.paragraphs.length || data.paragraphs.length > 2000 || !Array.isArray(data.footnotes) || data.footnotes.length > 2000 || data.paragraphs.some(p => !sourceSection(p.id) || typeof p.text !== "string")) throw Error("invalid text");
+    let at = data.paragraphs.findIndex(p => p.id === this.section); const missing = at < 0 && !!this.section; if (at < 0) at = 0; this.section = data.paragraphs[at].id; this.refreshSave?.();
+    const move = i => { this.section = data.paragraphs[i].id; this.render(); };
+    const select = h("select", { "aria-label": "בחירת קטע במאמר", onchange: () => { this.section = select.value; this.render(); } }, ...data.paragraphs.map((p, i) => h("option", { value: p.id, selected: i === at }, "קטע " + (i + 1) + " מתוך " + data.paragraphs.length)));
+    const tools = h("div", { class: "sr-scan-tools" }, h("button", { type: "button", class: "btn sm", disabled: at === 0, onclick: () => move(at - 1) }, "הקטע הקודם"), select, h("button", { type: "button", class: "btn sm", disabled: at === data.paragraphs.length - 1, onclick: () => move(at + 1) }, "הקטע הבא"), h("button", { type: "button", class: "btn sm", "aria-pressed": this.remoteAll, onclick: () => { this.remoteAll = !this.remoteAll; this.render(); } }, "המאמר ברצף"));
+    const notes = h("details", { class: "sr-text sr-notes" }, h("summary", null, "הערות המקור (" + data.footnotes.length + ")")), noteIds = new Map(), references = new Map();
+    data.footnotes.forEach((n, i) => { if (!/^(?:\d{1,5}|\*)$/.test(n.marker) || typeof n.text !== "string") throw Error("invalid notes"); const rows = noteIds.get(n.marker) || []; rows.push(i); noteIds.set(n.marker, rows); });
+    const article = h("article", { class: "sr-text", dir: "rtl" });
+    for (const p of this.remoteAll ? data.paragraphs : [data.paragraphs[at]]) {
+      const section = h("section", { "data-source-section": p.id }), parts = p.text.split(/〔FN:(\d{1,5}|\*)〕/g);
+      parts.forEach((part, i) => { if (!(i % 2)) { section.append(part); return; } const ids = noteIds.get(part), id = ids?.length === 1 ? "sr-mm-note-" + ids[0] : null;
+        if (!id) { section.append(h("sup", null, part)); return; }
+        const link = h("a", { href: "#" + id, onclick: e => { e.preventDefault(); notes.open = true; notes.querySelector("#" + id)?.scrollIntoView({ block: "center" }); } }, part); if (!references.has(part)) references.set(part, link); section.append(h("sup", null, link));
+      }); article.append(section);
+    }
+    data.footnotes.forEach((n, i) => notes.append(h("div", { id: "sr-mm-note-" + i, class: "sr-footnote" }, h("b", null, n.marker + " "), n.text, references.has(n.marker) ? h("button", { type: "button", class: "linkbtn", onclick: () => references.get(n.marker).focus() }, "חזרה לקטע") : null)));
+    this.body.replaceChildren(h("p", { class: "sr-notice" }, [data.title, data.date, "נוסח מאתר מאמרים"].filter(Boolean).join(" · ")), tools, missing ? h("p", { role: "status" }, "מקום הקריאה השמור לא נמצא בנוסח הנוכחי. מוצגת תחילת המאמר.") : null, article, notes);
+    sourceTextFind(this, article);
+    const cleanups = [...article.children].map(section => notebookMount(section, { ...notebookSourceBase(this), section: section.dataset.sourceSection }));
+    this.noteCleanup = () => cleanups.forEach(cleanup => cleanup?.());
+    article.dataset.sourceUrl = this.original?.href || this.info.url; notebookSourceRestore(this, article);
+  },
   renderScan() {
     const target = this.target;
     const tools = h("div", { class: "sr-scan-tools" });
@@ -1025,7 +1095,7 @@ const SourceReader = {
       tools.append(prev, h("form", { onsubmit: e => { e.preventDefault(); change(Number(input.value)); } }, h("label", null, "דף בקובץ ", input), h("button", { type: "submit", class: "btn sm" }, "מעבר")), h("button", { type: "button", class: "btn sm", onclick: () => change(this.page + 1) }, "הדף הבא"));
     }
     const zoom = h("select", { "aria-label": "הגדלת צילום המקור", onchange: () => { this.zoom = zoom.value; this.renderScanFrame(); } }, ...[["page-width", "התאמה לרוחב"], ["100", "100%"], ["150", "150%"], ["200", "200%"]].map(([v, t]) => h("option", { value: v, selected: this.zoom === v }, t)));
-    tools.append(zoom); this.scan = h("div", { class: "sr-scan" });
+    if (target.kind !== "drive") tools.append(zoom); this.scan = h("div", { class: "sr-scan" });
     this.body.append(tools, h("p", { class: "sr-notice" }, "מספר הדף בקובץ עשוי להיות שונה ממספר העמוד המודפס. אפשר גם לפתוח את הקובץ המקורי."), this.scan);
     this.renderScanFrame();
   },
@@ -1034,9 +1104,9 @@ const SourceReader = {
     const url = sourcePDF(this.target, this.page, this.zoom); if (!url || !this.scan) return;
     if (this.original && this.target.kind === "hebrewbooks") this.original.href = `https://hebrewbooks.org/pdfpager.aspx?req=${this.target.book}&pgnum=${this.page}`;
     this.refreshSave?.();
-    const file = h("a", { class: "linkbtn sr-file", href: url, target: "_blank", rel: "noopener noreferrer" }, "פתיחת קובץ הדף", icon("i-ext"));
+    const file = h("a", { class: "linkbtn sr-file", href: url, target: "_blank", rel: "noopener noreferrer" }, this.target.kind === "drive" ? "פתיחת המסמך" : "פתיחת קובץ הדף", icon("i-ext"));
     if (this.target.kind === "hebrewbooks" && sourceGateway()) return this.renderScanCanvas(file);
-    const status = h("p", { class: "sr-status", role: "status" }, "פותח את מציג המסמכים של הדפדפן…"), seq = this.scanSeq;
+    const status = h("p", { class: "sr-status", role: "status" }, this.target.kind === "drive" ? "אפשר לקרוא ולנווט באמצעות הכלים של מציג המסמך למטה." : "פותח את מציג המסמכים של הדפדפן…"), seq = this.scanSeq;
     const frame = h("iframe", { class: "sr-frame", src: url, title: this.target.kind === "hebrewbooks" ? "צילום המקור — דף " + this.page : "מסמך המקור", referrerpolicy: "no-referrer", onerror: () => { if (seq === this.scanSeq) status.textContent = "לא ניתן לפתוח את המציג. אפשר לנסות שוב או לפתוח את הקובץ."; } });
     this.scan.replaceChildren(status, frame, h("button", { class: "btn sm", type: "button", onclick: () => this.renderScanFrame() }, "טעינה מחדש"), file);
     this.scanTimer = setTimeout(() => { if (seq === this.scanSeq && this.dialog) status.textContent = "אם הדף אינו מופיע, אפשר לנסות טעינה מחדש או לפתוח את קובץ הדף. המציג תלוי בתמיכת הדפדפן."; }, 15000);
@@ -1175,6 +1245,7 @@ function savedSourceRecord(info) {
   for (const key of ["author", "book", "node", "page"]) if (typeof info[key] === "string" || typeof info[key] === "number") row[key] = String(info[key]).slice(0, 300);
   if (target?.kind === "hebrewbooks") row.pdfPage = target.page;
   else if (target?.kind === "pdf") row.pdfPage = Number(new URLSearchParams(u.hash.slice(1)).get("page"));
+  if (target?.kind === "maamarim" && sourceSection(info.section)) row.section = info.section;
   return row;
 }
 function savedSourceRows() {
@@ -1185,14 +1256,14 @@ function savedSourceWrite(rows) {
 }
 function sourceSaveControl(reader) {
   const button = h("button", { type: "button", class: "btn sm" }), status = h("span", { class: "sr-save-status", role: "status" });
-  const current = () => savedSourceRecord({ ...reader.info, url: reader.original?.href || reader.info.url, pdfPage: reader.page && reader.target?.kind === "hebrewbooks" ? reader.page : reader.info.pdfPage });
-  const refresh = () => { const row = current(), saved = row && savedSourceRows().some(x => x.url === row.url); button.disabled = !row; button.setAttribute("aria-pressed", String(!!saved)); button.textContent = saved ? "הסרה מהמקורות שלי" : "שמירה למקורות שלי"; };
+  const current = () => savedSourceRecord({ ...reader.info, section: reader.section, url: reader.original?.href || reader.info.url, pdfPage: reader.page && reader.target?.kind === "hebrewbooks" ? reader.page : reader.info.pdfPage });
+  const refresh = () => { const row = current(), saved = row && savedSourceRows().find(x => x.url === row.url), changed = saved && saved.section !== row.section; button.disabled = !row; button.setAttribute("aria-pressed", String(!!saved && !changed)); button.textContent = changed ? "עדכון מקום הקריאה" : saved ? "הסרה מהמקורות שלי" : "שמירה למקורות שלי"; };
   button.addEventListener("click", () => {
     const row = current(); if (!row) return;
-    const rows = savedSourceRows(), saved = rows.some(x => x.url === row.url);
+    const rows = savedSourceRows(), saved = rows.find(x => x.url === row.url), changed = saved && saved.section !== row.section;
     if (!saved && rows.length >= 100) { status.textContent = "אפשר לשמור עד 100 מקורות. ניתן להסיר מקורות מהרשימה."; return; }
-    const next = saved ? rows.filter(x => x.url !== row.url) : [row, ...rows];
-    status.textContent = savedSourceWrite(next) ? saved ? "המקור הוסר מהרשימה" : "המקור נשמר בדפדפן הזה" : "השמירה בדפדפן אינה זמינה. המקור לא נשמר.";
+    const next = saved && !changed ? rows.filter(x => x.url !== row.url) : [row, ...rows.filter(x => x.url !== row.url)];
+    status.textContent = savedSourceWrite(next) ? changed ? "מקום הקריאה עודכן" : saved ? "המקור הוסר מהרשימה" : "המקור נשמר בדפדפן הזה" : "השמירה בדפדפן אינה זמינה. המקור לא נשמר.";
     refresh();
   });
   reader.refreshSave = () => { status.textContent = ""; refresh(); }; refresh();
@@ -1239,6 +1310,7 @@ function notebookRecord(value) {
   } else {
     const u = sourceURL(a.url); if (!u || u.href.length > 2048) return null;
     anchor.url = u.href;
+    if (a.section !== undefined) { if (!sourceSection(a.section) || sourceTarget(u.href)?.kind !== "maamarim") return null; anchor.section = a.section; }
   }
   if (Number.isSafeInteger(a.start) && a.start >= 0 && Number.isSafeInteger(a.end) && a.end > a.start && a.end <= 400000) {
     anchor.start = a.start; anchor.end = a.end;
@@ -1499,7 +1571,7 @@ function notebookControl(root, getBase) {
   return button;
 }
 function notebookMount(root, base) {
-  const matches = a => a.kind === base.kind && (a.kind === "biur" ? a.doc === base.doc : a.url === base.url);
+  const matches = a => a.kind === base.kind && (a.kind === "biur" ? a.doc === base.doc : a.url === base.url && (!a.section || a.section === base.section));
   const mount = { root, matches }; notebookMounts.add(mount);
   const getBase = () => {
     if (base.kind !== "biur") return base;
@@ -1511,13 +1583,15 @@ function notebookMount(root, base) {
   notebookPaint();
   return () => { document.removeEventListener("selectionchange", selected); floating.remove(); notebookMounts.delete(mount); notebookPaint(); };
 }
-function notebookSourceBase(reader) { return { kind: "source", title: String(reader.info.title || "מקור").slice(0, 300), url: reader.original?.href || reader.info.url, quote: "" }; }
+function notebookSourceBase(reader) { return { kind: "source", title: String(reader.info.title || "מקור").slice(0, 300), url: reader.original?.href || reader.info.url, quote: "", ...(sourceSection(reader.section) ? { section: reader.section } : {}) }; }
 function notebookSourceRestore(reader, article) {
   if (!reader.info.note) return;
   try {
     const note = notebookRows().find(x => x.id === reader.info.note && x.anchor.kind === "source" && x.anchor.url === article.dataset.sourceUrl);
     if (!note) return;
-    const index = notebookText(article), found = notebookLocate(index.raw, note.anchor), range = found && notebookRange(index, found);
+    const scope = note.anchor.section ? article.querySelector('[data-source-section="' + note.anchor.section + '"]') : article;
+    if (!scope) return;
+    const index = notebookText(scope), found = notebookLocate(index.raw, note.anchor), range = found && notebookRange(index, found);
     if (range) requestAnimationFrame(() => { const target = range.startContainer.parentElement; reader.body.scrollTop += target.getBoundingClientRect().top - reader.body.getBoundingClientRect().top - (reader.body.querySelector(".sr-find")?.offsetHeight || 0) - 24; notebookPaint(); });
     else if (note.anchor.quote) article.before(h("p", { role: "status", class: "sr-notice" }, "הקטע המדויק שסימנת לא אותר בנוסח הנוכחי. ההערה נשמרת במחברת."));
   } catch (_) {}
@@ -1531,7 +1605,7 @@ function notebookSourceControl(reader) {
 }
 function notebookOpen(row, opener) {
   if (row.anchor.kind === "biur") { location.hash = mkHash(["biur", row.anchor.doc, row.anchor.part].filter(Boolean), { a: row.anchor.block, note: row.id }); }
-  else SourceReader.open({ title: row.anchor.title, url: row.anchor.url, quote: row.anchor.quote, note: row.id }, opener);
+  else SourceReader.open({ title: row.anchor.title, url: row.anchor.url, section: row.anchor.section, quote: row.anchor.quote, note: row.id }, opener);
 }
 function notebookContextControl(getBase) {
   const button = h("button", { type: "button", class: "btn sm", "aria-haspopup": "dialog", onclick: () => notebookContextOpen(getBase(), button) }, "ההערות שלי כאן");
