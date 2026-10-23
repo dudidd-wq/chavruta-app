@@ -1114,7 +1114,17 @@ const SourceReader = {
     body.append(h("p", { role: "status", class: "sr-status" }, "טוען את נוסח המקור מספריא…"));
     const timeout = setTimeout(() => controller.abort(), 18000);
     try {
-      const response = await fetch("https://www.sefaria.org/api/v3/texts/" + encodeURIComponent(target.ref) + "?version=primary&return_format=default", { signal: controller.signal, credentials: "omit", referrerPolicy: "no-referrer" });
+      let ref = target.ref;
+      if (!/\d/.test(ref)) {
+        const reference = await fetch("https://www.sefaria.org/api/ref/" + encodeURIComponent(ref), { signal: controller.signal, credentials: "omit", referrerPolicy: "no-referrer" });
+        if (!reference.ok) throw new Error("reference unavailable");
+        const metadata = await reference.json();
+        if (this.controller !== controller || controller.signal.aborted || !this.dialog || this.mode !== "text") return;
+        const first = metadata.navigation_refs?.first_available_section_ref;
+        if (metadata.is_ref !== true || typeof first !== "string" || !first.trim() || first.length >= 500 || first === ref) throw new Error("no available section");
+        ref = first;
+      }
+      const response = await fetch("https://www.sefaria.org/api/v3/texts/" + encodeURIComponent(ref) + "?version=primary&return_format=default", { signal: controller.signal, credentials: "omit", referrerPolicy: "no-referrer" });
       if (!response.ok) throw new Error("source unavailable");
       const data = await response.json(); if (this.controller !== controller || controller.signal.aborted || !this.dialog || this.mode !== "text") return;
       const version = data.versions?.[0], blocks = sourceTextBlocks(version?.text);
