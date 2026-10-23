@@ -189,16 +189,20 @@
  "e7d68c99b6cd3c77": {
   "he": "תרגום לאנגלית של שיחת נח מתוך לקוטי שיחות חלק ג׳, במסגרת SIE Weekly (PDF). בשער החוברת מצוין שהיא כוללת את עמודים 750–757 בכרך המקורי.",
   "basis": "פתיחת הקובץ",
-  "checked": false,
+  "checked": true,
   "drafted_at": "2026-10-22T05:08:02+00:00",
-  "source_url": "https://drive.google.com/file/d/1QzULk5KamxPtFQF3IdLa9CxSzaWEUUZ5/view"
+  "source_url": "https://drive.google.com/file/d/1QzULk5KamxPtFQF3IdLa9CxSzaWEUUZ5/view",
+  "checked_at": "2026-10-23T05:53:20+00:00",
+  "verification": "אימות חזותי מול שערי קובצי PDF הציבוריים המקושרים בעמוד SIE Weekly: נח, חלק ג׳ עמ׳ 750–757; לך לך, חלק ג׳ עמ׳ 757–764."
  },
  "5c0d4987080c0674": {
   "he": "תרגום לאנגלית של שיחת לך לך מתוך לקוטי שיחות חלק ג׳, במסגרת SIE Weekly (PDF). בשער החוברת מצוין שהיא כוללת את עמודים 757–764 בכרך המקורי.",
   "basis": "פתיחת הקובץ",
-  "checked": false,
+  "checked": true,
   "drafted_at": "2026-10-22T05:08:02+00:00",
-  "source_url": "https://drive.google.com/file/d/1HqbBVAs0OF_E2U40N2NuVpBzZsoKUHAJ/view"
+  "source_url": "https://drive.google.com/file/d/1HqbBVAs0OF_E2U40N2NuVpBzZsoKUHAJ/view",
+  "checked_at": "2026-10-23T05:53:20+00:00",
+  "verification": "אימות חזותי מול שערי קובצי PDF הציבוריים המקושרים בעמוד SIE Weekly: נח, חלק ג׳ עמ׳ 750–757; לך לך, חלק ג׳ עמ׳ 757–764."
  },
  "843c7d502c95703d": {
   "he": "גיליון התקשרות 1672 לפרשת לך לך, תשפ״ז (PDF). לפי תוכן העניינים ודבר הפתיחה: שיעור בלקוטי שיחות על זהותו של יהודי וקיום המצוות; מאמר חסידות על קדושת המצוות; מקבץ מכתבים בענייני בחירות ונבחרים; והוראות ממצוות ברית המילה במדור שולחן שבת חסידי.",

@@ -1162,5 +1162,24 @@
  "539af1466dbf5d88": {
   "cls": "מקור",
   "why": "פרסום ראשון מכתב יד קודש של הנחת אדמו״ר הרש״ב למאמר ויאמר ה׳ אל אברם לך לך תרמ״ב; תאריך הפרסום בעמוד 22.10.2026."
+ },
+ "35f49a2bab977777": {
+  "cls": "לא רלוונטי",
+  "why": "כתבת זיכרון לראז״א; אינה פרסום חדש של מאמר, שיחה או מכתב של אדמו״ר.",
+  "checked_at": "2026-10-23T05:53:20+00:00",
+  "source_url": "https://anash.org/the-rebbe-rashabs-brother-who-said-his-own-maamarim-2/"
+ },
+ "9b74413e02dd93f0": {
+  "cls": "לא רלוונטי",
+  "why": "טור דעה וחוויה אישית על שיעור ד׳ בקראון הייטס; אינו ביאור של מאמר, שיחה או מכתב מסוימים.",
+  "checked_at": "2026-10-23T05:53:20+00:00",
+  "source_url": "https://anash.org/i-sent-my-son-to-crown-heights-for-shiur-daled/"
+ },
+ "721ba457fc74f478": {
+  "cls": "ישן",
+  "why": "פרסום חוזר: גוף הטקסט זהה לאחר נרמול רווחים לגרסה מ־28.10.2025, ושני העמודים מפנים לאותו PDF משנת 2022. אינו פרסום כתוב חדש.",
+  "checked_at": "2026-10-23T05:53:20+00:00",
+  "source_url": "https://dvarmalchus770.org/2026/10/22/lech-lecho-the-3-nations-and-geuloh/",
+  "previous_url": "https://dvarmalchus770.org/2025/10/28/lech-lecho-the-3-nations-and-geuloh-3/"
  }
 }
