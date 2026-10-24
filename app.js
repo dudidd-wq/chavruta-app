@@ -831,10 +831,54 @@ function sourceGateway() {
   const value = document.querySelector?.('meta[name="chavruta-source-gateway"]')?.content;
   try { const u = new URL(value); return !u.username && !u.password && !u.search && !u.hash && (u.protocol === "https:" || (u.protocol === "http:" && ["127.0.0.1", "localhost"].includes(u.hostname))) ? u.href.replace(/\/$/, "") : ""; } catch (_) { return ""; }
 }
+// Keep the worker and every decoder/font asset on exactly the same PDF.js release.
+const SOURCE_PDF_ASSETS = "https://cdn.jsdelivr.net/npm/pdfjs-dist@6.4.299/";
+function sourcePDFOptions(data) {
+  return { data, isEvalSupported: false, stopAtErrors: true, useSystemFonts: true,
+    wasmUrl: SOURCE_PDF_ASSETS + "wasm/", cMapUrl: SOURCE_PDF_ASSETS + "cmaps/", cMapPacked: true,
+    standardFontDataUrl: SOURCE_PDF_ASSETS + "standard_fonts/" };
+}
+// PDF.js 6.4.299 can resolve render() even when an image decoder failed. In
+// layered scans that exposes the inaccurate OCR text underneath the scan.
+// Validate the decoded raster objects before attaching the canvas to the reader.
+function sourcePDFObject(objects, id, signal) {
+  if (signal?.aborted) return Promise.reject(Error("PDF scan canceled"));
+  if (objects.has?.(id) !== false) return Promise.resolve(objects.get(id));
+  return new Promise((resolve, reject) => {
+    let done = false;
+    const finish = (value, error) => { if (done) return; done = true; signal?.removeEventListener("abort", abort); error ? reject(error) : resolve(value); };
+    const abort = () => finish(null, Error("PDF scan canceled"));
+    signal?.addEventListener("abort", abort, { once: true });
+    try { objects.get(id, value => finish(value)); } catch (error) { finish(null, error); }
+  });
+}
+async function sourcePDFValidateImages(lib, page, signal) {
+  const list = await page.getOperatorList(), imageOps = new Set([
+    lib.OPS.paintImageXObject, lib.OPS.paintImageXObjectRepeat,
+    lib.OPS.paintInlineImageXObject, lib.OPS.paintInlineImageXObjectGroup,
+    lib.OPS.paintImageMaskXObject, lib.OPS.paintImageMaskXObjectRepeat,
+  ].filter(Number.isInteger));
+  let count = 0;
+  for (let i = 0; i < list.fnArray.length; i++) {
+    if (!imageOps.has(list.fnArray[i])) continue;
+    const ref = list.argsArray[i]?.[0];
+    const img = typeof ref === "string" ? await sourcePDFObject(ref.startsWith("g_") ? page.commonObjs : page.objs, ref, signal) : ref;
+    if (!img || !(img.width > 0) || !(img.height > 0) || (!img.bitmap && !img.data?.length)) throw Error("incomplete PDF scan");
+    count++;
+  }
+  return count;
+}
+function sourceScanNotice(info, target) {
+  const url = sourceURL(info.url);
+  if (target.kind === "hebrewbooks" && url && url.hostname.replace(/^www\./, "") === "hebrewbooks.org" && /^\/\d{1,8}\/?$/.test(url.pathname) && !info.pdfPage) {
+    return info.page ? "הקישור במיפוי מפנה לכרך שלם. העמוד המודפס הרשום הוא " + info.page + "; אין בקישור מספר דף מאומת של המאמר בקובץ. אפשר להזין למעלה מספר דף בקובץ." : "הקישור מפנה לכרך שלם שנפתח מתחילתו. אפשר להזין למעלה מספר דף בקובץ.";
+  }
+  return "מספר הדף בקובץ עשוי להיות שונה ממספר העמוד המודפס. אפשר גם לפתוח את הקובץ המקורי.";
+}
 let sourcePDFModule;
 function sourcePDFLibrary() {
-  if (!sourcePDFModule) sourcePDFModule = import("https://cdn.jsdelivr.net/npm/pdfjs-dist@6.4.299/build/pdf.min.mjs").then(lib => {
-    lib.GlobalWorkerOptions.workerSrc = "https://cdn.jsdelivr.net/npm/pdfjs-dist@6.4.299/build/pdf.worker.min.mjs"; return lib;
+  if (!sourcePDFModule) sourcePDFModule = import(SOURCE_PDF_ASSETS + "build/pdf.min.mjs").then(lib => {
+    lib.GlobalWorkerOptions.workerSrc = SOURCE_PDF_ASSETS + "build/pdf.worker.min.mjs"; return lib;
   }).catch(e => { sourcePDFModule = null; throw e; });
   return sourcePDFModule;
 }
@@ -1096,7 +1140,7 @@ const SourceReader = {
     }
     const zoom = h("select", { "aria-label": "הגדלת צילום המקור", onchange: () => { this.zoom = zoom.value; this.renderScanFrame(); } }, ...[["page-width", "התאמה לרוחב"], ["100", "100%"], ["150", "150%"], ["200", "200%"]].map(([v, t]) => h("option", { value: v, selected: this.zoom === v }, t)));
     if (target.kind !== "drive") tools.append(zoom); this.scan = h("div", { class: "sr-scan" });
-    this.body.append(tools, h("p", { class: "sr-notice" }, "מספר הדף בקובץ עשוי להיות שונה ממספר העמוד המודפס. אפשר גם לפתוח את הקובץ המקורי."), this.scan);
+    this.body.append(tools, h("p", { class: "sr-notice" }, sourceScanNotice(this.info, target)), this.scan);
     this.renderScanFrame();
   },
   renderScanFrame() {
@@ -1127,7 +1171,7 @@ const SourceReader = {
           if (!current()) return null; if (this.pdfBytes.size >= 4) this.pdfBytes.delete(this.pdfBytes.keys().next().value); this.pdfBytes.set(key, bytes); return bytes;
         })()]);
         if (!current() || !bytes) return;
-        status.textContent = "מצייר את צילום הדף…"; const loading = lib.getDocument({ data: bytes.slice(), isEvalSupported: false }); this.pdfLoading = loading;
+        status.textContent = "מצייר את צילום הדף…"; const loading = lib.getDocument(sourcePDFOptions(bytes.slice())); this.pdfLoading = loading;
         const pdf = await loading.promise; if (!current()) return;
         const page = await pdf.getPage(1); if (!current()) return;
         const natural = page.getViewport({ scale: 1 }), width = Math.max(220, scan.clientWidth - 4), scale = this.zoom === "page-width" ? width / natural.width : Number(this.zoom) / 100;
@@ -1136,13 +1180,14 @@ const SourceReader = {
         canvas.width = Math.ceil(viewport.width * ratio); canvas.height = Math.ceil(viewport.height * ratio); canvas.style.width = Math.ceil(viewport.width) + "px"; canvas.style.height = Math.ceil(viewport.height) + "px";
         const render = page.render({ canvas, canvasContext: canvas.getContext("2d"), viewport, transform: ratio === 1 ? null : [ratio, 0, 0, ratio, 0, 0] }); this.pdfRender = render;
         await render.promise; if (!current()) return;
+        await sourcePDFValidateImages(lib, page, controller.signal); if (!current()) return;
         status.textContent = "צילום הדף נטען"; scan.replaceChildren(status, h("div", { class: "sr-canvas-wrap", tabindex: "0", "aria-label": "צילום הדף — אפשר לגלול" }, canvas), file);
       };
       await Promise.race([task(), deadline]);
     } catch (_) {
       if (seq !== this.scanSeq || !this.dialog || this.mode !== "scan") return;
       this.pdfRender?.cancel(); this.pdfLoading?.destroy().catch(() => {}); this.pdfLoading = null;
-      scan.replaceChildren(h("div", { class: "sr-empty", role: "status" }, h("h3", null, "צילום הדף לא נטען"), h("p", null, "המקור לא הגיב בזמן או שהקובץ אינו זמין כרגע."), h("button", { type: "button", class: "btn", onclick: () => this.renderScanFrame() }, "ניסיון נוסף")), file);
+      scan.replaceChildren(h("div", { class: "sr-empty", role: "status" }, h("h3", null, "צילום הדף לא נטען"), h("p", null, "צילום המקור לא פוענח בשלמותו או שאינו זמין כרגע. אפשר לנסות שוב או לפתוח את הקובץ המקורי."), h("button", { type: "button", class: "btn", onclick: () => this.renderScanFrame() }, "ניסיון נוסף")), file);
     } finally { clearTimeout(timeout); }
   },
   async renderLibrary() {
