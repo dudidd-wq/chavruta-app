@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-25T06:14:14+00:00",
+ "generated_at": "2026-10-25T09:09:33+00:00",
  "sources": [
   {
    "id": "chabadlibrary",
@@ -12,7 +12,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-10-25T06:13:04+00:00",
+   "checked_at": "2026-10-25T09:08:19+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -30,7 +30,7 @@
     "primary",
     "whatsnew"
    ],
-   "checked_at": "2026-10-25T06:13:04+00:00",
+   "checked_at": "2026-10-25T09:08:19+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -47,7 +47,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-10-25T06:13:04+00:00",
+   "checked_at": "2026-10-25T09:08:19+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -64,7 +64,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-10-25T06:13:04+00:00",
+   "checked_at": "2026-10-25T09:08:19+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -82,7 +82,7 @@
     "primary",
     "whatsnew"
    ],
-   "checked_at": "2026-10-25T06:13:04+00:00",
+   "checked_at": "2026-10-25T09:08:19+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -102,7 +102,7 @@
     }
    ],
    "total": 132,
-   "last_success_at": "2026-10-25T06:13:04+00:00"
+   "last_success_at": "2026-10-25T09:08:19+00:00"
   },
   {
    "id": "chabadlibrarybooks",
@@ -115,7 +115,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-10-25T06:13:04+00:00",
+   "checked_at": "2026-10-25T09:08:19+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -133,12 +133,12 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-25T06:13:04+00:00",
+   "checked_at": "2026-10-25T09:08:19+00:00",
    "status": "ok",
    "new": [],
    "latest": [],
    "total": 1501,
-   "last_success_at": "2026-10-25T06:13:04+00:00"
+   "last_success_at": "2026-10-25T09:08:19+00:00"
   },
   {
    "id": "chassidut_org",
@@ -152,12 +152,12 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-25T06:13:06+00:00",
+   "checked_at": "2026-10-25T09:08:21+00:00",
    "status": "ok",
    "new": [],
    "latest": [],
    "total": 4,
-   "last_success_at": "2026-10-25T06:13:06+00:00"
+   "last_success_at": "2026-10-25T09:08:21+00:00"
   },
   {
    "id": "biurim",
@@ -171,7 +171,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-25T06:13:07+00:00",
+   "checked_at": "2026-10-25T09:08:22+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -217,7 +217,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-10-25T06:13:07+00:00"
+   "last_success_at": "2026-10-25T09:08:22+00:00"
   },
   {
    "id": "hm_monsey",
@@ -231,7 +231,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-25T06:13:08+00:00",
+   "checked_at": "2026-10-25T09:08:24+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -277,7 +277,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-10-25T06:13:08+00:00"
+   "last_success_at": "2026-10-25T09:08:24+00:00"
   },
   {
    "id": "hiskashrus",
@@ -291,7 +291,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-25T06:13:10+00:00",
+   "checked_at": "2026-10-25T09:08:26+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -339,7 +339,7 @@
     }
    ],
    "total": 252,
-   "last_success_at": "2026-10-25T06:13:10+00:00"
+   "last_success_at": "2026-10-25T09:08:26+00:00"
   },
   {
    "id": "lichyot_chassidus",
@@ -353,7 +353,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-25T06:13:12+00:00",
+   "checked_at": "2026-10-25T09:08:27+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -423,7 +423,7 @@
     }
    ],
    "total": 1000,
-   "last_success_at": "2026-10-25T06:13:12+00:00"
+   "last_success_at": "2026-10-25T09:08:27+00:00"
   },
   {
    "id": "chabadzoom",
@@ -437,7 +437,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-25T06:13:14+00:00",
+   "checked_at": "2026-10-25T09:08:29+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -499,7 +499,7 @@
     }
    ],
    "total": 558,
-   "last_success_at": "2026-10-25T06:13:14+00:00"
+   "last_success_at": "2026-10-25T09:08:29+00:00"
   },
   {
    "id": "kovtzimdrive",
@@ -513,7 +513,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-25T06:13:16+00:00",
+   "checked_at": "2026-10-25T09:08:31+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -526,7 +526,7 @@
     }
    ],
    "total": 1,
-   "last_success_at": "2026-10-25T06:13:16+00:00"
+   "last_success_at": "2026-10-25T09:08:31+00:00"
   },
   {
    "id": "avita",
@@ -540,7 +540,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-25T06:13:18+00:00",
+   "checked_at": "2026-10-25T09:08:33+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -558,7 +558,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-25T06:13:18+00:00",
+   "checked_at": "2026-10-25T09:08:33+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -580,7 +580,7 @@
     }
    ],
    "total": 2,
-   "last_success_at": "2026-10-25T06:13:18+00:00"
+   "last_success_at": "2026-10-25T09:08:33+00:00"
   },
   {
    "id": "dvarmalchus770",
@@ -594,7 +594,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-25T06:13:20+00:00",
+   "checked_at": "2026-10-25T09:08:35+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -664,7 +664,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-10-25T06:13:20+00:00"
+   "last_success_at": "2026-10-25T09:08:35+00:00"
   },
   {
    "id": "soulwords",
@@ -678,7 +678,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-25T06:13:22+00:00",
+   "checked_at": "2026-10-25T09:08:37+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -732,7 +732,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-10-25T06:13:22+00:00"
+   "last_success_at": "2026-10-25T09:08:37+00:00"
   },
   {
    "id": "sie_weekly",
@@ -746,7 +746,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-25T06:13:23+00:00",
+   "checked_at": "2026-10-25T09:08:38+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -787,7 +787,7 @@
     }
    ],
    "total": 114,
-   "last_success_at": "2026-10-25T06:13:23+00:00"
+   "last_success_at": "2026-10-25T09:08:38+00:00"
   },
   {
    "id": "pls",
@@ -801,7 +801,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-25T06:13:25+00:00",
+   "checked_at": "2026-10-25T09:08:40+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -855,7 +855,7 @@
     }
    ],
    "total": 200,
-   "last_success_at": "2026-10-25T06:13:25+00:00"
+   "last_success_at": "2026-10-25T09:08:40+00:00"
   },
   {
    "id": "chayenu_ls",
@@ -869,7 +869,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-25T06:13:26+00:00",
+   "checked_at": "2026-10-25T09:08:41+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -896,7 +896,7 @@
     }
    ],
    "total": 2,
-   "last_success_at": "2026-10-25T06:13:26+00:00"
+   "last_success_at": "2026-10-25T09:08:41+00:00"
   },
   {
    "id": "weekly_sicha",
@@ -910,7 +910,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-25T06:13:27+00:00",
+   "checked_at": "2026-10-25T09:08:42+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -958,7 +958,7 @@
     }
    ],
    "total": 117,
-   "last_success_at": "2026-10-25T06:13:27+00:00"
+   "last_success_at": "2026-10-25T09:08:42+00:00"
   },
   {
    "id": "theyeshiva",
@@ -972,7 +972,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-25T06:13:29+00:00",
+   "checked_at": "2026-10-25T09:08:43+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1042,7 +1042,7 @@
     }
    ],
    "total": 1539,
-   "last_success_at": "2026-10-25T06:13:29+00:00"
+   "last_success_at": "2026-10-25T09:08:43+00:00"
   },
   {
    "id": "chassidus_applied",
@@ -1056,10 +1056,18 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-25T06:13:32+00:00",
-   "status": "error",
+   "checked_at": "2026-10-25T09:08:47+00:00",
+   "status": "ok",
    "new": [],
    "latest": [
+    {
+     "id": "yt:video:jgPHQrn525k",
+     "title": "Chapter 37:01. What Is the Age of Moshiach and How Does it Arrive​",
+     "url": "https://www.youtube.com/watch?v=jgPHQrn525k",
+     "date": "2026-10-25T02:00:07+00:00",
+     "blurb": "",
+     "first_seen": "2026-10-24T08:52:24+00:00"
+    },
     {
      "id": "yt:video:1sjfcfMBcPo",
      "title": "Samach Vav",
@@ -1069,19 +1077,11 @@
      "first_seen": "2026-10-24T08:52:24+00:00"
     },
     {
-     "id": "yt:video:jgPHQrn525k",
-     "title": "Chapter 37:01. What Is the Age of Moshiach and How Does it Arrive​",
-     "url": "https://www.youtube.com/watch?v=jgPHQrn525k",
-     "date": "2026-10-23T17:34:04+00:00",
-     "blurb": "",
-     "first_seen": "2026-10-24T08:52:24+00:00"
-    },
-    {
      "id": "yt:video:Crjxy7Lcb34",
      "title": "Samach Vav P{art 227:",
      "url": "https://www.youtube.com/watch?v=Crjxy7Lcb34",
      "date": "2026-10-23T02:47:09+00:00",
-     "blurb": "Samach Vav p. 185-186: Recognizing that the source is not lacking any of the different elements of shleimus in existence elicits bittul, since the creation recognizes that it has no standing to add any shleimus in Ein Sof, and does not change anything. The second element of bittul is elicited by the creation recognizing that the creation does not add any shleimus in Ein Sof, and does not change anything, because the creation does not have any value (standing) (ai'nom tofsim klal) to add anything. Option 1 — Clean and precise: “Recognizing that the Source lacks nothing — that all forms of completeness (shleimus) already exist within Ein Sof — elicits bittul, since the creation perceives that it has no standing to add any completeness to Ein Sof and changes nothing within it. A second dimension of bittul arises from the recognition that creation adds no completeness to Ein Sof and changes nothing within it — because creation has no foothold (einam tofsim klal) from which to contribute anything at all.” Option 2 — More flowing: “The recognition that the Source is lacking nothing — that every dimension of completeness is already present within Ein Sof — is what elicits bittul: creation perceives that it has no standing to add any completeness to Ein Sof, and that it changes nothing. A second element of bittul flows from the recognition that creation neither adds any completeness to Ein Sof nor alters it in any way — for creation has no hold whatsoever (einam tofsim klal) through ",
+     "blurb": "Samach Vav p. 185-186: Bittul is elicited by the recognition that the Source lacks nothing — every dimension of completeness (shleimus) already subsists within Ein Sof — and that creation therefore has no standing (einam tofsim klal) and to add to it or alter (change) it in any way. Bittul is elicited by the recognition that creation has no standing (einam tofsim klal) to add any completeness (shleimus) to Ein Sof and effects no change within it. The second dimension of bittul arises from the recognition that creation adds nothing to the shleimus of Ein Sof and effects no change whatsoever, since it has no standing or significance to contribute anything to His perfection. The second dimension of bittul arises from the recognition that creation has no standing whatsoever (einam tofsim klal) to add anything to the shleimus of Ein Sof or to effect any change in Him. In sum, there are two types of bittul of creation to the Creator, and they are opposites: The first aspect of bittul derived from existence being entirely dependent on the divine reflection that sustains it, demonstrates a closeness and a relationship between them. The second aspect of bittul underscores that creation has no standing to add any shleimus to Ein Sof.",
      "first_seen": "2026-10-23T09:20:47+00:00"
     },
     {
@@ -1142,9 +1142,7 @@
     }
    ],
    "total": 15,
-   "error": "HTTPError: 404 Client Error: Not Found for url: https://www.youtube.com/feeds/videos.xml?channel_id=UCX5tj50hTwF_80XQ9JBMDYQ",
-   "last_success_at": "2026-10-24T08:52:24+00:00",
-   "retained": true
+   "last_success_at": "2026-10-25T09:08:47+00:00"
   },
   {
    "id": "neirot",
@@ -1158,7 +1156,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-25T06:13:32+00:00",
+   "checked_at": "2026-10-25T09:08:47+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1212,7 +1210,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-10-25T06:13:32+00:00"
+   "last_success_at": "2026-10-25T09:08:47+00:00"
   },
   {
    "id": "chassidus_explained",
@@ -1226,7 +1224,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-25T06:13:34+00:00",
+   "checked_at": "2026-10-25T09:08:49+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1280,7 +1278,7 @@
     }
    ],
    "total": 135,
-   "last_success_at": "2026-10-25T06:13:34+00:00"
+   "last_success_at": "2026-10-25T09:08:49+00:00"
   },
   {
    "id": "melukat",
@@ -1294,7 +1292,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-25T06:13:35+00:00",
+   "checked_at": "2026-10-25T09:08:51+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1349,7 +1347,7 @@
     }
    ],
    "total": 167,
-   "last_success_at": "2026-10-25T06:13:35+00:00"
+   "last_success_at": "2026-10-25T09:08:51+00:00"
   },
   {
    "id": "daily_maamar",
@@ -1363,7 +1361,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-25T06:13:36+00:00",
+   "checked_at": "2026-10-25T09:08:52+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1457,7 +1455,7 @@
     }
    ],
    "total": 346,
-   "last_success_at": "2026-10-25T06:13:36+00:00"
+   "last_success_at": "2026-10-25T09:08:52+00:00"
   },
   {
    "id": "wellsprings",
@@ -1471,7 +1469,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-25T06:13:37+00:00",
+   "checked_at": "2026-10-25T09:08:54+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1517,7 +1515,7 @@
     }
    ],
    "total": 125,
-   "last_success_at": "2026-10-25T06:13:37+00:00"
+   "last_success_at": "2026-10-25T09:08:54+00:00"
   },
   {
    "id": "daily_sicha",
@@ -1531,7 +1529,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-25T06:13:38+00:00",
+   "checked_at": "2026-10-25T09:08:54+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1625,7 +1623,7 @@
     }
    ],
    "total": 1410,
-   "last_success_at": "2026-10-25T06:13:38+00:00"
+   "last_success_at": "2026-10-25T09:08:54+00:00"
   },
   {
    "id": "learnchassidus",
@@ -1639,7 +1637,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-25T06:13:43+00:00",
+   "checked_at": "2026-10-25T09:09:01+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1652,7 +1650,7 @@
     }
    ],
    "total": 5,
-   "last_success_at": "2026-10-25T06:13:43+00:00"
+   "last_success_at": "2026-10-25T09:09:01+00:00"
   },
   {
    "id": "simplychassidus",
@@ -1666,7 +1664,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-25T06:13:44+00:00",
+   "checked_at": "2026-10-25T09:09:02+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1693,7 +1691,7 @@
     }
    ],
    "total": 4,
-   "last_success_at": "2026-10-25T06:13:44+00:00"
+   "last_success_at": "2026-10-25T09:09:02+00:00"
   },
   {
    "id": "alonei_chabad",
@@ -1706,7 +1704,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-25T06:13:45+00:00",
+   "checked_at": "2026-10-25T09:09:03+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -1723,7 +1721,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-25T06:13:45+00:00",
+   "checked_at": "2026-10-25T09:09:03+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -1740,7 +1738,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-25T06:13:45+00:00",
+   "checked_at": "2026-10-25T09:09:03+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1767,7 +1765,7 @@
     }
    ],
    "total": 303,
-   "last_success_at": "2026-10-25T06:13:45+00:00"
+   "last_success_at": "2026-10-25T09:09:03+00:00"
   },
   {
    "id": "lchaim",
@@ -1780,7 +1778,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-25T06:13:46+00:00",
+   "checked_at": "2026-10-25T09:09:04+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1828,7 +1826,7 @@
     }
    ],
    "total": 192,
-   "last_success_at": "2026-10-25T06:13:46+00:00"
+   "last_success_at": "2026-10-25T09:09:04+00:00"
   },
   {
    "id": "one_point",
@@ -1841,7 +1839,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-25T06:13:47+00:00",
+   "checked_at": "2026-10-25T09:09:05+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1882,7 +1880,7 @@
     }
    ],
    "total": 184,
-   "last_success_at": "2026-10-25T06:13:47+00:00"
+   "last_success_at": "2026-10-25T09:09:05+00:00"
   },
   {
    "id": "derher",
@@ -1895,7 +1893,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-25T06:13:49+00:00",
+   "checked_at": "2026-10-25T09:09:07+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -1912,7 +1910,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-25T06:13:49+00:00",
+   "checked_at": "2026-10-25T09:09:07+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -1929,7 +1927,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-25T06:13:49+00:00",
+   "checked_at": "2026-10-25T09:09:07+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1956,7 +1954,7 @@
     }
    ],
    "total": 5,
-   "last_success_at": "2026-10-25T06:13:49+00:00"
+   "last_success_at": "2026-10-25T09:09:07+00:00"
   },
   {
    "id": "maynotecha_inst",
@@ -1969,7 +1967,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-25T06:13:51+00:00",
+   "checked_at": "2026-10-25T09:09:09+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -1986,7 +1984,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-25T06:13:51+00:00",
+   "checked_at": "2026-10-25T09:09:09+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2008,7 +2006,7 @@
     }
    ],
    "total": 1,
-   "last_success_at": "2026-10-25T06:13:51+00:00"
+   "last_success_at": "2026-10-25T09:09:09+00:00"
   },
   {
    "id": "anash",
@@ -2021,7 +2019,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-25T06:13:52+00:00",
+   "checked_at": "2026-10-25T09:09:10+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2123,7 +2121,7 @@
     }
    ],
    "total": 3,
-   "last_success_at": "2026-10-25T06:13:52+00:00"
+   "last_success_at": "2026-10-25T09:09:10+00:00"
   },
   {
    "id": "chabadinfo",
@@ -2136,7 +2134,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-25T06:13:53+00:00",
+   "checked_at": "2026-10-25T09:09:11+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -2153,7 +2151,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-25T06:13:53+00:00",
+   "checked_at": "2026-10-25T09:09:11+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -2170,7 +2168,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-25T06:13:53+00:00",
+   "checked_at": "2026-10-25T09:09:11+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2216,7 +2214,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-10-25T06:13:53+00:00"
+   "last_success_at": "2026-10-25T09:09:11+00:00"
   },
   {
    "id": "kehot",
@@ -2229,7 +2227,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-25T06:13:57+00:00",
+   "checked_at": "2026-10-25T09:09:14+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2499,7 +2497,7 @@
     }
    ],
    "total": 190,
-   "last_success_at": "2026-10-25T06:13:57+00:00"
+   "last_success_at": "2026-10-25T09:09:14+00:00"
   }
  ],
  "browser_checks": {
