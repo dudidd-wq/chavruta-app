@@ -234,9 +234,19 @@
  "fa5d71765e289f77": {
   "he": "גיליון ד׳ (תרי״א) של ״הערות התמימים ואנ״ש 770 בית משיח״ לשבת לך לך תשפ״ז (PDF). בתוכן העניינים: קטעים משיחת לך לך תשנ״ב, שלושה מכתבים בפרסום ראשון, ועיונים בחסידות, בנגלה ובגאולה ומשיח.",
   "basis": "כותרות הגיליון",
-  "checked": false,
+  "checked": true,
   "drafted_at": "2026-10-24T05:06:24+00:00",
   "source_url": "https://hageula.com/news/press/28215.htm",
-  "basis_url": "https://chabad.info/beis-medrash/1376774/"
+  "basis_url": "https://chabad.info/beis-medrash/1376774/",
+  "checked_at": "2026-10-25T06:07:20+00:00",
+  "verification": "נבדק מול שער, פתח דבר ותוכן העניינים בקובץ PDF בן 48 עמודים המקושר בעמוד המקור בחב״ד אינפו, 25.10.2026."
+ },
+ "164ac8b41cb5ebcc": {
+  "he": "הנחה בלתי מוגה של מאמר ד״ה ״וה׳ פקד את שרה״ משבת וירא תשמ״ג, בהוצאה חדשה ומתוקנת לקראת וירא תשפ״ז (PDF). הפתיחה דנה בקשר בין פקידת שרה לגשמים ובהבדל בין נשמות ישראל למלאכים. נוספה אגרת קודש.",
+  "basis": "פתיחת הקובץ",
+  "checked": false,
+  "drafted_at": "2026-10-25T06:07:20+00:00",
+  "source_url": "https://www.lahak.org/templates/lahak/article_cdo/aid/7562618/jewish/page.htm",
+  "basis_url": "https://w2.chabad.org/media/pdf/1391/MQgO13916491.pdf"
  }
 }
