@@ -444,11 +444,12 @@ const NAVITEMS = [
   { id: "sources", icon: "i-list", label: "מקורות", href: () => mkHash(["sources"]) },
   { id: "tree", icon: "i-tree", label: "עץ הידע", href: () => mkHash(["tree"]) },
   { id: "topics", icon: "i-toc", label: "מפתח עניינים", href: () => mkHash(["topics"]) },
+  { id: "books", icon: "i-read", label: "ספרים", href: () => mkHash(["books"]) },
   { id: "daily", icon: "i-sun", label: "לימוד יומי", href: () => mkHash(["daily"]) },
   { id: "new", icon: "i-flag", label: "מה חדש", href: () => mkHash(["new"]) },
   { id: "search", icon: "i-search", label: "חיפוש", act: () => openPalette(), kbd: "/" },
 ];
-function viewToNav(v) { return { home: "home", biurim: "home", biur: "home", parsha: "home", sources: "sources", item: "sources", topics: "topics", search: "search", new: "new", daily: "daily", tree: R.cur.seg[1] === "p" ? "home" : "tree", status: "", coverage: "", closure: "" }[v] ?? ""; }
+function viewToNav(v) { return { home: "home", biurim: "home", biur: "home", parsha: "home", sources: "sources", item: "sources", topics: "topics", books: "books", search: "search", new: "new", daily: "daily", tree: R.cur.seg[1] === "p" ? "home" : "tree", status: "", coverage: "", closure: "" }[v] ?? ""; }
 function buildHistoryNavigation() {
   const host = $("#historynav"); if (!host || host.dataset.ready) return;
   host.dataset.ready = "1";
@@ -459,7 +460,7 @@ function buildHistoryNavigation() {
     back.disabled = typeof nav?.canGoBack === "boolean" ? !nav.canGoBack : history.length < 2;
     forward.disabled = typeof nav?.canGoForward === "boolean" ? !nav.canGoForward : false;
   };
-  host.append(back, forward, h("a", { class: "history-topics", "data-nav": "topics", href: mkHash(["topics"]) }, icon("i-toc"), "מפתח עניינים"));
+  host.append(back, forward, h("a", { class: "history-topics", "data-nav": "topics", href: mkHash(["topics"]) }, icon("i-toc"), "מפתח עניינים"), h("a", { class: "history-topics history-books", "data-nav": "books", href: mkHash(["books"]) }, icon("i-read"), "ספרים"));
   window.navigation?.addEventListener?.("currententrychange", sync);
   for (const event of ["hashchange", "popstate", "pageshow"]) window.addEventListener(event, sync);
   sync();
@@ -484,7 +485,7 @@ function buildParshaSel() {
   const d = $("#psw"); if (!d || d.dataset.ready) return; d.dataset.ready = "1";
   const sync = () => {
     const cur = curParsha();
-    $$("a[data-parsha]", d).forEach(a => { if (a.dataset.parsha === cur) a.setAttribute("aria-current", "page"); else a.removeAttribute("aria-current"); });
+    $("a[data-parsha]", d).forEach(a => { if (a.dataset.parsha === cur) a.setAttribute("aria-current", "page"); else a.removeAttribute("aria-current"); });
     const l = $(".psw-l", d); if (l) l.replaceChildren(...(cur ? [h("span", { class: "psw-p" }, "פרשת "), cur] : ["הפרשיות"]));
     d.querySelector("summary")?.setAttribute("aria-label", "בחירת פרשה (כעת: " + (cur ? "פרשת " + cur : "הפרשיות") + ")");
     d.open = false;
@@ -508,14 +509,14 @@ function buildChrome() {
 }
 function updateChrome() {
   const cur = viewToNav(R.view);
-  $$(".nav-i, .bn-i, .history-topics").forEach(a => { if (a.dataset.nav === cur) a.setAttribute("aria-current", "page"); else a.removeAttribute("aria-current"); });
+  $(".nav-i, .bn-i, .history-topics").forEach(a => { if (a.dataset.nav === cur) a.setAttribute("aria-current", "page"); else a.removeAttribute("aria-current"); });
   updateModeUI();
   document.body.dataset.view = R.view || "";
   document.body.classList.toggle("has-modes", R.view === "biur" || R.view === "biurim" || (R.view === "parsha" && hasDocs(R.cur.seg[1])));
 }
 function updateModeUI() {
   document.body.dataset.mode = MODE;
-  $$(".mode-btn").forEach(b => b.setAttribute("aria-checked", b.dataset.mode === MODE));
+  $(".mode-btn").forEach(b => b.setAttribute("aria-checked", b.dataset.mode === MODE));
   document.body.dataset.sheet = isSheet() ? "1" : "0";
 }
 function isSheet() { return MODE === "read" ? innerWidth < 1000 : innerWidth < 900; }
@@ -4203,6 +4204,184 @@ function kParsha(main, K, p) {
 }
 
 
+
+/* חברותא · מדף ספרים. קורא את הקטלוג הקיים; אינו משנה מיפוי או מספור עמודים. */
+const BOOK_COVER_CACHE = new Map();
+const BOOK_SHELF_PAGE = 48;
+function booksList(T, query = "", rebbe = "") {
+  const words = norm(query).toLowerCase().split(" ").filter(Boolean);
+  return T.books.map((b, id) => ({ id, r: b[0], name: b[1], source: b[2] }))
+    .filter(b => (rebbe === "" || String(b.r) === String(rebbe)) && words.every(w => norm(b.name + " " + (T.rebbeim[b.r] || "") + " " + b.source).toLowerCase().includes(w)))
+    .sort((a, b) => a.r - b.r || a.name.localeCompare(b.name, "he") || a.id - b.id);
+}
+function booksPageNumber(value) {
+  const s = String(value).trim();
+  return /^[0-9]{1,5}$/.test(s) && Number(s) > 0 ? Number(s) : null;
+}
+async function booksMetadata(T, id) {
+  const ids = await treeBookIds(T, id), scans = new Map();
+  for (const i of ids) {
+    const row = treeRow(T, i), target = sourceTarget(treeUrl(String(row?.[8] || "")));
+    if (target?.kind === "hebrewbooks" && !scans.has(target.book)) scans.set(target.book, { book: target.book, url: "https://hebrewbooks.org/" + target.book });
+  }
+  return { ids, scans: [...scans.values()] };
+}
+function booksSourceInfo(T, id, scan, page = 1) {
+  return { title: T.books[id][1], book: T.books[id][1], author: T.rebbeim[T.books[id][0]] || "", url: scan.url, pdfPage: page };
+}
+function booksUnitInfo(T, id, row) {
+  return { title: row[2] || T.books[id][1], book: T.books[id][1], author: T.rebbeim[T.books[id][0]] || "", url: treeUrl(String(row[8] || "")), page: row[4] };
+}
+/* Each thumbnail is the original first PDF page, with the same decoder validation as the reader. */
+async function booksCoverImage(scan, signal) {
+  const cached = BOOK_COVER_CACHE.get(scan.book); if (cached) return cached;
+  if (!sourceGateway()) throw Error("no scan gateway");
+  let loading, render;
+  const abort = () => { render?.cancel(); loading?.destroy().catch(() => {}); };
+  signal.addEventListener("abort", abort, { once: true });
+  try {
+    const [lib, response] = await Promise.all([sourcePDFLibrary(), fetch(sourceGateway() + "/v1/hebrewbooks/" + scan.book + "/1", { signal, credentials: "omit", referrerPolicy: "no-referrer" })]);
+    if (signal.aborted || !response.ok) throw Error("cover unavailable");
+    const bytes = new Uint8Array(await response.arrayBuffer());
+    if (bytes.length > 6 * 1024 * 1024 || new TextDecoder().decode(bytes.slice(0, 5)) !== "%PDF-") throw Error("invalid cover PDF");
+    if (signal.aborted) throw Error("cover canceled");
+    loading = lib.getDocument(sourcePDFOptions(bytes)); const pdf = await loading.promise;
+    if (signal.aborted) throw Error("cover canceled");
+    const page = await pdf.getPage(1), natural = page.getViewport({ scale: 1 });
+    const viewport = page.getViewport({ scale: Math.min(240 / natural.width, 340 / natural.height) });
+    const canvas = h("canvas"); canvas.width = Math.ceil(viewport.width); canvas.height = Math.ceil(viewport.height);
+    if (signal.aborted) throw Error("cover canceled");
+    render = page.render({ canvas, canvasContext: canvas.getContext("2d"), viewport }); await render.promise;
+    await sourcePDFValidateImages(lib, page, signal);
+    if (signal.aborted) throw Error("cover canceled");
+    const url = canvas.toDataURL("image/webp", .78);
+    if (BOOK_COVER_CACHE.size >= 48) BOOK_COVER_CACHE.delete(BOOK_COVER_CACHE.keys().next().value);
+    BOOK_COVER_CACHE.set(scan.book, url); return url;
+  } finally { signal.removeEventListener("abort", abort); await loading?.destroy().catch(() => {}); }
+}
+/* Two concurrent cover jobs, only near the viewport; cancel work when leaving/filtering. */
+function booksCovers(T) {
+  let stopped = false, active = 0;
+  const queue = [], controllers = new Set(), jobs = new Map();
+  const pump = () => {
+    while (!stopped && active < 2 && queue.length) {
+      const { host, id } = queue.shift(); if (!host.isConnected) continue;
+      const controller = new AbortController(); controllers.add(controller); active++;
+      const timer = setTimeout(() => controller.abort(), 18000);
+      (async () => {
+        try {
+          const meta = await booksMetadata(T, id);
+          if (stopped || controller.signal.aborted || !host.isConnected) return;
+          if (!meta.scans.length) { host.replaceChildren(icon("i-read"), h("small", null, "צילום שער אינו זמין")); return; }
+          const url = await booksCoverImage(meta.scans[0], controller.signal);
+          if (!stopped && !controller.signal.aborted && host.isConnected) host.replaceChildren(h("img", { src: url, alt: "צילום הדף הראשון של " + T.books[id][1], width: "240", height: "340", decoding: "async" }));
+        } catch (_) {
+          if (!stopped && host.isConnected) host.replaceChildren(icon("i-read"), h("small", null, "הצילום לא נטען"));
+        } finally { clearTimeout(timer); controllers.delete(controller); active--; pump(); }
+      })();
+    }
+  };
+  const enqueue = host => { const id = jobs.get(host); if (id == null) return; jobs.delete(host); queue.push({ host, id }); pump(); };
+  const observer = typeof IntersectionObserver === "function" ? new IntersectionObserver(entries => { for (const e of entries) if (e.isIntersecting) { observer.unobserve(e.target); enqueue(e.target); } }, { rootMargin: "120px" }) : null;
+  return {
+    add(host, id) { jobs.set(host, id); if (observer) observer.observe(host); else queueMicrotask(() => enqueue(host)); },
+    close() { stopped = true; observer?.disconnect(); queue.length = 0; jobs.clear(); for (const c of controllers) c.abort(); }
+  };
+}
+function booksCover(T, id, covers) {
+  const host = h("div", { class: "books-cover", "aria-hidden": "true" }, icon("i-read"), h("small", null, "צילום הדף הראשון"));
+  covers.add(host, id); return host;
+}
+VIEWS.books = async function(rest, q, ctx) {
+  ctx.prevCleanup?.();
+  const main = $("#view"); main.className = "main page wide books"; main.replaceChildren(h("p", { class: "loading", role: "status" }, "טוען את מדף הספרים…"));
+  document.title = "ספרים · חברותא";
+  let T;
+  try { T = await loadChunk("tree"); }
+  catch (_) { if (ctx.alive()) main.replaceChildren(h("div", { class: "empty" }, "לא ניתן לטעון את הספרים כעת.", h("button", { class: "btn", type: "button", onclick: () => route() }, "ניסיון נוסף"))); return; }
+  if (!ctx.alive()) return;
+  main.replaceChildren();
+  const covers = booksCovers(T); ctx.cleanup = () => covers.close();
+  if (rest[0] === "b" && /^\d+$/.test(rest[1] || "") && T.books[Number(rest[1])]) return booksBook(main, T, Number(rest[1]), q, ctx, covers);
+  if (rest.length) { main.append(h("p", { class: "empty" }, "הספר לא נמצא"), h("a", { href: mkHash(["books"]) }, "חזרה לכל הספרים")); return; }
+  booksShelf(main, T, q, ctx, covers);
+};
+function booksShelf(main, T, q, ctx, initialCovers) {
+  main.append(h("h1", { class: "page-title" }, "ספרים"), h("p", { class: "lede" }, "ספרי רבותינו נשיאינו, לפי רבי. בחרו ספר כדי לדפדף בצילום או לפתוח את תוכנו."));
+  const search = h("input", { type: "search", value: q.get("q") || "", placeholder: "חיפוש בשם ספר…", "aria-label": "חיפוש ספר" });
+  const filter = h("select", { "aria-label": "ספרים לפי רבי" }, h("option", { value: "" }, "כל הרביים"), ...T.rebbeim.map((name, r) => h("option", { value: r, selected: q.get("r") === String(r) }, name)));
+  const status = h("p", { class: "muted", role: "status", "aria-live": "polite" });
+  const shelf = h("div"), more = h("div", { class: "books-more" });
+  main.append(h("div", { class: "books-filters" }, search, filter), status, shelf, more, h("p", { class: "books-note muted" }, "מוצג צילום הדף הראשון כשהמקור מספק סריקה. בספרים ללא סריקה אפשר לפתוח את התוכן המקוטלג. מהדורות ומקורות שונים מופיעים בנפרד."));
+  let limit = BOOK_SHELF_PAGE, covers = initialCovers, first = true;
+  const draw = () => {
+    if (!first) { covers.close(); covers = booksCovers(T); } first = false;
+    ctx.cleanup = () => covers.close(); shelf.replaceChildren(); more.replaceChildren();
+    const all = booksList(T, search.value, filter.value), browsingAll = !search.value.trim() && filter.value === "";
+    const shown = browsingAll ? all.filter((b, i) => all.slice(0, i).filter(x => x.r === b.r).length < 12) : all.slice(0, limit);
+    status.textContent = all.length.toLocaleString("he") + " ספרים ומהדורות";
+    for (const r of [...new Set(shown.map(b => b.r))]) {
+      const list = shown.filter(b => b.r === r), total = all.filter(b => b.r === r).length;
+      const heading = h("div", { class: "sec-h books-group-head" }, h("h2", null, T.rebbeim[r] || "לא שויך"), h("span", { class: "muted" }, total + " ספרים"));
+      if (browsingAll && total > list.length) heading.append(h("a", { href: mkHash(["books"], { r }) }, "לכל ספרי " + (T.rebbeim[r] || "")));
+      const grid = h("div", { class: "books-grid" });
+      for (const b of list) grid.append(h("a", { class: "books-card", href: mkHash(["books", "b", b.id]) }, booksCover(T, b.id, covers), h("h3", null, b.name), h("small", { class: "muted" }, b.source)));
+      shelf.append(h("section", { class: "books-group", "aria-label": T.rebbeim[r] || "ספרים" }, heading, grid));
+    }
+    if (!all.length) shelf.append(h("p", { class: "empty" }, "לא נמצאו ספרים התואמים לחיפוש."));
+    if (!browsingAll && shown.length < all.length) more.append(h("button", { class: "btn", type: "button", onclick: () => { limit += BOOK_SHELF_PAGE; draw(); } }, "הצגת ספרים נוספים"));
+  };
+  const change = () => { limit = BOOK_SHELF_PAGE; quietHash(mkHash(["books"], { q: search.value || "", r: filter.value })); draw(); };
+  search.addEventListener("input", change); filter.addEventListener("change", change); draw();
+  if (!ctx.keep) window.scrollTo(0, 0);
+}
+async function booksBook(main, T, id, q, ctx, covers) {
+  const [r, name, source] = T.books[id];
+  document.title = name + " · ספרים · חברותא";
+  main.append(h("nav", { class: "crumbs", "aria-label": "מיקום" }, h("a", { href: mkHash(["books"]) }, "ספרים"), " › ", h("a", { href: mkHash(["books"], { r }) }, T.rebbeim[r] || "לא שויך")),
+    h("header", { class: "books-book-head" }, booksCover(T, id, covers), h("div", null, h("h1", { class: "page-title" }, name), h("p", { class: "muted" }, [T.rebbeim[r], source].filter(Boolean).join(" · ")), h("a", { href: mkHash(["tree", "b", id]) }, "הספר בעץ הידע"))));
+  const content = h("div", null, h("p", { role: "status" }, "טוען את תוכן הספר…")); main.append(content);
+  let meta;
+  try { meta = await booksMetadata(T, id); }
+  catch (_) { if (ctx.alive()) content.replaceChildren(h("p", null, "תוכן הספר לא נטען."), h("button", { class: "btn", type: "button", onclick: () => route() }, "ניסיון נוסף")); return; }
+  if (!ctx.alive()) return; content.replaceChildren();
+  if (meta.scans.length) {
+    const choose = h("select", { "aria-label": "בחירת סריקת המקור" }, ...meta.scans.map((s, i) => h("option", { value: i }, "היברובוקס · " + s.book)));
+    const page = h("input", { type: "number", min: "1", max: "99999", step: "1", value: booksPageNumber(q.get("page")) || 1, required: true, "aria-label": "מספר הדף בקובץ הספר" });
+    const message = h("p", { class: "muted", role: "status" });
+    const open = h("a", { class: "btn", href: meta.scans[0].url, "aria-haspopup": "dialog", onclick: e => {
+      if (e.ctrlKey || e.metaKey || e.shiftKey || e.altKey || e.button > 0) return;
+      e.preventDefault(); SourceReader.open(booksSourceInfo(T, id, meta.scans[Number(choose.value)]), e.currentTarget);
+    } }, "פתיחת הספר מתחילתו");
+    choose.addEventListener("change", () => { open.href = meta.scans[Number(choose.value)].url; });
+    const jump = h("form", { class: "books-jump", onsubmit: e => {
+      e.preventDefault(); const p = booksPageNumber(page.value);
+      if (!p) { message.textContent = "יש להזין מספר דף שלם בין 1 ל־99999."; page.focus(); return; }
+      message.textContent = ""; SourceReader.open(booksSourceInfo(T, id, meta.scans[Number(choose.value)], p), jump.querySelector("button"));
+    } }, h("label", null, "מעבר לדף בקובץ ", page), h("button", { class: "btn", type: "submit" }, "פתיחת הדף"));
+    content.append(h("section", { class: "books-reader-entry", "aria-label": "דפדוף בספר" }, h("h2", null, "דפדוף בספר"), meta.scans.length > 1 ? choose : null, open, jump, message, h("p", { class: "muted" }, "בקורא אפשר לעבור לדף הקודם והבא או להזין כל מספר דף בקובץ. המספר בקובץ עשוי להיות שונה מהעמוד המודפס. דף שאינו קיים בסריקה לא ייטען.")));
+  } else content.append(h("p", { class: "books-note" }, "לא רשומה לספר הזה סריקה מלאה. אפשר לפתוח את היחידות והעמודים שקוטלגו במקור."));
+  const search = h("input", { type: "search", placeholder: "חיפוש בתוכן הספר או בעמוד המודפס…", "aria-label": "חיפוש בתוכן הספר" });
+  const select = h("select", { "aria-label": "מעבר ליחידה בספר" });
+  const list = h("ol", { class: "books-contents" }), count = h("p", { class: "muted", role: "status" }), more = h("div");
+  const rows = meta.ids.map(i => treeRow(T, i)).filter(Boolean);
+  let limit = 100;
+  const draw = () => {
+    const words = norm(search.value).split(" ").filter(Boolean), filtered = rows.filter(u => words.every(w => norm([u[2], u[3], u[4], u[5]].join(" ")).includes(w)));
+    select.replaceChildren(h("option", { value: "" }, "בחירת כותרת או עמוד"), ...filtered.map((u, i) => h("option", { value: i }, [u[2], u[4] ? "ע׳ " + u[4] : ""].filter(Boolean).join(" · "))));
+    select.onchange = () => { if (select.value === "") return; const info = booksUnitInfo(T, id, filtered[Number(select.value)]); if (sourceURL(info.url)) SourceReader.open(info, select); };
+    list.replaceChildren(...filtered.slice(0, limit).map(u => {
+      const info = booksUnitInfo(T, id, u);
+      return h("li", null, sourceURL(info.url) ? sourceLink(info, u[2] || "ללא כותרת") : h("span", null, u[2] || "ללא כותרת"), h("small", { class: "muted" }, [u[3], u[4] ? "ע׳ " + u[4] : "", u[5]].filter(Boolean).join(" · ")));
+    }));
+    count.textContent = filtered.length.toLocaleString("he") + " יחידות בתוכן המקוטלג"; more.replaceChildren();
+    if (filtered.length > limit) more.append(h("button", { class: "btn", type: "button", onclick: () => { limit += 100; draw(); } }, "הצגת יחידות נוספות"));
+    if (!filtered.length) list.append(h("li", null, "לא נמצאו יחידות להצגה."));
+  };
+  search.addEventListener("input", () => { limit = 100; draw(); });
+  content.append(h("h2", null, "תוכן הספר"), h("div", { class: "books-filters" }, search, select), count, list, more); draw();
+  if (!ctx.keep) window.scrollTo(0, 0);
+}
 
 /* חברותא · שער האתר (#/home): מה זה חברותא, הפרשיות (כל פרשה — כרטיס), פרשת השבוע, הלימוד היומי, מה חדש, עץ הידע, ואיך לומדים כאן.
    וגם רכיבים משותפים לעמודי הפרשה (בראשית — reader.js, שאר הפרשיות — tree.js): כותרת הפרשה והמעבר לפרשה הקודמת/הבאה. */
