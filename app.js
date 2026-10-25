@@ -3877,7 +3877,8 @@ function treeRebbe(main, T, r, q) {
   const ser = T.series.filter(s => s.r === r);
   main.append(h("div", { class: "sec-h" }, h("h2", null, "סדרות הספרים"), h("span", { class: "chip mute" }, ser.length)));
   for (const s of ser) {
-    const det = h("details", { class: "tree-ser" });
+    const seriesId = T.series.indexOf(s);
+    const det = h("details", { class: "tree-ser", open: q.get("s") === String(seriesId) });
     const avail = [s.cl ? "ספריית חב״ד" : null, s.hb ? `היברובוקס (${s.hb})` : null, s.col && s.col.length ? `חב״ד און ליין (${s.col.length})` : null].filter(Boolean).join(" · ") || "לא אותר ברשת";
     const sc = { "מכוסה": "acc", "חלקי": "warn", "ממתין לאיסוף": "warn", "לא ברשת": "bad" }[s.stt] || "mute";
     det.append(h("summary", null, h("b", null, s.n), h("span", { class: "muted" }, ` · ${s.g || ""}${s.nv ? " · " + s.nv + " כרכים" : ""} · ${avail}${s.hb ? ` · מופתחים ${s.hbi}/${s.hb}` : ""} `), s.stt ? h("span", { class: "chip " + sc }, s.stt) : null));
@@ -3887,9 +3888,10 @@ function treeRebbe(main, T, r, q) {
     if (s.cl) det.append(h("p", null, treeSourceLink("קריאה בספריית חב״ד", "cl:" + s.cl, { title: s.n, author: name, book: s.n })));
     if (s.vols.length) {
       const tb = h("tbody");
-      for (const [v, c, w] of s.vols) { const W = TREE_WHERE(w); tb.append(h("tr", null, h("td", null, v), h("td", null, c), h("td", null, W ? (W.u ? treeSourceLink(W.t, W.u, { title: s.n + " · " + v, author: name, book: s.n }) : W.t) : h("span", { class: "muted" }, "—")))); }
+      for (const [volumeId, [v, c, w]] of s.vols.entries()) { const W = TREE_WHERE(w); tb.append(h("tr", null, h("td", null, h("a", { href: mkHash(["books", "v", seriesId, volumeId]) }, v || s.n)), h("td", null, c), h("td", null, W ? (W.u ? treeSourceLink(W.t, W.u, { title: s.n + " · " + v, author: name, book: s.n }) : W.t) : h("span", { class: "muted" }, "—")))); }
       det.append(h("div", { class: "tbl-wrap" }, h("table", { class: "tree-tbl" }, h("thead", null, h("tr", null, h("th", null, "כרך"), h("th", null, "תוכן"), h("th", null, "ברשת"))), tb)));
     }
+    if (!s.vols.length) det.append(h("p", null, h("a", { href: mkHash(["books", "s", seriesId]) }, "הספר במדף הספרים")));
     if (s.col && s.col.length) {
       const ul = h("ul", { class: "tree-col" });
       for (const [t, u] of s.col) ul.append(h("li", null, treeSourceLink(t, "https://media.col.org.il/files/uploads/original/" + u, { author: name, book: s.n })));
@@ -3912,6 +3914,7 @@ async function treeBook(main, T, b, q, ctx) {
   const [r, name, src] = bk;
   document.title = name + " · עץ הידע · חברותא";
   treeHead(main, name, [[T.rebbeim[r] || "לא שויך", r >= 0 ? mkHash(["tree", "r", r]) : null], [name, null]], `${T.rebbeim[r] || ""} · מקור: ${src}`);
+  main.append(h("p", null, h("a", { href: mkHash(["books", "b", b]) }, "דפדוף בספר במדף הספרים")));
   const wait = h("div", { class: "loading", role: "status" }, h("span", { class: "spin", "aria-hidden": "true" }), "טוען את יחידות הספר…");
   main.append(wait);
   let all;
@@ -4235,26 +4238,77 @@ function booksCoverDelay(now = Date.now()) {
   return Math.max(0, bookCoverPauseUntil - now, BOOK_COVER_REQUESTS.length >= 12 ? BOOK_COVER_REQUESTS[0] + 60000 - now : 0);
 }
 const BOOK_SHELF_PAGE = 48;
-function booksList(T, query = "", rebbe = "") {
+const BOOK_CATALOG_INDEX = new WeakMap();
+function booksRegisterCatalog(T, C) {
+  if (!C || C.schema !== 1 || C.nbooks !== T.books.length || C.nunits !== T.nunits || C.nseries !== T.series.length || C.bookScans?.length !== T.books.length || !Array.isArray(C.links)) throw Error("קטלוג הספרים אינו תואם לעץ");
+  const links = new Map();
+  for (const [si, vi, ids] of C.links) {
+    const series = T.series[si], volume = series?.vols?.[vi], match = /^hb:([0-9]{1,8})$/.exec(volume?.[2] || "");
+    if (!Number.isInteger(si) || !Number.isInteger(vi) || !volume || !Array.isArray(ids) || ids.some(b => !Number.isInteger(b) || !T.books[b] || T.books[b][0] !== series.r || !match || !C.bookScans[b]?.includes(match[1]))) throw Error("קישור כרך אינו תואם למקור");
+    links.set(si + ":" + vi, [...new Set(ids)]);
+  }
+  if (links.size !== T.series.reduce((n, x) => n + x.vols.length, 0)) throw Error("קטלוג כרכים חסר");
+  BOOK_CATALOG_INDEX.set(T, { links, scans: C.bookScans });
+}
+function booksEntry(T, id) {
+  if (typeof id === "number" || /^[0-9]+$/.test(String(id))) {
+    const b = Number(id), row = T.books[b];
+    return row ? { id: b, r: row[0], name: row[1], source: row[2], unitBooks: [b], mapped: true } : null;
+  }
+  const [kind, si, vi] = String(id).split(":"), series = T.series?.[Number(si)];
+  if (!series || !/^[0-9]+$/.test(si || "")) return null;
+  const volume = kind === "v" && /^[0-9]+$/.test(vi || "") ? series.vols[Number(vi)] : null;
+  if (kind !== "s" && !volume) return null;
+  const where = volume?.[2] || "", match = /^hb:([0-9]{1,8})$/.exec(where);
+  const unitBooks = volume ? (BOOK_CATALOG_INDEX.get(T)?.links.get(si + ":" + vi) || []) : [];
+  const label = volume?.[0] || "";
+  return { id, r: series.r, name: label && label !== series.n ? series.n + " · " + label : series.n,
+    source: match ? "היברובוקס · רישום הכרך" : "קטלוג הסדרות והכרכים", unitBooks, mapped: !!unitBooks.length,
+    series: Number(si), volume: volume ? Number(vi) : null, scan: match ? { book: match[1], url: "https://hebrewbooks.org/" + match[1] } : null };
+}
+function booksPath(id) {
+  return typeof id === "number" ? ["books", "b", id] : ["books", ...String(id).split(":")];
+}
+function booksEntries(T) {
+  const entries = [], hidden = new Set(), index = BOOK_CATALOG_INDEX.get(T);
+  (T.series || []).forEach((series, si) => {
+    if (!series.vols.length) entries.push(booksEntry(T, "s:" + si));
+    series.vols.forEach((v, vi) => {
+      const entry = booksEntry(T, "v:" + si + ":" + vi); entries.push(entry);
+      for (const b of entry.unitBooks) if (index?.scans[b]?.length === 1) hidden.add(b);
+    });
+  });
+  T.books.forEach((_, id) => { if (!hidden.has(id)) entries.push(booksEntry(T, id)); });
+  return entries;
+}
+function booksList(T, query = "", rebbe = "", mapping = "") {
   const words = norm(query).toLowerCase().split(" ").filter(Boolean);
-  return T.books.map((b, id) => ({ id, r: b[0], name: b[1], source: b[2] }))
-    .filter(b => (rebbe === "" || String(b.r) === String(rebbe)) && words.every(w => norm(b.name + " " + (T.rebbeim[b.r] || "") + " " + b.source).toLowerCase().includes(w)))
-    .sort((a, b) => a.r - b.r || a.name.localeCompare(b.name, "he") || a.id - b.id);
+  return booksEntries(T)
+    .filter(b => (rebbe === "" || String(b.r) === String(rebbe)) && (mapping === "" || (mapping === "mapped" ? b.mapped : !b.mapped)) && words.every(w => norm(b.name + " " + (T.rebbeim[b.r] || "") + " " + b.source + " " + b.unitBooks.map(id => T.books[id].slice(1).join(" ")).join(" ")).toLowerCase().includes(w)))
+    .sort((a, b) => a.r - b.r || a.name.localeCompare(b.name, "he") || String(a.id).localeCompare(String(b.id)));
 }
 function booksPageNumber(value) {
   const s = String(value).trim();
   return /^[0-9]{1,5}$/.test(s) && Number(s) > 0 ? Number(s) : null;
 }
 async function booksMetadata(T, id) {
-  const ids = await treeBookIds(T, id), scans = new Map();
-  for (const i of ids) {
-    const row = treeRow(T, i), target = sourceTarget(treeUrl(String(row?.[8] || "")));
-    if (target?.kind === "hebrewbooks" && !scans.has(target.book)) scans.set(target.book, { book: target.book, url: "https://hebrewbooks.org/" + target.book });
+  const entry = booksEntry(T, id), ids = [], scans = new Map();
+  if (!entry) throw Error("הספר לא נמצא");
+  if (entry.scan) scans.set(entry.scan.book, entry.scan);
+  for (const b of entry.unitBooks) {
+    for (const i of await treeBookIds(T, b)) {
+      const row = treeRow(T, i), target = sourceTarget(treeUrl(String(row?.[8] || "")));
+      // Registry links may only collect units from this exact scan and author.
+      if (entry.series != null && (target?.kind !== "hebrewbooks" || target.book !== entry.scan?.book || T.books[row[0]][0] !== entry.r)) continue;
+      ids.push(i);
+      if (target?.kind === "hebrewbooks" && !scans.has(target.book)) scans.set(target.book, { book: target.book, url: "https://hebrewbooks.org/" + target.book });
+    }
   }
   return { ids, scans: [...scans.values()] };
 }
 function booksSourceInfo(T, id, scan, page = 1) {
-  return { title: T.books[id][1], book: T.books[id][1], author: T.rebbeim[T.books[id][0]] || "", url: scan.url, pdfPage: page };
+  const entry = booksEntry(T, id);
+  return { title: entry.name, book: entry.name, author: T.rebbeim[entry.r] || "", url: scan.url, pdfPage: page };
 }
 function booksSavedScan(scan) {
   if (typeof savedSourceRows !== "function") return null;
@@ -4265,7 +4319,8 @@ function booksSavedScan(scan) {
   return null;
 }
 function booksUnitInfo(T, id, row) {
-  return { title: row[2] || T.books[id][1], book: T.books[id][1], author: T.rebbeim[T.books[id][0]] || "", url: treeUrl(String(row[8] || "")), page: row[4] };
+  const entry = booksEntry(T, id), original = T.books[row[0]];
+  return { title: row[2] || entry.name, book: original[1], author: T.rebbeim[original[0]] || "", url: treeUrl(String(row[8] || "")), page: row[4] };
 }
 /* Each thumbnail is the original first PDF page, with the same decoder validation as the reader. */
 async function booksCoverImage(scan, signal) {
@@ -4320,7 +4375,7 @@ function booksCovers(T) {
           if (stopped || controller.signal.aborted || !host.isConnected) return;
           if (!meta.scans.length) { host.replaceChildren(icon("i-read"), h("small", null, "צילום שער אינו זמין")); return; }
           const url = await booksCoverImage(meta.scans[0], controller.signal);
-          if (!stopped && !controller.signal.aborted && host.isConnected) host.replaceChildren(h("img", { src: url, alt: "צילום הדף הראשון של " + T.books[id][1], width: "240", height: "340", decoding: "async" }));
+          if (!stopped && !controller.signal.aborted && host.isConnected) host.replaceChildren(h("img", { src: url, alt: "צילום הדף הראשון של " + booksEntry(T, id).name, width: "240", height: "340", decoding: "async" }));
         } catch (error) {
           if (!stopped && !controller.signal.aborted && host.isConnected && error.message === "cover_deferred") { job.ready = Date.now() + error.delay; queue.push(job); host.replaceChildren(icon("i-read"), h("small", null, "השער ייטען בהמשך")); }
           else if (!stopped && host.isConnected) host.replaceChildren(icon("i-read"), h("small", null, "הצילום לא נטען"));
@@ -4344,55 +4399,65 @@ VIEWS.books = async function(rest, q, ctx) {
   const main = $("#view"); main.className = "main page wide books"; main.replaceChildren(h("p", { class: "loading", role: "status" }, "טוען את מדף הספרים…"));
   document.title = "ספרים · חברותא";
   let T;
-  try { T = await loadChunk("tree"); }
+  try { T = await loadChunk("tree"); if (T.series) booksRegisterCatalog(T, await loadChunk("book-catalog")); }
   catch (_) { if (ctx.alive()) main.replaceChildren(h("div", { class: "empty" }, "לא ניתן לטעון את הספרים כעת.", h("button", { class: "btn", type: "button", onclick: () => route() }, "ניסיון נוסף"))); return; }
   if (!ctx.alive()) return;
   main.replaceChildren();
   const covers = booksCovers(T); ctx.cleanup = () => covers.close();
   if (rest[0] === "b" && /^\d+$/.test(rest[1] || "") && T.books[Number(rest[1])]) return booksBook(main, T, Number(rest[1]), q, ctx, covers);
+  if (rest[0] === "v" && /^[0-9]+$/.test(rest[1] || "") && /^[0-9]+$/.test(rest[2] || "") && booksEntry(T, "v:" + rest[1] + ":" + rest[2])) return booksBook(main, T, "v:" + rest[1] + ":" + rest[2], q, ctx, covers);
+  if (rest[0] === "s" && /^[0-9]+$/.test(rest[1] || "") && booksEntry(T, "s:" + rest[1])) return booksBook(main, T, "s:" + rest[1], q, ctx, covers);
   if (rest.length) { main.append(h("p", { class: "empty" }, "הספר לא נמצא"), h("a", { href: mkHash(["books"]) }, "חזרה לכל הספרים")); return; }
   booksShelf(main, T, q, ctx, covers);
 };
 function booksShelf(main, T, q, ctx, initialCovers) {
-  main.append(h("h1", { class: "page-title" }, "ספרים"), h("p", { class: "lede" }, "ספרי רבותינו נשיאינו, לפי רבי. בחרו ספר כדי לדפדף בצילום או לפתוח את תוכנו."));
+  main.append(h("h1", { class: "page-title" }, "ספרים"), h("p", { class: "lede" }, "ספרי רבותינו נשיאינו, לפי רבי, מאותו קטלוג המשמש את עץ הידע. גם כרך שתוכן העניינים שלו טרם מופה מופיע כאן."));
   const search = h("input", { type: "search", value: q.get("q") || "", placeholder: "חיפוש בשם ספר…", "aria-label": "חיפוש ספר" });
   const filter = h("select", { "aria-label": "ספרים לפי רבי" }, h("option", { value: "" }, "כל הרביים"), ...T.rebbeim.map((name, r) => h("option", { value: r, selected: q.get("r") === String(r) }, name)));
+  const mapping = h("select", { "aria-label": "מצב מיפוי הספר", value: q.get("m") || "" }, h("option", { value: "" }, "כל מצבי המיפוי"), h("option", { value: "mapped", selected: q.get("m") === "mapped" }, "יש יחידות מקוטלגות"), h("option", { value: "pending", selected: q.get("m") === "pending" }, "טרם מופו יחידות"));
   const status = h("p", { class: "muted", role: "status", "aria-live": "polite" });
   const shelf = h("div"), more = h("div", { class: "books-more" });
-  main.append(h("div", { class: "books-filters" }, search, filter), status, shelf, more, h("p", { class: "books-note muted" }, "מוצג צילום הדף הראשון כשהמקור מספק סריקה. בספרים ללא סריקה אפשר לפתוח את התוכן המקוטלג. מהדורות ומקורות שונים מופיעים בנפרד."));
+  main.append(h("div", { class: "books-filters" }, search, filter, mapping), status, shelf, more, h("p", { class: "books-note muted" }, "מוצג צילום הדף הראשון כשהמקור מספק סריקה. בספרים ללא סריקה אפשר לפתוח את התוכן המקוטלג. מהדורות ומקורות שונים מופיעים בנפרד."));
   let limit = BOOK_SHELF_PAGE, covers = initialCovers, first = true;
   const draw = () => {
     if (!first) { covers.close(); covers = booksCovers(T); } first = false;
     ctx.cleanup = () => covers.close(); shelf.replaceChildren(); more.replaceChildren();
-    const all = booksList(T, search.value, filter.value), browsingAll = !search.value.trim() && filter.value === "";
+    const all = booksList(T, search.value, filter.value, mapping.value), browsingAll = !search.value.trim() && filter.value === "" && mapping.value === "";
     const counts = new Map();
     const shown = browsingAll ? all.filter(b => { const n = counts.get(b.r) || 0; counts.set(b.r, n + 1); return n < 12; }) : all.slice(0, limit);
-    status.textContent = all.length.toLocaleString("he") + " ספרים ומהדורות";
+    status.textContent = all.length.toLocaleString("he") + " רשומות ספרים, כרכים ומהדורות";
     for (const r of [...new Set(shown.map(b => b.r))]) {
       const list = shown.filter(b => b.r === r), total = all.filter(b => b.r === r).length;
-      const heading = h("div", { class: "sec-h books-group-head" }, h("h2", null, T.rebbeim[r] || "לא שויך"), h("span", { class: "muted" }, total + " ספרים"));
+      const heading = h("div", { class: "sec-h books-group-head" }, h("h2", null, T.rebbeim[r] || "לא שויך"), h("span", { class: "muted" }, total + " רשומות"));
       if (browsingAll && total > list.length) heading.append(h("a", { href: mkHash(["books"], { r }) }, "לכל ספרי " + (T.rebbeim[r] || "")));
       const grid = h("div", { class: "books-grid" });
-      for (const b of list) grid.append(h("a", { class: "books-card", href: mkHash(["books", "b", b.id]) }, booksCover(T, b.id, covers), h("h3", null, b.name), h("small", { class: "muted" }, b.source)));
+      for (const b of list) grid.append(h("a", { class: "books-card", href: mkHash(booksPath(b.id)) }, booksCover(T, b.id, covers), h("h3", null, b.name), h("small", { class: "muted" }, b.source), h("small", { class: "books-mapping" }, b.mapped ? "יש יחידות מקוטלגות" : "טרם מופו יחידות")));
       shelf.append(h("section", { class: "books-group", "aria-label": T.rebbeim[r] || "ספרים" }, heading, grid));
     }
     if (!all.length) shelf.append(h("p", { class: "empty" }, "לא נמצאו ספרים התואמים לחיפוש."));
     if (!browsingAll && shown.length < all.length) more.append(h("button", { class: "btn", type: "button", onclick: () => { limit += BOOK_SHELF_PAGE; draw(); } }, "הצגת ספרים נוספים"));
   };
-  const change = () => { limit = BOOK_SHELF_PAGE; quietHash(mkHash(["books"], { q: search.value || "", r: filter.value })); draw(); };
-  search.addEventListener("input", change); filter.addEventListener("change", change); draw();
+  const change = () => { limit = BOOK_SHELF_PAGE; quietHash(mkHash(["books"], { q: search.value || "", r: filter.value, m: mapping.value })); draw(); };
+  search.addEventListener("input", change); filter.addEventListener("change", change); mapping.addEventListener("change", change); draw();
   if (!ctx.keep) window.scrollTo(0, 0);
 }
 async function booksBook(main, T, id, q, ctx, covers) {
-  const [r, name, source] = T.books[id];
+  const entry = booksEntry(T, id), { r, name, source } = entry;
   document.title = name + " · ספרים · חברותא";
   main.append(h("nav", { class: "crumbs", "aria-label": "מיקום" }, h("a", { href: mkHash(["books"]) }, "ספרים"), " › ", h("a", { href: mkHash(["books"], { r }) }, T.rebbeim[r] || "לא שויך")),
-    h("header", { class: "books-book-head" }, booksCover(T, id, covers), h("div", null, h("h1", { class: "page-title" }, name), h("p", { class: "muted" }, [T.rebbeim[r], source].filter(Boolean).join(" · ")), h("a", { href: mkHash(["tree", "b", id]) }, "הספר בעץ הידע"))));
+    h("header", { class: "books-book-head" }, booksCover(T, id, covers), h("div", null, h("h1", { class: "page-title" }, name), h("p", { class: "muted" }, [T.rebbeim[r], source].filter(Boolean).join(" · ")), h("a", { href: entry.series == null ? mkHash(["tree", "b", id]) : mkHash(["tree", "r", r], { s: entry.series }) }, "הספר בעץ הידע"))));
   const content = h("div", null, h("p", { role: "status" }, "טוען את תוכן הספר…")); main.append(content);
   let meta;
   try { meta = await booksMetadata(T, id); }
   catch (_) { if (ctx.alive()) content.replaceChildren(h("p", null, "תוכן הספר לא נטען."), h("button", { class: "btn", type: "button", onclick: () => route() }, "ניסיון נוסף")); return; }
   if (!ctx.alive()) return; content.replaceChildren();
+  content.append(h("p", { class: "books-note books-mapping" }, meta.ids.length ? meta.ids.length.toLocaleString("he") + " יחידות מקוטלגות · רישום יחידות אינו מעיד שהספר מופה במלואו." : "הספר רשום בקטלוג; תוכן העניינים טרם מופה."));
+  if (entry.series != null) {
+    const series = T.series[entry.series];
+    if (series.cl) content.append(treeSourceLink("פתיחת הסדרה בספריית חב״ד", "cl:" + series.cl, { title: series.n, author: T.rebbeim[r], book: series.n }));
+    if (entry.unitBooks.length) content.append(h("p", { class: "books-note" }, "מפתחות המקושרים לאותה סריקה: ", ...entry.unitBooks.map(b => h("a", { href: mkHash(["tree", "b", b]) }, T.books[b][1] + " · "))));
+    if (!meta.scans.length && series.col?.length) content.append(h("ul", null, ...series.col.map(([title, url]) => h("li", null, treeSourceLink(title, "https://media.col.org.il/files/uploads/original/" + url, { title, author: T.rebbeim[r], book: series.n })))));
+  }
   if (meta.scans.length) {
     const choose = h("select", { "aria-label": "בחירת סריקת המקור" }, ...meta.scans.map((s, i) => h("option", { value: i }, "היברובוקס · " + s.book)));
     const page = h("input", { type: "number", min: "1", max: "99999", step: "1", value: booksPageNumber(q.get("page")) || 1, required: true, "aria-label": "מספר הדף בקובץ הספר" });
@@ -4417,6 +4482,7 @@ async function booksBook(main, T, id, q, ctx, covers) {
     } }, h("label", null, "מעבר לדף בקובץ ", page), h("button", { class: "btn", type: "submit" }, "פתיחת הדף"));
     content.append(h("section", { class: "books-reader-entry", "aria-label": "דפדוף בספר" }, h("h2", null, "דפדוף בספר"), meta.scans.length > 1 ? choose : null, open, resume, jump, message, h("p", { class: "muted" }, "בקורא אפשר לעבור לדף הקודם והבא או להזין כל מספר דף בקובץ. המספר בקובץ עשוי להיות שונה מהעמוד המודפס. דף שאינו קיים בסריקה לא ייטען.")));
   } else content.append(h("p", { class: "books-note" }, "לא רשומה לספר הזה סריקה מלאה. אפשר לפתוח את היחידות והעמודים שקוטלגו במקור."));
+  if (!meta.ids.length) { if (!ctx.keep) window.scrollTo(0, 0); return; }
   const search = h("input", { type: "search", placeholder: "חיפוש בתוכן הספר או בעמוד המודפס…", "aria-label": "חיפוש בתוכן הספר" });
   const select = h("select", { "aria-label": "מעבר ליחידה בספר" });
   const list = h("ol", { class: "books-contents" }), count = h("p", { class: "muted", role: "status" }), more = h("div");
