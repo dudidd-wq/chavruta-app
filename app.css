@@ -1365,6 +1365,15 @@ body.source-reader-open { overflow: hidden; }
 @media (pointer:coarse) { .source-reader :is(button,a,select,input) { min-height: 44px; } }
 @media print { .source-reader { display: none !important; } }
 
+@media (max-width:560px) {
+  .source-reader .sr-scan-pager { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .source-reader .sr-scan-pager > button { grid-row: 1; min-width: 0; min-height: 44px; }
+  .source-reader .sr-scan-pager > form { grid-column: 1 / -1; grid-row: 2; flex-wrap: wrap; justify-content: center; max-width: 100%; }
+  .source-reader .sr-scan-pager > select { grid-column: 1 / -1; grid-row: 3; }
+  .source-reader .sr-scan-pager :is(input,select) { min-height: 44px; font-size: 16px; }
+  .source-reader .sr-footer { max-height: 32dvh; overflow-y: auto; overscroll-behavior: contain; }
+}
+
 /* Personal layers follow the reader's palette, typography and reduced-motion choice. */
 ::highlight(notebook-gold) { background: #e5bc5066; color: inherit; }
 ::highlight(notebook-green) { background: #62b18166; color: inherit; }
@@ -1437,3 +1446,6 @@ body.source-reader-open { overflow: hidden; }
 
 @media (max-width: 1100px) { .historynav { flex-wrap: wrap; } }
 @media (max-width: 720px) { .bn { overflow-x: auto; justify-content: flex-start; max-width: 100%; overscroll-behavior-inline: contain; } .bn-i { flex: 1 0 64px; } }
+
+.books-resume { margin-block: .6rem; }
+@media (max-width:600px) { .books-jump label { flex-wrap: wrap; flex: 1 1 100%; min-width: 0; } .books-jump input { min-width: 0; max-width: 100%; font-size: 16px; } }

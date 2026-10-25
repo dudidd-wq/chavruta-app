@@ -888,6 +888,11 @@ function sourceScanNotice(info, target) {
   }
   return "מספר הדף בקובץ עשוי להיות שונה ממספר העמוד המודפס. אפשר גם לפתוח את הקובץ המקורי.";
 }
+function sourceRetrySeconds(response) {
+  const raw = response.headers?.get?.("Retry-After"), seconds = Number(raw);
+  const delay = raw && Number.isFinite(seconds) ? seconds : raw ? (Date.parse(raw) - Date.now()) / 1000 : 60;
+  return Math.min(300, Math.max(1, Math.ceil(Number.isFinite(delay) ? delay : 60)));
+}
 let sourcePDFModule;
 function sourcePDFLibrary() {
   if (!sourcePDFModule) sourcePDFModule = import(SOURCE_PDF_ASSETS + "build/pdf.min.mjs").then(lib => {
@@ -1001,7 +1006,7 @@ const SourceReader = {
     if (restore) {
       window.scrollTo(this.position.x, this.position.y); restoreAnchor(this.anchor);
       const opener = this.opener?.isConnected ? this.opener : Array.from(document.querySelectorAll('a[aria-haspopup="dialog"]')).find(a => a.getAttribute("href") === this.openerHref);
-      opener?.focus({ preventScroll: true });
+      (opener || document.querySelector?.("#view"))?.focus({ preventScroll: true });
     }
   },
   async open(info, opener) {
@@ -1144,12 +1149,13 @@ const SourceReader = {
   },
   renderScan() {
     const target = this.target;
-    const tools = h("div", { class: "sr-scan-tools" });
+    const tools = h("div", { class: "sr-scan-tools" + (target.kind === "hebrewbooks" ? " sr-scan-pager" : "") });
     if (target.kind === "hebrewbooks") {
       const input = h("input", { type: "number", min: "1", max: "99999", value: this.page, "aria-label": "מספר הדף בקובץ" });
-      const change = p => { if (Number.isSafeInteger(p) && p > 0 && p < 100000) { this.page = p; this.renderScanFrame(); input.value = p; prev.disabled = p === 1; } };
+      const change = p => { if (Number.isSafeInteger(p) && p > 0 && p < 100000) { this.page = p; this.renderScanFrame(); input.value = p; prev.disabled = p === 1; next.disabled = p === 99999; } };
       const prev = h("button", { type: "button", class: "btn sm", disabled: this.page === 1, onclick: () => change(this.page - 1) }, "הדף הקודם");
-      tools.append(prev, h("form", { onsubmit: e => { e.preventDefault(); change(Number(input.value)); } }, h("label", null, "דף בקובץ ", input), h("button", { type: "submit", class: "btn sm" }, "מעבר")), h("button", { type: "button", class: "btn sm", onclick: () => change(this.page + 1) }, "הדף הבא"));
+      const next = h("button", { type: "button", class: "btn sm", disabled: this.page === 99999, onclick: () => change(this.page + 1) }, "הדף הבא");
+      tools.append(prev, h("form", { onsubmit: e => { e.preventDefault(); change(Number(input.value)); } }, h("label", null, "דף בקובץ ", input), h("button", { type: "submit", class: "btn sm" }, "מעבר")), next);
     }
     const zoom = h("select", { "aria-label": "הגדלת צילום המקור", onchange: () => { this.zoom = zoom.value; this.renderScanFrame(); } }, ...[["page-width", "התאמה לרוחב"], ["100", "100%"], ["150", "150%"], ["200", "200%"]].map(([v, t]) => h("option", { value: v, selected: this.zoom === v }, t)));
     if (target.kind !== "drive") tools.append(zoom); this.scan = h("div", { class: "sr-scan" });
@@ -1179,6 +1185,7 @@ const SourceReader = {
         const [lib, bytes] = await Promise.all([sourcePDFLibrary(), (async () => {
           if (this.pdfBytes.has(key)) return this.pdfBytes.get(key);
           const response = await fetch(sourceGateway() + "/v1/hebrewbooks/" + key, { signal: controller.signal, credentials: "omit", referrerPolicy: "no-referrer" });
+          if (response.status === 429) throw Object.assign(Error("rate_limited"), { retrySeconds: sourceRetrySeconds(response) });
           if (!response.ok) throw Error("unavailable"); const bytes = new Uint8Array(await response.arrayBuffer());
           if (bytes.length > 6 * 1024 * 1024 || new TextDecoder().decode(bytes.slice(0, 5)) !== "%PDF-") throw Error("invalid PDF");
           if (!current()) return null; if (this.pdfBytes.size >= 4) this.pdfBytes.delete(this.pdfBytes.keys().next().value); this.pdfBytes.set(key, bytes); return bytes;
@@ -1197,10 +1204,13 @@ const SourceReader = {
         status.textContent = "צילום הדף נטען"; scan.replaceChildren(status, h("div", { class: "sr-canvas-wrap", tabindex: "0", "aria-label": "צילום הדף — אפשר לגלול" }, canvas), file);
       };
       await Promise.race([task(), deadline]);
-    } catch (_) {
+    } catch (error) {
       if (seq !== this.scanSeq || !this.dialog || this.mode !== "scan") return;
       this.pdfRender?.cancel(); this.pdfLoading?.destroy().catch(() => {}); this.pdfLoading = null;
-      scan.replaceChildren(h("div", { class: "sr-empty", role: "status" }, h("h3", null, "צילום הדף לא נטען"), h("p", null, "צילום המקור לא פוענח בשלמותו או שאינו זמין כרגע. אפשר לנסות שוב או לפתוח את הקובץ המקורי."), h("button", { type: "button", class: "btn", onclick: () => this.renderScanFrame() }, "ניסיון נוסף")), file);
+      const wait = error.retrySeconds || 0, note = h("p", null, wait ? "שירות המקור מגביל בקשות כרגע. אפשר לנסות שוב בעוד " + wait + " שניות." : "צילום המקור לא פוענח בשלמותו או שאינו זמין כרגע. אפשר לנסות שוב או לפתוח את הקובץ המקורי.");
+      const retry = h("button", { type: "button", class: "btn", disabled: !!wait, onclick: () => this.renderScanFrame() }, "ניסיון נוסף");
+      scan.replaceChildren(h("div", { class: "sr-empty", role: "status" }, h("h3", null, "צילום הדף לא נטען"), note, retry), file);
+      if (wait) this.scanTimer = setTimeout(() => { if (seq === this.scanSeq && this.dialog && this.mode === "scan") { retry.disabled = false; note.textContent = "אפשר לנסות שוב כעת."; } }, wait * 1000);
     } finally { clearTimeout(timeout); }
   },
   async renderLibrary() {
@@ -1310,7 +1320,7 @@ function savedSourceRows() {
   try { const rows = JSON.parse(localStorage.getItem(SOURCE_SAVED_KEY) || "[]"); if (!Array.isArray(rows)) return []; const seen = new Set(); return rows.slice(0, 100).map(savedSourceRecord).filter(row => row && !seen.has(row.url) && seen.add(row.url)); } catch (_) { return []; }
 }
 function savedSourceWrite(rows) {
-  try { localStorage.setItem(SOURCE_SAVED_KEY, JSON.stringify(rows)); return true; } catch (_) { return false; }
+  try { localStorage.setItem(SOURCE_SAVED_KEY, JSON.stringify(rows)); window.dispatchEvent?.(new Event("sourceschange")); return true; } catch (_) { return false; }
 }
 function sourceSaveControl(reader) {
   const button = h("button", { type: "button", class: "btn sm" }), status = h("span", { class: "sr-save-status", role: "status" });
@@ -4218,6 +4228,12 @@ function kParsha(main, K, p) {
 
 /* חברותא · מדף ספרים. קורא את הקטלוג הקיים; אינו משנה מיפוי או מספור עמודים. */
 const BOOK_COVER_CACHE = new Map();
+const BOOK_COVER_REQUESTS = [];
+let bookCoverPauseUntil = 0;
+function booksCoverDelay(now = Date.now()) {
+  while (BOOK_COVER_REQUESTS.length && BOOK_COVER_REQUESTS[0] <= now - 60000) BOOK_COVER_REQUESTS.shift();
+  return Math.max(0, bookCoverPauseUntil - now, BOOK_COVER_REQUESTS.length >= 12 ? BOOK_COVER_REQUESTS[0] + 60000 - now : 0);
+}
 const BOOK_SHELF_PAGE = 48;
 function booksList(T, query = "", rebbe = "") {
   const words = norm(query).toLowerCase().split(" ").filter(Boolean);
@@ -4240,6 +4256,14 @@ async function booksMetadata(T, id) {
 function booksSourceInfo(T, id, scan, page = 1) {
   return { title: T.books[id][1], book: T.books[id][1], author: T.rebbeim[T.books[id][0]] || "", url: scan.url, pdfPage: page };
 }
+function booksSavedScan(scan) {
+  if (typeof savedSourceRows !== "function") return null;
+  for (const row of savedSourceRows()) {
+    const target = sourceTarget(row.url, row.pdfPage);
+    if (target?.kind === "hebrewbooks" && target.book === scan.book) return { ...row, pdfPage: target.page };
+  }
+  return null;
+}
 function booksUnitInfo(T, id, row) {
   return { title: row[2] || T.books[id][1], book: T.books[id][1], author: T.rebbeim[T.books[id][0]] || "", url: treeUrl(String(row[8] || "")), page: row[4] };
 }
@@ -4247,11 +4271,14 @@ function booksUnitInfo(T, id, row) {
 async function booksCoverImage(scan, signal) {
   const cached = BOOK_COVER_CACHE.get(scan.book); if (cached) return cached;
   if (!sourceGateway()) throw Error("no scan gateway");
+  const delay = booksCoverDelay(); if (delay) throw Object.assign(Error("cover_deferred"), { delay });
+  BOOK_COVER_REQUESTS.push(Date.now());
   let loading, render;
   const abort = () => { render?.cancel(); loading?.destroy().catch(() => {}); };
   signal.addEventListener("abort", abort, { once: true });
   try {
     const [lib, response] = await Promise.all([sourcePDFLibrary(), fetch(sourceGateway() + "/v1/hebrewbooks/" + scan.book + "/1", { signal, credentials: "omit", referrerPolicy: "no-referrer" })]);
+    if (response.status === 429) { const delay = sourceRetrySeconds(response) * 1000; bookCoverPauseUntil = Date.now() + delay; throw Object.assign(Error("cover_deferred"), { delay }); }
     if (signal.aborted || !response.ok) throw Error("cover unavailable");
     const bytes = new Uint8Array(await response.arrayBuffer());
     if (bytes.length > 6 * 1024 * 1024 || new TextDecoder().decode(bytes.slice(0, 5)) !== "%PDF-") throw Error("invalid cover PDF");
@@ -4272,12 +4299,19 @@ async function booksCoverImage(scan, signal) {
 }
 /* One cover job at a time, scheduled after a paint; cancel on navigation/filtering. */
 function booksCovers(T) {
-  let stopped = false, active = 0, scheduled = null;
+  let stopped = false, active = 0, scheduled = null, scheduledAt = 0;
   const queue = [], controllers = new Set(), jobs = new Map();
-  const schedule = () => { if (!stopped && scheduled === null) scheduled = setTimeout(() => { scheduled = null; pump(); }, 32); };
+  const schedule = (delay = 32) => {
+    const at = Date.now() + delay;
+    if (!stopped && (scheduled === null || at < scheduledAt)) { clearTimeout(scheduled); scheduledAt = at; scheduled = setTimeout(() => { scheduled = null; pump(); }, delay); }
+  };
   const pump = () => {
+    if (stopped || !queue.length) return;
+    if (SourceReader.dialog) { schedule(1000); return; }
     while (!stopped && active < 1 && queue.length) {
-      const { host, id } = queue.shift(); if (!host.isConnected) continue;
+      const i = queue.findIndex(job => !job.ready || job.ready <= Date.now());
+      if (i < 0) { schedule(Math.max(32, Math.min(...queue.map(job => job.ready)) - Date.now())); return; }
+      const job = queue.splice(i, 1)[0], { host, id } = job; if (!host.isConnected) continue;
       const controller = new AbortController(); controllers.add(controller); active++;
       const timer = setTimeout(() => controller.abort(), 18000);
       (async () => {
@@ -4287,8 +4321,9 @@ function booksCovers(T) {
           if (!meta.scans.length) { host.replaceChildren(icon("i-read"), h("small", null, "צילום שער אינו זמין")); return; }
           const url = await booksCoverImage(meta.scans[0], controller.signal);
           if (!stopped && !controller.signal.aborted && host.isConnected) host.replaceChildren(h("img", { src: url, alt: "צילום הדף הראשון של " + T.books[id][1], width: "240", height: "340", decoding: "async" }));
-        } catch (_) {
-          if (!stopped && host.isConnected) host.replaceChildren(icon("i-read"), h("small", null, "הצילום לא נטען"));
+        } catch (error) {
+          if (!stopped && !controller.signal.aborted && host.isConnected && error.message === "cover_deferred") { job.ready = Date.now() + error.delay; queue.push(job); host.replaceChildren(icon("i-read"), h("small", null, "השער ייטען בהמשך")); }
+          else if (!stopped && host.isConnected) host.replaceChildren(icon("i-read"), h("small", null, "הצילום לא נטען"));
         } finally { clearTimeout(timer); controllers.delete(controller); active--; schedule(); }
       })();
     }
@@ -4366,13 +4401,21 @@ async function booksBook(main, T, id, q, ctx, covers) {
       if (e.ctrlKey || e.metaKey || e.shiftKey || e.altKey || e.button > 0) return;
       e.preventDefault(); SourceReader.open(booksSourceInfo(T, id, meta.scans[Number(choose.value)]), e.currentTarget);
     } }, "פתיחת הספר מתחילתו");
-    choose.addEventListener("change", () => { open.href = meta.scans[Number(choose.value)].url; });
+    const resume = h("div", { class: "books-resume" });
+    const updateResume = () => {
+      const scan = meta.scans[Number(choose.value)], saved = booksSavedScan(scan);
+      resume.replaceChildren(saved ? sourceLink({ ...booksSourceInfo(T, id, scan, saved.pdfPage), url: saved.url }, "המשך מהמקום ששמרת · דף " + saved.pdfPage, { class: "btn" }) : null);
+    };
+    choose.addEventListener("change", () => { open.href = meta.scans[Number(choose.value)].url; updateResume(); });
+    window.addEventListener("sourceschange", updateResume);
+    const cleanup = ctx.cleanup; ctx.cleanup = () => { cleanup?.(); window.removeEventListener?.("sourceschange", updateResume); };
+    updateResume();
     const jump = h("form", { class: "books-jump", onsubmit: e => {
       e.preventDefault(); const p = booksPageNumber(page.value);
       if (!p) { message.textContent = "יש להזין מספר דף שלם בין 1 ל־99999."; page.focus(); return; }
       message.textContent = ""; SourceReader.open(booksSourceInfo(T, id, meta.scans[Number(choose.value)], p), jump.querySelector("button"));
     } }, h("label", null, "מעבר לדף בקובץ ", page), h("button", { class: "btn", type: "submit" }, "פתיחת הדף"));
-    content.append(h("section", { class: "books-reader-entry", "aria-label": "דפדוף בספר" }, h("h2", null, "דפדוף בספר"), meta.scans.length > 1 ? choose : null, open, jump, message, h("p", { class: "muted" }, "בקורא אפשר לעבור לדף הקודם והבא או להזין כל מספר דף בקובץ. המספר בקובץ עשוי להיות שונה מהעמוד המודפס. דף שאינו קיים בסריקה לא ייטען.")));
+    content.append(h("section", { class: "books-reader-entry", "aria-label": "דפדוף בספר" }, h("h2", null, "דפדוף בספר"), meta.scans.length > 1 ? choose : null, open, resume, jump, message, h("p", { class: "muted" }, "בקורא אפשר לעבור לדף הקודם והבא או להזין כל מספר דף בקובץ. המספר בקובץ עשוי להיות שונה מהעמוד המודפס. דף שאינו קיים בסריקה לא ייטען.")));
   } else content.append(h("p", { class: "books-note" }, "לא רשומה לספר הזה סריקה מלאה. אפשר לפתוח את היחידות והעמודים שקוטלגו במקור."));
   const search = h("input", { type: "search", placeholder: "חיפוש בתוכן הספר או בעמוד המודפס…", "aria-label": "חיפוש בתוכן הספר" });
   const select = h("select", { "aria-label": "מעבר ליחידה בספר" });
