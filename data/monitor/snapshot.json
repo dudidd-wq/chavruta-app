@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-25T06:09:27+00:00",
+ "generated_at": "2026-10-25T06:14:14+00:00",
  "sources": [
   {
    "id": "chabadlibrary",
@@ -12,7 +12,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-10-25T06:08:15+00:00",
+   "checked_at": "2026-10-25T06:13:04+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -30,7 +30,7 @@
     "primary",
     "whatsnew"
    ],
-   "checked_at": "2026-10-25T06:08:15+00:00",
+   "checked_at": "2026-10-25T06:13:04+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -47,7 +47,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-10-25T06:08:15+00:00",
+   "checked_at": "2026-10-25T06:13:04+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -64,7 +64,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-10-25T06:08:15+00:00",
+   "checked_at": "2026-10-25T06:13:04+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -82,7 +82,7 @@
     "primary",
     "whatsnew"
    ],
-   "checked_at": "2026-10-25T06:08:15+00:00",
+   "checked_at": "2026-10-25T06:13:04+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -102,7 +102,7 @@
     }
    ],
    "total": 132,
-   "last_success_at": "2026-10-25T06:08:15+00:00"
+   "last_success_at": "2026-10-25T06:13:04+00:00"
   },
   {
    "id": "chabadlibrarybooks",
@@ -115,7 +115,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-10-25T06:08:16+00:00",
+   "checked_at": "2026-10-25T06:13:04+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -133,12 +133,12 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-25T06:08:16+00:00",
+   "checked_at": "2026-10-25T06:13:04+00:00",
    "status": "ok",
    "new": [],
    "latest": [],
    "total": 1501,
-   "last_success_at": "2026-10-25T06:08:16+00:00"
+   "last_success_at": "2026-10-25T06:13:04+00:00"
   },
   {
    "id": "chassidut_org",
@@ -152,12 +152,12 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-25T06:08:17+00:00",
+   "checked_at": "2026-10-25T06:13:06+00:00",
    "status": "ok",
    "new": [],
    "latest": [],
    "total": 4,
-   "last_success_at": "2026-10-25T06:08:17+00:00"
+   "last_success_at": "2026-10-25T06:13:06+00:00"
   },
   {
    "id": "biurim",
@@ -171,7 +171,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-25T06:08:18+00:00",
+   "checked_at": "2026-10-25T06:13:07+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -217,7 +217,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-10-25T06:08:18+00:00"
+   "last_success_at": "2026-10-25T06:13:07+00:00"
   },
   {
    "id": "hm_monsey",
@@ -231,7 +231,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-25T06:08:20+00:00",
+   "checked_at": "2026-10-25T06:13:08+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -277,7 +277,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-10-25T06:08:20+00:00"
+   "last_success_at": "2026-10-25T06:13:08+00:00"
   },
   {
    "id": "hiskashrus",
@@ -291,7 +291,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-25T06:08:22+00:00",
+   "checked_at": "2026-10-25T06:13:10+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -339,7 +339,7 @@
     }
    ],
    "total": 252,
-   "last_success_at": "2026-10-25T06:08:22+00:00"
+   "last_success_at": "2026-10-25T06:13:10+00:00"
   },
   {
    "id": "lichyot_chassidus",
@@ -353,7 +353,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-25T06:08:24+00:00",
+   "checked_at": "2026-10-25T06:13:12+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -423,7 +423,7 @@
     }
    ],
    "total": 1000,
-   "last_success_at": "2026-10-25T06:08:24+00:00"
+   "last_success_at": "2026-10-25T06:13:12+00:00"
   },
   {
    "id": "chabadzoom",
@@ -437,7 +437,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-25T06:08:26+00:00",
+   "checked_at": "2026-10-25T06:13:14+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -499,7 +499,7 @@
     }
    ],
    "total": 558,
-   "last_success_at": "2026-10-25T06:08:26+00:00"
+   "last_success_at": "2026-10-25T06:13:14+00:00"
   },
   {
    "id": "kovtzimdrive",
@@ -513,7 +513,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-25T06:08:28+00:00",
+   "checked_at": "2026-10-25T06:13:16+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -526,7 +526,7 @@
     }
    ],
    "total": 1,
-   "last_success_at": "2026-10-25T06:08:28+00:00"
+   "last_success_at": "2026-10-25T06:13:16+00:00"
   },
   {
    "id": "avita",
@@ -540,7 +540,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-25T06:08:30+00:00",
+   "checked_at": "2026-10-25T06:13:18+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -558,7 +558,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-25T06:08:30+00:00",
+   "checked_at": "2026-10-25T06:13:18+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -580,7 +580,7 @@
     }
    ],
    "total": 2,
-   "last_success_at": "2026-10-25T06:08:30+00:00"
+   "last_success_at": "2026-10-25T06:13:18+00:00"
   },
   {
    "id": "dvarmalchus770",
@@ -594,18 +594,9 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-25T06:08:32+00:00",
+   "checked_at": "2026-10-25T06:13:20+00:00",
    "status": "ok",
-   "new": [
-    {
-     "id": "http://dvarmalchus770.org/?p=5696",
-     "title": "Vayera 5752: To Truly Desire Divine Revelation",
-     "url": "https://dvarmalchus770.org/2026/10/24/vayera-5752-to-truly-desire-divine-revelation-2/",
-     "date": "Sat, 24 Oct 2026 22:56:00 +0000",
-     "blurb": "This sicha begins with the story of the Rebbe Rashab as a young boy. On his 4th or 5th birthday he was brought to his grandfather, the Tzemach Tzedek, to receive a blessing. When he entered his grandfather’s room he burst out in tears and said “In cheder, we learned that G-d revealed Himself to Avraham. Why does […]",
-     "first_seen": "2026-10-25T06:08:32+00:00"
-    }
-   ],
+   "new": [],
    "latest": [
     {
      "id": "http://dvarmalchus770.org/?p=5696",
@@ -673,7 +664,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-10-25T06:08:32+00:00"
+   "last_success_at": "2026-10-25T06:13:20+00:00"
   },
   {
    "id": "soulwords",
@@ -687,7 +678,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-25T06:08:33+00:00",
+   "checked_at": "2026-10-25T06:13:22+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -741,7 +732,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-10-25T06:08:33+00:00"
+   "last_success_at": "2026-10-25T06:13:22+00:00"
   },
   {
    "id": "sie_weekly",
@@ -755,7 +746,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-25T06:08:35+00:00",
+   "checked_at": "2026-10-25T06:13:23+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -796,7 +787,7 @@
     }
    ],
    "total": 114,
-   "last_success_at": "2026-10-25T06:08:35+00:00"
+   "last_success_at": "2026-10-25T06:13:23+00:00"
   },
   {
    "id": "pls",
@@ -810,7 +801,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-25T06:08:36+00:00",
+   "checked_at": "2026-10-25T06:13:25+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -864,7 +855,7 @@
     }
    ],
    "total": 200,
-   "last_success_at": "2026-10-25T06:08:36+00:00"
+   "last_success_at": "2026-10-25T06:13:25+00:00"
   },
   {
    "id": "chayenu_ls",
@@ -878,7 +869,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-25T06:08:37+00:00",
+   "checked_at": "2026-10-25T06:13:26+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -905,7 +896,7 @@
     }
    ],
    "total": 2,
-   "last_success_at": "2026-10-25T06:08:37+00:00"
+   "last_success_at": "2026-10-25T06:13:26+00:00"
   },
   {
    "id": "weekly_sicha",
@@ -919,7 +910,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-25T06:08:39+00:00",
+   "checked_at": "2026-10-25T06:13:27+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -967,7 +958,7 @@
     }
    ],
    "total": 117,
-   "last_success_at": "2026-10-25T06:08:39+00:00"
+   "last_success_at": "2026-10-25T06:13:27+00:00"
   },
   {
    "id": "theyeshiva",
@@ -981,18 +972,9 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-25T06:08:40+00:00",
+   "checked_at": "2026-10-25T06:13:29+00:00",
    "status": "ok",
-   "new": [
-    {
-     "id": "https://www.theyeshiva.net/item/10013",
-     "title": "Frisch Teens Challenge Rabbi YY Jacobson - Q & A with Rabbi YY",
-     "url": "https://www.theyeshiva.net/item/10013",
-     "date": "Thu, 22 Oct 2026 20:31:56 -0400",
-     "blurb": "Why Does G-d Allow Evil? Why Are Prayers Unanswered? And What If Judaism Feels Boring?",
-     "first_seen": "2026-10-25T06:08:40+00:00"
-    }
-   ],
+   "new": [],
    "latest": [
     {
      "id": "https://www.theyeshiva.net/item/10013",
@@ -1060,7 +1042,7 @@
     }
    ],
    "total": 1539,
-   "last_success_at": "2026-10-25T06:08:40+00:00"
+   "last_success_at": "2026-10-25T06:13:29+00:00"
   },
   {
    "id": "chassidus_applied",
@@ -1074,7 +1056,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-25T06:08:43+00:00",
+   "checked_at": "2026-10-25T06:13:32+00:00",
    "status": "error",
    "new": [],
    "latest": [
@@ -1176,7 +1158,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-25T06:08:44+00:00",
+   "checked_at": "2026-10-25T06:13:32+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1230,7 +1212,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-10-25T06:08:44+00:00"
+   "last_success_at": "2026-10-25T06:13:32+00:00"
   },
   {
    "id": "chassidus_explained",
@@ -1244,7 +1226,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-25T06:08:46+00:00",
+   "checked_at": "2026-10-25T06:13:34+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1298,7 +1280,7 @@
     }
    ],
    "total": 135,
-   "last_success_at": "2026-10-25T06:08:46+00:00"
+   "last_success_at": "2026-10-25T06:13:34+00:00"
   },
   {
    "id": "melukat",
@@ -1312,7 +1294,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-25T06:08:48+00:00",
+   "checked_at": "2026-10-25T06:13:35+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1367,7 +1349,7 @@
     }
    ],
    "total": 167,
-   "last_success_at": "2026-10-25T06:08:48+00:00"
+   "last_success_at": "2026-10-25T06:13:35+00:00"
   },
   {
    "id": "daily_maamar",
@@ -1381,7 +1363,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-25T06:08:49+00:00",
+   "checked_at": "2026-10-25T06:13:36+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1475,7 +1457,7 @@
     }
    ],
    "total": 346,
-   "last_success_at": "2026-10-25T06:08:49+00:00"
+   "last_success_at": "2026-10-25T06:13:36+00:00"
   },
   {
    "id": "wellsprings",
@@ -1489,7 +1471,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-25T06:08:50+00:00",
+   "checked_at": "2026-10-25T06:13:37+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1535,7 +1517,7 @@
     }
    ],
    "total": 125,
-   "last_success_at": "2026-10-25T06:08:50+00:00"
+   "last_success_at": "2026-10-25T06:13:37+00:00"
   },
   {
    "id": "daily_sicha",
@@ -1549,18 +1531,9 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-25T06:08:51+00:00",
+   "checked_at": "2026-10-25T06:13:38+00:00",
    "status": "ok",
-   "new": [
-    {
-     "id": "2026.10.25",
-     "title": "יום א' פ' וירא, י\"ד מרחשון, ה'תשפ\"ז",
-     "url": "",
-     "date": "Sun, 25 Oct 2026 12:00:00 GMT",
-     "blurb": "התוכן גם אלו שהם בבחינת \"זבולון\", \"עסוק בפרקמטיא\", ותכליתם היא נתינת הצדקה , עליהם להכליל בה גם ענין התורה : 1) שיתמכו בלומדי תורה , ועי\"ז מקבלים הם חלק בלימוד התורה (אם מתנים א\"ז קודם הלימוד, כמבואר בשו\"ע). 2) כשנותנים צדקה לעני, הנה (אע\"פ שיש לעזור לו בלי שום תנאי, אבל) אם הוא מחי' את גופו , עאכו\"כ שעליו להחיות גם את נשמתו ולהביאו גם \"לחיי עוה\"ב \". ואפי' אם הלה לא ביקש את עזרתו בזה, הרי אדרבה , זה מוכיח שהוא \"חולה\" מסוכן עוד יותר! וע\"ד שמצינו באברהם אבינו , מכניס אורח שאין כמוהו , שלאחרי שהביא אכילה ושתי' אפי' לערביים , לימד אותם שיש לברך לה' ע\"ז, שהבנת דבר זה, שהעולם שייך להקב\"ה וכו', באה דוקא ע\"י לימוד התורה . ועד\"ז כשמזכים אחרים במצות הצדקה יש 1) לפעול עליהם שיהיו מ\" תמכין דאורייתא \", 2) ללמוד אתם קצת תורה ! ‏משיחת י\"ט כסלו ה'תשל\"ב ל\"הנחה פרטית\" או התרגום ללה\"ק של השיחה: https://thedailysicha.com/?date=25-10-2026 Synopsis Even those who are in the category of Zevulun (whose primary role is giving tzedakah ) must incorporate Torah in their tzedakah: (1) They should support Torah scholars , in which case they receive a share in the Torah study (provided that this arrangement is stipulated before the Torah is studied, as explained in Shulchan Aruch). (2) When giving tzedakah, they must pay attention not only to the recipient’s physical needs, but also his spiritual needs, which are even more important because they bring a person to life in the World to Come . (And if the recipient didn’t ask for spiritual help, that only demonstrates that his spiritual problems are even dee",
-     "first_seen": "2026-10-25T06:08:51+00:00"
-    }
-   ],
+   "new": [],
    "latest": [
     {
      "id": "2026.10.25",
@@ -1652,7 +1625,7 @@
     }
    ],
    "total": 1410,
-   "last_success_at": "2026-10-25T06:08:51+00:00"
+   "last_success_at": "2026-10-25T06:13:38+00:00"
   },
   {
    "id": "learnchassidus",
@@ -1666,7 +1639,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-25T06:08:57+00:00",
+   "checked_at": "2026-10-25T06:13:43+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1679,7 +1652,7 @@
     }
    ],
    "total": 5,
-   "last_success_at": "2026-10-25T06:08:57+00:00"
+   "last_success_at": "2026-10-25T06:13:43+00:00"
   },
   {
    "id": "simplychassidus",
@@ -1693,7 +1666,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-25T06:08:58+00:00",
+   "checked_at": "2026-10-25T06:13:44+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1720,7 +1693,7 @@
     }
    ],
    "total": 4,
-   "last_success_at": "2026-10-25T06:08:58+00:00"
+   "last_success_at": "2026-10-25T06:13:44+00:00"
   },
   {
    "id": "alonei_chabad",
@@ -1733,7 +1706,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-25T06:08:59+00:00",
+   "checked_at": "2026-10-25T06:13:45+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -1750,7 +1723,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-25T06:08:59+00:00",
+   "checked_at": "2026-10-25T06:13:45+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -1767,7 +1740,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-25T06:08:59+00:00",
+   "checked_at": "2026-10-25T06:13:45+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1794,7 +1767,7 @@
     }
    ],
    "total": 303,
-   "last_success_at": "2026-10-25T06:08:59+00:00"
+   "last_success_at": "2026-10-25T06:13:45+00:00"
   },
   {
    "id": "lchaim",
@@ -1807,17 +1780,9 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-25T06:09:00+00:00",
+   "checked_at": "2026-10-25T06:13:46+00:00",
    "status": "ok",
-   "new": [
-    {
-     "id": "37957",
-     "title": "Vayeira · 5787 · A weekly Chabad publication featuring teachings of the Rebbe, stories, and community news.",
-     "url": "https://torahprint.nyc3.cdn.digitaloceanspaces.com/pdfFiles/1792880926571_inlqb_lchaim_1946.pdf",
-     "date": "2026-10-30T00:00:00.000Z",
-     "first_seen": "2026-10-25T06:09:00+00:00"
-    }
-   ],
+   "new": [],
    "latest": [
     {
      "id": "37957",
@@ -1863,7 +1828,7 @@
     }
    ],
    "total": 192,
-   "last_success_at": "2026-10-25T06:09:00+00:00"
+   "last_success_at": "2026-10-25T06:13:46+00:00"
   },
   {
    "id": "one_point",
@@ -1876,7 +1841,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-25T06:09:02+00:00",
+   "checked_at": "2026-10-25T06:13:47+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1917,7 +1882,7 @@
     }
    ],
    "total": 184,
-   "last_success_at": "2026-10-25T06:09:02+00:00"
+   "last_success_at": "2026-10-25T06:13:47+00:00"
   },
   {
    "id": "derher",
@@ -1930,7 +1895,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-25T06:09:03+00:00",
+   "checked_at": "2026-10-25T06:13:49+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -1947,7 +1912,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-25T06:09:03+00:00",
+   "checked_at": "2026-10-25T06:13:49+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -1964,7 +1929,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-25T06:09:03+00:00",
+   "checked_at": "2026-10-25T06:13:49+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1991,7 +1956,7 @@
     }
    ],
    "total": 5,
-   "last_success_at": "2026-10-25T06:09:03+00:00"
+   "last_success_at": "2026-10-25T06:13:49+00:00"
   },
   {
    "id": "maynotecha_inst",
@@ -2004,7 +1969,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-25T06:09:05+00:00",
+   "checked_at": "2026-10-25T06:13:51+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -2021,18 +1986,9 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-25T06:09:05+00:00",
+   "checked_at": "2026-10-25T06:13:51+00:00",
    "status": "ok",
-   "new": [
-    {
-     "id": "https://www.chabad.org/article.asp?aid=7558054",
-     "title": "History: The Rebbe and the Chief Rabbi By Aryeh Solomon",
-     "url": "https://www.chabad.org/article.asp?aid=7558054",
-     "date": "Sat, 24 Oct 2026 12:00:00 EST",
-     "blurb": "",
-     "first_seen": "2026-10-25T06:09:05+00:00"
-    }
-   ],
+   "new": [],
    "latest": [
     {
      "id": "https://www.chabad.org/article.asp?aid=7558054",
@@ -2052,7 +2008,7 @@
     }
    ],
    "total": 1,
-   "last_success_at": "2026-10-25T06:09:05+00:00"
+   "last_success_at": "2026-10-25T06:13:51+00:00"
   },
   {
    "id": "anash",
@@ -2065,18 +2021,9 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-25T06:09:07+00:00",
+   "checked_at": "2026-10-25T06:13:52+00:00",
    "status": "ok",
-   "new": [
-    {
-     "id": "https://anash.org/?p=1125645",
-     "title": "250 Bochurim Celebrate Tanya Mastery at Crown Heights Siyum",
-     "url": "https://anash.org/250-bochurim-celebrate-tanya-mastery-at-crown-heights-siyum/",
-     "date": "Sat, 24 Oct 2026 22:53:00 +0000",
-     "blurb": "A revolutionary Tanya mastery program is gaining momentum, with 250 bochurim celebrating the completion of its second cycle at a Crown Heights siyum, as plans move forward to expand the initiative to additional yeshivos.",
-     "first_seen": "2026-10-25T06:09:07+00:00"
-    }
-   ],
+   "new": [],
    "latest": [
     {
      "id": "https://anash.org/?p=1125645",
@@ -2176,7 +2123,7 @@
     }
    ],
    "total": 3,
-   "last_success_at": "2026-10-25T06:09:07+00:00"
+   "last_success_at": "2026-10-25T06:13:52+00:00"
   },
   {
    "id": "chabadinfo",
@@ -2189,7 +2136,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-25T06:09:08+00:00",
+   "checked_at": "2026-10-25T06:13:53+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -2206,7 +2153,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-25T06:09:08+00:00",
+   "checked_at": "2026-10-25T06:13:53+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -2223,7 +2170,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-25T06:09:08+00:00",
+   "checked_at": "2026-10-25T06:13:53+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2269,7 +2216,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-10-25T06:09:08+00:00"
+   "last_success_at": "2026-10-25T06:13:53+00:00"
   },
   {
    "id": "kehot",
@@ -2282,7 +2229,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-25T06:09:11+00:00",
+   "checked_at": "2026-10-25T06:13:57+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2552,7 +2499,7 @@
     }
    ],
    "total": 190,
-   "last_success_at": "2026-10-25T06:09:11+00:00"
+   "last_success_at": "2026-10-25T06:13:57+00:00"
   }
  ],
  "browser_checks": {

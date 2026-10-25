@@ -1,7 +1,7 @@
 {
- "generated": "2026-10-25T06:09:27+00:00",
+ "generated": "2026-10-25T06:14:14+00:00",
  "items": 42,
- "pending": 3,
+ "pending": 0,
  "counts": {
   "manual": 8,
   "browser": 5,
@@ -13,7 +13,7 @@
    "id": "chabadlibrary",
    "name": "ספריית חב״ד",
    "status": "manual",
-   "checked": "2026-10-25T06:08:15+00:00",
+   "checked": "2026-10-25T06:13:04+00:00",
    "lastSuccess": "",
    "retained": false
   },
@@ -21,7 +21,7 @@
    "id": "lahak",
    "name": "לה״ק — ועד הנחות בלשון הקודש",
    "status": "browser",
-   "checked": "2026-10-25T06:08:15+00:00",
+   "checked": "2026-10-25T06:13:04+00:00",
    "lastSuccess": "",
    "retained": false
   },
@@ -29,7 +29,7 @@
    "id": "chassidutbehirah",
    "name": "חסידות בהירה",
    "status": "manual",
-   "checked": "2026-10-25T06:08:15+00:00",
+   "checked": "2026-10-25T06:13:04+00:00",
    "lastSuccess": "",
    "retained": false
   },
@@ -37,7 +37,7 @@
    "id": "hebrewbooks",
    "name": "היברובוקס",
    "status": "manual",
-   "checked": "2026-10-25T06:08:15+00:00",
+   "checked": "2026-10-25T06:13:04+00:00",
    "lastSuccess": "",
    "retained": false
   },
@@ -45,15 +45,15 @@
    "id": "kehot_kuntreisim",
    "name": "הוצאת קה״ת (קונטרסים)",
    "status": "ok",
-   "checked": "2026-10-25T06:08:15+00:00",
-   "lastSuccess": "2026-10-25T06:08:15+00:00",
+   "checked": "2026-10-25T06:13:04+00:00",
+   "lastSuccess": "2026-10-25T06:13:04+00:00",
    "retained": false
   },
   {
    "id": "chabadlibrarybooks",
    "name": "ספריית חב״ד ספרים",
    "status": "manual",
-   "checked": "2026-10-25T06:08:16+00:00",
+   "checked": "2026-10-25T06:13:04+00:00",
    "lastSuccess": "",
    "retained": false
   },
@@ -61,71 +61,71 @@
    "id": "maamarim_com",
    "name": "מאמרים — The Rebbe's Maamarim",
    "status": "ok",
-   "checked": "2026-10-25T06:08:16+00:00",
-   "lastSuccess": "2026-10-25T06:08:16+00:00",
+   "checked": "2026-10-25T06:13:04+00:00",
+   "lastSuccess": "2026-10-25T06:13:04+00:00",
    "retained": false
   },
   {
    "id": "chassidut_org",
    "name": "סיכום מאמרי הרבי",
    "status": "ok",
-   "checked": "2026-10-25T06:08:17+00:00",
-   "lastSuccess": "2026-10-25T06:08:17+00:00",
+   "checked": "2026-10-25T06:13:06+00:00",
+   "lastSuccess": "2026-10-25T06:13:06+00:00",
    "retained": false
   },
   {
    "id": "biurim",
    "name": "ביאורים במאמרי רבינו",
    "status": "ok",
-   "checked": "2026-10-25T06:08:18+00:00",
-   "lastSuccess": "2026-10-25T06:08:18+00:00",
+   "checked": "2026-10-25T06:13:07+00:00",
+   "lastSuccess": "2026-10-25T06:13:07+00:00",
    "retained": false
   },
   {
    "id": "hm_monsey",
    "name": "היכל מנחם מונסי",
    "status": "ok",
-   "checked": "2026-10-25T06:08:20+00:00",
-   "lastSuccess": "2026-10-25T06:08:20+00:00",
+   "checked": "2026-10-25T06:13:08+00:00",
+   "lastSuccess": "2026-10-25T06:13:08+00:00",
    "retained": false
   },
   {
    "id": "hiskashrus",
    "name": "התקשרות",
    "status": "ok",
-   "checked": "2026-10-25T06:08:22+00:00",
-   "lastSuccess": "2026-10-25T06:08:22+00:00",
+   "checked": "2026-10-25T06:13:10+00:00",
+   "lastSuccess": "2026-10-25T06:13:10+00:00",
    "retained": false
   },
   {
    "id": "lichyot_chassidus",
    "name": "לחיות חסידות — הרב אשר פרקש",
    "status": "ok",
-   "checked": "2026-10-25T06:08:24+00:00",
-   "lastSuccess": "2026-10-25T06:08:24+00:00",
+   "checked": "2026-10-25T06:13:12+00:00",
+   "lastSuccess": "2026-10-25T06:13:12+00:00",
    "retained": false
   },
   {
    "id": "chabadzoom",
    "name": "חב״ד זום",
    "status": "ok",
-   "checked": "2026-10-25T06:08:26+00:00",
-   "lastSuccess": "2026-10-25T06:08:26+00:00",
+   "checked": "2026-10-25T06:13:14+00:00",
+   "lastSuccess": "2026-10-25T06:13:14+00:00",
    "retained": false
   },
   {
    "id": "kovtzimdrive",
    "name": "KovtzimDrive",
    "status": "ok",
-   "checked": "2026-10-25T06:08:28+00:00",
-   "lastSuccess": "2026-10-25T06:08:28+00:00",
+   "checked": "2026-10-25T06:13:16+00:00",
+   "lastSuccess": "2026-10-25T06:13:16+00:00",
    "retained": false
   },
   {
    "id": "avita",
    "name": "אביטה",
    "status": "manual",
-   "checked": "2026-10-25T06:08:30+00:00",
+   "checked": "2026-10-25T06:13:18+00:00",
    "lastSuccess": "",
    "retained": false
   },
@@ -133,71 +133,71 @@
    "id": "plt",
    "name": "Project Likkutei Torah",
    "status": "ok",
-   "checked": "2026-10-25T06:08:30+00:00",
-   "lastSuccess": "2026-10-25T06:08:30+00:00",
+   "checked": "2026-10-25T06:13:18+00:00",
+   "lastSuccess": "2026-10-25T06:13:18+00:00",
    "retained": false
   },
   {
    "id": "dvarmalchus770",
    "name": "Dvar Malchus 770",
    "status": "ok",
-   "checked": "2026-10-25T06:08:32+00:00",
-   "lastSuccess": "2026-10-25T06:08:32+00:00",
+   "checked": "2026-10-25T06:13:20+00:00",
+   "lastSuccess": "2026-10-25T06:13:20+00:00",
    "retained": false
   },
   {
    "id": "soulwords",
    "name": "SoulWords",
    "status": "ok",
-   "checked": "2026-10-25T06:08:33+00:00",
-   "lastSuccess": "2026-10-25T06:08:33+00:00",
+   "checked": "2026-10-25T06:13:22+00:00",
+   "lastSuccess": "2026-10-25T06:13:22+00:00",
    "retained": false
   },
   {
    "id": "sie_weekly",
    "name": "SIE Weekly",
    "status": "ok",
-   "checked": "2026-10-25T06:08:35+00:00",
-   "lastSuccess": "2026-10-25T06:08:35+00:00",
+   "checked": "2026-10-25T06:13:23+00:00",
+   "lastSuccess": "2026-10-25T06:13:23+00:00",
    "retained": false
   },
   {
    "id": "pls",
    "name": "Project Likkutei Sichos",
    "status": "ok",
-   "checked": "2026-10-25T06:08:36+00:00",
-   "lastSuccess": "2026-10-25T06:08:36+00:00",
+   "checked": "2026-10-25T06:13:25+00:00",
+   "lastSuccess": "2026-10-25T06:13:25+00:00",
    "retained": false
   },
   {
    "id": "chayenu_ls",
    "name": "Chayenu — לקוטי שיחות",
    "status": "ok",
-   "checked": "2026-10-25T06:08:37+00:00",
-   "lastSuccess": "2026-10-25T06:08:37+00:00",
+   "checked": "2026-10-25T06:13:26+00:00",
+   "lastSuccess": "2026-10-25T06:13:26+00:00",
    "retained": false
   },
   {
    "id": "weekly_sicha",
    "name": "The Weekly Sicha",
    "status": "ok",
-   "checked": "2026-10-25T06:08:39+00:00",
-   "lastSuccess": "2026-10-25T06:08:39+00:00",
+   "checked": "2026-10-25T06:13:27+00:00",
+   "lastSuccess": "2026-10-25T06:13:27+00:00",
    "retained": false
   },
   {
    "id": "theyeshiva",
    "name": "TheYeshiva.net",
    "status": "ok",
-   "checked": "2026-10-25T06:08:40+00:00",
-   "lastSuccess": "2026-10-25T06:08:40+00:00",
+   "checked": "2026-10-25T06:13:29+00:00",
+   "lastSuccess": "2026-10-25T06:13:29+00:00",
    "retained": false
   },
   {
    "id": "chassidus_applied",
    "name": "Chassidus Applied",
    "status": "error",
-   "checked": "2026-10-25T06:08:43+00:00",
+   "checked": "2026-10-25T06:13:32+00:00",
    "lastSuccess": "2026-10-24T08:52:24+00:00",
    "retained": true
   },
@@ -205,71 +205,71 @@
    "id": "neirot",
    "name": "Neirot",
    "status": "ok",
-   "checked": "2026-10-25T06:08:44+00:00",
-   "lastSuccess": "2026-10-25T06:08:44+00:00",
+   "checked": "2026-10-25T06:13:32+00:00",
+   "lastSuccess": "2026-10-25T06:13:32+00:00",
    "retained": false
   },
   {
    "id": "chassidus_explained",
    "name": "Chassidus Explained",
    "status": "ok",
-   "checked": "2026-10-25T06:08:46+00:00",
-   "lastSuccess": "2026-10-25T06:08:46+00:00",
+   "checked": "2026-10-25T06:13:34+00:00",
+   "lastSuccess": "2026-10-25T06:13:34+00:00",
    "retained": false
   },
   {
    "id": "melukat",
    "name": "Project Melukat",
    "status": "ok",
-   "checked": "2026-10-25T06:08:48+00:00",
-   "lastSuccess": "2026-10-25T06:08:48+00:00",
+   "checked": "2026-10-25T06:13:35+00:00",
+   "lastSuccess": "2026-10-25T06:13:35+00:00",
    "retained": false
   },
   {
    "id": "daily_maamar",
    "name": "Daily Maamar",
    "status": "ok",
-   "checked": "2026-10-25T06:08:49+00:00",
-   "lastSuccess": "2026-10-25T06:08:49+00:00",
+   "checked": "2026-10-25T06:13:36+00:00",
+   "lastSuccess": "2026-10-25T06:13:36+00:00",
    "retained": false
   },
   {
    "id": "wellsprings",
    "name": "Wellsprings of Chassidus",
    "status": "ok",
-   "checked": "2026-10-25T06:08:50+00:00",
-   "lastSuccess": "2026-10-25T06:08:50+00:00",
+   "checked": "2026-10-25T06:13:37+00:00",
+   "lastSuccess": "2026-10-25T06:13:37+00:00",
    "retained": false
   },
   {
    "id": "daily_sicha",
    "name": "The Daily Sicha",
    "status": "ok",
-   "checked": "2026-10-25T06:08:51+00:00",
-   "lastSuccess": "2026-10-25T06:08:51+00:00",
+   "checked": "2026-10-25T06:13:38+00:00",
+   "lastSuccess": "2026-10-25T06:13:38+00:00",
    "retained": false
   },
   {
    "id": "learnchassidus",
    "name": "Learn Chassidus",
    "status": "ok",
-   "checked": "2026-10-25T06:08:57+00:00",
-   "lastSuccess": "2026-10-25T06:08:57+00:00",
+   "checked": "2026-10-25T06:13:43+00:00",
+   "lastSuccess": "2026-10-25T06:13:43+00:00",
    "retained": false
   },
   {
    "id": "simplychassidus",
    "name": "Simply Chassidus",
    "status": "ok",
-   "checked": "2026-10-25T06:08:58+00:00",
-   "lastSuccess": "2026-10-25T06:08:58+00:00",
+   "checked": "2026-10-25T06:13:44+00:00",
+   "lastSuccess": "2026-10-25T06:13:44+00:00",
    "retained": false
   },
   {
    "id": "alonei_chabad",
    "name": "עלוני חב״ד ישראל",
    "status": "browser",
-   "checked": "2026-10-25T06:08:59+00:00",
+   "checked": "2026-10-25T06:13:45+00:00",
    "lastSuccess": "",
    "retained": false
   },
@@ -277,7 +277,7 @@
    "id": "sichas_hashavua",
    "name": "שיחת השבוע",
    "status": "browser",
-   "checked": "2026-10-25T06:08:59+00:00",
+   "checked": "2026-10-25T06:13:45+00:00",
    "lastSuccess": "",
    "retained": false
   },
@@ -285,31 +285,31 @@
    "id": "lmaan_yishmeu",
    "name": "למען ישמעו",
    "status": "ok",
-   "checked": "2026-10-25T06:08:59+00:00",
-   "lastSuccess": "2026-10-25T06:08:59+00:00",
+   "checked": "2026-10-25T06:13:45+00:00",
+   "lastSuccess": "2026-10-25T06:13:45+00:00",
    "retained": false
   },
   {
    "id": "lchaim",
    "name": "L'Chaim Weekly",
    "status": "ok",
-   "checked": "2026-10-25T06:09:00+00:00",
-   "lastSuccess": "2026-10-25T06:09:00+00:00",
+   "checked": "2026-10-25T06:13:46+00:00",
+   "lastSuccess": "2026-10-25T06:13:46+00:00",
    "retained": false
   },
   {
    "id": "one_point",
    "name": "One Point",
    "status": "ok",
-   "checked": "2026-10-25T06:09:02+00:00",
-   "lastSuccess": "2026-10-25T06:09:02+00:00",
+   "checked": "2026-10-25T06:13:47+00:00",
+   "lastSuccess": "2026-10-25T06:13:47+00:00",
    "retained": false
   },
   {
    "id": "derher",
    "name": "Derher",
    "status": "browser",
-   "checked": "2026-10-25T06:09:03+00:00",
+   "checked": "2026-10-25T06:13:49+00:00",
    "lastSuccess": "",
    "retained": false
   },
@@ -317,7 +317,7 @@
    "id": "beitchabad",
    "name": "בית חב״ד",
    "status": "manual",
-   "checked": "2026-10-25T06:09:03+00:00",
+   "checked": "2026-10-25T06:13:49+00:00",
    "lastSuccess": "",
    "retained": false
   },
@@ -325,15 +325,15 @@
    "id": "dvarmalchus_org",
    "name": "dvarmalchus.org",
    "status": "ok",
-   "checked": "2026-10-25T06:09:03+00:00",
-   "lastSuccess": "2026-10-25T06:09:03+00:00",
+   "checked": "2026-10-25T06:13:49+00:00",
+   "lastSuccess": "2026-10-25T06:13:49+00:00",
    "retained": false
   },
   {
    "id": "maynotecha_inst",
    "name": "מכון מעיינותיך",
    "status": "manual",
-   "checked": "2026-10-25T06:09:05+00:00",
+   "checked": "2026-10-25T06:13:51+00:00",
    "lastSuccess": "",
    "retained": false
   },
@@ -341,23 +341,23 @@
    "id": "chabad_org_magazine",
    "name": "Chabad.org — Torah Texts (מגזין)",
    "status": "ok",
-   "checked": "2026-10-25T06:09:05+00:00",
-   "lastSuccess": "2026-10-25T06:09:05+00:00",
+   "checked": "2026-10-25T06:13:51+00:00",
+   "lastSuccess": "2026-10-25T06:13:51+00:00",
    "retained": false
   },
   {
    "id": "anash",
    "name": "Anash.org",
    "status": "ok",
-   "checked": "2026-10-25T06:09:07+00:00",
-   "lastSuccess": "2026-10-25T06:09:07+00:00",
+   "checked": "2026-10-25T06:13:52+00:00",
+   "lastSuccess": "2026-10-25T06:13:52+00:00",
    "retained": false
   },
   {
    "id": "chabadinfo",
    "name": "חב״ד אינפו",
    "status": "browser",
-   "checked": "2026-10-25T06:09:08+00:00",
+   "checked": "2026-10-25T06:13:53+00:00",
    "lastSuccess": "",
    "retained": false
   },
@@ -365,7 +365,7 @@
    "id": "hageula",
    "name": "hageula.com",
    "status": "manual",
-   "checked": "2026-10-25T06:09:08+00:00",
+   "checked": "2026-10-25T06:13:53+00:00",
    "lastSuccess": "",
    "retained": false
   },
@@ -373,16 +373,16 @@
    "id": "abc770",
    "name": "abc770",
    "status": "ok",
-   "checked": "2026-10-25T06:09:08+00:00",
-   "lastSuccess": "2026-10-25T06:09:08+00:00",
+   "checked": "2026-10-25T06:13:53+00:00",
+   "lastSuccess": "2026-10-25T06:13:53+00:00",
    "retained": false
   },
   {
    "id": "kehot",
    "name": "הוצאת קה״ת (חנות)",
    "status": "ok",
-   "checked": "2026-10-25T06:09:11+00:00",
-   "lastSuccess": "2026-10-25T06:09:11+00:00",
+   "checked": "2026-10-25T06:13:57+00:00",
+   "lastSuccess": "2026-10-25T06:13:57+00:00",
    "retained": false
   }
  ]
