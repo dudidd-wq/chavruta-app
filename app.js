@@ -497,7 +497,7 @@ function buildParshaSel() {
   const d = $("#psw"); if (!d || d.dataset.ready) return; d.dataset.ready = "1";
   const sync = () => {
     const cur = curParsha();
-    $("a[data-parsha]", d).forEach(a => { if (a.dataset.parsha === cur) a.setAttribute("aria-current", "page"); else a.removeAttribute("aria-current"); });
+    $$("a[data-parsha]", d).forEach(a => { if (a.dataset.parsha === cur) a.setAttribute("aria-current", "page"); else a.removeAttribute("aria-current"); });
     const l = $(".psw-l", d); if (l) l.replaceChildren(...(cur ? [h("span", { class: "psw-p" }, "פרשת "), cur] : ["הפרשיות"]));
     d.querySelector("summary")?.setAttribute("aria-label", "בחירת פרשה (כעת: " + (cur ? "פרשת " + cur : "הפרשיות") + ")");
     d.open = false;
@@ -521,14 +521,14 @@ function buildChrome() {
 }
 function updateChrome() {
   const cur = viewToNav(R.view);
-  $(".nav-i, .bn-i, .history-topics").forEach(a => { if (a.dataset.nav === cur) a.setAttribute("aria-current", "page"); else a.removeAttribute("aria-current"); });
+  $$(".nav-i, .bn-i, .history-topics").forEach(a => { if (a.dataset.nav === cur) a.setAttribute("aria-current", "page"); else a.removeAttribute("aria-current"); });
   updateModeUI();
   document.body.dataset.view = R.view || "";
   document.body.classList.toggle("has-modes", R.view === "biur" || R.view === "biurim" || (R.view === "parsha" && hasDocs(R.cur.seg[1])));
 }
 function updateModeUI() {
   document.body.dataset.mode = MODE;
-  $(".mode-btn").forEach(b => b.setAttribute("aria-checked", b.dataset.mode === MODE));
+  $$(".mode-btn").forEach(b => b.setAttribute("aria-checked", b.dataset.mode === MODE));
   document.body.dataset.sheet = isSheet() ? "1" : "0";
 }
 function isSheet() { return MODE === "read" ? innerWidth < 1000 : innerWidth < 900; }
@@ -4214,7 +4214,6 @@ function kParsha(main, K, p) {
   chvStackTables?.(main);
   window.scrollTo(0, 0);
 }
-
 
 
 /* חברותא · מדף ספרים. קורא את הקטלוג הקיים; אינו משנה מיפוי או מספור עמודים. */
