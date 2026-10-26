@@ -1459,3 +1459,17 @@ body.source-reader-open { overflow: hidden; }
 @media (max-width:600px) { .books-jump label { flex-wrap: wrap; flex: 1 1 100%; min-width: 0; } .books-jump input { min-width: 0; max-width: 100%; font-size: 16px; } }
 
 .books-mapping { color: var(--ink-2); font-size: .8rem; line-height: 1.5; }
+
+/* Shared learning portals keep existing reading preferences and RTL. */
+.learning-gates{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,14rem),1fr));gap:1rem}
+.learning-gate{display:block;border:1px solid var(--line);border-radius:.5rem;padding:1.2rem;color:inherit;background:var(--paper);text-decoration:none}
+.learning-gate:hover,.learning-gate:focus-visible{border-color:var(--accent);outline-offset:3px}
+.learning-gate h3{margin:0 0 .5rem}.learning-gate p{margin:0 0 .8rem}.learning-gate small{color:var(--muted)}
+.learning-section{margin-block:2rem}.learning-tags{display:flex;gap:.5rem;flex-wrap:wrap;margin-block:1rem}
+.learning-docs{list-style:none;padding:0;display:grid;gap:1rem}.learning-docs>li{border-block-end:1px solid var(--line);padding-block:.6rem 1rem}
+.learning-docs h3{margin:0 0 .5rem}.learning-docs p{margin:.25rem 0}
+.learning-search{display:block;box-sizing:border-box;width:100%;padding:.7rem;font:inherit;margin-block:1rem;background:var(--paper);color:var(--ink);border:1px solid var(--line);border-radius:.4rem}
+.learning-anchor-tree{padding-inline-start:1.3rem}.learning-anchor-tree li{margin-block:.4rem}.learning-anchor-tree summary{cursor:pointer}
+.learning p,.learning-home p{text-align:justify!important;text-justify:inter-word;text-align-last:start;hyphens:manual}
+@media(max-width:600px){.learning-gates{grid-template-columns:1fr}.learning-gate{padding:1rem}.learning .crumbs{flex-wrap:wrap}}
+@media print{.learning-gates{display:block}.learning-gate{break-inside:avoid;margin-block:.6rem}.learning-search{display:none}}

@@ -127,6 +127,7 @@ function loadChunk(name) {
     (D.waiting[name] = D.waiting[name] || []).push(accept);
     const newsVersion = document.querySelector('meta[name="chavruta-news-version"]')?.content || "news";
     const query = new URLSearchParams();
+    if (name === "learning") query.set("v", document.querySelector('meta[name="chavruta-learning-version"]')?.content || "learning");
     if (name === "new") query.set("v", newsVersion + "-" + Math.floor(Date.now() / 300000));
     if (name === "core" || name === "tree" || name === "book-catalog" || /^tree-(?:u[0-9]+|t)$/.test(name)) query.set("v", document.querySelector('meta[name="chavruta-tree-version"]')?.content || "tree");
     if (attempt) query.set("retry", String(attempt));
@@ -453,7 +454,8 @@ function pdfMenu() {
 
 /* ---------- סרגל עליון, מצבים ---------- */
 const NAVITEMS = [
-  { id: "home", icon: "i-read", label: "פרשיות", href: () => mkHash(["home"]) },
+  { id: "home", icon: "i-read", label: "ראשי", href: () => mkHash(["home"]) },
+  { id: "learn", icon: "i-list", label: "שערי לימוד", href: () => mkHash(["learn"]) },
   { id: "sources", icon: "i-list", label: "מקורות", href: () => mkHash(["sources"]) },
   { id: "tree", icon: "i-tree", label: "עץ הידע", href: () => mkHash(["tree"]) },
   { id: "topics", icon: "i-toc", label: "מפתח עניינים", href: () => mkHash(["topics"]) },
@@ -462,7 +464,7 @@ const NAVITEMS = [
   { id: "new", icon: "i-flag", label: "מה חדש", href: () => mkHash(["new"]) },
   { id: "search", icon: "i-search", label: "חיפוש", act: () => openPalette(), kbd: "/" },
 ];
-function viewToNav(v) { return { home: "home", biurim: "home", biur: "home", parsha: "home", sources: "sources", item: "sources", topics: "topics", books: "books", search: "search", new: "new", daily: "daily", tree: R.cur.seg[1] === "p" ? "home" : "tree", status: "", coverage: "", closure: "" }[v] ?? ""; }
+function viewToNav(v) { return { home: "home", learn: "learn", biurim: "home", biur: "home", parsha: "home", sources: "sources", item: "sources", topics: "topics", books: "books", search: "search", new: "new", daily: "daily", tree: R.cur.seg[1] === "p" ? "home" : "tree", status: "", coverage: "", closure: "" }[v] ?? ""; }
 function buildHistoryNavigation() {
   const host = $("#historynav"); if (!host || host.dataset.ready) return;
   host.dataset.ready = "1";
@@ -3830,6 +3832,7 @@ VIEWS.tree = async function (rest, q, ctx) {
 function treeHome(main, T, q) {
   treeHead(main, "עץ הידע", [], `קטלוג המיקום של תורת רבותינו נשיאינו, מהבעש״ט והמגיד ועד הרבי: ${T.nunits.toLocaleString("he")} יחידות (מאמרים, שיחות, אגרות, רשימות והתוועדויות) ו־${T.series.length} סדרות ספרים. לכל יחידה — ספר, כרך, עמוד ושנה, וקישור למקום שבו היא נמצאת ברשת. העץ נבנה מספריית חב״ד, ממפתחות הכרכים בהיברובוקס, מ־maamarim.com ומקונטרסי קה״ת; רשימת הסדרות והכרכים הושלמה מחב״דפדיה.`);
   main.append(h("p", { class: "card-note" }, `עדכון אחרון: ${T.built.split("-").reverse().join(".")}. סדרות שנמצאות ברשת רק כסריקה בהיברובוקס עדיין בתהליך מיפוי ברמת היחידה; ברמת הסדרה והכרכים הן מופיעות כאן במלואן.`));
+  main.append(h("p", { class: "card-note" }, h("a", { href: mkHash(["learn"]) }, "לימוד לפי תפילה, מאמרי חז״ל, מועדים וסוגיות ←")));
   // חיפוש בכותרות
   const inp = h("input", { type: "search", class: "tree-q", placeholder: "חיפוש ד״ה או כותרת בכל העץ…", value: q.get("q") || "", "aria-label": "חיפוש בעץ הידע" });
   const res = h("div", { class: "tree-res" });
@@ -4522,6 +4525,157 @@ async function booksBook(main, T, id, q, ctx, covers) {
   if (!ctx.keep) window.scrollTo(0, 0);
 }
 
+/* חברותא · שערי לימוד: רשומת ביאור אחת, עוגנים וקשרים בכמה הקשרים. */
+function learningNorm(value) {
+  return String(value || "").normalize("NFKD").replace(/[\u0591-\u05c7]/g, "").replace(/["'״׳]/g, "").replace(/\s+/g, " ").trim().toLowerCase();
+}
+function learningRecords(core, catalog) {
+  const assignments = new Map((catalog.assignments || []).map(a => [a.doc, a]));
+  const anchors = new Map((catalog.anchors || []).map(a => [a.id, a]));
+  const records = new Map();
+  for (const doc of core.docs || []) {
+    if (doc.kind === "dorot" || records.has(doc.id)) continue;
+    const assignment = assignments.get(doc.id);
+    const home = assignment?.home || doc.gate || "torah";
+    const linked = (assignment?.anchors || []).map(id => anchors.get(id)).filter(Boolean);
+    records.set(doc.id, { doc, home, anchors: linked, gates: [...new Set([home, ...linked.map(a => a.gate)])] });
+  }
+  return [...records.values()];
+}
+function learningMaps(places, gate) {
+  return (places.maps || []).filter(map => (gate.maps || []).some(s => s.kind === map.k && (!s.name || s.name === map.n)));
+}
+function learningSourceKey(row) {
+  return row[8] || JSON.stringify([row[0], row[2], row[3], row[5], row[7]]);
+}
+function learningSources(maps) {
+  const rows = new Map();
+  for (const map of maps) for (const row of map.rows || []) {
+    const key = learningSourceKey(row);
+    if (!rows.has(key)) rows.set(key, row);
+  }
+  return [...rows.values()];
+}
+function learningGateCards(catalog) {
+  const records = learningRecords(S.core, catalog);
+  return h("section", { class: "h-sec learning-home", "aria-labelledby": "learning-title" },
+    h("header", { class: "h-sec-h" }, h("h2", { id: "learning-title" }, "שערי הלימוד"),
+      h("p", null, "לפי פרשה, מועד, תפילה, דברי חז״ל או סוגיה. אותו ביאור יכול להיפתח מכמה שערים.")),
+    h("div", { class: "learning-gates" }, catalog.gates.map(gate => {
+      const count = records.filter(r => r.gates.includes(gate.id)).length;
+      return h("a", { class: "learning-gate", href: mkHash(["learn", gate.id]) },
+        h("h3", null, gate.title), h("p", null, gate.description),
+        h("small", null, count ? fmt(count) + " ביאורים שפורסמו" : "מקורות ללימוד · ביאורים יתווספו לאחר בקרה"));
+    })));
+}
+function learningCommentaryList(records, activeAnchor) {
+  if (!records.length) return h("p", { class: "empty" }, "עדיין אין כאן ביאורים שפורסמו. אפשר ללמוד מן המקורות שבהמשך.");
+  return h("ul", { class: "learning-docs" }, records.map(record => {
+    const doc = record.doc, links = record.anchors.filter(a => a.id !== activeAnchor);
+    return h("li", null,
+      h("h3", null, h("a", { href: mkHash(["biur", doc.id]) }, doc.title)),
+      doc.p ? h("p", { class: "muted" }, "פורסם בפרשת " + doc.p) : null,
+      links.length ? h("div", { class: "learning-tags" }, links.map(a => h("a", { class: "fchip", href: mkHash(["learn", a.gate, a.id]) }, a.title))) : null);
+  }));
+}
+function learningAnchorTree(anchors) {
+  const root = new Map();
+  for (const anchor of anchors) {
+    let branch = root;
+    for (const label of anchor.path.slice(0, -1)) {
+      if (!branch.has(label)) branch.set(label, { children: new Map(), anchors: [] });
+      branch = branch.get(label).children;
+    }
+    const title = anchor.path[anchor.path.length - 1];
+    if (!branch.has(title)) branch.set(title, { children: new Map(), anchors: [] });
+    branch.get(title).anchors.push(anchor);
+  }
+  const draw = branch => h("ul", { class: "learning-anchor-tree" }, [...branch].map(([label, value]) =>
+    h("li", null, value.children.size ? h("details", { open: true }, h("summary", null, label), draw(value.children)) :
+      value.anchors.map(a => h("a", { href: mkHash(["learn", a.gate, a.id]) }, a.title)))));
+  return draw(root);
+}
+VIEWS.learn = async function(rest, q, ctx) {
+  Aside.detach?.();
+  const main = $("#view"); main.className = "main learning"; main.textContent = "";
+  let catalog;
+  try { catalog = await loadChunk("learning"); }
+  catch (error) { if (ctx.alive()) main.append(h("div", { class: "empty" }, "לא ניתן לטעון את שערי הלימוד. ", h("button", { class: "btn", onclick: () => route() }, "ניסיון נוסף"))); return; }
+  if (!ctx.alive()) return;
+  const gateId = rest[0], anchorId = rest[1], gate = catalog.gates.find(g => g.id === gateId);
+  if (!gateId) {
+    document.title = "שערי הלימוד · חברותא";
+    main.append(h("h1", { class: "page-title" }, "שערי הלימוד"), learningGateCards(catalog),
+      h("p", { class: "muted" }, fmt(learningRecords(S.core, catalog).length) + " ביאורים ייחודיים. ביאור המשויך לכמה שערים נספר פעם אחת בסך הכול."),
+      h("p", null, h("a", { href: mkHash(["topics"]) }, "מפתח הנושאים המשותף לכל השערים ←")));
+    return;
+  }
+  const anchor = anchorId && catalog.anchors.find(a => a.id === anchorId && a.gate === gateId);
+  if (!gate || (anchorId && !anchor)) {
+    main.append(h("div", { class: "empty" }, "שער הלימוד לא נמצא. ", h("a", { href: mkHash(["learn"]) }, "לכל השערים"))); return;
+  }
+  document.title = (anchor?.title || gate.title) + " · חברותא";
+  main.append(h("nav", { class: "crumbs", "aria-label": "מיקום" },
+    h("a", { href: mkHash(["home"]) }, "חברותא"), h("span", { "aria-hidden": "true" }, "›"),
+    h("a", { href: mkHash(["learn"]) }, "שערי הלימוד"), h("span", { "aria-hidden": "true" }, "›"),
+    anchor ? h("a", { href: mkHash(["learn", gateId]) }, gate.title) : h("span", { "aria-current": "page" }, gate.title),
+    anchor ? [h("span", { "aria-hidden": "true" }, "›"), h("span", { "aria-current": "page" }, anchor.title)] : null),
+    h("h1", { class: "page-title" }, anchor?.title || gate.title),
+    h("p", { class: "lede" }, anchor ? anchor.path.join(" · ") : gate.description));
+  const allRecords = learningRecords(S.core, catalog);
+  const records = allRecords.filter(r => r.gates.includes(gateId) && (!anchor || r.anchors.some(a => a.id === anchor.id)));
+  main.append(h("section", { class: "learning-section", "aria-label": "ביאורים שפורסמו" },
+    h("h2", null, "ביאורים שפורסמו · " + fmt(records.length)), learningCommentaryList(records, anchorId)));
+  if (anchor) {
+    const evidence = anchor.evidence, doc = getDoc(evidence.doc);
+    if (doc) main.append(h("p", null, h("a", { href: mkHash(["biur", doc.id, evidence.part]) }, "למהלך המבואר במקומו ←")));
+    main.append(h("p", null, h("a", { href: mkHash(["learn", gateId]) }, "לכל המקורות והביאורים בשער ←")));
+    return;
+  }
+  const anchors = catalog.anchors.filter(a => a.gate === gateId).sort((a, b) => (a.order || 0) - (b.order || 0));
+  if (anchors.length) main.append(h("section", { class: "learning-section" }, h("h2", null, "לפי עניין"), learningAnchorTree(anchors)));
+  if (gateId === "torah") main.append(h("section", { class: "learning-section" }, h("h2", null, "לפי פרשה"),
+    h("div", { class: "learning-tags" }, (S.core.parshiyot || []).map(p => h("a", { class: "fchip", href: parshaHrefOf(p.n) }, p.he)))));
+  const sourceSection = h("section", { class: "learning-section", "aria-label": "מקורות ללימוד" }, h("h2", null, "מקורות ללימוד"));
+  main.append(sourceSection);
+  let places;
+  try { places = await loadChunk("places"); }
+  catch (error) { if (ctx.alive()) sourceSection.append(h("p", { class: "empty" }, "לא ניתן לטעון את המקורות. ", h("button", { class: "btn", onclick: () => route({keep: true}) }, "ניסיון נוסף"))); return; }
+  if (!ctx.alive()) return;
+  const maps = learningMaps(places, gate), sources = learningSources(maps);
+  sourceSection.append(h("p", { class: "muted" }, fmt(sources.length) + " פריטי מקור במיפוי הקיים. פריטי מקור נספרים בנפרד מביאורים."),
+    h("p", { class: "muted" }, gateId === "prayer" || gateId === "chazal" ? "חלוקה לקטעי תפילה ולמראי מקום מדויקים מתווספת לאחר בדיקת המקורות." : "השיוך במפות המקורות עשוי להתבסס על זמן אמירה או כותרת; הוא אינו קביעה שכל פריט מבאר את הנושא במישרין."));
+  if (maps.length > 1) sourceSection.append(h("div", { class: "learning-tags" }, maps.map(map =>
+    h("a", { class: "fchip", href: mkHash(["tree", "m", map.k, map.n]) }, map.n, h("small", null, fmt(learningSources([map]).length))))));
+  const input = h("input", { type: "search", class: "learning-search", value: q.get("q") || "", placeholder: "חיפוש בכותרת, בספר או במחבר…", "aria-label": "חיפוש במקורות של " + gate.title });
+  const output = h("div", { "aria-live": "polite" });
+  let limit = 40;
+  const draw = () => {
+    const query = learningNorm(input.value);
+    const rows = sources.filter(row => learningNorm([row[3], row[2], places.rebbeim[row[0]], row[4], row[5]].join(" ")).includes(query));
+    const params = query ? { q: input.value.trim() } : {};
+    quietHash(mkHash(["learn", gateId], params));
+    output.replaceChildren(h("p", { class: "muted" }, fmt(rows.length) + " פריטי מקור" + (query ? " בתוצאות החיפוש" : "")));
+    if (!rows.length) { output.append(h("p", { class: "empty" }, "לא נמצאו מקורות בסינון הזה.")); return; }
+    const body = h("tbody");
+    for (const row of rows.slice(0, limit)) {
+      const [author, genre, book, title, year, page, occasion, url] = row;
+      body.append(h("tr", null,
+        h("td", null, url ? treeSourceLink(treeT(title), url, {author: places.rebbeim[author], book, page}) : treeT(title)),
+        h("td", null, places.rebbeim[author] || "לא שויך"), h("td", null, book),
+        h("td", null, page || ""), h("td", null, year || "")));
+    }
+    output.append(h("div", { class: "tbl-wrap" }, h("table", { class: "tree-tbl" },
+      h("thead", null, h("tr", null, ["מאמר / כותרת", "מחבר", "ספר", "עמוד", "שנה"].map(label => h("th", {scope:"col"}, label)))), body)));
+    if (rows.length > limit) output.append(h("button", { type: "button", class: "btn", onclick: () => {limit += 40; draw();} }, "הצג מקורות נוספים"));
+    chvStackTables?.(output);
+  };
+  input.addEventListener("input", () => {limit = 40; draw();});
+  sourceSection.append(input, output); draw();
+  main.append(h("p", null, h("a", { href: mkHash(["topics"]) }, "למפתח הנושאים המשותף ←")));
+  if (!ctx.keep) window.scrollTo(0, 0);
+};
+
 /* חברותא · שער האתר (#/home): מה זה חברותא, הפרשיות (כל פרשה — כרטיס), פרשת השבוע, הלימוד היומי, מה חדש, עץ הידע, ואיך לומדים כאן.
    וגם רכיבים משותפים לעמודי הפרשה (בראשית — reader.js, שאר הפרשיות — tree.js): כותרת הפרשה והמעבר לפרשה הקודמת/הבאה. */
 
@@ -4594,7 +4748,9 @@ VIEWS.home = async function (rest, q, ctx) {
   const site = S.core.site || {}, ps = S.core.parshiyot || [];
   const today = new Date(), wk = weekParsha(today), wks = weekParshas(today), hd = hebDate(today);
   const H = docsOf(S.home);          // פרשת הבית — בלי תלות בפרשה שנבחרה לאחרונה
-  const nBiurim = H.books.length + ps.reduce((a, p) => a + (p.home ? 0 : ((site.chains || {})[p.n] || []).length), 0);
+  const nBiurim = new Set((S.core.docs || []).filter(d => d.kind !== "dorot").map(d => d.id)).size;
+  const learning = await loadChunk("learning").catch(() => null);
+  if (!ctx.alive()) return;
   const nSrc = H.nodes.length + Object.values(site.sources || {}).reduce((a, b) => a + b, 0);
 
   // שער
@@ -4603,9 +4759,9 @@ VIEWS.home = async function (rest, q, ctx) {
     h("p", { class: "h-bsd", "aria-hidden": "true" }, "בס״ד"),
     h("p", { class: "h-kicker" }, "מערכת לימוד וניתוח של מאמרי חסידות"),
     h("h1", { class: "h-title", id: "h-title" }, "חברותא"),
-    h("p", { class: "h-sub" }, "דברי רבותינו נשיאינו על פרשיות התורה — פסוק אחר פסוק, דור אחר דור"),
+    h("p", { class: "h-sub" }, "מאמרי חסידות — פרשיות, מועדים, תפילה ומאמרי חז״ל"),
     h("div", { class: "h-rule", "aria-hidden": "true" }, h("i"), h("span", null, "❖"), h("i")),
-    h("p", { class: "h-purpose" }, "חברותא מלווה את הלומד בדברי שבעת רבותינו נשיאינו על כל פרשה: מה אמר כל רבי על כל פסוק, איך כל דור בנה על קודמו, ומה התחדש בו. כל ציטוט מקושר אל מקורו, ואפשר לעבור מן המקור אל הביאור ובחזרה בלחיצה."),
+    h("p", { class: "h-purpose" }, "חברותא מלווה את הלומד במאמרי החסידות: ביאורים רציפים, מקורות ושרשראות דורות, לפי פרשה, מועד, תפילה או סוגיה. הביאורים שפורסמו והמקורות ללימוד מוצגים בנפרד, וכל ציטוט מקושר אל מקורו."),
     h("form", { class: "h-search", role: "search", onsubmit: e => { e.preventDefault(); const v = sin.value.trim(); go(mkHash(["search"], v ? { q: v } : {})); } },
       icon("i-search"), sin, h("button", { class: "btn primary", type: "submit" }, "חיפוש")),
     h("ul", { class: "h-stats" },
@@ -4676,7 +4832,7 @@ VIEWS.home = async function (rest, q, ctx) {
       research: "שלשלת הדורות, מטריצת פסוק × דור, ומפת המקורות על ציר הזמן.",
     }[m.id]), h("kbd", { title: "קיצור מקלדת" }, m.n)))));
 
-  main.append(hero, readingSetupInvite(), studyShelf(), parshiyot, trio, how);
+  main.append(hero, readingSetupInvite(), studyShelf(), ...(learning ? [learningGateCards(learning)] : []), parshiyot, trio, how);
   if (!ctx.keep) window.scrollTo(0, 0);
 };
 
