@@ -1,0 +1,1 @@
+window.__D("tree-u32",{"s":57386,"u":[[772,1,"כי ידעתיו (תרט״ז)","וירא","פט, א","תרט״ז","וירא","","https://hebrewbooks.org/pdfpager.aspx?req=31650&pgnum=187"],[772,1,"כי ידעתיו וגו׳","וירא","צו, א","","וירא","","https://hebrewbooks.org/pdfpager.aspx?req=31650&pgnum=201"]]});

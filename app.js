@@ -128,6 +128,7 @@ function loadChunk(name) {
     const newsVersion = document.querySelector('meta[name="chavruta-news-version"]')?.content || "news";
     const query = new URLSearchParams();
     if (name === "new") query.set("v", newsVersion + "-" + Math.floor(Date.now() / 300000));
+    if (name === "tree" || name === "book-catalog" || /^tree-(?:u[0-9]+|t)$/.test(name)) query.set("v", document.querySelector('meta[name="chavruta-tree-version"]')?.content || "tree");
     if (attempt) query.set("retry", String(attempt));
     s.src = chunkFile(name) + (query.size ? "?" + query : ""); s.async = true;
     s.onerror = fail;
@@ -3758,6 +3759,20 @@ VIEWS.daily = async function (rest, q, ctx) {
   if (!ctx.keep) window.scrollTo(0, 0);
 };
 
+function treeNativeContents(T, b) {
+  const native = T.nativeBooks?.[String(b)], book = T.books[b];
+  if (!native || !book) return null;
+  const parts = native.parts.map(part => h("details", { class: "books-native-part" },
+    h("summary", null, part.title + " · " + part.units.length + " יחידות"),
+    h("ol", { class: "books-contents" }, ...part.units.map(([title, url, page]) => h("li", null,
+      treeSourceLink(title, url, { author: T.rebbeim[book[0]], book: book[1], page }),
+      page ? h("small", { class: "muted" }, "ע׳ " + page) : null)))));
+  return h("section", { class: "books-native", "aria-label": "סדר הספר במקור" },
+    h("h2", null, "לימוד לפי סדר הספר"),
+    h("p", { class: "muted" }, native.count + " יחידות לפי סדר ספריית חב״ד. מהדורות דפוס עשויות להיות שונות."),
+    ...parts);
+}
+
 /* חברותא · עץ הידע: איפה נמצאים כל המאמרים, השיחות, האגרות והרשימות של רבותינו נשיאינו (מהבעש״ט ועד הרבי).
    רבנים → סדרות (הרשם, עם הכרכים ותוכנם) → ספרים → יחידות. וגם: מיפוי הפרשות הקרובות. */
 const TREE_GEN = [0, 0, 1, 2, 3, 4, 5, 6, 7];
@@ -3933,6 +3948,7 @@ async function treeBook(main, T, b, q, ctx) {
     if (shown.length < ids.length) box.append(h("button", { class: "btn", onclick: () => { page++; draw(); } }, "הצג עוד"));
   };
   inp.addEventListener("input", () => { page = 0; quietHash(mkHash(["tree", "b", b], inp.value ? { f: inp.value } : {})); draw(); });
+  const native = treeNativeContents(T, b); if (native) main.append(native);
   main.append(h("div", { class: "tree-search" }, inp), box);
   draw();
   window.scrollTo(0, 0);
@@ -4452,6 +4468,7 @@ async function booksBook(main, T, id, q, ctx, covers) {
   catch (_) { if (ctx.alive()) content.replaceChildren(h("p", null, "תוכן הספר לא נטען."), h("button", { class: "btn", type: "button", onclick: () => route() }, "ניסיון נוסף")); return; }
   if (!ctx.alive()) return; content.replaceChildren();
   content.append(h("p", { class: "books-note books-mapping" }, meta.ids.length ? meta.ids.length.toLocaleString("he") + " יחידות מקוטלגות · רישום יחידות אינו מעיד שהספר מופה במלואו." : "הספר רשום בקטלוג; תוכן העניינים טרם מופה."));
+  if (entry.unitBooks.length === 1) { const native = treeNativeContents(T, entry.unitBooks[0]); if (native) content.append(native); }
   if (entry.series != null) {
     const series = T.series[entry.series];
     if (series.cl) content.append(treeSourceLink("פתיחת הסדרה בספריית חב״ד", "cl:" + series.cl, { title: series.n, author: T.rebbeim[r], book: series.n }));

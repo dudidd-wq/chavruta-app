@@ -1,0 +1,1 @@
+window.__D("tree-u30",{"s":57384,"u":[[770,1,"ויאמר ה׳ אל אברם לך לך","תרמ״ב","י","תרמ\"ב","לך לך","","https://media.col.org.il/files/uploads/original/2019/05/5ce12148ed246_1558257992.pdf#page=22"]]});
