@@ -1,1 +1,1 @@
-window.__D("tree-u28",{"s":57382,"u":[[768,1,"ואעשך לגוי גדול [הנחה]","תרל״ה › הנחות","תקג","תרל\"ו","לך לך","","https://media.col.org.il/files/uploads/original/2019/03/5ca05af1e18e1_1554012913.pdf#page=223"]]});
+window.__D("tree-u28",{"s":57449,"u":[[768,1,"ואעשך לגוי גדול [הנחה]","תרל״ה › הנחות","תקג","תרל\"ו","לך לך","","https://media.col.org.il/files/uploads/original/2019/03/5ca05af1e18e1_1554012913.pdf#page=223"]]});
