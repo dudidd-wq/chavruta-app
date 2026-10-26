@@ -128,7 +128,7 @@ function loadChunk(name) {
     const newsVersion = document.querySelector('meta[name="chavruta-news-version"]')?.content || "news";
     const query = new URLSearchParams();
     if (name === "new") query.set("v", newsVersion + "-" + Math.floor(Date.now() / 300000));
-    if (name === "tree" || name === "book-catalog" || /^tree-(?:u[0-9]+|t)$/.test(name)) query.set("v", document.querySelector('meta[name="chavruta-tree-version"]')?.content || "tree");
+    if (name === "core" || name === "tree" || name === "book-catalog" || /^tree-(?:u[0-9]+|t)$/.test(name)) query.set("v", document.querySelector('meta[name="chavruta-tree-version"]')?.content || "tree");
     if (attempt) query.set("retry", String(attempt));
     s.src = chunkFile(name) + (query.size ? "?" + query : ""); s.async = true;
     s.onerror = fail;
