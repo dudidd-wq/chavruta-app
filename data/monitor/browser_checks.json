@@ -1,342 +1,352 @@
 {
- "lahak": {
-  "checked_at": "2026-10-25T06:07:20+00:00",
-  "items": [
-   {
-    "id": "7562618",
-    "title": "מאמר ד\"ה וה' פקד את שרה, ה'תשמ\"ג",
-    "issued_for": "י\"ל לש\"פ וירא, כ\"ף מרחשון, ה'תשפ\"ז",
-    "url": "https://www.lahak.org/templates/lahak/article_cdo/aid/7562618/jewish/page.htm",
-    "pdf": "https://w2.chabad.org/media/pdf/1391/MQgO13916491.pdf",
-    "genre": "הנחה",
-    "mugah": "בלתי מוגה",
-    "sections": [
-     "primary",
-     "whatsnew"
+  "lahak": {
+    "checked_at": "2026-10-26T06:46:28+00:00",
+    "items": [
+      {
+        "id": "7562618",
+        "title": "מאמר ד\"ה וה' פקד את שרה, ה'תשמ\"ג",
+        "issued_for": "י\"ל לש\"פ וירא, כ\"ף מרחשון, ה'תשפ\"ז",
+        "url": "https://www.lahak.org/templates/lahak/article_cdo/aid/7562618/jewish/page.htm",
+        "pdf": "https://w2.chabad.org/media/pdf/1391/MQgO13916491.pdf",
+        "genre": "הנחה",
+        "mugah": "בלתי מוגה",
+        "sections": [
+          "primary",
+          "whatsnew"
+        ],
+        "first_seen": "2026-10-25T06:05:38+00:00",
+        "new": true
+      },
+      {
+        "id": "7504924",
+        "title": "מאמר ד\"ה לך לך גו', ה'תשמ\"ב",
+        "issued_for": "יוצא לאור לש\"פ לך לך, י\"ג מרחשון, ה'תשפ\"ז",
+        "url": "https://www.lahak.org/templates/lahak/article_cdo/aid/7504924/jewish/page.htm",
+        "pdf": "https://www.lahak.org/media/pdf/1389/yfmk13895277.pdf",
+        "genre": "הנחה",
+        "mugah": "לבדוק בקונטרס",
+        "sections": [
+          "primary",
+          "whatsnew"
+        ],
+        "new": true
+      },
+      {
+        "id": "7504922",
+        "title": "מאמר ד\"ה אלה תולדות נח, ה'תשמ\"ב",
+        "issued_for": "יוצא לאור לש\"פ נח, ו' מרחשון, ה'תשפ\"ז",
+        "url": "https://www.lahak.org/templates/lahak/article_cdo/aid/7504922/jewish/page.htm",
+        "pdf": "https://www.lahak.org/media/pdf/1389/XAdt13895274.pdf",
+        "genre": "הנחה",
+        "mugah": "לבדוק בקונטרס",
+        "sections": [
+          "primary",
+          "whatsnew"
+        ],
+        "new": false
+      },
+      {
+        "id": "7504942",
+        "title": "מאמר ד\"ה בראשית ברא, ה'תשמ\"ב",
+        "issued_for": "יוצא לאור לש\"פ בראשית, מבה\"ח וער\"ח מרחשון, ה'תשפ\"ז",
+        "url": "https://www.lahak.org/templates/lahak/article_cdo/aid/7504942/jewish/page.htm",
+        "pdf": "https://www.lahak.org/media/pdf/1385/BhWQ13853691.pdf",
+        "genre": "הנחה",
+        "mugah": "לבדוק בקונטרס",
+        "sections": [
+          "primary",
+          "whatsnew"
+        ],
+        "new": false
+      },
+      {
+        "id": "7504920",
+        "title": "חלק שביעי מהתוועדות יום שמחת תורה, ה'תשל\"ז",
+        "issued_for": "יוצא לאור לשמיני עצרת ושמחת תורה. ה'תשפ\"ז",
+        "url": "https://www.lahak.org/templates/lahak/article_cdo/aid/7504920/jewish/page.htm",
+        "pdf": "https://www.lahak.org/media/pdf/1385/cCdm13853689.pdf",
+        "genre": "הנחה",
+        "mugah": "לבדוק בקונטרס",
+        "sections": [
+          "primary",
+          "whatsnew"
+        ],
+        "new": false
+      }
     ],
-    "first_seen": "2026-10-25T06:05:38+00:00",
-    "new": true
-   },
-   {
-    "id": "7504924",
-    "title": "מאמר ד\"ה לך לך גו', ה'תשמ\"ב",
-    "issued_for": "יוצא לאור לש\"פ לך לך, י\"ג מרחשון, ה'תשפ\"ז",
-    "url": "https://www.lahak.org/templates/lahak/article_cdo/aid/7504924/jewish/page.htm",
-    "pdf": "https://www.lahak.org/media/pdf/1389/yfmk13895277.pdf",
-    "genre": "הנחה",
-    "mugah": "לבדוק בקונטרס",
-    "sections": [
-     "primary",
-     "whatsnew"
+    "note": "עמוד הבית נטען, ללא קונטרס חדש נוסף. טיוטת וה׳ פקד את שרה מאתמול אומתה חזותית מול שער, פתח דבר ופתיחת PDF בן 12 עמודים ואושרה. תשמ״ג היא שנת האמירה, ולא תאריך הפרסום."
+  },
+  "alonei_chabad": {
+    "checked_at": "2026-10-26T06:46:28+00:00",
+    "items": [
+      {
+        "id": "ZnQ5MHplYWZo",
+        "title": "שיחת השבוע · בראשית - 2075 E",
+        "url": "https://player.flipsnack.com/?hash=QkU4RjZCRjU2OUIrZnQ5MHplYWZo",
+        "lang": "he",
+        "genre": "גיליון",
+        "sections": [
+          "whatsnew"
+        ],
+        "new": false,
+        "date": "2026-10-12"
+      },
+      {
+        "id": "ejB5YXBtYQ==",
+        "title": "פרשה · בראשית - 310 R",
+        "url": "https://player.flipsnack.com/?hash=QkU4RjZCRjU2OUIrY21hejB5YXBtYQ==",
+        "lang": "he",
+        "genre": "גיליון",
+        "sections": [
+          "whatsnew"
+        ],
+        "new": false,
+        "date": "2026-10-12"
+      },
+      {
+        "id": "ZnUxdDZyaA==",
+        "title": "התקשרות · בראשית - 1670 R",
+        "url": "https://player.flipsnack.com/?hash=QkU4RjZCRjU2OUIrdnRwZnUxdDZyaA==",
+        "lang": "he",
+        "genre": "גיליון",
+        "sections": [
+          "whatsnew"
+        ],
+        "new": false,
+        "date": "2026-10-12"
+      },
+      {
+        "id": "ZnRucXp5MGx1",
+        "title": "Living Jewish · Bereshit - 5787",
+        "url": "https://player.flipsnack.com/?hash=QkU4RjZCRjU2OUIrZnRucXp5MGx1",
+        "lang": "en",
+        "genre": "גיליון",
+        "sections": [
+          "whatsnew"
+        ],
+        "new": false,
+        "date": "2026-10-12"
+      },
+      {
+        "id": "ZmRjM3dpOXBv",
+        "title": "ВОСХОЖДЕНИЕ · Jews Gazette 1876 IS",
+        "url": "https://player.flipsnack.com/?hash=QkU4RjZCRjU2OUIrZmRjM3dpOXBv",
+        "lang": "ru",
+        "genre": "גיליון",
+        "sections": [
+          "whatsnew"
+        ],
+        "new": false,
+        "date": "2026-10-12"
+      },
+      {
+        "id": "dHdlYXBtYQ==",
+        "title": "La Paracha · 315 - בראשית",
+        "url": "https://player.flipsnack.com/?hash=QkU4RjZCRjU2OUIrZG5xdHdlYXBtYQ==",
+        "lang": "fr",
+        "genre": "גיליון",
+        "sections": [
+          "whatsnew"
+        ],
+        "new": false,
+        "date": "2026-10-12"
+      }
     ],
-    "new": true
-   },
-   {
-    "id": "7504922",
-    "title": "מאמר ד\"ה אלה תולדות נח, ה'תשמ\"ב",
-    "issued_for": "יוצא לאור לש\"פ נח, ו' מרחשון, ה'תשפ\"ז",
-    "url": "https://www.lahak.org/templates/lahak/article_cdo/aid/7504922/jewish/page.htm",
-    "pdf": "https://www.lahak.org/media/pdf/1389/XAdt13895274.pdf",
-    "genre": "הנחה",
-    "mugah": "לבדוק בקונטרס",
-    "sections": [
-     "primary",
-     "whatsnew"
+    "note": "עמוד הקריאה נטען; ששת קישורי Flipsnack נותרו אותם קישורים. תוכן הגיליונות במסגרות לא אומת, ולכן הכותרות והתאריכים הקיימים נשמרו."
+  },
+  "sichas_hashavua": {
+    "items": [
+      {
+        "title": "שיחת השבוע 2077",
+        "url": "https://www.chabad.org.il/Magazines/Articles.asp?CategoryID=5171",
+        "lang": "he",
+        "first_seen": "2026-10-21T05:56:28+00:00",
+        "issued_for": "ערב שבת קודש פרשת לך לך, י\"ב במרחשון תשפ\"ז (23.10.2026)"
+      }
     ],
-    "new": false
-   },
-   {
-    "id": "7504942",
-    "title": "מאמר ד\"ה בראשית ברא, ה'תשמ\"ב",
-    "issued_for": "יוצא לאור לש\"פ בראשית, מבה\"ח וער\"ח מרחשון, ה'תשפ\"ז",
-    "url": "https://www.lahak.org/templates/lahak/article_cdo/aid/7504942/jewish/page.htm",
-    "pdf": "https://www.lahak.org/media/pdf/1385/BhWQ13853691.pdf",
-    "genre": "הנחה",
-    "mugah": "לבדוק בקונטרס",
-    "sections": [
-     "primary",
-     "whatsnew"
+    "checked_at": "2026-10-26T06:46:28+00:00",
+    "note": "עמוד שיחת השבוע נטען; הגיליון האחרון נותר 2077 לפרשת לך לך, המיועד ל־23.10.2026. מועד הגילוי הראשון נשמר."
+  },
+  "derher": {
+    "items": [],
+    "checked_at": "2026-10-26T06:46:28+00:00",
+    "note": "ארכיון הגיליונות נטען; קישורי השנים מגיעים עד תשפ״ו. לא אומת גיליון חדש לתשפ״ז."
+  },
+  "avita": {
+    "items": [],
+    "checked_at": "2026-10-26T06:46:28+00:00",
+    "note": "עמוד המקור נטען; הכתבה הקיימת היא מ־15.02.2021, ולא זוהה בה פרסום חדש."
+  },
+  "beitchabad": {
+    "items": [],
+    "checked_at": "2026-10-26T06:46:28+00:00",
+    "note": "עמוד הבית נטען; לא זוהה פרסום כתוב חדש עם ייחוס מאומת למאמר, שיחה או מכתב מסוים. וידאו הוחרג."
+  },
+  "maynotecha_inst": {
+    "items": [],
+    "checked_at": "2026-10-26T06:46:28+00:00",
+    "note": "עמוד האודות נטען; התיאור הכללי אינו מזהה פרסום חדש מתוארך."
+  },
+  "hageula": {
+    "items": [
+      {
+        "title": "להורדה: הקובץ השבועי של \"דברי משיח\"",
+        "url": "https://hageula.com/news/press/28199.htm",
+        "lang": "he",
+        "first_seen": "2026-10-21T05:56:28+00:00",
+        "published_at": "2026-10-19",
+        "publisher_timestamp": "2026-10-19T23:45:00+03:00"
+      },
+      {
+        "title": "ויהי בארבעים שנה: עלי ההגהה דשיחת ש\"פ נח תשמ\"ז",
+        "url": "https://hageula.com/news/press/28195.htm",
+        "lang": "he",
+        "first_seen": "2026-10-21T05:56:28+00:00",
+        "published_at": "2026-10-19",
+        "publisher_timestamp": "2026-10-19T02:47:00+03:00"
+      },
+      {
+        "title": "אין ביאור והסבר כלל על עיכוב הגאולה",
+        "url": "https://hageula.com/sichat_hageula/royal_wine/28182.htm",
+        "lang": "he",
+        "first_seen": "2026-10-21T05:56:28+00:00",
+        "published_at": "2026-10-14",
+        "publisher_timestamp": "2026-10-14T12:53:00+03:00"
+      },
+      {
+        "title": "תיבת הגאולה בתוך הרחוב הסוער",
+        "url": "https://hageula.com/sichat_hageula/moshiah_weekly_idea/28181.htm",
+        "lang": "he",
+        "first_seen": "2026-10-21T05:56:28+00:00",
+        "published_at": "2026-10-14",
+        "publisher_timestamp": "2026-10-14T12:51:00+03:00"
+      },
+      {
+        "title": "שיחת חיי | שיחת דבר מלכות – פרשת לך לך // קפוץ לך",
+        "url": "https://hageula.com/torah/3/28198.htm",
+        "lang": "he",
+        "first_seen": "2026-10-21T05:56:28+00:00",
+        "published_at": "2026-10-19",
+        "publisher_timestamp": "2026-10-19T16:53:00+03:00"
+      },
+      {
+        "title": "קובץ \"הערות התמימים ואנ\"ש 770 בית משיח\"",
+        "url": "https://hageula.com/news/press/28196.htm",
+        "lang": "he",
+        "first_seen": "2026-10-21T05:56:28+00:00",
+        "published_at": "2026-10-19",
+        "publisher_timestamp": "2026-10-19T03:02:00+03:00"
+      },
+      {
+        "title": "מענות קודש משנות הכ\"ף בפרסום ראשון: תשורה היידינגספעלד לקריאה והורדה",
+        "url": "https://hageula.com/news/press/28212.htm",
+        "lang": "he",
+        "published_at": "2026-10-22",
+        "publisher_timestamp": "2026-10-22T21:43:00+03:00",
+        "first_seen": "2026-10-23T05:40:44+00:00"
+      },
+      {
+        "title": "פרסום ראשון: מאמר ויאמר . . לך לך תרמ\"ב",
+        "url": "https://hageula.com/news/press/28211.htm",
+        "lang": "he",
+        "published_at": "2026-10-22",
+        "publisher_timestamp": "2026-10-22T19:13:00+03:00",
+        "first_seen": "2026-10-23T05:40:44+00:00"
+      },
+      {
+        "title": "קובץ \"הערות התמימים ואנ\"ש 770 בית משיח\"",
+        "url": "https://hageula.com/news/press/28215.htm",
+        "lang": "he",
+        "published_at": "2026-10-23",
+        "publisher_timestamp": "2026-10-23T22:35:00+03:00",
+        "first_seen": "2026-10-24T05:06:24+00:00"
+      }
     ],
-    "new": false
-   },
-   {
-    "id": "7504920",
-    "title": "חלק שביעי מהתוועדות יום שמחת תורה, ה'תשל\"ז",
-    "issued_for": "יוצא לאור לשמיני עצרת ושמחת תורה. ה'תשפ\"ז",
-    "url": "https://www.lahak.org/templates/lahak/article_cdo/aid/7504920/jewish/page.htm",
-    "pdf": "https://www.lahak.org/media/pdf/1385/cCdm13853689.pdf",
-    "genre": "הנחה",
-    "mugah": "לבדוק בקונטרס",
-    "sections": [
-     "primary",
-     "whatsnew"
+    "checked_at": "2026-10-26T06:46:28+00:00",
+    "note": "מדור ההוצאה לאור נטען; הפרסום האחרון נותר גיליון ההערות 28215. לא זוהה פרסום כתוב חדש במדור. מועדי הגילוי והפרסום הקיימים נשמרו."
+  },
+  "chabadinfo": {
+    "items": [
+      {
+        "title": "למה נח לא שילם למישהו שיבנה את התיבה? • עומק הפשט",
+        "url": "https://chabad.info/beis-medrash/1375415/",
+        "lang": "he",
+        "first_seen": "2026-10-21T05:56:28+00:00",
+        "published_at": "2026-10-16"
+      }
     ],
-    "new": false
-   }
-  ],
-  "note": "עמוד הבית ועמוד המאמר החדש נטענו בדפדפן. אומתו שער, פתח דבר ופתיחת PDF בן 12 עמודים: וה׳ פקד את שרה תשמ״ג, הנחה בלתי מוגה בהוצאה חדשה ומתוקנת לשבת וירא תשפ״ז. תשמ״ג היא שנת האמירה; מועד פרסום מדויק לא אומת."
- },
- "alonei_chabad": {
-  "checked_at": "2026-10-25T06:07:20+00:00",
-  "items": [
-   {
-    "id": "ZnQ5MHplYWZo",
-    "title": "שיחת השבוע · בראשית - 2075 E",
-    "url": "https://player.flipsnack.com/?hash=QkU4RjZCRjU2OUIrZnQ5MHplYWZo",
-    "lang": "he",
-    "genre": "גיליון",
-    "sections": [
-     "whatsnew"
+    "checked_at": "2026-10-26T06:46:28+00:00",
+    "note": "מדור בית מדרש והמאמר 1376816 נטענו. שער ה־PDF מציג מאמר מהר״ש, הנחת הרש״ב, שכבר מופיע דרך אתר הגאולה; לא נוסף כפרסום כפול. שיעורי וידאו ושמע הוחרגו."
+  },
+  "chabadlibrary": {
+    "items": [],
+    "checked_at": "2026-10-26T06:46:28+00:00",
+    "note": "עמוד הספרים נטען בדפדפן עם קטגוריות הספרים; אין רשימת פרסומים חדשים מתוארכים."
+  },
+  "chassidutbehirah": {
+    "items": [],
+    "checked_at": "2026-10-26T06:46:28+00:00",
+    "note": "הקטלוג המקורי נטען, ללא מועדי הוספה מאומתים. שנות המאמרים אינן תאריכי פרסום."
+  },
+  "chabadlibrarybooks": {
+    "items": [],
+    "checked_at": "2026-10-22T05:08:02+00:00",
+    "note": "כשל החיבור נמשך גם בניסיון חוזר אחד; מועד הבדיקה המוצלחת הקודם והנתונים הקיימים נשמרו.",
+    "last_attempt_at": "2026-10-26T06:46:28+00:00"
+  },
+  "sie_weekly": {
+    "checked_at": "2026-10-26T06:46:28+00:00",
+    "items": [
+      {
+        "title": "SIE Weekly · Noach · Likkutei Sichos Volume 3",
+        "url": "https://drive.google.com/file/d/1QzULk5KamxPtFQF3IdLa9CxSzaWEUUZ5/view",
+        "lang": "en",
+        "first_seen": "2026-10-20T07:59:45+00:00",
+        "genre": "תרגום שיחה",
+        "sections": [
+          "whatsnew"
+        ]
+      },
+      {
+        "title": "SIE Weekly · Lech Lecha · Likkutei Sichos Volume 3",
+        "url": "https://drive.google.com/file/d/1HqbBVAs0OF_E2U40N2NuVpBzZsoKUHAJ/view",
+        "lang": "en",
+        "first_seen": "2026-10-20T07:59:45+00:00",
+        "genre": "תרגום שיחה",
+        "sections": [
+          "whatsnew"
+        ]
+      },
+      {
+        "title": "SIE Weekly · Vayeira · Likkutei Sichos Volume 3",
+        "url": "https://drive.google.com/file/d/1IN8K2djxXU0RNBwYFPDyS84kJmmXKRyX/view",
+        "lang": "en",
+        "first_seen": "2026-10-26T06:46:28+00:00",
+        "genre": "תרגום שיחה",
+        "sections": [
+          "whatsnew"
+        ]
+      }
     ],
-    "new": false,
-    "date": "2026-10-12"
-   },
-   {
-    "id": "ejB5YXBtYQ==",
-    "title": "פרשה · בראשית - 310 R",
-    "url": "https://player.flipsnack.com/?hash=QkU4RjZCRjU2OUIrY21hejB5YXBtYQ==",
-    "lang": "he",
-    "genre": "גיליון",
-    "sections": [
-     "whatsnew"
+    "note": "עמוד הארכיון נטען ונמצא קישור וירא חדש בחלק ג׳. PDF בן 24 עמודים נטען; השער מזהה וירא, כרך 3, עמ׳ 765–772. תאריך פרסום מדויק לא אומת; נשמר מועד גילוי ראשון. נכתבה טיוטה לא מאושרת."
+  },
+  "hiskashrus": {
+    "checked_at": "2026-10-23T05:40:44+00:00",
+    "items": [
+      {
+        "title": "Lech-Lecha · 5787 · קונטרס שבועי לאנ\"ש חסידי חב\"ד לחיזוק ההתקשרות לכ\"ק אדמו\"ר רבי מנחם מענדל בהרה\"ק רלו\"י מליובאוויטש",
+        "url": "https://torahprint.nyc3.cdn.digitaloceanspaces.com/pdfFiles/1792588384099_1xivd_.pdf",
+        "lang": "he",
+        "first_seen": "2026-10-22T05:09:31+00:00",
+        "issued_for": "ערב שבת קודש פרשת לך לך, י״ב מרחשוון תשפ״ז (23.10.2026)",
+        "genre": "גיליון"
+      }
     ],
-    "new": false,
-    "date": "2026-10-12"
-   },
-   {
-    "id": "ZnUxdDZyaA==",
-    "title": "התקשרות · בראשית - 1670 R",
-    "url": "https://player.flipsnack.com/?hash=QkU4RjZCRjU2OUIrdnRwZnUxdDZyaA==",
-    "lang": "he",
-    "genre": "גיליון",
-    "sections": [
-     "whatsnew"
-    ],
-    "new": false,
-    "date": "2026-10-12"
-   },
-   {
-    "id": "ZnRucXp5MGx1",
-    "title": "Living Jewish · Bereshit - 5787",
-    "url": "https://player.flipsnack.com/?hash=QkU4RjZCRjU2OUIrZnRucXp5MGx1",
-    "lang": "en",
-    "genre": "גיליון",
-    "sections": [
-     "whatsnew"
-    ],
-    "new": false,
-    "date": "2026-10-12"
-   },
-   {
-    "id": "ZmRjM3dpOXBv",
-    "title": "ВОСХОЖДЕНИЕ · Jews Gazette 1876 IS",
-    "url": "https://player.flipsnack.com/?hash=QkU4RjZCRjU2OUIrZmRjM3dpOXBv",
-    "lang": "ru",
-    "genre": "גיליון",
-    "sections": [
-     "whatsnew"
-    ],
-    "new": false,
-    "date": "2026-10-12"
-   },
-   {
-    "id": "dHdlYXBtYQ==",
-    "title": "La Paracha · 315 - בראשית",
-    "url": "https://player.flipsnack.com/?hash=QkU4RjZCRjU2OUIrZG5xdHdlYXBtYQ==",
-    "lang": "fr",
-    "genre": "גיליון",
-    "sections": [
-     "whatsnew"
-    ],
-    "new": false,
-    "date": "2026-10-12"
-   }
-  ],
-  "note": "עמוד הקריאה נטען; ששת קישורי Flipsnack נותרו אותם קישורים. תוכן הגיליונות במסגרות לא אומת, ולכן הכותרות והתאריכים הקיימים נשמרו."
- },
- "sichas_hashavua": {
-  "items": [
-   {
-    "title": "שיחת השבוע 2077",
-    "url": "https://www.chabad.org.il/Magazines/Articles.asp?CategoryID=5171",
-    "lang": "he",
-    "first_seen": "2026-10-21T05:56:28+00:00",
-    "issued_for": "ערב שבת קודש פרשת לך לך, י\"ב במרחשון תשפ\"ז (23.10.2026)"
-   }
-  ],
-  "checked_at": "2026-10-25T06:07:20+00:00",
-  "note": "עמוד שיחת השבוע נטען; הגיליון האחרון נותר 2077 לפרשת לך לך, המיועד ל־23.10.2026. מועד הגילוי הראשון נשמר."
- },
- "derher": {
-  "items": [],
-  "checked_at": "2026-10-25T06:07:20+00:00",
-  "note": "ארכיון הגיליונות נטען; קישורי השנים מגיעים עד תשפ״ו. לא אומת גיליון חדש לתשפ״ז."
- },
- "avita": {
-  "items": [],
-  "checked_at": "2026-10-25T06:07:20+00:00",
-  "note": "עמוד המקור נטען; הכתבה הקיימת היא מ־15.02.2021, ולא זוהה בה פרסום חדש."
- },
- "beitchabad": {
-  "items": [],
-  "checked_at": "2026-10-25T06:07:20+00:00",
-  "note": "עמוד הבית נטען; לא זוהה פרסום כתוב חדש עם ייחוס מאומת למאמר, שיחה או מכתב מסוים. וידאו הוחרג."
- },
- "maynotecha_inst": {
-  "items": [],
-  "checked_at": "2026-10-25T06:07:20+00:00",
-  "note": "עמוד האודות נטען; התיאור הכללי אינו מזהה פרסום חדש מתוארך."
- },
- "hageula": {
-  "items": [
-   {
-    "title": "להורדה: הקובץ השבועי של \"דברי משיח\"",
-    "url": "https://hageula.com/news/press/28199.htm",
-    "lang": "he",
-    "first_seen": "2026-10-21T05:56:28+00:00",
-    "published_at": "2026-10-19",
-    "publisher_timestamp": "2026-10-19T23:45:00+03:00"
-   },
-   {
-    "title": "ויהי בארבעים שנה: עלי ההגהה דשיחת ש\"פ נח תשמ\"ז",
-    "url": "https://hageula.com/news/press/28195.htm",
-    "lang": "he",
-    "first_seen": "2026-10-21T05:56:28+00:00",
-    "published_at": "2026-10-19",
-    "publisher_timestamp": "2026-10-19T02:47:00+03:00"
-   },
-   {
-    "title": "אין ביאור והסבר כלל על עיכוב הגאולה",
-    "url": "https://hageula.com/sichat_hageula/royal_wine/28182.htm",
-    "lang": "he",
-    "first_seen": "2026-10-21T05:56:28+00:00",
-    "published_at": "2026-10-14",
-    "publisher_timestamp": "2026-10-14T12:53:00+03:00"
-   },
-   {
-    "title": "תיבת הגאולה בתוך הרחוב הסוער",
-    "url": "https://hageula.com/sichat_hageula/moshiah_weekly_idea/28181.htm",
-    "lang": "he",
-    "first_seen": "2026-10-21T05:56:28+00:00",
-    "published_at": "2026-10-14",
-    "publisher_timestamp": "2026-10-14T12:51:00+03:00"
-   },
-   {
-    "title": "שיחת חיי | שיחת דבר מלכות – פרשת לך לך // קפוץ לך",
-    "url": "https://hageula.com/torah/3/28198.htm",
-    "lang": "he",
-    "first_seen": "2026-10-21T05:56:28+00:00",
-    "published_at": "2026-10-19",
-    "publisher_timestamp": "2026-10-19T16:53:00+03:00"
-   },
-   {
-    "title": "קובץ \"הערות התמימים ואנ\"ש 770 בית משיח\"",
-    "url": "https://hageula.com/news/press/28196.htm",
-    "lang": "he",
-    "first_seen": "2026-10-21T05:56:28+00:00",
-    "published_at": "2026-10-19",
-    "publisher_timestamp": "2026-10-19T03:02:00+03:00"
-   },
-   {
-    "title": "מענות קודש משנות הכ\"ף בפרסום ראשון: תשורה היידינגספעלד לקריאה והורדה",
-    "url": "https://hageula.com/news/press/28212.htm",
-    "lang": "he",
-    "published_at": "2026-10-22",
-    "publisher_timestamp": "2026-10-22T21:43:00+03:00",
-    "first_seen": "2026-10-23T05:40:44+00:00"
-   },
-   {
-    "title": "פרסום ראשון: מאמר ויאמר . . לך לך תרמ\"ב",
-    "url": "https://hageula.com/news/press/28211.htm",
-    "lang": "he",
-    "published_at": "2026-10-22",
-    "publisher_timestamp": "2026-10-22T19:13:00+03:00",
-    "first_seen": "2026-10-23T05:40:44+00:00"
-   },
-   {
-    "title": "קובץ \"הערות התמימים ואנ\"ש 770 בית משיח\"",
-    "url": "https://hageula.com/news/press/28215.htm",
-    "lang": "he",
-    "published_at": "2026-10-23",
-    "publisher_timestamp": "2026-10-23T22:35:00+03:00",
-    "first_seen": "2026-10-24T05:06:24+00:00"
-   }
-  ],
-  "checked_at": "2026-10-25T06:07:20+00:00",
-  "note": "מדור ההוצאה לאור נטען; הפרסום האחרון נותר גיליון ההערות 28215. לא זוהה פרסום כתוב חדש במדור. מועדי הגילוי והפרסום הקיימים נשמרו."
- },
- "chabadinfo": {
-  "items": [
-   {
-    "title": "למה נח לא שילם למישהו שיבנה את התיבה? • עומק הפשט",
-    "url": "https://chabad.info/beis-medrash/1375415/",
-    "lang": "he",
-    "first_seen": "2026-10-21T05:56:28+00:00",
-    "published_at": "2026-10-16"
-   }
-  ],
-  "checked_at": "2026-10-25T06:07:20+00:00",
-  "note": "עמוד בית המדרש, פרסום גיליון ד׳ (תרי״א) וה־PDF המקורי בן 48 עמודים נטענו. תקציר הטיוטה הקודמת אומת מול השער, פתח הדבר ותוכן העניינים ואושר. וידאו הוחרג."
- },
- "chabadlibrary": {
-  "items": [],
-  "checked_at": "2026-10-25T06:07:20+00:00",
-  "note": "עמוד הספרים נטען בדפדפן עם קטגוריות הספרים; אין רשימת פרסומים חדשים מתוארכים."
- },
- "chassidutbehirah": {
-  "items": [],
-  "checked_at": "2026-10-25T06:07:20+00:00",
-  "note": "הקטלוג המקורי נטען, ללא מועדי הוספה מאומתים. שנות המאמרים אינן תאריכי פרסום."
- },
- "chabadlibrarybooks": {
-  "items": [],
-  "checked_at": "2026-10-22T05:08:02+00:00",
-  "note": "כשל החיבור נמשך גם בניסיון חוזר אחד; מועד הבדיקה המוצלחת הקודם והנתונים הקיימים נשמרו.",
-  "last_attempt_at": "2026-10-25T06:07:20+00:00"
- },
- "sie_weekly": {
-  "checked_at": "2026-10-25T06:07:20+00:00",
-  "items": [
-   {
-    "title": "SIE Weekly · Noach · Likkutei Sichos Volume 3",
-    "url": "https://drive.google.com/file/d/1QzULk5KamxPtFQF3IdLa9CxSzaWEUUZ5/view",
-    "lang": "en",
-    "first_seen": "2026-10-20T07:59:45+00:00",
-    "genre": "תרגום שיחה",
-    "sections": [
-     "whatsnew"
-    ]
-   },
-   {
-    "title": "SIE Weekly · Lech Lecha · Likkutei Sichos Volume 3",
-    "url": "https://drive.google.com/file/d/1HqbBVAs0OF_E2U40N2NuVpBzZsoKUHAJ/view",
-    "lang": "en",
-    "first_seen": "2026-10-20T07:59:45+00:00",
-    "genre": "תרגום שיחה",
-    "sections": [
-     "whatsnew"
-    ]
-   }
-  ],
-  "note": "עמוד SIE Weekly נטען; בחלק ג׳ קישורי נח ולך לך קיימים, ואילו כפתורי ההמשך אינם קישורי הורדה פעילים. לא אומת פריט חדש."
- },
- "hiskashrus": {
-  "checked_at": "2026-10-23T05:40:44+00:00",
-  "items": [
-   {
-    "title": "Lech-Lecha · 5787 · קונטרס שבועי לאנ\"ש חסידי חב\"ד לחיזוק ההתקשרות לכ\"ק אדמו\"ר רבי מנחם מענדל בהרה\"ק רלו\"י מליובאוויטש",
-    "url": "https://torahprint.nyc3.cdn.digitaloceanspaces.com/pdfFiles/1792588384099_1xivd_.pdf",
-    "lang": "he",
-    "first_seen": "2026-10-22T05:09:31+00:00",
-    "issued_for": "ערב שבת קודש פרשת לך לך, י״ב מרחשוון תשפ״ז (23.10.2026)",
-    "genre": "גיליון"
-   }
-  ],
-  "note": "קובץ PDF בן 32 עמודים נטען בפועל; שער גיליון 1672, דבר הפתיחה ותוכן העניינים נבדקו חזותית בעמודים 1–2. הטיוטה מההרצה הקודמת אומתה ואושרה; מועד הגילוי ותאריך הגיליון המיועד נשמרו."
- },
- "hebrewbooks": {
-  "items": [],
-  "checked_at": "2026-10-25T06:07:20+00:00",
-  "note": "עמוד הבית נטען בדפדפן. ההוספה האחרונה המוצהרת נותרה 50 ספרים בר״ח אלול תשפ״ו, מחוץ לחלון הפרסום."
- }
+    "note": "קובץ PDF בן 32 עמודים נטען בפועל; שער גיליון 1672, דבר הפתיחה ותוכן העניינים נבדקו חזותית בעמודים 1–2. הטיוטה מההרצה הקודמת אומתה ואושרה; מועד הגילוי ותאריך הגיליון המיועד נשמרו."
+  },
+  "hebrewbooks": {
+    "items": [],
+    "checked_at": "2026-10-26T06:46:28+00:00",
+    "note": "עמוד הבית נטען בדפדפן. ההוספה האחרונה המוצהרת נותרה 50 ספרים בר״ח אלול תשפ״ו, מחוץ לחלון הפרסום."
+  }
 }
