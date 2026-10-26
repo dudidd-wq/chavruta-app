@@ -90,3 +90,15 @@
   .ihead { display: block; } .ig { display: none; } .ititle { font: 700 14pt var(--serif); } .yrs { display: flex; gap: 14pt; }
 }
 
+
+/* Justification also applies to new content and to returning readers. */
+@media print {
+  html body p,
+  html body :is(article.biur, .prose) :is(li, blockquote),
+  html body :is(.sr-text, .sr-footnote, .mnote-b, .notebook-text, .notebook-quote) {
+    text-align: justify;
+    text-justify: inter-word;
+    text-align-last: start;
+    hyphens: manual;
+  }
+}

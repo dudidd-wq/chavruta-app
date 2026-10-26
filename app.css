@@ -511,11 +511,7 @@ html[data-justify="on"] article.biur aside.synth > p,
 html[data-justify="on"] article.biur aside.synth > ul > li,
 html[data-justify="on"] .hero .lead,
 html[data-justify="on"] .book-h .lead { text-align: justify; text-justify: inter-word; text-align-last: start; word-spacing: -.04em; text-wrap: pretty; }
-html[data-justify="off"] article.biur p, html[data-justify="off"] article.biur li { text-align: start; }
 article.biur table, article.biur td, article.biur th, article.biur .cell, article.biur h2, article.biur h3, article.biur h4 { text-align: start; text-justify: auto; word-spacing: normal; }
-@container (max-width: 19em) {
-  article.biur p, article.biur li, article.biur blockquote p { text-align: start !important; word-spacing: normal !important; }
-}
 
 /* --- טבלאות --- */
 article.biur .scroll { overflow-x: auto; margin: 1.7em 0; border-block: 1px solid var(--rule); background: var(--card); scrollbar-width: thin; }
@@ -1187,6 +1183,18 @@ article.biur .tp-inline a:hover { border-color: var(--accent-line); color: var(-
 .how-v { color: var(--ink-3); font-size: .82rem; }
 .how-fill { color: var(--ink-3); font-size: .78rem; margin-top: .15rem; }
 
+
+/* Project reading rule: justify prose in every mode, viewport and printout.
+   Titles, navigation, controls and table cells retain their own alignment. */
+html body :is(#view, .source-reader, .reading-preferences, .notebook-editor) p,
+html body :is(article.biur, .prose) :is(li, blockquote),
+html body :is(.sr-text, .sr-footnote, .mnote-b, .notebook-text, .notebook-quote, .notebook-entry blockquote) {
+  text-align: justify;
+  text-justify: inter-word;
+  text-align-last: start;
+  hyphens: manual;
+}
+html body .source-reader .sr-text :is(h1,h2,h3,h4,h5,h6) { text-align: start; }
 
 /* Personal study environment: presentation only. Learning data and source IDs are unchanged. */
 .reading-preferences { --rp-bg: light-dark(#fffdf9,#221e1a); --rp-ink: light-dark(#26211b,#ece5d9); --rp-muted: light-dark(#63594d,#c6bcac); --rp-line: light-dark(#d8cfbf,#584f43); --rp-active: light-dark(#76283a,#e3a6ae); width: min(960px,calc(100% - 2rem)); max-height: 86dvh; padding: 24px; border: 1px solid var(--rp-line); border-radius: 12px; background: var(--rp-bg); color: var(--rp-ink); overflow: auto; font: 14px/1.6 var(--sans); }
