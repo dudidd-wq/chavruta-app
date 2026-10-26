@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-25T09:09:33+00:00",
+ "generated_at": "2026-10-26T06:48:58+00:00",
  "sources": [
   {
    "id": "chabadlibrary",
@@ -12,7 +12,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-10-25T09:08:19+00:00",
+   "checked_at": "2026-10-26T06:47:35+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -30,7 +30,7 @@
     "primary",
     "whatsnew"
    ],
-   "checked_at": "2026-10-25T09:08:19+00:00",
+   "checked_at": "2026-10-26T06:47:35+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -47,7 +47,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-10-25T09:08:19+00:00",
+   "checked_at": "2026-10-26T06:47:35+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -64,7 +64,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-10-25T09:08:19+00:00",
+   "checked_at": "2026-10-26T06:47:35+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -82,7 +82,7 @@
     "primary",
     "whatsnew"
    ],
-   "checked_at": "2026-10-25T09:08:19+00:00",
+   "checked_at": "2026-10-26T06:47:35+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -102,7 +102,7 @@
     }
    ],
    "total": 132,
-   "last_success_at": "2026-10-25T09:08:19+00:00"
+   "last_success_at": "2026-10-26T06:47:35+00:00"
   },
   {
    "id": "chabadlibrarybooks",
@@ -115,7 +115,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-10-25T09:08:19+00:00",
+   "checked_at": "2026-10-26T06:47:35+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -133,12 +133,12 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-25T09:08:19+00:00",
+   "checked_at": "2026-10-26T06:47:35+00:00",
    "status": "ok",
    "new": [],
    "latest": [],
    "total": 1501,
-   "last_success_at": "2026-10-25T09:08:19+00:00"
+   "last_success_at": "2026-10-26T06:47:35+00:00"
   },
   {
    "id": "chassidut_org",
@@ -152,12 +152,12 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-25T09:08:21+00:00",
+   "checked_at": "2026-10-26T06:47:36+00:00",
    "status": "ok",
    "new": [],
    "latest": [],
    "total": 4,
-   "last_success_at": "2026-10-25T09:08:21+00:00"
+   "last_success_at": "2026-10-26T06:47:36+00:00"
   },
   {
    "id": "biurim",
@@ -171,7 +171,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-25T09:08:22+00:00",
+   "checked_at": "2026-10-26T06:47:38+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -217,7 +217,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-10-25T09:08:22+00:00"
+   "last_success_at": "2026-10-26T06:47:38+00:00"
   },
   {
    "id": "hm_monsey",
@@ -231,7 +231,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-25T09:08:24+00:00",
+   "checked_at": "2026-10-26T06:47:39+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -277,7 +277,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-10-25T09:08:24+00:00"
+   "last_success_at": "2026-10-26T06:47:39+00:00"
   },
   {
    "id": "hiskashrus",
@@ -291,7 +291,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-25T09:08:26+00:00",
+   "checked_at": "2026-10-26T06:47:41+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -339,7 +339,7 @@
     }
    ],
    "total": 252,
-   "last_success_at": "2026-10-25T09:08:26+00:00"
+   "last_success_at": "2026-10-26T06:47:41+00:00"
   },
   {
    "id": "lichyot_chassidus",
@@ -353,7 +353,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-25T09:08:27+00:00",
+   "checked_at": "2026-10-26T06:47:43+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -423,7 +423,7 @@
     }
    ],
    "total": 1000,
-   "last_success_at": "2026-10-25T09:08:27+00:00"
+   "last_success_at": "2026-10-26T06:47:43+00:00"
   },
   {
    "id": "chabadzoom",
@@ -437,7 +437,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-25T09:08:29+00:00",
+   "checked_at": "2026-10-26T06:47:45+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -499,7 +499,7 @@
     }
    ],
    "total": 558,
-   "last_success_at": "2026-10-25T09:08:29+00:00"
+   "last_success_at": "2026-10-26T06:47:45+00:00"
   },
   {
    "id": "kovtzimdrive",
@@ -513,7 +513,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-25T09:08:31+00:00",
+   "checked_at": "2026-10-26T06:47:48+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -526,7 +526,7 @@
     }
    ],
    "total": 1,
-   "last_success_at": "2026-10-25T09:08:31+00:00"
+   "last_success_at": "2026-10-26T06:47:48+00:00"
   },
   {
    "id": "avita",
@@ -540,7 +540,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-25T09:08:33+00:00",
+   "checked_at": "2026-10-26T06:47:50+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -558,7 +558,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-25T09:08:33+00:00",
+   "checked_at": "2026-10-26T06:47:50+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -580,7 +580,7 @@
     }
    ],
    "total": 2,
-   "last_success_at": "2026-10-25T09:08:33+00:00"
+   "last_success_at": "2026-10-26T06:47:50+00:00"
   },
   {
    "id": "dvarmalchus770",
@@ -594,7 +594,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-25T09:08:35+00:00",
+   "checked_at": "2026-10-26T06:47:52+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -664,7 +664,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-10-25T09:08:35+00:00"
+   "last_success_at": "2026-10-26T06:47:52+00:00"
   },
   {
    "id": "soulwords",
@@ -678,7 +678,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-25T09:08:37+00:00",
+   "checked_at": "2026-10-26T06:47:53+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -732,7 +732,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-10-25T09:08:37+00:00"
+   "last_success_at": "2026-10-26T06:47:53+00:00"
   },
   {
    "id": "sie_weekly",
@@ -746,10 +746,25 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-25T09:08:38+00:00",
+   "checked_at": "2026-10-26T06:47:55+00:00",
    "status": "ok",
-   "new": [],
+   "new": [
+    {
+     "id": "https://drive.google.com/file/d/1IN8K2djxXU0RNBwYFPDyS84kJmmXKRyX/view",
+     "title": "Download",
+     "url": "https://drive.google.com/file/d/1IN8K2djxXU0RNBwYFPDyS84kJmmXKRyX/view",
+     "date": "",
+     "first_seen": "2026-10-26T06:47:55+00:00"
+    }
+   ],
    "latest": [
+    {
+     "id": "https://drive.google.com/file/d/1IN8K2djxXU0RNBwYFPDyS84kJmmXKRyX/view",
+     "title": "Download",
+     "url": "https://drive.google.com/file/d/1IN8K2djxXU0RNBwYFPDyS84kJmmXKRyX/view",
+     "date": "",
+     "first_seen": "2026-10-26T06:47:55+00:00"
+    },
     {
      "id": "https://drive.google.com/file/d/1QzULk5KamxPtFQF3IdLa9CxSzaWEUUZ5/view",
      "title": "Download",
@@ -786,8 +801,8 @@
      "first_seen": "2026-10-18T04:51:48+00:00"
     }
    ],
-   "total": 114,
-   "last_success_at": "2026-10-25T09:08:38+00:00"
+   "total": 115,
+   "last_success_at": "2026-10-26T06:47:55+00:00"
   },
   {
    "id": "pls",
@@ -801,10 +816,27 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-25T09:08:40+00:00",
+   "checked_at": "2026-10-26T06:47:56+00:00",
    "status": "ok",
-   "new": [],
+   "new": [
+    {
+     "id": "c1a2da16-52cf-46f0-ba52-cbbe18997440",
+     "title": "Chelek 25, Chaye Sara 3 - Rabbi Fishel Oster - Halikut",
+     "url": "https://sichaindepth.captivate.fm",
+     "date": "Sun, 25 Oct 2026 00:15:00 -0400",
+     "blurb": "Chelek 25, Chaye Sara 3 - Rabbi Fishel Oster - Halikut",
+     "first_seen": "2026-10-26T06:47:56+00:00"
+    }
+   ],
    "latest": [
+    {
+     "id": "c1a2da16-52cf-46f0-ba52-cbbe18997440",
+     "title": "Chelek 25, Chaye Sara 3 - Rabbi Fishel Oster - Halikut",
+     "url": "https://sichaindepth.captivate.fm",
+     "date": "Sun, 25 Oct 2026 00:15:00 -0400",
+     "blurb": "Chelek 25, Chaye Sara 3 - Rabbi Fishel Oster - Halikut",
+     "first_seen": "2026-10-26T06:47:56+00:00"
+    },
     {
      "id": "1daa75b7-ee82-4ec5-9be8-ce40929ff79e",
      "title": "Chelek 25, Vayera 3 - Rabbi Chaim Schapiro - Halikut",
@@ -855,7 +887,7 @@
     }
    ],
    "total": 200,
-   "last_success_at": "2026-10-25T09:08:40+00:00"
+   "last_success_at": "2026-10-26T06:47:56+00:00"
   },
   {
    "id": "chayenu_ls",
@@ -869,7 +901,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-25T09:08:41+00:00",
+   "checked_at": "2026-10-26T06:47:57+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -896,7 +928,7 @@
     }
    ],
    "total": 2,
-   "last_success_at": "2026-10-25T09:08:41+00:00"
+   "last_success_at": "2026-10-26T06:47:57+00:00"
   },
   {
    "id": "weekly_sicha",
@@ -910,7 +942,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-25T09:08:42+00:00",
+   "checked_at": "2026-10-26T06:47:59+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -918,7 +950,7 @@
      "id": "https://theweeklysicha.org/episode/tws-lech-lecha-87",
      "title": "tws lech lecha 87",
      "url": "https://theweeklysicha.org/episode/tws-lech-lecha-87",
-     "date": "2026-10-24T11:00:04.029Z",
+     "date": "2026-10-26T00:00:17.851Z",
      "first_seen": "2026-10-24T05:07:30+00:00"
     },
     {
@@ -958,7 +990,7 @@
     }
    ],
    "total": 117,
-   "last_success_at": "2026-10-25T09:08:42+00:00"
+   "last_success_at": "2026-10-26T06:47:59+00:00"
   },
   {
    "id": "theyeshiva",
@@ -972,7 +1004,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-25T09:08:43+00:00",
+   "checked_at": "2026-10-26T06:48:00+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1042,7 +1074,7 @@
     }
    ],
    "total": 1539,
-   "last_success_at": "2026-10-25T09:08:43+00:00"
+   "last_success_at": "2026-10-26T06:48:00+00:00"
   },
   {
    "id": "chassidus_applied",
@@ -1056,8 +1088,8 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-25T09:08:47+00:00",
-   "status": "ok",
+   "checked_at": "2026-10-26T06:48:03+00:00",
+   "status": "error",
    "new": [],
    "latest": [
     {
@@ -1142,7 +1174,9 @@
     }
    ],
    "total": 15,
-   "last_success_at": "2026-10-25T09:08:47+00:00"
+   "error": "HTTPError: 404 Client Error: Not Found for url: https://www.youtube.com/feeds/videos.xml?channel_id=UCX5tj50hTwF_80XQ9JBMDYQ",
+   "last_success_at": "2026-10-25T09:08:47+00:00",
+   "retained": true
   },
   {
    "id": "neirot",
@@ -1156,7 +1190,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-25T09:08:47+00:00",
+   "checked_at": "2026-10-26T06:48:03+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1210,7 +1244,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-10-25T09:08:47+00:00"
+   "last_success_at": "2026-10-26T06:48:03+00:00"
   },
   {
    "id": "chassidus_explained",
@@ -1224,7 +1258,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-25T09:08:49+00:00",
+   "checked_at": "2026-10-26T06:48:17+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1278,7 +1312,7 @@
     }
    ],
    "total": 135,
-   "last_success_at": "2026-10-25T09:08:49+00:00"
+   "last_success_at": "2026-10-26T06:48:17+00:00"
   },
   {
    "id": "melukat",
@@ -1292,7 +1326,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-25T09:08:51+00:00",
+   "checked_at": "2026-10-26T06:48:18+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1347,7 +1381,7 @@
     }
    ],
    "total": 167,
-   "last_success_at": "2026-10-25T09:08:51+00:00"
+   "last_success_at": "2026-10-26T06:48:18+00:00"
   },
   {
    "id": "daily_maamar",
@@ -1361,10 +1395,27 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-25T09:08:52+00:00",
+   "checked_at": "2026-10-26T06:48:19+00:00",
    "status": "ok",
-   "new": [],
+   "new": [
+    {
+     "id": "a13e1565-65ba-4264-ac7b-f6e42daff8fc",
+     "title": "Motzaei Shabbos Chayey Sarah (B’chedro) 5738, Maamorim Melukatim Vol. 1 – Episode 2",
+     "url": "https://share.transistor.fm/s/ffc49037",
+     "date": "Sun, 25 Oct 2026 09:22:27 -0400",
+     "blurb": "This episode covers from Chapter 4 through Chapter 5. How are deeds are elevated .",
+     "first_seen": "2026-10-26T06:48:19+00:00"
+    }
+   ],
    "latest": [
+    {
+     "id": "a13e1565-65ba-4264-ac7b-f6e42daff8fc",
+     "title": "Motzaei Shabbos Chayey Sarah (B’chedro) 5738, Maamorim Melukatim Vol. 1 – Episode 2",
+     "url": "https://share.transistor.fm/s/ffc49037",
+     "date": "Sun, 25 Oct 2026 09:22:27 -0400",
+     "blurb": "This episode covers from Chapter 4 through Chapter 5. How are deeds are elevated .",
+     "first_seen": "2026-10-26T06:48:19+00:00"
+    },
     {
      "id": "ecfb817d-63cc-48f2-a091-f9d6efa4a910",
      "title": "Motzaei Shabbos Chayey Sarah (B’chedro) 5738, Maamorim Melukatim Vol. 1 – Episode 1",
@@ -1454,8 +1505,8 @@
      "first_seen": "2026-10-18T04:52:03+00:00"
     }
    ],
-   "total": 346,
-   "last_success_at": "2026-10-25T09:08:52+00:00"
+   "total": 347,
+   "last_success_at": "2026-10-26T06:48:19+00:00"
   },
   {
    "id": "wellsprings",
@@ -1469,7 +1520,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-25T09:08:54+00:00",
+   "checked_at": "2026-10-26T06:48:21+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1515,7 +1566,7 @@
     }
    ],
    "total": 125,
-   "last_success_at": "2026-10-25T09:08:54+00:00"
+   "last_success_at": "2026-10-26T06:48:21+00:00"
   },
   {
    "id": "daily_sicha",
@@ -1529,10 +1580,27 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-25T09:08:54+00:00",
+   "checked_at": "2026-10-26T06:48:22+00:00",
    "status": "ok",
-   "new": [],
+   "new": [
+    {
+     "id": "2026.10.26",
+     "title": "יום ב' פ' וירא, ט\"ו מרחשון, ה'תשפ\"ז",
+     "url": "",
+     "date": "Mon, 26 Oct 2026 12:00:00 GMT",
+     "blurb": "התוכן סיום בנין ביהמ\"ק הראשון ע\"י שלמה הי' בחודש חשון . ומכאן ההוראה עד כמה יש לייקר ולהעריך חודש זה שיש בו ברכה מיוחדת זו. וזה שייך לכל בנ\"י , שהרי כל בנ\"י השתתפו בבנין ביהמ\"ק. ומזה מובן גם שחודש חשון מסוגל ביותר לבנין ביהמ\"ק השלישי , וכאו\"א יכול להשתתף בזה ע\"י שמוסיף בתומ\"צ ואהבת ישראל. בחודש חשון עצמו ישנם ימים מיוחדים שהם מסוגלים ביותר: שבעה בחשון : היום שבו הי' מגיע ה\"אחרון שבישראל לנהר פרת\", בלכתו מירושלים (לאחרי שעלה לרגל) לשוב לביתו. ובעבודה – זהו היום שבו מתחילים לפרק את ה\"מטען\" הרוחני שנאסף בחודש תשרי על כל השנה כולה. ט\"ו בחשון שבו \"קיימא סיהרא באשלמותא\", דכללות הענין דחידוש הלבנה, שמיום ליום נוסף באור הלבנה עד מילואה בשלימותה בט\"ו בחודש , נותן עידוד לבנ\"י, \"שהם – בנ\"י – עתידים להתחדש כמותה\", שגם בזמן הגלות יש להתנהג כרצונו ית', ועי\"ז זוכים \"להתחדש כמותה\" בגאולה עתידה. ג ' חלקים משיחת יום ג' דפ' נח, ב' מרחשון ה'תשמ\"ג, לילדי \"צבאות ה'\" ל\"הנחה פרטית\" או התרגום ללה\"ק של השיחה: https://thedailysicha.com/?date=26-10-2026 Synopsis The month of Cheshvan possesses a special quality and blessing, as demonstrated by the fact that it is the month in which Shlomo HaMelech completed the construction of the First Beis Hamikdash. This is relevant to every Jew , because every Jew participated in the building of the Beis Hamikdash. It is therefore also understood that the month of Cheshvan is particularly auspicious for the building of the Third Beis Hamikdash, in which every individual can take part by increasing in Torah and mitzvos and in Ahavas Yisroel . Within the month of Ches",
+     "first_seen": "2026-10-26T06:48:22+00:00"
+    }
+   ],
    "latest": [
+    {
+     "id": "2026.10.26",
+     "title": "יום ב' פ' וירא, ט\"ו מרחשון, ה'תשפ\"ז",
+     "url": "",
+     "date": "Mon, 26 Oct 2026 12:00:00 GMT",
+     "blurb": "התוכן סיום בנין ביהמ\"ק הראשון ע\"י שלמה הי' בחודש חשון . ומכאן ההוראה עד כמה יש לייקר ולהעריך חודש זה שיש בו ברכה מיוחדת זו. וזה שייך לכל בנ\"י , שהרי כל בנ\"י השתתפו בבנין ביהמ\"ק. ומזה מובן גם שחודש חשון מסוגל ביותר לבנין ביהמ\"ק השלישי , וכאו\"א יכול להשתתף בזה ע\"י שמוסיף בתומ\"צ ואהבת ישראל. בחודש חשון עצמו ישנם ימים מיוחדים שהם מסוגלים ביותר: שבעה בחשון : היום שבו הי' מגיע ה\"אחרון שבישראל לנהר פרת\", בלכתו מירושלים (לאחרי שעלה לרגל) לשוב לביתו. ובעבודה – זהו היום שבו מתחילים לפרק את ה\"מטען\" הרוחני שנאסף בחודש תשרי על כל השנה כולה. ט\"ו בחשון שבו \"קיימא סיהרא באשלמותא\", דכללות הענין דחידוש הלבנה, שמיום ליום נוסף באור הלבנה עד מילואה בשלימותה בט\"ו בחודש , נותן עידוד לבנ\"י, \"שהם – בנ\"י – עתידים להתחדש כמותה\", שגם בזמן הגלות יש להתנהג כרצונו ית', ועי\"ז זוכים \"להתחדש כמותה\" בגאולה עתידה. ג ' חלקים משיחת יום ג' דפ' נח, ב' מרחשון ה'תשמ\"ג, לילדי \"צבאות ה'\" ל\"הנחה פרטית\" או התרגום ללה\"ק של השיחה: https://thedailysicha.com/?date=26-10-2026 Synopsis The month of Cheshvan possesses a special quality and blessing, as demonstrated by the fact that it is the month in which Shlomo HaMelech completed the construction of the First Beis Hamikdash. This is relevant to every Jew , because every Jew participated in the building of the Beis Hamikdash. It is therefore also understood that the month of Cheshvan is particularly auspicious for the building of the Third Beis Hamikdash, in which every individual can take part by increasing in Torah and mitzvos and in Ahavas Yisroel . Within the month of Ches",
+     "first_seen": "2026-10-26T06:48:22+00:00"
+    },
     {
      "id": "2026.10.25",
      "title": "יום א' פ' וירא, י\"ד מרחשון, ה'תשפ\"ז",
@@ -1622,8 +1690,8 @@
      "first_seen": "2026-10-18T04:52:06+00:00"
     }
    ],
-   "total": 1410,
-   "last_success_at": "2026-10-25T09:08:54+00:00"
+   "total": 1411,
+   "last_success_at": "2026-10-26T06:48:22+00:00"
   },
   {
    "id": "learnchassidus",
@@ -1637,7 +1705,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-25T09:09:01+00:00",
+   "checked_at": "2026-10-26T06:48:28+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1650,7 +1718,7 @@
     }
    ],
    "total": 5,
-   "last_success_at": "2026-10-25T09:09:01+00:00"
+   "last_success_at": "2026-10-26T06:48:28+00:00"
   },
   {
    "id": "simplychassidus",
@@ -1664,7 +1732,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-25T09:09:02+00:00",
+   "checked_at": "2026-10-26T06:48:29+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1691,7 +1759,7 @@
     }
    ],
    "total": 4,
-   "last_success_at": "2026-10-25T09:09:02+00:00"
+   "last_success_at": "2026-10-26T06:48:29+00:00"
   },
   {
    "id": "alonei_chabad",
@@ -1704,7 +1772,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-25T09:09:03+00:00",
+   "checked_at": "2026-10-26T06:48:30+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -1721,7 +1789,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-25T09:09:03+00:00",
+   "checked_at": "2026-10-26T06:48:30+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -1738,7 +1806,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-25T09:09:03+00:00",
+   "checked_at": "2026-10-26T06:48:30+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1765,7 +1833,7 @@
     }
    ],
    "total": 303,
-   "last_success_at": "2026-10-25T09:09:03+00:00"
+   "last_success_at": "2026-10-26T06:48:30+00:00"
   },
   {
    "id": "lchaim",
@@ -1778,7 +1846,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-25T09:09:04+00:00",
+   "checked_at": "2026-10-26T06:48:31+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1826,7 +1894,7 @@
     }
    ],
    "total": 192,
-   "last_success_at": "2026-10-25T09:09:04+00:00"
+   "last_success_at": "2026-10-26T06:48:31+00:00"
   },
   {
    "id": "one_point",
@@ -1839,7 +1907,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-25T09:09:05+00:00",
+   "checked_at": "2026-10-26T06:48:32+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1880,7 +1948,7 @@
     }
    ],
    "total": 184,
-   "last_success_at": "2026-10-25T09:09:05+00:00"
+   "last_success_at": "2026-10-26T06:48:32+00:00"
   },
   {
    "id": "derher",
@@ -1893,7 +1961,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-25T09:09:07+00:00",
+   "checked_at": "2026-10-26T06:48:34+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -1910,7 +1978,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-25T09:09:07+00:00",
+   "checked_at": "2026-10-26T06:48:34+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -1927,7 +1995,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-25T09:09:07+00:00",
+   "checked_at": "2026-10-26T06:48:34+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1954,7 +2022,7 @@
     }
    ],
    "total": 5,
-   "last_success_at": "2026-10-25T09:09:07+00:00"
+   "last_success_at": "2026-10-26T06:48:34+00:00"
   },
   {
    "id": "maynotecha_inst",
@@ -1967,7 +2035,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-25T09:09:09+00:00",
+   "checked_at": "2026-10-26T06:48:36+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -1984,7 +2052,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-25T09:09:09+00:00",
+   "checked_at": "2026-10-26T06:48:36+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2006,7 +2074,7 @@
     }
    ],
    "total": 1,
-   "last_success_at": "2026-10-25T09:09:09+00:00"
+   "last_success_at": "2026-10-26T06:48:36+00:00"
   },
   {
    "id": "anash",
@@ -2019,10 +2087,59 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-25T09:09:10+00:00",
+   "checked_at": "2026-10-26T06:48:37+00:00",
    "status": "ok",
-   "new": [],
+   "new": [
+    {
+     "id": "https://anash.org/?p=1125984",
+     "title": "Live: 12th Sefer Torah Hakloli Celebration in Argentina",
+     "url": "https://anash.org/live-grand-siyum-of-12th-sefer-torah-hakloli/",
+     "date": "Sun, 25 Oct 2026 20:54:39 +0000",
+     "blurb": "Join live at 4:30 PM ET : The historic siyum of the 12th Sefer Torah Hakloli, written in accordance with the Rebbe’s directive to unite the Jewish people, will take place today in Buenos Aires, Argentina and will be streamed live on Anash.org.",
+     "first_seen": "2026-10-26T06:48:37+00:00"
+    },
+    {
+     "id": "https://anash.org/?p=1125869",
+     "title": "New Likutei Torah Online Unpacks Every Maamar",
+     "url": "https://anash.org/new-likutei-torah-online-unpacks-every-maamar/",
+     "date": "Sun, 25 Oct 2026 18:12:00 +0000",
+     "blurb": "A new free website opens the Chassidishe Parsha to every learner: all 412 maamarim of the Alter Rebbe’s Torah Ohr and Likkutei Torah, in the original Hebrew with an English translation and an explanation of every section.",
+     "first_seen": "2026-10-26T06:48:37+00:00"
+    },
+    {
+     "id": "https://anash.org/?p=1125944",
+     "title": "2,000 Students Join Outdoor Havdalah by the Rebbe’s Home",
+     "url": "https://anash.org/2000-students-join-outdoor-havdalah-by-the-rebbes-home/",
+     "date": "Sun, 25 Oct 2026 15:55:23 +0000",
+     "blurb": "A huge outdoor Havdalah ceremony took place outside the Rebbe’s house at 1304 President Street, at the Chabad on Campus International Pegisha.",
+     "first_seen": "2026-10-26T06:48:37+00:00"
+    }
+   ],
    "latest": [
+    {
+     "id": "https://anash.org/?p=1125984",
+     "title": "Live: 12th Sefer Torah Hakloli Celebration in Argentina",
+     "url": "https://anash.org/live-grand-siyum-of-12th-sefer-torah-hakloli/",
+     "date": "Sun, 25 Oct 2026 20:54:39 +0000",
+     "blurb": "Join live at 4:30 PM ET : The historic siyum of the 12th Sefer Torah Hakloli, written in accordance with the Rebbe’s directive to unite the Jewish people, will take place today in Buenos Aires, Argentina and will be streamed live on Anash.org.",
+     "first_seen": "2026-10-26T06:48:37+00:00"
+    },
+    {
+     "id": "https://anash.org/?p=1125869",
+     "title": "New Likutei Torah Online Unpacks Every Maamar",
+     "url": "https://anash.org/new-likutei-torah-online-unpacks-every-maamar/",
+     "date": "Sun, 25 Oct 2026 18:12:00 +0000",
+     "blurb": "A new free website opens the Chassidishe Parsha to every learner: all 412 maamarim of the Alter Rebbe’s Torah Ohr and Likkutei Torah, in the original Hebrew with an English translation and an explanation of every section.",
+     "first_seen": "2026-10-26T06:48:37+00:00"
+    },
+    {
+     "id": "https://anash.org/?p=1125944",
+     "title": "2,000 Students Join Outdoor Havdalah by the Rebbe’s Home",
+     "url": "https://anash.org/2000-students-join-outdoor-havdalah-by-the-rebbes-home/",
+     "date": "Sun, 25 Oct 2026 15:55:23 +0000",
+     "blurb": "A huge outdoor Havdalah ceremony took place outside the Rebbe’s house at 1304 President Street, at the Chabad on Campus International Pegisha.",
+     "first_seen": "2026-10-26T06:48:37+00:00"
+    },
     {
      "id": "https://anash.org/?p=1125645",
      "title": "250 Bochurim Celebrate Tanya Mastery at Crown Heights Siyum",
@@ -2120,8 +2237,8 @@
      "first_seen": "2026-10-18T04:52:22+00:00"
     }
    ],
-   "total": 3,
-   "last_success_at": "2026-10-25T09:09:10+00:00"
+   "total": 6,
+   "last_success_at": "2026-10-26T06:48:37+00:00"
   },
   {
    "id": "chabadinfo",
@@ -2134,7 +2251,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-25T09:09:11+00:00",
+   "checked_at": "2026-10-26T06:48:38+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -2151,7 +2268,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-25T09:09:11+00:00",
+   "checked_at": "2026-10-26T06:48:38+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -2168,7 +2285,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-25T09:09:11+00:00",
+   "checked_at": "2026-10-26T06:48:38+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2214,7 +2331,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-10-25T09:09:11+00:00"
+   "last_success_at": "2026-10-26T06:48:38+00:00"
   },
   {
    "id": "kehot",
@@ -2227,7 +2344,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-25T09:09:14+00:00",
+   "checked_at": "2026-10-26T06:48:41+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2497,12 +2614,12 @@
     }
    ],
    "total": 190,
-   "last_success_at": "2026-10-25T09:09:14+00:00"
+   "last_success_at": "2026-10-26T06:48:41+00:00"
   }
  ],
  "browser_checks": {
   "lahak": {
-   "checked_at": "2026-10-25T06:07:20+00:00",
+   "checked_at": "2026-10-26T06:46:28+00:00",
    "items": [
     {
      "id": "7562618",
@@ -2576,10 +2693,10 @@
      "new": false
     }
    ],
-   "note": "עמוד הבית ועמוד המאמר החדש נטענו בדפדפן. אומתו שער, פתח דבר ופתיחת PDF בן 12 עמודים: וה׳ פקד את שרה תשמ״ג, הנחה בלתי מוגה בהוצאה חדשה ומתוקנת לשבת וירא תשפ״ז. תשמ״ג היא שנת האמירה; מועד פרסום מדויק לא אומת."
+   "note": "עמוד הבית נטען, ללא קונטרס חדש נוסף. טיוטת וה׳ פקד את שרה מאתמול אומתה חזותית מול שער, פתח דבר ופתיחת PDF בן 12 עמודים ואושרה. תשמ״ג היא שנת האמירה, ולא תאריך הפרסום."
   },
   "alonei_chabad": {
-   "checked_at": "2026-10-25T06:07:20+00:00",
+   "checked_at": "2026-10-26T06:46:28+00:00",
    "items": [
     {
      "id": "ZnQ5MHplYWZo",
@@ -2666,27 +2783,27 @@
      "issued_for": "ערב שבת קודש פרשת לך לך, י\"ב במרחשון תשפ\"ז (23.10.2026)"
     }
    ],
-   "checked_at": "2026-10-25T06:07:20+00:00",
+   "checked_at": "2026-10-26T06:46:28+00:00",
    "note": "עמוד שיחת השבוע נטען; הגיליון האחרון נותר 2077 לפרשת לך לך, המיועד ל־23.10.2026. מועד הגילוי הראשון נשמר."
   },
   "derher": {
    "items": [],
-   "checked_at": "2026-10-25T06:07:20+00:00",
+   "checked_at": "2026-10-26T06:46:28+00:00",
    "note": "ארכיון הגיליונות נטען; קישורי השנים מגיעים עד תשפ״ו. לא אומת גיליון חדש לתשפ״ז."
   },
   "avita": {
    "items": [],
-   "checked_at": "2026-10-25T06:07:20+00:00",
+   "checked_at": "2026-10-26T06:46:28+00:00",
    "note": "עמוד המקור נטען; הכתבה הקיימת היא מ־15.02.2021, ולא זוהה בה פרסום חדש."
   },
   "beitchabad": {
    "items": [],
-   "checked_at": "2026-10-25T06:07:20+00:00",
+   "checked_at": "2026-10-26T06:46:28+00:00",
    "note": "עמוד הבית נטען; לא זוהה פרסום כתוב חדש עם ייחוס מאומת למאמר, שיחה או מכתב מסוים. וידאו הוחרג."
   },
   "maynotecha_inst": {
    "items": [],
-   "checked_at": "2026-10-25T06:07:20+00:00",
+   "checked_at": "2026-10-26T06:46:28+00:00",
    "note": "עמוד האודות נטען; התיאור הכללי אינו מזהה פרסום חדש מתוארך."
   },
   "hageula": {
@@ -2764,7 +2881,7 @@
      "first_seen": "2026-10-24T05:06:24+00:00"
     }
    ],
-   "checked_at": "2026-10-25T06:07:20+00:00",
+   "checked_at": "2026-10-26T06:46:28+00:00",
    "note": "מדור ההוצאה לאור נטען; הפרסום האחרון נותר גיליון ההערות 28215. לא זוהה פרסום כתוב חדש במדור. מועדי הגילוי והפרסום הקיימים נשמרו."
   },
   "chabadinfo": {
@@ -2777,27 +2894,27 @@
      "published_at": "2026-10-16"
     }
    ],
-   "checked_at": "2026-10-25T06:07:20+00:00",
-   "note": "עמוד בית המדרש, פרסום גיליון ד׳ (תרי״א) וה־PDF המקורי בן 48 עמודים נטענו. תקציר הטיוטה הקודמת אומת מול השער, פתח הדבר ותוכן העניינים ואושר. וידאו הוחרג."
+   "checked_at": "2026-10-26T06:46:28+00:00",
+   "note": "מדור בית מדרש והמאמר 1376816 נטענו. שער ה־PDF מציג מאמר מהר״ש, הנחת הרש״ב, שכבר מופיע דרך אתר הגאולה; לא נוסף כפרסום כפול. שיעורי וידאו ושמע הוחרגו."
   },
   "chabadlibrary": {
    "items": [],
-   "checked_at": "2026-10-25T06:07:20+00:00",
+   "checked_at": "2026-10-26T06:46:28+00:00",
    "note": "עמוד הספרים נטען בדפדפן עם קטגוריות הספרים; אין רשימת פרסומים חדשים מתוארכים."
   },
   "chassidutbehirah": {
    "items": [],
-   "checked_at": "2026-10-25T06:07:20+00:00",
+   "checked_at": "2026-10-26T06:46:28+00:00",
    "note": "הקטלוג המקורי נטען, ללא מועדי הוספה מאומתים. שנות המאמרים אינן תאריכי פרסום."
   },
   "chabadlibrarybooks": {
    "items": [],
    "checked_at": "2026-10-22T05:08:02+00:00",
    "note": "כשל החיבור נמשך גם בניסיון חוזר אחד; מועד הבדיקה המוצלחת הקודם והנתונים הקיימים נשמרו.",
-   "last_attempt_at": "2026-10-25T06:07:20+00:00"
+   "last_attempt_at": "2026-10-26T06:46:28+00:00"
   },
   "sie_weekly": {
-   "checked_at": "2026-10-25T06:07:20+00:00",
+   "checked_at": "2026-10-26T06:46:28+00:00",
    "items": [
     {
      "title": "SIE Weekly · Noach · Likkutei Sichos Volume 3",
@@ -2818,9 +2935,19 @@
      "sections": [
       "whatsnew"
      ]
+    },
+    {
+     "title": "SIE Weekly · Vayeira · Likkutei Sichos Volume 3",
+     "url": "https://drive.google.com/file/d/1IN8K2djxXU0RNBwYFPDyS84kJmmXKRyX/view",
+     "lang": "en",
+     "first_seen": "2026-10-26T06:46:28+00:00",
+     "genre": "תרגום שיחה",
+     "sections": [
+      "whatsnew"
+     ]
     }
    ],
-   "note": "עמוד SIE Weekly נטען; בחלק ג׳ קישורי נח ולך לך קיימים, ואילו כפתורי ההמשך אינם קישורי הורדה פעילים. לא אומת פריט חדש."
+   "note": "עמוד הארכיון נטען ונמצא קישור וירא חדש בחלק ג׳. PDF בן 24 עמודים נטען; השער מזהה וירא, כרך 3, עמ׳ 765–772. תאריך פרסום מדויק לא אומת; נשמר מועד גילוי ראשון. נכתבה טיוטה לא מאושרת."
   },
   "hiskashrus": {
    "checked_at": "2026-10-23T05:40:44+00:00",
@@ -2838,7 +2965,7 @@
   },
   "hebrewbooks": {
    "items": [],
-   "checked_at": "2026-10-25T06:07:20+00:00",
+   "checked_at": "2026-10-26T06:46:28+00:00",
    "note": "עמוד הבית נטען בדפדפן. ההוספה האחרונה המוצהרת נותרה 50 ספרים בר״ח אלול תשפ״ו, מחוץ לחלון הפרסום."
   }
  }

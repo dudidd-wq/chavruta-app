@@ -1,1 +1,46 @@
-[]
+[
+ {
+  "key": "174b084ab2aa4fa4",
+  "source": "SIE Weekly",
+  "source_id": "sie_weekly",
+  "title": "Download",
+  "url": "https://drive.google.com/file/d/1IN8K2djxXU0RNBwYFPDyS84kJmmXKRyX/view",
+  "lang": "en",
+  "blurb": "",
+  "medium": "bulletin",
+  "first_seen": "2026-10-26T06:47:55+00:00"
+ },
+ {
+  "key": "2153ea5a3c50ce99",
+  "source": "Anash.org",
+  "source_id": "anash",
+  "title": "Live: 12th Sefer Torah Hakloli Celebration in Argentina",
+  "url": "https://anash.org/live-grand-siyum-of-12th-sefer-torah-hakloli/",
+  "lang": "en",
+  "blurb": "Join live at 4:30 PM ET : The historic siyum of the 12th Sefer Torah Hakloli, written in accordance with the Rebbe’s directive to unite the Jewish people, will take place today in Buenos Aires, Argentina and will be streamed live on Anash.org.",
+  "medium": "news",
+  "first_seen": "2026-10-26T06:48:37+00:00"
+ },
+ {
+  "key": "91ff4dbdfb6dd20f",
+  "source": "Anash.org",
+  "source_id": "anash",
+  "title": "New Likutei Torah Online Unpacks Every Maamar",
+  "url": "https://anash.org/new-likutei-torah-online-unpacks-every-maamar/",
+  "lang": "en",
+  "blurb": "A new free website opens the Chassidishe Parsha to every learner: all 412 maamarim of the Alter Rebbe’s Torah Ohr and Likkutei Torah, in the original Hebrew with an English translation and an explanation of every section.",
+  "medium": "news",
+  "first_seen": "2026-10-26T06:48:37+00:00"
+ },
+ {
+  "key": "37c78596c642add5",
+  "source": "Anash.org",
+  "source_id": "anash",
+  "title": "2,000 Students Join Outdoor Havdalah by the Rebbe’s Home",
+  "url": "https://anash.org/2000-students-join-outdoor-havdalah-by-the-rebbes-home/",
+  "lang": "en",
+  "blurb": "A huge outdoor Havdalah ceremony took place outside the Rebbe’s house at 1304 President Street, at the Chabad on Campus International Pegisha.",
+  "medium": "news",
+  "first_seen": "2026-10-26T06:48:37+00:00"
+ }
+]
