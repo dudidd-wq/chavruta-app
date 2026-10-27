@@ -254,8 +254,10 @@
   "2be43c5bf52ff951": {
     "he": "תרגום לאנגלית של שיחת וירא מתוך לקוטי שיחות חלק ג׳, במסגרת SIE Weekly (PDF). בשער החוברת מצוין שהיא כוללת את עמודים 765–772 בכרך המקורי.",
     "basis": "פתיחת הקובץ",
-    "checked": false,
+    "checked": true,
     "drafted_at": "2026-10-26T06:46:28+00:00",
-    "source_url": "https://drive.google.com/file/d/1IN8K2djxXU0RNBwYFPDyS84kJmmXKRyX/view"
+    "source_url": "https://drive.google.com/file/d/1IN8K2djxXU0RNBwYFPDyS84kJmmXKRyX/view",
+    "checked_at": "2026-10-27T06:24:48+00:00",
+    "verification": "נפתח מחדש PDF המקור בן 24 עמודים בתאריך 27.10.2026. אומתו חזותית הכותרת וירא / VAYEIRA, כרך 3 ועמ׳ 765–772, מול הטיוטה שנכתבה ב־26.10.2026."
   }
 }
