@@ -102,3 +102,14 @@
     hyphens: manual;
   }
 }
+
+
+@media print {
+ .study-sheet h1 { font-size:18pt; }
+ .study-sheet h2 { font-size:14pt; }
+ .study-sheet :is(h1,h2,h3) { break-after:avoid; }
+ .study-sheet p { orphans:3; widows:3; }
+ .study-sheet blockquote { break-inside:auto !important; }
+ .sheet-meta nav { display:none; }
+ .study-sheet, .sheet-meta { direction:rtl; }
+}

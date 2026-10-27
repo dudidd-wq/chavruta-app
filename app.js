@@ -127,6 +127,7 @@ function loadChunk(name) {
     (D.waiting[name] = D.waiting[name] || []).push(accept);
     const newsVersion = document.querySelector('meta[name="chavruta-news-version"]')?.content || "news";
     const query = new URLSearchParams();
+    if (name === "sheets") query.set("v", document.querySelector('meta[name="chavruta-sheets-version"]')?.content || "sheets");
     if (name === "learning") query.set("v", document.querySelector('meta[name="chavruta-learning-version"]')?.content || "learning");
     if (name === "new") query.set("v", newsVersion + "-" + Math.floor(Date.now() / 300000));
     if (name === "core" || name === "tree" || name === "book-catalog" || /^tree-(?:u[0-9]+|t)$/.test(name)) query.set("v", document.querySelector('meta[name="chavruta-tree-version"]')?.content || "tree");
@@ -176,8 +177,8 @@ function initCore(core) {
 const PAR_CACHE = new Map();
 function docsOf(p) {
   let r = PAR_CACHE.get(p); if (r) return r;
-  const ds = S.core.docs.filter(d => (d.p || S.home) === p);
-  const nodes = S.core.nodes.filter(n => (n.p || S.home) === p);
+  const ds = S.core.docs.filter(d => !isCalendarDoc(d) && (d.p || S.home) === p);
+  const nodes = S.core.nodes.filter(n => n.gate !== "calendar" && (n.p || S.home) === p);
   const cats = {}; for (const n of nodes) cats[n.cat] = (cats[n.cat] || 0) + 1;
   r = { p, verse: ds.filter(d => d.kind === "verse").sort((a, b) => a.order - b.order), chain: ds.filter(d => d.kind === "chain").sort((a, b) => a.seq - b.seq),
     dorot: ds.filter(d => d.kind === "dorot"), books: ds.filter(d => d.kind !== "dorot").sort((a, b) => a.n - b.n), nodes, cats };
@@ -260,7 +261,16 @@ function verseLabel(r) {
   if (c1 === c2) return `${gem(c1).replace(/[׳״]/g, "")}, ${gem(v1).replace(/[׳״]/g, "")}${v2 !== v1 ? "–" + gem(v2).replace(/[׳״]/g, "") : ""}`;
   return `${gem(c1).replace(/[׳״]/g, "")}, ${gem(v1).replace(/[׳״]/g, "")}–${gem(c2).replace(/[׳״]/g, "")}, ${gem(v2).replace(/[׳״]/g, "")}`;
 }
+function isCalendarDoc(d) { return d?.gate === "calendar" && !!d.occasion; }
+function docContext(d) {
+  return isCalendarDoc(d) ? { label: d.occasion, href: mkHash(["learn", "calendar"]), print: "חברותא · " + d.occasion }
+    : { label: "פרשת " + (d.p || S.home), href: parshaHrefOf(d.p || S.home), print: "חברותא · פרשת " + (d.p || S.home) };
+}
+function readerBooks(d) {
+  return isCalendarDoc(d) ? S.core.docs.filter(x => isCalendarDoc(x) && x.occasion === d.occasion && x.kind !== "dorot") : S.books;
+}
 function docWhere(d) {
+  if (isCalendarDoc(d)) return d.kind === "dorot" ? d.occasion + " · שרשרת הדורות" : d.occasion;
   if (d.kind === "verse") return d.range ? "בראשית " + verseLabel(d.range) : "יחידה כללית";
   if (d.kind === "chain") return d.anchor;
   return "שרשרת הדורות";
@@ -490,8 +500,8 @@ function curParsha() {
   const { seg: p, q } = parseHash(), home = S.core?.parsha || "בראשית";
   if (p[0] === "parsha" && p[1]) return p[1];
   if (p[0] === "tree" && p[1] === "p" && p[2]) return p[2];
-  if (p[0] === "biur") return getDoc(p[1])?.p || home;
-  if (p[0] === "item") return getNode(p.slice(1).join("/"))?.p || home;
+  if (p[0] === "biur") { const d = getDoc(p[1]); return isCalendarDoc(d) ? null : d?.p || home; }
+  if (p[0] === "item") { const n = getNode(p.slice(1).join("/")); return isCalendarDoc(n) ? null : n?.p || home; }
   if (p[0] === "biurim") return home;
   if (["sources", "status", "coverage", "closure"].includes(p[0])) return (hasDocs(q.get("p")) && q.get("p")) || S.par || home;
   return null;
@@ -1746,7 +1756,7 @@ function studyHref(row) { return mkHash(["biur", row.d.id, row.p.part].filter(Bo
 function studyDate(t) { return new Intl.DateTimeFormat("he-IL", { day: "numeric", month: "long", hour: "2-digit", minute: "2-digit", timeZone: "Asia/Jerusalem" }).format(t); }
 function studyLinks() {
   return h("nav", { class: "study-links no-print", "aria-label": "הלימוד האישי שלי" },
-    [["study", "הלימוד שלי"], ["notebook", "מחברת וגיבוי"], ["saved", "המקורות שלי"], ["later", "לקריאה בהמשך"]].map(([view, title]) => h("a", { class: "btn sm", href: mkHash([view]) }, title)));
+    [["sheets", "דפי שיעור ולימוד"], ["study", "הלימוד שלי"], ["notebook", "מחברת וגיבוי"], ["saved", "המקורות שלי"], ["later", "לקריאה בהמשך"]].map(([view, title]) => h("a", { class: "btn sm", href: mkHash([view]) }, title)));
 }
 function studyShelf() {
   const rows = studyRecent(S.core.docs, readPos, Date.now(), 3);
@@ -1766,6 +1776,45 @@ VIEWS.study = function () {
   main.append(h("p", null, h("a", { href: mkHash(["notebook"]) }, "גיבוי והעברה למכשיר אחר")));
   window.scrollTo(0, 0);
 };
+
+/* Approved sheets remain separate from commentary IDs, source UIDs and counts. */
+function sheetSearch(rows, query) {
+  const words = norm(query).split(/\s+/).filter(Boolean);
+  return words.length ? rows.filter(s => words.every(w => norm(s.title + ' ' + s.text).includes(w))) : rows;
+}
+async function sheetSearchResults(query, main, ctx) {
+  const rows = sheetSearch(await loadChunk('sheets'), query);
+  if (!ctx.alive() || !rows.length) return 0;
+  main.append(h('section', {class:'res-grp',id:'res-sheets'}, h('h2',null,'דפי שיעור ולימוד'), ...rows.map(s => h('a',{class:'res-it',href:mkHash(['sheets',s.id])},s.title))));
+  return rows.length;
+}
+VIEWS.sheets = async function(rest,q,ctx) {
+  Aside.detach(); const main=$('#view');main.className='main page';main.textContent='טוען דפי שיעור…';
+  let rows; try { rows=await loadChunk('sheets'); } catch(e) { if(ctx.alive()) main.textContent='לא ניתן לטעון את דפי השיעור. אפשר לנסות שוב.';return; }
+  if(!ctx.alive())return;
+  const sheet=rows.find(s=>s.id===rest[0]);
+  main.replaceChildren(h('nav',{class:'no-print'},h('a',{href:mkHash(['home'])},'חברותא'),' · ',h('a',{href:mkHash(['sheets'])},'דפי שיעור ולימוד')));
+  if(!rest.length) {
+    document.title='דפי שיעור ולימוד · חברותא';
+    main.append(h('h1',null,'דפי שיעור ולימוד'),...rows.map(s=>h('p',null,h('a',{href:mkHash(['sheets',s.id])},s.title),' · גרסה '+s.version)));
+  } else if(!sheet) main.append(h('h1',null,'דף השיעור לא נמצא'));
+  else {
+    document.title=sheet.title+' · חברותא';
+    const c=sheet.calendar;
+    main.append(h('header',{class:'sheet-meta'},h('p',null,[c.parsha||c.occasion,c.hebrew_date,c.gregorian_date,'גרסה '+sheet.version].filter(Boolean).join(' · ')),h('p',null,'כיסוי: '+sheet.sources.map(s=>s.title+' — '+s.anchor).join('; ')+(sheet.coverage_complete?'':' · הדף אינו משלים את הפרשה')),h('nav',{'aria-label':'ביאורי המקור'},...sheet.sources.map(s=>h('a',{class:'btn sm',href:mkHash(['biur',s.doc])},s.title))),h('button',{class:'btn no-print',onclick:()=>window.print()},'הדפסת A4')),
+      h('article',{class:'biur prose study-sheet',lang:'he',dir:'rtl',html:sheet.html}));
+  }
+  window.scrollTo(0,0);
+};
+let sheetPrintHeader = null;
+window.addEventListener('beforeprint', () => {
+  if (R.view !== 'sheets' || !document.querySelector('.study-sheet')) return;
+  const header = document.getElementById('pagehead');
+  if (header) { sheetPrintHeader = header.textContent; header.textContent = '@page { @top-right { content: ' + JSON.stringify(document.title.replace(/ · חברותא$/, '')) + '; font:9pt "Assistant",sans-serif; } }'; }
+});
+window.addEventListener('afterprint', () => {
+  if (sheetPrintHeader !== null) { const header = document.getElementById('pagehead'); if (header) header.textContent = sheetPrintHeader; sheetPrintHeader = null; }
+});
 
 /* חברותא · סמל הפריט, כרטיס הפריט וקפיצה אל המקום המדויק בביאור */
 
@@ -2158,7 +2207,7 @@ function libraryList(host, o = {}) {
 }
 /** ״המשך מאיפה שעצרת״: הביאור שנקרא לאחרונה — בפרשה par, או בכל הפרשיות (בשער) */
 function continueLink(par) {
-  const best = studyRecent(S.core.docs.filter(d => !par || (d.p || S.home) === par), readPos, Date.now(), 1)[0];
+  const best = studyRecent(S.core.docs.filter(d => !par || (!isCalendarDoc(d) && (d.p || S.home) === par)), readPos, Date.now(), 1)[0];
   if (!best) return null;
   return h("a", { class: "continue", href: mkHash(["biur", best.d.id, best.p.part || ""].filter((x, i) => i < 2 || x), { a: best.p.id || "" }) }, h("small", null, "המשך מאיפה שעצרת"), h("b", null, trunc(best.d.title, 70)));
 }
@@ -2300,12 +2349,13 @@ function endMatter(d, doc) {
   const mem = (S.links.d[d.id] || []).map(getNode).filter(Boolean);
   const loose = mem.filter(n => n.cat !== "covered");
   const open = doc.parts.find(p => p.id === "open" || /פתוח לבקרה|שאלות שנבדקו/.test(p.title));
-  const idx = S.books.findIndex(x => x.id === (d.kind === "dorot" ? d.parent : d.id));
-  const next = S.books[idx + 1], dd = d.kind === "chain" ? S.docs.get(d.id + "d") : null;
+  const books = readerBooks(d);
+  const idx = books.findIndex(x => x.id === (d.kind === "dorot" ? d.parent : d.id));
+  const next = idx >= 0 ? books[idx + 1] : null, dd = d.kind === "chain" ? S.docs.get(d.id + "d") : null;
   const up = h("section", { class: "end-sec", id: "whatnext" }, h("h2", null, "מה עולה מכאן"));
   const ul = h("ul", { class: "end-list" });
   if (open) ul.append(h("li", null, h("a", { href: mkHash(["biur", d.id, open.id]), onclick: e => { e.preventDefault(); gotoPart(d, open.id, true); } }, "השאלות שנבדקו: מה הוכרע ומה אין בידינו להכריע"), h("small", null, "בסוף הביאור, לפני בדיקה אנושית")));
-  if (loose.length) ul.append(h("li", null, h("a", { href: mkHash(["sources"], { p: d.p || "", unit: d.kind === "verse" ? d.key : "", chain: d.kind !== "verse" ? (d.kind === "dorot" ? S.docs.get(d.parent)?.key : d.key) : "", st: "mentioned" }) }, `${loose.length} פריטים שהוזכרו או הושמטו ולא נותחו במלואם`), h("small", null, loose.slice(0, 3).map(n => trunc(cleanT(n.t), 30)).join("; "))));
+  if (loose.length) ul.append(h("li", null, h("a", { href: mkHash(["sources"], { p: isCalendarDoc(d) ? "all" : d.p || "", unit: d.kind === "verse" ? d.key : "", chain: d.kind !== "verse" ? (d.kind === "dorot" ? S.docs.get(d.parent)?.key : d.key) : "", st: "mentioned" }) }, `${loose.length} פריטים שהוזכרו או הושמטו ולא נותחו במלואם`), h("small", null, loose.slice(0, 3).map(n => trunc(cleanT(n.t), 30)).join("; "))));
   if (dd) ul.append(h("li", null, h("a", { href: mkHash(["biur", dd.id]) }, "שרשרת הדורות של המאמר"), h("small", null, "אותו מאמר, לפי סדר הדורות")));
   if (next) ul.append(h("li", null, h("a", { href: mkHash(["biur", next.id]) }, "הביאור הבא: " + trunc(next.title, 60)), h("small", null, docWhere(next))));
   up.append(ul.children.length ? ul : h("p", { class: "end-empty" }, "אין המשך מסומן."));
@@ -2323,7 +2373,7 @@ function roundsBox(d) {
 }
 function pager(d) {
   const base = d.kind === "dorot" ? S.docs.get(d.parent) : d;
-  const i = S.books.findIndex(x => x.id === base.id), prev = S.books[i - 1], next = S.books[i + 1];
+  const books = readerBooks(d), i = books.findIndex(x => x.id === base?.id), prev = i >= 0 ? books[i - 1] : null, next = i >= 0 ? books[i + 1] : null;
   const a = (x, lab) => x ? h("a", { href: mkHash(["biur", x.id]) }, h("small", null, lab), trunc(x.title, 52)) : h("span");
   return h("nav", { class: "pager no-print", "aria-label": "מעבר בין ביאורים" }, a(next, "הבא ←"), a(prev, "→ הקודם"));
 }
@@ -2506,13 +2556,14 @@ VIEWS.biur = async function (rest, q, ctx) {
   const parent = d.kind === "dorot" ? S.docs.get(d.parent) : null;
   const nitems = (S.links.d[d.id] || []).length;
   const hero = h("header", { class: "hero" },
-    h("nav", { class: "crumbs", "aria-label": "מיקום" }, h("a", { href: mkHash(["home"]) }, "חברותא"), h("span", { class: "sep", "aria-hidden": "true" }, "›"), h("a", { href: parshaHrefOf(d.p || S.home) }, "פרשת " + (d.p || S.home)), parent ? [h("span", { class: "sep", "aria-hidden": "true" }, "›"), h("a", { href: mkHash(["biur", parent.id]) }, trunc(parent.title, 40))] : null),
+    h("nav", { class: "crumbs", "aria-label": "מיקום" }, h("a", { href: mkHash(["home"]) }, "חברותא"), h("span", { class: "sep", "aria-hidden": "true" }, "›"), h("a", { href: docContext(d).href }, docContext(d).label), parent ? [h("span", { class: "sep", "aria-hidden": "true" }, "›"), h("a", { href: mkHash(["biur", parent.id]) }, trunc(parent.title, 40))] : null),
     h("h1", null, doc.hero.h1 || d.title),
     h("div", { class: "metaline" }, h("span", null, d.kind === "verse" ? docWhere(d) : d.kind === "chain" ? "שרשרת מאמרים · " + d.anchor : "שרשרת הדורות"), nitems ? h("span", null, nitems + " פריטים") : null, stateChip(d),
       h("button", { class: "linkbtn no-print", onclick: () => copyText(absUrl(mkHash(["biur", d.id]))) }, icon("i-link"), "העתק קישור"), Tts.button(art)),
     doc.hero.lead ? h("p", { class: "lead", html: doc.hero.lead }) : null,
     doc.hero.status ? h("p", { class: "statusline", html: doc.hero.status }) : null);
   const dd = d.kind === "chain" ? S.docs.get(d.id + "d") : null;
+  if (parent) hero.append(h("p", { class: "no-print sibling" }, h("a", { class: "linkbtn", href: mkHash(["biur", parent.id]) }, "חזרה לביאור")));
   if (dd) hero.append(h("p", { class: "no-print sibling" }, h("a", { class: "linkbtn", href: mkHash(["biur", dd.id]) }, "שרשרת הדורות של המאמר הזה")));
 
   const rail = h("nav", { class: "rail no-print", "aria-label": "תוכן עניינים" });
@@ -3260,8 +3311,8 @@ SourcesView.render = async function (main, q, ctx, embedded) {
   // בחירת הפרשה: המקורות של כל פרשה שיש בה ביאורים (בבראשית — מפת הפרשה; בנח — כרטיסי השרשראות), או כל הפרשיות יחד
   const pars = (S.core.parshiyot || []).map(x => x.n).filter(hasDocs);
   const parSel = h("label", null, "פרשה", h("select", { onchange: e => { f.p = e.target.value; f.unit = ""; f.chain = ""; go(mkHash(["sources"], srcQuery(f)), true); } },
-    ...pars.map(x => h("option", { value: x, selected: f.p === x }, "פרשת " + x)), h("option", { value: "all", selected: f.p === "all" }, "כל הפרשיות")));
-  const pname = f.p === "all" ? "בכל הפרשיות" : "בפרשת " + f.p;
+    ...pars.map(x => h("option", { value: x, selected: f.p === x }, "פרשת " + x)), h("option", { value: "all", selected: f.p === "all" }, "כל הביאורים")));
+  const pname = f.p === "all" ? "בכל תחומי הלימוד" : "בפרשת " + f.p;
   if (!embedded) main.append(h("h1", { class: "page-title" }, "מקורות"), h("a", { class: "btn sm", href: mkHash(["saved"]) }, "המקורות שלי"), h("p", { class: "lede" }, `${total} הפריטים ${pname}: מאמרים, הנחות, שיחות ומכתבים של שבעה הרביים. לכל פריט שלוש שנים (אמירה, כתיבה, פרסום), מקור, והמקומות שבהם הוא מנותח בביאורים.`));
   const sync = () => quietHash(embedded ? mkHash(parRoot(), { tab: "sources", ...srcQuery(f), p: "" }) : mkHash(["sources"], srcQuery(f)));
   const sel = (label, key, opts, val) => h("label", null, label, h("select", { onchange: e => { f[key] = e.target.value; refresh(); } }, ...opts.map(([v, l]) => h("option", { value: v, selected: v === val }, l))));
@@ -3271,7 +3322,7 @@ SourcesView.render = async function (main, q, ctx, embedded) {
   const yin = key => h("input", { type: "text", inputmode: "text", placeholder: "תשכ״ח או 5728", value: f[key], "aria-label": key === "y1" ? "משנה" : "עד שנה", style: { width: "6.4rem" }, oninput: debounce(e => { f[key] = e.target.value; refresh(); }, 200) });
   const vdocs = pdocs ? pdocs.verse : S.core.docs.filter(d => d.kind === "verse"), cdocs = pdocs ? pdocs.chain : S.core.docs.filter(d => d.kind === "chain");
   const unitSel = !vdocs.length ? null : sel("מכוסה ביחידה", "unit", [["", "הכול"], ...vdocs.map(d => [d.key, `${d.verses === "כללי" ? "כללי" : d.verses} · ${trunc(d.title, 34)}`])], f.unit);
-  const chainSel = sel("בשרשרת", "chain", [["", "הכול"], ...cdocs.map(d => [d.key, (f.p === "all" ? "פרשת " + (d.p || S.home) + " · " : "") + trunc(d.title, 40)])], f.chain);
+  const chainSel = sel("בשרשרת", "chain", [["", "הכול"], ...cdocs.map(d => [d.key, (f.p === "all" ? docContext(d).label + " · " : "") + trunc(d.title, 40)])], f.chain);
   const qin = h("label", null, "חיפוש בטבלה", h("input", { type: "search", value: f.q, placeholder: "כותרת, ספר, שנה…", oninput: debounce(e => { f.q = e.target.value; refresh(); }, 140) }));
   const filters = h("div", { class: "ws-filters srcf", role: "search", "aria-label": "מסנני המקורות" }, embedded ? null : parSel, qin, genSel,
     sel("סוג", "ty", [["", "הכול"], ...TYPES.map(t => [t, t])], f.ty), sel("סטטוס", "st", [["", "הכול"], ...CATS.map(c => [c, CAT[c].short])], f.st), unitSel, chainSel,
@@ -3324,8 +3375,8 @@ VIEWS.item = async function (rest, q, ctx) {
   const main = $("#view"); main.className = "main page"; main.textContent = "";
   if (!n) { main.append(h("div", { class: "empty" }, h("b", null, "הפריט לא נמצא"), id, h("br"), h("a", { href: mkHash(["sources"]) }, "לרשימת המקורות"))); return; }
   document.title = nodeTitle(n, 50) + " · חברותא";
-  const np = n.p || S.home;
-  main.append(h("nav", { class: "crumbs", "aria-label": "מיקום" }, h("a", { href: parshaHrefOf(np) }, "פרשת " + np), h("span", { class: "sep", "aria-hidden": "true" }, "›"), h("a", { href: mkHash(["sources"], { p: np }) }, "מקורות"), h("span", { class: "sep", "aria-hidden": "true" }, "›"), h("span", { "aria-current": "page" }, n.rb || "מחבר לא זוהה")), h("div", { class: "itempage" }, itemCard(id, { mode: "page" })));
+  const np = isCalendarDoc(n) ? "all" : n.p || S.home;
+  main.append(h("nav", { class: "crumbs", "aria-label": "מיקום" }, h("a", { href: docContext(n).href }, docContext(n).label), h("span", { class: "sep", "aria-hidden": "true" }, "›"), h("a", { href: mkHash(["sources"], { p: np }) }, "מקורות"), h("span", { class: "sep", "aria-hidden": "true" }, "›"), h("span", { "aria-current": "page" }, n.rb || "מחבר לא זוהה")), h("div", { class: "itempage" }, itemCard(id, { mode: "page" })));
   selectNode(id, { inDoc: true });
   window.scrollTo(0, 0);
 };
@@ -4575,7 +4626,7 @@ function learningCommentaryList(records, activeAnchor) {
     const doc = record.doc, links = record.anchors.filter(a => a.id !== activeAnchor);
     return h("li", null,
       h("h3", null, h("a", { href: mkHash(["biur", doc.id]) }, doc.title)),
-      doc.p ? h("p", { class: "muted" }, "פורסם בפרשת " + doc.p) : null,
+      (doc.gate === "calendar" && doc.occasion) ? h("p", { class: "muted" }, doc.occasion) : doc.p ? h("p", { class: "muted" }, "פורסם בפרשת " + doc.p) : null,
       links.length ? h("div", { class: "learning-tags" }, links.map(a => h("a", { class: "fchip", href: mkHash(["learn", a.gate, a.id]) }, a.title))) : null);
   }));
 }
@@ -5256,6 +5307,9 @@ VIEWS.search = async function (rest, q, ctx) {
     box.append(more); resBox.append(box);
     await draw();
   }
+  const sheetCount = await sheetSearchResults(qs, resBox, ctx).catch(() => 0);
+  if (sheetCount) status.append(` · ועוד ${sheetCount} דפי שיעור`);
+  if (!ctx.alive()) return;
   const noRes = h("div", { class: "empty" }, h("b", null, "לא נמצאו תוצאות"), "נסו מילה קצרה יותר, בלי תחילית, או בדקו את הסינון שלמעלה.");
   if (!resBox.children.length) resBox.append(noRes);
   window.scrollTo(0, 0);
@@ -5345,8 +5399,8 @@ function highlightWordsIn(root, qs) {
     document.title = saved.title; if (PH()) PH().textContent = saved.page; saved = null;
     document.querySelectorAll(".phead").forEach(e => e.remove());
   }
-  function pheadFor(unit, part, meta, parsha = S.par || S.home) {
-    return h("div", { class: "phead", "aria-hidden": "true" }, h("div", { class: "ph-top" }, h("span", null, parsha ? "חברותא · פרשת " + parsha : "חברותא"), h("span", null, "הופק מהאתר " + today())), h("p", { class: "ph-unit" }, unit), part ? h("p", { class: "ph-part" }, part) : null, meta ? h("div", { class: "ph-meta" }, meta) : null);
+  function pheadFor(unit, part, meta, parsha = S.par || S.home, contextLabel = "") {
+    return h("div", { class: "phead", "aria-hidden": "true" }, h("div", { class: "ph-top" }, h("span", null, contextLabel || (parsha ? "חברותא · פרשת " + parsha : "חברותא")), h("span", null, "הופק מהאתר " + today())), h("p", { class: "ph-unit" }, unit), part ? h("p", { class: "ph-part" }, part) : null, meta ? h("div", { class: "ph-meta" }, meta) : null);
   }
   function doPrint() { setTimeout(() => window.print(), 80); }
   function toBody(el) { area = h("div", { id: "print-area" }, el); document.body.append(area); }
@@ -5358,13 +5412,13 @@ function highlightWordsIn(root, qs) {
     begin(sec ? "part:" + part : "all", d.title + (sec ? " — " + title : ""), d.title + (sec ? " — " + title.slice(0, 60) : ""));
     if (sec) sec.classList.add("print-target");
     const meta = [d.state ? "מצב: " + d.state : "", docWhere(d)].filter(Boolean).join(" · ");
-    document.querySelector(".col")?.prepend(pheadFor(d.title, sec ? title : "כל הביאור", meta, d.p || S.home));
+    document.querySelector(".col")?.prepend(pheadFor(d.title, sec ? title : "כל הביאור", meta, d.p || S.home, docContext(d).print));
     doPrint();
   }
   function printCard(nid) {
     const n = getNode(nid); if (!n) return;
     begin("card", nodeTitle(n, 60), nodeTitle(n, 60));
-    toBody(h("div", null, pheadFor(nodeTitle(n, 120), "כרטיס פריט", n.rb, n.p || S.home), itemCard(nid, { mode: "print" })));
+    toBody(h("div", null, pheadFor(nodeTitle(n, 120), "כרטיס פריט", n.rb, n.p || S.home, docContext(n).print), itemCard(nid, { mode: "print" })));
     loadLinks().then(() => setTimeout(() => window.print(), 250));
   }
   function printItems(nodes, title) {
