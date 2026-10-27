@@ -1249,5 +1249,11 @@
     "why": "כרך ביאור הלכתי על הלכות ריבית ועיסקא בשולחן ערוך אדמו״ר הזקן; אינו ביאור של מאמר, שיחה או מכתב מסוימים ואינו גיליון, לפי תחום המדור המוגדר.",
     "checked_at": "2026-10-27T06:28:28+00:00",
     "source_url": "https://anash.org/new-sefer-explores-the-alter-rebbe-on-hilchos-ribis/"
+  },
+  "67cbf1d9dfa9e22c": {
+    "cls": "לא רלוונטי",
+    "why": "ה־PDF שנפתח מזהה בפתיחתו מדור ניצוצי רבי מתוך גיליון התקשרות צ״ה (95), ולא גיליון וירא תשפ״ז חדש. תווית הפיד אינה מוכיחה פרסום חדש; נשאר מחוץ למדור עד לאימות הוצאה חדשה.",
+    "checked_at": "2026-10-27T06:33:00+00:00",
+    "source_url": "https://torahprint.nyc3.cdn.digitaloceanspaces.com/pdfFiles/1793022130850_hx8nc_miflagacharedit.pdf"
   }
 }
