@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-27T06:35:00+00:00",
+ "generated_at": "2026-10-27T09:49:06+00:00",
  "sources": [
   {
    "id": "chabadlibrary",
@@ -12,7 +12,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-10-27T06:33:50+00:00",
+   "checked_at": "2026-10-27T09:47:52+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -30,7 +30,7 @@
     "primary",
     "whatsnew"
    ],
-   "checked_at": "2026-10-27T06:33:50+00:00",
+   "checked_at": "2026-10-27T09:47:52+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -47,7 +47,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-10-27T06:33:50+00:00",
+   "checked_at": "2026-10-27T09:47:52+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -64,7 +64,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-10-27T06:33:50+00:00",
+   "checked_at": "2026-10-27T09:47:52+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -82,7 +82,7 @@
     "primary",
     "whatsnew"
    ],
-   "checked_at": "2026-10-27T06:33:50+00:00",
+   "checked_at": "2026-10-27T09:47:52+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -102,7 +102,7 @@
     }
    ],
    "total": 132,
-   "last_success_at": "2026-10-27T06:33:50+00:00"
+   "last_success_at": "2026-10-27T09:47:52+00:00"
   },
   {
    "id": "chabadlibrarybooks",
@@ -115,7 +115,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-10-27T06:33:51+00:00",
+   "checked_at": "2026-10-27T09:47:53+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -133,12 +133,12 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-27T06:33:51+00:00",
+   "checked_at": "2026-10-27T09:47:53+00:00",
    "status": "ok",
    "new": [],
    "latest": [],
    "total": 1501,
-   "last_success_at": "2026-10-27T06:33:51+00:00"
+   "last_success_at": "2026-10-27T09:47:53+00:00"
   },
   {
    "id": "chassidut_org",
@@ -152,12 +152,12 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-27T06:33:52+00:00",
+   "checked_at": "2026-10-27T09:47:54+00:00",
    "status": "ok",
    "new": [],
    "latest": [],
    "total": 4,
-   "last_success_at": "2026-10-27T06:33:52+00:00"
+   "last_success_at": "2026-10-27T09:47:54+00:00"
   },
   {
    "id": "biurim",
@@ -171,7 +171,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-27T06:33:53+00:00",
+   "checked_at": "2026-10-27T09:47:56+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -217,7 +217,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-10-27T06:33:53+00:00"
+   "last_success_at": "2026-10-27T09:47:56+00:00"
   },
   {
    "id": "hm_monsey",
@@ -231,7 +231,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-27T06:33:55+00:00",
+   "checked_at": "2026-10-27T09:47:58+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -277,7 +277,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-10-27T06:33:55+00:00"
+   "last_success_at": "2026-10-27T09:47:58+00:00"
   },
   {
    "id": "hiskashrus",
@@ -291,7 +291,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-27T06:33:57+00:00",
+   "checked_at": "2026-10-27T09:47:59+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -346,7 +346,7 @@
     }
    ],
    "total": 253,
-   "last_success_at": "2026-10-27T06:33:57+00:00"
+   "last_success_at": "2026-10-27T09:47:59+00:00"
   },
   {
    "id": "lichyot_chassidus",
@@ -360,7 +360,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-27T06:33:58+00:00",
+   "checked_at": "2026-10-27T09:48:02+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -438,7 +438,7 @@
     }
    ],
    "total": 1000,
-   "last_success_at": "2026-10-27T06:33:58+00:00"
+   "last_success_at": "2026-10-27T09:48:02+00:00"
   },
   {
    "id": "chabadzoom",
@@ -452,7 +452,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-27T06:34:00+00:00",
+   "checked_at": "2026-10-27T09:48:05+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -514,7 +514,7 @@
     }
    ],
    "total": 558,
-   "last_success_at": "2026-10-27T06:34:00+00:00"
+   "last_success_at": "2026-10-27T09:48:05+00:00"
   },
   {
    "id": "kovtzimdrive",
@@ -528,7 +528,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-27T06:34:01+00:00",
+   "checked_at": "2026-10-27T09:48:08+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -536,12 +536,12 @@
      "id": "https://www.kovtzimdrive.com/posts/bochurim-build-database-of-thousands-of-%E2%80%98he%E2%80%99aros%E2%80%99",
      "title": "bochurim build database of thousands of ‘he’aros’",
      "url": "https://www.kovtzimdrive.com/posts/bochurim-build-database-of-thousands-of-%E2%80%98he%E2%80%99aros%E2%80%99",
-     "date": "2026-10-21",
+     "date": "2026-10-24",
      "first_seen": "2026-10-20T07:59:38+00:00"
     }
    ],
    "total": 1,
-   "last_success_at": "2026-10-27T06:34:01+00:00"
+   "last_success_at": "2026-10-27T09:48:08+00:00"
   },
   {
    "id": "avita",
@@ -555,7 +555,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-27T06:34:03+00:00",
+   "checked_at": "2026-10-27T09:48:10+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -573,7 +573,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-27T06:34:03+00:00",
+   "checked_at": "2026-10-27T09:48:10+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -595,7 +595,7 @@
     }
    ],
    "total": 2,
-   "last_success_at": "2026-10-27T06:34:03+00:00"
+   "last_success_at": "2026-10-27T09:48:10+00:00"
   },
   {
    "id": "dvarmalchus770",
@@ -609,7 +609,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-27T06:34:05+00:00",
+   "checked_at": "2026-10-27T09:48:11+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -679,7 +679,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-10-27T06:34:05+00:00"
+   "last_success_at": "2026-10-27T09:48:11+00:00"
   },
   {
    "id": "soulwords",
@@ -693,7 +693,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-27T06:34:06+00:00",
+   "checked_at": "2026-10-27T09:48:12+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -747,7 +747,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-10-27T06:34:06+00:00"
+   "last_success_at": "2026-10-27T09:48:12+00:00"
   },
   {
    "id": "sie_weekly",
@@ -761,7 +761,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-27T06:34:08+00:00",
+   "checked_at": "2026-10-27T09:48:14+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -809,7 +809,7 @@
     }
    ],
    "total": 115,
-   "last_success_at": "2026-10-27T06:34:08+00:00"
+   "last_success_at": "2026-10-27T09:48:14+00:00"
   },
   {
    "id": "pls",
@@ -823,7 +823,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-27T06:34:10+00:00",
+   "checked_at": "2026-10-27T09:48:16+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -885,7 +885,7 @@
     }
    ],
    "total": 200,
-   "last_success_at": "2026-10-27T06:34:10+00:00"
+   "last_success_at": "2026-10-27T09:48:16+00:00"
   },
   {
    "id": "chayenu_ls",
@@ -899,7 +899,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-27T06:34:11+00:00",
+   "checked_at": "2026-10-27T09:48:17+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -926,7 +926,7 @@
     }
    ],
    "total": 2,
-   "last_success_at": "2026-10-27T06:34:11+00:00"
+   "last_success_at": "2026-10-27T09:48:17+00:00"
   },
   {
    "id": "weekly_sicha",
@@ -940,7 +940,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-27T06:34:13+00:00",
+   "checked_at": "2026-10-27T09:48:19+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -988,7 +988,7 @@
     }
    ],
    "total": 117,
-   "last_success_at": "2026-10-27T06:34:13+00:00"
+   "last_success_at": "2026-10-27T09:48:19+00:00"
   },
   {
    "id": "theyeshiva",
@@ -1002,7 +1002,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-27T06:34:14+00:00",
+   "checked_at": "2026-10-27T09:48:20+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1072,7 +1072,7 @@
     }
    ],
    "total": 1539,
-   "last_success_at": "2026-10-27T06:34:14+00:00"
+   "last_success_at": "2026-10-27T09:48:20+00:00"
   },
   {
    "id": "chassidus_applied",
@@ -1086,16 +1086,33 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-27T06:34:17+00:00",
-   "status": "error",
-   "new": [],
+   "checked_at": "2026-10-27T09:48:23+00:00",
+   "status": "ok",
+   "new": [
+    {
+     "id": "yt:video:E11w0JQC2bs",
+     "title": "Samach Vav Part 230:",
+     "url": "https://www.youtube.com/watch?v=E11w0JQC2bs",
+     "date": "2026-10-27T03:25:19+00:00",
+     "blurb": "Samach Vav p. 188: The fire from above ceased in the second temple, and yet the offerings were kosher even when they were consumed only by the fire from below. In avodah, this teaches us that even if we are not inspired from above, we still can inspire and excite the animal soul (emotionally or at least intellectually) through our effort of igniting the fire from below by contemplating the greatness of the Divine in Pesukei D'Zimrah and the passion of the angels -- the root of the animal soul -- in Birchas Kriyas Shema. Now, however, this bittul of the animal soul is only bittul ha'yesh, iskafya, related to shem ba'n. A third, higher level of bittul, which is (not found in) incomparable to the bittul of sunlight to the sun, arises from recognizing that creation, and the divine energy that sustains it, is infinitely apart from the Creator. In addition to the limitless distance between the finite and the infinite, the very existence of creation is infinitely apart from the Creator being created yesh m'ayin. We cannot apply this level of bittul to sunlight and the sun since both are finite, and the light is similar to the sun. This contemplation inspires the angels' excitement and passion: in addition to comprehending how they are created from a mere reflection of the Divine, each angel recognizes its hidden source in malchus of Atzilus. The archetype of every aspect of creation exists in malchus (which, at times, is called stone, earth, rose, apple), referring to the divine ene",
+     "first_seen": "2026-10-27T09:48:23+00:00"
+    }
+   ],
    "latest": [
     {
+     "id": "yt:video:E11w0JQC2bs",
+     "title": "Samach Vav Part 230:",
+     "url": "https://www.youtube.com/watch?v=E11w0JQC2bs",
+     "date": "2026-10-27T03:25:19+00:00",
+     "blurb": "Samach Vav p. 188: The fire from above ceased in the second temple, and yet the offerings were kosher even when they were consumed only by the fire from below. In avodah, this teaches us that even if we are not inspired from above, we still can inspire and excite the animal soul (emotionally or at least intellectually) through our effort of igniting the fire from below by contemplating the greatness of the Divine in Pesukei D'Zimrah and the passion of the angels -- the root of the animal soul -- in Birchas Kriyas Shema. Now, however, this bittul of the animal soul is only bittul ha'yesh, iskafya, related to shem ba'n. A third, higher level of bittul, which is (not found in) incomparable to the bittul of sunlight to the sun, arises from recognizing that creation, and the divine energy that sustains it, is infinitely apart from the Creator. In addition to the limitless distance between the finite and the infinite, the very existence of creation is infinitely apart from the Creator being created yesh m'ayin. We cannot apply this level of bittul to sunlight and the sun since both are finite, and the light is similar to the sun. This contemplation inspires the angels' excitement and passion: in addition to comprehending how they are created from a mere reflection of the Divine, each angel recognizes its hidden source in malchus of Atzilus. The archetype of every aspect of creation exists in malchus (which, at times, is called stone, earth, rose, apple), referring to the divine ene",
+     "first_seen": "2026-10-27T09:48:23+00:00"
+    },
+    {
      "id": "yt:video:eFu9wLjAzSw",
-     "title": "Samach Vav Part 229:",
+     "title": "Samach Vav Part 229: How the bittul and passion of the angels impacts the animal soul below",
      "url": "https://www.youtube.com/watch?v=eFu9wLjAzSw",
      "date": "2026-10-26T04:04:10+00:00",
-     "blurb": "Samach Vav p. 186-188: A third, higher level of bittul, which is (not found in) incomparable to the bittul of sunlight to the sun, arises from recognizing that creation, and the divine energy that sustains it, is infinitely apart from the Creator. In addition to the limitless distance between the finite and the infinite, the very existence of creation is infinitely apart from the Creator being created yesh m'ayin. We cannot apply this level of bittul to sunlight and the sun since both are finite, and the light is similar to the sun. This contemplation inspires the angels' excitement and passion: besides comprehending how they are created from a mere reflection of the Divine, each angel recognizes its hidden source in malchus of Atzilus. The archetype of every aspect of creation exists in malchus -- like a stone, earth, a rose and an apple. xxxx This in turn, impacts the animal soul, which originates from these angels, to separate itself from its physical desires. Offering its fat and blood -- pleasure and passion -- transforming and directing it to pleasure and passion for the divine.",
+     "blurb": "Samach Vav p. 186-188: A third, higher level of bittul, which is (not found in) incomparable to the bittul of sunlight to the sun, arises from recognizing that creation, and the divine energy that sustains it, is infinitely apart from the Creator. In addition to the limitless distance between the finite and the infinite, the very existence of creation is infinitely apart from the Creator being created yesh m'ayin. We cannot apply this level of bittul to sunlight and the sun since both are finite, and the light is similar to the sun. This contemplation inspires the angels' excitement and passion: in addition to comprehending how they are created from a mere reflection of the Divine, each angel recognizes its hidden source in malchus of Atzilus. The archetype of every aspect of creation exists in malchus (which, at times, is called stone, earth, rose, apple), referring to the divine energy within every creation and every angel. This contemplation -- how they are not an independent existence of their own, but they are all encompassed in their source in a higher state; that they do not add shleimus; and how they need to be perpetually renewed from their source -- greatly excites the angels. This excitement and passion, in turn, impacts the animal soul, which originates from these angels, to separate itself from its physical desires, and direct its pleasure and passion (fat and blood) toward the divine, as it is encompassed in the fire from the angels above. This itself consists o",
      "first_seen": "2026-10-26T10:06:04+00:00"
     },
     {
@@ -1103,7 +1120,7 @@
      "title": "Ep. 610: Is Europe Suffering Its Fate Due to Its Mistreatment of Jews?",
      "url": "https://www.youtube.com/watch?v=tA5yy2c_2EE",
      "date": "2026-10-26T00:00:09+00:00",
-     "blurb": "",
+     "blurb": "Rabbi Jacobson will discuss the following topics: What should our focus be at this time of year? 01:40 • What should we do when we don't feel inspired? 05:18 • What great things are accomplished through self-generated effort? 03:04 Vayeira 6:33 • What lessons do we learn from living with the times, with this week’s Torah parsha? 07:54 • Can we view Sarah's laughter when she heard that she would bear a child in a positive way? 12:24 • Are the problems caused today by Arabs/Muslims a continuation of Hagar and Ishmael being sent away from Abraham's home? 16:39 • How could Abraham, a merkavah to G-d's will, challenge G-d for wanting to destroy Sodom? 22:25 • Was it inappropriate of Abraham to pray for Sodom? 30:17 • What does it mean when G-d says \"I will descend now and see\" if Sodom has sinned – isn't G-d omnipresent and omniscient? 31:28 • Why did the residents of Sodom mistreat travelers? 36:12 • Why doesn't G-d destroy other wicked cities? 39:22 • Why did Lot's wife turn into a pillar of salt? 42:54 • How do we explain the strange story of the Akeidah? 47:06 • Why didn't Isaac resist? 51:25 Chof Cheshvan • Can you present a short biography of the Rebbe Rashab? 53:40 • How do we explain the Tzemech Tzedek's response that Abraham earned G-d's revelation due to his circumcision – didn't G-d reveal Himself to Abraham earlier as well? 59:16 Can we say that Europe is suffering its fate due to its mistreatment of Jews, as G-d told Abraham, \"Those that bless you shall be blessed\"? 0",
      "first_seen": "2026-10-26T10:06:04+00:00"
     },
     {
@@ -1188,9 +1205,7 @@
     }
    ],
    "total": 15,
-   "error": "HTTPError: 404 Client Error: Not Found for url: https://www.youtube.com/feeds/videos.xml?channel_id=UCX5tj50hTwF_80XQ9JBMDYQ",
-   "last_success_at": "2026-10-26T10:06:04+00:00",
-   "retained": true
+   "last_success_at": "2026-10-27T09:48:23+00:00"
   },
   {
    "id": "neirot",
@@ -1204,7 +1219,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-27T06:34:17+00:00",
+   "checked_at": "2026-10-27T09:48:23+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1258,7 +1273,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-10-27T06:34:17+00:00"
+   "last_success_at": "2026-10-27T09:48:23+00:00"
   },
   {
    "id": "chassidus_explained",
@@ -1272,7 +1287,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-27T06:34:19+00:00",
+   "checked_at": "2026-10-27T09:48:26+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1334,7 +1349,7 @@
     }
    ],
    "total": 136,
-   "last_success_at": "2026-10-27T06:34:19+00:00"
+   "last_success_at": "2026-10-27T09:48:26+00:00"
   },
   {
    "id": "melukat",
@@ -1348,7 +1363,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-27T06:34:20+00:00",
+   "checked_at": "2026-10-27T09:48:27+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1410,7 +1425,7 @@
     }
    ],
    "total": 168,
-   "last_success_at": "2026-10-27T06:34:20+00:00"
+   "last_success_at": "2026-10-27T09:48:27+00:00"
   },
   {
    "id": "daily_maamar",
@@ -1424,7 +1439,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-27T06:34:21+00:00",
+   "checked_at": "2026-10-27T09:48:28+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1534,7 +1549,7 @@
     }
    ],
    "total": 348,
-   "last_success_at": "2026-10-27T06:34:21+00:00"
+   "last_success_at": "2026-10-27T09:48:28+00:00"
   },
   {
    "id": "wellsprings",
@@ -1548,7 +1563,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-27T06:34:23+00:00",
+   "checked_at": "2026-10-27T09:48:30+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1594,7 +1609,7 @@
     }
    ],
    "total": 125,
-   "last_success_at": "2026-10-27T06:34:23+00:00"
+   "last_success_at": "2026-10-27T09:48:30+00:00"
   },
   {
    "id": "daily_sicha",
@@ -1608,7 +1623,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-27T06:34:24+00:00",
+   "checked_at": "2026-10-27T09:48:31+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1718,7 +1733,7 @@
     }
    ],
    "total": 1412,
-   "last_success_at": "2026-10-27T06:34:24+00:00"
+   "last_success_at": "2026-10-27T09:48:31+00:00"
   },
   {
    "id": "learnchassidus",
@@ -1732,7 +1747,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-27T06:34:28+00:00",
+   "checked_at": "2026-10-27T09:48:36+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1745,7 +1760,7 @@
     }
    ],
    "total": 5,
-   "last_success_at": "2026-10-27T06:34:28+00:00"
+   "last_success_at": "2026-10-27T09:48:36+00:00"
   },
   {
    "id": "simplychassidus",
@@ -1759,7 +1774,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-27T06:34:30+00:00",
+   "checked_at": "2026-10-27T09:48:37+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1786,7 +1801,7 @@
     }
    ],
    "total": 4,
-   "last_success_at": "2026-10-27T06:34:30+00:00"
+   "last_success_at": "2026-10-27T09:48:37+00:00"
   },
   {
    "id": "alonei_chabad",
@@ -1799,7 +1814,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-27T06:34:31+00:00",
+   "checked_at": "2026-10-27T09:48:38+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -1816,7 +1831,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-27T06:34:31+00:00",
+   "checked_at": "2026-10-27T09:48:38+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -1833,7 +1848,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-27T06:34:31+00:00",
+   "checked_at": "2026-10-27T09:48:38+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1860,7 +1875,7 @@
     }
    ],
    "total": 303,
-   "last_success_at": "2026-10-27T06:34:31+00:00"
+   "last_success_at": "2026-10-27T09:48:38+00:00"
   },
   {
    "id": "lchaim",
@@ -1873,7 +1888,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-27T06:34:32+00:00",
+   "checked_at": "2026-10-27T09:48:39+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1928,7 +1943,7 @@
     }
    ],
    "total": 193,
-   "last_success_at": "2026-10-27T06:34:32+00:00"
+   "last_success_at": "2026-10-27T09:48:39+00:00"
   },
   {
    "id": "one_point",
@@ -1941,7 +1956,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-27T06:34:33+00:00",
+   "checked_at": "2026-10-27T09:48:41+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1982,7 +1997,7 @@
     }
    ],
    "total": 184,
-   "last_success_at": "2026-10-27T06:34:33+00:00"
+   "last_success_at": "2026-10-27T09:48:41+00:00"
   },
   {
    "id": "derher",
@@ -1995,7 +2010,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-27T06:34:35+00:00",
+   "checked_at": "2026-10-27T09:48:42+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -2012,7 +2027,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-27T06:34:35+00:00",
+   "checked_at": "2026-10-27T09:48:42+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -2029,7 +2044,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-27T06:34:35+00:00",
+   "checked_at": "2026-10-27T09:48:42+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2056,7 +2071,7 @@
     }
    ],
    "total": 5,
-   "last_success_at": "2026-10-27T06:34:35+00:00"
+   "last_success_at": "2026-10-27T09:48:42+00:00"
   },
   {
    "id": "maynotecha_inst",
@@ -2069,7 +2084,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-27T06:34:37+00:00",
+   "checked_at": "2026-10-27T09:48:44+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -2086,7 +2101,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-27T06:34:37+00:00",
+   "checked_at": "2026-10-27T09:48:44+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2108,7 +2123,7 @@
     }
    ],
    "total": 1,
-   "last_success_at": "2026-10-27T06:34:37+00:00"
+   "last_success_at": "2026-10-27T09:48:44+00:00"
   },
   {
    "id": "anash",
@@ -2121,7 +2136,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-27T06:34:38+00:00",
+   "checked_at": "2026-10-27T09:48:46+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2271,7 +2286,7 @@
     }
    ],
    "total": 7,
-   "last_success_at": "2026-10-27T06:34:38+00:00"
+   "last_success_at": "2026-10-27T09:48:46+00:00"
   },
   {
    "id": "chabadinfo",
@@ -2284,7 +2299,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-27T06:34:39+00:00",
+   "checked_at": "2026-10-27T09:48:47+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -2301,7 +2316,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-27T06:34:39+00:00",
+   "checked_at": "2026-10-27T09:48:47+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -2318,7 +2333,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-27T06:34:39+00:00",
+   "checked_at": "2026-10-27T09:48:47+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2364,7 +2379,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-10-27T06:34:39+00:00"
+   "last_success_at": "2026-10-27T09:48:47+00:00"
   },
   {
    "id": "kehot",
@@ -2377,7 +2392,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-27T06:34:42+00:00",
+   "checked_at": "2026-10-27T09:48:50+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2647,7 +2662,7 @@
     }
    ],
    "total": 190,
-   "last_success_at": "2026-10-27T06:34:42+00:00"
+   "last_success_at": "2026-10-27T09:48:50+00:00"
   }
  ],
  "browser_checks": {
