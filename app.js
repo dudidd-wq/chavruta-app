@@ -130,6 +130,7 @@ function loadChunk(name) {
     if (name === "learning") query.set("v", document.querySelector('meta[name="chavruta-learning-version"]')?.content || "learning");
     if (name === "new") query.set("v", newsVersion + "-" + Math.floor(Date.now() / 300000));
     if (name === "core" || name === "tree" || name === "book-catalog" || /^tree-(?:u[0-9]+|t)$/.test(name)) query.set("v", document.querySelector('meta[name="chavruta-tree-version"]')?.content || "tree");
+    if (name === "core" || name === "links" || name === "search" || name === "parsha" || name === "topics" || name.startsWith("b:")) query.set("v", document.querySelector('meta[name="chavruta-corpus-version"]')?.content || document.querySelector('meta[name="chavruta-tree-version"]')?.content || "corpus");
     if (attempt) query.set("retry", String(attempt));
     s.src = chunkFile(name) + (query.size ? "?" + query : ""); s.async = true;
     s.onerror = fail;
@@ -3355,13 +3356,13 @@ StatusViews.parStatus = async function (main) {
     const dd = S.docs.get(d.id + "d"), open = (d.parts || []).find(p => p.id === "open") ? d : dd && (dd.parts || []).find(p => p.id === "open") ? dd : null;
     tb.append(h("tr", { style: { cursor: "default" } },
       h("td", { class: "tt" }, h("a", { href: mkHash(["biur", d.id]) }, d.title), dd ? h("div", null, h("a", { class: "sm", href: mkHash(["biur", dd.id]) }, "שרשרת הדורות")) : null),
-      h("td", { class: "num" }, d.anchor || "—"), h("td", null, d.sl || "—"), h("td", { class: "num" }, (d.rdec || []).length || "—"), h("td", { class: "num" }, (S.links?.d[d.id] || d.members || []).length),
+      h("td", { class: "num" }, d.anchor || "—"), h("td", null, d.sl || "—"), h("td", { class: "num" }, d.reviewRounds ?? ((d.rdec || []).length || "—")), h("td", { class: "num" }, (S.links?.d[d.id] || d.members || []).length),
       h("td", null, open ? h("a", { class: "btn sm", href: mkHash(["biur", open.id, "open"]) }, icon("i-flag"), "שאלות שנבדקו") : "—")));
   }
   main.append(h("div", { class: "dtw" }, h("table", { class: "dt" }, h("thead", null, h("tr", null, ...["שרשרת", "פסוק העוגן", "שורת המצב", "סבבי בחינה", "פריטים", "בקרה"].map(x => h("th", { scope: "col" }, x)))), tb)));
   for (const d of docs) {
     if (!(d.rdec || []).length) continue;
-    main.append(h("details", { class: "unit" }, h("summary", null, h("b", null, d.title), h("span", { class: "chip mute" }, d.rdec.length + " סבבים")),
+    main.append(h("details", { class: "unit" }, h("summary", null, h("b", null, d.title), h("span", { class: "chip mute" }, (d.reviewRounds ?? d.rdec.length) + " סבבים")),
       h("div", { class: "ub" }, ...d.rdec.map(r => h("p", null, h("b", null, r.title + ": "), r.summary)), h("p", null, h("a", { class: "btn sm", href: mkHash(["biur", d.id]) }, icon("i-book"), "פתח את הביאור")))));
   }
 };
@@ -5050,6 +5051,7 @@ function loadSearchIndex() {
   if (SE.ready) return SE.ready;
   SE.ready = loadSearch().then(raw => {
     SE.docs = raw.docs; SE.terms = raw.terms; SE.tlist = Object.keys(raw.terms);
+    SE.stop = new Set(raw.stop || []);
     SE.cache = new Map();
     return SE;
   });
@@ -5083,9 +5085,10 @@ const TYPE_W = { i: 3, s: 1, x: .8 };
 async function runSearch(qs, limit = 400) {
   await loadSearchIndex();
   const words = norm(qs).split(" ").filter(w => w.length >= 1);
-  if (!words.length) return { words, hits: [] };
+  const queryWords = words.filter(w => w.length >= 2 && !SE.stop.has(w));
+  if (!queryWords.length) return { words, hits: [], total: 0 };
   let acc = null;
-  for (const w of words) {
+  for (const w of queryWords) {
     const m = new Map();
     for (const [t, wt] of expandWord(w)) for (const [d, pw] of postings(t)) m.set(d, Math.max(m.get(d) || 0, wt * wBoost(pw)));
     if (!acc) acc = m; else { for (const k of acc.keys()) if (!m.has(k)) acc.delete(k); else acc.set(k, acc.get(k) + m.get(k)); }
