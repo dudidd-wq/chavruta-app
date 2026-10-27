@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-27T06:30:23+00:00",
+ "generated_at": "2026-10-27T06:35:00+00:00",
  "sources": [
   {
    "id": "chabadlibrary",
@@ -12,7 +12,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-10-27T06:29:10+00:00",
+   "checked_at": "2026-10-27T06:33:50+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -30,7 +30,7 @@
     "primary",
     "whatsnew"
    ],
-   "checked_at": "2026-10-27T06:29:10+00:00",
+   "checked_at": "2026-10-27T06:33:50+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -47,7 +47,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-10-27T06:29:10+00:00",
+   "checked_at": "2026-10-27T06:33:50+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -64,7 +64,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-10-27T06:29:10+00:00",
+   "checked_at": "2026-10-27T06:33:50+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -82,7 +82,7 @@
     "primary",
     "whatsnew"
    ],
-   "checked_at": "2026-10-27T06:29:10+00:00",
+   "checked_at": "2026-10-27T06:33:50+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -102,7 +102,7 @@
     }
    ],
    "total": 132,
-   "last_success_at": "2026-10-27T06:29:10+00:00"
+   "last_success_at": "2026-10-27T06:33:50+00:00"
   },
   {
    "id": "chabadlibrarybooks",
@@ -115,7 +115,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-10-27T06:29:11+00:00",
+   "checked_at": "2026-10-27T06:33:51+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -133,12 +133,12 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-27T06:29:11+00:00",
+   "checked_at": "2026-10-27T06:33:51+00:00",
    "status": "ok",
    "new": [],
    "latest": [],
    "total": 1501,
-   "last_success_at": "2026-10-27T06:29:11+00:00"
+   "last_success_at": "2026-10-27T06:33:51+00:00"
   },
   {
    "id": "chassidut_org",
@@ -152,12 +152,12 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-27T06:29:12+00:00",
+   "checked_at": "2026-10-27T06:33:52+00:00",
    "status": "ok",
    "new": [],
    "latest": [],
    "total": 4,
-   "last_success_at": "2026-10-27T06:29:12+00:00"
+   "last_success_at": "2026-10-27T06:33:52+00:00"
   },
   {
    "id": "biurim",
@@ -171,7 +171,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-27T06:29:14+00:00",
+   "checked_at": "2026-10-27T06:33:53+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -217,7 +217,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-10-27T06:29:14+00:00"
+   "last_success_at": "2026-10-27T06:33:53+00:00"
   },
   {
    "id": "hm_monsey",
@@ -231,7 +231,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-27T06:29:15+00:00",
+   "checked_at": "2026-10-27T06:33:55+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -277,7 +277,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-10-27T06:29:15+00:00"
+   "last_success_at": "2026-10-27T06:33:55+00:00"
   },
   {
    "id": "hiskashrus",
@@ -291,7 +291,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-27T06:29:17+00:00",
+   "checked_at": "2026-10-27T06:33:57+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -346,7 +346,7 @@
     }
    ],
    "total": 253,
-   "last_success_at": "2026-10-27T06:29:17+00:00"
+   "last_success_at": "2026-10-27T06:33:57+00:00"
   },
   {
    "id": "lichyot_chassidus",
@@ -360,7 +360,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-27T06:29:19+00:00",
+   "checked_at": "2026-10-27T06:33:58+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -438,7 +438,7 @@
     }
    ],
    "total": 1000,
-   "last_success_at": "2026-10-27T06:29:19+00:00"
+   "last_success_at": "2026-10-27T06:33:58+00:00"
   },
   {
    "id": "chabadzoom",
@@ -452,7 +452,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-27T06:29:21+00:00",
+   "checked_at": "2026-10-27T06:34:00+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -514,7 +514,7 @@
     }
    ],
    "total": 558,
-   "last_success_at": "2026-10-27T06:29:21+00:00"
+   "last_success_at": "2026-10-27T06:34:00+00:00"
   },
   {
    "id": "kovtzimdrive",
@@ -528,7 +528,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-27T06:29:22+00:00",
+   "checked_at": "2026-10-27T06:34:01+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -536,12 +536,12 @@
      "id": "https://www.kovtzimdrive.com/posts/bochurim-build-database-of-thousands-of-%E2%80%98he%E2%80%99aros%E2%80%99",
      "title": "bochurim build database of thousands of ‘he’aros’",
      "url": "https://www.kovtzimdrive.com/posts/bochurim-build-database-of-thousands-of-%E2%80%98he%E2%80%99aros%E2%80%99",
-     "date": "2026-10-24",
+     "date": "2026-10-21",
      "first_seen": "2026-10-20T07:59:38+00:00"
     }
    ],
    "total": 1,
-   "last_success_at": "2026-10-27T06:29:22+00:00"
+   "last_success_at": "2026-10-27T06:34:01+00:00"
   },
   {
    "id": "avita",
@@ -555,7 +555,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-27T06:29:24+00:00",
+   "checked_at": "2026-10-27T06:34:03+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -573,7 +573,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-27T06:29:24+00:00",
+   "checked_at": "2026-10-27T06:34:03+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -595,7 +595,7 @@
     }
    ],
    "total": 2,
-   "last_success_at": "2026-10-27T06:29:24+00:00"
+   "last_success_at": "2026-10-27T06:34:03+00:00"
   },
   {
    "id": "dvarmalchus770",
@@ -609,7 +609,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-27T06:29:26+00:00",
+   "checked_at": "2026-10-27T06:34:05+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -679,7 +679,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-10-27T06:29:26+00:00"
+   "last_success_at": "2026-10-27T06:34:05+00:00"
   },
   {
    "id": "soulwords",
@@ -693,7 +693,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-27T06:29:27+00:00",
+   "checked_at": "2026-10-27T06:34:06+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -747,7 +747,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-10-27T06:29:27+00:00"
+   "last_success_at": "2026-10-27T06:34:06+00:00"
   },
   {
    "id": "sie_weekly",
@@ -761,7 +761,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-27T06:29:29+00:00",
+   "checked_at": "2026-10-27T06:34:08+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -809,7 +809,7 @@
     }
    ],
    "total": 115,
-   "last_success_at": "2026-10-27T06:29:29+00:00"
+   "last_success_at": "2026-10-27T06:34:08+00:00"
   },
   {
    "id": "pls",
@@ -823,7 +823,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-27T06:29:30+00:00",
+   "checked_at": "2026-10-27T06:34:10+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -885,7 +885,7 @@
     }
    ],
    "total": 200,
-   "last_success_at": "2026-10-27T06:29:30+00:00"
+   "last_success_at": "2026-10-27T06:34:10+00:00"
   },
   {
    "id": "chayenu_ls",
@@ -899,7 +899,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-27T06:29:32+00:00",
+   "checked_at": "2026-10-27T06:34:11+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -926,7 +926,7 @@
     }
    ],
    "total": 2,
-   "last_success_at": "2026-10-27T06:29:32+00:00"
+   "last_success_at": "2026-10-27T06:34:11+00:00"
   },
   {
    "id": "weekly_sicha",
@@ -940,7 +940,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-27T06:29:33+00:00",
+   "checked_at": "2026-10-27T06:34:13+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -988,7 +988,7 @@
     }
    ],
    "total": 117,
-   "last_success_at": "2026-10-27T06:29:33+00:00"
+   "last_success_at": "2026-10-27T06:34:13+00:00"
   },
   {
    "id": "theyeshiva",
@@ -1002,7 +1002,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-27T06:29:34+00:00",
+   "checked_at": "2026-10-27T06:34:14+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1072,7 +1072,7 @@
     }
    ],
    "total": 1539,
-   "last_success_at": "2026-10-27T06:29:34+00:00"
+   "last_success_at": "2026-10-27T06:34:14+00:00"
   },
   {
    "id": "chassidus_applied",
@@ -1086,7 +1086,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-27T06:29:38+00:00",
+   "checked_at": "2026-10-27T06:34:17+00:00",
    "status": "error",
    "new": [],
    "latest": [
@@ -1204,7 +1204,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-27T06:29:38+00:00",
+   "checked_at": "2026-10-27T06:34:17+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1258,7 +1258,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-10-27T06:29:38+00:00"
+   "last_success_at": "2026-10-27T06:34:17+00:00"
   },
   {
    "id": "chassidus_explained",
@@ -1272,10 +1272,18 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-27T06:29:40+00:00",
+   "checked_at": "2026-10-27T06:34:19+00:00",
    "status": "ok",
    "new": [],
    "latest": [
+    {
+     "id": "f8c5eb2e-5b6f-4821-a8d5-a9a452139a8b",
+     "title": "Mitteler Rebbe's Padah Beshalom שערי תשובה ד\"ה פדה בשלום part 2/6 (פרק ב-ג)",
+     "url": "https://podcasters.spotify.com/pod/show/chassidus-explained/episodes/Mitteler-Rebbes-Padah-Beshalom------part-26----e3r56dl",
+     "date": "Tue, 27 Oct 2026 00:00:28 GMT",
+     "blurb": "Link to מאמר PDF: https://drive.google.com/file/d/1bl4prP_4LXDEjRICVXlZsmYLg-Dd9Dx7/view?usp=sharing Continuing in the מאמר, the מיטעלער רבי explains the scenario of war during Davening - when the נפש האלקית engages the נפש הבהמית and attempts to win it over to serve Hashem. We explain what exactly that means, and what that looks like - how will a נפש הבהמית want to serve Hashem? When that happens, the נפש הבהמית responds with its power of מחשבות זרות, and the מיטעלער רבי explains at length what these מחשבות זרות are, and what they do.",
+     "first_seen": "2026-10-27T06:26:19+00:00"
+    },
     {
      "id": "7ed7848f-d2c5-45d7-97e8-f238316860cd",
      "title": "Mitteler Rebbe's Padah Beshalom שערי תשובה ד\"ה פדה בשלום part 1/6 (פרק א)",
@@ -1317,14 +1325,6 @@
      "first_seen": "2026-10-18T04:52:00+00:00"
     },
     {
-     "id": "f8c5eb2e-5b6f-4821-a8d5-a9a452139a8b",
-     "title": "Mitteler Rebbe's Padah Beshalom שערי תשובה ד\"ה פדה בשלום part 2/6 (פרק ב-ג)",
-     "url": "https://podcasters.spotify.com/pod/show/chassidus-explained/episodes/Mitteler-Rebbes-Padah-Beshalom------part-26----e3r56dl",
-     "date": "Tue, 27 Oct 2026 00:00:28 GMT",
-     "blurb": "Link to מאמר PDF: https://drive.google.com/file/d/1bl4prP_4LXDEjRICVXlZsmYLg-Dd9Dx7/view?usp=sharing Continuing in the מאמר, the מיטעלער רבי explains the scenario of war during Davening - when the נפש האלקית engages the נפש הבהמית and attempts to win it over to serve Hashem. We explain what exactly that means, and what that looks like - how will a נפש הבהמית want to serve Hashem? When that happens, the נפש הבהמית responds with its power of מחשבות זרות, and the מיטעלער רבי explains at length what these מחשבות זרות are, and what they do.",
-     "first_seen": "2026-10-27T06:26:19+00:00"
-    },
-    {
      "id": "dbcdb319-413b-461a-ad8a-0a02c9519034",
      "title": "Nosato Lirei'echo 5736 נתת ליראיך תשל\"ו part 2/5 (Se'if 3-4)",
      "url": "https://podcasters.spotify.com/pod/show/chassidus-explained/episodes/Nosato-Lireiecho-5736----part-25-Seif-3-4-e3kneud",
@@ -1333,8 +1333,8 @@
      "first_seen": "2026-10-18T04:52:00+00:00"
     }
    ],
-   "total": 135,
-   "last_success_at": "2026-10-27T06:29:40+00:00"
+   "total": 136,
+   "last_success_at": "2026-10-27T06:34:19+00:00"
   },
   {
    "id": "melukat",
@@ -1348,7 +1348,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-27T06:29:41+00:00",
+   "checked_at": "2026-10-27T06:34:20+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1410,7 +1410,7 @@
     }
    ],
    "total": 168,
-   "last_success_at": "2026-10-27T06:29:41+00:00"
+   "last_success_at": "2026-10-27T06:34:20+00:00"
   },
   {
    "id": "daily_maamar",
@@ -1424,7 +1424,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-27T06:29:43+00:00",
+   "checked_at": "2026-10-27T06:34:21+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1534,7 +1534,7 @@
     }
    ],
    "total": 348,
-   "last_success_at": "2026-10-27T06:29:43+00:00"
+   "last_success_at": "2026-10-27T06:34:21+00:00"
   },
   {
    "id": "wellsprings",
@@ -1548,7 +1548,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-27T06:29:44+00:00",
+   "checked_at": "2026-10-27T06:34:23+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1594,7 +1594,7 @@
     }
    ],
    "total": 125,
-   "last_success_at": "2026-10-27T06:29:44+00:00"
+   "last_success_at": "2026-10-27T06:34:23+00:00"
   },
   {
    "id": "daily_sicha",
@@ -1608,7 +1608,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-27T06:29:45+00:00",
+   "checked_at": "2026-10-27T06:34:24+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1718,7 +1718,7 @@
     }
    ],
    "total": 1412,
-   "last_success_at": "2026-10-27T06:29:45+00:00"
+   "last_success_at": "2026-10-27T06:34:24+00:00"
   },
   {
    "id": "learnchassidus",
@@ -1732,7 +1732,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-27T06:29:52+00:00",
+   "checked_at": "2026-10-27T06:34:28+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1745,7 +1745,7 @@
     }
    ],
    "total": 5,
-   "last_success_at": "2026-10-27T06:29:52+00:00"
+   "last_success_at": "2026-10-27T06:34:28+00:00"
   },
   {
    "id": "simplychassidus",
@@ -1759,7 +1759,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-27T06:29:53+00:00",
+   "checked_at": "2026-10-27T06:34:30+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1786,7 +1786,7 @@
     }
    ],
    "total": 4,
-   "last_success_at": "2026-10-27T06:29:53+00:00"
+   "last_success_at": "2026-10-27T06:34:30+00:00"
   },
   {
    "id": "alonei_chabad",
@@ -1799,7 +1799,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-27T06:29:54+00:00",
+   "checked_at": "2026-10-27T06:34:31+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -1816,7 +1816,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-27T06:29:54+00:00",
+   "checked_at": "2026-10-27T06:34:31+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -1833,7 +1833,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-27T06:29:54+00:00",
+   "checked_at": "2026-10-27T06:34:31+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1860,7 +1860,7 @@
     }
    ],
    "total": 303,
-   "last_success_at": "2026-10-27T06:29:54+00:00"
+   "last_success_at": "2026-10-27T06:34:31+00:00"
   },
   {
    "id": "lchaim",
@@ -1873,7 +1873,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-27T06:29:56+00:00",
+   "checked_at": "2026-10-27T06:34:32+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1928,7 +1928,7 @@
     }
    ],
    "total": 193,
-   "last_success_at": "2026-10-27T06:29:56+00:00"
+   "last_success_at": "2026-10-27T06:34:32+00:00"
   },
   {
    "id": "one_point",
@@ -1941,7 +1941,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-27T06:29:57+00:00",
+   "checked_at": "2026-10-27T06:34:33+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1982,7 +1982,7 @@
     }
    ],
    "total": 184,
-   "last_success_at": "2026-10-27T06:29:57+00:00"
+   "last_success_at": "2026-10-27T06:34:33+00:00"
   },
   {
    "id": "derher",
@@ -1995,7 +1995,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-27T06:29:58+00:00",
+   "checked_at": "2026-10-27T06:34:35+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -2012,7 +2012,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-27T06:29:58+00:00",
+   "checked_at": "2026-10-27T06:34:35+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -2029,7 +2029,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-27T06:29:58+00:00",
+   "checked_at": "2026-10-27T06:34:35+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2056,7 +2056,7 @@
     }
    ],
    "total": 5,
-   "last_success_at": "2026-10-27T06:29:58+00:00"
+   "last_success_at": "2026-10-27T06:34:35+00:00"
   },
   {
    "id": "maynotecha_inst",
@@ -2069,7 +2069,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-27T06:30:01+00:00",
+   "checked_at": "2026-10-27T06:34:37+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -2086,7 +2086,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-27T06:30:01+00:00",
+   "checked_at": "2026-10-27T06:34:37+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2108,7 +2108,7 @@
     }
    ],
    "total": 1,
-   "last_success_at": "2026-10-27T06:30:01+00:00"
+   "last_success_at": "2026-10-27T06:34:37+00:00"
   },
   {
    "id": "anash",
@@ -2121,7 +2121,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-27T06:30:02+00:00",
+   "checked_at": "2026-10-27T06:34:38+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2271,7 +2271,7 @@
     }
    ],
    "total": 7,
-   "last_success_at": "2026-10-27T06:30:02+00:00"
+   "last_success_at": "2026-10-27T06:34:38+00:00"
   },
   {
    "id": "chabadinfo",
@@ -2284,7 +2284,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-27T06:30:04+00:00",
+   "checked_at": "2026-10-27T06:34:39+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -2301,7 +2301,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-27T06:30:04+00:00",
+   "checked_at": "2026-10-27T06:34:39+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -2318,7 +2318,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-27T06:30:04+00:00",
+   "checked_at": "2026-10-27T06:34:39+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2364,7 +2364,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-10-27T06:30:04+00:00"
+   "last_success_at": "2026-10-27T06:34:39+00:00"
   },
   {
    "id": "kehot",
@@ -2377,7 +2377,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-27T06:30:07+00:00",
+   "checked_at": "2026-10-27T06:34:42+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2647,7 +2647,7 @@
     }
    ],
    "total": 190,
-   "last_success_at": "2026-10-27T06:30:07+00:00"
+   "last_success_at": "2026-10-27T06:34:42+00:00"
   }
  ],
  "browser_checks": {
