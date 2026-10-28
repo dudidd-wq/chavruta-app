@@ -1778,6 +1778,11 @@ VIEWS.study = function () {
 };
 
 /* Approved sheets remain separate from commentary IDs, source UIDs and counts. */
+function sheetSourceHref(source) {
+  if (source.doc) return mkHash(['biur',source.doc]);
+  try { const u=new URL(source.url);return u.protocol==='https:'&&!u.username&&!u.password?u.href:null; }
+  catch(e) { return null; }
+}
 function sheetSearch(rows, query) {
   const words = norm(query).split(/\s+/).filter(Boolean);
   return words.length ? rows.filter(s => words.every(w => norm(s.title + ' ' + s.text).includes(w))) : rows;
@@ -1801,7 +1806,7 @@ VIEWS.sheets = async function(rest,q,ctx) {
   else {
     document.title=sheet.title+' · חברותא';
     const c=sheet.calendar;
-    main.append(h('header',{class:'sheet-meta'},h('p',null,[c.parsha||c.occasion,c.hebrew_date,c.gregorian_date,'גרסה '+sheet.version].filter(Boolean).join(' · ')),h('p',null,'כיסוי: '+sheet.sources.map(s=>s.title+' — '+s.anchor).join('; ')+(sheet.coverage_complete?'':' · הדף אינו משלים את הפרשה')),h('nav',{'aria-label':'ביאורי המקור'},...sheet.sources.map(s=>h('a',{class:'btn sm',href:mkHash(['biur',s.doc])},s.title))),h('button',{class:'btn no-print',onclick:()=>window.print()},'הדפסת A4')),
+    main.append(h('header',{class:'sheet-meta'},h('p',null,[c.parsha||c.occasion,c.hebrew_date,c.gregorian_date,'גרסה '+sheet.version].filter(Boolean).join(' · ')),h('p',null,'כיסוי: '+sheet.sources.map(s=>s.title+' — '+s.anchor).join('; ')+(sheet.coverage_complete?'':' · הדף אינו משלים את הפרשה')),h('nav',{'aria-label':'מקורות הדף'},...sheet.sources.map(s=>sheetSourceHref(s)?h('a',{class:'btn sm',href:sheetSourceHref(s)},s.title):h('span',{class:'btn sm'},s.title))),h('button',{class:'btn no-print',onclick:()=>window.print()},'הדפסת A4')),
       h('article',{class:'biur prose study-sheet',lang:'he',dir:'rtl',html:sheet.html}));
   }
   window.scrollTo(0,0);
@@ -1815,6 +1820,7 @@ window.addEventListener('beforeprint', () => {
 window.addEventListener('afterprint', () => {
   if (sheetPrintHeader !== null) { const header = document.getElementById('pagehead'); if (header) header.textContent = sheetPrintHeader; sheetPrintHeader = null; }
 });
+
 
 /* חברותא · סמל הפריט, כרטיס הפריט וקפיצה אל המקום המדויק בביאור */
 
@@ -4303,6 +4309,32 @@ function kParsha(main, K, p) {
 /* חברותא · מדף ספרים. קורא את הקטלוג הקיים; אינו משנה מיפוי או מספור עמודים. */
 const BOOK_COVER_CACHE = new Map();
 const BOOK_COVER_REQUESTS = [];
+const BOOK_COVER_ASSET_FAILURES = new Set();
+let bookCoverManifest;
+function booksCoverManifest() {
+  return bookCoverManifest ||= loadChunk("book-covers").then(value => value?.schema === 1 && value.page === 1 && value.covers && typeof value.covers === "object" ? value.covers : {}).catch(() => ({}));
+}
+function booksCoverScans(T, id) {
+  const entry = booksEntry(T, id), index = BOOK_CATALOG_INDEX.get(T);
+  if (entry?.scan) return [entry.scan];
+  if (!entry || !index) return null;
+  const scans = new Set(entry.unitBooks.flatMap(b => index.scans[b] || []));
+  return [...scans].filter(book => /^[0-9]{1,8}$/.test(book)).map(book => ({ book, url: "https://hebrewbooks.org/" + book }));
+}
+async function booksCoverStored(book, value) {
+  if (typeof caches === "undefined" || !document.baseURI) return null;
+  try {
+    const cache = await caches.open("chavruta-book-covers-v1"), key = new URL("data/book-covers/cache/" + book, document.baseURI).href;
+    if (value) {
+      await cache.put(key, new Response(value, { headers: { "Content-Type": "text/plain" } }));
+      const keys = await cache.keys();
+      for (const old of keys.slice(0, Math.max(0, keys.length - 256))) await cache.delete(old);
+      return value;
+    }
+    const response = await cache.match(key), stored = response && await response.text();
+    return stored?.length < 160000 && /^data:image\/webp;base64,[A-Za-z0-9+/=]+$/.test(stored) ? stored : null;
+  } catch (_) { return null; }
+}
 let bookCoverPauseUntil = 0;
 function booksCoverDelay(now = Date.now()) {
   while (BOOK_COVER_REQUESTS.length && BOOK_COVER_REQUESTS[0] <= now - 60000) BOOK_COVER_REQUESTS.shift();
@@ -4395,7 +4427,15 @@ function booksUnitInfo(T, id, row) {
 }
 /* Each thumbnail is the original first PDF page, with the same decoder validation as the reader. */
 async function booksCoverImage(scan, signal) {
+  if (!/^[0-9]{1,8}$/.test(scan.book)) throw Error("invalid cover ID");
+  if (signal.aborted) throw Error("cover canceled");
   const cached = BOOK_COVER_CACHE.get(scan.book); if (cached) return cached;
+  const assets = await booksCoverManifest(), asset = assets[scan.book];
+  if (signal.aborted) throw Error("cover canceled");
+  if (!BOOK_COVER_ASSET_FAILURES.has(scan.book) && typeof asset === "string" && new RegExp("^data/book-covers/" + scan.book + "-[a-f0-9]{16}\\.webp$").test(asset)) return asset;
+  const stored = await booksCoverStored(scan.book);
+  if (signal.aborted) throw Error("cover canceled");
+  if (stored) { BOOK_COVER_CACHE.set(scan.book, stored); return stored; }
   if (!sourceGateway()) throw Error("no scan gateway");
   const delay = booksCoverDelay(); if (delay) throw Object.assign(Error("cover_deferred"), { delay });
   BOOK_COVER_REQUESTS.push(Date.now());
@@ -4420,7 +4460,7 @@ async function booksCoverImage(scan, signal) {
     if (signal.aborted) throw Error("cover canceled");
     const url = canvas.toDataURL("image/webp", .78);
     if (BOOK_COVER_CACHE.size >= 48) BOOK_COVER_CACHE.delete(BOOK_COVER_CACHE.keys().next().value);
-    BOOK_COVER_CACHE.set(scan.book, url); return url;
+    BOOK_COVER_CACHE.set(scan.book, url); void booksCoverStored(scan.book, url); return url;
   } finally { signal.removeEventListener("abort", abort); await loading?.destroy().catch(() => {}); }
 }
 /* One cover job at a time, scheduled after a paint; cancel on navigation/filtering. */
@@ -4442,11 +4482,15 @@ function booksCovers(T) {
       const timer = setTimeout(() => controller.abort(), 18000);
       (async () => {
         try {
-          const meta = await booksMetadata(T, id);
+          const scans = booksCoverScans(T, id) ?? (await booksMetadata(T, id)).scans;
           if (stopped || controller.signal.aborted || !host.isConnected) return;
-          if (!meta.scans.length) { host.replaceChildren(icon("i-read"), h("small", null, "צילום שער אינו זמין")); return; }
-          const url = await booksCoverImage(meta.scans[0], controller.signal);
-          if (!stopped && !controller.signal.aborted && host.isConnected) host.replaceChildren(h("img", { src: url, alt: "צילום הדף הראשון של " + booksEntry(T, id).name, width: "240", height: "340", decoding: "async" }));
+          if (!scans.length) { host.replaceChildren(icon("i-read"), h("small", null, "צילום שער אינו זמין")); return; }
+          const scan = scans[0], url = await booksCoverImage(scan, controller.signal);
+          if (!stopped && !controller.signal.aborted && host.isConnected) host.replaceChildren(h("img", { src: url, alt: "צילום הדף הראשון של " + booksEntry(T, id).name, width: "240", height: "340", decoding: "async", onerror: () => {
+            if (stopped || !host.isConnected) return;
+            if (!url.startsWith("data/book-covers/") || BOOK_COVER_ASSET_FAILURES.has(scan.book)) { host.replaceChildren(icon("i-read"), h("small", null, "הצילום לא נטען")); return; }
+            BOOK_COVER_ASSET_FAILURES.add(scan.book); queue.push({ host, id }); schedule();
+          } }));
         } catch (error) {
           if (!stopped && !controller.signal.aborted && host.isConnected && error.message === "cover_deferred") { job.ready = Date.now() + error.delay; queue.push(job); host.replaceChildren(icon("i-read"), h("small", null, "השער ייטען בהמשך")); }
           else if (!stopped && host.isConnected) host.replaceChildren(icon("i-read"), h("small", null, "הצילום לא נטען"));
@@ -4467,6 +4511,7 @@ function booksCover(T, id, covers) {
 }
 VIEWS.books = async function(rest, q, ctx) {
   ctx.prevCleanup?.();
+  void booksCoverManifest();
   const main = $("#view"); main.className = "main page wide books"; main.replaceChildren(h("p", { class: "loading", role: "status" }, "טוען את מדף הספרים…"));
   document.title = "ספרים · חברותא";
   let T;
