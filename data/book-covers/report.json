@@ -1,7 +1,7 @@
 {
   "renderer": "6.4.299",
   "total": 1270,
-  "prepared": 764,
+  "prepared": 770,
   "failures": [
     {
       "id": "c-36f9f0bcc83b65266cebc4ef",
@@ -57,6 +57,62 @@
     },
     {
       "id": "c-bd2a6e7daffa3f9d42e1c5c5",
+      "error": "PDF range budget"
+    },
+    {
+      "id": "c-7f452ac1c7b413ac60f03eff",
+      "error": "PDF range budget"
+    },
+    {
+      "id": "c-2ada194c6e44043cf94ed36f",
+      "error": "PDF range budget"
+    },
+    {
+      "id": "c-8682e53ced435337fb325e13",
+      "error": "PDF range budget"
+    },
+    {
+      "id": "c-37aec53e14446337eab5cf61",
+      "error": "PDF range budget"
+    },
+    {
+      "id": "c-82695602d38d812a66fc01fe",
+      "error": "PDF range budget"
+    },
+    {
+      "id": "c-8d8e00f660e6851c8219c0bf",
+      "error": "PDF range budget"
+    },
+    {
+      "id": "c-0cae059250537728bb76468e",
+      "error": "PDF range budget"
+    },
+    {
+      "id": "c-6221df6aa6a033f09c34fe6e",
+      "error": "PDF range budget"
+    },
+    {
+      "id": "c-0143f90b0dc4213a32528880",
+      "error": "PDF range budget"
+    },
+    {
+      "id": "c-d7fa6edbf62a2301412a8b1c",
+      "error": "PDF range budget"
+    },
+    {
+      "id": "c-9f63959c3ab6cf7d24a95d82",
+      "error": "PDF range budget"
+    },
+    {
+      "id": "c-5af4373147910a867075f404",
+      "error": "PDF range budget"
+    },
+    {
+      "id": "c-0f3171bb2ab7840e3727e146",
+      "error": "PDF range budget"
+    },
+    {
+      "id": "c-a521a1d6aca5f1f54fda5f2c",
       "error": "PDF range budget"
     }
   ]
