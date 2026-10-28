@@ -1,7 +1,7 @@
 {
   "renderer": "6.4.299",
   "total": 1270,
-  "prepared": 1191,
+  "prepared": 1210,
   "failures": [
     {
       "id": "c-89bfca9156929294cf7daa01",
@@ -86,6 +86,10 @@
     {
       "id": "c-7f05895ad7385d57abdb259f",
       "error": "fetch failed"
+    },
+    {
+      "id": "c-eab736539c5d01f434aa97cd",
+      "error": "PDF range timeout"
     }
   ]
 }
