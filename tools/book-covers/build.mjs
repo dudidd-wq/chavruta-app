@@ -87,7 +87,7 @@ async function render(id){
   finally{await loading?.destroy().catch(()=>{});}
 }
 let next=0,completed=0;
-await Promise.all(Array.from({length:2},async()=>{while(next<missing.length){const id=missing[next++];await render(id);completed++;if(completed%20===0){console.log(JSON.stringify({completed,total:missing.length,prepared:Object.keys(covers).length,failed:failures.length}));checkpoint=checkpoint.then(flush);await checkpoint;}await new Promise(r=>setTimeout(r,250));}}));
+await Promise.all(Array.from({length:2},async()=>{while(next<missing.length){const id=missing[next++];await render(id);completed++;if(completed%20===0){console.log(JSON.stringify({completed,total:missing.length,prepared:Object.keys(covers).length,failed:failures.length}));checkpoint=checkpoint.then(flush);await checkpoint;}await new Promise(r=>setTimeout(r,4000));}}));
 if(!Object.keys(covers).length)throw Error('No validated covers');
 await checkpoint;await flush();
 console.log(JSON.stringify({total:ids.size,prepared:Object.keys(covers).length,failed:failures.length}));
