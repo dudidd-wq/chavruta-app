@@ -1484,6 +1484,10 @@ body.source-reader-open { overflow: hidden; }
 .tree-ser .tree-tbl th:nth-child(2) { width: 37%; }
 .tree-ser .tree-tbl th:nth-child(3) { width: 20%; }
 .tree-ser .tree-tbl td:nth-last-child(-n+3) { white-space: normal; overflow-wrap: anywhere; }
+.books-card-without-photo .books-cover { height: 7rem; min-height: 7rem; aspect-ratio: auto; }
+.books-pending-sources { margin-block: 1.5rem; padding: 1rem; border: 1px solid var(--rule-2); }
+.books-pending-sources:empty { display: none; }
+.books-pending-sources summary { cursor: pointer; }
 
 /* Shared learning portals use the site's page layout, spacing and palette. */
 .main.page.learning{max-width:64rem;padding-block-start:var(--s5)}
