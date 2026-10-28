@@ -4422,7 +4422,7 @@ function booksGroups(T) {
   const titleKey = name => norm(name).toLowerCase().replace(/ליקוט/g, "לקוט").replace(/[^א-ת0-9a-z ]/g, " ").replace(/\s+/g, " ").trim();
   const key = (r, name) => r + ":" + titleKey(name);
   const seriesLabels = (T.series || []).map((s, si) => ({ si, r: s.r, label: titleKey(s.n.replace(/\([^)]*\)/g, " ").replace(/\s*[–—]\s*(?:אדמו[״"]ר.*|הרבי)$/, "")) })).filter(s => s.label);
-  for (const [r, publishedName, alias] of [[2, "לקוטי אמרים – תניא", "תניא"], [5, "לקוטי תורה – תורת שמואל", "תורת שמואל"]]) {
+  for (const [r, publishedName, alias] of [[0, "בעל שם טוב על התורה (ספר בעל שם טוב, וודניק)", "בעל שם טוב"], [2, "לקוטי אמרים – תניא", "תניא"], [5, "לקוטי תורה – תורת שמואל", "תורת שמואל"]]) {
     const si = (T.series || []).findIndex(s => s.r === r && titleKey(s.n) === titleKey(publishedName));
     if (si >= 0) seriesLabels.push({ si, r, label: titleKey(alias) });
   }
@@ -4617,7 +4617,7 @@ VIEWS.books = async function(rest, q, ctx) {
 function booksShelf(main, T, q, ctx, initialCovers) {
   main.append(h("h1", { class: "page-title" }, "ספרים"), h("p", { class: "lede" }, "ספר אחד בכל כרטיס. בתוך הספר בוחרים כרך, מהדורה ומקור; כל הפניה נשמרת ברישום המקורי שלה."));
   const search = h("input", { type: "search", value: q.get("q") || "", placeholder: "חיפוש בשם ספר…", "aria-label": "חיפוש ספר" });
-  const filter = h("select", { "aria-label": "ספרים לפי רבי" }, h("option", { value: "" }, "כל הרביים"), ...T.rebbeim.map((name, r) => h("option", { value: r, selected: q.get("r") === String(r) }, name)));
+  const filter = h("select", { "aria-label": "ספרים לפי רבי" }, h("option", { value: "" }, "כל הרביים"), ...T.rebbeim.map((name, r) => h("option", { value: r, selected: q.get("r") === String(r) }, name)), ...(T.books.some(b => b[0] < 0) ? [h("option", { value: "-1", selected: q.get("r") === "-1" }, "אוספי פרסומים")] : []));
   const mapping = h("select", { "aria-label": "מצב מיפוי הספר", value: q.get("m") || "" }, h("option", { value: "" }, "כל מצבי המיפוי"), h("option", { value: "mapped", selected: q.get("m") === "mapped" }, "יש יחידות מקוטלגות"), h("option", { value: "pending", selected: q.get("m") === "pending" }, "טרם מופו יחידות"));
   const status = h("p", { class: "muted", role: "status", "aria-live": "polite" });
   const shelf = h("div"), more = h("div", { class: "books-more" });
@@ -4638,7 +4638,7 @@ function booksShelf(main, T, q, ctx, initialCovers) {
       const heading = h("div", { class: "sec-h books-group-head" }, h("h2", null, T.rebbeim[r] || "אוספי פרסומים"), h("span", { class: "muted" }, total + " ספרים ואוספים"));
       if (browsingAll && total > list.length) heading.append(h("a", { href: mkHash(["books"], { r }) }, "לכל ספרי " + (T.rebbeim[r] || "")));
       const grid = h("div", { class: "books-grid" });
-      for (const b of list) grid.append(h("a", { class: "books-card", href: mkHash(b.entries.length === 1 ? booksPath(b.entries[0].id) : booksPath(b.id)) }, booksGroupCover(T, b, covers), h("h3", null, b.name), h("small", { class: "muted" }, b.collection ? "אוסף פרסומים של ההוצאה" : b.entries.length + " רישומי כרכים, מהדורות ומקורות"), h("small", { class: "books-mapping" }, b.mapped ? "יש יחידות מקוטלגות" : "טרם מופו יחידות")));
+      for (const b of list) grid.append(h("a", { class: "books-card", href: mkHash(b.entries.length === 1 ? booksPath(b.entries[0].id) : booksPath(b.id)) }, booksGroupCover(T, b, covers), h("h3", null, b.name), h("small", { class: "muted" }, b.collection ? "אוסף פרסומים של ההוצאה" : b.entries.length === 1 ? "כרך ומקור אחד" : b.entries.length + " כרכים, מהדורות ומקורות"), h("small", { class: "books-mapping" }, b.mapped ? "יש יחידות מקוטלגות" : "טרם מופו יחידות")));
       shelf.append(h("section", { class: "books-group", "aria-label": T.rebbeim[r] || "ספרים" }, heading, grid));
     }
     if (!all.length) shelf.append(h("p", { class: "empty" }, "לא נמצאו ספרים התואמים לחיפוש."));
