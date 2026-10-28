@@ -37,7 +37,13 @@ const priority=new Map();
 const ordered=T.books.map((b,i)=>({r:b[0],name:b[1],scans:C.bookScans[i]}));
 for(const s of T.series)for(const v of s.vols){const m=v[3]?.confirmed===false?null:/^hb:([0-9]{1,8})$/.exec(v[2]);if(m)ordered.push({r:s.r,name:s.n+' · '+v[0],scans:[m[1]]});}
 for(const entry of ordered.sort((a,b)=>a.r-b.r||a.name.localeCompare(b.name,'he')))for(const id of entry.scans)if(!priority.has(id))priority.set(id,priority.size);
-const missing=[...ids].filter(id=>!covers[id]).sort((a,b)=>(priority.get(a)??100000)-(priority.get(b)??100000));
+// Give every work a prepared shelf image before generating all its other copies.
+const featured=new Set();
+for(const s of T.series){
+  const scans=s.vols.filter(v=>v[3]?.confirmed!==false).map(v=>/^hb:([0-9]{1,8})$/.exec(v[2])?.[1]).filter(Boolean);
+  if(scans.length&&!scans.some(id=>covers[id]))featured.add(scans[0]);
+}
+const missing=[...ids].filter(id=>!covers[id]).sort((a,b)=>Number(featured.has(b))-Number(featured.has(a))||(priority.get(a)??100000)-(priority.get(b)??100000));
 const publish=process.argv.includes('--publish-checkpoints');
 async function flush(){
   const snapshot=Object.fromEntries(Object.entries(covers).sort((a,b)=>Number(a[0])-Number(b[0])));

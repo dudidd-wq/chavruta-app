@@ -1479,6 +1479,11 @@ body.source-reader-open { overflow: hidden; }
 .books-inventory { margin-block: 1rem; padding: .8rem; border: 1px solid var(--rule-2); }
 .books-inventory summary { cursor: pointer; }
 .books-inventory li { padding-block: .3rem; overflow-wrap: anywhere; }
+.tree-ser .tree-tbl { table-layout: fixed; }
+.tree-ser .tree-tbl th:nth-child(1) { width: 43%; }
+.tree-ser .tree-tbl th:nth-child(2) { width: 37%; }
+.tree-ser .tree-tbl th:nth-child(3) { width: 20%; }
+.tree-ser .tree-tbl td:nth-last-child(-n+3) { white-space: normal; overflow-wrap: anywhere; }
 
 /* Shared learning portals use the site's page layout, spacing and palette. */
 .main.page.learning{max-width:64rem;padding-block-start:var(--s5)}
