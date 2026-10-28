@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-28T07:02:55+00:00",
+ "generated_at": "2026-10-28T10:35:09+00:00",
  "sources": [
   {
    "id": "chabadlibrary",
@@ -12,7 +12,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-10-28T07:01:41+00:00",
+   "checked_at": "2026-10-28T10:33:45+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -30,7 +30,7 @@
     "primary",
     "whatsnew"
    ],
-   "checked_at": "2026-10-28T07:01:41+00:00",
+   "checked_at": "2026-10-28T10:33:45+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -47,7 +47,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-10-28T07:01:41+00:00",
+   "checked_at": "2026-10-28T10:33:45+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -64,7 +64,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-10-28T07:01:41+00:00",
+   "checked_at": "2026-10-28T10:33:45+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -82,7 +82,7 @@
     "primary",
     "whatsnew"
    ],
-   "checked_at": "2026-10-28T07:01:41+00:00",
+   "checked_at": "2026-10-28T10:33:45+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -102,7 +102,7 @@
     }
    ],
    "total": 132,
-   "last_success_at": "2026-10-28T07:01:41+00:00"
+   "last_success_at": "2026-10-28T10:33:45+00:00"
   },
   {
    "id": "chabadlibrarybooks",
@@ -115,7 +115,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-10-28T07:01:41+00:00",
+   "checked_at": "2026-10-28T10:33:45+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -133,12 +133,12 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-28T07:01:41+00:00",
+   "checked_at": "2026-10-28T10:33:45+00:00",
    "status": "ok",
    "new": [],
    "latest": [],
    "total": 1501,
-   "last_success_at": "2026-10-28T07:01:41+00:00"
+   "last_success_at": "2026-10-28T10:33:45+00:00"
   },
   {
    "id": "chassidut_org",
@@ -152,12 +152,12 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-28T07:01:42+00:00",
+   "checked_at": "2026-10-28T10:33:47+00:00",
    "status": "ok",
    "new": [],
    "latest": [],
    "total": 4,
-   "last_success_at": "2026-10-28T07:01:42+00:00"
+   "last_success_at": "2026-10-28T10:33:47+00:00"
   },
   {
    "id": "biurim",
@@ -171,7 +171,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-28T07:01:43+00:00",
+   "checked_at": "2026-10-28T10:33:48+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -217,7 +217,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-10-28T07:01:43+00:00"
+   "last_success_at": "2026-10-28T10:33:48+00:00"
   },
   {
    "id": "hm_monsey",
@@ -231,7 +231,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-28T07:01:45+00:00",
+   "checked_at": "2026-10-28T10:33:50+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -277,7 +277,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-10-28T07:01:45+00:00"
+   "last_success_at": "2026-10-28T10:33:50+00:00"
   },
   {
    "id": "hiskashrus",
@@ -291,7 +291,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-28T07:01:47+00:00",
+   "checked_at": "2026-10-28T10:33:52+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -346,7 +346,7 @@
     }
    ],
    "total": 253,
-   "last_success_at": "2026-10-28T07:01:47+00:00"
+   "last_success_at": "2026-10-28T10:33:52+00:00"
   },
   {
    "id": "lichyot_chassidus",
@@ -360,7 +360,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-28T07:01:48+00:00",
+   "checked_at": "2026-10-28T10:33:54+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -438,7 +438,7 @@
     }
    ],
    "total": 1000,
-   "last_success_at": "2026-10-28T07:01:48+00:00"
+   "last_success_at": "2026-10-28T10:33:54+00:00"
   },
   {
    "id": "chabadzoom",
@@ -452,24 +452,9 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-28T07:01:52+00:00",
+   "checked_at": "2026-10-28T10:33:56+00:00",
    "status": "ok",
-   "new": [
-    {
-     "id": "content:199446b4ed0d23a0",
-     "title": "עדכון בתוכן הדף",
-     "url": "https://chabadzoom.co.il/series",
-     "date": "",
-     "first_seen": "2026-10-28T07:01:52+00:00"
-    },
-    {
-     "id": "https://chabadzoom.co.il/article/%d7%95%d7%94-%d7%90%d7%9e%d7%a8-%d7%94%d7%9e%d7%9b%d7%a1%d7%94-%d7%92%d7%95-%d7%94%d7%a8%d7%91-%d7%97%d7%99%d7%99%d7%9d-%d7%a4%d7%a8%d7%95%d7%a1",
-     "title": "וה' אמר המכסה גו' - הרב חיים פרוס",
-     "url": "https://chabadzoom.co.il/article/%d7%95%d7%94-%d7%90%d7%9e%d7%a8-%d7%94%d7%9e%d7%9b%d7%a1%d7%94-%d7%92%d7%95-%d7%94%d7%a8%d7%91-%d7%97%d7%99%d7%99%d7%9d-%d7%a4%d7%a8%d7%95%d7%a1",
-     "date": "",
-     "first_seen": "2026-10-28T07:01:52+00:00"
-    }
-   ],
+   "new": [],
    "latest": [
     {
      "id": "content:199446b4ed0d23a0",
@@ -543,7 +528,7 @@
     }
    ],
    "total": 559,
-   "last_success_at": "2026-10-28T07:01:52+00:00"
+   "last_success_at": "2026-10-28T10:33:56+00:00"
   },
   {
    "id": "kovtzimdrive",
@@ -557,7 +542,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-28T07:01:53+00:00",
+   "checked_at": "2026-10-28T10:33:58+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -565,12 +550,12 @@
      "id": "https://www.kovtzimdrive.com/posts/bochurim-build-database-of-thousands-of-%E2%80%98he%E2%80%99aros%E2%80%99",
      "title": "bochurim build database of thousands of ‘he’aros’",
      "url": "https://www.kovtzimdrive.com/posts/bochurim-build-database-of-thousands-of-%E2%80%98he%E2%80%99aros%E2%80%99",
-     "date": "2026-10-27",
+     "date": "2026-10-28",
      "first_seen": "2026-10-20T07:59:38+00:00"
     }
    ],
    "total": 1,
-   "last_success_at": "2026-10-28T07:01:53+00:00"
+   "last_success_at": "2026-10-28T10:33:58+00:00"
   },
   {
    "id": "avita",
@@ -584,7 +569,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-28T07:01:56+00:00",
+   "checked_at": "2026-10-28T10:34:07+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -602,7 +587,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-28T07:01:56+00:00",
+   "checked_at": "2026-10-28T10:34:07+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -624,7 +609,7 @@
     }
    ],
    "total": 2,
-   "last_success_at": "2026-10-28T07:01:56+00:00"
+   "last_success_at": "2026-10-28T10:34:07+00:00"
   },
   {
    "id": "dvarmalchus770",
@@ -638,7 +623,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-28T07:01:57+00:00",
+   "checked_at": "2026-10-28T10:34:09+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -708,7 +693,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-10-28T07:01:57+00:00"
+   "last_success_at": "2026-10-28T10:34:09+00:00"
   },
   {
    "id": "soulwords",
@@ -722,7 +707,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-28T07:01:59+00:00",
+   "checked_at": "2026-10-28T10:34:11+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -776,7 +761,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-10-28T07:01:59+00:00"
+   "last_success_at": "2026-10-28T10:34:11+00:00"
   },
   {
    "id": "sie_weekly",
@@ -790,7 +775,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-28T07:02:00+00:00",
+   "checked_at": "2026-10-28T10:34:12+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -838,7 +823,7 @@
     }
    ],
    "total": 115,
-   "last_success_at": "2026-10-28T07:02:00+00:00"
+   "last_success_at": "2026-10-28T10:34:12+00:00"
   },
   {
    "id": "pls",
@@ -852,7 +837,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-28T07:02:01+00:00",
+   "checked_at": "2026-10-28T10:34:14+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -914,7 +899,7 @@
     }
    ],
    "total": 200,
-   "last_success_at": "2026-10-28T07:02:01+00:00"
+   "last_success_at": "2026-10-28T10:34:14+00:00"
   },
   {
    "id": "chayenu_ls",
@@ -928,7 +913,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-28T07:02:03+00:00",
+   "checked_at": "2026-10-28T10:34:15+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -955,7 +940,7 @@
     }
    ],
    "total": 2,
-   "last_success_at": "2026-10-28T07:02:03+00:00"
+   "last_success_at": "2026-10-28T10:34:15+00:00"
   },
   {
    "id": "weekly_sicha",
@@ -969,7 +954,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-28T07:02:04+00:00",
+   "checked_at": "2026-10-28T10:34:16+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1017,7 +1002,7 @@
     }
    ],
    "total": 117,
-   "last_success_at": "2026-10-28T07:02:04+00:00"
+   "last_success_at": "2026-10-28T10:34:16+00:00"
   },
   {
    "id": "theyeshiva",
@@ -1031,18 +1016,9 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-28T07:02:06+00:00",
+   "checked_at": "2026-10-28T10:34:18+00:00",
    "status": "ok",
-   "new": [
-    {
-     "id": "https://www.theyeshiva.net/item/10015",
-     "title": "You Don't Need a New Life; You Need New Eyes: Hagar & Helen Keller - Women's Vayera Class",
-     "url": "https://www.theyeshiva.net/item/10015",
-     "date": "Tue, 27 Oct 2026 09:30:00 -0400",
-     "blurb": "The Ugliest Man Rabbi Elazar Ever Met Was Himself: The Most Disturbing Talmudic Story When Hagar is dying of thirst beside her dying son, the Torah does not say that G-d created a well or sent an angel with water. It says something far more startling: vayifkach Elokim et eineha — \"G-d opened her eyes, and she saw a well of water.\" The water was already there. The salvation was already within reach. She was weeping over the absence of something that was fully present — she simply could not see it. Building on the Chiddushei HaRim (quoted by the Sfas Emes) — that everything a person needs already stands before him, if only he would open his eyes to see it — this class explores the quiet miracle that is harder than any splitting of the sea: not G-d changing our reality, but G-d changing the way we see the reality we already have. From Helen Keller's awakening at a water pump, to Otto Frank discovering the inner world of a daughter he thought he knew, we confront how even profound love can fail to truly see the human being standing in front of us. The class then turns inward through one of the strangest stories in the Talmud (Taanis 20b): Rabbi Elazar, flush with Torah and pride, insults an \"exceedingly ugly\" man — who, the Tosafos tell us, may have been Elijah himself, and who, on a deeper level, may have been Rabbi Elazar's own soul confronting his own ego. \"Go tell the Craftsman who made me how ugly is the vessel He fashioned.\" We learn that the soul has no shame — only the eg",
-     "first_seen": "2026-10-28T07:02:06+00:00"
-    }
-   ],
+   "new": [],
    "latest": [
     {
      "id": "https://www.theyeshiva.net/item/10015",
@@ -1118,7 +1094,7 @@
     }
    ],
    "total": 1540,
-   "last_success_at": "2026-10-28T07:02:06+00:00"
+   "last_success_at": "2026-10-28T10:34:18+00:00"
   },
   {
    "id": "chassidus_applied",
@@ -1132,18 +1108,9 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-28T07:02:09+00:00",
+   "checked_at": "2026-10-28T10:34:22+00:00",
    "status": "ok",
-   "new": [
-    {
-     "id": "yt:video:3jzzlpSodpQ",
-     "title": "Samach Vav Part 231: From the angel's bittul ha'yesh to the souls bittul b'metziyus in Shema",
-     "url": "https://www.youtube.com/watch?v=3jzzlpSodpQ",
-     "date": "2026-10-28T02:50:12+00:00",
-     "blurb": "Samach Vav p. 188-189: The service of contemplating the angels' bittul leads to (Following) the angels' bittul of ba'n leads to (we arrive at) the soul's higher bittul of ma'h in Keriyas Shema Through (From) the service of contemplating the angels' bittul, we arrive and reach an even higher bittul in Keriyas Shema, to be encompassed (absorbed) in the level of ma'h (adam she'al ha'kisei), pnimiyus - bittul b'metziyus resulting from contemplating atzmus ohr ain sof beyond existence, and Hashem Echad in Shema, which is the soul's fire of Shalheves Yud He-i. This is the true level of fire from above -- the soul's fire of Havaya, higher than the angels' fire of Elokim. And this higher fire of Havaya entirely consumes the animal soul in a state of bittul b'metziyus, following the previous birur of ba'n. The birur of the animal soul continues after prayer, especially during the meals we eat, which is a battle (nahama a'pum charba laychol, bread is eaten at the edge of the sword) -- the struggle to suppress the animal soul's desire to indulge in food, and instead eat only that which is necessary for sustenance, and even that only because it is necessary, l'shem shomayim. This entails two levels of bittul, two forms of consumption: 1. The birur of ba'n -- the consumption of the altar, 2. The birur of ma'h -- the consumption of the priests to achieve atonement for the owners who brought the offering.",
-     "first_seen": "2026-10-28T07:02:09+00:00"
-    }
-   ],
+   "new": [],
    "latest": [
     {
      "id": "yt:video:3jzzlpSodpQ",
@@ -1259,7 +1226,7 @@
     }
    ],
    "total": 15,
-   "last_success_at": "2026-10-28T07:02:09+00:00"
+   "last_success_at": "2026-10-28T10:34:22+00:00"
   },
   {
    "id": "neirot",
@@ -1273,7 +1240,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-28T07:02:09+00:00",
+   "checked_at": "2026-10-28T10:34:22+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1327,7 +1294,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-10-28T07:02:09+00:00"
+   "last_success_at": "2026-10-28T10:34:22+00:00"
   },
   {
    "id": "chassidus_explained",
@@ -1341,7 +1308,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-28T07:02:11+00:00",
+   "checked_at": "2026-10-28T10:34:28+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1403,7 +1370,7 @@
     }
    ],
    "total": 136,
-   "last_success_at": "2026-10-28T07:02:11+00:00"
+   "last_success_at": "2026-10-28T10:34:28+00:00"
   },
   {
    "id": "melukat",
@@ -1417,7 +1384,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-28T07:02:12+00:00",
+   "checked_at": "2026-10-28T10:34:29+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1479,7 +1446,7 @@
     }
    ],
    "total": 168,
-   "last_success_at": "2026-10-28T07:02:12+00:00"
+   "last_success_at": "2026-10-28T10:34:29+00:00"
   },
   {
    "id": "daily_maamar",
@@ -1493,18 +1460,9 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-28T07:02:13+00:00",
+   "checked_at": "2026-10-28T10:34:30+00:00",
    "status": "ok",
-   "new": [
-    {
-     "id": "4246d084-99b0-44c3-a18c-4da5dcea263d",
-     "title": "Motzaei Shabbos Chayey Sarah (B’chedro) 5738, Maamorim Melukatim Vol. 1 – Episode 4",
-     "url": "https://share.transistor.fm/s/932081c6",
-     "date": "Tue, 27 Oct 2026 09:23:21 -0400",
-     "blurb": "This episode covers from Chapter 8 through the end of the Maamar. Our Mission: Affecting the world of Space and Time .",
-     "first_seen": "2026-10-28T07:02:13+00:00"
-    }
-   ],
+   "new": [],
    "latest": [
     {
      "id": "4246d084-99b0-44c3-a18c-4da5dcea263d",
@@ -1620,7 +1578,7 @@
     }
    ],
    "total": 349,
-   "last_success_at": "2026-10-28T07:02:13+00:00"
+   "last_success_at": "2026-10-28T10:34:30+00:00"
   },
   {
    "id": "wellsprings",
@@ -1634,7 +1592,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-28T07:02:15+00:00",
+   "checked_at": "2026-10-28T10:34:32+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1680,7 +1638,7 @@
     }
    ],
    "total": 125,
-   "last_success_at": "2026-10-28T07:02:15+00:00"
+   "last_success_at": "2026-10-28T10:34:32+00:00"
   },
   {
    "id": "daily_sicha",
@@ -1694,18 +1652,9 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-28T07:02:15+00:00",
+   "checked_at": "2026-10-28T10:34:33+00:00",
    "status": "ok",
-   "new": [
-    {
-     "id": "2026.10.28",
-     "title": "יום ד' פ' וירא, י\"ז מרחשון, ה'תשפ\"ז",
-     "url": "",
-     "date": "Wed, 28 Oct 2026 12:00:00 GMT",
-     "blurb": "התוכן קריה\"ת של יום א' דר\"ה מתחיל ב\" וה' פקד את שרה וגו'\" [רביעי דפ' וירא], שה' בירך את שרה בבן (שע\"י הי' המשך לעם ישראל) וקיים הבטחתו בפועל ממש . ועד\"ז מברך ה' כאו\"א בבנים שייקראו בני אברהם יצחק ויעקב ובבנות שייקראו בנות שרה רבקה רחל ולאה, ומקיים הבטחותיו . ובהמשך מסופר ע\"ד החינוך שיצחק קיבל, עד כדי מס\"נ (עקידת יצחק), ואיך שדוקא שרה התמסרה במיוחד לחינוך שלו, שעם היותו ילד יהודי היחיד בכל דורו, והיא היתה גומלת חסד בטבעה ואפי' לערביים - לא התחשבה בכ\"ז ושמרה עליו שלא יהי' לו עסק עם גויים וגוי'שקייט, ודוקא כך זוכים שהילד גודל באופן ד\"הרבה ארבה את זרעך\" ורואים ממנו נחת אמיתי! משיחת כ\"ז אלול ה'תש\"מ, לנשי ובנות חב\"ד תחיינה ל\"הנחה פרטית\" או התרגום ללה\"ק של השיחה: https://thedailysicha.com/?date=28-10-2026 Synopsis The Torah reading of the first day of Rosh Hashanah begins with “ Hashem remembered Sarah… ” (in revi’i of parashas Vayeira), when Hashem blessed Sarah with a son through whom the Jewish people would continue, and He fulfilled His promise in actuality . Similarly, Hashem blesses every Jew with children who will be called sons of Avraham, Yitzchak, and Yaakov and daughters who will be called daughters of Sarah, Rivkah, Rachel, and Leah, and He fulfills His promises . The Torah then describes the education Yitzchak received, to the point of mesiras-nefesh (at the Akeidah), and how Sarah in particular devoted herself to his education. Although he was the only Jewish child in his entire generation, and although she was by nature a kind person, even toward Arabs, she did not al",
-     "first_seen": "2026-10-28T07:02:15+00:00"
-    }
-   ],
+   "new": [],
    "latest": [
     {
      "id": "2026.10.28",
@@ -1821,7 +1770,7 @@
     }
    ],
    "total": 1413,
-   "last_success_at": "2026-10-28T07:02:15+00:00"
+   "last_success_at": "2026-10-28T10:34:33+00:00"
   },
   {
    "id": "learnchassidus",
@@ -1835,7 +1784,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-28T07:02:22+00:00",
+   "checked_at": "2026-10-28T10:34:40+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1848,7 +1797,7 @@
     }
    ],
    "total": 5,
-   "last_success_at": "2026-10-28T07:02:22+00:00"
+   "last_success_at": "2026-10-28T10:34:40+00:00"
   },
   {
    "id": "simplychassidus",
@@ -1862,7 +1811,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-28T07:02:23+00:00",
+   "checked_at": "2026-10-28T10:34:41+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1889,7 +1838,7 @@
     }
    ],
    "total": 4,
-   "last_success_at": "2026-10-28T07:02:23+00:00"
+   "last_success_at": "2026-10-28T10:34:41+00:00"
   },
   {
    "id": "alonei_chabad",
@@ -1902,7 +1851,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-28T07:02:24+00:00",
+   "checked_at": "2026-10-28T10:34:42+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -1919,7 +1868,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-28T07:02:24+00:00",
+   "checked_at": "2026-10-28T10:34:42+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -1936,7 +1885,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-28T07:02:24+00:00",
+   "checked_at": "2026-10-28T10:34:42+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1963,7 +1912,7 @@
     }
    ],
    "total": 303,
-   "last_success_at": "2026-10-28T07:02:24+00:00"
+   "last_success_at": "2026-10-28T10:34:42+00:00"
   },
   {
    "id": "lchaim",
@@ -1976,7 +1925,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-28T07:02:25+00:00",
+   "checked_at": "2026-10-28T10:34:43+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2031,7 +1980,7 @@
     }
    ],
    "total": 193,
-   "last_success_at": "2026-10-28T07:02:25+00:00"
+   "last_success_at": "2026-10-28T10:34:43+00:00"
   },
   {
    "id": "one_point",
@@ -2044,7 +1993,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-28T07:02:27+00:00",
+   "checked_at": "2026-10-28T10:34:44+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2085,7 +2034,7 @@
     }
    ],
    "total": 184,
-   "last_success_at": "2026-10-28T07:02:27+00:00"
+   "last_success_at": "2026-10-28T10:34:44+00:00"
   },
   {
    "id": "derher",
@@ -2098,7 +2047,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-28T07:02:28+00:00",
+   "checked_at": "2026-10-28T10:34:46+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -2115,7 +2064,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-28T07:02:28+00:00",
+   "checked_at": "2026-10-28T10:34:46+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -2132,7 +2081,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-28T07:02:28+00:00",
+   "checked_at": "2026-10-28T10:34:46+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2159,7 +2108,7 @@
     }
    ],
    "total": 5,
-   "last_success_at": "2026-10-28T07:02:28+00:00"
+   "last_success_at": "2026-10-28T10:34:46+00:00"
   },
   {
    "id": "maynotecha_inst",
@@ -2172,7 +2121,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-28T07:02:30+00:00",
+   "checked_at": "2026-10-28T10:34:48+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -2189,7 +2138,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-28T07:02:30+00:00",
+   "checked_at": "2026-10-28T10:34:48+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2211,7 +2160,7 @@
     }
    ],
    "total": 1,
-   "last_success_at": "2026-10-28T07:02:30+00:00"
+   "last_success_at": "2026-10-28T10:34:48+00:00"
   },
   {
    "id": "anash",
@@ -2224,7 +2173,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-28T07:02:31+00:00",
+   "checked_at": "2026-10-28T10:34:49+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2374,7 +2323,7 @@
     }
    ],
    "total": 6,
-   "last_success_at": "2026-10-28T07:02:31+00:00"
+   "last_success_at": "2026-10-28T10:34:49+00:00"
   },
   {
    "id": "chabadinfo",
@@ -2387,7 +2336,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-28T07:02:33+00:00",
+   "checked_at": "2026-10-28T10:34:51+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -2404,7 +2353,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-28T07:02:33+00:00",
+   "checked_at": "2026-10-28T10:34:51+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -2421,7 +2370,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-28T07:02:33+00:00",
+   "checked_at": "2026-10-28T10:34:51+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2467,7 +2416,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-10-28T07:02:33+00:00"
+   "last_success_at": "2026-10-28T10:34:51+00:00"
   },
   {
    "id": "kehot",
@@ -2480,7 +2429,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-28T07:02:36+00:00",
+   "checked_at": "2026-10-28T10:34:54+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2750,7 +2699,7 @@
     }
    ],
    "total": 190,
-   "last_success_at": "2026-10-28T07:02:36+00:00"
+   "last_success_at": "2026-10-28T10:34:54+00:00"
   }
  ],
  "browser_checks": {
