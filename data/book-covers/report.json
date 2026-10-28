@@ -1,7 +1,7 @@
 {
   "renderer": "6.4.299",
   "total": 1270,
-  "prepared": 947,
+  "prepared": 966,
   "failures": [
     {
       "id": "c-89bfca9156929294cf7daa01",
@@ -22,6 +22,10 @@
     {
       "id": "c-60eb0261c38df5feef92a47f",
       "error": "PDF range budget"
+    },
+    {
+      "id": "15668",
+      "error": "source unavailable: 200"
     }
   ]
 }
