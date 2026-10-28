@@ -12,20 +12,23 @@ permissions:
   contents: read
 concurrency:
   group: book-cover-thumbnails
-  cancel-in-progress: false
+  cancel-in-progress: true
 jobs:
   prepare:
     runs-on: ubuntu-latest
     timeout-minutes: 35
     permissions:
       contents: write
+      pages: write
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
       - run: npm install --prefix tools/book-covers --ignore-scripts --no-audit --no-fund
-      - run: node tools/book-covers/build.mjs data
+      - run: node tools/book-covers/build.mjs data --publish-checkpoints
+        env:
+          GH_TOKEN: ${{ github.token }}
       - name: Commit validated thumbnails
         run: |
           git add data/book-covers.js data/book-covers/
