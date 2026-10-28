@@ -1,7 +1,7 @@
 {
   "renderer": "6.4.299",
   "total": 1270,
-  "prepared": 1156,
+  "prepared": 1171,
   "failures": [
     {
       "id": "c-89bfca9156929294cf7daa01",
@@ -66,6 +66,26 @@
     {
       "id": "c-eff7ec522764cde95922c888",
       "error": "Invalid initial PDF range"
+    },
+    {
+      "id": "c-3a518da09d924438156ae5b2",
+      "error": "fetch failed"
+    },
+    {
+      "id": "c-b143afabd101cddbe871dcc6",
+      "error": "fetch failed"
+    },
+    {
+      "id": "c-94e555ef2fe08bebf24decf3",
+      "error": "fetch failed"
+    },
+    {
+      "id": "c-301db25f28ef2c86d953cd0c",
+      "error": "fetch failed"
+    },
+    {
+      "id": "c-7f05895ad7385d57abdb259f",
+      "error": "fetch failed"
     }
   ]
 }
