@@ -1472,6 +1472,10 @@ body.source-reader-open { overflow: hidden; }
 .books-editions { padding-inline-start: 1.5rem; }
 .books-editions li { padding: .7rem 0; border-bottom: 1px solid var(--rule-2); }
 .books-editions small { display: block; margin-top: .25rem; }
+.books-unphotographed { border-top: 1px solid var(--rule-2); padding-block: .8rem; margin-bottom: 2rem; }
+.books-unphotographed summary { color: var(--ink-2); cursor: pointer; font-size: .9rem; }
+.books-text-list { display: grid; grid-template-columns: repeat(auto-fill,minmax(220px,1fr)); gap: 1rem 1.5rem; padding-inline-start: 1.4rem; }
+.books-text-list small { display: block; font-size: .78rem; margin-top: .25rem; }
 
 /* Shared learning portals use the site's page layout, spacing and palette. */
 .main.page.learning{max-width:64rem;padding-block-start:var(--s5)}

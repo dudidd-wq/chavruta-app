@@ -4638,8 +4638,13 @@ function booksShelf(main, T, q, ctx, initialCovers) {
       const heading = h("div", { class: "sec-h books-group-head" }, h("h2", null, T.rebbeim[r] || "אוספי פרסומים"), h("span", { class: "muted" }, total + " ספרים ואוספים"));
       if (browsingAll && total > list.length) heading.append(h("a", { href: mkHash(["books"], { r }) }, "לכל ספרי " + (T.rebbeim[r] || "")));
       const grid = h("div", { class: "books-grid" });
-      for (const b of list) grid.append(h("a", { class: "books-card", href: mkHash(b.entries.length === 1 ? booksPath(b.entries[0].id) : booksPath(b.id)) }, booksGroupCover(T, b, covers), h("h3", null, b.name), h("small", { class: "muted" }, b.collection ? "אוסף פרסומים של ההוצאה" : b.entries.length === 1 ? "כרך ומקור אחד" : b.entries.length + " כרכים, מהדורות ומקורות"), h("small", { class: "books-mapping" }, b.mapped ? "יש יחידות מקוטלגות" : "טרם מופו יחידות")));
-      shelf.append(h("section", { class: "books-group", "aria-label": T.rebbeim[r] || "ספרים" }, heading, grid));
+      const photographed = list.filter(b => b.entries.some(e => booksCoverScans(T, e.id)?.length)), unpictured = list.filter(b => !photographed.includes(b));
+      for (const b of photographed) grid.append(h("a", { class: "books-card", href: mkHash(b.entries.length === 1 ? booksPath(b.entries[0].id) : booksPath(b.id)) }, booksGroupCover(T, b, covers), h("h3", null, b.name), h("small", { class: "muted" }, b.entries.length === 1 ? "כרך ומקור אחד" : b.entries.length + " כרכים, מהדורות ומקורות"), h("small", { class: "books-mapping" }, b.mapped ? "יש יחידות מקוטלגות" : "טרם מופו יחידות")));
+      const textList = unpictured.length ? h("details", { class: "books-unphotographed", open: !photographed.length || !!search.value.trim() },
+        h("summary", null, unpictured.length + " ספרים ואוספים ללא צילום שער מקושר"), h("ul", { class: "books-text-list" }, ...unpictured.map(b => h("li", null,
+          h("a", { class: "books-text-card", href: mkHash(b.entries.length === 1 ? booksPath(b.entries[0].id) : booksPath(b.id)) }, b.name),
+          h("small", { class: "muted" }, b.collection ? "אוסף פרסומים של ההוצאה" : b.entries.length === 1 ? "כרך ומקור אחד" : b.entries.length + " כרכים, מהדורות ומקורות"))))) : null;
+      shelf.append(h("section", { class: "books-group", "aria-label": T.rebbeim[r] || "אוספי פרסומים" }, heading, photographed.length ? grid : null, textList));
     }
     if (!all.length) shelf.append(h("p", { class: "empty" }, "לא נמצאו ספרים התואמים לחיפוש."));
     if (!browsingAll && shown.length < all.length) more.append(h("button", { class: "btn", type: "button", onclick: () => { limit += BOOK_SHELF_PAGE; draw(); } }, "הצגת ספרים נוספים"));
