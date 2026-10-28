@@ -1476,6 +1476,9 @@ body.source-reader-open { overflow: hidden; }
 .books-unphotographed summary { color: var(--ink-2); cursor: pointer; font-size: .9rem; }
 .books-text-list { display: grid; grid-template-columns: repeat(auto-fill,minmax(220px,1fr)); gap: 1rem 1.5rem; padding-inline-start: 1.4rem; }
 .books-text-list small { display: block; font-size: .78rem; margin-top: .25rem; }
+.books-inventory { margin-block: 1rem; padding: .8rem; border: 1px solid var(--rule-2); }
+.books-inventory summary { cursor: pointer; }
+.books-inventory li { padding-block: .3rem; overflow-wrap: anywhere; }
 
 /* Shared learning portals use the site's page layout, spacing and palette. */
 .main.page.learning{max-width:64rem;padding-block-start:var(--s5)}
