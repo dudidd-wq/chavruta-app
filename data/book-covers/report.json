@@ -1,7 +1,7 @@
 {
   "renderer": "6.4.299",
   "total": 1270,
-  "prepared": 998,
+  "prepared": 1016,
   "failures": [
     {
       "id": "c-89bfca9156929294cf7daa01",
@@ -58,6 +58,14 @@
     {
       "id": "c-6a872353fbab0524edca5ec4",
       "error": "terminated"
+    },
+    {
+      "id": "c-104d7b0400aab7a138e688b1",
+      "error": "Invalid initial PDF range"
+    },
+    {
+      "id": "c-eff7ec522764cde95922c888",
+      "error": "Invalid initial PDF range"
     }
   ]
 }
