@@ -56,7 +56,10 @@ for(const s of T.series){
 const maxArg=process.argv.find(x=>x.startsWith('--max-new='));
 const maxNew=maxArg?Number(maxArg.split('=')[1]):Infinity;
 if(maxArg&&(!Number.isSafeInteger(maxNew)||maxNew<1||maxNew>2000))throw Error('Invalid cover batch limit');
-const missing=[...ids].filter(id=>!covers[id]).sort((a,b)=>(featuredPriority.get(b)||0)-(featuredPriority.get(a)||0)||(priority.get(a)??100000)-(priority.get(b)??100000)).slice(0,maxNew);
+const onlyArg=process.argv.find(x=>x.startsWith('--only-id='));
+const onlyID=onlyArg?.slice('--only-id='.length);
+if(onlyID&&!ids.has(onlyID))throw Error('Unknown cover source');
+const missing=[...ids].filter(id=>!covers[id]&&(!onlyID||id===onlyID)).sort((a,b)=>(featuredPriority.get(b)||0)-(featuredPriority.get(a)||0)||(priority.get(a)??100000)-(priority.get(b)??100000)).slice(0,maxNew);
 const publish=process.argv.includes('--publish-checkpoints');
 async function flush(){
   const snapshot=Object.fromEntries(Object.entries(covers).sort((a,b)=>a[0].localeCompare(b[0],'en',{numeric:true})));

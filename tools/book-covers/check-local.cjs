@@ -18,7 +18,9 @@ const {chromium}=require(path.join(process.env.PLAYWRIGHT_NODE_MODULES,'playwrig
   await context.route('**/*',route=>{const url=route.request().url();if(url.startsWith(origin+'/'))return route.continue();external.push(url);return route.abort();});
   const page=await context.newPage();page.on('pageerror',e=>errors.push(e.message));
   await page.goto(origin+'/#/books?r=8');await page.locator('.books-card').first().waitFor();
-  const cards=await page.locator('.books-card').count();assert.equal(cards,46);
+  const cards=await page.locator('.books-card').count();assert.equal(cards,47);
+  assert.match(await page.locator('.books-pending-sources').innerText(),/מפתחות ומאגרי מאמרים/);
+  assert.doesNotMatch(await page.locator('.books-pending-sources').innerText(),/שיוך לספר בבדיקה/);
   const haggadah=page.locator('.books-card').filter({hasText:'הגדה של פסח עם לקוטי טעמים ומנהגים'});
   await haggadah.scrollIntoViewIfNeeded();await haggadah.locator('img').waitFor();
   const cover=await haggadah.locator('img').getAttribute('src');

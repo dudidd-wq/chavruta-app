@@ -15,7 +15,7 @@ async function bytes(response, limit) {
   const out = new Uint8Array(size); let offset = 0;
   for (const chunk of chunks) { out.set(chunk, offset); offset += chunk.length; } return out;
 }
-export async function openCataloguePDF(raw, lib, {fetchImpl=fetch, limit=24*1024*1024, timeout=45000}={}) {
+export async function openCataloguePDF(raw, lib, {fetchImpl=fetch, limit=64*1024*1024, timeout=45000}={}) {
   const url = cataloguePDFURL(raw), controller = new AbortController(); let rejectError, closed=false, spent=0, requests=0;
   const error = new Promise((_, reject)=>{rejectError=reject;}); error.catch(()=>{});
   const fail = reason => { if (!closed) { rejectError(reason); controller.abort(); } };
@@ -40,7 +40,7 @@ export async function openCataloguePDF(raw, lib, {fetchImpl=fetch, limit=24*1024
       requestDataRange(begin,end) {
         if (closed) return;
         if (!Number.isInteger(begin) || !Number.isInteger(end) || begin < 0 || end <= begin || end > total ||
-            ++requests > 96 || (spent += end-begin) > limit) { fail(Error("PDF range budget")); return; }
+            ++requests > 512 || (spent += end-begin) > limit) { fail(Error("PDF range budget")); return; }
         void (async()=>{
           const response = await request(begin,end), expected = "bytes "+begin+"-"+(end-1)+"/"+total;
           if (response.status !== 206 || response.headers.get("content-range") !== expected) throw Error("Misaligned PDF range");
@@ -51,6 +51,6 @@ export async function openCataloguePDF(raw, lib, {fetchImpl=fetch, limit=24*1024
       }
       abort() { fail(Error("PDF transport canceled")); }
     }
-    return {options:{range:new Transport(total,initial,true),rangeChunkSize:65536,disableAutoFetch:true,disableStream:true},error,close};
+    return {options:{range:new Transport(total,initial,true),rangeChunkSize:262144,disableAutoFetch:true,disableStream:true},error,close};
   } catch (reason) { close(); throw reason; }
 }

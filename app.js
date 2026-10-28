@@ -3974,9 +3974,12 @@ function treeRebbe(main, T, r, q) {
     if (work) det.append(h("p", null, h("a", { href: mkHash(booksPath(work.id)) }, "בחירת כרך, מהדורה ומקור"),
       h("span", { class: "muted" }, " · " + work.unitBooks.reduce((sum, b) => sum + (T.bcount[b] || 0), 0).toLocaleString("he") + " יחידות מקוטלגות")));
     if (s.cl) det.append(h("p", null, treeSourceLink("קריאה בספריית חב״ד", "cl:" + s.cl, { title: s.n, author: name, book: s.n })));
-    if (s.vols.length) {
+    const structure = s.vols.filter(v => v[3]?.confirmed === false);
+    if (structure.length) det.append(h("details",null,h("summary",null,"תיאור מבנה הסדרה"),h("ul",null,...structure.map(v=>h("li",null,v[0]+" · "+v[1])))));
+    if (s.vols.some(v=>v[3]?.confirmed !== false)) {
       const tb = h("tbody");
       for (const [volumeId, [v, c, w, meta]] of s.vols.entries()) {
+        if (meta?.confirmed === false) continue;
         const W = meta ? (meta.confirmed ? {t:meta.source_key?.startsWith("h:")?"היברובוקס":meta.source_key?.startsWith("cl:")?"ספריית חב״ד":"חב״ד און ליין",u:meta.url}:null) : TREE_WHERE(w);
         const path = meta?.key ? ["books","e",seriesId,...meta.key.split(":")] : ["books","v",seriesId,volumeId];
         tb.append(h("tr", null, h("td", null, h("a", { href: mkHash(path) }, v || s.n)), h("td", null, c), h("td", null, W ? (W.u ? treeSourceLink(W.t, W.u, { title: s.n + " · " + v, author: name, book: s.n }) : W.t) : h("span", { class: "muted" }, "רישום מבנה · שיוך מקור בבדיקה"))));
@@ -3996,12 +3999,14 @@ function treeRebbe(main, T, r, q) {
   main.append(h("div", { class: "sec-h" }, h("h2", null, workGroups ? "מקורות נוספים — שיוך לסדרה בבדיקה" : "יחידות בעץ לפי ספר")));
   const ul = h("ul", { class: "tree-books" });
   if (typeof booksGroups === "function") {
-    for (const group of workGroups.filter(g => g.id.startsWith("g:b:") && g.unitBooks.some(b => T.bcount[b]))) {
+    for (const group of workGroups.filter(g => g.id.startsWith("g:b:") && !g.collection && g.unitBooks.some(b => T.bcount[b]))) {
       const n = group.unitBooks.reduce((sum, b) => sum + (T.bcount[b] || 0), 0);
         ul.append(h("li", null, h("a", { href: mkHash(booksPath(group.id)) }, group.name), h("span", { class: "muted" }, " · " + group.entries.length + " כרכים, מהדורות ומקורות · " + n.toLocaleString("he") + " יחידות"), group.authorReview ? h("p",{class:"books-note"},booksAuthorReview(T,group.authorReview)) : null));
     }
   } else for (const [b, n] of bks) ul.append(h("li", null, h("a", { href: mkHash(["tree", "b", b]) }, T.books[b][1]), h("span", { class: "muted" }, ` · ${T.books[b][2]} · ${n.toLocaleString("he")}`)));
   main.append(ul);
+  const references = workGroups?.filter(g=>g.collection?.kind === "source_index") || [];
+  if (references.length) main.append(h("h2",null,"מפתחות ומאגרי מאמרים"),h("ul",null,...references.map(g=>h("li",null,h("a",{href:mkHash(booksPath(g.id))},g.name)))));
   window.scrollTo(0, 0);
 }
 
@@ -4012,7 +4017,8 @@ async function treeBook(main, T, b, q, ctx) {
   const collection = entry?.collection, name = collection?.name || originalName;
   document.title = name + " · עץ הידע · חברותא";
   treeHead(main, name, [[T.rebbeim[r] || "אוספי פרסומים", r >= 0 ? mkHash(["tree", "r", r]) : null], [name, null]], `${T.rebbeim[r] || ""} · מקור: ${src}`);
-  if (collection) main.append(h("p", { class: "books-note" }, "אוסף של " + collection.count + " קובצי פרסום נפרדים מאתר קה״ת — מאמרים, שיחות ותדפיסים. קה״ת היא ההוצאה לאור; הרישום אינו ספר אחד ולא נקבע לו מחבר אחד."));
+  if (collection?.kind === "publisher_collection") main.append(h("p", { class: "books-note" }, "אוסף של " + collection.count + " קובצי פרסום נפרדים מאתר קה״ת — מאמרים, שיחות ותדפיסים. קה״ת היא ההוצאה לאור; הרישום אינו ספר אחד ולא נקבע לו מחבר אחד."));
+  if (collection?.kind === "source_index") main.append(h("p",{class:"books-note"},"זהו מפתח של "+collection.count+" רישומי מקורות, ולא כרך מודפס אחד."));
     const authorReview = typeof booksEntry === "function" ? booksEntry(T,b)?.authorReview : null;
     if (authorReview) main.append(h("p",{class:"books-note"},booksAuthorReview(T,authorReview)));
   const unitAuthorNote = entry ? booksUnitAuthorNote(T,entry) : "";
@@ -4403,7 +4409,7 @@ function booksRegisterCatalog(T, C) {
   }
   if (links.size !== T.series.reduce((n, x) => n + x.vols.length, 0)) throw Error("קטלוג כרכים חסר");
   const collections = new Map();
-  for (const [b, item] of Object.entries(C.collections || {})) if (T.books[b]?.[0] < 0 && item.kind === "publisher_collection" && item.count === T.bcount?.[b] && typeof item.name === "string") collections.set(Number(b), item);
+  for (const [b, item] of Object.entries(C.collections || {})) if (T.books[b] && (item.kind === "source_index" || (T.books[b][0] < 0 && item.kind === "publisher_collection")) && item.count === T.bcount?.[b] && typeof item.name === "string") collections.set(Number(b), item);
   if (C.bookSeries && (C.bookSeries.length !== T.books.length || C.bookSeries.some((ids, b) => !Array.isArray(ids) || ids.some(si => !Number.isInteger(si) || T.series[si]?.r !== authors[b])))) throw Error("שיוך סדרה אינו תואם למחבר");
   const authorReviews = new Map();
   for (const [b, item] of Object.entries(C.authorReviews || {})) if (T.books[b] && item.unitAuthor === T.books[b][0] && Array.isArray(item.sourceAuthors) && item.sourceAuthors.every(r => T.rebbeim[r])) authorReviews.set(Number(b), item);
@@ -4426,7 +4432,7 @@ function booksEntry(T, id) {
   const label = volume?.[0] || "";
   return { id, r: series.r, name: label && label !== series.n ? series.n + " · " + label : series.n,
     source: match ? "היברובוקס · עותק מקושר" : metadata?.source_key?.startsWith("pdf:") ? "חב״ד און ליין · PDF" : metadata?.source_key?.startsWith("cl:") ? "ספריית חב״ד · עץ המקור" : "קטלוג הסדרות והכרכים", unitBooks, mapped: !!unitBooks.length,
-    series: Number(si), volume: volume ? Number(vi) : null, sourceIdentity: metadata?.confirmed ? metadata.source_key : null, document: metadata?.confirmed && !match ? metadata.url : null,
+    overview: kind === "s", series: Number(si), volume: volume ? Number(vi) : null, sourceIdentity: metadata?.confirmed ? metadata.source_key : null, document: metadata?.confirmed && !match ? metadata.url : null,
     unverifiedSource: metadata?.confirmed === false, scan: match ? { book: match[1], url: "https://hebrewbooks.org/" + match[1] } : null };
 }
 function booksPath(id) {
@@ -4442,8 +4448,9 @@ function booksUnitAuthorNote(T,entry) {
 function booksEntries(T) {
   const entries = [], hidden = new Set(), index = BOOK_CATALOG_INDEX.get(T);
   (T.series || []).forEach((series, si) => {
-    if (!series.vols.length) entries.push(booksEntry(T, "s:" + si));
+    if (!series.vols.length || series.vols.every(v => v[3]?.confirmed === false)) entries.push(booksEntry(T, "s:" + si));
     series.vols.forEach((v, vi) => {
+      if (v[3]?.confirmed === false) return;
       const entry = booksEntry(T, v[3]?.key ? "e:" + si + ":" + v[3].key : "v:" + si + ":" + vi); entries.push(entry);
       for (const b of entry.unitBooks) if ((index?.sourceKeys ? index.sourceKeys[b]?.length : index?.scans[b]?.length) === 1) hidden.add(b);
     });
@@ -4503,10 +4510,11 @@ function booksGroup(main, T, group, ctx, covers) {
     h("header", { class: "books-book-head" }, booksGroupCover(T, group, covers), h("div", null, h("h1", { class: "page-title" }, group.name),
       h("p", { class: "muted" }, T.rebbeim[group.r] || "אוספי פרסומים"))),
     h("p", { class: "books-note" }, "בחרו כרך, מהדורה ומקור. לכל רישום נשמרים תוכן העניינים, העימוד וההפניות שלו; הצגתם תחת שם ספר אחד אינה אישור לזהות הנוסח."));
+  const choices = group.entries.filter(e => !e.overview);
   const choose = h("select", { "aria-label": "בחירת כרך, מהדורה ומקור" }, h("option", { value: "" }, "בחירת כרך, מהדורה ומקור…"),
-    ...group.entries.map((e, i) => h("option", { value: String(i) }, e.name + " · " + e.source)));
-  choose.addEventListener("change", () => { if (choose.value !== "") window.location.hash = mkHash(booksPath(group.entries[Number(choose.value)].id)); });
-  main.append(h("div", { class: "books-filters" }, choose), h("ul", { class: "books-editions" }, ...group.entries.map(e => h("li", null,
+    ...choices.map((e, i) => h("option", { value: String(i) }, e.name + " · " + e.source)));
+  choose.addEventListener("change", () => { if (choose.value !== "") window.location.hash = mkHash(booksPath(choices[Number(choose.value)].id)); });
+  if (choices.length) main.append(h("div", { class: "books-filters" }, choose), h("ul", { class: "books-editions" }, ...choices.map(e => h("li", null,
     h("a", { href: mkHash(booksPath(e.id)) }, e.name), h("small", { class: "muted" }, e.source + " · " + (e.mapped ? "יש יחידות מקוטלגות" : "תוכן העניינים טרם מופה"))))));
   const si = /^g:s:([0-9]+)$/.exec(group.id)?.[1], inventory = T.series?.[si]?.inventory;
   if (inventory?.length) main.append(h("details", {class:"books-inventory"}, h("summary",null,inventory.length + " רישומי כרכים ומהדורות בקטלוג"),
@@ -4583,7 +4591,7 @@ function booksCovers(T) {
           const scans = booksCoverScans(T, id) ?? (await booksMetadata(T, id)).scans;
           if (stopped || controller.signal.aborted || !host.isConnected) return;
           if (!scans.length) { host.replaceChildren(icon("i-read"), h("small", null, "צילום שער אינו זמין")); return; }
-          const scan = scans[0], url = await booksCoverImage(scan, controller.signal);
+          const scan = scans.find(s => bookCoverAssets[s.book]) || scans[0], url = await booksCoverImage(scan, controller.signal);
           if (!stopped && !controller.signal.aborted && host.isConnected) host.replaceChildren(h("img", { src: url, alt: "צילום הדף הראשון של " + booksEntry(T, id).name, width: "240", height: "340", decoding: "async", onerror: () => {
             if (stopped || !host.isConnected) return;
             if (!url.startsWith("data/book-covers/") || BOOK_COVER_ASSET_FAILURES.has(scan.book)) { host.replaceChildren(icon("i-read"), h("small", null, "הצילום לא נטען")); return; }
@@ -4649,7 +4657,8 @@ function booksShelf(main, T, q, ctx, initialCovers) {
     shelf.replaceChildren(); more.replaceChildren(); pendingSources.replaceChildren();
     const results = booksGroupList(T, search.value, filter.value, mapping.value, photographed.checked);
     const pending = BOOK_CATALOG_INDEX.get(T)?.memberships ? results.filter(g=>g.id.startsWith("g:b:") && !g.collection) : [];
-    const all = results.filter(g=>!pending.includes(g)), browsingAll = !search.value.trim() && filter.value === "" && mapping.value === "" && !photographed.checked;
+    const references = results.filter(g=>g.collection?.kind === "source_index");
+    const all = results.filter(g=>!pending.includes(g) && !references.includes(g)), browsingAll = !search.value.trim() && filter.value === "" && mapping.value === "" && !photographed.checked;
     const counts = new Map();
     const shown = browsingAll ? all.filter(b => { const n = counts.get(b.r) || 0; counts.set(b.r, n + 1); return n < 12; }) : all.slice(0, limit);
     status.textContent = all.length.toLocaleString("he") + " ספרים ואוספים · " + all.filter(g => g.entries.some(e => booksCoverScans(T, e.id)?.length)).length.toLocaleString("he") + " עם צילום שער מקושר" + (pending.length ? " · " + pending.length + " מקורות ששיוכם בבדיקה" : "");
@@ -4669,7 +4678,9 @@ function booksShelf(main, T, q, ctx, initialCovers) {
     if (pending.length) pendingSources.append(h("details",{open:!!search.value.trim()},h("summary",null,"מקורות נוספים — שיוך לספר בבדיקה ("+pending.length+")"),
       h("p",{class:"books-note"},"אלה רישומי יחידות ומפתחות שעדיין לא שויכו לספר בקטלוג. הם נשמרים כאן כדי שאפשר יהיה לפתוח אותם, ואינם נספרים כספרים נוספים."),
       h("ul",{class:"books-text-list"},...pending.map(g=>h("li",null,h("a",{href:mkHash(booksPath(g.id))},g.name),h("small",{class:"muted"},T.rebbeim[g.r]||""))))));
-    if (!all.length && !pending.length) shelf.append(h("p", { class: "empty" }, "לא נמצאו ספרים התואמים לחיפוש."));
+    if (references.length) pendingSources.append(h("details",{open:!!search.value.trim()},h("summary",null,"מפתחות ומאגרי מאמרים ("+references.length+")"),
+      h("ul",{class:"books-text-list"},...references.map(g=>h("li",null,h("a",{href:mkHash(booksPath(g.id))},g.name))))));
+    if (!all.length && !pending.length && !references.length) shelf.append(h("p", { class: "empty" }, "לא נמצאו ספרים התואמים לחיפוש."));
     if (!browsingAll && shown.length < all.length) more.append(h("button", { class: "btn", type: "button", onclick: () => { limit += BOOK_SHELF_PAGE; draw(); } }, "הצגת ספרים נוספים"));
   };
   const change = () => { limit = BOOK_SHELF_PAGE; quietHash(mkHash(["books"], { q: search.value || "", r: filter.value, m: mapping.value, covers: photographed.checked ? "1" : "" })); draw(); };
@@ -4686,7 +4697,8 @@ async function booksBook(main, T, id, q, ctx, covers) {
   document.title = name + " · ספרים · חברותא";
   main.append(h("nav", { class: "crumbs", "aria-label": "מיקום" }, h("a", { href: mkHash(["books"]) }, "ספרים"), " › ", h("a", { href: mkHash(["books"], { r }) }, T.rebbeim[r] || "אוספי פרסומים")),
     h("header", { class: "books-book-head" }, booksCover(T, id, covers), h("div", null, h("h1", { class: "page-title" }, name), h("p", { class: "muted" }, [T.rebbeim[r], source].filter(Boolean).join(" · ")), h("a", { href: entry.series == null ? mkHash(["tree", "b", id]) : mkHash(["tree", "r", r], { s: entry.series }) }, "הספר בעץ הידע"))));
-  if (entry.collection) main.append(h("p", { class: "books-note" }, "אוסף של " + entry.collection.count + " קובצי פרסום נפרדים מאתר קה״ת: מאמרים, שיחות ותדפיסים. קה״ת היא ההוצאה לאור; לא נקבע לאוסף מחבר אחד. הרישום אינו ספר אחד בעל מספר פרקים זה."));
+  if (entry.collection?.kind === "publisher_collection") main.append(h("p", { class: "books-note" }, "אוסף של " + entry.collection.count + " קובצי פרסום נפרדים מאתר קה״ת: מאמרים, שיחות ותדפיסים. קה״ת היא ההוצאה לאור; לא נקבע לאוסף מחבר אחד. הרישום אינו ספר אחד בעל מספר פרקים זה."));
+  if (entry.collection?.kind === "source_index") main.append(h("p",{class:"books-note"},"זהו מפתח הכולל "+entry.collection.count+" רישומי מקורות, ולא כרך מודפס אחד."));
   if (entry.unverifiedSource) main.append(h("p", { class: "books-note" }, "זהו רישום מבנה. שיוך סריקה לכרך זה טרם אומת; עותקים עם קישור מפורש זמינים בבחירת המקור של הסדרה."));
   if (entry.authorReview) main.append(h("p", {class:"books-note"}, booksAuthorReview(T, entry.authorReview)));
   const unitAuthorNote = booksUnitAuthorNote(T,entry);
