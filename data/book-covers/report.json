@@ -1,7 +1,7 @@
 {
   "renderer": "6.4.299",
   "total": 1270,
-  "prepared": 784,
+  "prepared": 796,
   "failures": [
     {
       "id": "c-36f9f0bcc83b65266cebc4ef",
@@ -297,6 +297,38 @@
     },
     {
       "id": "c-8d2eaa2f57532fc0e51beff0",
+      "error": "PDF range budget"
+    },
+    {
+      "id": "c-b11f8de0616a9d1b3150bd8b",
+      "error": "PDF range budget"
+    },
+    {
+      "id": "c-dfee7590bfe78ca985cdf8a6",
+      "error": "PDF range budget"
+    },
+    {
+      "id": "c-b7125e9f0565a077a3ecde3a",
+      "error": "PDF range budget"
+    },
+    {
+      "id": "c-d077f1c00a5c3eb17cf8a853",
+      "error": "PDF range budget"
+    },
+    {
+      "id": "15668",
+      "error": "source unavailable: 200"
+    },
+    {
+      "id": "c-2bb493b6bbbb53369aa92a6b",
+      "error": "PDF range budget"
+    },
+    {
+      "id": "c-f291abccf4951e9c45b30be9",
+      "error": "PDF range budget"
+    },
+    {
+      "id": "c-50e7a86b4ba4e4a920d493c4",
       "error": "PDF range budget"
     }
   ]
