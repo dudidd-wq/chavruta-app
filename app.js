@@ -127,6 +127,7 @@ function loadChunk(name) {
     (D.waiting[name] = D.waiting[name] || []).push(accept);
     const newsVersion = document.querySelector('meta[name="chavruta-news-version"]')?.content || "news";
     const query = new URLSearchParams();
+    if (name === "book-covers") query.set("v", document.querySelector('meta[name="chavruta-book-covers-version"]')?.content || document.querySelector('script[src^="app.js?v="]')?.getAttribute("src")?.split("?v=")[1] || "covers-v1");
     if (name === "sheets") query.set("v", document.querySelector('meta[name="chavruta-sheets-version"]')?.content || "sheets");
     if (name === "learning") query.set("v", document.querySelector('meta[name="chavruta-learning-version"]')?.content || "learning");
     if (name === "new") query.set("v", newsVersion + "-" + Math.floor(Date.now() / 300000));
