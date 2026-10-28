@@ -263,15 +263,19 @@
   "6b136991d51fec6a": {
     "he": "מאמר כתוב באנגלית המבאר מכתב של הרבי שפורסם לאחרונה. לפי תיאור האתר, המכתב עוסק באופן שבו הרבי נענה לבקשות עזרה ובשיקוליו לפני פנייה לאחרים בבקשת סיוע.",
     "basis": "תיאור",
-    "checked": false,
+    "checked": true,
     "drafted_at": "2026-10-27T06:28:28+00:00",
-    "source_url": "https://anash.org/in-rare-letter-the-rebbe-reveals-what-he-did-before-asking-anything/"
+    "source_url": "https://anash.org/in-rare-letter-the-rebbe-reveals-what-he-did-before-asking-anything/",
+    "checked_at": "2026-10-28T07:01:05+00:00",
+    "verification": "הטיוטה מ־27.10.2026 אומתה מחדש מול תיאור המקור ופתיחת המאמר ב־28.10.2026: תגובה לבקשות עזרה ושיקול לפני בקשת סיוע מאחרים. שנת המכתב ההיסטורי אינה תאריך פרסום המאמר."
   },
   "2bb13a865b60063f": {
     "he": "גיליון L’Chaim Weekly מספר 1945 לשבת לך לך, תשפ״ז (PDF). בשער: מאמר על הפסקות ועצירה בחיים; ובמדור Living with the Rebbe: דברי הרבי על בקשת אברהם לשכר ועל הפצת ההכרה בבורא.",
     "basis": "כותרות הגיליון",
-    "checked": false,
+    "checked": true,
     "drafted_at": "2026-10-27T06:33:00+00:00",
-    "source_url": "https://torahprint.nyc3.cdn.digitaloceanspaces.com/pdfFiles/1792488269323_ciqoo_lchaim_1945.pdf"
+    "source_url": "https://torahprint.nyc3.cdn.digitaloceanspaces.com/pdfFiles/1792488269323_ciqoo_lchaim_1945.pdf",
+    "checked_at": "2026-10-28T07:01:05+00:00",
+    "verification": "הטיוטה מ־27.10.2026 אומתה חזותית ב־28.10.2026 מול עמוד 1 ב־PDF המקורי בן 4 עמודים: גיליון 1945 מ־23.10.2026, לך לך; כותרות ופתיחת המאמרים על עצירה בחיים ועל אברהם ושכרו."
   }
 }
