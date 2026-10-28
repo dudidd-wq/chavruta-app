@@ -4335,7 +4335,6 @@ function kParsha(main, K, p) {
 
 /* חברותא · מדף ספרים. קורא את הקטלוג הקיים; אינו משנה מיפוי או מספור עמודים. */
 const BOOK_COVER_CACHE = new Map();
-const BOOK_COVER_REQUESTS = [];
 const BOOK_COVER_ASSET_FAILURES = new Set();
 let bookCoverManifest, bookCoverManifestAt = 0, bookCoverManifestPending = false, bookCoverAssets = {};
 function booksCoverManifest(force = false) {
@@ -4351,6 +4350,13 @@ function booksCoverScans(T, id) {
   const entry = booksEntry(T, id), index = BOOK_CATALOG_INDEX.get(T);
   if (entry?.scan) return [entry.scan];
   if (!entry || !index) return null;
+  const keys = entry.sourceIdentity ? [entry.sourceIdentity] : entry.unitBooks.flatMap(b => index.sourceKeys?.[b] || []);
+  const linked = [...new Set(keys)].map(key => {
+    const book = index.coverSources?.[key];
+    return key.startsWith("pdf:") && /^c-[a-f0-9]{24}$/.test(book || "") ? { book, url: key.slice(4) } :
+      key.startsWith("h:") && /^[0-9]{1,8}$/.test(book || "") ? { book, url: "https://hebrewbooks.org/" + book } : null;
+  }).filter(Boolean);
+  if (linked.length) return linked;
   const scans = new Set(entry.unitBooks.flatMap(b => index.scans[b] || []));
   return [...scans].filter(book => /^[0-9]{1,8}$/.test(book)).map(book => ({ book, url: "https://hebrewbooks.org/" + book }));
 }
@@ -4367,11 +4373,6 @@ async function booksCoverStored(book, value) {
     const response = await cache.match(key), stored = response && await response.text();
     return stored?.length < 160000 && /^data:image\/webp;base64,[A-Za-z0-9+/=]+$/.test(stored) ? stored : null;
   } catch (_) { return null; }
-}
-let bookCoverPauseUntil = 0;
-function booksCoverDelay(now = Date.now()) {
-  while (BOOK_COVER_REQUESTS.length && BOOK_COVER_REQUESTS[0] <= now - 60000) BOOK_COVER_REQUESTS.shift();
-  return Math.max(0, bookCoverPauseUntil - now, BOOK_COVER_REQUESTS.length >= 12 ? BOOK_COVER_REQUESTS[0] + 60000 - now : 0);
 }
 const BOOK_SHELF_PAGE = 48;
 const BOOK_CATALOG_INDEX = new WeakMap();
@@ -4406,7 +4407,7 @@ function booksRegisterCatalog(T, C) {
   if (C.bookSeries && (C.bookSeries.length !== T.books.length || C.bookSeries.some((ids, b) => !Array.isArray(ids) || ids.some(si => !Number.isInteger(si) || T.series[si]?.r !== authors[b])))) throw Error("שיוך סדרה אינו תואם למחבר");
   const authorReviews = new Map();
   for (const [b, item] of Object.entries(C.authorReviews || {})) if (T.books[b] && item.unitAuthor === T.books[b][0] && Array.isArray(item.sourceAuthors) && item.sourceAuthors.every(r => T.rebbeim[r])) authorReviews.set(Number(b), item);
-  BOOK_CATALOG_INDEX.set(T, { links, scans: C.bookScans, collections, memberships: C.bookSeries, sourceKeys: C.bookSourceKeys, authorReviews, authors, authorOverrides });
+  BOOK_CATALOG_INDEX.set(T, { links, scans: C.bookScans, coverSources: C.coverSources || {}, collections, memberships: C.bookSeries, sourceKeys: C.bookSourceKeys, authorReviews, authors, authorOverrides });
 }
 function booksAuthor(T,b) { return BOOK_CATALOG_INDEX.get(T)?.authors?.[b] ?? T.books[b]?.[0]; }
 function booksEntry(T, id) {
@@ -4549,7 +4550,7 @@ function booksUnitInfo(T, id, row) {
 }
 /* Each thumbnail is the original first PDF page, with the same decoder validation as the reader. */
 async function booksCoverImage(scan, signal) {
-  if (!/^[0-9]{1,8}$/.test(scan.book)) throw Error("invalid cover ID");
+  if (!/^(?:[0-9]{1,8}|c-[a-f0-9]{24})$/.test(scan.book)) throw Error("invalid cover ID");
   if (signal.aborted) throw Error("cover canceled");
   const cached = BOOK_COVER_CACHE.get(scan.book); if (cached) return cached;
   const assets = await booksCoverManifest(), asset = assets[scan.book];
@@ -4558,32 +4559,7 @@ async function booksCoverImage(scan, signal) {
   const stored = await booksCoverStored(scan.book);
   if (signal.aborted) throw Error("cover canceled");
   if (stored) { BOOK_COVER_CACHE.set(scan.book, stored); return stored; }
-  if (!sourceGateway()) throw Error("no scan gateway");
-  const delay = booksCoverDelay(); if (delay) throw Object.assign(Error("cover_deferred"), { delay });
-  BOOK_COVER_REQUESTS.push(Date.now());
-  let loading, render;
-  const abort = () => { render?.cancel(); loading?.destroy().catch(() => {}); };
-  signal.addEventListener("abort", abort, { once: true });
-  try {
-    const [lib, response] = await Promise.all([sourcePDFLibrary(), fetch(sourceGateway() + "/v1/hebrewbooks/" + scan.book + "/1", { signal, credentials: "omit", referrerPolicy: "no-referrer" })]);
-    if (response.status === 429) { const delay = sourceRetrySeconds(response) * 1000; bookCoverPauseUntil = Date.now() + delay; throw Object.assign(Error("cover_deferred"), { delay }); }
-    if (signal.aborted || !response.ok) throw Error("cover unavailable");
-    const bytes = new Uint8Array(await response.arrayBuffer());
-    if (bytes.length > 6 * 1024 * 1024 || new TextDecoder().decode(bytes.slice(0, 5)) !== "%PDF-") throw Error("invalid cover PDF");
-    if (signal.aborted) throw Error("cover canceled");
-    loading = lib.getDocument(sourcePDFOptions(bytes)); const pdf = await loading.promise;
-    if (signal.aborted) throw Error("cover canceled");
-    const page = await pdf.getPage(1), natural = page.getViewport({ scale: 1 });
-    const viewport = page.getViewport({ scale: Math.min(240 / natural.width, 340 / natural.height) });
-    const canvas = h("canvas"); canvas.width = Math.ceil(viewport.width); canvas.height = Math.ceil(viewport.height);
-    if (signal.aborted) throw Error("cover canceled");
-    render = page.render({ canvas, canvasContext: canvas.getContext("2d"), viewport }); await render.promise;
-    await sourcePDFValidateImages(lib, page, signal);
-    if (signal.aborted) throw Error("cover canceled");
-    const url = canvas.toDataURL("image/webp", .78);
-    if (BOOK_COVER_CACHE.size >= 48) BOOK_COVER_CACHE.delete(BOOK_COVER_CACHE.keys().next().value);
-    BOOK_COVER_CACHE.set(scan.book, url); void booksCoverStored(scan.book, url); return url;
-  } finally { signal.removeEventListener("abort", abort); await loading?.destroy().catch(() => {}); }
+  throw Error("cover_not_prepared");
 }
 /* One cover job at a time, scheduled after a paint; cancel on navigation/filtering. */
 function booksCovers(T) {
@@ -4615,7 +4591,7 @@ function booksCovers(T) {
           } }));
         } catch (error) {
           if (!stopped && !controller.signal.aborted && host.isConnected && error.message === "cover_deferred") { job.ready = Date.now() + error.delay; queue.push(job); host.replaceChildren(icon("i-read"), h("small", null, "השער ייטען בהמשך")); }
-          else if (!stopped && host.isConnected) host.replaceChildren(icon("i-read"), h("small", null, "הצילום לא נטען"));
+          else if (!stopped && host.isConnected) host.replaceChildren(icon("i-read"), h("small", null, error.message === "cover_not_prepared" ? "צילום השער בהכנה" : "הצילום לא נטען"));
         } finally { clearTimeout(timer); controllers.delete(controller); active--; schedule(); }
       })();
     }
@@ -4647,7 +4623,7 @@ VIEWS.books = async function(rest, q, ctx) {
     const id = rest.join(":"); if (booksEntry(T, id)) return booksBook(main, T, id, q, ctx, covers);
   }
   if (rest[0] === "g" && /^(?:s|b)$/.test(rest[1] || "") && /^[0-9]+$/.test(rest[2] || "")) {
-    const group = booksGroups(T).find(g => g.id === "g:" + rest[1] + ":" + rest[2]);
+    const groups = booksGroups(T), group = groups.find(g => g.id === "g:" + rest[1] + ":" + rest[2]) || (rest[1] === "b" ? groups.find(g => g.unitBooks.includes(Number(rest[2]))) : null);
     if (group) return booksGroup(main, T, group, ctx, covers);
   }
   if (rest[0] === "b" && /^\d+$/.test(rest[1] || "") && T.books[Number(rest[1])]) return booksBook(main, T, Number(rest[1]), q, ctx, covers);

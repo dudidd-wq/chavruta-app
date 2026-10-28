@@ -1,11 +1,6 @@
 {
   "renderer": "6.4.299",
-  "total": 753,
-  "prepared": 752,
-  "failures": [
-    {
-      "id": "15668",
-      "error": "source unavailable: 200"
-    }
-  ]
+  "total": 1270,
+  "prepared": 758,
+  "failures": []
 }
