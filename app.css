@@ -1464,6 +1464,14 @@ body.source-reader-open { overflow: hidden; }
 @media (max-width:600px) { .books-jump label { flex-wrap: wrap; flex: 1 1 100%; min-width: 0; } .books-jump input { min-width: 0; max-width: 100%; font-size: 16px; } }
 
 .books-mapping { color: var(--ink-2); font-size: .8rem; line-height: 1.5; }
+.books-group-cover { min-width: 0; }
+.books-cover-caption { display: block; color: var(--ink-3); font-size: .7rem; line-height: 1.45; margin-top: .35rem; }
+.books-cover-unlinked { box-shadow: none; }
+.books-cover-filter { display: flex; align-items: center; gap: .45rem; font-size: .9rem; }
+.books-cover-filter input { min-height: auto; flex: none; }
+.books-editions { padding-inline-start: 1.5rem; }
+.books-editions li { padding: .7rem 0; border-bottom: 1px solid var(--rule-2); }
+.books-editions small { display: block; margin-top: .25rem; }
 
 /* Shared learning portals use the site's page layout, spacing and palette. */
 .main.page.learning{max-width:64rem;padding-block-start:var(--s5)}
