@@ -1,63 +1,15 @@
 {
   "renderer": "6.4.299",
   "total": 1270,
-  "prepared": 1248,
+  "prepared": 1264,
   "failures": [
-    {
-      "id": "c-89bfca9156929294cf7daa01",
-      "error": "fetch failed"
-    },
-    {
-      "id": "c-8214d746f7848cc4d23d79b2",
-      "error": "fetch failed"
-    },
-    {
-      "id": "c-7f452ac1c7b413ac60f03eff",
-      "error": "fetch failed"
-    },
-    {
-      "id": "c-8682e53ced435337fb325e13",
-      "error": "fetch failed"
-    },
-    {
-      "id": "c-60eb0261c38df5feef92a47f",
-      "error": "PDF range budget"
-    },
     {
       "id": "15668",
       "error": "source unavailable: 200"
     },
     {
-      "id": "c-34637b1b165e0b120b8a2a6d",
-      "error": "fetch failed"
-    },
-    {
-      "id": "c-6134792ad6cf703969d88ce5",
-      "error": "fetch failed"
-    },
-    {
-      "id": "c-54efe3d4cd905930271fe507",
-      "error": "fetch failed"
-    },
-    {
-      "id": "c-333fada83c9b059a46478795",
-      "error": "fetch failed"
-    },
-    {
-      "id": "c-bf22540ee3f7de5c0951799e",
-      "error": "fetch failed"
-    },
-    {
-      "id": "c-94d29703a9183f752d7f4314",
-      "error": "terminated"
-    },
-    {
-      "id": "c-54ed055163fe8fb1116cbcb9",
-      "error": "fetch failed"
-    },
-    {
-      "id": "c-6a872353fbab0524edca5ec4",
-      "error": "terminated"
+      "id": "c-60eb0261c38df5feef92a47f",
+      "error": "PDF range budget"
     },
     {
       "id": "c-104d7b0400aab7a138e688b1",
@@ -66,30 +18,6 @@
     {
       "id": "c-eff7ec522764cde95922c888",
       "error": "Invalid initial PDF range"
-    },
-    {
-      "id": "c-3a518da09d924438156ae5b2",
-      "error": "fetch failed"
-    },
-    {
-      "id": "c-b143afabd101cddbe871dcc6",
-      "error": "fetch failed"
-    },
-    {
-      "id": "c-94e555ef2fe08bebf24decf3",
-      "error": "fetch failed"
-    },
-    {
-      "id": "c-301db25f28ef2c86d953cd0c",
-      "error": "fetch failed"
-    },
-    {
-      "id": "c-7f05895ad7385d57abdb259f",
-      "error": "fetch failed"
-    },
-    {
-      "id": "c-eab736539c5d01f434aa97cd",
-      "error": "PDF range timeout"
     }
   ]
 }
