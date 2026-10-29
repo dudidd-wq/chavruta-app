@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-29T06:15:53+00:00",
+ "generated_at": "2026-10-29T06:20:34+00:00",
  "sources": [
   {
    "id": "chabadlibrary",
@@ -12,7 +12,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-10-29T06:14:44+00:00",
+   "checked_at": "2026-10-29T06:19:26+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -30,7 +30,7 @@
     "primary",
     "whatsnew"
    ],
-   "checked_at": "2026-10-29T06:14:44+00:00",
+   "checked_at": "2026-10-29T06:19:26+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -47,7 +47,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-10-29T06:14:44+00:00",
+   "checked_at": "2026-10-29T06:19:26+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -64,7 +64,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-10-29T06:14:44+00:00",
+   "checked_at": "2026-10-29T06:19:26+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -82,7 +82,7 @@
     "primary",
     "whatsnew"
    ],
-   "checked_at": "2026-10-29T06:14:44+00:00",
+   "checked_at": "2026-10-29T06:19:26+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -102,7 +102,7 @@
     }
    ],
    "total": 132,
-   "last_success_at": "2026-10-29T06:14:44+00:00"
+   "last_success_at": "2026-10-29T06:19:26+00:00"
   },
   {
    "id": "chabadlibrarybooks",
@@ -115,7 +115,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-10-29T06:14:45+00:00",
+   "checked_at": "2026-10-29T06:19:26+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -133,12 +133,12 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-29T06:14:45+00:00",
+   "checked_at": "2026-10-29T06:19:26+00:00",
    "status": "ok",
    "new": [],
    "latest": [],
    "total": 1501,
-   "last_success_at": "2026-10-29T06:14:45+00:00"
+   "last_success_at": "2026-10-29T06:19:26+00:00"
   },
   {
    "id": "chassidut_org",
@@ -152,12 +152,12 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-29T06:14:47+00:00",
+   "checked_at": "2026-10-29T06:19:28+00:00",
    "status": "ok",
    "new": [],
    "latest": [],
    "total": 4,
-   "last_success_at": "2026-10-29T06:14:47+00:00"
+   "last_success_at": "2026-10-29T06:19:28+00:00"
   },
   {
    "id": "biurim",
@@ -171,7 +171,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-29T06:14:48+00:00",
+   "checked_at": "2026-10-29T06:19:29+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -217,7 +217,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-10-29T06:14:48+00:00"
+   "last_success_at": "2026-10-29T06:19:29+00:00"
   },
   {
    "id": "hm_monsey",
@@ -231,7 +231,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-29T06:14:50+00:00",
+   "checked_at": "2026-10-29T06:19:31+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -277,7 +277,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-10-29T06:14:50+00:00"
+   "last_success_at": "2026-10-29T06:19:31+00:00"
   },
   {
    "id": "hiskashrus",
@@ -291,7 +291,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-29T06:14:52+00:00",
+   "checked_at": "2026-10-29T06:19:33+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -360,7 +360,7 @@
     }
    ],
    "total": 255,
-   "last_success_at": "2026-10-29T06:14:52+00:00"
+   "last_success_at": "2026-10-29T06:19:33+00:00"
   },
   {
    "id": "lichyot_chassidus",
@@ -374,7 +374,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-29T06:14:53+00:00",
+   "checked_at": "2026-10-29T06:19:34+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -460,7 +460,7 @@
     }
    ],
    "total": 1000,
-   "last_success_at": "2026-10-29T06:14:53+00:00"
+   "last_success_at": "2026-10-29T06:19:34+00:00"
   },
   {
    "id": "chabadzoom",
@@ -474,7 +474,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-29T06:14:55+00:00",
+   "checked_at": "2026-10-29T06:19:36+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -571,7 +571,7 @@
     }
    ],
    "total": 561,
-   "last_success_at": "2026-10-29T06:14:55+00:00"
+   "last_success_at": "2026-10-29T06:19:36+00:00"
   },
   {
    "id": "kovtzimdrive",
@@ -585,7 +585,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-29T06:14:57+00:00",
+   "checked_at": "2026-10-29T06:19:37+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -593,12 +593,12 @@
      "id": "https://www.kovtzimdrive.com/posts/bochurim-build-database-of-thousands-of-%E2%80%98he%E2%80%99aros%E2%80%99",
      "title": "bochurim build database of thousands of ‘he’aros’",
      "url": "https://www.kovtzimdrive.com/posts/bochurim-build-database-of-thousands-of-%E2%80%98he%E2%80%99aros%E2%80%99",
-     "date": "2026-10-24",
+     "date": "2026-10-27",
      "first_seen": "2026-10-20T07:59:38+00:00"
     }
    ],
    "total": 1,
-   "last_success_at": "2026-10-29T06:14:57+00:00"
+   "last_success_at": "2026-10-29T06:19:37+00:00"
   },
   {
    "id": "avita",
@@ -612,7 +612,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-29T06:14:59+00:00",
+   "checked_at": "2026-10-29T06:19:39+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -630,7 +630,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-29T06:14:59+00:00",
+   "checked_at": "2026-10-29T06:19:39+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -652,7 +652,7 @@
     }
    ],
    "total": 2,
-   "last_success_at": "2026-10-29T06:14:59+00:00"
+   "last_success_at": "2026-10-29T06:19:39+00:00"
   },
   {
    "id": "dvarmalchus770",
@@ -666,7 +666,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-29T06:15:00+00:00",
+   "checked_at": "2026-10-29T06:19:41+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -744,7 +744,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-10-29T06:15:00+00:00"
+   "last_success_at": "2026-10-29T06:19:41+00:00"
   },
   {
    "id": "soulwords",
@@ -758,7 +758,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-29T06:15:02+00:00",
+   "checked_at": "2026-10-29T06:19:42+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -812,7 +812,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-10-29T06:15:02+00:00"
+   "last_success_at": "2026-10-29T06:19:42+00:00"
   },
   {
    "id": "sie_weekly",
@@ -826,7 +826,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-29T06:15:03+00:00",
+   "checked_at": "2026-10-29T06:19:44+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -874,7 +874,7 @@
     }
    ],
    "total": 115,
-   "last_success_at": "2026-10-29T06:15:03+00:00"
+   "last_success_at": "2026-10-29T06:19:44+00:00"
   },
   {
    "id": "pls",
@@ -888,7 +888,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-29T06:15:05+00:00",
+   "checked_at": "2026-10-29T06:19:45+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -966,7 +966,7 @@
     }
    ],
    "total": 200,
-   "last_success_at": "2026-10-29T06:15:05+00:00"
+   "last_success_at": "2026-10-29T06:19:45+00:00"
   },
   {
    "id": "chayenu_ls",
@@ -980,7 +980,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-29T06:15:06+00:00",
+   "checked_at": "2026-10-29T06:19:46+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1007,7 +1007,7 @@
     }
    ],
    "total": 2,
-   "last_success_at": "2026-10-29T06:15:06+00:00"
+   "last_success_at": "2026-10-29T06:19:46+00:00"
   },
   {
    "id": "weekly_sicha",
@@ -1021,7 +1021,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-29T06:15:07+00:00",
+   "checked_at": "2026-10-29T06:19:48+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1069,7 +1069,7 @@
     }
    ],
    "total": 117,
-   "last_success_at": "2026-10-29T06:15:07+00:00"
+   "last_success_at": "2026-10-29T06:19:48+00:00"
   },
   {
    "id": "theyeshiva",
@@ -1083,7 +1083,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-29T06:15:09+00:00",
+   "checked_at": "2026-10-29T06:19:49+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1169,7 +1169,7 @@
     }
    ],
    "total": 1541,
-   "last_success_at": "2026-10-29T06:15:09+00:00"
+   "last_success_at": "2026-10-29T06:19:49+00:00"
   },
   {
    "id": "chassidus_applied",
@@ -1183,7 +1183,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-29T06:15:12+00:00",
+   "checked_at": "2026-10-29T06:19:52+00:00",
    "status": "error",
    "new": [],
    "latest": [
@@ -1317,7 +1317,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-29T06:15:12+00:00",
+   "checked_at": "2026-10-29T06:19:52+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1371,7 +1371,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-10-29T06:15:12+00:00"
+   "last_success_at": "2026-10-29T06:19:52+00:00"
   },
   {
    "id": "chassidus_explained",
@@ -1385,7 +1385,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-29T06:15:14+00:00",
+   "checked_at": "2026-10-29T06:19:54+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1447,7 +1447,7 @@
     }
    ],
    "total": 136,
-   "last_success_at": "2026-10-29T06:15:14+00:00"
+   "last_success_at": "2026-10-29T06:19:54+00:00"
   },
   {
    "id": "melukat",
@@ -1461,7 +1461,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-29T06:15:15+00:00",
+   "checked_at": "2026-10-29T06:19:55+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1523,7 +1523,7 @@
     }
    ],
    "total": 168,
-   "last_success_at": "2026-10-29T06:15:15+00:00"
+   "last_success_at": "2026-10-29T06:19:55+00:00"
   },
   {
    "id": "daily_maamar",
@@ -1537,7 +1537,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-29T06:15:16+00:00",
+   "checked_at": "2026-10-29T06:19:56+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1663,7 +1663,7 @@
     }
    ],
    "total": 350,
-   "last_success_at": "2026-10-29T06:15:16+00:00"
+   "last_success_at": "2026-10-29T06:19:56+00:00"
   },
   {
    "id": "wellsprings",
@@ -1677,7 +1677,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-29T06:15:18+00:00",
+   "checked_at": "2026-10-29T06:19:58+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1723,7 +1723,7 @@
     }
    ],
    "total": 125,
-   "last_success_at": "2026-10-29T06:15:18+00:00"
+   "last_success_at": "2026-10-29T06:19:58+00:00"
   },
   {
    "id": "daily_sicha",
@@ -1737,7 +1737,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-29T06:15:19+00:00",
+   "checked_at": "2026-10-29T06:19:59+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1863,7 +1863,7 @@
     }
    ],
    "total": 1414,
-   "last_success_at": "2026-10-29T06:15:19+00:00"
+   "last_success_at": "2026-10-29T06:19:59+00:00"
   },
   {
    "id": "learnchassidus",
@@ -1877,7 +1877,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-29T06:15:24+00:00",
+   "checked_at": "2026-10-29T06:20:03+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1890,7 +1890,7 @@
     }
    ],
    "total": 5,
-   "last_success_at": "2026-10-29T06:15:24+00:00"
+   "last_success_at": "2026-10-29T06:20:03+00:00"
   },
   {
    "id": "simplychassidus",
@@ -1904,7 +1904,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-29T06:15:24+00:00",
+   "checked_at": "2026-10-29T06:20:03+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1931,7 +1931,7 @@
     }
    ],
    "total": 4,
-   "last_success_at": "2026-10-29T06:15:24+00:00"
+   "last_success_at": "2026-10-29T06:20:03+00:00"
   },
   {
    "id": "alonei_chabad",
@@ -1944,7 +1944,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-29T06:15:25+00:00",
+   "checked_at": "2026-10-29T06:20:04+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -1961,7 +1961,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-29T06:15:25+00:00",
+   "checked_at": "2026-10-29T06:20:04+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -1978,7 +1978,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-29T06:15:25+00:00",
+   "checked_at": "2026-10-29T06:20:04+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2005,7 +2005,7 @@
     }
    ],
    "total": 303,
-   "last_success_at": "2026-10-29T06:15:25+00:00"
+   "last_success_at": "2026-10-29T06:20:04+00:00"
   },
   {
    "id": "lchaim",
@@ -2018,7 +2018,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-29T06:15:27+00:00",
+   "checked_at": "2026-10-29T06:20:06+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2073,7 +2073,7 @@
     }
    ],
    "total": 193,
-   "last_success_at": "2026-10-29T06:15:27+00:00"
+   "last_success_at": "2026-10-29T06:20:06+00:00"
   },
   {
    "id": "one_point",
@@ -2086,7 +2086,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-29T06:15:28+00:00",
+   "checked_at": "2026-10-29T06:20:07+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2127,7 +2127,7 @@
     }
    ],
    "total": 184,
-   "last_success_at": "2026-10-29T06:15:28+00:00"
+   "last_success_at": "2026-10-29T06:20:07+00:00"
   },
   {
    "id": "derher",
@@ -2140,7 +2140,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-29T06:15:29+00:00",
+   "checked_at": "2026-10-29T06:20:08+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -2157,7 +2157,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-29T06:15:29+00:00",
+   "checked_at": "2026-10-29T06:20:08+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -2174,7 +2174,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-29T06:15:29+00:00",
+   "checked_at": "2026-10-29T06:20:08+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2201,7 +2201,7 @@
     }
    ],
    "total": 5,
-   "last_success_at": "2026-10-29T06:15:29+00:00"
+   "last_success_at": "2026-10-29T06:20:08+00:00"
   },
   {
    "id": "maynotecha_inst",
@@ -2214,7 +2214,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-29T06:15:32+00:00",
+   "checked_at": "2026-10-29T06:20:11+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -2231,7 +2231,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-29T06:15:32+00:00",
+   "checked_at": "2026-10-29T06:20:11+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2253,7 +2253,7 @@
     }
    ],
    "total": 1,
-   "last_success_at": "2026-10-29T06:15:32+00:00"
+   "last_success_at": "2026-10-29T06:20:11+00:00"
   },
   {
    "id": "anash",
@@ -2266,7 +2266,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-29T06:15:33+00:00",
+   "checked_at": "2026-10-29T06:20:12+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2416,7 +2416,7 @@
     }
    ],
    "total": 3,
-   "last_success_at": "2026-10-29T06:15:33+00:00"
+   "last_success_at": "2026-10-29T06:20:12+00:00"
   },
   {
    "id": "chabadinfo",
@@ -2429,7 +2429,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-29T06:15:34+00:00",
+   "checked_at": "2026-10-29T06:20:13+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -2446,7 +2446,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-29T06:15:34+00:00",
+   "checked_at": "2026-10-29T06:20:13+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -2463,7 +2463,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-29T06:15:34+00:00",
+   "checked_at": "2026-10-29T06:20:13+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2509,7 +2509,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-10-29T06:15:34+00:00"
+   "last_success_at": "2026-10-29T06:20:13+00:00"
   },
   {
    "id": "kehot",
@@ -2522,7 +2522,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-29T06:15:37+00:00",
+   "checked_at": "2026-10-29T06:20:16+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2992,7 +2992,7 @@
     }
    ],
    "total": 199,
-   "last_success_at": "2026-10-29T06:15:37+00:00"
+   "last_success_at": "2026-10-29T06:20:16+00:00"
   }
  ],
  "browser_checks": {
@@ -3380,6 +3380,20 @@
    "checked_at": "2026-10-29T06:12:40+00:00",
    "items": [],
    "note": "נפתח קטלוג אוקטובר המקורי ונבדקו תיאורי המוצרים, לרבות קונטרס התפילה, תורה אור, מכתבי פרופסור גרין והמהדורות בפורטוגזית. סווגו כל 25 המועמדים החדשים; תשעה התקבלו ותקציריהם נשארו טיוטות. לא נקבע יום פרסום מתוך חודש הקטלוג."
+  },
+  "lchaim": {
+   "checked_at": "2026-10-29T06:18:47+00:00",
+   "items": [
+    {
+     "title": "Vayeira · 5787 · A weekly Chabad publication featuring teachings of the Rebbe, stories, and community news.",
+     "url": "https://torahprint.nyc3.cdn.digitaloceanspaces.com/pdfFiles/1792880926571_inlqb_lchaim_1946.pdf",
+     "lang": "en",
+     "first_seen": "2026-10-25T06:09:00+00:00",
+     "issued_for": "גיליון 1946, וירא, י״ט מרחשון תשפ״ז (30.10.2026)",
+     "genre": "גיליון"
+    }
+   ],
+   "note": "PDF המקור בן 4 העמודים נפתח ונבדק חזותית. אומתו מספר 1946, תאריך הגיליון המיועד וכותרות ופתיחת עמוד 1. הגילוי הראשון מ־25.10 נשמר; 30.10 אינו מוצג כמועד הפרסום בפועל. נכתבה טיוטה בלבד."
   }
  }
 }
