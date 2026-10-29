@@ -1,0 +1,100 @@
+name: Refresh validated book covers
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/refresh-book-covers.yml'
+      - 'tools/book-covers/**'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+
+concurrency:
+  group: refresh-validated-book-covers
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    if: "!startsWith(github.event.head_commit.message || '', 'Prepare ')"
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify pinned input and retry adapter
+        run: |
+          test "$(git rev-parse HEAD)" = "$GITHUB_SHA"
+          node --check tools/book-covers/pdf-source.mjs
+          node --check tools/book-covers/build.mjs
+          node --input-type=module <<'NODE'
+          import assert from 'node:assert/strict';
+          import {openCataloguePDF} from './tools/book-covers/pdf-source.mjs';
+          let calls=0;
+          const source=await openCataloguePDF(
+            'https://media.col.org.il/files/uploads/original/test.pdf',
+            {},
+            {retryDelay:0,fetchImpl:async()=>{
+              calls++;
+              if(calls===1)throw new TypeError('fetch failed');
+              return new Response('%PDF-recovered');
+            }}
+          );
+          assert.equal(calls,2);
+          assert.equal(source.options.data.length,14);
+          source.close();
+          let failures=0;
+          await assert.rejects(openCataloguePDF(
+            'https://media.col.org.il/files/uploads/original/test.pdf',
+            {},
+            {retryDelay:0,fetchImpl:async()=>{failures++;throw new TypeError('terminated');}}
+          ),/terminated/);
+          assert.equal(failures,3);
+          NODE
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          const report=JSON.parse(fs.readFileSync('data/book-covers/report.json','utf8'));
+          if(report.total!==1270||report.prepared<1248||report.failures.length>22)throw Error('Unexpected public cover baseline');
+          console.log(JSON.stringify({total:report.total,prepared:report.prepared,failures:report.failures.length}));
+          NODE
+      - name: Install pinned renderer
+        run: npm install --prefix tools/book-covers --ignore-scripts --no-audit --no-fund
+      - name: Retry only currently missing exact-source covers
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: node tools/book-covers/build.mjs data --max-new=22 --publish-checkpoints
+      - name: Verify every local prepared asset
+        run: |
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          import vm from 'node:vm';
+          import crypto from 'node:crypto';
+          let manifest;
+          vm.runInNewContext(fs.readFileSync('data/book-covers.js','utf8'),{window:{__D:(name,value)=>{if(name==='book-covers')manifest=value;}}});
+          const report=JSON.parse(fs.readFileSync('data/book-covers/report.json','utf8'));
+          for(const [id,asset] of Object.entries(manifest.covers)){
+            const match=new RegExp('^data/book-covers/'+id+'-([a-f0-9]{16})\\.webp$').exec(asset);
+            if(!match)throw Error('Invalid manifest asset '+id);
+            const bytes=fs.readFileSync(asset);
+            if(bytes.toString('ascii',0,4)!=='RIFF'||bytes.toString('ascii',8,12)!=='WEBP')throw Error('Invalid WebP '+id);
+            if(crypto.createHash('sha256').update(bytes).digest('hex').slice(0,16)!==match[1])throw Error('Hash mismatch '+id);
+          }
+          if(report.total!==1270||report.prepared!==Object.keys(manifest.covers).length||report.prepared<1248)throw Error('Invalid final report');
+          console.log(JSON.stringify({total:report.total,prepared:report.prepared,failures:report.failures.length}));
+          NODE
+      - name: Wait for Pages and verify every live asset
+        run: |
+          expected="$(node -e "console.log(JSON.parse(require('fs').readFileSync('data/book-covers/report.json')).prepared)")"
+          for attempt in $(seq 1 60); do
+            live="$(curl --fail --silent --show-error --max-time 20 "https://dudidd-wq.github.io/chavruta-app/data/book-covers/report.json?run=$GITHUB_RUN_ID" | node -e "let s='';process.stdin.on('data',x=>s+=x).on('end',()=>console.log(JSON.parse(s).prepared))" || true)"
+            if test "$live" = "$expected"; then break; fi
+            if test "$attempt" = 60; then echo "Pages did not reach expected prepared count $expected" >&2; exit 1; fi
+            sleep 10
+          done
+          node tools/book-covers/audit.mjs --live
