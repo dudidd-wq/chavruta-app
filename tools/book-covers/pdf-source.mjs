@@ -37,7 +37,7 @@ async function retryTransient(operation, {retries, retryDelay, signal}) {
     }
   }
 }
-export async function openCataloguePDF(raw, lib, {fetchImpl=fetch, limit=64*1024*1024, timeout=45000, retries=2, retryDelay=500}={}) {
+export async function openCataloguePDF(raw, lib, {fetchImpl=fetch, limit=72*1024*1024, timeout=45000, retries=2, retryDelay=500}={}) {
   if (!Number.isSafeInteger(retries) || retries < 0 || retries > 4 || !Number.isSafeInteger(retryDelay) || retryDelay < 0 || retryDelay > 5000) throw Error("Invalid PDF retry policy");
   const url = cataloguePDFURL(raw), controller = new AbortController(); let rejectError, closed=false, spent=0, requests=0;
   const error = new Promise((_, reject)=>{rejectError=reject;}); error.catch(()=>{});
