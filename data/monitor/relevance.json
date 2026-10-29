@@ -1273,5 +1273,172 @@
     "why": "ספר חדש של עיבוד כתוב לסדרת שיחות דבר מלכות; סדרת השיחות מזוהה במפורש בתיאור המפרסם. תאריך פרסום מדויק לא הוצג ולכן נשמר מועד הגילוי בלבד.",
     "checked_at": "2026-10-29T06:05:30+00:00",
     "source_url": "https://hageula.com/news/press/28232.htm"
+  },
+  "f96c87994bcec245": {
+    "cls": "לא רלוונטי",
+    "why": "ביאור הלכתי לשולחן ערוך; אינו ביאור של מאמר, שיחה או מכתב מסוימים.",
+    "checked_at": "2026-10-29T06:12:40+00:00",
+    "source_url": "https://store.kehotonline.com/products.asp?dept=344"
+  },
+  "f45c91203a555a83": {
+    "cls": "לא רלוונטי",
+    "why": "ספר הדרכה כללי על תכנון המשפחה; התיאור שנפתח אינו מזהה מאמר, שיחה או מכתב מסוימים.",
+    "checked_at": "2026-10-29T06:12:40+00:00",
+    "source_url": "https://store.kehotonline.com/products.asp?dept=344"
+  },
+  "f086bd4f2851adc6": {
+    "cls": "מקור",
+    "why": "העמוד מזהה את אדמו״ר הריי״צ ואת מאמרי הקריאה והקדושה; הכותרת ושדה השפה מציינים פורטוגזית. נוסח התיאור באנגלית מתייחס גם לתרגום אנגלי, ולכן התקציר נשאר טיוטה עד בירור בבקרה נפרדת.",
+    "checked_at": "2026-10-29T06:12:40+00:00",
+    "source_url": "https://store.kehotonline.com/prodinfo.asp?number=P-CHASD.S"
+  },
+  "e70522b396ac45f8": {
+    "cls": "מקור",
+    "why": "התיאור המקורי מזהה אוסף של 22 מכתבים מהרבי, ולא ביוגרפיה בלבד.",
+    "checked_at": "2026-10-29T06:12:40+00:00",
+    "source_url": "https://store.kehotonline.com/prodinfo.asp?number=HO-PROF"
+  },
+  "c912363afe81c6fd": {
+    "cls": "ביאור",
+    "why": "בשער הספר שנצפה מופיעים תורה אור לאדמו״ר הזקן, בראשית וביאור Steinsaltz; ביאור כתוב לסדרת מאמרים מזוהה.",
+    "checked_at": "2026-10-29T06:12:40+00:00",
+    "source_url": "https://store.kehotonline.com/prodinfo.asp?number=HAR-TORAOB"
+  },
+  "c57151ecd1928e9e": {
+    "cls": "לא רלוונטי",
+    "why": "סידור תפילה; אינו פרסום מהסוגים המותרים במדור.",
+    "checked_at": "2026-10-29T06:12:40+00:00",
+    "source_url": "https://store.kehotonline.com/products.asp?dept=344"
+  },
+  "b6ca3a8cedafb584": {
+    "cls": "לא רלוונטי",
+    "why": "ספר היסטורי על מסעו האחרון של אדמו״ר הזקן, לפי תיאור הקטלוג.",
+    "checked_at": "2026-10-29T06:12:40+00:00",
+    "source_url": "https://store.kehotonline.com/products.asp?dept=344"
+  },
+  "ab72db4f9060673d": {
+    "cls": "לא רלוונטי",
+    "why": "סידור תפילה; אינו פרסום מהסוגים המותרים במדור.",
+    "checked_at": "2026-10-29T06:12:40+00:00",
+    "source_url": "https://store.kehotonline.com/products.asp?dept=344"
+  },
+  "a950dfd440912678": {
+    "cls": "לא רלוונטי",
+    "why": "סקירה הלכתית על טהרה; אינה ביאור למאמר, שיחה או מכתב מסוימים.",
+    "checked_at": "2026-10-29T06:12:40+00:00",
+    "source_url": "https://store.kehotonline.com/products.asp?dept=344"
+  },
+  "a72fc4d8d3ee55e0": {
+    "cls": "לא רלוונטי",
+    "why": "שיעורים וביאורים כלליים לפרקי אבות מאת הרב שבתי סלבטיצקי; אין בתיאור ייחוס למאמר, שיחה או מכתב מסוימים.",
+    "checked_at": "2026-10-29T06:12:40+00:00",
+    "source_url": "https://store.kehotonline.com/products.asp?dept=344"
+  },
+  "a009db5ba54c671a": {
+    "cls": "לא רלוונטי",
+    "why": "ביוגרפיה ותיעוד חיי אדמו״ר מהר״ש; אינה פרסום של מאמר, שיחה או מכתב.",
+    "checked_at": "2026-10-29T06:12:40+00:00",
+    "source_url": "https://store.kehotonline.com/products.asp?dept=344"
+  },
+  "9fe397f90f91343e": {
+    "cls": "מקור",
+    "why": "מהדורה בפורטוגזית של חיבור מזוהה מאת אדמו״ר הרש״ב; נפתח עמוד המוצר.",
+    "checked_at": "2026-10-29T06:12:40+00:00",
+    "source_url": "https://store.kehotonline.com/prodinfo.asp?number=P-AVOD"
+  },
+  "8d00c0747e9555b3": {
+    "cls": "לא רלוונטי",
+    "why": "סידור תפילה; אינו פרסום מהסוגים המותרים במדור.",
+    "checked_at": "2026-10-29T06:12:40+00:00",
+    "source_url": "https://store.kehotonline.com/products.asp?dept=344"
+  },
+  "746150620b08529d": {
+    "cls": "לא רלוונטי",
+    "why": "סידור תפילה; אינו פרסום מהסוגים המותרים במדור.",
+    "checked_at": "2026-10-29T06:12:40+00:00",
+    "source_url": "https://store.kehotonline.com/products.asp?dept=344"
+  },
+  "6fe69328eeebe30c": {
+    "cls": "לא רלוונטי",
+    "why": "ביאור הלכות בשולחן ערוך, ללא מאמר, שיחה או מכתב מסוימים.",
+    "checked_at": "2026-10-29T06:12:40+00:00",
+    "source_url": "https://store.kehotonline.com/products.asp?dept=344"
+  },
+  "528847f2c62d0210": {
+    "cls": "לא רלוונטי",
+    "why": "אוסף סיפורים על הבעל שם טוב; אינו פרסום או ביאור של מאמר, שיחה או מכתב.",
+    "checked_at": "2026-10-29T06:12:40+00:00",
+    "source_url": "https://store.kehotonline.com/products.asp?dept=344"
+  },
+  "4ab90aca9f2c2d32": {
+    "cls": "לא רלוונטי",
+    "why": "ביאור הלכות ברכות הנהנין; אינו ביאור של מאמר, שיחה או מכתב מסוימים.",
+    "checked_at": "2026-10-29T06:12:40+00:00",
+    "source_url": "https://store.kehotonline.com/products.asp?dept=344"
+  },
+  "4a4148a3ee013211": {
+    "cls": "לא רלוונטי",
+    "why": "ספר היסטורי על התמימים; לא זוהה פרסום מהסוגים המותרים.",
+    "checked_at": "2026-10-29T06:12:40+00:00",
+    "source_url": "https://store.kehotonline.com/products.asp?dept=344"
+  },
+  "3f72393c462af361": {
+    "cls": "לא רלוונטי",
+    "why": "עמוד המוצר בצרפתית נפתח אך לא הציג תיאור המזהה מאמר, שיחה או מכתב מסוימים. הכותרת הכללית אינה מספיקה לסיווג חיובי.",
+    "checked_at": "2026-10-29T06:12:40+00:00",
+    "source_url": "https://store.kehotonline.com/products.asp?dept=344"
+  },
+  "35763b0c85179962": {
+    "cls": "לא רלוונטי",
+    "why": "אוסף של כתב עת היסטורי שהחל בתש״ד, לפי תיאור המוצר. לא אומת גיליון חדש או פרסום חדש של טקסט מסוים; אינו מתקבל על סמך הופעתו בקטלוג בלבד.",
+    "checked_at": "2026-10-29T06:12:40+00:00",
+    "source_url": "https://store.kehotonline.com/products.asp?dept=344"
+  },
+  "3500d121c59f4a68": {
+    "cls": "מקור",
+    "why": "קונטרס של אדמו״ר הרש״ב; העמוד המקורי מתאר עימוד מחודש והערות, ומופיע במדור החדשים לאוקטובר.",
+    "checked_at": "2026-10-29T06:12:40+00:00",
+    "source_url": "https://store.kehotonline.com/prodinfo.asp?number=HKU-HATE"
+  },
+  "2977cf1b425f599b": {
+    "cls": "ביאור",
+    "why": "ביאור כתוב למאמרי תורה אור; תיאור המוצר מזהה את המחבר ואת מבנה הביאור.",
+    "checked_at": "2026-10-29T06:12:40+00:00",
+    "source_url": "https://store.kehotonline.com/prodinfo.asp?number=HAR-TORAOMBR2"
+  },
+  "1fb62dc33f3d4124": {
+    "cls": "מקור",
+    "why": "תרגום של מבחר שיחות מסדרה מזוהה של הרבי; נפתח עמוד המוצר.",
+    "checked_at": "2026-10-29T06:12:40+00:00",
+    "source_url": "https://store.kehotonline.com/prodinfo.asp?number=P-SELELS1"
+  },
+  "16104ae956ae28d8": {
+    "cls": "ביאור",
+    "why": "ביאור כתוב המבוסס על סדרת מכתבי הרבי; כך נאמר במפורש בתיאור המוצר.",
+    "checked_at": "2026-10-29T06:12:40+00:00",
+    "source_url": "https://store.kehotonline.com/prodinfo.asp?number=P-LETTFL"
+  },
+  "0bd00ca7ef1f8797": {
+    "cls": "מקור",
+    "why": "מהדורת עברית־אנגלית לחיבור מסוים של אדמו״ר הרש״ב, בקטלוג החדשים לאוקטובר.",
+    "checked_at": "2026-10-29T06:12:40+00:00",
+    "source_url": "https://store.kehotonline.com/prodinfo.asp?number=ERR-TRAC"
+  },
+  "a12911bd0c8d52a5": {
+    "cls": "לא רלוונטי",
+    "why": "ה־PDF בן 16 העמודים נפתח בפועל; בשער מצוין Elul-Tishrei 5775-6 (תשע״ה–תשע״ו). זהו קובץ ישן, ואין בעמוד הפוסט החדש ראיה למהדורה חדשה. תאריך הפוסט אינו הופך את החוברת לפרסום חדש.",
+    "checked_at": "2026-10-29T06:12:40+00:00",
+    "source_url": "https://dvarmalchus770.org/2026/10/28/between-golus-and-geuloh/"
+  },
+  "8e0dd903b02f6fd4": {
+    "cls": "כפול",
+    "why": "אותו גיליון התקשרות 1673 בעימוד כפולות של 16 דפי PDF. השער ותוכן העניינים זהים לעותק בן 32 העמודים, שנשאר במדור.",
+    "checked_at": "2026-10-29T06:12:40+00:00",
+    "source_url": "https://torahprint.nyc3.cdn.digitaloceanspaces.com/pdfFiles/1793199135955_6gmi1_.pdf"
+  },
+  "38a068bb3fa6157f": {
+    "cls": "גיליון",
+    "why": "ה־PDF בן 32 העמודים נפתח חזותית; אומתו שער התקשרות 1673 לוירא תשפ״ז ותוכן העניינים. נשאר במקום עותק הכפולות.",
+    "checked_at": "2026-10-29T06:12:40+00:00"
   }
 }
