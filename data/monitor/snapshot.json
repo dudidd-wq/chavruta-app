@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-29T06:07:44+00:00",
+ "generated_at": "2026-10-29T06:15:53+00:00",
  "sources": [
   {
    "id": "chabadlibrary",
@@ -12,7 +12,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-10-29T06:06:31+00:00",
+   "checked_at": "2026-10-29T06:14:44+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -30,7 +30,7 @@
     "primary",
     "whatsnew"
    ],
-   "checked_at": "2026-10-29T06:06:31+00:00",
+   "checked_at": "2026-10-29T06:14:44+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -47,7 +47,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-10-29T06:06:31+00:00",
+   "checked_at": "2026-10-29T06:14:44+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -64,7 +64,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-10-29T06:06:31+00:00",
+   "checked_at": "2026-10-29T06:14:44+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -82,7 +82,7 @@
     "primary",
     "whatsnew"
    ],
-   "checked_at": "2026-10-29T06:06:31+00:00",
+   "checked_at": "2026-10-29T06:14:44+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -102,7 +102,7 @@
     }
    ],
    "total": 132,
-   "last_success_at": "2026-10-29T06:06:31+00:00"
+   "last_success_at": "2026-10-29T06:14:44+00:00"
   },
   {
    "id": "chabadlibrarybooks",
@@ -115,7 +115,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-10-29T06:06:32+00:00",
+   "checked_at": "2026-10-29T06:14:45+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -133,12 +133,12 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-29T06:06:32+00:00",
+   "checked_at": "2026-10-29T06:14:45+00:00",
    "status": "ok",
    "new": [],
    "latest": [],
    "total": 1501,
-   "last_success_at": "2026-10-29T06:06:32+00:00"
+   "last_success_at": "2026-10-29T06:14:45+00:00"
   },
   {
    "id": "chassidut_org",
@@ -152,12 +152,12 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-29T06:06:33+00:00",
+   "checked_at": "2026-10-29T06:14:47+00:00",
    "status": "ok",
    "new": [],
    "latest": [],
    "total": 4,
-   "last_success_at": "2026-10-29T06:06:33+00:00"
+   "last_success_at": "2026-10-29T06:14:47+00:00"
   },
   {
    "id": "biurim",
@@ -171,7 +171,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-29T06:06:35+00:00",
+   "checked_at": "2026-10-29T06:14:48+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -217,7 +217,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-10-29T06:06:35+00:00"
+   "last_success_at": "2026-10-29T06:14:48+00:00"
   },
   {
    "id": "hm_monsey",
@@ -231,7 +231,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-29T06:06:36+00:00",
+   "checked_at": "2026-10-29T06:14:50+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -277,7 +277,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-10-29T06:06:36+00:00"
+   "last_success_at": "2026-10-29T06:14:50+00:00"
   },
   {
    "id": "hiskashrus",
@@ -291,24 +291,9 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-29T06:06:38+00:00",
+   "checked_at": "2026-10-29T06:14:52+00:00",
    "status": "ok",
-   "new": [
-    {
-     "id": "38133",
-     "title": "Vayeira · 5787 · קונטרס שבועי לאנ\"ש חסידי חב\"ד לחיזוק ההתקשרות לכ\"ק אדמו\"ר רבי מנחם מענדל בהרה\"ק רלו\"י מליובאוויטש",
-     "url": "https://torahprint.nyc3.cdn.digitaloceanspaces.com/pdfFiles/1793199306940_m6c2p_.pdf",
-     "date": "2026-10-30T00:00:00.000Z",
-     "first_seen": "2026-10-29T06:06:38+00:00"
-    },
-    {
-     "id": "38132",
-     "title": "Vayeira · 5787",
-     "url": "https://torahprint.nyc3.cdn.digitaloceanspaces.com/pdfFiles/1793199135955_6gmi1_.pdf",
-     "date": "2026-10-30T00:00:00.000Z",
-     "first_seen": "2026-10-29T06:06:38+00:00"
-    }
-   ],
+   "new": [],
    "latest": [
     {
      "id": "38133",
@@ -375,7 +360,7 @@
     }
    ],
    "total": 255,
-   "last_success_at": "2026-10-29T06:06:38+00:00"
+   "last_success_at": "2026-10-29T06:14:52+00:00"
   },
   {
    "id": "lichyot_chassidus",
@@ -389,18 +374,9 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-29T06:06:40+00:00",
+   "checked_at": "2026-10-29T06:14:53+00:00",
    "status": "ok",
-   "new": [
-    {
-     "id": "39e46312-a6c7-4e2a-aee9-bf2de9c1cb9b",
-     "title": "מאמר ד\"ה וכל העם רואים תרס\"ה - חלק ה",
-     "url": "https://rabbi_osher_farkash_maamarim.captivate.fm",
-     "date": "Wed, 28 Oct 2026 04:00:00 -0400",
-     "blurb": "ביאור שני בהתחדשות: כלל ופרט",
-     "first_seen": "2026-10-29T06:06:40+00:00"
-    }
-   ],
+   "new": [],
    "latest": [
     {
      "id": "39e46312-a6c7-4e2a-aee9-bf2de9c1cb9b",
@@ -484,7 +460,7 @@
     }
    ],
    "total": 1000,
-   "last_success_at": "2026-10-29T06:06:40+00:00"
+   "last_success_at": "2026-10-29T06:14:53+00:00"
   },
   {
    "id": "chabadzoom",
@@ -498,31 +474,9 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-29T06:06:42+00:00",
+   "checked_at": "2026-10-29T06:14:55+00:00",
    "status": "ok",
-   "new": [
-    {
-     "id": "content:e259c54a9d0d65f1",
-     "title": "עדכון בתוכן הדף",
-     "url": "https://chabadzoom.co.il/series",
-     "date": "",
-     "first_seen": "2026-10-29T06:06:42+00:00"
-    },
-    {
-     "id": "https://chabadzoom.co.il/talk?cat=1665",
-     "title": "פסיכולוגיה יהודית",
-     "url": "https://chabadzoom.co.il/talk?cat=1665",
-     "date": "",
-     "first_seen": "2026-10-29T06:06:42+00:00"
-    },
-    {
-     "id": "https://chabadzoom.co.il/article/%d7%95%d7%90%d7%91%d7%a8%d7%94%d7%9d-%d7%96%d7%a7%d7%9f-%d7%91%d7%90-%d7%91%d7%99%d7%9e%d7%99%d7%9d-%d7%94%d7%a8%d7%91-%d7%97%d7%99%d7%99%d7%9d-%d7%a4%d7%a8%d7%95%d7%a1",
-     "title": "ואברהם זקן בא בימים- הרב חיים פרוס",
-     "url": "https://chabadzoom.co.il/article/%d7%95%d7%90%d7%91%d7%a8%d7%94%d7%9d-%d7%96%d7%a7%d7%9f-%d7%91%d7%90-%d7%91%d7%99%d7%9e%d7%99%d7%9d-%d7%94%d7%a8%d7%91-%d7%97%d7%99%d7%99%d7%9d-%d7%a4%d7%a8%d7%95%d7%a1",
-     "date": "",
-     "first_seen": "2026-10-29T06:06:42+00:00"
-    }
-   ],
+   "new": [],
    "latest": [
     {
      "id": "content:e259c54a9d0d65f1",
@@ -617,7 +571,7 @@
     }
    ],
    "total": 561,
-   "last_success_at": "2026-10-29T06:06:42+00:00"
+   "last_success_at": "2026-10-29T06:14:55+00:00"
   },
   {
    "id": "kovtzimdrive",
@@ -631,7 +585,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-29T06:06:44+00:00",
+   "checked_at": "2026-10-29T06:14:57+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -644,7 +598,7 @@
     }
    ],
    "total": 1,
-   "last_success_at": "2026-10-29T06:06:44+00:00"
+   "last_success_at": "2026-10-29T06:14:57+00:00"
   },
   {
    "id": "avita",
@@ -658,7 +612,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-29T06:06:47+00:00",
+   "checked_at": "2026-10-29T06:14:59+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -676,7 +630,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-29T06:06:47+00:00",
+   "checked_at": "2026-10-29T06:14:59+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -698,7 +652,7 @@
     }
    ],
    "total": 2,
-   "last_success_at": "2026-10-29T06:06:47+00:00"
+   "last_success_at": "2026-10-29T06:14:59+00:00"
   },
   {
    "id": "dvarmalchus770",
@@ -712,18 +666,9 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-29T06:06:48+00:00",
+   "checked_at": "2026-10-29T06:15:00+00:00",
    "status": "ok",
-   "new": [
-    {
-     "id": "http://dvarmalchus770.org/?p=5743",
-     "title": "Between Golus and Geuloh",
-     "url": "https://dvarmalchus770.org/2026/10/28/between-golus-and-geuloh/",
-     "date": "Wed, 28 Oct 2026 15:29:23 +0000",
-     "blurb": "Not a sicha or maamar, but a collection of sources that will assist in understanding the bigger picture of what the Rebbe is teaching us in these Dvar Malchus sichos. Highly recommended.",
-     "first_seen": "2026-10-29T06:06:48+00:00"
-    }
-   ],
+   "new": [],
    "latest": [
     {
      "id": "http://dvarmalchus770.org/?p=5743",
@@ -799,7 +744,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-10-29T06:06:48+00:00"
+   "last_success_at": "2026-10-29T06:15:00+00:00"
   },
   {
    "id": "soulwords",
@@ -813,7 +758,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-29T06:06:49+00:00",
+   "checked_at": "2026-10-29T06:15:02+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -867,7 +812,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-10-29T06:06:49+00:00"
+   "last_success_at": "2026-10-29T06:15:02+00:00"
   },
   {
    "id": "sie_weekly",
@@ -881,7 +826,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-29T06:06:51+00:00",
+   "checked_at": "2026-10-29T06:15:03+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -929,7 +874,7 @@
     }
    ],
    "total": 115,
-   "last_success_at": "2026-10-29T06:06:51+00:00"
+   "last_success_at": "2026-10-29T06:15:03+00:00"
   },
   {
    "id": "pls",
@@ -943,26 +888,9 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-29T06:06:52+00:00",
+   "checked_at": "2026-10-29T06:15:05+00:00",
    "status": "ok",
-   "new": [
-    {
-     "id": "bf2afd49-476f-450a-a874-742429b83294",
-     "title": "Chelek 30, Vayera 1 - Rabbi Yaakov Moshe Wolberg",
-     "url": "https://sichaindepth.captivate.fm",
-     "date": "Wed, 28 Oct 2026 22:20:00 -0400",
-     "blurb": "Chelek 30, Vayera 1 - Rabbi Yaakov Moshe Wolberg",
-     "first_seen": "2026-10-29T06:06:52+00:00"
-    },
-    {
-     "id": "44494360-6e6b-4856-b8bb-14e1e36f7c5d",
-     "title": "Chelek 25, Vayera 3 - Rabbi Yaakov Moshe Wolberg",
-     "url": "https://sichaindepth.captivate.fm",
-     "date": "Wed, 28 Oct 2026 22:00:00 -0400",
-     "blurb": "Chelek 25, Vayera 3 - Rabbi Yaakov Moshe Wolberg",
-     "first_seen": "2026-10-29T06:06:52+00:00"
-    }
-   ],
+   "new": [],
    "latest": [
     {
      "id": "bf2afd49-476f-450a-a874-742429b83294",
@@ -1038,7 +966,7 @@
     }
    ],
    "total": 200,
-   "last_success_at": "2026-10-29T06:06:52+00:00"
+   "last_success_at": "2026-10-29T06:15:05+00:00"
   },
   {
    "id": "chayenu_ls",
@@ -1052,7 +980,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-29T06:06:54+00:00",
+   "checked_at": "2026-10-29T06:15:06+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1079,7 +1007,7 @@
     }
    ],
    "total": 2,
-   "last_success_at": "2026-10-29T06:06:54+00:00"
+   "last_success_at": "2026-10-29T06:15:06+00:00"
   },
   {
    "id": "weekly_sicha",
@@ -1093,7 +1021,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-29T06:06:55+00:00",
+   "checked_at": "2026-10-29T06:15:07+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1141,7 +1069,7 @@
     }
    ],
    "total": 117,
-   "last_success_at": "2026-10-29T06:06:55+00:00"
+   "last_success_at": "2026-10-29T06:15:07+00:00"
   },
   {
    "id": "theyeshiva",
@@ -1155,18 +1083,9 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-29T06:06:57+00:00",
+   "checked_at": "2026-10-29T06:15:09+00:00",
    "status": "ok",
-   "new": [
-    {
-     "id": "https://www.theyeshiva.net/item/10016",
-     "title": "Let Shame Become Your Teacher - Wednesday: Mayim Rabim 5738 #5",
-     "url": "https://www.theyeshiva.net/item/10016",
-     "date": "Wed, 28 Oct 2026 08:00:00 -0400",
-     "blurb": "Moshiach Is When the Two Faces Finally Meet This class is the fifth and final one in a series on the Maamar Mayim Rabim, said by the Lubavitcher Rebbe on Motzei Shabbos Parshas Noach, 3 Cheshvan, 5738, October 15, 1977, in his room. This class was presented by Rabbi YY Jacobson on 17 Cheshvan, 5787, October 28, 2026. View Source Sheets: https://portal.theyeshiva.net/api/source-sheets/10016",
-     "first_seen": "2026-10-29T06:06:57+00:00"
-    }
-   ],
+   "new": [],
    "latest": [
     {
      "id": "https://www.theyeshiva.net/item/10016",
@@ -1250,7 +1169,7 @@
     }
    ],
    "total": 1541,
-   "last_success_at": "2026-10-29T06:06:57+00:00"
+   "last_success_at": "2026-10-29T06:15:09+00:00"
   },
   {
    "id": "chassidus_applied",
@@ -1264,7 +1183,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-29T06:07:00+00:00",
+   "checked_at": "2026-10-29T06:15:12+00:00",
    "status": "error",
    "new": [],
    "latest": [
@@ -1398,7 +1317,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-29T06:07:00+00:00",
+   "checked_at": "2026-10-29T06:15:12+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1452,7 +1371,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-10-29T06:07:00+00:00"
+   "last_success_at": "2026-10-29T06:15:12+00:00"
   },
   {
    "id": "chassidus_explained",
@@ -1466,7 +1385,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-29T06:07:02+00:00",
+   "checked_at": "2026-10-29T06:15:14+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1528,7 +1447,7 @@
     }
    ],
    "total": 136,
-   "last_success_at": "2026-10-29T06:07:02+00:00"
+   "last_success_at": "2026-10-29T06:15:14+00:00"
   },
   {
    "id": "melukat",
@@ -1542,7 +1461,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-29T06:07:04+00:00",
+   "checked_at": "2026-10-29T06:15:15+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1604,7 +1523,7 @@
     }
    ],
    "total": 168,
-   "last_success_at": "2026-10-29T06:07:04+00:00"
+   "last_success_at": "2026-10-29T06:15:15+00:00"
   },
   {
    "id": "daily_maamar",
@@ -1618,18 +1537,9 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-29T06:07:05+00:00",
+   "checked_at": "2026-10-29T06:15:16+00:00",
    "status": "ok",
-   "new": [
-    {
-     "id": "bda55fcd-e848-4b40-9387-6d957a939f54",
-     "title": "Shabbos Parshas Chayey Sarah Mevorchim HaChodesh Kislev 5730 ,Maamorim Melukatim Vol. 1– Episode 1",
-     "url": "https://share.transistor.fm/s/57447ceb",
-     "date": "Wed, 28 Oct 2026 07:05:15 -0400",
-     "blurb": "This episode covers from Chapter 1 through Chapter 2. The mission of Gan Eden and of this world.",
-     "first_seen": "2026-10-29T06:07:05+00:00"
-    }
-   ],
+   "new": [],
    "latest": [
     {
      "id": "bda55fcd-e848-4b40-9387-6d957a939f54",
@@ -1753,7 +1663,7 @@
     }
    ],
    "total": 350,
-   "last_success_at": "2026-10-29T06:07:05+00:00"
+   "last_success_at": "2026-10-29T06:15:16+00:00"
   },
   {
    "id": "wellsprings",
@@ -1767,7 +1677,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-29T06:07:07+00:00",
+   "checked_at": "2026-10-29T06:15:18+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1813,7 +1723,7 @@
     }
    ],
    "total": 125,
-   "last_success_at": "2026-10-29T06:07:07+00:00"
+   "last_success_at": "2026-10-29T06:15:18+00:00"
   },
   {
    "id": "daily_sicha",
@@ -1827,18 +1737,9 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-29T06:07:08+00:00",
+   "checked_at": "2026-10-29T06:15:19+00:00",
    "status": "ok",
-   "new": [
-    {
-     "id": "2026.10.29",
-     "title": "יום ה' פ' וירא, י\"ח מרחשון, ה'תשפ\"ז",
-     "url": "",
-     "date": "Thu, 29 Oct 2026 12:00:00 GMT",
-     "blurb": "התוכן ספר תהלים הו\"ע של שירה ושמחה , ומודגש הדבר במזמורים שבהם נאמר הלשון \" מזמור \" או \" שיר \". ומזה מובן גם בנוגע לשיעור תהלים היומי, מזמורים פ\"ח ופ\"ט . אע\"פ שלפי פשטות הכתובים מדובר בענינים בלתי - רצויים (ועד כדי כך שבנוגע למזמור פ\"ט כותב האבן-עזרא ש\"הי' בספרד חכם גדול וחסיד וזה המזמור הי' קשה עליו ולא הי' קורא אותו וכו'\") אבל מכיון שכל הענינים באים מהקב\"ה והקב\"ה הוא \"עצם הטוב ומטבע הטוב להטיב \" (כמו שנת' בשיחה שלפנ\"ז בענין \"באו גוים בנחלתך\") – צריך לומר שגם ענינים אלו פנימיותם הוא טוב , ואדרבה, כאשר מגלים את הפנימיות של ענינים אלו – ניתוסף עוד יותר בעניני טוב כיתרון האור מן החושך. ולדוגמא, מיד בתחלת מזמור פ\"ח – \"שיר מזמור גו' על מחלת לענות \" שפירושו הפשוט הוא לשון חולי ועינוי , הרי יש לפרש להיפך – \"מחלת\" מלשון \" מחול \", ו\"לענות\" – מלשון \"וענו הלויים וגו' קול רם \". ב' חלקים משיחת ליל ד' דחג הסוכות ה'תשמ\"ז, לאחרי תפילת ערבית ל\"הנחה פרטית\" או התרגום ללה\"ק של השיחה: https://thedailysicha.com/?date=29-10-2026 Synopsis The Book of Tehillim is a book of song and joy , as emphasized in the chapters beginning with the words mizmor or shir etc. Accordingly, it is understood that the same applies to today’s Tehillim (chapters 88 and 89 ): Although according to the plain meaning of the verses, they speak of undesirable things (to the point that regarding chapter 89, Ibn Ezra writes: “There was a great sage and pious man in Spain for whom this psalm was difficult, and he would not read it …” – nevertheless, since everything comes from Hashem , Who is “the Essence of Good , and it is th",
-     "first_seen": "2026-10-29T06:07:08+00:00"
-    }
-   ],
+   "new": [],
    "latest": [
     {
      "id": "2026.10.29",
@@ -1962,7 +1863,7 @@
     }
    ],
    "total": 1414,
-   "last_success_at": "2026-10-29T06:07:08+00:00"
+   "last_success_at": "2026-10-29T06:15:19+00:00"
   },
   {
    "id": "learnchassidus",
@@ -1976,7 +1877,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-29T06:07:14+00:00",
+   "checked_at": "2026-10-29T06:15:24+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1989,7 +1890,7 @@
     }
    ],
    "total": 5,
-   "last_success_at": "2026-10-29T06:07:14+00:00"
+   "last_success_at": "2026-10-29T06:15:24+00:00"
   },
   {
    "id": "simplychassidus",
@@ -2003,7 +1904,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-29T06:07:15+00:00",
+   "checked_at": "2026-10-29T06:15:24+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2030,7 +1931,7 @@
     }
    ],
    "total": 4,
-   "last_success_at": "2026-10-29T06:07:15+00:00"
+   "last_success_at": "2026-10-29T06:15:24+00:00"
   },
   {
    "id": "alonei_chabad",
@@ -2043,7 +1944,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-29T06:07:16+00:00",
+   "checked_at": "2026-10-29T06:15:25+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -2060,7 +1961,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-29T06:07:16+00:00",
+   "checked_at": "2026-10-29T06:15:25+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -2077,7 +1978,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-29T06:07:16+00:00",
+   "checked_at": "2026-10-29T06:15:25+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2104,7 +2005,7 @@
     }
    ],
    "total": 303,
-   "last_success_at": "2026-10-29T06:07:16+00:00"
+   "last_success_at": "2026-10-29T06:15:25+00:00"
   },
   {
    "id": "lchaim",
@@ -2117,7 +2018,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-29T06:07:17+00:00",
+   "checked_at": "2026-10-29T06:15:27+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2172,7 +2073,7 @@
     }
    ],
    "total": 193,
-   "last_success_at": "2026-10-29T06:07:17+00:00"
+   "last_success_at": "2026-10-29T06:15:27+00:00"
   },
   {
    "id": "one_point",
@@ -2185,7 +2086,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-29T06:07:19+00:00",
+   "checked_at": "2026-10-29T06:15:28+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2226,7 +2127,7 @@
     }
    ],
    "total": 184,
-   "last_success_at": "2026-10-29T06:07:19+00:00"
+   "last_success_at": "2026-10-29T06:15:28+00:00"
   },
   {
    "id": "derher",
@@ -2239,7 +2140,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-29T06:07:20+00:00",
+   "checked_at": "2026-10-29T06:15:29+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -2256,7 +2157,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-29T06:07:20+00:00",
+   "checked_at": "2026-10-29T06:15:29+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -2273,7 +2174,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-29T06:07:20+00:00",
+   "checked_at": "2026-10-29T06:15:29+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2300,7 +2201,7 @@
     }
    ],
    "total": 5,
-   "last_success_at": "2026-10-29T06:07:20+00:00"
+   "last_success_at": "2026-10-29T06:15:29+00:00"
   },
   {
    "id": "maynotecha_inst",
@@ -2313,7 +2214,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-29T06:07:22+00:00",
+   "checked_at": "2026-10-29T06:15:32+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -2330,7 +2231,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-29T06:07:22+00:00",
+   "checked_at": "2026-10-29T06:15:32+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2352,7 +2253,7 @@
     }
    ],
    "total": 1,
-   "last_success_at": "2026-10-29T06:07:22+00:00"
+   "last_success_at": "2026-10-29T06:15:32+00:00"
   },
   {
    "id": "anash",
@@ -2365,7 +2266,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-29T06:07:23+00:00",
+   "checked_at": "2026-10-29T06:15:33+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2515,7 +2416,7 @@
     }
    ],
    "total": 3,
-   "last_success_at": "2026-10-29T06:07:23+00:00"
+   "last_success_at": "2026-10-29T06:15:33+00:00"
   },
   {
    "id": "chabadinfo",
@@ -2528,7 +2429,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-29T06:07:25+00:00",
+   "checked_at": "2026-10-29T06:15:34+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -2545,7 +2446,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-29T06:07:25+00:00",
+   "checked_at": "2026-10-29T06:15:34+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -2562,7 +2463,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-29T06:07:25+00:00",
+   "checked_at": "2026-10-29T06:15:34+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2608,7 +2509,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-10-29T06:07:25+00:00"
+   "last_success_at": "2026-10-29T06:15:34+00:00"
   },
   {
    "id": "kehot",
@@ -2621,217 +2522,9 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-29T06:07:28+00:00",
+   "checked_at": "2026-10-29T06:15:37+00:00",
    "status": "ok",
-   "new": [
-    {
-     "id": "HKU-HATE",
-     "title": "Kuntres HaTefilah",
-     "url": "https://store.kehotonline.com/products.asp?dept=344",
-     "date": "",
-     "catalog_month": "2026-10",
-     "first_seen": "2026-10-29T06:07:28+00:00"
-    },
-    {
-     "id": "HRM-TOLD",
-     "title": "Sefer HaToldot - Admur Maharash",
-     "url": "https://store.kehotonline.com/products.asp?dept=344",
-     "date": "",
-     "catalog_month": "2026-10",
-     "first_seen": "2026-10-29T06:07:28+00:00"
-    },
-    {
-     "id": "ERR-TRAC",
-     "title": "Tract On Prayer - Kuntres HaTefilah",
-     "url": "https://store.kehotonline.com/products.asp?dept=344",
-     "date": "",
-     "catalog_month": "2026-10",
-     "first_seen": "2026-10-29T06:07:28+00:00"
-    },
-    {
-     "id": "EBS-STORBST.S",
-     "title": "Stories of the Baal Shem Tov 5 Volume Set",
-     "url": "https://store.kehotonline.com/products.asp?dept=344",
-     "date": "",
-     "catalog_month": "2026-10",
-     "first_seen": "2026-10-29T06:07:28+00:00"
-    },
-    {
-     "id": "HAR-SHULOMRH",
-     "title": "Shulchan Aruch HaMevoar - Rosh HaShanah, Yom Kippur, Sukkah & Lulav",
-     "url": "https://store.kehotonline.com/products.asp?dept=344",
-     "date": "",
-     "catalog_month": "2026-10",
-     "first_seen": "2026-10-29T06:07:28+00:00"
-    },
-    {
-     "id": "HAR-TORAOB",
-     "title": "Torah Ohr Bereshit - Steinsaltz",
-     "url": "https://store.kehotonline.com/products.asp?dept=344",
-     "date": "",
-     "catalog_month": "2026-10",
-     "first_seen": "2026-10-29T06:07:28+00:00"
-    },
-    {
-     "id": "HAR-TORAOMBR2",
-     "title": "Torah Ohr HaMevoar Bereshit #2",
-     "url": "https://store.kehotonline.com/products.asp?dept=344",
-     "date": "",
-     "catalog_month": "2026-10",
-     "first_seen": "2026-10-29T06:07:28+00:00"
-    },
-    {
-     "id": "HL-SEDEBH.P",
-     "title": "Seder Birkot HaNehenin HaMevoar (Pruss)",
-     "url": "https://store.kehotonline.com/products.asp?dept=344",
-     "date": "",
-     "catalog_month": "2026-10",
-     "first_seen": "2026-10-29T06:07:28+00:00"
-    },
-    {
-     "id": "HO-CHOSA",
-     "title": "Choshvim Al Od Echad?",
-     "url": "https://store.kehotonline.com/products.asp?dept=344",
-     "date": "",
-     "catalog_month": "2026-10",
-     "first_seen": "2026-10-29T06:07:28+00:00"
-    },
-    {
-     "id": "HPU-STH.PNTN12",
-     "title": "Siddur Pocket (No Tehillim) Leather-like Blue (New Israeli Layout)",
-     "url": "https://store.kehotonline.com/products.asp?dept=344",
-     "date": "",
-     "catalog_month": "2026-10",
-     "first_seen": "2026-10-29T06:07:28+00:00"
-    },
-    {
-     "id": "HPU-STH.PNTN31",
-     "title": "Siddur Pocket (No Tehillim) Leather-like Cream (New Israeli Layout)",
-     "url": "https://store.kehotonline.com/products.asp?dept=344",
-     "date": "",
-     "catalog_month": "2026-10",
-     "first_seen": "2026-10-29T06:07:28+00:00"
-    },
-    {
-     "id": "HPU-STH.PWTN12",
-     "title": "Siddur Pocket with Tehillim Leather-like Blue (New Israeli Layout)",
-     "url": "https://store.kehotonline.com/products.asp?dept=344",
-     "date": "",
-     "catalog_month": "2026-10",
-     "first_seen": "2026-10-29T06:07:28+00:00"
-    },
-    {
-     "id": "HPU-STH.PWTN31",
-     "title": "Siddur Pocket with Tehillim Leather-like Cream (New Israeli Layout)",
-     "url": "https://store.kehotonline.com/products.asp?dept=344",
-     "date": "",
-     "catalog_month": "2026-10",
-     "first_seen": "2026-10-29T06:07:28+00:00"
-    },
-    {
-     "id": "F-LEHAC",
-     "title": "Lehavin Chasidut (Comprendre la 'Hassidout) French",
-     "url": "https://store.kehotonline.com/products.asp?dept=344",
-     "date": "",
-     "catalog_month": "2026-10",
-     "first_seen": "2026-10-29T06:07:28+00:00"
-    },
-    {
-     "id": "HAR-HILCK",
-     "title": "Hilchata K'Rav",
-     "url": "https://store.kehotonline.com/products.asp?dept=344",
-     "date": "",
-     "catalog_month": "2026-10",
-     "first_seen": "2026-10-29T06:07:28+00:00"
-    },
-    {
-     "id": "HO-PIRKADL",
-     "title": "Pirkei Avot - Derech LaBanim (Slavaticki)",
-     "url": "https://store.kehotonline.com/products.asp?dept=344",
-     "date": "",
-     "catalog_month": "2026-10",
-     "first_seen": "2026-10-29T06:07:28+00:00"
-    },
-    {
-     "id": "HH-DIVR",
-     "title": "Divrei Yemei Hatmimim",
-     "url": "https://store.kehotonline.com/products.asp?dept=344",
-     "date": "",
-     "catalog_month": "2026-10",
-     "first_seen": "2026-10-29T06:07:28+00:00"
-    },
-    {
-     "id": "HH-HAMAS",
-     "title": "Hamasa Ha'acharon Shel Admur Hazaken",
-     "url": "https://store.kehotonline.com/products.asp?dept=344",
-     "date": "",
-     "catalog_month": "2026-10",
-     "first_seen": "2026-10-29T06:07:28+00:00"
-    },
-    {
-     "id": "HH-KOVEL",
-     "title": "Kovetz Lubavitch",
-     "url": "https://store.kehotonline.com/products.asp?dept=344",
-     "date": "",
-     "catalog_month": "2026-10",
-     "first_seen": "2026-10-29T06:07:28+00:00"
-    },
-    {
-     "id": "HO-PROF",
-     "title": "Professor Green, Shalom Uvrachah",
-     "url": "https://store.kehotonline.com/products.asp?dept=344",
-     "date": "",
-     "catalog_month": "2026-10",
-     "first_seen": "2026-10-29T06:07:28+00:00"
-    },
-    {
-     "id": "P-AVOD",
-     "title": "Kuntres HaAvodah - Portuguese",
-     "url": "https://store.kehotonline.com/products.asp?dept=344",
-     "date": "",
-     "catalog_month": "2026-10",
-     "first_seen": "2026-10-29T06:07:28+00:00"
-    },
-    {
-     "id": "P-CHASD.S",
-     "title": "Chassidic Discourses 2 Vol's (Discursos Chassidicos) - Portuguese",
-     "url": "https://store.kehotonline.com/products.asp?dept=344",
-     "date": "",
-     "catalog_month": "2026-10",
-     "first_seen": "2026-10-29T06:07:28+00:00"
-    },
-    {
-     "id": "P-KITZDT",
-     "title": "Kitzur Dinei Taharah (Kitsur Dinei Tahará) - Portuguese",
-     "url": "https://store.kehotonline.com/products.asp?dept=344",
-     "date": "",
-     "catalog_month": "2026-10",
-     "first_seen": "2026-10-29T06:07:28+00:00"
-    },
-    {
-     "id": "P-LETTFL",
-     "title": "Letters for Life (Cartas para a vida) - Portuguese",
-     "url": "https://store.kehotonline.com/products.asp?dept=344",
-     "date": "",
-     "catalog_month": "2026-10",
-     "first_seen": "2026-10-29T06:07:28+00:00"
-    },
-    {
-     "id": "P-SELELS1",
-     "title": "Selections from Likkutei Sichos - Bereishis (Seleções do Likutei Sichot - Bereshit) - Portuguese",
-     "url": "https://store.kehotonline.com/products.asp?dept=344",
-     "date": "",
-     "catalog_month": "2026-10",
-     "first_seen": "2026-10-29T06:07:28+00:00"
-    },
-    {
-     "id": "HO-HAPAH",
-     "title": "Haparasha Hachasidit - Sipurei Chabad Al Parashat HaShavua",
-     "url": "https://store.kehotonline.com/products.asp?dept=336",
-     "date": "",
-     "catalog_month": "2026-02"
-    }
-   ],
+   "new": [],
    "latest": [
     {
      "id": "HKU-HATE",
@@ -3299,7 +2992,7 @@
     }
    ],
    "total": 199,
-   "last_success_at": "2026-10-29T06:07:28+00:00"
+   "last_success_at": "2026-10-29T06:15:37+00:00"
   }
  ],
  "browser_checks": {
@@ -3657,7 +3350,7 @@
    "note": "עמוד הארכיון נטען; בחלק ג׳ קיימים קישורים עד וירא, ואילו חיי שרה והפרשות הבאות אינם קישורי הורדה. לא נמצא פריט חדש נוסף."
   },
   "hiskashrus": {
-   "checked_at": "2026-10-23T05:40:44+00:00",
+   "checked_at": "2026-10-29T06:12:40+00:00",
    "items": [
     {
      "title": "Lech-Lecha · 5787 · קונטרס שבועי לאנ\"ש חסידי חב\"ד לחיזוק ההתקשרות לכ\"ק אדמו\"ר רבי מנחם מענדל בהרה\"ק רלו\"י מליובאוויטש",
@@ -3666,14 +3359,27 @@
      "first_seen": "2026-10-22T05:09:31+00:00",
      "issued_for": "ערב שבת קודש פרשת לך לך, י״ב מרחשוון תשפ״ז (23.10.2026)",
      "genre": "גיליון"
+    },
+    {
+     "title": "Vayeira · 5787 · קונטרס שבועי לאנ\"ש חסידי חב\"ד לחיזוק ההתקשרות לכ\"ק אדמו\"ר רבי מנחם מענדל בהרה\"ק רלו\"י מליובאוויטש",
+     "url": "https://torahprint.nyc3.cdn.digitaloceanspaces.com/pdfFiles/1793199306940_m6c2p_.pdf",
+     "lang": "he",
+     "first_seen": "2026-10-29T06:06:38+00:00",
+     "issued_for": "ערב שבת קודש פרשת וירא, י״ט מרחשוון תשפ״ז (30.10.2026)",
+     "genre": "גיליון"
     }
    ],
-   "note": "קובץ PDF בן 32 עמודים נטען בפועל; שער גיליון 1672, דבר הפתיחה ותוכן העניינים נבדקו חזותית בעמודים 1–2. הטיוטה מההרצה הקודמת אומתה ואושרה; מועד הגילוי ותאריך הגיליון המיועד נשמרו."
+   "note": "נפתחו שני קובצי PDF של גיליון 1673 ונבדקו השער ותוכן העניינים. עותק 16 הכפולות סווג ככפול; עותק 32 העמודים נשמר. 30.10 הוא מועד הגיליון המיועד, בנפרד מהגילוי הראשון ב־29.10. נכתבה טיוטה לא מאושרת."
   },
   "hebrewbooks": {
    "items": [],
    "checked_at": "2026-10-29T06:05:30+00:00",
    "note": "עמוד הבית נטען בדפדפן. ההוספה האחרונה המוצהרת נותרה 50 ספרים בר״ח אלול תשפ״ו, מחוץ לחלון הפרסום."
+  },
+  "kehot": {
+   "checked_at": "2026-10-29T06:12:40+00:00",
+   "items": [],
+   "note": "נפתח קטלוג אוקטובר המקורי ונבדקו תיאורי המוצרים, לרבות קונטרס התפילה, תורה אור, מכתבי פרופסור גרין והמהדורות בפורטוגזית. סווגו כל 25 המועמדים החדשים; תשעה התקבלו ותקציריהם נשארו טיוטות. לא נקבע יום פרסום מתוך חודש הקטלוג."
   }
  }
 }
