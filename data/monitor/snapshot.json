@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-29T06:20:34+00:00",
+ "generated_at": "2026-10-29T10:54:10+00:00",
  "sources": [
   {
    "id": "chabadlibrary",
@@ -12,7 +12,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-10-29T06:19:26+00:00",
+   "checked_at": "2026-10-29T10:52:53+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -30,7 +30,7 @@
     "primary",
     "whatsnew"
    ],
-   "checked_at": "2026-10-29T06:19:26+00:00",
+   "checked_at": "2026-10-29T10:52:53+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -47,7 +47,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-10-29T06:19:26+00:00",
+   "checked_at": "2026-10-29T10:52:53+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -64,7 +64,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-10-29T06:19:26+00:00",
+   "checked_at": "2026-10-29T10:52:53+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -82,7 +82,7 @@
     "primary",
     "whatsnew"
    ],
-   "checked_at": "2026-10-29T06:19:26+00:00",
+   "checked_at": "2026-10-29T10:52:53+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -102,7 +102,7 @@
     }
    ],
    "total": 132,
-   "last_success_at": "2026-10-29T06:19:26+00:00"
+   "last_success_at": "2026-10-29T10:52:53+00:00"
   },
   {
    "id": "chabadlibrarybooks",
@@ -115,7 +115,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-10-29T06:19:26+00:00",
+   "checked_at": "2026-10-29T10:52:53+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -133,12 +133,12 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-29T06:19:26+00:00",
+   "checked_at": "2026-10-29T10:52:53+00:00",
    "status": "ok",
    "new": [],
    "latest": [],
    "total": 1501,
-   "last_success_at": "2026-10-29T06:19:26+00:00"
+   "last_success_at": "2026-10-29T10:52:53+00:00"
   },
   {
    "id": "chassidut_org",
@@ -152,12 +152,12 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-29T06:19:28+00:00",
+   "checked_at": "2026-10-29T10:52:55+00:00",
    "status": "ok",
    "new": [],
    "latest": [],
    "total": 4,
-   "last_success_at": "2026-10-29T06:19:28+00:00"
+   "last_success_at": "2026-10-29T10:52:55+00:00"
   },
   {
    "id": "biurim",
@@ -171,7 +171,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-29T06:19:29+00:00",
+   "checked_at": "2026-10-29T10:52:56+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -217,7 +217,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-10-29T06:19:29+00:00"
+   "last_success_at": "2026-10-29T10:52:56+00:00"
   },
   {
    "id": "hm_monsey",
@@ -231,7 +231,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-29T06:19:31+00:00",
+   "checked_at": "2026-10-29T10:52:58+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -277,7 +277,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-10-29T06:19:31+00:00"
+   "last_success_at": "2026-10-29T10:52:58+00:00"
   },
   {
    "id": "hiskashrus",
@@ -291,7 +291,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-29T06:19:33+00:00",
+   "checked_at": "2026-10-29T10:52:59+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -360,7 +360,7 @@
     }
    ],
    "total": 255,
-   "last_success_at": "2026-10-29T06:19:33+00:00"
+   "last_success_at": "2026-10-29T10:52:59+00:00"
   },
   {
    "id": "lichyot_chassidus",
@@ -374,7 +374,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-29T06:19:34+00:00",
+   "checked_at": "2026-10-29T10:53:01+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -460,7 +460,7 @@
     }
    ],
    "total": 1000,
-   "last_success_at": "2026-10-29T06:19:34+00:00"
+   "last_success_at": "2026-10-29T10:53:01+00:00"
   },
   {
    "id": "chabadzoom",
@@ -474,7 +474,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-29T06:19:36+00:00",
+   "checked_at": "2026-10-29T10:53:04+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -571,7 +571,7 @@
     }
    ],
    "total": 561,
-   "last_success_at": "2026-10-29T06:19:36+00:00"
+   "last_success_at": "2026-10-29T10:53:04+00:00"
   },
   {
    "id": "kovtzimdrive",
@@ -585,7 +585,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-29T06:19:37+00:00",
+   "checked_at": "2026-10-29T10:53:09+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -593,12 +593,12 @@
      "id": "https://www.kovtzimdrive.com/posts/bochurim-build-database-of-thousands-of-%E2%80%98he%E2%80%99aros%E2%80%99",
      "title": "bochurim build database of thousands of ‘he’aros’",
      "url": "https://www.kovtzimdrive.com/posts/bochurim-build-database-of-thousands-of-%E2%80%98he%E2%80%99aros%E2%80%99",
-     "date": "2026-10-27",
+     "date": "2026-10-28",
      "first_seen": "2026-10-20T07:59:38+00:00"
     }
    ],
    "total": 1,
-   "last_success_at": "2026-10-29T06:19:37+00:00"
+   "last_success_at": "2026-10-29T10:53:09+00:00"
   },
   {
    "id": "avita",
@@ -612,7 +612,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-29T06:19:39+00:00",
+   "checked_at": "2026-10-29T10:53:11+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -630,7 +630,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-29T06:19:39+00:00",
+   "checked_at": "2026-10-29T10:53:11+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -652,7 +652,7 @@
     }
    ],
    "total": 2,
-   "last_success_at": "2026-10-29T06:19:39+00:00"
+   "last_success_at": "2026-10-29T10:53:11+00:00"
   },
   {
    "id": "dvarmalchus770",
@@ -666,7 +666,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-29T06:19:41+00:00",
+   "checked_at": "2026-10-29T10:53:12+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -744,7 +744,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-10-29T06:19:41+00:00"
+   "last_success_at": "2026-10-29T10:53:12+00:00"
   },
   {
    "id": "soulwords",
@@ -758,7 +758,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-29T06:19:42+00:00",
+   "checked_at": "2026-10-29T10:53:14+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -812,7 +812,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-10-29T06:19:42+00:00"
+   "last_success_at": "2026-10-29T10:53:14+00:00"
   },
   {
    "id": "sie_weekly",
@@ -826,7 +826,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-29T06:19:44+00:00",
+   "checked_at": "2026-10-29T10:53:15+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -874,7 +874,7 @@
     }
    ],
    "total": 115,
-   "last_success_at": "2026-10-29T06:19:44+00:00"
+   "last_success_at": "2026-10-29T10:53:15+00:00"
   },
   {
    "id": "pls",
@@ -888,7 +888,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-29T06:19:45+00:00",
+   "checked_at": "2026-10-29T10:53:17+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -966,7 +966,7 @@
     }
    ],
    "total": 200,
-   "last_success_at": "2026-10-29T06:19:45+00:00"
+   "last_success_at": "2026-10-29T10:53:17+00:00"
   },
   {
    "id": "chayenu_ls",
@@ -980,7 +980,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-29T06:19:46+00:00",
+   "checked_at": "2026-10-29T10:53:18+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1007,7 +1007,7 @@
     }
    ],
    "total": 2,
-   "last_success_at": "2026-10-29T06:19:46+00:00"
+   "last_success_at": "2026-10-29T10:53:18+00:00"
   },
   {
    "id": "weekly_sicha",
@@ -1021,7 +1021,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-29T06:19:48+00:00",
+   "checked_at": "2026-10-29T10:53:19+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1069,7 +1069,7 @@
     }
    ],
    "total": 117,
-   "last_success_at": "2026-10-29T06:19:48+00:00"
+   "last_success_at": "2026-10-29T10:53:19+00:00"
   },
   {
    "id": "theyeshiva",
@@ -1083,7 +1083,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-29T06:19:49+00:00",
+   "checked_at": "2026-10-29T10:53:21+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1169,7 +1169,7 @@
     }
    ],
    "total": 1541,
-   "last_success_at": "2026-10-29T06:19:49+00:00"
+   "last_success_at": "2026-10-29T10:53:21+00:00"
   },
   {
    "id": "chassidus_applied",
@@ -1183,16 +1183,33 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-29T06:19:52+00:00",
-   "status": "error",
-   "new": [],
+   "checked_at": "2026-10-29T10:53:24+00:00",
+   "status": "ok",
+   "new": [
+    {
+     "id": "yt:video:MLlR3UUUWzo",
+     "title": "Samach Vav Part 232: Eating and working for the sake of heaven refines the animal soul",
+     "url": "https://www.youtube.com/watch?v=MLlR3UUUWzo",
+     "date": "2026-10-29T02:50:06+00:00",
+     "blurb": "Samach Vav p. 189-190: This explains why \"when the Temple is not standing, a person’s table affects atonement\": The table, like the altar, offers and refines the animal soul, which draws down from the world of tohu, thereby bringing atonement. Thus a meal is like prayer in the fact that it refines the animal soul, as well as the physical elements of mineral, vegetable and animal which are consumed in a meal. This refinement of the animal soul is also achieved through our work: You refine your corner of the physical world and the animal soul when you run your business faithfully and ethically, without any deceit, as well as not allowing yourself to be overconsumed with your job, which then disturbs your ability to study Torah and pray. Especially when you do your work for the sake of heaven, intending to do a mitzvah -- give charity and study Torah in peace. Because, left on its own, the animal soul is driven by self-interest and will not hesitate to lie or steal for personal gain. As such, when a person refrains from acting unfaithfully, he is refining his animal soul. Elsewhere it is explained that prayer refines the cognitive soul -- the intelligence of the animal soul. But the refinement of the animal soul itself -- its emotions -- is through eating a meal. Yet, also prayer refines the emotions, and the difference is that in prayer the refinement is in a potential state, while at a meal the refinement is actualized.",
+     "first_seen": "2026-10-29T10:53:24+00:00"
+    }
+   ],
    "latest": [
+    {
+     "id": "yt:video:MLlR3UUUWzo",
+     "title": "Samach Vav Part 232: Eating and working for the sake of heaven refines the animal soul",
+     "url": "https://www.youtube.com/watch?v=MLlR3UUUWzo",
+     "date": "2026-10-29T02:50:06+00:00",
+     "blurb": "Samach Vav p. 189-190: This explains why \"when the Temple is not standing, a person’s table affects atonement\": The table, like the altar, offers and refines the animal soul, which draws down from the world of tohu, thereby bringing atonement. Thus a meal is like prayer in the fact that it refines the animal soul, as well as the physical elements of mineral, vegetable and animal which are consumed in a meal. This refinement of the animal soul is also achieved through our work: You refine your corner of the physical world and the animal soul when you run your business faithfully and ethically, without any deceit, as well as not allowing yourself to be overconsumed with your job, which then disturbs your ability to study Torah and pray. Especially when you do your work for the sake of heaven, intending to do a mitzvah -- give charity and study Torah in peace. Because, left on its own, the animal soul is driven by self-interest and will not hesitate to lie or steal for personal gain. As such, when a person refrains from acting unfaithfully, he is refining his animal soul. Elsewhere it is explained that prayer refines the cognitive soul -- the intelligence of the animal soul. But the refinement of the animal soul itself -- its emotions -- is through eating a meal. Yet, also prayer refines the emotions, and the difference is that in prayer the refinement is in a potential state, while at a meal the refinement is actualized.",
+     "first_seen": "2026-10-29T10:53:24+00:00"
+    },
     {
      "id": "yt:video:3jzzlpSodpQ",
      "title": "Samach Vav Part 231: From the angel's bittul ha'yesh to the souls bittul b'metziyus in Shema",
      "url": "https://www.youtube.com/watch?v=3jzzlpSodpQ",
      "date": "2026-10-28T02:50:12+00:00",
-     "blurb": "Samach Vav p. 188-189: The service of contemplating the angels' bittul leads to (Following) the angels' bittul of ba'n leads to (we arrive at) the soul's higher bittul of ma'h in Keriyas Shema Through (From) the service of contemplating the angels' bittul, we arrive and reach an even higher bittul in Keriyas Shema, to be encompassed (absorbed) in the level of ma'h (adam she'al ha'kisei), pnimiyus - bittul b'metziyus resulting from contemplating atzmus ohr ain sof beyond existence, and Hashem Echad in Shema, which is the soul's fire of Shalheves Yud He-i. This is the true level of fire from above -- the soul's fire of Havaya, higher than the angels' fire of Elokim. And this higher fire of Havaya entirely consumes the animal soul in a state of bittul b'metziyus, following the previous birur of ba'n. The birur of the animal soul continues after prayer, especially during the meals we eat, which is a battle (nahama a'pum charba laychol, bread is eaten at the edge of the sword) -- the struggle to suppress the animal soul's desire to indulge in food, and instead eat only that which is necessary for sustenance, and even that only because it is necessary, l'shem shomayim. This entails two levels of bittul, two forms of consumption: 1. The birur of ba'n -- the consumption of the altar, 2. The birur of ma'h -- the consumption of the priests to achieve atonement for the owners who brought the offering.",
+     "blurb": "Samach Vav p. 188-189: Contemplating the angels' bittul of ba'n leads to an even higher bittul of the soul in Keriyas Shema — to be absorbed in the level of ma'h (adam she'al ha'kisei), pnimiyus - bittul b'metziyus resulting from contemplating atzmus ohr ain sof beyond existence, and Hashem Echad in Shema. This is the true level of fire from above -- the soul's fire of Shalheves Yud He-i, Havaya, higher than the angels' fire of Elokim. And this higher fire of Havaya entirely consumes the animal soul in a state of bittul b'metziyus, following the previous birur of ba'n. The birur of the animal soul continues after prayer, especially during the meals we eat, which is a battle (nahama a'pum charba laychol, bread is eaten at the edge of the sword) -- the struggle and effort to suppress the animal soul's desire to indulge in food, and instead eat only that which is necessary for sustenance, and only because it is necessary, l'shem shomayim. This entails two levels of bittul, two forms of consumption: 1. The birur of ba'n -- the consumption of the altar, 2. The birur of ma'h -- the consumption of the priests to achieve atonement for the owners who brought the offering.",
      "first_seen": "2026-10-28T07:02:09+00:00"
     },
     {
@@ -1301,9 +1318,7 @@
     }
    ],
    "total": 15,
-   "error": "HTTPError: 404 Client Error: Not Found for url: https://www.youtube.com/feeds/videos.xml?channel_id=UCX5tj50hTwF_80XQ9JBMDYQ",
-   "last_success_at": "2026-10-28T10:34:22+00:00",
-   "retained": true
+   "last_success_at": "2026-10-29T10:53:24+00:00"
   },
   {
    "id": "neirot",
@@ -1317,7 +1332,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-29T06:19:52+00:00",
+   "checked_at": "2026-10-29T10:53:24+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1371,7 +1386,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-10-29T06:19:52+00:00"
+   "last_success_at": "2026-10-29T10:53:24+00:00"
   },
   {
    "id": "chassidus_explained",
@@ -1385,7 +1400,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-29T06:19:54+00:00",
+   "checked_at": "2026-10-29T10:53:29+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1447,7 +1462,7 @@
     }
    ],
    "total": 136,
-   "last_success_at": "2026-10-29T06:19:54+00:00"
+   "last_success_at": "2026-10-29T10:53:29+00:00"
   },
   {
    "id": "melukat",
@@ -1461,7 +1476,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-29T06:19:55+00:00",
+   "checked_at": "2026-10-29T10:53:31+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1523,7 +1538,7 @@
     }
    ],
    "total": 168,
-   "last_success_at": "2026-10-29T06:19:55+00:00"
+   "last_success_at": "2026-10-29T10:53:31+00:00"
   },
   {
    "id": "daily_maamar",
@@ -1537,7 +1552,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-29T06:19:56+00:00",
+   "checked_at": "2026-10-29T10:53:32+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1663,7 +1678,7 @@
     }
    ],
    "total": 350,
-   "last_success_at": "2026-10-29T06:19:56+00:00"
+   "last_success_at": "2026-10-29T10:53:32+00:00"
   },
   {
    "id": "wellsprings",
@@ -1677,7 +1692,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-29T06:19:58+00:00",
+   "checked_at": "2026-10-29T10:53:33+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1723,7 +1738,7 @@
     }
    ],
    "total": 125,
-   "last_success_at": "2026-10-29T06:19:58+00:00"
+   "last_success_at": "2026-10-29T10:53:33+00:00"
   },
   {
    "id": "daily_sicha",
@@ -1737,7 +1752,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-29T06:19:59+00:00",
+   "checked_at": "2026-10-29T10:53:34+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1863,7 +1878,7 @@
     }
    ],
    "total": 1414,
-   "last_success_at": "2026-10-29T06:19:59+00:00"
+   "last_success_at": "2026-10-29T10:53:34+00:00"
   },
   {
    "id": "learnchassidus",
@@ -1877,7 +1892,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-29T06:20:03+00:00",
+   "checked_at": "2026-10-29T10:53:41+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1890,7 +1905,7 @@
     }
    ],
    "total": 5,
-   "last_success_at": "2026-10-29T06:20:03+00:00"
+   "last_success_at": "2026-10-29T10:53:41+00:00"
   },
   {
    "id": "simplychassidus",
@@ -1904,7 +1919,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-29T06:20:03+00:00",
+   "checked_at": "2026-10-29T10:53:42+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1931,7 +1946,7 @@
     }
    ],
    "total": 4,
-   "last_success_at": "2026-10-29T06:20:03+00:00"
+   "last_success_at": "2026-10-29T10:53:42+00:00"
   },
   {
    "id": "alonei_chabad",
@@ -1944,7 +1959,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-29T06:20:04+00:00",
+   "checked_at": "2026-10-29T10:53:43+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -1961,7 +1976,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-29T06:20:04+00:00",
+   "checked_at": "2026-10-29T10:53:43+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -1978,7 +1993,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-29T06:20:04+00:00",
+   "checked_at": "2026-10-29T10:53:43+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2005,7 +2020,7 @@
     }
    ],
    "total": 303,
-   "last_success_at": "2026-10-29T06:20:04+00:00"
+   "last_success_at": "2026-10-29T10:53:43+00:00"
   },
   {
    "id": "lchaim",
@@ -2018,7 +2033,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-29T06:20:06+00:00",
+   "checked_at": "2026-10-29T10:53:44+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2073,7 +2088,7 @@
     }
    ],
    "total": 193,
-   "last_success_at": "2026-10-29T06:20:06+00:00"
+   "last_success_at": "2026-10-29T10:53:44+00:00"
   },
   {
    "id": "one_point",
@@ -2086,7 +2101,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-29T06:20:07+00:00",
+   "checked_at": "2026-10-29T10:53:45+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2127,7 +2142,7 @@
     }
    ],
    "total": 184,
-   "last_success_at": "2026-10-29T06:20:07+00:00"
+   "last_success_at": "2026-10-29T10:53:45+00:00"
   },
   {
    "id": "derher",
@@ -2140,7 +2155,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-29T06:20:08+00:00",
+   "checked_at": "2026-10-29T10:53:47+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -2157,7 +2172,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-29T06:20:08+00:00",
+   "checked_at": "2026-10-29T10:53:47+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -2174,7 +2189,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-29T06:20:08+00:00",
+   "checked_at": "2026-10-29T10:53:47+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2201,7 +2216,7 @@
     }
    ],
    "total": 5,
-   "last_success_at": "2026-10-29T06:20:08+00:00"
+   "last_success_at": "2026-10-29T10:53:47+00:00"
   },
   {
    "id": "maynotecha_inst",
@@ -2214,7 +2229,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-29T06:20:11+00:00",
+   "checked_at": "2026-10-29T10:53:49+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -2231,7 +2246,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-29T06:20:11+00:00",
+   "checked_at": "2026-10-29T10:53:49+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2253,7 +2268,7 @@
     }
    ],
    "total": 1,
-   "last_success_at": "2026-10-29T06:20:11+00:00"
+   "last_success_at": "2026-10-29T10:53:49+00:00"
   },
   {
    "id": "anash",
@@ -2266,7 +2281,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-29T06:20:12+00:00",
+   "checked_at": "2026-10-29T10:53:50+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2416,7 +2431,7 @@
     }
    ],
    "total": 3,
-   "last_success_at": "2026-10-29T06:20:12+00:00"
+   "last_success_at": "2026-10-29T10:53:50+00:00"
   },
   {
    "id": "chabadinfo",
@@ -2429,7 +2444,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-29T06:20:13+00:00",
+   "checked_at": "2026-10-29T10:53:52+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -2446,7 +2461,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-29T06:20:13+00:00",
+   "checked_at": "2026-10-29T10:53:52+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -2463,7 +2478,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-29T06:20:13+00:00",
+   "checked_at": "2026-10-29T10:53:52+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2509,7 +2524,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-10-29T06:20:13+00:00"
+   "last_success_at": "2026-10-29T10:53:52+00:00"
   },
   {
    "id": "kehot",
@@ -2522,7 +2537,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-29T06:20:16+00:00",
+   "checked_at": "2026-10-29T10:53:55+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2992,7 +3007,7 @@
     }
    ],
    "total": 199,
-   "last_success_at": "2026-10-29T06:20:16+00:00"
+   "last_success_at": "2026-10-29T10:53:55+00:00"
   }
  ],
  "browser_checks": {
