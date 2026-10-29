@@ -1,0 +1,90 @@
+name: Diagnose bounded cover source ranges
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - '.github/workflows/diagnose-cover-ranges.yml'
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/diagnose-cover-ranges.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  diagnose:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Inspect exact catalogue sources with bounded ranges
+        run: |
+          node --input-type=module <<'NODE'
+          const sources = [
+            ['c-60eb0261c38df5feef92a47f', 'https://media.col.org.il/files/uploads/original/2019/03/5c9fbe5f1e0fe_1553972831.pdf'],
+            ['c-104d7b0400aab7a138e688b1', 'https://media.col.org.il/files/uploads/original/2019/03/5ca129050a7f8_1554065669.PDF'],
+            ['c-eff7ec522764cde95922c888', 'https://media.col.org.il/files/uploads/original/2019/03/5ca12920d9b01_1554065696.PDF'],
+          ];
+          const safeHeaders = response => ({
+            status: response.status,
+            contentType: response.headers.get('content-type'),
+            contentLength: response.headers.get('content-length'),
+            contentRange: response.headers.get('content-range'),
+            acceptRanges: response.headers.get('accept-ranges'),
+          });
+          async function bounded(id, url, begin, end) {
+            const controller = new AbortController();
+            const timer = setTimeout(() => controller.abort(Error('range timeout')), 30000);
+            try {
+              const response = await fetch(url, {
+                redirect: 'error',
+                signal: controller.signal,
+                headers: {Accept: 'application/pdf', Range: `bytes=${begin}-${end - 1}`},
+              });
+              const limit = end - begin;
+              const declared = Number(response.headers.get('content-length'));
+              if (Number.isFinite(declared) && declared > limit) {
+                await response.body?.cancel();
+                return {...safeHeaders(response), bytes: 0, body: 'rejected-oversize'};
+              }
+              const reader = response.body.getReader();
+              const chunks = [];
+              let size = 0;
+              for (;;) {
+                const {done, value} = await reader.read();
+                if (done) break;
+                size += value.length;
+                if (size > limit) {
+                  await reader.cancel();
+                  return {...safeHeaders(response), bytes: size, body: 'rejected-oversize'};
+                }
+                chunks.push(value);
+              }
+              const body = Buffer.concat(chunks);
+              return {
+                ...safeHeaders(response),
+                bytes: body.length,
+                signature: begin === 0 ? body.subarray(0, 5).toString('ascii') : undefined,
+              };
+            } finally {
+              clearTimeout(timer);
+            }
+          }
+          for (const [id, url] of sources) {
+            const initial = await bounded(id, url, 0, 65536);
+            console.log(JSON.stringify({id, range: '0-65535', ...initial}));
+            const match = /^bytes 0-([0-9]+)\/([0-9]+)$/.exec(initial.contentRange || '');
+            if (match) {
+              const total = Number(match[2]);
+              const begin = Math.max(0, total - 65536);
+              const tail = await bounded(id, url, begin, total);
+              console.log(JSON.stringify({id, range: `${begin}-${total - 1}`, total, ...tail}));
+            }
+          }
+          NODE
