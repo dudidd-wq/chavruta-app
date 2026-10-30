@@ -1,1 +1,79 @@
-[]
+[
+ {
+  "key": "f5ccea12a305a514",
+  "source": "הוצאת קה״ת (חנות)",
+  "source_id": "kehot",
+  "title": "Tehillim Hebrew/Spanish Standard Size 6 x 9 (Salmos)",
+  "url": "https://store.kehotonline.com/products.asp?dept=344",
+  "lang": "he",
+  "blurb": "",
+  "medium": "text",
+  "first_seen": "2026-10-30T07:06:11+00:00"
+ },
+ {
+  "key": "a4005b299f18924e",
+  "source": "הוצאת קה״ת (חנות)",
+  "source_id": "kehot",
+  "title": "Siddur Hebrew/Spanish Standard Size, Translated & Transliterated",
+  "url": "https://store.kehotonline.com/products.asp?dept=344",
+  "lang": "he",
+  "blurb": "",
+  "medium": "text",
+  "first_seen": "2026-10-30T07:06:11+00:00"
+ },
+ {
+  "key": "569f58c2335f3b0c",
+  "source": "הוצאת קה״ת (חנות)",
+  "source_id": "kehot",
+  "title": "Shaar Habitachon - SPANISH (Portal de la Confianza)",
+  "url": "https://store.kehotonline.com/products.asp?dept=344",
+  "lang": "he",
+  "blurb": "",
+  "medium": "text",
+  "first_seen": "2026-10-30T07:06:11+00:00"
+ },
+ {
+  "key": "22c694768abe5b2f",
+  "source": "הוצאת קה״ת (חנות)",
+  "source_id": "kehot",
+  "title": "Siddur Hebrew/Spanish Compact Size, Translated & Transliterated",
+  "url": "https://store.kehotonline.com/products.asp?dept=344",
+  "lang": "he",
+  "blurb": "",
+  "medium": "text",
+  "first_seen": "2026-10-30T07:06:11+00:00"
+ },
+ {
+  "key": "869ae5b6461b6120",
+  "source": "Anash.org",
+  "source_id": "anash",
+  "title": "When Personal Agendas Are Dressed Up as Chassidus",
+  "url": "https://anash.org/when-personal-agendas-are-dressed-up-as-chassidus/",
+  "lang": "en",
+  "blurb": "\"In recent online articles, people are making passionate arguments, speeches, and attempts at persuasion, all presented in the name of Torah and Chassidus. Everyone seems to be claiming to represent the true kavonah ha'elyonah .\"",
+  "medium": "news",
+  "first_seen": "2026-10-30T07:06:07+00:00"
+ },
+ {
+  "key": "258a05c48df3a4b4",
+  "source": "Anash.org",
+  "source_id": "anash",
+  "title": "My Daughter Ran Up to the Rebbe and Gave ‘Sholom Aleichem’",
+  "url": "https://anash.org/my-daughter-ran-up-to-the-rebbe-and-gave-sholom-aleichem/",
+  "lang": "en",
+  "blurb": "Rabbi Pinchus Feldman was aghast when his little daughter ran up to the Rebbe during yechidus and gave him a Sholom Aleichem. But what really surprised them was what happened when they returned for yechidus two years later.",
+  "medium": "news",
+  "first_seen": "2026-10-30T07:06:07+00:00"
+ },
+ {
+  "key": "bc7f84810374f210",
+  "source": "Dvar Malchus 770",
+  "source_id": "dvarmalchus770",
+  "title": "14) Kuntres Chof Marcheshvan, 5752: The Ohr Chodosh",
+  "url": "https://dvarmalchus770.org/2026/10/29/14-kuntres-chof-marcheshvan-5752-the-ohr-chodosh-3/",
+  "lang": "en",
+  "blurb": "This maamor was edited and printed in honor of the birthday of the Rebbe Rashab, and it was handed out personally by the Rebbe in 770.*. It discusses deep inyonim of Chassidus, and demands attentive learning. But here, we will focus only on one point from the maamor, which is overtly relevant to the concepts […]",
+  "medium": "text",
+  "first_seen": "2026-10-30T07:05:26+00:00"
+ }
+]
