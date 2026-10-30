@@ -1446,5 +1446,47 @@
     "why": "הנחה בלתי מוגה של מאמר הרבי, בהוצאה לשבת חיי שרה תשפ״ז. שער הקובץ, פתח דבר ותוכן המאמר נפתחו.",
     "checked_at": "2026-10-30T07:03:39+00:00",
     "source_url": "https://www.lahak.org/templates/lahak/article_cdo/aid/7562619/jewish/page.htm"
+  },
+  "f5ccea12a305a514": {
+    "cls": "לא רלוונטי",
+    "why": "ספר תהילים בעברית־ספרדית; אינו מאמר, שיחה או מכתב של אדמו״ר או ביאור להם.",
+    "checked_at": "2026-10-30T07:08:12+00:00",
+    "source_url": "https://store.kehotonline.com/products.asp?dept=344"
+  },
+  "a4005b299f18924e": {
+    "cls": "לא רלוונטי",
+    "why": "סידור תפילה בעברית־ספרדית; מחוץ לסוגי הפרסומים המותרים.",
+    "checked_at": "2026-10-30T07:08:12+00:00",
+    "source_url": "https://store.kehotonline.com/products.asp?dept=344"
+  },
+  "569f58c2335f3b0c": {
+    "cls": "לא רלוונטי",
+    "why": "שער הביטחון מחובות הלבבות עם תרגום וביאורים כלליים; אין בתיאור ביאור למאמר, שיחה או מכתב מסוימים.",
+    "checked_at": "2026-10-30T07:08:12+00:00",
+    "source_url": "https://store.kehotonline.com/products.asp?dept=344"
+  },
+  "22c694768abe5b2f": {
+    "cls": "לא רלוונטי",
+    "why": "סידור תפילה בעברית־ספרדית; מחוץ לסוגי הפרסומים המותרים.",
+    "checked_at": "2026-10-30T07:08:12+00:00",
+    "source_url": "https://store.kehotonline.com/products.asp?dept=344"
+  },
+  "869ae5b6461b6120": {
+    "cls": "לא רלוונטי",
+    "why": "מאמר דעה על אינטרסים ושיח מוסרי. המקור נפתח ואין בו זיהוי של שיחה או מאמר מסוימים שהוא מבאר.",
+    "checked_at": "2026-10-30T07:08:12+00:00",
+    "source_url": "https://anash.org/when-personal-agendas-are-dressed-up-as-chassidus/"
+  },
+  "258a05c48df3a4b4": {
+    "cls": "לא רלוונטי",
+    "why": "כתבת זיכרונות מיחידות ומפגשי משפחת פלדמן עם הרבי. המקור נפתח; זיכרונות מוחרגים.",
+    "checked_at": "2026-10-30T07:08:12+00:00",
+    "source_url": "https://anash.org/my-daughter-ran-up-to-the-rebbe-and-gave-sholom-aleichem/"
+  },
+  "bc7f84810374f210": {
+    "cls": "ביאור",
+    "why": "מאמר כתוב באנגלית המבאר נקודה ממאמר קונטרס כ׳ מרחשוון תשנ״ב. המקור נפתח; שנת המאמר נפרדת מתאריך הפוסט 29.10.2026.",
+    "checked_at": "2026-10-30T07:08:12+00:00",
+    "source_url": "https://dvarmalchus770.org/2026/10/29/14-kuntres-chof-marcheshvan-5752-the-ohr-chodosh-3/"
   }
 }
