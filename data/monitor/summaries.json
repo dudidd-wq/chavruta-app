@@ -281,99 +281,134 @@
   "f92b5d520d52949c": {
     "he": "גיליון שיחת השבוע 2078 לפרשת וירא, תשפ״ז. במדור שלחן שבת: ירושתו הרוחנית של אברהם, על פי שיחת הרבי; ובגיליון גם נושאים של הכנסת אורחים, אהבת ישראל וחלב שאינו חלבי.",
     "basis": "כותרות הגיליון",
-    "checked": false,
+    "checked": true,
     "drafted_at": "2026-10-29T06:05:30+00:00",
-    "source_url": "https://www.chabad.org.il/Magazines/Articles.asp?CategoryID=5173"
+    "source_url": "https://www.chabad.org.il/Magazines/Articles.asp?CategoryID=5173",
+    "checked_at": "2026-10-30T07:03:39+00:00",
+    "verification": "ב־30.10.2026: עמוד גיליון 2078 ופתיחת הירושה של אברהם נפתחו; אומתו הירושה הרוחנית, הכנסת אורחים, אהבת ישראל וכותרת ההלכה."
   },
   "ad5cc84401cf0a2b": {
     "he": "חוברת דברי משיח ובה הנחה בלתי מוגהת מהתוועדות שבת וירא, כ׳ מרחשון תשמ״ג (PDF). בפתח הדבר נמסר שנוספה רשימה מיחידות לגבירים בז׳ תשרי תנש״א, המתפרסמת לראשונה.",
     "basis": "פתיחת הקובץ",
-    "checked": false,
+    "checked": true,
     "drafted_at": "2026-10-29T06:05:30+00:00",
-    "source_url": "https://hageula.com/news/press/28220.htm"
+    "source_url": "https://hageula.com/news/press/28220.htm",
+    "checked_at": "2026-10-30T07:03:39+00:00",
+    "verification": "ב־30.10.2026: PDF דברי משיח בן 52 עמודים נפתח מחדש; השער ופתח הדבר מאמתים וירא תשמ״ג ותוספת היחידות בז׳ תשרי תנש״א."
   },
   "2a6d359d3ee8f4cc": {
     "he": "הספר ניצוץ מלכות מביא רעיונות קצרים מתוך סדרת שיחות דבר מלכות, בזיקה לפרשות השבוע. לפי תיאור המפרסם, לכל רעיון מצורפת הוראה מעשית מתוך השיחה, לצד יצירות אמנות יהודית.",
     "basis": "תיאור",
-    "checked": false,
+    "checked": true,
     "drafted_at": "2026-10-29T06:05:30+00:00",
-    "source_url": "https://hageula.com/news/press/28232.htm"
+    "source_url": "https://hageula.com/news/press/28232.htm",
+    "checked_at": "2026-10-30T07:03:39+00:00",
+    "verification": "ב־30.10.2026: עמוד ניצוץ מלכות נפתח מחדש; תיאור הספר מאמת שיחות דבר מלכות, פרשות השבוע, הוראה מעשית ויצירות אמנות."
   },
   "f086bd4f2851adc6": {
     "he": "שני כרכים של מאמרי אדמו״ר הריי״צ, במהדורה המסומנת כפורטוגזית. לפי תיאור המוצר, נאספו בהם מאמרים מהקריאה והקדושה, בצירוף הערות הסבר, מילון מונחים ומפתחות.",
     "basis": "תיאור",
     "checked": false,
     "drafted_at": "2026-10-29T06:12:40+00:00",
-    "source_url": "https://store.kehotonline.com/prodinfo.asp?number=P-CHASD.S"
+    "source_url": "https://store.kehotonline.com/prodinfo.asp?number=P-CHASD.S",
+    "reviewed_at": "2026-10-30T07:03:39+00:00",
+    "review_note": "אי־ההתאמה נשארה: כותרת ושדה שפה מציינים פורטוגזית, אך התיאור טוען לתרגום אנגלי. אין אישור."
   },
   "e70522b396ac45f8": {
     "he": "הספר Professor Green, Shalom Uvrachah כולל, לפי תיאור קה״ת, 22 מכתבים מהרבי אל פרופסור Velvel Green, חוקר בתחום האפידמיולוגיה. הספר בעברית ומוצג בהיקף של 256 עמודים.",
     "basis": "תיאור",
-    "checked": false,
+    "checked": true,
     "drafted_at": "2026-10-29T06:12:40+00:00",
-    "source_url": "https://store.kehotonline.com/prodinfo.asp?number=HO-PROF"
+    "source_url": "https://store.kehotonline.com/prodinfo.asp?number=HO-PROF",
+    "checked_at": "2026-10-30T07:03:39+00:00",
+    "verification": "ב־30.10.2026: עמוד המוצר נפתח; אומתו 22 מכתבים אל פרופסור גרין, מקצועו, עברית ו־256 עמודים."
   },
   "c912363afe81c6fd": {
     "he": "כרך בראשית של תורה אור עם ביאור Steinsaltz, בהוצאת מעיינותיך. עמוד המוצר מציג מהדורה עברית בת 336 עמודים; השער מזהה את ספר מאמרי אדמו״ר הזקן ואת הביאור המצורף.",
     "basis": "כותרת ותיאור הסדרה",
-    "checked": false,
+    "checked": true,
     "drafted_at": "2026-10-29T06:12:40+00:00",
-    "source_url": "https://store.kehotonline.com/prodinfo.asp?number=HAR-TORAOB"
+    "source_url": "https://store.kehotonline.com/prodinfo.asp?number=HAR-TORAOB",
+    "checked_at": "2026-10-30T07:03:39+00:00",
+    "verification": "ב־30.10.2026: עמוד המוצר ושער הספר נבדקו חזותית; אומתו תורה אור בראשית, ביאור Steinsaltz, מעיינותיך ו־336 עמודים."
   },
   "9fe397f90f91343e": {
     "he": "קונטרס העבודה של אדמו״ר הרש״ב, במהדורה בפורטוגזית. לפי תיאור המפרסם, החיבור עוסק בעבודת התפילה, בהתמודדות עם מחשבות זרות ובפיתוח אהבה ויראה; מצורפות הקדמות והערות.",
     "basis": "תיאור",
-    "checked": false,
+    "checked": true,
     "drafted_at": "2026-10-29T06:12:40+00:00",
-    "source_url": "https://store.kehotonline.com/prodinfo.asp?number=P-AVOD"
+    "source_url": "https://store.kehotonline.com/prodinfo.asp?number=P-AVOD",
+    "checked_at": "2026-10-30T07:03:39+00:00",
+    "verification": "ב־30.10.2026: תיאור המוצר נפתח; אומתו הרש״ב, פורטוגזית, עבודת התפילה, מחשבות זרות, אהבה ויראה והקדמות."
   },
   "3500d121c59f4a68": {
     "he": "קונטרס התפילה מאת אדמו״ר הרש״ב, בעברית. לפי תיאור קה״ת, החיבור עוסק בעבודת התפילה, ומוצע כעת בעימוד מחודש עם הערות שוליים נרחבות; היקפו 58 עמודים.",
     "basis": "תיאור",
     "checked": false,
     "drafted_at": "2026-10-29T06:12:40+00:00",
-    "source_url": "https://store.kehotonline.com/prodinfo.asp?number=HKU-HATE"
+    "source_url": "https://store.kehotonline.com/prodinfo.asp?number=HKU-HATE",
+    "reviewed_at": "2026-10-30T07:03:39+00:00",
+    "review_note": "הטקסט על עימוד מחודש מופיע לפני רשימת סט בן 34 כרכים. לא ודאי שהוא מתייחס לקונטרס זה; הטיוטה לא אושרה."
   },
   "2977cf1b425f599b": {
     "he": "תורה אור המבואר, בראשית 2, בהוצאת קה״ת ומעיינותיך. לפי תיאור המפרסם, הכרך מביא מאמרים נבחרים של אדמו״ר הזקן, עם הקדמה קצרה לכל מאמר וביאור רצוף לפי סדר לשונו.",
     "basis": "תיאור",
-    "checked": false,
+    "checked": true,
     "drafted_at": "2026-10-29T06:12:40+00:00",
-    "source_url": "https://store.kehotonline.com/prodinfo.asp?number=HAR-TORAOMBR2"
+    "source_url": "https://store.kehotonline.com/prodinfo.asp?number=HAR-TORAOMBR2",
+    "checked_at": "2026-10-30T07:03:39+00:00",
+    "verification": "ב־30.10.2026: תיאור המוצר נפתח; אומתו תורה אור לאדמו״ר הזקן, בראשית 2, הקדמה לכל מאמר וביאור לפי הלשון."
   },
   "1fb62dc33f3d4124": {
     "he": "כרך בראשית של Selections from Likkutei Sichos בפורטוגזית. לפי תיאור המוצר, זהו מבחר מתוך לקוטי שיחות של הרבי, במהדורה של Sichos In English ובגרסה הפורטוגזית של Maayanot.",
     "basis": "תיאור",
-    "checked": false,
+    "checked": true,
     "drafted_at": "2026-10-29T06:12:40+00:00",
-    "source_url": "https://store.kehotonline.com/prodinfo.asp?number=P-SELELS1"
+    "source_url": "https://store.kehotonline.com/prodinfo.asp?number=P-SELELS1",
+    "checked_at": "2026-10-30T07:03:39+00:00",
+    "verification": "ב־30.10.2026: תיאור המוצר נפתח; אומתו מבחר לקוטי שיחות, בראשית, פורטוגזית, SIE ו־Maayanot."
   },
   "16104ae956ae28d8": {
     "he": "Letters for Life בפורטוגזית, מאת Levi Y. Shmotkin. לפי תיאור המפרסם, הספר בוחן שנים־עשר נושאים של התמודדות רגשית מתוך התכתבות הרבי, באמצעות קטעי מכתבים, סיפורים והנחיות מעשיות.",
     "basis": "תיאור",
-    "checked": false,
+    "checked": true,
     "drafted_at": "2026-10-29T06:12:40+00:00",
-    "source_url": "https://store.kehotonline.com/prodinfo.asp?number=P-LETTFL"
+    "source_url": "https://store.kehotonline.com/prodinfo.asp?number=P-LETTFL",
+    "checked_at": "2026-10-30T07:03:39+00:00",
+    "verification": "ב־30.10.2026: תיאור המוצר נפתח; אומתו המחבר, פורטוגזית, שנים־עשר נושאים וקטעי מכתבים, סיפורים והדרכה מעשית."
   },
   "0bd00ca7ef1f8797": {
     "he": "קונטרס התפילה מאת אדמו״ר הרש״ב, במהדורה עברית־אנגלית. לפי תיאור המפרסם, החיבור עוסק בהכנה לתפילה ובתפקידה של ההתבוננות לפניה ובמהלכה. התרגום מאת הרב Y. Eliezer Danzinger.",
     "basis": "תיאור",
-    "checked": false,
+    "checked": true,
     "drafted_at": "2026-10-29T06:12:40+00:00",
-    "source_url": "https://store.kehotonline.com/prodinfo.asp?number=ERR-TRAC"
+    "source_url": "https://store.kehotonline.com/prodinfo.asp?number=ERR-TRAC",
+    "checked_at": "2026-10-30T07:03:39+00:00",
+    "verification": "ב־30.10.2026: תיאור המוצר נפתח; אומתו הרש״ב, עברית־אנגלית, המתרגם ותפקיד ההתבוננות לפני התפילה ובמהלכה."
   },
   "38a068bb3fa6157f": {
     "he": "גיליון התקשרות 1673 לשבת וירא, תשפ״ז (PDF). לפי השער ותוכן העניינים: שיעור בלקוטי שיחות על סדום ועמורה, התוועדות על ליוויו של אברהם אבינו בעבודת היהודי, ומדור אור וחיות העוסק בחסד ובעוני ועושר.",
     "basis": "כותרות הגיליון",
-    "checked": false,
+    "checked": true,
     "drafted_at": "2026-10-29T06:12:40+00:00",
-    "source_url": "https://torahprint.nyc3.cdn.digitaloceanspaces.com/pdfFiles/1793199306940_m6c2p_.pdf"
+    "source_url": "https://torahprint.nyc3.cdn.digitaloceanspaces.com/pdfFiles/1793199306940_m6c2p_.pdf",
+    "checked_at": "2026-10-30T07:03:39+00:00",
+    "verification": "ב־30.10.2026: PDF בן 32 עמודים נפתח; אומתו חזותית השער ותוכן העניינים בעמוד 2 של התקשרות 1673."
   },
   "35694ed61a6fccf6": {
     "he": "גיליון L’Chaim Weekly מספר 1946 לשבת וירא, תשפ״ז (PDF). בשער: מאמר של הרב Yossy Goldman על עמידה לצד עקרונות; ובמדור Living with the Rebbe: פניית אברהם להצלת סדום ודרכי השכנוע שבהן נקט.",
     "basis": "כותרות הגיליון",
-    "checked": false,
+    "checked": true,
     "drafted_at": "2026-10-29T06:18:47+00:00",
-    "source_url": "https://torahprint.nyc3.cdn.digitaloceanspaces.com/pdfFiles/1792880926571_inlqb_lchaim_1946.pdf"
+    "source_url": "https://torahprint.nyc3.cdn.digitaloceanspaces.com/pdfFiles/1792880926571_inlqb_lchaim_1946.pdf",
+    "checked_at": "2026-10-30T07:03:39+00:00",
+    "verification": "ב־30.10.2026: PDF בן 4 עמודים נפתח; אומתו חזותית גיליון 1946, וירא ותיאור שני מדורי השער."
+  },
+  "2e84af60d813eabc": {
+    "he": "הנחה בלתי מוגה של מאמר אמר ר׳ אחא יפה שיחתן משבת חיי שרה תשמ״ב, בהוצאה לקראת חיי שרה תשפ״ז (PDF). תוכן המאמר עוסק בייחוד תורה ומצוות, ובשיחה כתפילה וכעבודת האהבה. נוספו מכתבים מתורגמים.",
+    "basis": "פתיחת הקובץ",
+    "checked": false,
+    "drafted_at": "2026-10-30T07:03:39+00:00",
+    "source_url": "https://www.lahak.org/media/pdf/1391/mPBv13916538.pdf"
   }
 }
