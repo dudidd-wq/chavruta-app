@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-30T07:06:27+00:00",
+ "generated_at": "2026-10-30T07:10:04+00:00",
  "sources": [
   {
    "id": "chabadlibrary",
@@ -12,7 +12,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-10-30T07:05:08+00:00",
+   "checked_at": "2026-10-30T07:08:49+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -30,7 +30,7 @@
     "primary",
     "whatsnew"
    ],
-   "checked_at": "2026-10-30T07:05:08+00:00",
+   "checked_at": "2026-10-30T07:08:49+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -47,7 +47,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-10-30T07:05:08+00:00",
+   "checked_at": "2026-10-30T07:08:49+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -64,7 +64,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-10-30T07:05:08+00:00",
+   "checked_at": "2026-10-30T07:08:49+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -82,7 +82,7 @@
     "primary",
     "whatsnew"
    ],
-   "checked_at": "2026-10-30T07:05:08+00:00",
+   "checked_at": "2026-10-30T07:08:49+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -102,7 +102,7 @@
     }
    ],
    "total": 132,
-   "last_success_at": "2026-10-30T07:05:08+00:00"
+   "last_success_at": "2026-10-30T07:08:49+00:00"
   },
   {
    "id": "chabadlibrarybooks",
@@ -115,7 +115,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-10-30T07:05:08+00:00",
+   "checked_at": "2026-10-30T07:08:49+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -133,12 +133,12 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-30T07:05:08+00:00",
+   "checked_at": "2026-10-30T07:08:49+00:00",
    "status": "ok",
    "new": [],
    "latest": [],
    "total": 1501,
-   "last_success_at": "2026-10-30T07:05:08+00:00"
+   "last_success_at": "2026-10-30T07:08:49+00:00"
   },
   {
    "id": "chassidut_org",
@@ -152,12 +152,12 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-30T07:05:10+00:00",
+   "checked_at": "2026-10-30T07:08:50+00:00",
    "status": "ok",
    "new": [],
    "latest": [],
    "total": 4,
-   "last_success_at": "2026-10-30T07:05:10+00:00"
+   "last_success_at": "2026-10-30T07:08:50+00:00"
   },
   {
    "id": "biurim",
@@ -171,7 +171,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-30T07:05:11+00:00",
+   "checked_at": "2026-10-30T07:08:52+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -217,7 +217,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-10-30T07:05:11+00:00"
+   "last_success_at": "2026-10-30T07:08:52+00:00"
   },
   {
    "id": "hm_monsey",
@@ -231,7 +231,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-30T07:05:14+00:00",
+   "checked_at": "2026-10-30T07:08:54+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -277,7 +277,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-10-30T07:05:14+00:00"
+   "last_success_at": "2026-10-30T07:08:54+00:00"
   },
   {
    "id": "hiskashrus",
@@ -291,7 +291,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-30T07:05:16+00:00",
+   "checked_at": "2026-10-30T07:08:55+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -360,7 +360,7 @@
     }
    ],
    "total": 255,
-   "last_success_at": "2026-10-30T07:05:16+00:00"
+   "last_success_at": "2026-10-30T07:08:55+00:00"
   },
   {
    "id": "lichyot_chassidus",
@@ -374,18 +374,9 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-30T07:05:18+00:00",
+   "checked_at": "2026-10-30T07:08:57+00:00",
    "status": "ok",
-   "new": [
-    {
-     "id": "51b796d5-d72c-4fc1-b630-9431eac7acfb",
-     "title": "מאמר ד״ה כי ידעתיו תשל״ו (רקע המאמר וסיכום כללי)",
-     "url": "https://rabbi_osher_farkash_maamarim.captivate.fm",
-     "date": "Thu, 29 Oct 2026 04:00:00 -0400",
-     "blurb": "חיבור המשך מים רבים תרל״ו עם המשך יום טוב של ר״ה תרס״ו.* טרדות הפרנסה והעשירות לטוב ולמוטב.",
-     "first_seen": "2026-10-30T07:05:18+00:00"
-    }
-   ],
+   "new": [],
    "latest": [
     {
      "id": "51b796d5-d72c-4fc1-b630-9431eac7acfb",
@@ -477,7 +468,7 @@
     }
    ],
    "total": 1000,
-   "last_success_at": "2026-10-30T07:05:18+00:00"
+   "last_success_at": "2026-10-30T07:08:57+00:00"
   },
   {
    "id": "chabadzoom",
@@ -491,7 +482,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-30T07:05:20+00:00",
+   "checked_at": "2026-10-30T07:09:00+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -588,7 +579,7 @@
     }
    ],
    "total": 561,
-   "last_success_at": "2026-10-30T07:05:20+00:00"
+   "last_success_at": "2026-10-30T07:09:00+00:00"
   },
   {
    "id": "kovtzimdrive",
@@ -602,7 +593,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-30T07:05:22+00:00",
+   "checked_at": "2026-10-30T07:09:00+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -610,12 +601,12 @@
      "id": "https://www.kovtzimdrive.com/posts/bochurim-build-database-of-thousands-of-%E2%80%98he%E2%80%99aros%E2%80%99",
      "title": "bochurim build database of thousands of ‘he’aros’",
      "url": "https://www.kovtzimdrive.com/posts/bochurim-build-database-of-thousands-of-%E2%80%98he%E2%80%99aros%E2%80%99",
-     "date": "2026-10-28",
+     "date": "2026-10-30",
      "first_seen": "2026-10-20T07:59:38+00:00"
     }
    ],
    "total": 1,
-   "last_success_at": "2026-10-30T07:05:22+00:00"
+   "last_success_at": "2026-10-30T07:09:00+00:00"
   },
   {
    "id": "avita",
@@ -629,7 +620,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-30T07:05:24+00:00",
+   "checked_at": "2026-10-30T07:09:03+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -647,7 +638,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-30T07:05:24+00:00",
+   "checked_at": "2026-10-30T07:09:03+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -669,7 +660,7 @@
     }
    ],
    "total": 2,
-   "last_success_at": "2026-10-30T07:05:24+00:00"
+   "last_success_at": "2026-10-30T07:09:03+00:00"
   },
   {
    "id": "dvarmalchus770",
@@ -683,18 +674,9 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-30T07:05:26+00:00",
+   "checked_at": "2026-10-30T07:09:05+00:00",
    "status": "ok",
-   "new": [
-    {
-     "id": "http://dvarmalchus770.org/?p=5699",
-     "title": "14) Kuntres Chof Marcheshvan, 5752: The Ohr Chodosh",
-     "url": "https://dvarmalchus770.org/2026/10/29/14-kuntres-chof-marcheshvan-5752-the-ohr-chodosh-3/",
-     "date": "Thu, 29 Oct 2026 13:56:35 +0000",
-     "blurb": "This maamor was edited and printed in honor of the birthday of the Rebbe Rashab, and it was handed out personally by the Rebbe in 770.*. It discusses deep inyonim of Chassidus, and demands attentive learning. But here, we will focus only on one point from the maamor, which is overtly relevant to the concepts […]",
-     "first_seen": "2026-10-30T07:05:26+00:00"
-    }
-   ],
+   "new": [],
    "latest": [
     {
      "id": "http://dvarmalchus770.org/?p=5699",
@@ -778,7 +760,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-10-30T07:05:26+00:00"
+   "last_success_at": "2026-10-30T07:09:05+00:00"
   },
   {
    "id": "soulwords",
@@ -792,7 +774,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-30T07:05:27+00:00",
+   "checked_at": "2026-10-30T07:09:06+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -846,7 +828,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-10-30T07:05:27+00:00"
+   "last_success_at": "2026-10-30T07:09:06+00:00"
   },
   {
    "id": "sie_weekly",
@@ -860,7 +842,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-30T07:05:29+00:00",
+   "checked_at": "2026-10-30T07:09:07+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -908,7 +890,7 @@
     }
    ],
    "total": 115,
-   "last_success_at": "2026-10-30T07:05:29+00:00"
+   "last_success_at": "2026-10-30T07:09:07+00:00"
   },
   {
    "id": "pls",
@@ -922,7 +904,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-30T07:05:30+00:00",
+   "checked_at": "2026-10-30T07:09:09+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1000,7 +982,7 @@
     }
    ],
    "total": 200,
-   "last_success_at": "2026-10-30T07:05:30+00:00"
+   "last_success_at": "2026-10-30T07:09:09+00:00"
   },
   {
    "id": "chayenu_ls",
@@ -1014,7 +996,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-30T07:05:32+00:00",
+   "checked_at": "2026-10-30T07:09:10+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1041,7 +1023,7 @@
     }
    ],
    "total": 2,
-   "last_success_at": "2026-10-30T07:05:32+00:00"
+   "last_success_at": "2026-10-30T07:09:10+00:00"
   },
   {
    "id": "weekly_sicha",
@@ -1055,7 +1037,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-30T07:05:33+00:00",
+   "checked_at": "2026-10-30T07:09:11+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1103,7 +1085,7 @@
     }
    ],
    "total": 117,
-   "last_success_at": "2026-10-30T07:05:33+00:00"
+   "last_success_at": "2026-10-30T07:09:11+00:00"
   },
   {
    "id": "theyeshiva",
@@ -1117,18 +1099,9 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-30T07:05:34+00:00",
+   "checked_at": "2026-10-30T07:09:13+00:00",
    "status": "ok",
-   "new": [
-    {
-     "id": "https://www.theyeshiva.net/item/10017",
-     "title": "When You Feel Nothing, But Long to Feel Everything: A Desperate Widow and a Miracle of Oil - Maamar V'Eisah Achas",
-     "url": "https://www.theyeshiva.net/item/10017",
-     "date": "Thu, 29 Oct 2026 08:00:00 -0400",
-     "blurb": "Why Do I Care That I Don't Care? How to Transform Your Emptiness Into the Greatest Breakthrough of Your Life This class was presented by Rabbi YY Jacobson on 18 Cheshvan, 5787, October 29, 2026. View Source Sheets: https://portal.theyeshiva.net/api/source-sheets/10017",
-     "first_seen": "2026-10-30T07:05:34+00:00"
-    }
-   ],
+   "new": [],
    "latest": [
     {
      "id": "https://www.theyeshiva.net/item/10017",
@@ -1220,7 +1193,7 @@
     }
    ],
    "total": 1542,
-   "last_success_at": "2026-10-30T07:05:34+00:00"
+   "last_success_at": "2026-10-30T07:09:13+00:00"
   },
   {
    "id": "chassidus_applied",
@@ -1234,18 +1207,9 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-30T07:05:38+00:00",
+   "checked_at": "2026-10-30T07:09:17+00:00",
    "status": "ok",
-   "new": [
-    {
-     "id": "yt:video:deE4lt5c7OI",
-     "title": "Samach Vav Part 233:",
-     "url": "https://www.youtube.com/watch?v=deE4lt5c7OI",
-     "date": "2026-10-30T03:22:07+00:00",
-     "blurb": "Samach Vav p. 190-191: This explains why \"when the Temple is not standing, a person’s table affects atonement\": The table, like the altar, offers and refines the animal soul, drawing down from the world of tohu and thereby bringing atonement. Thus a meal is like prayer in the fact that it refines the animal soul, as well as the physical elements of mineral, vegetable and animal that are consumed in a meal. This refinement of the animal soul is also achieved through our work: You refine your corner of the physical world and the animal soul when you run your business faithfully and ethically, without any deceit, as well as not allowing yourself to be overconsumed with your job, which then disturbs your ability to study Torah and pray. Especially when you do your work for the sake of heaven, intending to do a mitzvah -- give charity and study Torah in peace. Because, left on its own, the animal soul is driven by self-interest and will not hesitate to lie or steal for personal gain. As such, when a person refrains from acting unfaithfully, he is refining his animal soul. Elsewhere it is explained that prayer refines the cognitive soul -- the intelligence of the animal soul. But the refinement of the animal soul itself -- its emotions -- is through eating a meal. Yet prayer also refines the emotions; the difference is that in prayer the refinement is potential, while at a meal it is actualized.",
-     "first_seen": "2026-10-30T07:05:38+00:00"
-    }
-   ],
+   "new": [],
    "latest": [
     {
      "id": "yt:video:deE4lt5c7OI",
@@ -1377,7 +1341,7 @@
     }
    ],
    "total": 15,
-   "last_success_at": "2026-10-30T07:05:38+00:00"
+   "last_success_at": "2026-10-30T07:09:17+00:00"
   },
   {
    "id": "neirot",
@@ -1391,7 +1355,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-30T07:05:39+00:00",
+   "checked_at": "2026-10-30T07:09:17+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1445,7 +1409,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-10-30T07:05:39+00:00"
+   "last_success_at": "2026-10-30T07:09:17+00:00"
   },
   {
    "id": "chassidus_explained",
@@ -1459,7 +1423,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-30T07:05:44+00:00",
+   "checked_at": "2026-10-30T07:09:21+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1521,7 +1485,7 @@
     }
    ],
    "total": 136,
-   "last_success_at": "2026-10-30T07:05:44+00:00"
+   "last_success_at": "2026-10-30T07:09:21+00:00"
   },
   {
    "id": "melukat",
@@ -1535,7 +1499,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-30T07:05:45+00:00",
+   "checked_at": "2026-10-30T07:09:23+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1597,7 +1561,7 @@
     }
    ],
    "total": 168,
-   "last_success_at": "2026-10-30T07:05:45+00:00"
+   "last_success_at": "2026-10-30T07:09:23+00:00"
   },
   {
    "id": "daily_maamar",
@@ -1611,18 +1575,9 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-30T07:05:47+00:00",
+   "checked_at": "2026-10-30T07:09:24+00:00",
    "status": "ok",
-   "new": [
-    {
-     "id": "71968ed6-ccc8-4a38-a3d8-8b8f7ba74597",
-     "title": "Shabbos Parshas Chayey Sarah Mevorchim HaChodesh Kislev 5730 ,Maamorim Melukatim Vol. 1– Episode 2",
-     "url": "https://share.transistor.fm/s/037b7a7a",
-     "date": "Thu, 29 Oct 2026 09:25:49 -0400",
-     "blurb": "This episode covers from Chapter 2 through Chapter 5 . Expressing emotion.",
-     "first_seen": "2026-10-30T07:05:47+00:00"
-    }
-   ],
+   "new": [],
    "latest": [
     {
      "id": "71968ed6-ccc8-4a38-a3d8-8b8f7ba74597",
@@ -1754,7 +1709,7 @@
     }
    ],
    "total": 351,
-   "last_success_at": "2026-10-30T07:05:47+00:00"
+   "last_success_at": "2026-10-30T07:09:24+00:00"
   },
   {
    "id": "wellsprings",
@@ -1768,7 +1723,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-30T07:05:48+00:00",
+   "checked_at": "2026-10-30T07:09:26+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1814,7 +1769,7 @@
     }
    ],
    "total": 125,
-   "last_success_at": "2026-10-30T07:05:48+00:00"
+   "last_success_at": "2026-10-30T07:09:26+00:00"
   },
   {
    "id": "daily_sicha",
@@ -1828,18 +1783,9 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-30T07:05:49+00:00",
+   "checked_at": "2026-10-30T07:09:27+00:00",
    "status": "ok",
-   "new": [
-    {
-     "id": "2026.10.30",
-     "title": "יום ועש\"ק פ' וירא, י\"ט מרחשון, ה'תשפ\"ז",
-     "url": "",
-     "date": "Fri, 30 Oct 2026 12:00:00 GMT",
-     "blurb": "התוכן 1) ביום כ' מרחשון \"גובר מזלו\" של כ\"ק אדמו\"ר (מוהרש\"ב) נ\"ע בכל שנה ושנה באופן של \"מעלין בקודש\". 2) השייכות דמזמורי תהלים למספר השנים נמשכת גם לאחרי ההסתלקות מעלמא דין, \"יש בגר בקבר\", וכיודע הסיפור ע\"ד המאמר שאמר בעל יום ההולדת בג\"ע על פסוק בתהלים המכוון למספר שנותיו כמה שנים לאחרי הסתלקותו. 3) הוספה בציפי' לגאולה, שהיא מהענינים העיקריים של בעל יום ההולדת, כמבואר בשיחה הידועה דשמח\"ת [כל היוצא למלחמת בית דוד וכו']. 4) הוראה ממ\"ש השני דפ' חיי שרה \"ואברהם זקן בא בימים וה' ברך את אברהם בכל\": \"מעשה אבות סימן לבנים\" – שעושה ופועל את הדבר אצל הבנים, שאצל כאו\"א ישנו הענין ד\" בא בימים \", שלימות העבודה בכל יום ויום, ו\"ה' ברך גו' בכל \", שכולל את כל הברכות, ולא נותר אלא לפעול השידוך והנישואין דיצחק ורבקה (יחוד מ\"ה וב\"ן) – הגאולה, שזירוזה – ע\"י ענין הצדקה וכו'. ב' חלקים משיחת יום ב' פ' חיי שרה, כ\"ף מרחשון ה'תשמ\"ט ל\"הנחה פרטית\" או התרגום ללה\"ק של השיחה: https://thedailysicha.com/?date=30-10-2026 Synopsis (1) On 20 Marcheshvan the Rebbe Rashab ’s “mazal prevails,” ascending in holiness from year to year. (2) The connection between his age and the corresponding chapter of Tehillim continues even after his histalkus (“There is aging in the grave”), as demonstrated in the well-known story about the maamar delivered by the Rebbe Rashab in Gan Eden on a verse in Tehillim corresponding to his age, several years after his histalkus . (3) One of the Rebbe Rashabs’s main focuses was to increase the yearning for the Redemption, as explained in the well-known sichah of Simchas Torah ( Kol Hayotzei",
-     "first_seen": "2026-10-30T07:05:49+00:00"
-    }
-   ],
+   "new": [],
    "latest": [
     {
      "id": "2026.10.30",
@@ -1971,7 +1917,7 @@
     }
    ],
    "total": 1415,
-   "last_success_at": "2026-10-30T07:05:49+00:00"
+   "last_success_at": "2026-10-30T07:09:27+00:00"
   },
   {
    "id": "learnchassidus",
@@ -1985,7 +1931,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-30T07:05:56+00:00",
+   "checked_at": "2026-10-30T07:09:34+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1998,7 +1944,7 @@
     }
    ],
    "total": 5,
-   "last_success_at": "2026-10-30T07:05:56+00:00"
+   "last_success_at": "2026-10-30T07:09:34+00:00"
   },
   {
    "id": "simplychassidus",
@@ -2012,7 +1958,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-30T07:05:57+00:00",
+   "checked_at": "2026-10-30T07:09:35+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2039,7 +1985,7 @@
     }
    ],
    "total": 4,
-   "last_success_at": "2026-10-30T07:05:57+00:00"
+   "last_success_at": "2026-10-30T07:09:35+00:00"
   },
   {
    "id": "alonei_chabad",
@@ -2052,7 +1998,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-30T07:05:58+00:00",
+   "checked_at": "2026-10-30T07:09:36+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -2069,7 +2015,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-30T07:05:58+00:00",
+   "checked_at": "2026-10-30T07:09:36+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -2086,7 +2032,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-30T07:05:58+00:00",
+   "checked_at": "2026-10-30T07:09:36+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2113,7 +2059,7 @@
     }
    ],
    "total": 303,
-   "last_success_at": "2026-10-30T07:05:58+00:00"
+   "last_success_at": "2026-10-30T07:09:36+00:00"
   },
   {
    "id": "lchaim",
@@ -2126,7 +2072,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-30T07:05:59+00:00",
+   "checked_at": "2026-10-30T07:09:37+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2181,7 +2127,7 @@
     }
    ],
    "total": 193,
-   "last_success_at": "2026-10-30T07:05:59+00:00"
+   "last_success_at": "2026-10-30T07:09:37+00:00"
   },
   {
    "id": "one_point",
@@ -2194,7 +2140,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-30T07:06:02+00:00",
+   "checked_at": "2026-10-30T07:09:39+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2235,7 +2181,7 @@
     }
    ],
    "total": 184,
-   "last_success_at": "2026-10-30T07:06:02+00:00"
+   "last_success_at": "2026-10-30T07:09:39+00:00"
   },
   {
    "id": "derher",
@@ -2248,7 +2194,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-30T07:06:04+00:00",
+   "checked_at": "2026-10-30T07:09:40+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -2265,7 +2211,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-30T07:06:04+00:00",
+   "checked_at": "2026-10-30T07:09:40+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -2282,7 +2228,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-30T07:06:04+00:00",
+   "checked_at": "2026-10-30T07:09:40+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2309,7 +2255,7 @@
     }
    ],
    "total": 5,
-   "last_success_at": "2026-10-30T07:06:04+00:00"
+   "last_success_at": "2026-10-30T07:09:40+00:00"
   },
   {
    "id": "maynotecha_inst",
@@ -2322,7 +2268,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-30T07:06:06+00:00",
+   "checked_at": "2026-10-30T07:09:42+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -2339,7 +2285,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-30T07:06:06+00:00",
+   "checked_at": "2026-10-30T07:09:42+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2361,7 +2307,7 @@
     }
    ],
    "total": 1,
-   "last_success_at": "2026-10-30T07:06:06+00:00"
+   "last_success_at": "2026-10-30T07:09:42+00:00"
   },
   {
    "id": "anash",
@@ -2374,26 +2320,9 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-30T07:06:07+00:00",
+   "checked_at": "2026-10-30T07:09:44+00:00",
    "status": "ok",
-   "new": [
-    {
-     "id": "https://anash.org/?p=1127152",
-     "title": "When Personal Agendas Are Dressed Up as Chassidus",
-     "url": "https://anash.org/when-personal-agendas-are-dressed-up-as-chassidus/",
-     "date": "Fri, 30 Oct 2026 02:01:28 +0000",
-     "blurb": "\"In recent online articles, people are making passionate arguments, speeches, and attempts at persuasion, all presented in the name of Torah and Chassidus. Everyone seems to be claiming to represent the true kavonah ha'elyonah .\"",
-     "first_seen": "2026-10-30T07:06:07+00:00"
-    },
-    {
-     "id": "https://anash.org/?p=1127034",
-     "title": "My Daughter Ran Up to the Rebbe and Gave ‘Sholom Aleichem’",
-     "url": "https://anash.org/my-daughter-ran-up-to-the-rebbe-and-gave-sholom-aleichem/",
-     "date": "Thu, 29 Oct 2026 21:33:00 +0000",
-     "blurb": "Rabbi Pinchus Feldman was aghast when his little daughter ran up to the Rebbe during yechidus and gave him a Sholom Aleichem. But what really surprised them was what happened when they returned for yechidus two years later.",
-     "first_seen": "2026-10-30T07:06:07+00:00"
-    }
-   ],
+   "new": [],
    "latest": [
     {
      "id": "https://anash.org/?p=1127152",
@@ -2557,7 +2486,7 @@
     }
    ],
    "total": 2,
-   "last_success_at": "2026-10-30T07:06:07+00:00"
+   "last_success_at": "2026-10-30T07:09:44+00:00"
   },
   {
    "id": "chabadinfo",
@@ -2570,7 +2499,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-30T07:06:08+00:00",
+   "checked_at": "2026-10-30T07:09:45+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -2587,7 +2516,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-30T07:06:08+00:00",
+   "checked_at": "2026-10-30T07:09:45+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -2604,7 +2533,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-30T07:06:08+00:00",
+   "checked_at": "2026-10-30T07:09:45+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2650,7 +2579,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-10-30T07:06:08+00:00"
+   "last_success_at": "2026-10-30T07:09:45+00:00"
   },
   {
    "id": "kehot",
@@ -2663,42 +2592,9 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-30T07:06:11+00:00",
+   "checked_at": "2026-10-30T07:09:48+00:00",
    "status": "ok",
-   "new": [
-    {
-     "id": "S-SHAAH.L",
-     "title": "Shaar Habitachon - SPANISH (Portal de la Confianza)",
-     "url": "https://store.kehotonline.com/products.asp?dept=344",
-     "date": "",
-     "catalog_month": "2026-10",
-     "first_seen": "2026-10-30T07:06:11+00:00"
-    },
-    {
-     "id": "S-STH.AL",
-     "title": "Siddur Hebrew/Spanish Standard Size, Translated & Transliterated",
-     "url": "https://store.kehotonline.com/products.asp?dept=344",
-     "date": "",
-     "catalog_month": "2026-10",
-     "first_seen": "2026-10-30T07:06:11+00:00"
-    },
-    {
-     "id": "S-STH.AM",
-     "title": "Siddur Hebrew/Spanish Compact Size, Translated & Transliterated",
-     "url": "https://store.kehotonline.com/products.asp?dept=344",
-     "date": "",
-     "catalog_month": "2026-10",
-     "first_seen": "2026-10-30T07:06:11+00:00"
-    },
-    {
-     "id": "S-TEHI.L",
-     "title": "Tehillim Hebrew/Spanish Standard Size 6 x 9 (Salmos)",
-     "url": "https://store.kehotonline.com/products.asp?dept=344",
-     "date": "",
-     "catalog_month": "2026-10",
-     "first_seen": "2026-10-30T07:06:11+00:00"
-    }
-   ],
+   "new": [],
    "latest": [
     {
      "id": "HKU-HATE",
@@ -3198,7 +3094,7 @@
     }
    ],
    "total": 199,
-   "last_success_at": "2026-10-30T07:06:11+00:00"
+   "last_success_at": "2026-10-30T07:09:48+00:00"
   }
  ],
  "browser_checks": {
