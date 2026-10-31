@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-31T06:43:01+00:00",
+ "generated_at": "2026-10-31T06:48:36+00:00",
  "sources": [
   {
    "id": "chabadlibrary",
@@ -12,7 +12,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-10-31T06:41:49+00:00",
+   "checked_at": "2026-10-31T06:47:32+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -30,7 +30,7 @@
     "primary",
     "whatsnew"
    ],
-   "checked_at": "2026-10-31T06:41:49+00:00",
+   "checked_at": "2026-10-31T06:47:32+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -47,7 +47,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-10-31T06:41:49+00:00",
+   "checked_at": "2026-10-31T06:47:32+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -64,7 +64,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-10-31T06:41:49+00:00",
+   "checked_at": "2026-10-31T06:47:32+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -82,7 +82,7 @@
     "primary",
     "whatsnew"
    ],
-   "checked_at": "2026-10-31T06:41:49+00:00",
+   "checked_at": "2026-10-31T06:47:32+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -102,7 +102,7 @@
     }
    ],
    "total": 132,
-   "last_success_at": "2026-10-31T06:41:49+00:00"
+   "last_success_at": "2026-10-31T06:47:32+00:00"
   },
   {
    "id": "chabadlibrarybooks",
@@ -115,7 +115,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-10-31T06:41:49+00:00",
+   "checked_at": "2026-10-31T06:47:32+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -133,12 +133,12 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-31T06:41:49+00:00",
+   "checked_at": "2026-10-31T06:47:32+00:00",
    "status": "ok",
    "new": [],
    "latest": [],
    "total": 1501,
-   "last_success_at": "2026-10-31T06:41:49+00:00"
+   "last_success_at": "2026-10-31T06:47:32+00:00"
   },
   {
    "id": "chassidut_org",
@@ -152,12 +152,12 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-31T06:41:51+00:00",
+   "checked_at": "2026-10-31T06:47:34+00:00",
    "status": "ok",
    "new": [],
    "latest": [],
    "total": 4,
-   "last_success_at": "2026-10-31T06:41:51+00:00"
+   "last_success_at": "2026-10-31T06:47:34+00:00"
   },
   {
    "id": "biurim",
@@ -171,7 +171,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-31T06:41:52+00:00",
+   "checked_at": "2026-10-31T06:47:35+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -217,7 +217,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-10-31T06:41:52+00:00"
+   "last_success_at": "2026-10-31T06:47:35+00:00"
   },
   {
    "id": "hm_monsey",
@@ -231,7 +231,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-31T06:41:54+00:00",
+   "checked_at": "2026-10-31T06:47:36+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -277,7 +277,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-10-31T06:41:54+00:00"
+   "last_success_at": "2026-10-31T06:47:36+00:00"
   },
   {
    "id": "hiskashrus",
@@ -291,7 +291,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-31T06:41:56+00:00",
+   "checked_at": "2026-10-31T06:47:38+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -360,7 +360,7 @@
     }
    ],
    "total": 255,
-   "last_success_at": "2026-10-31T06:41:56+00:00"
+   "last_success_at": "2026-10-31T06:47:38+00:00"
   },
   {
    "id": "lichyot_chassidus",
@@ -374,7 +374,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-31T06:41:57+00:00",
+   "checked_at": "2026-10-31T06:47:40+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -468,7 +468,7 @@
     }
    ],
    "total": 1000,
-   "last_success_at": "2026-10-31T06:41:57+00:00"
+   "last_success_at": "2026-10-31T06:47:40+00:00"
   },
   {
    "id": "chabadzoom",
@@ -482,7 +482,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-31T06:42:00+00:00",
+   "checked_at": "2026-10-31T06:47:41+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -579,7 +579,7 @@
     }
    ],
    "total": 561,
-   "last_success_at": "2026-10-31T06:42:00+00:00"
+   "last_success_at": "2026-10-31T06:47:41+00:00"
   },
   {
    "id": "kovtzimdrive",
@@ -593,7 +593,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-31T06:42:01+00:00",
+   "checked_at": "2026-10-31T06:47:42+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -606,7 +606,7 @@
     }
    ],
    "total": 1,
-   "last_success_at": "2026-10-31T06:42:01+00:00"
+   "last_success_at": "2026-10-31T06:47:42+00:00"
   },
   {
    "id": "avita",
@@ -620,7 +620,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-31T06:42:04+00:00",
+   "checked_at": "2026-10-31T06:47:44+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -638,7 +638,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-31T06:42:04+00:00",
+   "checked_at": "2026-10-31T06:47:44+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -660,7 +660,7 @@
     }
    ],
    "total": 2,
-   "last_success_at": "2026-10-31T06:42:04+00:00"
+   "last_success_at": "2026-10-31T06:47:44+00:00"
   },
   {
    "id": "dvarmalchus770",
@@ -674,7 +674,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-31T06:42:06+00:00",
+   "checked_at": "2026-10-31T06:47:46+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -760,7 +760,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-10-31T06:42:06+00:00"
+   "last_success_at": "2026-10-31T06:47:46+00:00"
   },
   {
    "id": "soulwords",
@@ -774,18 +774,9 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-31T06:42:07+00:00",
+   "checked_at": "2026-10-31T06:47:47+00:00",
    "status": "ok",
-   "new": [
-    {
-     "id": "https://www.soulwords.org/?p=17570",
-     "title": "Abraham and the Inn | Beyond the Story: Vayera (Ep. 4)",
-     "url": "https://www.soulwords.org/abraham-and-the-inn-beyond-the-story-vayera-ep-4/",
-     "date": "Fri, 30 Oct 2026 17:20:48 +0000",
-     "blurb": "Why did Avraham welcome weary travelers to an oasis in the middle of the desert, wine and dine them with five-star hospitality, and then threaten them with a massive bill if they refused to thank G-d after the meal? Rabbi Shais Taub takes a fresh look at this famous story from Parshas Vayera to uncover a deep psychological truth: why the illusion of self-reliance makes us spiritually numb, and how feeling helpless can actually awaken genuine gratitude. PDF Link: https://www.soulwords.org/wp-content/uploads/2026/10/Vayera-Student-Handout_compressed.pdf",
-     "first_seen": "2026-10-31T06:42:07+00:00"
-    }
-   ],
+   "new": [],
    "latest": [
     {
      "id": "https://www.soulwords.org/?p=17570",
@@ -845,7 +836,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-10-31T06:42:07+00:00"
+   "last_success_at": "2026-10-31T06:47:47+00:00"
   },
   {
    "id": "sie_weekly",
@@ -859,7 +850,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-31T06:42:09+00:00",
+   "checked_at": "2026-10-31T06:47:48+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -907,7 +898,7 @@
     }
    ],
    "total": 115,
-   "last_success_at": "2026-10-31T06:42:09+00:00"
+   "last_success_at": "2026-10-31T06:47:48+00:00"
   },
   {
    "id": "pls",
@@ -921,7 +912,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-31T06:42:10+00:00",
+   "checked_at": "2026-10-31T06:47:50+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -999,7 +990,7 @@
     }
    ],
    "total": 200,
-   "last_success_at": "2026-10-31T06:42:10+00:00"
+   "last_success_at": "2026-10-31T06:47:50+00:00"
   },
   {
    "id": "chayenu_ls",
@@ -1013,7 +1004,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-31T06:42:12+00:00",
+   "checked_at": "2026-10-31T06:47:51+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1040,7 +1031,7 @@
     }
    ],
    "total": 2,
-   "last_success_at": "2026-10-31T06:42:12+00:00"
+   "last_success_at": "2026-10-31T06:47:51+00:00"
   },
   {
    "id": "weekly_sicha",
@@ -1054,17 +1045,9 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-31T06:42:13+00:00",
+   "checked_at": "2026-10-31T06:47:52+00:00",
    "status": "ok",
-   "new": [
-    {
-     "id": "https://theweeklysicha.org/episode/tws-vayeira-20-cheshvan-87",
-     "title": "tws vayeira 20 cheshvan 87",
-     "url": "https://theweeklysicha.org/episode/tws-vayeira-20-cheshvan-87",
-     "date": "2026-10-31T01:00:11.202Z",
-     "first_seen": "2026-10-31T06:42:13+00:00"
-    }
-   ],
+   "new": [],
    "latest": [
     {
      "id": "https://theweeklysicha.org/episode/tws-vayeira-20-cheshvan-87",
@@ -1117,7 +1100,7 @@
     }
    ],
    "total": 118,
-   "last_success_at": "2026-10-31T06:42:13+00:00"
+   "last_success_at": "2026-10-31T06:47:52+00:00"
   },
   {
    "id": "theyeshiva",
@@ -1131,7 +1114,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-31T06:42:14+00:00",
+   "checked_at": "2026-10-31T06:47:53+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1225,7 +1208,7 @@
     }
    ],
    "total": 1542,
-   "last_success_at": "2026-10-31T06:42:14+00:00"
+   "last_success_at": "2026-10-31T06:47:53+00:00"
   },
   {
    "id": "chassidus_applied",
@@ -1239,7 +1222,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-31T06:42:18+00:00",
+   "checked_at": "2026-10-31T06:47:55+00:00",
    "status": "error",
    "new": [],
    "latest": [
@@ -1389,7 +1372,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-31T06:42:18+00:00",
+   "checked_at": "2026-10-31T06:47:55+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1443,7 +1426,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-10-31T06:42:18+00:00"
+   "last_success_at": "2026-10-31T06:47:55+00:00"
   },
   {
    "id": "chassidus_explained",
@@ -1457,7 +1440,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-31T06:42:20+00:00",
+   "checked_at": "2026-10-31T06:47:57+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1519,7 +1502,7 @@
     }
    ],
    "total": 136,
-   "last_success_at": "2026-10-31T06:42:20+00:00"
+   "last_success_at": "2026-10-31T06:47:57+00:00"
   },
   {
    "id": "melukat",
@@ -1533,7 +1516,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-31T06:42:21+00:00",
+   "checked_at": "2026-10-31T06:47:58+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1595,7 +1578,7 @@
     }
    ],
    "total": 168,
-   "last_success_at": "2026-10-31T06:42:21+00:00"
+   "last_success_at": "2026-10-31T06:47:58+00:00"
   },
   {
    "id": "daily_maamar",
@@ -1609,18 +1592,9 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-31T06:42:23+00:00",
+   "checked_at": "2026-10-31T06:47:59+00:00",
    "status": "ok",
-   "new": [
-    {
-     "id": "a22a8c16-e5cc-401f-843e-9dca6a9c5f5e",
-     "title": "Shabbos Parshas Chayey Sarah Mevorchim HaChodesh Kislev 5730 ,Maamorim Melukatim Vol. 1– Episode 3",
-     "url": "https://share.transistor.fm/s/6275fe48",
-     "date": "Fri, 30 Oct 2026 09:23:51 -0400",
-     "blurb": "This episode covers from Chapter 6 through Chapter 7. How high our mitzvohs reach. The new light.",
-     "first_seen": "2026-10-31T06:42:23+00:00"
-    }
-   ],
+   "new": [],
    "latest": [
     {
      "id": "a22a8c16-e5cc-401f-843e-9dca6a9c5f5e",
@@ -1760,7 +1734,7 @@
     }
    ],
    "total": 352,
-   "last_success_at": "2026-10-31T06:42:23+00:00"
+   "last_success_at": "2026-10-31T06:47:59+00:00"
   },
   {
    "id": "wellsprings",
@@ -1774,7 +1748,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-31T06:42:24+00:00",
+   "checked_at": "2026-10-31T06:48:01+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1820,7 +1794,7 @@
     }
    ],
    "total": 125,
-   "last_success_at": "2026-10-31T06:42:24+00:00"
+   "last_success_at": "2026-10-31T06:48:01+00:00"
   },
   {
    "id": "daily_sicha",
@@ -1834,7 +1808,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-31T06:42:25+00:00",
+   "checked_at": "2026-10-31T06:48:01+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1968,7 +1942,7 @@
     }
    ],
    "total": 1415,
-   "last_success_at": "2026-10-31T06:42:25+00:00"
+   "last_success_at": "2026-10-31T06:48:01+00:00"
   },
   {
    "id": "learnchassidus",
@@ -1982,7 +1956,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-31T06:42:31+00:00",
+   "checked_at": "2026-10-31T06:48:06+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1995,7 +1969,7 @@
     }
    ],
    "total": 5,
-   "last_success_at": "2026-10-31T06:42:31+00:00"
+   "last_success_at": "2026-10-31T06:48:06+00:00"
   },
   {
    "id": "simplychassidus",
@@ -2009,7 +1983,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-31T06:42:32+00:00",
+   "checked_at": "2026-10-31T06:48:06+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2036,7 +2010,7 @@
     }
    ],
    "total": 4,
-   "last_success_at": "2026-10-31T06:42:32+00:00"
+   "last_success_at": "2026-10-31T06:48:06+00:00"
   },
   {
    "id": "alonei_chabad",
@@ -2049,7 +2023,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-31T06:42:33+00:00",
+   "checked_at": "2026-10-31T06:48:07+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -2066,7 +2040,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-31T06:42:33+00:00",
+   "checked_at": "2026-10-31T06:48:07+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -2083,7 +2057,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-31T06:42:33+00:00",
+   "checked_at": "2026-10-31T06:48:07+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2110,7 +2084,7 @@
     }
    ],
    "total": 303,
-   "last_success_at": "2026-10-31T06:42:33+00:00"
+   "last_success_at": "2026-10-31T06:48:07+00:00"
   },
   {
    "id": "lchaim",
@@ -2123,17 +2097,9 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-31T06:42:34+00:00",
+   "checked_at": "2026-10-31T06:48:09+00:00",
    "status": "ok",
-   "new": [
-    {
-     "id": "38345",
-     "title": "Vayeira · 5787 · The Weekly Publication for Every Jewish Person",
-     "url": "https://torahprint.nyc3.cdn.digitaloceanspaces.com/pdfFiles/1793338021614_t9om0_lchaim_1946.pdf",
-     "date": "2026-10-30T00:00:00.000Z",
-     "first_seen": "2026-10-31T06:42:34+00:00"
-    }
-   ],
+   "new": [],
    "latest": [
     {
      "id": "37957",
@@ -2193,7 +2159,7 @@
     }
    ],
    "total": 194,
-   "last_success_at": "2026-10-31T06:42:34+00:00"
+   "last_success_at": "2026-10-31T06:48:09+00:00"
   },
   {
    "id": "one_point",
@@ -2206,7 +2172,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-31T06:42:35+00:00",
+   "checked_at": "2026-10-31T06:48:10+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2247,7 +2213,7 @@
     }
    ],
    "total": 184,
-   "last_success_at": "2026-10-31T06:42:35+00:00"
+   "last_success_at": "2026-10-31T06:48:10+00:00"
   },
   {
    "id": "derher",
@@ -2260,7 +2226,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-31T06:42:37+00:00",
+   "checked_at": "2026-10-31T06:48:11+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -2277,7 +2243,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-31T06:42:37+00:00",
+   "checked_at": "2026-10-31T06:48:11+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -2294,17 +2260,9 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-31T06:42:37+00:00",
+   "checked_at": "2026-10-31T06:48:11+00:00",
    "status": "ok",
-   "new": [
-    {
-     "id": "content:43adc9b4b3ff7e1f",
-     "title": "עדכון בתוכן הדף",
-     "url": "https://dvarmalchus.org",
-     "date": "",
-     "first_seen": "2026-10-31T06:42:37+00:00"
-    }
-   ],
+   "new": [],
    "latest": [
     {
      "id": "content:43adc9b4b3ff7e1f",
@@ -2343,7 +2301,7 @@
     }
    ],
    "total": 5,
-   "last_success_at": "2026-10-31T06:42:37+00:00"
+   "last_success_at": "2026-10-31T06:48:11+00:00"
   },
   {
    "id": "maynotecha_inst",
@@ -2356,7 +2314,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-31T06:42:39+00:00",
+   "checked_at": "2026-10-31T06:48:13+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -2373,7 +2331,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-31T06:42:39+00:00",
+   "checked_at": "2026-10-31T06:48:13+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2395,7 +2353,7 @@
     }
    ],
    "total": 1,
-   "last_success_at": "2026-10-31T06:42:39+00:00"
+   "last_success_at": "2026-10-31T06:48:13+00:00"
   },
   {
    "id": "anash",
@@ -2408,18 +2366,9 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-31T06:42:40+00:00",
+   "checked_at": "2026-10-31T06:48:14+00:00",
    "status": "ok",
-   "new": [
-    {
-     "id": "https://anash.org/?p=993898",
-     "title": "Chof Cheshvan: Birthday of the Rebbe Rashab",
-     "url": "https://anash.org/chof-cheshvan-birthday-of-the-rebbe-rashab/",
-     "date": "Fri, 30 Oct 2026 20:25:47 +0000",
-     "blurb": "Chof Cheshvan marks the birthday of the Rebbe Rashab , the fifth of the Chabad Rebbeim, born in 5621 (1860).",
-     "first_seen": "2026-10-31T06:42:40+00:00"
-    }
-   ],
+   "new": [],
    "latest": [
     {
      "id": "https://anash.org/?p=993898",
@@ -2591,7 +2540,7 @@
     }
    ],
    "total": 3,
-   "last_success_at": "2026-10-31T06:42:40+00:00"
+   "last_success_at": "2026-10-31T06:48:14+00:00"
   },
   {
    "id": "chabadinfo",
@@ -2604,7 +2553,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-31T06:42:41+00:00",
+   "checked_at": "2026-10-31T06:48:15+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -2621,7 +2570,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-31T06:42:41+00:00",
+   "checked_at": "2026-10-31T06:48:15+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -2638,7 +2587,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-31T06:42:41+00:00",
+   "checked_at": "2026-10-31T06:48:15+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2684,7 +2633,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-10-31T06:42:41+00:00"
+   "last_success_at": "2026-10-31T06:48:15+00:00"
   },
   {
    "id": "kehot",
@@ -2697,7 +2646,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-31T06:42:44+00:00",
+   "checked_at": "2026-10-31T06:48:18+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -3199,7 +3148,7 @@
     }
    ],
    "total": 199,
-   "last_success_at": "2026-10-31T06:42:44+00:00"
+   "last_success_at": "2026-10-31T06:48:18+00:00"
   }
  ],
  "browser_checks": {
@@ -3606,7 +3555,7 @@
    "note": "שני עמודי המוצר של הטיוטות שבספק נפתחו מחדש; אי־ההתאמות נמשכות, והתקצירים נשארו לא מאושרים."
   },
   "lchaim": {
-   "checked_at": "2026-10-30T07:03:39+00:00",
+   "checked_at": "2026-10-31T06:46:54+00:00",
    "items": [
     {
      "title": "Vayeira · 5787 · A weekly Chabad publication featuring teachings of the Rebbe, stories, and community news.",
@@ -3615,9 +3564,17 @@
      "first_seen": "2026-10-25T06:09:00+00:00",
      "issued_for": "גיליון 1946, וירא, י״ט מרחשון תשפ״ז (30.10.2026)",
      "genre": "גיליון"
+    },
+    {
+     "title": "Vayeira · 5787 · The Weekly Publication for Every Jewish Person",
+     "url": "https://torahprint.nyc3.cdn.digitaloceanspaces.com/pdfFiles/1793338021614_t9om0_lchaim_1946.pdf",
+     "lang": "en",
+     "first_seen": "2026-10-31T06:42:34+00:00",
+     "issued_for": "גיליון 1946, וירא, י״ט מרחשון תשפ״ז (30.10.2026)",
+     "genre": "גיליון"
     }
    ],
-   "note": "PDF גיליון 1946 נפתח מחדש ועמוד השער נבדק; הטיוטה מ־29.10 אושרה. הגילוי מ־25.10 נשמר, בנפרד מתאריך הגיליון."
+   "note": "ה־PDF החדש בן 4 עמודים נפתח והשער אומת: גיליון 1946 ותוכן שני מדורי השער תואמים לעותק הקודם. העותק הקודם סווג כפול; התקציר בקישור החדש נשמר כטיוטה לא מאושרת לבדיקה בהרצה הבאה. מועדי הגילוי של שני העותקים נשמרו בנפרד מתאריך הגיליון."
   }
  }
 }
