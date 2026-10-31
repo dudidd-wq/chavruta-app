@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-31T06:48:36+00:00",
+ "generated_at": "2026-10-31T10:23:30+00:00",
  "sources": [
   {
    "id": "chabadlibrary",
@@ -12,7 +12,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-10-31T06:47:32+00:00",
+   "checked_at": "2026-10-31T10:22:16+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -30,7 +30,7 @@
     "primary",
     "whatsnew"
    ],
-   "checked_at": "2026-10-31T06:47:32+00:00",
+   "checked_at": "2026-10-31T10:22:16+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -47,7 +47,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-10-31T06:47:32+00:00",
+   "checked_at": "2026-10-31T10:22:16+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -64,7 +64,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-10-31T06:47:32+00:00",
+   "checked_at": "2026-10-31T10:22:16+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -82,7 +82,7 @@
     "primary",
     "whatsnew"
    ],
-   "checked_at": "2026-10-31T06:47:32+00:00",
+   "checked_at": "2026-10-31T10:22:16+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -102,7 +102,7 @@
     }
    ],
    "total": 132,
-   "last_success_at": "2026-10-31T06:47:32+00:00"
+   "last_success_at": "2026-10-31T10:22:16+00:00"
   },
   {
    "id": "chabadlibrarybooks",
@@ -115,7 +115,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-10-31T06:47:32+00:00",
+   "checked_at": "2026-10-31T10:22:16+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -133,12 +133,12 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-31T06:47:32+00:00",
+   "checked_at": "2026-10-31T10:22:16+00:00",
    "status": "ok",
    "new": [],
    "latest": [],
    "total": 1501,
-   "last_success_at": "2026-10-31T06:47:32+00:00"
+   "last_success_at": "2026-10-31T10:22:16+00:00"
   },
   {
    "id": "chassidut_org",
@@ -152,12 +152,12 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-31T06:47:34+00:00",
+   "checked_at": "2026-10-31T10:22:18+00:00",
    "status": "ok",
    "new": [],
    "latest": [],
    "total": 4,
-   "last_success_at": "2026-10-31T06:47:34+00:00"
+   "last_success_at": "2026-10-31T10:22:18+00:00"
   },
   {
    "id": "biurim",
@@ -171,7 +171,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-31T06:47:35+00:00",
+   "checked_at": "2026-10-31T10:22:19+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -217,7 +217,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-10-31T06:47:35+00:00"
+   "last_success_at": "2026-10-31T10:22:19+00:00"
   },
   {
    "id": "hm_monsey",
@@ -231,7 +231,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-31T06:47:36+00:00",
+   "checked_at": "2026-10-31T10:22:21+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -277,7 +277,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-10-31T06:47:36+00:00"
+   "last_success_at": "2026-10-31T10:22:21+00:00"
   },
   {
    "id": "hiskashrus",
@@ -291,7 +291,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-31T06:47:38+00:00",
+   "checked_at": "2026-10-31T10:22:22+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -360,7 +360,7 @@
     }
    ],
    "total": 255,
-   "last_success_at": "2026-10-31T06:47:38+00:00"
+   "last_success_at": "2026-10-31T10:22:22+00:00"
   },
   {
    "id": "lichyot_chassidus",
@@ -374,7 +374,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-31T06:47:40+00:00",
+   "checked_at": "2026-10-31T10:22:24+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -468,7 +468,7 @@
     }
    ],
    "total": 1000,
-   "last_success_at": "2026-10-31T06:47:40+00:00"
+   "last_success_at": "2026-10-31T10:22:24+00:00"
   },
   {
    "id": "chabadzoom",
@@ -482,7 +482,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-31T06:47:41+00:00",
+   "checked_at": "2026-10-31T10:22:26+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -579,7 +579,7 @@
     }
    ],
    "total": 561,
-   "last_success_at": "2026-10-31T06:47:41+00:00"
+   "last_success_at": "2026-10-31T10:22:26+00:00"
   },
   {
    "id": "kovtzimdrive",
@@ -593,7 +593,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-31T06:47:42+00:00",
+   "checked_at": "2026-10-31T10:22:28+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -606,7 +606,7 @@
     }
    ],
    "total": 1,
-   "last_success_at": "2026-10-31T06:47:42+00:00"
+   "last_success_at": "2026-10-31T10:22:28+00:00"
   },
   {
    "id": "avita",
@@ -620,7 +620,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-31T06:47:44+00:00",
+   "checked_at": "2026-10-31T10:22:30+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -638,7 +638,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-31T06:47:44+00:00",
+   "checked_at": "2026-10-31T10:22:30+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -660,7 +660,7 @@
     }
    ],
    "total": 2,
-   "last_success_at": "2026-10-31T06:47:44+00:00"
+   "last_success_at": "2026-10-31T10:22:30+00:00"
   },
   {
    "id": "dvarmalchus770",
@@ -674,7 +674,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-31T06:47:46+00:00",
+   "checked_at": "2026-10-31T10:22:31+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -760,7 +760,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-10-31T06:47:46+00:00"
+   "last_success_at": "2026-10-31T10:22:31+00:00"
   },
   {
    "id": "soulwords",
@@ -774,7 +774,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-31T06:47:47+00:00",
+   "checked_at": "2026-10-31T10:22:33+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -836,7 +836,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-10-31T06:47:47+00:00"
+   "last_success_at": "2026-10-31T10:22:33+00:00"
   },
   {
    "id": "sie_weekly",
@@ -850,7 +850,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-31T06:47:48+00:00",
+   "checked_at": "2026-10-31T10:22:34+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -898,7 +898,7 @@
     }
    ],
    "total": 115,
-   "last_success_at": "2026-10-31T06:47:48+00:00"
+   "last_success_at": "2026-10-31T10:22:34+00:00"
   },
   {
    "id": "pls",
@@ -912,7 +912,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-31T06:47:50+00:00",
+   "checked_at": "2026-10-31T10:22:35+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -990,7 +990,7 @@
     }
    ],
    "total": 200,
-   "last_success_at": "2026-10-31T06:47:50+00:00"
+   "last_success_at": "2026-10-31T10:22:35+00:00"
   },
   {
    "id": "chayenu_ls",
@@ -1004,7 +1004,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-31T06:47:51+00:00",
+   "checked_at": "2026-10-31T10:22:37+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1031,7 +1031,7 @@
     }
    ],
    "total": 2,
-   "last_success_at": "2026-10-31T06:47:51+00:00"
+   "last_success_at": "2026-10-31T10:22:37+00:00"
   },
   {
    "id": "weekly_sicha",
@@ -1045,7 +1045,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-31T06:47:52+00:00",
+   "checked_at": "2026-10-31T10:22:38+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1100,7 +1100,7 @@
     }
    ],
    "total": 118,
-   "last_success_at": "2026-10-31T06:47:52+00:00"
+   "last_success_at": "2026-10-31T10:22:38+00:00"
   },
   {
    "id": "theyeshiva",
@@ -1114,7 +1114,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-31T06:47:53+00:00",
+   "checked_at": "2026-10-31T10:22:39+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1208,7 +1208,7 @@
     }
    ],
    "total": 1542,
-   "last_success_at": "2026-10-31T06:47:53+00:00"
+   "last_success_at": "2026-10-31T10:22:39+00:00"
   },
   {
    "id": "chassidus_applied",
@@ -1222,16 +1222,49 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-31T06:47:55+00:00",
-   "status": "error",
-   "new": [],
+   "checked_at": "2026-10-31T10:22:42+00:00",
+   "status": "ok",
+   "new": [
+    {
+     "id": "yt:video:RB5VhsNWKUM",
+     "title": "Samach Vav Part 234:",
+     "url": "https://www.youtube.com/watch?v=RB5VhsNWKUM",
+     "date": "2026-10-31T03:05:45+00:00",
+     "blurb": "Samach Vav P. 191-192: Coals of the outer altar fuel the inner altar.",
+     "first_seen": "2026-10-31T10:22:42+00:00"
+    },
+    {
+     "id": "yt:video:_cEN6_093I4",
+     "title": "Chapter 37.02: Chof Cheshvan. Dynamics of a Mitzvah: Revealing the Divine Infinite in Existence",
+     "url": "https://www.youtube.com/watch?v=_cEN6_093I4",
+     "date": "2026-10-30T16:30:10+00:00",
+     "blurb": "Chapter 37.02: Chof Cheshvan. Dynamics of a Mitzvah: Revealing the Divine Infinite in Existence The Tanya Applied radio show is broadcast every Saturday night, 10–10:30PM ET on WSNR 620 AM – Metro NY area WJPR 1640 AM — Highland Park and Edison, NJ Online: www.talklinenetwork.com By phone: Listen Line: 641-741-0389 Many of us may be familiar with some of the central ideas in Tanya – including the battle of the two souls; what defines man and makes us tick; how we can control our temptations; how we can become more loving; what we can do to curb and harness our vices, like anger, jealousy, and depression; the formula for growth; how we can develop a healthy relationship with G-d; and why we are here. In this 30-minute program, you will learn how these ideas can be applied to your life today. You will discover secrets to a successful life that will transform you and your relationships. Rabbi Simon Jacobson is the best-selling author of Toward a Meaningful Life, and he is the creator of the acclaimed and popular MyLife: Chassidus Applied series, which has empowered and transformed hundreds of thousands through Torah and Chassidus. Now, Rabbi Jacobson brings his vast scholarship and years of experience to Tanya. Please join Rabbi Simon Jacobson for this exhilarating journey into your psyche and soul. You will come away with life-changing practical guidance and direction, addressing all the issues and challenges you face in life. For more info: www.chassidusapplied.com/tanya Music",
+     "first_seen": "2026-10-31T10:22:42+00:00"
+    }
+   ],
    "latest": [
+    {
+     "id": "yt:video:RB5VhsNWKUM",
+     "title": "Samach Vav Part 234:",
+     "url": "https://www.youtube.com/watch?v=RB5VhsNWKUM",
+     "date": "2026-10-31T03:05:45+00:00",
+     "blurb": "Samach Vav P. 191-192: Coals of the outer altar fuel the inner altar.",
+     "first_seen": "2026-10-31T10:22:42+00:00"
+    },
+    {
+     "id": "yt:video:_cEN6_093I4",
+     "title": "Chapter 37.02: Chof Cheshvan. Dynamics of a Mitzvah: Revealing the Divine Infinite in Existence",
+     "url": "https://www.youtube.com/watch?v=_cEN6_093I4",
+     "date": "2026-10-30T16:30:10+00:00",
+     "blurb": "Chapter 37.02: Chof Cheshvan. Dynamics of a Mitzvah: Revealing the Divine Infinite in Existence The Tanya Applied radio show is broadcast every Saturday night, 10–10:30PM ET on WSNR 620 AM – Metro NY area WJPR 1640 AM — Highland Park and Edison, NJ Online: www.talklinenetwork.com By phone: Listen Line: 641-741-0389 Many of us may be familiar with some of the central ideas in Tanya – including the battle of the two souls; what defines man and makes us tick; how we can control our temptations; how we can become more loving; what we can do to curb and harness our vices, like anger, jealousy, and depression; the formula for growth; how we can develop a healthy relationship with G-d; and why we are here. In this 30-minute program, you will learn how these ideas can be applied to your life today. You will discover secrets to a successful life that will transform you and your relationships. Rabbi Simon Jacobson is the best-selling author of Toward a Meaningful Life, and he is the creator of the acclaimed and popular MyLife: Chassidus Applied series, which has empowered and transformed hundreds of thousands through Torah and Chassidus. Now, Rabbi Jacobson brings his vast scholarship and years of experience to Tanya. Please join Rabbi Simon Jacobson for this exhilarating journey into your psyche and soul. You will come away with life-changing practical guidance and direction, addressing all the issues and challenges you face in life. For more info: www.chassidusapplied.com/tanya Music",
+     "first_seen": "2026-10-31T10:22:42+00:00"
+    },
     {
      "id": "yt:video:deE4lt5c7OI",
      "title": "Samach Vav Part 233:",
      "url": "https://www.youtube.com/watch?v=deE4lt5c7OI",
      "date": "2026-10-30T03:22:07+00:00",
-     "blurb": "Samach Vav p. 190-191: This explains why \"when the Temple is not standing, a person’s table affects atonement\": The table, like the altar, offers and refines the animal soul, drawing down from the world of tohu and thereby bringing atonement. Thus a meal is like prayer in the fact that it refines the animal soul, as well as the physical elements of mineral, vegetable and animal that are consumed in a meal. This refinement of the animal soul is also achieved through our work: You refine your corner of the physical world and the animal soul when you run your business faithfully and ethically, without any deceit, as well as not allowing yourself to be overconsumed with your job, which then disturbs your ability to study Torah and pray. Especially when you do your work for the sake of heaven, intending to do a mitzvah -- give charity and study Torah in peace. Because, left on its own, the animal soul is driven by self-interest and will not hesitate to lie or steal for personal gain. As such, when a person refrains from acting unfaithfully, he is refining his animal soul. Elsewhere it is explained that prayer refines the cognitive soul -- the intelligence of the animal soul. But the refinement of the animal soul itself -- its emotions -- is through eating a meal. Yet prayer also refines the emotions; the difference is that in prayer the refinement is potential, while at a meal it is actualized.",
+     "blurb": "Samach Vav p. 190-191: The effort to refine the animal soul is the work of the six weekdays, when we exert ourselves to contemplate the greatness of G-d, the bittul of the angels, and Atzmus Ohr Ain Sof, and to do so with deep concentration, and igniting the person's love for G-d (the fire and passion below in Pesukei D'zimra, the passion of the angels in the blessings before Shema, inspiring the animal soul, and the passion of the divine soul in Shema). All this is the love generated through the avodah and exertion below -- the work of refining the animal soul, transforming darkness to light, during the six weekdays, which is the general avodah of a person through his lifetime. This then leads to Shabbos, when the primary avodah is the divine soul's passion on its own absorption in its source. This explains why \"when the Temple is not standing, a person’s table affects atonement\": The table, like the altar, offers and refines the animal soul, drawing down from the world of tohu and thereby bringing atonement. Thus a meal is like prayer in the fact that it refines the animal soul, as well as the physical elements of mineral, vegetable and animal that are consumed in a meal. This refinement of the animal soul is also achieved through our work: You refine your corner of the physical world and the animal soul when you run your business faithfully and ethically, without any deceit, as well as not allowing yourself to be overconsumed with your job, which then disturbs your ability",
      "first_seen": "2026-10-30T07:05:38+00:00"
     },
     {
@@ -1356,9 +1389,7 @@
     }
    ],
    "total": 15,
-   "error": "HTTPError: 404 Client Error: Not Found for url: https://www.youtube.com/feeds/videos.xml?channel_id=UCX5tj50hTwF_80XQ9JBMDYQ",
-   "last_success_at": "2026-10-30T10:51:49+00:00",
-   "retained": true
+   "last_success_at": "2026-10-31T10:22:42+00:00"
   },
   {
    "id": "neirot",
@@ -1372,7 +1403,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-31T06:47:55+00:00",
+   "checked_at": "2026-10-31T10:22:42+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1426,7 +1457,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-10-31T06:47:55+00:00"
+   "last_success_at": "2026-10-31T10:22:42+00:00"
   },
   {
    "id": "chassidus_explained",
@@ -1440,7 +1471,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-31T06:47:57+00:00",
+   "checked_at": "2026-10-31T10:22:45+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1502,7 +1533,7 @@
     }
    ],
    "total": 136,
-   "last_success_at": "2026-10-31T06:47:57+00:00"
+   "last_success_at": "2026-10-31T10:22:45+00:00"
   },
   {
    "id": "melukat",
@@ -1516,7 +1547,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-31T06:47:58+00:00",
+   "checked_at": "2026-10-31T10:22:46+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1578,7 +1609,7 @@
     }
    ],
    "total": 168,
-   "last_success_at": "2026-10-31T06:47:58+00:00"
+   "last_success_at": "2026-10-31T10:22:46+00:00"
   },
   {
    "id": "daily_maamar",
@@ -1592,7 +1623,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-31T06:47:59+00:00",
+   "checked_at": "2026-10-31T10:22:47+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1734,7 +1765,7 @@
     }
    ],
    "total": 352,
-   "last_success_at": "2026-10-31T06:47:59+00:00"
+   "last_success_at": "2026-10-31T10:22:47+00:00"
   },
   {
    "id": "wellsprings",
@@ -1748,7 +1779,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-31T06:48:01+00:00",
+   "checked_at": "2026-10-31T10:22:49+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1794,7 +1825,7 @@
     }
    ],
    "total": 125,
-   "last_success_at": "2026-10-31T06:48:01+00:00"
+   "last_success_at": "2026-10-31T10:22:49+00:00"
   },
   {
    "id": "daily_sicha",
@@ -1808,7 +1839,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-31T06:48:01+00:00",
+   "checked_at": "2026-10-31T10:22:50+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1942,7 +1973,7 @@
     }
    ],
    "total": 1415,
-   "last_success_at": "2026-10-31T06:48:01+00:00"
+   "last_success_at": "2026-10-31T10:22:50+00:00"
   },
   {
    "id": "learnchassidus",
@@ -1956,7 +1987,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-31T06:48:06+00:00",
+   "checked_at": "2026-10-31T10:22:56+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1969,7 +2000,7 @@
     }
    ],
    "total": 5,
-   "last_success_at": "2026-10-31T06:48:06+00:00"
+   "last_success_at": "2026-10-31T10:22:56+00:00"
   },
   {
    "id": "simplychassidus",
@@ -1983,7 +2014,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-10-31T06:48:06+00:00",
+   "checked_at": "2026-10-31T10:22:57+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2010,7 +2041,7 @@
     }
    ],
    "total": 4,
-   "last_success_at": "2026-10-31T06:48:06+00:00"
+   "last_success_at": "2026-10-31T10:22:57+00:00"
   },
   {
    "id": "alonei_chabad",
@@ -2023,7 +2054,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-31T06:48:07+00:00",
+   "checked_at": "2026-10-31T10:22:58+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -2040,7 +2071,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-31T06:48:07+00:00",
+   "checked_at": "2026-10-31T10:22:58+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -2057,7 +2088,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-31T06:48:07+00:00",
+   "checked_at": "2026-10-31T10:22:58+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2084,7 +2115,7 @@
     }
    ],
    "total": 303,
-   "last_success_at": "2026-10-31T06:48:07+00:00"
+   "last_success_at": "2026-10-31T10:22:58+00:00"
   },
   {
    "id": "lchaim",
@@ -2097,7 +2128,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-31T06:48:09+00:00",
+   "checked_at": "2026-10-31T10:22:59+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2159,7 +2190,7 @@
     }
    ],
    "total": 194,
-   "last_success_at": "2026-10-31T06:48:09+00:00"
+   "last_success_at": "2026-10-31T10:22:59+00:00"
   },
   {
    "id": "one_point",
@@ -2172,7 +2203,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-31T06:48:10+00:00",
+   "checked_at": "2026-10-31T10:23:02+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2213,7 +2244,7 @@
     }
    ],
    "total": 184,
-   "last_success_at": "2026-10-31T06:48:10+00:00"
+   "last_success_at": "2026-10-31T10:23:02+00:00"
   },
   {
    "id": "derher",
@@ -2226,7 +2257,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-31T06:48:11+00:00",
+   "checked_at": "2026-10-31T10:23:04+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -2243,7 +2274,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-31T06:48:11+00:00",
+   "checked_at": "2026-10-31T10:23:04+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -2260,7 +2291,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-31T06:48:11+00:00",
+   "checked_at": "2026-10-31T10:23:04+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2301,7 +2332,7 @@
     }
    ],
    "total": 5,
-   "last_success_at": "2026-10-31T06:48:11+00:00"
+   "last_success_at": "2026-10-31T10:23:04+00:00"
   },
   {
    "id": "maynotecha_inst",
@@ -2314,7 +2345,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-31T06:48:13+00:00",
+   "checked_at": "2026-10-31T10:23:05+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -2331,7 +2362,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-31T06:48:13+00:00",
+   "checked_at": "2026-10-31T10:23:05+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2353,7 +2384,7 @@
     }
    ],
    "total": 1,
-   "last_success_at": "2026-10-31T06:48:13+00:00"
+   "last_success_at": "2026-10-31T10:23:05+00:00"
   },
   {
    "id": "anash",
@@ -2366,7 +2397,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-31T06:48:14+00:00",
+   "checked_at": "2026-10-31T10:23:07+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2540,7 +2571,7 @@
     }
    ],
    "total": 3,
-   "last_success_at": "2026-10-31T06:48:14+00:00"
+   "last_success_at": "2026-10-31T10:23:07+00:00"
   },
   {
    "id": "chabadinfo",
@@ -2553,7 +2584,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-31T06:48:15+00:00",
+   "checked_at": "2026-10-31T10:23:08+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -2570,7 +2601,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-31T06:48:15+00:00",
+   "checked_at": "2026-10-31T10:23:08+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -2587,7 +2618,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-31T06:48:15+00:00",
+   "checked_at": "2026-10-31T10:23:08+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2633,7 +2664,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-10-31T06:48:15+00:00"
+   "last_success_at": "2026-10-31T10:23:08+00:00"
   },
   {
    "id": "kehot",
@@ -2646,7 +2677,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-10-31T06:48:18+00:00",
+   "checked_at": "2026-10-31T10:23:11+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -3148,7 +3179,7 @@
     }
    ],
    "total": 199,
-   "last_success_at": "2026-10-31T06:48:18+00:00"
+   "last_success_at": "2026-10-31T10:23:11+00:00"
   }
  ],
  "browser_checks": {
