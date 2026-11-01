@@ -311,7 +311,7 @@
     "checked": false,
     "drafted_at": "2026-10-29T06:12:40+00:00",
     "source_url": "https://store.kehotonline.com/prodinfo.asp?number=P-CHASD.S",
-    "reviewed_at": "2026-10-31T06:41:08+00:00",
+    "reviewed_at": "2026-11-01T06:21:55+00:00",
     "review_note": "אי־ההתאמה נשארה: כותרת ושדה שפה מציינים פורטוגזית, אך התיאור טוען לתרגום אנגלי. אין אישור."
   },
   "e70522b396ac45f8": {
@@ -347,7 +347,7 @@
     "checked": false,
     "drafted_at": "2026-10-29T06:12:40+00:00",
     "source_url": "https://store.kehotonline.com/prodinfo.asp?number=HKU-HATE",
-    "reviewed_at": "2026-10-31T06:41:08+00:00",
+    "reviewed_at": "2026-11-01T06:21:55+00:00",
     "review_note": "הטקסט על עימוד מחודש מופיע לפני רשימת סט בן 34 כרכים. לא ודאי שהוא מתייחס לקונטרס זה; הטיוטה לא אושרה."
   },
   "2977cf1b425f599b": {
@@ -425,8 +425,10 @@
   "e323d5934b54f025": {
     "he": "גיליון L’Chaim Weekly מספר 1946 לשבת וירא, תשפ״ז (PDF). בשער: מאמר של הרב Yossy Goldman על עמידה לצד עקרונות; ובמדור Living with the Rebbe: פניית אברהם להצלת סדום ודרכי השכנוע שבהן נקט.",
     "basis": "כותרות הגיליון",
-    "checked": false,
+    "checked": true,
     "drafted_at": "2026-10-31T06:46:54+00:00",
-    "source_url": "https://torahprint.nyc3.cdn.digitaloceanspaces.com/pdfFiles/1793338021614_t9om0_lchaim_1946.pdf"
+    "source_url": "https://torahprint.nyc3.cdn.digitaloceanspaces.com/pdfFiles/1793338021614_t9om0_lchaim_1946.pdf",
+    "checked_at": "2026-11-01T06:21:55+00:00",
+    "verification": "ה־PDF המקורי נפתח מחדש; אומתו חזותית מספר 1946 ותאריך 30.10.2026, מאמר Yossy Goldman על עמידה לצד עקרונות, ומדור Living with the Rebbe על אברהם וסדום ודרכי השכנוע. נוסח הטיוטה מ־31.10 נשמר."
   }
 }
