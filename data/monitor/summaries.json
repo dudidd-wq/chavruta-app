@@ -430,5 +430,26 @@
     "source_url": "https://torahprint.nyc3.cdn.digitaloceanspaces.com/pdfFiles/1793338021614_t9om0_lchaim_1946.pdf",
     "checked_at": "2026-11-01T06:21:55+00:00",
     "verification": "ה־PDF המקורי נפתח מחדש; אומתו חזותית מספר 1946 ותאריך 30.10.2026, מאמר Yossy Goldman על עמידה לצד עקרונות, ומדור Living with the Rebbe על אברהם וסדום ודרכי השכנוע. נוסח הטיוטה מ־31.10 נשמר."
+  },
+  "0e02221950a8384a": {
+    "he": "ספר המאמרים תשמ״א של הרבי, בהוצאת ועד הנחות בלה״ק, בעברית וב־506 עמודים. לפי תיאור המפרסם, רוב המאמרים שבכרך טרם פורסמו, ושלושה מהם הוגהו בידי הרבי. תשמ״א היא שנת אמירתם.",
+    "basis": "תיאור",
+    "checked": false,
+    "drafted_at": "2026-11-01T06:25:24+00:00",
+    "source_url": "https://store.kehotonline.com/prodinfo.asp?number=HRE-SM41"
+  },
+  "7c16e8b6a24e61f4": {
+    "he": "Lightpoints במהדורת כריכה רכה קומפקטית באנגלית, לפי פרשות השבוע. לפי תיאור המפרסם, הספר מרכז עיבודים קצרים מתורת הרבי, שחלקם מובאים לראשונה באנגלית, ועוסק בפירושי התורה ובזיקתם לחיי היום־יום.",
+    "basis": "תיאור",
+    "checked": false,
+    "drafted_at": "2026-11-01T06:25:24+00:00",
+    "source_url": "https://store.kehotonline.com/prodinfo.asp?number=ERE-LIGH.M"
+  },
+  "f3b7e7b50f74f813": {
+    "he": "מאמר כתוב באנגלית המבאר את קונטרס בית רבינו שבבבל. הפתיחה עוסקת במושג מקדש מעט בזמן הגלות, ובמעמדו של בית הכנסת ובית המדרש של נשיא הדור ביחס לשאר בתי הכנסת.",
+    "basis": "תוכן הדף",
+    "checked": false,
+    "drafted_at": "2026-11-01T06:25:24+00:00",
+    "source_url": "https://dvarmalchus770.org/2026/10/31/kuntres-beis-rabbeinu-shbbavel-the-place-of-the-beis-hamikdosh-in-golus/"
   }
 }
