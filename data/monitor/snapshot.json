@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-03T06:27:36+00:00",
+ "generated_at": "2026-11-03T11:55:44+00:00",
  "sources": [
   {
    "id": "chabadlibrary",
@@ -12,7 +12,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-11-03T06:26:23+00:00",
+   "checked_at": "2026-11-03T11:54:31+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -30,7 +30,7 @@
     "primary",
     "whatsnew"
    ],
-   "checked_at": "2026-11-03T06:26:23+00:00",
+   "checked_at": "2026-11-03T11:54:31+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -47,7 +47,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-11-03T06:26:23+00:00",
+   "checked_at": "2026-11-03T11:54:31+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -64,7 +64,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-11-03T06:26:23+00:00",
+   "checked_at": "2026-11-03T11:54:31+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -82,7 +82,7 @@
     "primary",
     "whatsnew"
    ],
-   "checked_at": "2026-11-03T06:26:23+00:00",
+   "checked_at": "2026-11-03T11:54:31+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -102,7 +102,7 @@
     }
    ],
    "total": 132,
-   "last_success_at": "2026-11-03T06:26:23+00:00"
+   "last_success_at": "2026-11-03T11:54:31+00:00"
   },
   {
    "id": "chabadlibrarybooks",
@@ -115,7 +115,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-11-03T06:26:24+00:00",
+   "checked_at": "2026-11-03T11:54:31+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -133,7 +133,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-03T06:26:24+00:00",
+   "checked_at": "2026-11-03T11:54:31+00:00",
    "status": "error",
    "new": [],
    "latest": [],
@@ -154,12 +154,12 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-03T06:26:25+00:00",
+   "checked_at": "2026-11-03T11:54:32+00:00",
    "status": "ok",
    "new": [],
    "latest": [],
    "total": 4,
-   "last_success_at": "2026-11-03T06:26:25+00:00"
+   "last_success_at": "2026-11-03T11:54:32+00:00"
   },
   {
    "id": "biurim",
@@ -173,7 +173,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-03T06:26:26+00:00",
+   "checked_at": "2026-11-03T11:54:34+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -219,7 +219,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-03T06:26:26+00:00"
+   "last_success_at": "2026-11-03T11:54:34+00:00"
   },
   {
    "id": "hm_monsey",
@@ -233,7 +233,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-03T06:26:28+00:00",
+   "checked_at": "2026-11-03T11:54:35+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -279,7 +279,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-03T06:26:28+00:00"
+   "last_success_at": "2026-11-03T11:54:35+00:00"
   },
   {
    "id": "hiskashrus",
@@ -293,7 +293,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-03T06:26:30+00:00",
+   "checked_at": "2026-11-03T11:54:37+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -362,7 +362,7 @@
     }
    ],
    "total": 255,
-   "last_success_at": "2026-11-03T06:26:30+00:00"
+   "last_success_at": "2026-11-03T11:54:37+00:00"
   },
   {
    "id": "lichyot_chassidus",
@@ -376,7 +376,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-03T06:26:34+00:00",
+   "checked_at": "2026-11-03T11:54:39+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -478,7 +478,7 @@
     }
    ],
    "total": 1000,
-   "last_success_at": "2026-11-03T06:26:34+00:00"
+   "last_success_at": "2026-11-03T11:54:39+00:00"
   },
   {
    "id": "chabadzoom",
@@ -492,7 +492,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-03T06:26:36+00:00",
+   "checked_at": "2026-11-03T11:54:41+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -603,7 +603,7 @@
     }
    ],
    "total": 562,
-   "last_success_at": "2026-11-03T06:26:36+00:00"
+   "last_success_at": "2026-11-03T11:54:41+00:00"
   },
   {
    "id": "kovtzimdrive",
@@ -617,7 +617,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-03T06:26:39+00:00",
+   "checked_at": "2026-11-03T11:54:44+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -625,12 +625,12 @@
      "id": "https://www.kovtzimdrive.com/posts/bochurim-build-database-of-thousands-of-%E2%80%98he%E2%80%99aros%E2%80%99",
      "title": "bochurim build database of thousands of ‘he’aros’",
      "url": "https://www.kovtzimdrive.com/posts/bochurim-build-database-of-thousands-of-%E2%80%98he%E2%80%99aros%E2%80%99",
-     "date": "2026-10-27",
+     "date": "2026-11-03",
      "first_seen": "2026-10-20T07:59:38+00:00"
     }
    ],
    "total": 1,
-   "last_success_at": "2026-11-03T06:26:39+00:00"
+   "last_success_at": "2026-11-03T11:54:44+00:00"
   },
   {
    "id": "avita",
@@ -644,7 +644,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-03T06:26:41+00:00",
+   "checked_at": "2026-11-03T11:54:47+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -662,7 +662,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-03T06:26:41+00:00",
+   "checked_at": "2026-11-03T11:54:47+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -684,7 +684,7 @@
     }
    ],
    "total": 2,
-   "last_success_at": "2026-11-03T06:26:41+00:00"
+   "last_success_at": "2026-11-03T11:54:47+00:00"
   },
   {
    "id": "dvarmalchus770",
@@ -698,7 +698,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-03T06:26:43+00:00",
+   "checked_at": "2026-11-03T11:54:48+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -800,7 +800,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-03T06:26:43+00:00"
+   "last_success_at": "2026-11-03T11:54:48+00:00"
   },
   {
    "id": "soulwords",
@@ -814,7 +814,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-03T06:26:44+00:00",
+   "checked_at": "2026-11-03T11:54:49+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -876,7 +876,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-03T06:26:44+00:00"
+   "last_success_at": "2026-11-03T11:54:49+00:00"
   },
   {
    "id": "sie_weekly",
@@ -890,7 +890,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-03T06:26:46+00:00",
+   "checked_at": "2026-11-03T11:54:51+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -945,7 +945,7 @@
     }
    ],
    "total": 116,
-   "last_success_at": "2026-11-03T06:26:46+00:00"
+   "last_success_at": "2026-11-03T11:54:51+00:00"
   },
   {
    "id": "pls",
@@ -959,7 +959,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-03T06:26:47+00:00",
+   "checked_at": "2026-11-03T11:54:53+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1037,7 +1037,7 @@
     }
    ],
    "total": 200,
-   "last_success_at": "2026-11-03T06:26:47+00:00"
+   "last_success_at": "2026-11-03T11:54:53+00:00"
   },
   {
    "id": "chayenu_ls",
@@ -1051,7 +1051,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-03T06:26:48+00:00",
+   "checked_at": "2026-11-03T11:54:54+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1078,7 +1078,7 @@
     }
    ],
    "total": 2,
-   "last_success_at": "2026-11-03T06:26:48+00:00"
+   "last_success_at": "2026-11-03T11:54:54+00:00"
   },
   {
    "id": "weekly_sicha",
@@ -1092,7 +1092,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-03T06:26:50+00:00",
+   "checked_at": "2026-11-03T11:54:55+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1147,7 +1147,7 @@
     }
    ],
    "total": 118,
-   "last_success_at": "2026-11-03T06:26:50+00:00"
+   "last_success_at": "2026-11-03T11:54:55+00:00"
   },
   {
    "id": "theyeshiva",
@@ -1161,7 +1161,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-03T06:26:51+00:00",
+   "checked_at": "2026-11-03T11:54:56+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1263,7 +1263,7 @@
     }
    ],
    "total": 1543,
-   "last_success_at": "2026-11-03T06:26:51+00:00"
+   "last_success_at": "2026-11-03T11:54:56+00:00"
   },
   {
    "id": "chassidus_applied",
@@ -1277,16 +1277,33 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-03T06:26:54+00:00",
-   "status": "error",
-   "new": [],
+   "checked_at": "2026-11-03T11:54:59+00:00",
+   "status": "ok",
+   "new": [
+    {
+     "id": "yt:video:iuRi3Utbt0k",
+     "title": "Samach Vav Part 236:",
+     "url": "https://www.youtube.com/watch?v=iuRi3Utbt0k",
+     "date": "2026-11-03T03:45:08+00:00",
+     "blurb": "[End of discourse 17: Answers to the questions asked at the beginning of the discourse:] According to the above explanation, we will understand the verse \"a man of the house of Levi went and married a daughter of Levi\": The daughter of Levi who was diminished by song (aze'iras garmo b'shiroso) refers to the bittul of the divine soul, through its self-generated effort and avodah, in the song of Pesukei D'Zimrah and Shema. This, in turn, leads to \"a man of the house of Levi went and married a daughter of Levi,\" referring to the high priest who awakens her - the transmission of ahava rabba from above 1. Why does it say Vayeilech Ish? 2. What is the meaning of the Zohar explaining this verse: that she was diminished by song, and he came to elevate her? 3. What are the three expressions used?",
+     "first_seen": "2026-11-03T11:54:59+00:00"
+    }
+   ],
    "latest": [
+    {
+     "id": "yt:video:iuRi3Utbt0k",
+     "title": "Samach Vav Part 236:",
+     "url": "https://www.youtube.com/watch?v=iuRi3Utbt0k",
+     "date": "2026-11-03T03:45:08+00:00",
+     "blurb": "[End of discourse 17: Answers to the questions asked at the beginning of the discourse:] According to the above explanation, we will understand the verse \"a man of the house of Levi went and married a daughter of Levi\": The daughter of Levi who was diminished by song (aze'iras garmo b'shiroso) refers to the bittul of the divine soul, through its self-generated effort and avodah, in the song of Pesukei D'Zimrah and Shema. This, in turn, leads to \"a man of the house of Levi went and married a daughter of Levi,\" referring to the high priest who awakens her - the transmission of ahava rabba from above 1. Why does it say Vayeilech Ish? 2. What is the meaning of the Zohar explaining this verse: that she was diminished by song, and he came to elevate her? 3. What are the three expressions used?",
+     "first_seen": "2026-11-03T11:54:59+00:00"
+    },
     {
      "id": "yt:video:brHYs6N1Lvc",
      "title": "Samach Vav Part 235:",
      "url": "https://www.youtube.com/watch?v=brHYs6N1Lvc",
      "date": "2026-11-02T04:58:49+00:00",
-     "blurb": "Samach Vav P. 192-193: In addition (to avodah receiving support from above), the general inspiration of avodah every day is empowered by the auspicious time of Keriyas Shema and prayer each morning, which There was a mitzvah to bring the smoldering coals of the outer altar to fuel the inner altar, indicating that refining the birurim of the 288 sparks (on the outer altar) fuels the ketoros that rise from these coals, to elevate the soul higher and higher, to be absorbed in its source in the \"body of the King.\" The divine soul's elevation comes from the work with the animal soul. Additionally, bringing the coals from the outer to the inner altar refers to \"unify our hearts\" -- both sides of the heart, the divine and animal soul. This avodah of the core souls comes as a gift from above, something that cannot be generated by the soul's own effort. However, to reach this level we first need to do the avodah below, to the extent that we are capable of. Then it is given the love from above -- one who toils erev Shabbos, the exertion to excite the passion of the physical heart, eats on Shabbos, receives the ahava rabba and ahava b'taanugim from above. Shemone Esrei in the daily prayer is similar to the level of Shabbos: Following the toil of refining the animal soul through the perceptible and palpable passion in Pesukei D'zimra, with sound and song, followed by the blessings before Shema and the Shema -- we reach the avodah of elevating the soul itself in the 15 vav'in of Emes V'ya",
+     "blurb": "Samach Vav P. 192-193: An additional revelation from above that supports the avodah below is the auspicious time when the avodah is done. In addition (to avodah receiving support from above), the general inspiration of the daily avodah of prayer to contemplate and stimulate love and reverence is empowered by the auspicious time of Keriyas Shema and prayer each morning, when the supernal intellect above is in a state of —it is a time of great illumination in the higher worlds; שֶׁהִיא שְׁעַת מוֹחִין דְּגַדְלוּת לְמַעְלָה, likewise below—in this physical world—the time [of prayer] is propitious for every man to ascend to a higher spiritual level. a set time (such as the Shema and prayer) and the light that shines then help, but the essential service remains the person’s own effort. The general service of contemplation (hitbonenus) and the arousal of love and reverence for God also take place at a time and season suited to them. As is stated in [the source abbreviated בסש\"ב], chapter 12, the time of the Shema and prayer is the time of mochin d’gadlus (expanded consciousness) above, and also below it is the opportune hour for every person to bind his mind and thought, etc. And then specifically [the Divine soul] rules and governs over the animal soul, etc. Nevertheless, this is specifically through his own service and toil. When he toils at the suitable time and hour, the contemplation will be as it should be, so that it settles and is absorbed well in his soul, and he is aroused",
      "first_seen": "2026-11-02T12:22:04+00:00"
     },
     {
@@ -1443,9 +1460,7 @@
     }
    ],
    "total": 15,
-   "error": "HTTPError: 404 Client Error: Not Found for url: https://www.youtube.com/feeds/videos.xml?channel_id=UCX5tj50hTwF_80XQ9JBMDYQ",
-   "last_success_at": "2026-11-02T12:22:04+00:00",
-   "retained": true
+   "last_success_at": "2026-11-03T11:54:59+00:00"
   },
   {
    "id": "neirot",
@@ -1459,7 +1474,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-03T06:26:54+00:00",
+   "checked_at": "2026-11-03T11:55:00+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1513,7 +1528,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-03T06:26:54+00:00"
+   "last_success_at": "2026-11-03T11:55:00+00:00"
   },
   {
    "id": "chassidus_explained",
@@ -1527,7 +1542,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-03T06:26:56+00:00",
+   "checked_at": "2026-11-03T11:55:03+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1589,7 +1604,7 @@
     }
    ],
    "total": 136,
-   "last_success_at": "2026-11-03T06:26:56+00:00"
+   "last_success_at": "2026-11-03T11:55:03+00:00"
   },
   {
    "id": "melukat",
@@ -1603,7 +1618,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-03T06:26:58+00:00",
+   "checked_at": "2026-11-03T11:55:04+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1665,7 +1680,7 @@
     }
    ],
    "total": 168,
-   "last_success_at": "2026-11-03T06:26:58+00:00"
+   "last_success_at": "2026-11-03T11:55:04+00:00"
   },
   {
    "id": "daily_maamar",
@@ -1679,7 +1694,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-03T06:26:59+00:00",
+   "checked_at": "2026-11-03T11:55:06+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1837,7 +1852,7 @@
     }
    ],
    "total": 354,
-   "last_success_at": "2026-11-03T06:26:59+00:00"
+   "last_success_at": "2026-11-03T11:55:06+00:00"
   },
   {
    "id": "wellsprings",
@@ -1851,7 +1866,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-03T06:27:00+00:00",
+   "checked_at": "2026-11-03T11:55:07+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1897,7 +1912,7 @@
     }
    ],
    "total": 125,
-   "last_success_at": "2026-11-03T06:27:00+00:00"
+   "last_success_at": "2026-11-03T11:55:07+00:00"
   },
   {
    "id": "daily_sicha",
@@ -1911,7 +1926,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-03T06:27:01+00:00",
+   "checked_at": "2026-11-03T11:55:08+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2069,7 +2084,7 @@
     }
    ],
    "total": 1418,
-   "last_success_at": "2026-11-03T06:27:01+00:00"
+   "last_success_at": "2026-11-03T11:55:08+00:00"
   },
   {
    "id": "learnchassidus",
@@ -2083,7 +2098,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-03T06:27:06+00:00",
+   "checked_at": "2026-11-03T11:55:13+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2096,7 +2111,7 @@
     }
    ],
    "total": 5,
-   "last_success_at": "2026-11-03T06:27:06+00:00"
+   "last_success_at": "2026-11-03T11:55:13+00:00"
   },
   {
    "id": "simplychassidus",
@@ -2110,7 +2125,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-03T06:27:06+00:00",
+   "checked_at": "2026-11-03T11:55:13+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2137,7 +2152,7 @@
     }
    ],
    "total": 4,
-   "last_success_at": "2026-11-03T06:27:06+00:00"
+   "last_success_at": "2026-11-03T11:55:13+00:00"
   },
   {
    "id": "alonei_chabad",
@@ -2150,7 +2165,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-03T06:27:07+00:00",
+   "checked_at": "2026-11-03T11:55:15+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -2167,7 +2182,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-03T06:27:07+00:00",
+   "checked_at": "2026-11-03T11:55:15+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -2184,7 +2199,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-03T06:27:07+00:00",
+   "checked_at": "2026-11-03T11:55:15+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2211,7 +2226,7 @@
     }
    ],
    "total": 303,
-   "last_success_at": "2026-11-03T06:27:07+00:00"
+   "last_success_at": "2026-11-03T11:55:15+00:00"
   },
   {
    "id": "lchaim",
@@ -2224,7 +2239,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-03T06:27:08+00:00",
+   "checked_at": "2026-11-03T11:55:16+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2286,7 +2301,7 @@
     }
    ],
    "total": 194,
-   "last_success_at": "2026-11-03T06:27:08+00:00"
+   "last_success_at": "2026-11-03T11:55:16+00:00"
   },
   {
    "id": "one_point",
@@ -2299,7 +2314,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-03T06:27:10+00:00",
+   "checked_at": "2026-11-03T11:55:17+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2340,7 +2355,7 @@
     }
    ],
    "total": 180,
-   "last_success_at": "2026-11-03T06:27:10+00:00"
+   "last_success_at": "2026-11-03T11:55:17+00:00"
   },
   {
    "id": "derher",
@@ -2353,7 +2368,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-03T06:27:11+00:00",
+   "checked_at": "2026-11-03T11:55:19+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -2370,7 +2385,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-03T06:27:11+00:00",
+   "checked_at": "2026-11-03T11:55:19+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -2387,7 +2402,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-03T06:27:11+00:00",
+   "checked_at": "2026-11-03T11:55:19+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2428,7 +2443,7 @@
     }
    ],
    "total": 5,
-   "last_success_at": "2026-11-03T06:27:11+00:00"
+   "last_success_at": "2026-11-03T11:55:19+00:00"
   },
   {
    "id": "maynotecha_inst",
@@ -2441,7 +2456,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-03T06:27:13+00:00",
+   "checked_at": "2026-11-03T11:55:20+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -2458,7 +2473,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-03T06:27:13+00:00",
+   "checked_at": "2026-11-03T11:55:20+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2480,7 +2495,7 @@
     }
    ],
    "total": 0,
-   "last_success_at": "2026-11-03T06:27:13+00:00"
+   "last_success_at": "2026-11-03T11:55:20+00:00"
   },
   {
    "id": "anash",
@@ -2493,7 +2508,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-03T06:27:14+00:00",
+   "checked_at": "2026-11-03T11:55:22+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2683,7 +2698,7 @@
     }
    ],
    "total": 3,
-   "last_success_at": "2026-11-03T06:27:14+00:00"
+   "last_success_at": "2026-11-03T11:55:22+00:00"
   },
   {
    "id": "chabadinfo",
@@ -2696,7 +2711,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-03T06:27:15+00:00",
+   "checked_at": "2026-11-03T11:55:23+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -2713,7 +2728,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-03T06:27:15+00:00",
+   "checked_at": "2026-11-03T11:55:23+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -2730,7 +2745,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-03T06:27:15+00:00",
+   "checked_at": "2026-11-03T11:55:23+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2776,7 +2791,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-03T06:27:15+00:00"
+   "last_success_at": "2026-11-03T11:55:23+00:00"
   },
   {
    "id": "kehot",
@@ -2789,7 +2804,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-03T06:27:18+00:00",
+   "checked_at": "2026-11-03T11:55:26+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -3387,7 +3402,7 @@
     }
    ],
    "total": 199,
-   "last_success_at": "2026-11-03T06:27:18+00:00"
+   "last_success_at": "2026-11-03T11:55:26+00:00"
   }
  ],
  "browser_checks": {
