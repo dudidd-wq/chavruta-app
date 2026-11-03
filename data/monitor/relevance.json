@@ -1585,5 +1585,35 @@
     "why": "העמוד המקורי נפתח ומכיל ביאור כתוב מפורט לקונטרס בית רבינו שבבבל. נגני השמע הנלווים אינם בסיס ההכללה; תאריך הפוסט 31.10.2026.",
     "checked_at": "2026-11-01T06:25:24+00:00",
     "source_url": "https://dvarmalchus770.org/2026/10/31/kuntres-beis-rabbeinu-shbbavel-the-place-of-the-beis-hamikdosh-in-golus/"
+  },
+  "0d2ee082e0c8b72f": {
+    "cls": "לא רלוונטי",
+    "why": "המקור נפתח: כתבת אירוע חנוכת חדר קפה במעייני ישראל, ללא פרסום כתוב מהסוגים המותרים.",
+    "source_url": "https://anash.org/minsky-brothers-dedicate-coffee-room-at-chassidus-center/",
+    "checked_at": "2026-11-03T06:22:10+00:00"
+  },
+  "483f155dc38679a0": {
+    "cls": "כפול",
+    "why": "קישור Download הכללי זוהה בקובץ המקורי כחיי שרה לקוטי שיחות חלק ג׳, ונשמר כרשומה המזוהה 2ef54919c695666d.",
+    "checked_at": "2026-11-03T06:22:10+00:00",
+    "source_url": "https://drive.google.com/file/d/1NulDzO47acqE9U2DsDEwVymjNsEqwLlb/view"
+  },
+  "2ef54919c695666d": {
+    "cls": "מקור",
+    "why": "תרגום כתוב לאנגלית של שיחת חיי שרה מלקוטי שיחות חלק ג׳; השער מאמת עמודים 772–780.",
+    "source_url": "https://drive.google.com/file/d/1NulDzO47acqE9U2DsDEwVymjNsEqwLlb/view",
+    "checked_at": "2026-11-03T06:22:10+00:00"
+  },
+  "da7305205eb1b45f": {
+    "cls": "מקור",
+    "why": "חוברת הנחה כתובה להתוועדות חיי שרה תשמ״ג; השער ותיאור הפרסום נפתחו. שנת האמירה נפרדת מפרסום הכתבה ב־2.11.2026.",
+    "source_url": "https://hageula.com/news/press/28240.htm",
+    "checked_at": "2026-11-03T06:22:10+00:00"
+  },
+  "ba83de6e618dc3de": {
+    "cls": "מקור",
+    "why": "ספר כתוב הכולל שיחות הרבי ומכתבים; שער ופתח הדבר נפתחו ומזהים שיחות וירא ומשפטים תשמ״ב. הזיהוי מבוסס על חלקים אלה, ולא על עצם היותו ספר זיכרון.",
+    "source_url": "https://chabad.info/beis-medrash/1378607/",
+    "checked_at": "2026-11-03T06:22:10+00:00"
   }
 }

@@ -311,7 +311,7 @@
     "checked": false,
     "drafted_at": "2026-10-29T06:12:40+00:00",
     "source_url": "https://store.kehotonline.com/prodinfo.asp?number=P-CHASD.S",
-    "reviewed_at": "2026-11-01T06:21:55+00:00",
+    "reviewed_at": "2026-11-03T06:22:10+00:00",
     "review_note": "אי־ההתאמה נשארה: כותרת ושדה שפה מציינים פורטוגזית, אך התיאור טוען לתרגום אנגלי. אין אישור."
   },
   "e70522b396ac45f8": {
@@ -347,7 +347,7 @@
     "checked": false,
     "drafted_at": "2026-10-29T06:12:40+00:00",
     "source_url": "https://store.kehotonline.com/prodinfo.asp?number=HKU-HATE",
-    "reviewed_at": "2026-11-01T06:21:55+00:00",
+    "reviewed_at": "2026-11-03T06:22:10+00:00",
     "review_note": "הטקסט על עימוד מחודש מופיע לפני רשימת סט בן 34 כרכים. לא ודאי שהוא מתייחס לקונטרס זה; הטיוטה לא אושרה."
   },
   "2977cf1b425f599b": {
@@ -434,22 +434,49 @@
   "0e02221950a8384a": {
     "he": "ספר המאמרים תשמ״א של הרבי, בהוצאת ועד הנחות בלה״ק, בעברית וב־506 עמודים. לפי תיאור המפרסם, רוב המאמרים שבכרך טרם פורסמו, ושלושה מהם הוגהו בידי הרבי. תשמ״א היא שנת אמירתם.",
     "basis": "תיאור",
-    "checked": false,
+    "checked": true,
     "drafted_at": "2026-11-01T06:25:24+00:00",
-    "source_url": "https://store.kehotonline.com/prodinfo.asp?number=HRE-SM41"
+    "source_url": "https://store.kehotonline.com/prodinfo.asp?number=HRE-SM41",
+    "checked_at": "2026-11-03T06:22:10+00:00",
+    "verification": "תיאור המוצר המקורי מאמת 506 עמודים בעברית, מאמרי תשמ״א, רובם לא פורסמו ושלושה מוגהים."
   },
   "7c16e8b6a24e61f4": {
     "he": "Lightpoints במהדורת כריכה רכה קומפקטית באנגלית, לפי פרשות השבוע. לפי תיאור המפרסם, הספר מרכז עיבודים קצרים מתורת הרבי, שחלקם מובאים לראשונה באנגלית, ועוסק בפירושי התורה ובזיקתם לחיי היום־יום.",
     "basis": "תיאור",
-    "checked": false,
+    "checked": true,
     "drafted_at": "2026-11-01T06:25:24+00:00",
-    "source_url": "https://store.kehotonline.com/prodinfo.asp?number=ERE-LIGH.M"
+    "source_url": "https://store.kehotonline.com/prodinfo.asp?number=ERE-LIGH.M",
+    "checked_at": "2026-11-03T06:22:10+00:00",
+    "verification": "תיאור המוצר המקורי מאמת מהדורה קומפקטית רכה באנגלית, עיבודים קצרים ופירושי תורה וזיקתם לחיי היום־יום."
   },
   "f3b7e7b50f74f813": {
     "he": "מאמר כתוב באנגלית המבאר את קונטרס בית רבינו שבבבל. הפתיחה עוסקת במושג מקדש מעט בזמן הגלות, ובמעמדו של בית הכנסת ובית המדרש של נשיא הדור ביחס לשאר בתי הכנסת.",
     "basis": "תוכן הדף",
-    "checked": false,
+    "checked": true,
     "drafted_at": "2026-11-01T06:25:24+00:00",
-    "source_url": "https://dvarmalchus770.org/2026/10/31/kuntres-beis-rabbeinu-shbbavel-the-place-of-the-beis-hamikdosh-in-golus/"
+    "source_url": "https://dvarmalchus770.org/2026/10/31/kuntres-beis-rabbeinu-shbbavel-the-place-of-the-beis-hamikdosh-in-golus/",
+    "checked_at": "2026-11-03T06:22:10+00:00",
+    "verification": "העמוד המקורי נפתח; פתיחתו מאמתת ביאור כתוב לבית רבינו שבבבל, מקדש מעט ומעמד בית נשיא הדור."
+  },
+  "2ef54919c695666d": {
+    "he": "תרגום לאנגלית של שיחת חיי שרה מתוך לקוטי שיחות חלק ג׳, במסגרת SIE Weekly (PDF). שער החוברת מציין את עמודים 772–780 בכרך המקורי.",
+    "basis": "פתיחת הקובץ",
+    "checked": false,
+    "drafted_at": "2026-11-03T06:22:10+00:00",
+    "source_url": "https://drive.google.com/file/d/1NulDzO47acqE9U2DsDEwVymjNsEqwLlb/view"
+  },
+  "da7305205eb1b45f": {
+    "he": "חוברת דברי משיח ובה התוועדות שבת חיי שרה תשמ״ג (PDF). לפי תיאור המפרסם, נוספו השלמה לשיחת חיי שרה תשמ״ז, קטעים מיחידות לגבירים בז׳ תשרי תנש״א ומכתבי תלמיד ממרחשוון תשנ״ב.",
+    "basis": "תיאור",
+    "checked": false,
+    "drafted_at": "2026-11-03T06:22:10+00:00",
+    "source_url": "https://hageula.com/news/press/28240.htm"
+  },
+  "ba83de6e618dc3de": {
+    "he": "ספר תפארת יוסף יצחק (PDF), ובו שיחות הרבי לצד מאמרים תורניים. לפי פתח הדבר, נכללו שיחות וירא ומשפטים תשמ״ב; תיאור הפרסום מציין גם מכתבי הרבי לרב בצלאל ווילשאנסקי, עם פענוח ומראי מקומות.",
+    "basis": "פתיחת הקובץ",
+    "checked": false,
+    "drafted_at": "2026-11-03T06:22:10+00:00",
+    "source_url": "https://chabad.info/beis-medrash/1378607/"
   }
 }
