@@ -311,7 +311,7 @@
     "checked": false,
     "drafted_at": "2026-10-29T06:12:40+00:00",
     "source_url": "https://store.kehotonline.com/prodinfo.asp?number=P-CHASD.S",
-    "reviewed_at": "2026-11-03T06:22:10+00:00",
+    "reviewed_at": "2026-11-04T06:53:04+00:00",
     "review_note": "אי־ההתאמה נשארה: כותרת ושדה שפה מציינים פורטוגזית, אך התיאור טוען לתרגום אנגלי. אין אישור."
   },
   "e70522b396ac45f8": {
@@ -347,7 +347,7 @@
     "checked": false,
     "drafted_at": "2026-10-29T06:12:40+00:00",
     "source_url": "https://store.kehotonline.com/prodinfo.asp?number=HKU-HATE",
-    "reviewed_at": "2026-11-03T06:22:10+00:00",
+    "reviewed_at": "2026-11-04T06:53:04+00:00",
     "review_note": "הטקסט על עימוד מחודש מופיע לפני רשימת סט בן 34 כרכים. לא ודאי שהוא מתייחס לקונטרס זה; הטיוטה לא אושרה."
   },
   "2977cf1b425f599b": {
@@ -461,29 +461,44 @@
   "2ef54919c695666d": {
     "he": "תרגום לאנגלית של שיחת חיי שרה מתוך לקוטי שיחות חלק ג׳, במסגרת SIE Weekly (PDF). שער החוברת מציין את עמודים 772–780 בכרך המקורי.",
     "basis": "פתיחת הקובץ",
-    "checked": false,
+    "checked": true,
     "drafted_at": "2026-11-03T06:22:10+00:00",
-    "source_url": "https://drive.google.com/file/d/1NulDzO47acqE9U2DsDEwVymjNsEqwLlb/view"
+    "source_url": "https://drive.google.com/file/d/1NulDzO47acqE9U2DsDEwVymjNsEqwLlb/view",
+    "checked_at": "2026-11-04T06:53:04+00:00",
+    "verification": "שער חוברת SIE נפתח מחדש ומאמת חיי שרה, לקוטי שיחות חלק ג׳ ועמודים 772–780."
   },
   "da7305205eb1b45f": {
     "he": "חוברת דברי משיח ובה התוועדות שבת חיי שרה תשמ״ג (PDF). לפי תיאור המפרסם, נוספו השלמה לשיחת חיי שרה תשמ״ז, קטעים מיחידות לגבירים בז׳ תשרי תנש״א ומכתבי תלמיד ממרחשוון תשנ״ב.",
     "basis": "תיאור",
-    "checked": false,
+    "checked": true,
     "drafted_at": "2026-11-03T06:22:10+00:00",
-    "source_url": "https://hageula.com/news/press/28240.htm"
+    "source_url": "https://hageula.com/news/press/28240.htm",
+    "checked_at": "2026-11-04T06:53:04+00:00",
+    "verification": "הכתבה המקורית נפתחה מחדש; אומתו חיי שרה תשמ״ג וכל שלוש ההוספות המנויות בטיוטה."
   },
   "ba83de6e618dc3de": {
     "he": "ספר תפארת יוסף יצחק (PDF), ובו שיחות הרבי לצד מאמרים תורניים. לפי פתח הדבר, נכללו שיחות וירא ומשפטים תשמ״ב; תיאור הפרסום מציין גם מכתבי הרבי לרב בצלאל ווילשאנסקי, עם פענוח ומראי מקומות.",
     "basis": "פתיחת הקובץ",
-    "checked": false,
+    "checked": true,
     "drafted_at": "2026-11-03T06:22:10+00:00",
-    "source_url": "https://chabad.info/beis-medrash/1378607/"
+    "source_url": "https://chabad.info/beis-medrash/1378607/",
+    "checked_at": "2026-11-04T06:53:04+00:00",
+    "verification": "הכתבה וה־PDF המקורי נפתחו מחדש; שער ופתח הדבר בעמוד 3 מאמתים שיחות וירא ומשפטים תשמ״ב, והכתבה מאמתת מכתבי הרבי לרב בצלאל ווילשאנסקי עם פענוח ומראי מקומות."
   },
   "e63240be1695b245": {
     "he": "מאמר כתוב באנגלית המבאר את שיחת חיי שרה תשנ״ב, שנאמרה בכינוס השלוחים. לפי פתיחת המאמר, הביאור עוסק במשימת השליחות ובהכנה לקבלת פני משיח, ובקשר לפרשת שליחותו של אליעזר.",
     "basis": "תוכן הדף",
-    "checked": false,
+    "checked": true,
     "drafted_at": "2026-11-03T06:25:42+00:00",
-    "source_url": "https://dvarmalchus770.org/2026/11/02/chayei-sara-5752-shlichus-is-finished-now-we-must-greet-moshiach-2/"
+    "source_url": "https://dvarmalchus770.org/2026/11/02/chayei-sara-5752-shlichus-is-finished-now-we-must-greet-moshiach-2/",
+    "checked_at": "2026-11-04T06:53:04+00:00",
+    "verification": "העמוד המקורי נפתח מחדש; הפתיחה מאמתת שיחת חיי שרה תשנ״ב בכינוס השלוחים, משימת השליחות, קבלת פני משיח ושליחות אליעזר."
+  },
+  "6cc66fb4322c659b": {
+    "he": "גיליון שיחת השבוע 2079 לפרשת חיי שרה, תשפ״ז. במדור שלחן שבת: ״צריך לפעול וגם להצליח״, משיחת הרבי; ובכותרות הגיליון גם שליחות אליעזר, מסירות לשליחות, והלכות דרך־ארץ בשתייה.",
+    "basis": "כותרות הגיליון",
+    "checked": false,
+    "drafted_at": "2026-11-04T06:53:04+00:00",
+    "source_url": "https://www.chabad.org.il/Magazines/Articles.asp?CategoryID=5175"
   }
 }
