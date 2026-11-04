@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-04T06:55:25+00:00",
+ "generated_at": "2026-11-04T06:58:09+00:00",
  "sources": [
   {
    "id": "chabadlibrary",
@@ -12,7 +12,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-11-04T06:54:12+00:00",
+   "checked_at": "2026-11-04T06:56:57+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -30,7 +30,7 @@
     "primary",
     "whatsnew"
    ],
-   "checked_at": "2026-11-04T06:54:12+00:00",
+   "checked_at": "2026-11-04T06:56:57+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -47,7 +47,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-11-04T06:54:12+00:00",
+   "checked_at": "2026-11-04T06:56:57+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -64,7 +64,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-11-04T06:54:12+00:00",
+   "checked_at": "2026-11-04T06:56:57+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -82,7 +82,7 @@
     "primary",
     "whatsnew"
    ],
-   "checked_at": "2026-11-04T06:54:12+00:00",
+   "checked_at": "2026-11-04T06:56:57+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -102,7 +102,7 @@
     }
    ],
    "total": 132,
-   "last_success_at": "2026-11-04T06:54:12+00:00"
+   "last_success_at": "2026-11-04T06:56:57+00:00"
   },
   {
    "id": "chabadlibrarybooks",
@@ -115,7 +115,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-11-04T06:54:12+00:00",
+   "checked_at": "2026-11-04T06:56:58+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -133,7 +133,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-04T06:54:12+00:00",
+   "checked_at": "2026-11-04T06:56:58+00:00",
    "status": "error",
    "new": [],
    "latest": [],
@@ -154,12 +154,12 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-04T06:54:14+00:00",
+   "checked_at": "2026-11-04T06:56:59+00:00",
    "status": "ok",
    "new": [],
    "latest": [],
    "total": 4,
-   "last_success_at": "2026-11-04T06:54:14+00:00"
+   "last_success_at": "2026-11-04T06:56:59+00:00"
   },
   {
    "id": "biurim",
@@ -173,7 +173,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-04T06:54:15+00:00",
+   "checked_at": "2026-11-04T06:57:01+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -219,7 +219,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-04T06:54:15+00:00"
+   "last_success_at": "2026-11-04T06:57:01+00:00"
   },
   {
    "id": "hm_monsey",
@@ -233,18 +233,9 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-04T06:54:17+00:00",
+   "checked_at": "2026-11-04T06:57:03+00:00",
    "status": "ok",
-   "new": [
-    {
-     "id": "https://heichalmenachemmonsey.org/?p=10077",
-     "title": "התוועדות כ”ף מרחשון תשפ”ז – הרב קלמן וויינפעלד",
-     "url": "https://heichalmenachemmonsey.org/20_cheshvan_5787/",
-     "date": "Sun, 01 Nov 2026 03:30:36 +0000",
-     "blurb": "לכבוד יום ההולדת של כ”ק אדמו”ר מוהרש”ב נ”ע – כ”ף מרחשון כתר”א",
-     "first_seen": "2026-11-04T06:54:17+00:00"
-    }
-   ],
+   "new": [],
    "latest": [
     {
      "id": "https://heichalmenachemmonsey.org/?p=10077",
@@ -296,7 +287,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-04T06:54:17+00:00"
+   "last_success_at": "2026-11-04T06:57:03+00:00"
   },
   {
    "id": "hiskashrus",
@@ -310,7 +301,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-04T06:54:19+00:00",
+   "checked_at": "2026-11-04T06:57:05+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -379,7 +370,7 @@
     }
    ],
    "total": 0,
-   "last_success_at": "2026-11-04T06:54:19+00:00"
+   "last_success_at": "2026-11-04T06:57:05+00:00"
   },
   {
    "id": "lichyot_chassidus",
@@ -393,7 +384,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-04T06:54:20+00:00",
+   "checked_at": "2026-11-04T06:57:06+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -495,7 +486,7 @@
     }
    ],
    "total": 1000,
-   "last_success_at": "2026-11-04T06:54:20+00:00"
+   "last_success_at": "2026-11-04T06:57:06+00:00"
   },
   {
    "id": "chabadzoom",
@@ -509,7 +500,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-04T06:54:23+00:00",
+   "checked_at": "2026-11-04T06:57:09+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -620,7 +611,7 @@
     }
    ],
    "total": 562,
-   "last_success_at": "2026-11-04T06:54:23+00:00"
+   "last_success_at": "2026-11-04T06:57:09+00:00"
   },
   {
    "id": "kovtzimdrive",
@@ -634,7 +625,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-04T06:54:25+00:00",
+   "checked_at": "2026-11-04T06:57:10+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -642,12 +633,12 @@
      "id": "https://www.kovtzimdrive.com/posts/bochurim-build-database-of-thousands-of-%E2%80%98he%E2%80%99aros%E2%80%99",
      "title": "bochurim build database of thousands of ‘he’aros’",
      "url": "https://www.kovtzimdrive.com/posts/bochurim-build-database-of-thousands-of-%E2%80%98he%E2%80%99aros%E2%80%99",
-     "date": "2026-11-03",
+     "date": "2026-11-02",
      "first_seen": "2026-10-20T07:59:38+00:00"
     }
    ],
    "total": 1,
-   "last_success_at": "2026-11-04T06:54:25+00:00"
+   "last_success_at": "2026-11-04T06:57:10+00:00"
   },
   {
    "id": "avita",
@@ -661,7 +652,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-04T06:54:27+00:00",
+   "checked_at": "2026-11-04T06:57:12+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -679,7 +670,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-04T06:54:27+00:00",
+   "checked_at": "2026-11-04T06:57:12+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -701,7 +692,7 @@
     }
    ],
    "total": 2,
-   "last_success_at": "2026-11-04T06:54:27+00:00"
+   "last_success_at": "2026-11-04T06:57:12+00:00"
   },
   {
    "id": "dvarmalchus770",
@@ -715,7 +706,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-04T06:54:29+00:00",
+   "checked_at": "2026-11-04T06:57:15+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -817,7 +808,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-04T06:54:29+00:00"
+   "last_success_at": "2026-11-04T06:57:15+00:00"
   },
   {
    "id": "soulwords",
@@ -831,7 +822,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-04T06:54:30+00:00",
+   "checked_at": "2026-11-04T06:57:16+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -893,7 +884,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-04T06:54:30+00:00"
+   "last_success_at": "2026-11-04T06:57:16+00:00"
   },
   {
    "id": "sie_weekly",
@@ -907,7 +898,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-04T06:54:32+00:00",
+   "checked_at": "2026-11-04T06:57:18+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -962,7 +953,7 @@
     }
    ],
    "total": 116,
-   "last_success_at": "2026-11-04T06:54:32+00:00"
+   "last_success_at": "2026-11-04T06:57:18+00:00"
   },
   {
    "id": "pls",
@@ -976,7 +967,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-04T06:54:33+00:00",
+   "checked_at": "2026-11-04T06:57:19+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1054,7 +1045,7 @@
     }
    ],
    "total": 200,
-   "last_success_at": "2026-11-04T06:54:33+00:00"
+   "last_success_at": "2026-11-04T06:57:19+00:00"
   },
   {
    "id": "chayenu_ls",
@@ -1068,7 +1059,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-04T06:54:35+00:00",
+   "checked_at": "2026-11-04T06:57:21+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1095,7 +1086,7 @@
     }
    ],
    "total": 2,
-   "last_success_at": "2026-11-04T06:54:35+00:00"
+   "last_success_at": "2026-11-04T06:57:21+00:00"
   },
   {
    "id": "weekly_sicha",
@@ -1109,7 +1100,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-04T06:54:36+00:00",
+   "checked_at": "2026-11-04T06:57:22+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1164,7 +1155,7 @@
     }
    ],
    "total": 118,
-   "last_success_at": "2026-11-04T06:54:36+00:00"
+   "last_success_at": "2026-11-04T06:57:22+00:00"
   },
   {
    "id": "theyeshiva",
@@ -1178,18 +1169,9 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-04T06:54:37+00:00",
+   "checked_at": "2026-11-04T06:57:24+00:00",
    "status": "ok",
-   "new": [
-    {
-     "id": "https://www.theyeshiva.net/item/10022",
-     "title": "To Die With No Regrets: Why Did Abraham Pass Away So Content? - Women's Chayei Sarah Class",
-     "url": "https://www.theyeshiva.net/item/10022",
-     "date": "Tue, 3 Nov 2026 09:30:00 -0500",
-     "blurb": "80 Years Later: A Miracle in Auschwitz The heartbreaking regrets of the dying reveal an uncomfortable truth: We spend our lives seeking approval, hiding our authentic selves, and forgetting why we came into this world. Abraham and Sarah offer another way. G-d promised him a nation, a homeland, and an extraordinary future. At 137, he had no grandchildren and not even a burial plot. Yet he was blessed with everything. What did Abraham understand that we are missing? Why is a Torah portion about death called Chayei Sarah, the Life of Sarah? Because Abraham and Sarah reveal the secret of a meaningful existence: Live authentically, embrace your divine mission, stop chasing approval, and discover the serenity that comes from knowing why you are alive. This life-changing class was presented by Rabbi YY Jacobson on Tuesday, Parshas Chayei Sarah, 23 Cheshvan, 5787, November 3, 2026. View Source Sheets: https://portal.theyeshiva.net/api/source-sheets/10022",
-     "first_seen": "2026-11-04T06:54:37+00:00"
-    }
-   ],
+   "new": [],
    "latest": [
     {
      "id": "https://www.theyeshiva.net/item/10022",
@@ -1297,7 +1279,7 @@
     }
    ],
    "total": 1544,
-   "last_success_at": "2026-11-04T06:54:37+00:00"
+   "last_success_at": "2026-11-04T06:57:24+00:00"
   },
   {
    "id": "chassidus_applied",
@@ -1311,7 +1293,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-04T06:54:41+00:00",
+   "checked_at": "2026-11-04T06:57:27+00:00",
    "status": "error",
    "new": [],
    "latest": [
@@ -1501,7 +1483,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-04T06:54:41+00:00",
+   "checked_at": "2026-11-04T06:57:27+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1555,7 +1537,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-04T06:54:41+00:00"
+   "last_success_at": "2026-11-04T06:57:27+00:00"
   },
   {
    "id": "chassidus_explained",
@@ -1569,7 +1551,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-04T06:54:44+00:00",
+   "checked_at": "2026-11-04T06:57:29+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1631,7 +1613,7 @@
     }
    ],
    "total": 136,
-   "last_success_at": "2026-11-04T06:54:44+00:00"
+   "last_success_at": "2026-11-04T06:57:29+00:00"
   },
   {
    "id": "melukat",
@@ -1645,7 +1627,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-04T06:54:45+00:00",
+   "checked_at": "2026-11-04T06:57:30+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1707,7 +1689,7 @@
     }
    ],
    "total": 168,
-   "last_success_at": "2026-11-04T06:54:45+00:00"
+   "last_success_at": "2026-11-04T06:57:30+00:00"
   },
   {
    "id": "daily_maamar",
@@ -1721,18 +1703,9 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-04T06:54:47+00:00",
+   "checked_at": "2026-11-04T06:57:32+00:00",
    "status": "ok",
-   "new": [
-    {
-     "id": "eddce4ee-3f74-423e-b660-0958e61b3db5",
-     "title": "Shabbos Parshas Toldos Mevorchim HaChodesh Kislev 5717 ,Maamorim Melukatim Vol. 1– Episode 2",
-     "url": "https://share.transistor.fm/s/31c7ee2e",
-     "date": "Tue, 03 Nov 2026 09:38:38 -0500",
-     "blurb": "This episode covers Chapter 3. What is Echad and what is Avodah Zarah.",
-     "first_seen": "2026-11-04T06:54:47+00:00"
-    }
-   ],
+   "new": [],
    "latest": [
     {
      "id": "eddce4ee-3f74-423e-b660-0958e61b3db5",
@@ -1896,7 +1869,7 @@
     }
    ],
    "total": 355,
-   "last_success_at": "2026-11-04T06:54:47+00:00"
+   "last_success_at": "2026-11-04T06:57:32+00:00"
   },
   {
    "id": "wellsprings",
@@ -1910,7 +1883,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-04T06:54:48+00:00",
+   "checked_at": "2026-11-04T06:57:33+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1956,7 +1929,7 @@
     }
    ],
    "total": 125,
-   "last_success_at": "2026-11-04T06:54:48+00:00"
+   "last_success_at": "2026-11-04T06:57:33+00:00"
   },
   {
    "id": "daily_sicha",
@@ -1970,18 +1943,9 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-04T06:54:49+00:00",
+   "checked_at": "2026-11-04T06:57:34+00:00",
    "status": "ok",
-   "new": [
-    {
-     "id": "2026.11.4",
-     "title": "יום פ' חיי שרה, כ\"ד מרחשון, ה'תשפ\"ז",
-     "url": "",
-     "date": "Wed, 04 Nov 2026 12:00:00 GMT",
-     "blurb": "התוכן [המשך] ועוד ענין: גם מי שלאחרי עשיית חשבון צדק בא למסקנא שבעולמו הפרטי כבר פעל בשלימות הענין ד\"אלקי השמים ואלקי הארץ\", הנה [נוסף לזה שבכל יום ישנם בעולמו ענינים חדשים שעליו לברר, כמו הלחם שאוכל, הנה] בכל מצב ישנם בכל אחד עניני \"שמים\" ועניני \"ארץ\". וגם יהודי שכבר פעל שגם בעניני \"ארץ\" שלו ניכר שה' הוא \"אלקי הארץ\", אבל עדיין יש אצלו חילוק בין איך שה\"אלקי\" ניכר בעניני \"ארץ\", כמו אכילה ושתי', לעניני \"שמים\" – כמו לימוד התורה וקיום המצוות. כדי שיבין וירגיש בלבו את ה\"אלקי הארץ \" – בכל נשימה, באכילה ושתי', בדומם, אפי' בדבר איסור שבידו, וכיו\"ב – כמו ובהמשך אחד עם \"אלקי שמים \" – בעת עמדו בפני ה\" אלקי \" בתפלה – צריך התבוננות גדולה ועבודה מיוחדת! ובכל יום צריך לבחון מחדש האם ההתבוננות ותוצאתי' שביום שלפנ\"ז עדיין בתקפה. אבל גם את הטף צריכים להסביר את הענין ד\"אלקי הארץ\" ושגם הם יכולים לפעול בזה בכח עצמם . משיחת מוצאי ש\"פ חיי שרה, מבה\"ח כסלו ה'תשל\"ט ל\"הנחה פרטית\" או התרגום ללה\"ק של השיחה: https://thedailysicha.com/?date=04-11-2026 Synopsis (Continued.) Another point: Even someone who, after making an honest accounting, concludes that he has already completely made Hashem “G-d of heaven and G-d of the earth” in his personal word, nevertheless (in addition to the fact that every day there are new things in his world that he must refine, like the food he eats), every person in every state has matters of “heaven” and matters of “earth” in his life. Even if one has already made it evident that Hashem is “G-d of” his “earth,” there is still a difference between the way Hashem is evident in h",
-     "first_seen": "2026-11-04T06:54:49+00:00"
-    }
-   ],
+   "new": [],
    "latest": [
     {
      "id": "2026.11.4",
@@ -2145,7 +2109,7 @@
     }
    ],
    "total": 1419,
-   "last_success_at": "2026-11-04T06:54:49+00:00"
+   "last_success_at": "2026-11-04T06:57:34+00:00"
   },
   {
    "id": "learnchassidus",
@@ -2159,7 +2123,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-04T06:54:55+00:00",
+   "checked_at": "2026-11-04T06:57:38+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2172,7 +2136,7 @@
     }
    ],
    "total": 5,
-   "last_success_at": "2026-11-04T06:54:55+00:00"
+   "last_success_at": "2026-11-04T06:57:38+00:00"
   },
   {
    "id": "simplychassidus",
@@ -2186,7 +2150,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-04T06:54:55+00:00",
+   "checked_at": "2026-11-04T06:57:39+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2213,7 +2177,7 @@
     }
    ],
    "total": 4,
-   "last_success_at": "2026-11-04T06:54:55+00:00"
+   "last_success_at": "2026-11-04T06:57:39+00:00"
   },
   {
    "id": "alonei_chabad",
@@ -2226,7 +2190,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-04T06:54:56+00:00",
+   "checked_at": "2026-11-04T06:57:40+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -2243,7 +2207,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-04T06:54:56+00:00",
+   "checked_at": "2026-11-04T06:57:40+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -2260,7 +2224,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-04T06:54:56+00:00",
+   "checked_at": "2026-11-04T06:57:40+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2287,7 +2251,7 @@
     }
    ],
    "total": 303,
-   "last_success_at": "2026-11-04T06:54:56+00:00"
+   "last_success_at": "2026-11-04T06:57:40+00:00"
   },
   {
    "id": "lchaim",
@@ -2300,7 +2264,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-04T06:54:57+00:00",
+   "checked_at": "2026-11-04T06:57:42+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2362,7 +2326,7 @@
     }
    ],
    "total": 0,
-   "last_success_at": "2026-11-04T06:54:57+00:00"
+   "last_success_at": "2026-11-04T06:57:42+00:00"
   },
   {
    "id": "one_point",
@@ -2375,7 +2339,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-04T06:54:58+00:00",
+   "checked_at": "2026-11-04T06:57:43+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2416,7 +2380,7 @@
     }
    ],
    "total": 0,
-   "last_success_at": "2026-11-04T06:54:58+00:00"
+   "last_success_at": "2026-11-04T06:57:43+00:00"
   },
   {
    "id": "derher",
@@ -2429,7 +2393,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-04T06:55:01+00:00",
+   "checked_at": "2026-11-04T06:57:45+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -2446,7 +2410,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-04T06:55:01+00:00",
+   "checked_at": "2026-11-04T06:57:45+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -2463,17 +2427,9 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-04T06:55:01+00:00",
+   "checked_at": "2026-11-04T06:57:45+00:00",
    "status": "ok",
-   "new": [
-    {
-     "id": "content:fea051a08252ee7c",
-     "title": "עדכון בתוכן הדף",
-     "url": "https://dvarmalchus.org",
-     "date": "",
-     "first_seen": "2026-11-04T06:55:01+00:00"
-    }
-   ],
+   "new": [],
    "latest": [
     {
      "id": "content:fea051a08252ee7c",
@@ -2519,7 +2475,7 @@
     }
    ],
    "total": 5,
-   "last_success_at": "2026-11-04T06:55:01+00:00"
+   "last_success_at": "2026-11-04T06:57:45+00:00"
   },
   {
    "id": "maynotecha_inst",
@@ -2532,7 +2488,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-04T06:55:04+00:00",
+   "checked_at": "2026-11-04T06:57:47+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -2549,7 +2505,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-04T06:55:04+00:00",
+   "checked_at": "2026-11-04T06:57:47+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2571,7 +2527,7 @@
     }
    ],
    "total": 0,
-   "last_success_at": "2026-11-04T06:55:04+00:00"
+   "last_success_at": "2026-11-04T06:57:47+00:00"
   },
   {
    "id": "anash",
@@ -2584,34 +2540,9 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-04T06:55:05+00:00",
+   "checked_at": "2026-11-04T06:57:48+00:00",
    "status": "ok",
-   "new": [
-    {
-     "id": "https://anash.org/?p=1127648",
-     "title": "The Rebbe Explained the Dream That Changed My Life",
-     "url": "https://anash.org/the-rebbe-explained-the-dream-that-changed-my-life/",
-     "date": "Tue, 03 Nov 2026 22:40:00 +0000",
-     "blurb": "In a podcast interview, Reb Shimon Kroll of Pomona, NY, recalls growing up in Brooklyn and being scouted for the major leagues, his path to Lubavitch, and the seven yechidus'n he merited with the Rebbe, including the Rebbe’s interpretation of a dream.",
-     "first_seen": "2026-11-04T06:55:05+00:00"
-    },
-    {
-     "id": "https://anash.org/?p=1123947",
-     "title": "The Chossid Who Brought Chassidus to the Public",
-     "url": "https://anash.org/the-chossid-who-brought-chassidus-to-the-public/",
-     "date": "Tue, 03 Nov 2026 20:56:00 +0000",
-     "blurb": "20 Years : 23 Cheshvan marks the yahrtzeit of Reb Tzvi Hirsh Gansbourg , a devoted chossid who worked closely with the Rebbe on publishing Chassidic teachings, led niggunim at the Rebbe's farbrengens, and dedicated his life to spreading Yiddishkeit and helping fellow Yidden.",
-     "first_seen": "2026-11-04T06:55:05+00:00"
-    },
-    {
-     "id": "https://anash.org/?p=1124819",
-     "title": "The Hungarian Journalist with a Unique Shlichus from the Rebbe",
-     "url": "https://anash.org/the-hungarian-journalist-with-a-unique-shlichus-from-the-rebbe/",
-     "date": "Tue, 03 Nov 2026 16:31:00 +0000",
-     "blurb": "23 Cheshvan marks the yahrtzeit of Reb Chaim Yehuda Paldi , who passed away in 5743 (1982). A former Pressburger Yeshiva talmid, he dedicated his writing abilities to fighting the Mihu Yehudi decree and disputing the claim that the founding of the State of Israel marked the beginning of the Geulah.",
-     "first_seen": "2026-11-04T06:55:05+00:00"
-    }
-   ],
+   "new": [],
    "latest": [
     {
      "id": "https://anash.org/?p=1127648",
@@ -2823,7 +2754,7 @@
     }
    ],
    "total": 4,
-   "last_success_at": "2026-11-04T06:55:05+00:00"
+   "last_success_at": "2026-11-04T06:57:48+00:00"
   },
   {
    "id": "chabadinfo",
@@ -2836,7 +2767,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-04T06:55:06+00:00",
+   "checked_at": "2026-11-04T06:57:50+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -2853,7 +2784,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-04T06:55:06+00:00",
+   "checked_at": "2026-11-04T06:57:50+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -2870,7 +2801,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-04T06:55:06+00:00",
+   "checked_at": "2026-11-04T06:57:50+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2916,7 +2847,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-04T06:55:06+00:00"
+   "last_success_at": "2026-11-04T06:57:50+00:00"
   },
   {
    "id": "kehot",
@@ -2929,7 +2860,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-04T06:55:09+00:00",
+   "checked_at": "2026-11-04T06:57:53+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -3527,7 +3458,7 @@
     }
    ],
    "total": 199,
-   "last_success_at": "2026-11-04T06:55:09+00:00"
+   "last_success_at": "2026-11-04T06:57:53+00:00"
   }
  ],
  "browser_checks": {
