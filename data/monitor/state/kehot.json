@@ -1,5 +1,16 @@
 {
  "seen": [
+  "EO-CHANCL",
+  "HO-HEIC46",
+  "HTZ-TZEMT.SB",
+  "HTZ-TZEMT2",
+  "HTZ-TZEMT6",
+  "EO-VISU",
+  "ERE-LIGHPC",
+  "EO-UNDEN",
+  "EPU-STH.AHM12",
+  "EPU-STH.AHM18",
+  "EPU-STH.AHM26",
   "HKU-HATE",
   "HRM-TOLD",
   "ERR-TRAC",
@@ -47,7 +58,6 @@
   "HPU-STH.PNTN60",
   "EO-PATHDS.S",
   "EO-BREA",
-  "EO-VISU",
   "EO-SOUN",
   "HO-HAAR.SB",
   "HO-HAAR10",
@@ -221,6 +231,6 @@
   "HP-ORHA11",
   "HP-STH.PFNT"
  ],
- "updated": "2026-11-04T12:07:18+00:00",
- "count": 199
+ "updated": "2026-11-05T12:19:12+00:00",
+ "count": 197
 }
