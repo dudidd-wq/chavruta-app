@@ -11,6 +11,7 @@
   "EPU-STH.AHM12",
   "EPU-STH.AHM18",
   "EPU-STH.AHM26",
+  "ERE-IK2",
   "HKU-HATE",
   "HRM-TOLD",
   "ERR-TRAC",
@@ -19,6 +20,8 @@
   "HAR-TORAOB",
   "HAR-TORAOMBR2",
   "HL-SEDEBH.P",
+  "HL-SHMIMA",
+  "HL-SHMIP",
   "HO-CHOSA",
   "HPU-STH.PNTN12",
   "HPU-STH.PNTN31",
@@ -34,8 +37,6 @@
   "HO-PROF",
   "S-SHAAH.L",
   "S-STH.AL",
-  "S-STH.AM",
-  "S-TEHI.L",
   "HRE-MAAY",
   "HRE-TMHRS",
   "ELE-CHUM.SEL09",
@@ -197,6 +198,8 @@
   "CA-BIRKS.L",
   "CA-BIRKM.MINI",
   "CA-BIRKM.M",
+  "S-STH.AM",
+  "S-TEHI.L",
   "HRE-SM41",
   "ERE-LIGH.M",
   "HO-OHOLG",
@@ -231,6 +234,6 @@
   "HP-ORHA11",
   "HP-STH.PFNT"
  ],
- "updated": "2026-11-05T12:19:12+00:00",
- "count": 197
+ "updated": "2026-11-06T12:05:49+00:00",
+ "count": 198
 }
