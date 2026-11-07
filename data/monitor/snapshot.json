@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-06T12:05:49+00:00",
+ "generated_at": "2026-11-07T11:03:28+00:00",
  "sources": [
   {
    "id": "chabadlibrary",
@@ -12,7 +12,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-11-06T12:04:37+00:00",
+   "checked_at": "2026-11-07T11:02:17+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -30,7 +30,7 @@
     "primary",
     "whatsnew"
    ],
-   "checked_at": "2026-11-06T12:04:37+00:00",
+   "checked_at": "2026-11-07T11:02:17+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -47,7 +47,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-11-06T12:04:37+00:00",
+   "checked_at": "2026-11-07T11:02:17+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -64,7 +64,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-11-06T12:04:37+00:00",
+   "checked_at": "2026-11-07T11:02:17+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -82,7 +82,7 @@
     "primary",
     "whatsnew"
    ],
-   "checked_at": "2026-11-06T12:04:37+00:00",
+   "checked_at": "2026-11-07T11:02:17+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -102,7 +102,7 @@
     }
    ],
    "total": 132,
-   "last_success_at": "2026-11-06T12:04:37+00:00"
+   "last_success_at": "2026-11-07T11:02:17+00:00"
   },
   {
    "id": "chabadlibrarybooks",
@@ -115,7 +115,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-11-06T12:04:38+00:00",
+   "checked_at": "2026-11-07T11:02:17+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -133,12 +133,12 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-06T12:04:38+00:00",
+   "checked_at": "2026-11-07T11:02:17+00:00",
    "status": "ok",
    "new": [],
    "latest": [],
    "total": 1501,
-   "last_success_at": "2026-11-06T12:04:38+00:00"
+   "last_success_at": "2026-11-07T11:02:17+00:00"
   },
   {
    "id": "chassidut_org",
@@ -152,12 +152,12 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-06T12:04:39+00:00",
+   "checked_at": "2026-11-07T11:02:19+00:00",
    "status": "ok",
    "new": [],
    "latest": [],
    "total": 4,
-   "last_success_at": "2026-11-06T12:04:39+00:00"
+   "last_success_at": "2026-11-07T11:02:19+00:00"
   },
   {
    "id": "biurim",
@@ -171,7 +171,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-06T12:04:41+00:00",
+   "checked_at": "2026-11-07T11:02:20+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -217,7 +217,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-06T12:04:41+00:00"
+   "last_success_at": "2026-11-07T11:02:20+00:00"
   },
   {
    "id": "hm_monsey",
@@ -231,7 +231,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-06T12:04:43+00:00",
+   "checked_at": "2026-11-07T11:02:22+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -293,7 +293,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-06T12:04:43+00:00"
+   "last_success_at": "2026-11-07T11:02:22+00:00"
   },
   {
    "id": "hiskashrus",
@@ -307,7 +307,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-06T12:04:44+00:00",
+   "checked_at": "2026-11-07T11:02:24+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -376,7 +376,7 @@
     }
    ],
    "total": 0,
-   "last_success_at": "2026-11-06T12:04:44+00:00"
+   "last_success_at": "2026-11-07T11:02:24+00:00"
   },
   {
    "id": "lichyot_chassidus",
@@ -390,7 +390,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-06T12:04:46+00:00",
+   "checked_at": "2026-11-07T11:02:26+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -500,7 +500,7 @@
     }
    ],
    "total": 1000,
-   "last_success_at": "2026-11-06T12:04:46+00:00"
+   "last_success_at": "2026-11-07T11:02:26+00:00"
   },
   {
    "id": "chabadzoom",
@@ -514,7 +514,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-06T12:04:48+00:00",
+   "checked_at": "2026-11-07T11:02:28+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -625,7 +625,7 @@
     }
    ],
    "total": 562,
-   "last_success_at": "2026-11-06T12:04:48+00:00"
+   "last_success_at": "2026-11-07T11:02:28+00:00"
   },
   {
    "id": "kovtzimdrive",
@@ -639,7 +639,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-06T12:04:51+00:00",
+   "checked_at": "2026-11-07T11:02:28+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -652,7 +652,7 @@
     }
    ],
    "total": 1,
-   "last_success_at": "2026-11-06T12:04:51+00:00"
+   "last_success_at": "2026-11-07T11:02:28+00:00"
   },
   {
    "id": "avita",
@@ -666,7 +666,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-06T12:04:53+00:00",
+   "checked_at": "2026-11-07T11:02:31+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -684,7 +684,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-06T12:04:53+00:00",
+   "checked_at": "2026-11-07T11:02:31+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -706,7 +706,7 @@
     }
    ],
    "total": 2,
-   "last_success_at": "2026-11-06T12:04:53+00:00"
+   "last_success_at": "2026-11-07T11:02:31+00:00"
   },
   {
    "id": "dvarmalchus770",
@@ -720,7 +720,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-06T12:04:54+00:00",
+   "checked_at": "2026-11-07T11:02:32+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -830,7 +830,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-06T12:04:54+00:00"
+   "last_success_at": "2026-11-07T11:02:32+00:00"
   },
   {
    "id": "soulwords",
@@ -844,10 +844,27 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-06T12:04:56+00:00",
+   "checked_at": "2026-11-07T11:02:34+00:00",
    "status": "ok",
-   "new": [],
+   "new": [
+    {
+     "id": "https://www.soulwords.org/?p=17676",
+     "title": "Sarah's Passing | Beyond the Story: Chayei Sarah (Ep. 5)",
+     "url": "https://www.soulwords.org/sarahs-passing-beyond-the-story-chayei-sarah-ep-5/",
+     "date": "Fri, 06 Nov 2026 15:10:55 +0000",
+     "blurb": "The Zohar identifies Avraham with the soul and Sarah with the body. Why, then, does Hashem tell Avraham to listen to Sarah? Isn’t the soul supposed to guide the body? In this episode of BEYOND the STORY, Rabbi Shais Taub explores what Avraham’s mourning for Sarah reveals about the relationship between body and soul. Through the teachings of Chassidus, we discover why the soul needs the body, what feminine spirituality teaches us about serving Hashem, and why ordinary physical life is central to our purpose. PDF Link: https://www.soulwords.org/wp-content/uploads/2026/11/Chayei-Sarah-Student-Handout_compressed.pdf",
+     "first_seen": "2026-11-07T11:02:34+00:00"
+    }
+   ],
    "latest": [
+    {
+     "id": "https://www.soulwords.org/?p=17676",
+     "title": "Sarah's Passing | Beyond the Story: Chayei Sarah (Ep. 5)",
+     "url": "https://www.soulwords.org/sarahs-passing-beyond-the-story-chayei-sarah-ep-5/",
+     "date": "Fri, 06 Nov 2026 15:10:55 +0000",
+     "blurb": "The Zohar identifies Avraham with the soul and Sarah with the body. Why, then, does Hashem tell Avraham to listen to Sarah? Isn’t the soul supposed to guide the body? In this episode of BEYOND the STORY, Rabbi Shais Taub explores what Avraham’s mourning for Sarah reveals about the relationship between body and soul. Through the teachings of Chassidus, we discover why the soul needs the body, what feminine spirituality teaches us about serving Hashem, and why ordinary physical life is central to our purpose. PDF Link: https://www.soulwords.org/wp-content/uploads/2026/11/Chayei-Sarah-Student-Handout_compressed.pdf",
+     "first_seen": "2026-11-07T11:02:34+00:00"
+    },
     {
      "id": "https://www.soulwords.org/?p=17570",
      "title": "Abraham and the Inn | Beyond the Story: Vayera (Ep. 4)",
@@ -906,7 +923,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-06T12:04:56+00:00"
+   "last_success_at": "2026-11-07T11:02:34+00:00"
   },
   {
    "id": "sie_weekly",
@@ -920,17 +937,9 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-06T12:04:57+00:00",
+   "checked_at": "2026-11-07T11:02:35+00:00",
    "status": "ok",
-   "new": [
-    {
-     "id": "content:44852966d4390e28",
-     "title": "עדכון בתוכן הדף",
-     "url": "https://shop.sie.org/pages/weekly",
-     "date": "",
-     "first_seen": "2026-11-06T12:04:57+00:00"
-    }
-   ],
+   "new": [],
    "latest": [
     {
      "id": "content:44852966d4390e28",
@@ -990,7 +999,7 @@
     }
    ],
    "total": 116,
-   "last_success_at": "2026-11-06T12:04:57+00:00"
+   "last_success_at": "2026-11-07T11:02:35+00:00"
   },
   {
    "id": "pls",
@@ -1004,34 +1013,9 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-06T12:04:58+00:00",
+   "checked_at": "2026-11-07T11:02:37+00:00",
    "status": "ok",
-   "new": [
-    {
-     "id": "57a26050-77b1-4df7-a310-027a5e40db46",
-     "title": "חלק כה, תולדות שיחה ג - הרב שמואל שור - אידיש",
-     "url": "https://sichaindepth.captivate.fm",
-     "date": "Thu, 05 Nov 2026 12:15:00 -0500",
-     "blurb": "נמסר בבית מנחם - בורו פארק",
-     "first_seen": "2026-11-06T12:04:58+00:00"
-    },
-    {
-     "id": "14fd4740-5634-4cb2-8d9b-dca08e536913",
-     "title": "Chelek 30, Toldos 1 - Rabbi Yaakov Moshe Wolberg",
-     "url": "https://sichaindepth.captivate.fm",
-     "date": "Thu, 05 Nov 2026 12:05:00 -0500",
-     "blurb": "Chelek 30, Toldos 1 - Rabbi Yaakov Moshe Wolberg",
-     "first_seen": "2026-11-06T12:04:58+00:00"
-    },
-    {
-     "id": "88667d20-c6d9-41c2-80f4-751396fa2b02",
-     "title": "Chelek 25, Toldos 3 - Rabbi Yaakov Moshe Wolberg",
-     "url": "https://sichaindepth.captivate.fm",
-     "date": "Thu, 05 Nov 2026 05:45:00 -0500",
-     "blurb": "Chelek 25, Toldos 3 - Rabbi Yaakov Moshe Wolberg",
-     "first_seen": "2026-11-06T12:04:58+00:00"
-    }
-   ],
+   "new": [],
    "latest": [
     {
      "id": "57a26050-77b1-4df7-a310-027a5e40db46",
@@ -1147,7 +1131,7 @@
     }
    ],
    "total": 200,
-   "last_success_at": "2026-11-06T12:04:58+00:00"
+   "last_success_at": "2026-11-07T11:02:37+00:00"
   },
   {
    "id": "chayenu_ls",
@@ -1161,7 +1145,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-06T12:05:00+00:00",
+   "checked_at": "2026-11-07T11:02:38+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1188,7 +1172,7 @@
     }
    ],
    "total": 2,
-   "last_success_at": "2026-11-06T12:05:00+00:00"
+   "last_success_at": "2026-11-07T11:02:38+00:00"
   },
   {
    "id": "weekly_sicha",
@@ -1202,10 +1186,25 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-06T12:05:01+00:00",
+   "checked_at": "2026-11-07T11:02:39+00:00",
    "status": "ok",
-   "new": [],
+   "new": [
+    {
+     "id": "https://theweeklysicha.org/episode/tws-chayei-sarah-87",
+     "title": "tws chayei sarah 87",
+     "url": "https://theweeklysicha.org/episode/tws-chayei-sarah-87",
+     "date": "2026-11-07T05:00:03.005Z",
+     "first_seen": "2026-11-07T11:02:39+00:00"
+    }
+   ],
    "latest": [
+    {
+     "id": "https://theweeklysicha.org/episode/tws-chayei-sarah-87",
+     "title": "tws chayei sarah 87",
+     "url": "https://theweeklysicha.org/episode/tws-chayei-sarah-87",
+     "date": "2026-11-07T05:00:03.005Z",
+     "first_seen": "2026-11-07T11:02:39+00:00"
+    },
     {
      "id": "https://theweeklysicha.org/episode/tws-vayeira-20-cheshvan-87",
      "title": "tws vayeira 20 cheshvan 87",
@@ -1256,8 +1255,8 @@
      "first_seen": "2026-10-18T04:51:53+00:00"
     }
    ],
-   "total": 118,
-   "last_success_at": "2026-11-06T12:05:01+00:00"
+   "total": 119,
+   "last_success_at": "2026-11-07T11:02:39+00:00"
   },
   {
    "id": "theyeshiva",
@@ -1271,18 +1270,9 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-06T12:05:02+00:00",
+   "checked_at": "2026-11-07T11:02:41+00:00",
    "status": "ok",
-   "new": [
-    {
-     "id": "https://www.theyeshiva.net/item/10023",
-     "title": "You Can't Taste Shabbos If You Spend the Week Running Away from Yourself - Torah Or Yegaleh Lan Taamei #2",
-     "url": "https://www.theyeshiva.net/item/10023",
-     "date": "Thu, 5 Nov 2026 16:17:02 -0500",
-     "blurb": "You Can't Fake Shabbos: The Way We Eat, Pray and Live All Week Determines Whether Shabbos Becomes an Escape -- or a Revelation This class is the second and final in a series on the Maamar Yegaleh Lan Taamei, presented by the Alter Rebbe on Shabbos Tetzaveh, 5567 (1807), published in Torah Or Parshas Chayei Sarah. This class was presented by Rabbi YY Jacobson on Thursday, Parshas Chaye Sarah, 25 Cheshvan, 5787, November 5, 2026. View Source Sheets: https://portal.theyeshiva.net/api/source-sheets/10023",
-     "first_seen": "2026-11-06T12:05:02+00:00"
-    }
-   ],
+   "new": [],
    "latest": [
     {
      "id": "https://www.theyeshiva.net/item/10023",
@@ -1398,7 +1388,7 @@
     }
    ],
    "total": 1545,
-   "last_success_at": "2026-11-06T12:05:02+00:00"
+   "last_success_at": "2026-11-07T11:02:41+00:00"
   },
   {
    "id": "chassidus_applied",
@@ -1412,25 +1402,49 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-06T12:05:06+00:00",
+   "checked_at": "2026-11-07T11:02:44+00:00",
    "status": "ok",
    "new": [
     {
-     "id": "yt:video:th0L-EqdmPk",
-     "title": "Samach Vav Part 239:",
-     "url": "https://www.youtube.com/watch?v=th0L-EqdmPk",
-     "date": "2026-11-06T03:46:01+00:00",
-     "blurb": "",
-     "first_seen": "2026-11-06T12:05:06+00:00"
+     "id": "yt:video:RuljX9ioXC0",
+     "title": "Samach Vav Part 240:",
+     "url": "https://www.youtube.com/watch?v=RuljX9ioXC0",
+     "date": "2026-11-07T03:53:56+00:00",
+     "blurb": "Chochma -- dveikus, deeper ratzo, total bittul. Two levels in chochma -- ratzo and shuc -- eye of the mind, eye of the heart. Minister and servant, kabolas ol.",
+     "first_seen": "2026-11-07T11:02:44+00:00"
+    },
+    {
+     "id": "yt:video:a6T2VA3jSy0",
+     "title": "Chapter 37.03: Transforming Man and the World",
+     "url": "https://www.youtube.com/watch?v=a6T2VA3jSy0",
+     "date": "2026-11-06T15:06:18+00:00",
+     "blurb": "Chapter 37.03: Transforming Man and the World The Tanya Applied radio show is broadcast every Saturday night, 10–10:30PM ET on WSNR 620 AM – Metro NY area WJPR 1640 AM — Highland Park and Edison, NJ Online: www.talklinenetwork.com By phone: Listen Line: 641-741-0389 Many of us may be familiar with some of the central ideas in Tanya – including the battle of the two souls; what defines man and makes us tick; how we can control our temptations; how we can become more loving; what we can do to curb and harness our vices, like anger, jealousy, and depression; the formula for growth; how we can develop a healthy relationship with G-d; and why we are here. In this 30-minute program, you will learn how these ideas can be applied to your life today. You will discover secrets to a successful life that will transform you and your relationships. Rabbi Simon Jacobson is the best-selling author of Toward a Meaningful Life, and he is the creator of the acclaimed and popular MyLife: Chassidus Applied series, which has empowered and transformed hundreds of thousands through Torah and Chassidus. Now, Rabbi Jacobson brings his vast scholarship and years of experience to Tanya. Please join Rabbi Simon Jacobson for this exhilarating journey into your psyche and soul. You will come away with life-changing practical guidance and direction, addressing all the issues and challenges you face in life. For more info: www.chassidusapplied.com/tanya Music by Zalman Goldstein • www.ChabadMusic.coms of the",
+     "first_seen": "2026-11-07T11:02:44+00:00"
     }
    ],
    "latest": [
     {
+     "id": "yt:video:RuljX9ioXC0",
+     "title": "Samach Vav Part 240:",
+     "url": "https://www.youtube.com/watch?v=RuljX9ioXC0",
+     "date": "2026-11-07T03:53:56+00:00",
+     "blurb": "Chochma -- dveikus, deeper ratzo, total bittul. Two levels in chochma -- ratzo and shuc -- eye of the mind, eye of the heart. Minister and servant, kabolas ol.",
+     "first_seen": "2026-11-07T11:02:44+00:00"
+    },
+    {
+     "id": "yt:video:a6T2VA3jSy0",
+     "title": "Chapter 37.03: Transforming Man and the World",
+     "url": "https://www.youtube.com/watch?v=a6T2VA3jSy0",
+     "date": "2026-11-06T15:06:18+00:00",
+     "blurb": "Chapter 37.03: Transforming Man and the World The Tanya Applied radio show is broadcast every Saturday night, 10–10:30PM ET on WSNR 620 AM – Metro NY area WJPR 1640 AM — Highland Park and Edison, NJ Online: www.talklinenetwork.com By phone: Listen Line: 641-741-0389 Many of us may be familiar with some of the central ideas in Tanya – including the battle of the two souls; what defines man and makes us tick; how we can control our temptations; how we can become more loving; what we can do to curb and harness our vices, like anger, jealousy, and depression; the formula for growth; how we can develop a healthy relationship with G-d; and why we are here. In this 30-minute program, you will learn how these ideas can be applied to your life today. You will discover secrets to a successful life that will transform you and your relationships. Rabbi Simon Jacobson is the best-selling author of Toward a Meaningful Life, and he is the creator of the acclaimed and popular MyLife: Chassidus Applied series, which has empowered and transformed hundreds of thousands through Torah and Chassidus. Now, Rabbi Jacobson brings his vast scholarship and years of experience to Tanya. Please join Rabbi Simon Jacobson for this exhilarating journey into your psyche and soul. You will come away with life-changing practical guidance and direction, addressing all the issues and challenges you face in life. For more info: www.chassidusapplied.com/tanya Music by Zalman Goldstein • www.ChabadMusic.coms of the",
+     "first_seen": "2026-11-07T11:02:44+00:00"
+    },
+    {
      "id": "yt:video:th0L-EqdmPk",
      "title": "Samach Vav Part 239:",
      "url": "https://www.youtube.com/watch?v=th0L-EqdmPk",
      "date": "2026-11-06T03:46:01+00:00",
-     "blurb": "",
+     "blurb": "Ratzo v'shuv of the angels. Shuv resulting from a revelation of above causing the angels to recoil. Ratzo -- binah, from a distance, reflection, shuv -- chcohma, sight, core experience.",
      "first_seen": "2026-11-06T12:05:06+00:00"
     },
     {
@@ -1651,7 +1665,7 @@
     }
    ],
    "total": 15,
-   "last_success_at": "2026-11-06T12:05:06+00:00"
+   "last_success_at": "2026-11-07T11:02:44+00:00"
   },
   {
    "id": "neirot",
@@ -1665,7 +1679,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-06T12:05:07+00:00",
+   "checked_at": "2026-11-07T11:02:45+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1719,7 +1733,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-06T12:05:07+00:00"
+   "last_success_at": "2026-11-07T11:02:45+00:00"
   },
   {
    "id": "chassidus_explained",
@@ -1733,7 +1747,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-06T12:05:09+00:00",
+   "checked_at": "2026-11-07T11:02:48+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1795,7 +1809,7 @@
     }
    ],
    "total": 136,
-   "last_success_at": "2026-11-06T12:05:09+00:00"
+   "last_success_at": "2026-11-07T11:02:48+00:00"
   },
   {
    "id": "melukat",
@@ -1809,7 +1823,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-06T12:05:10+00:00",
+   "checked_at": "2026-11-07T11:02:49+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1871,7 +1885,7 @@
     }
    ],
    "total": 168,
-   "last_success_at": "2026-11-06T12:05:10+00:00"
+   "last_success_at": "2026-11-07T11:02:49+00:00"
   },
   {
    "id": "daily_maamar",
@@ -1885,26 +1899,9 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-06T12:05:11+00:00",
+   "checked_at": "2026-11-07T11:02:50+00:00",
    "status": "ok",
-   "new": [
-    {
-     "id": "fc8f77e9-322d-4b2d-ba58-28b2babab7aa",
-     "title": "Shabbos Parshas Toldos Mevorchim HaChodesh Kislev 5717 ,Maamorim Melukatim Vol. 1– Episode 5",
-     "url": "https://share.transistor.fm/s/df34910c",
-     "date": "Fri, 06 Nov 2026 06:34:16 -0500",
-     "blurb": "This episode covers Chapter 7. Why the shouting?",
-     "first_seen": "2026-11-06T12:05:11+00:00"
-    },
-    {
-     "id": "83802feb-413a-4b6a-a5c9-4f5f8e696cc0",
-     "title": "Shabbos Parshas Toldos Mevorchim HaChodesh Kislev 5717 ,Maamorim Melukatim Vol. 1– Episode 4",
-     "url": "https://share.transistor.fm/s/4ddf1045",
-     "date": "Thu, 05 Nov 2026 09:23:15 -0500",
-     "blurb": "This episode covers Chapter 6. The true meaning of pleasure.",
-     "first_seen": "2026-11-06T12:05:11+00:00"
-    }
-   ],
+   "new": [],
    "latest": [
     {
      "id": "fc8f77e9-322d-4b2d-ba58-28b2babab7aa",
@@ -2092,7 +2089,7 @@
     }
    ],
    "total": 358,
-   "last_success_at": "2026-11-06T12:05:11+00:00"
+   "last_success_at": "2026-11-07T11:02:50+00:00"
   },
   {
    "id": "wellsprings",
@@ -2106,7 +2103,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-06T12:05:13+00:00",
+   "checked_at": "2026-11-07T11:02:52+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2152,7 +2149,7 @@
     }
    ],
    "total": 125,
-   "last_success_at": "2026-11-06T12:05:13+00:00"
+   "last_success_at": "2026-11-07T11:02:52+00:00"
   },
   {
    "id": "daily_sicha",
@@ -2166,18 +2163,9 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-06T12:05:13+00:00",
+   "checked_at": "2026-11-07T11:02:53+00:00",
    "status": "ok",
-   "new": [
-    {
-     "id": "2026.11.6",
-     "title": "יום ועש\"ק פ' חיי שרה, כ\"ו מרחשון, ה'תשפ\"ז",
-     "url": "",
-     "date": "Fri, 06 Nov 2026 12:00:00 GMT",
-     "blurb": "התוכן מסופר בתנ\"ך [הפטורת פ' חיי שרה] שדוד המליך את שלמה בנו עוד בחייו . ולכאו' עפ\"י תורה אין שני מלכים משתמשים בכתר א' וכו'?! והביאור בזה עפ\"י מ\"ש הרגצ'ובי שה\" יורש הוא הוא עצם המוריש \", ומזה מובן גם בנוגע בנוגע לענין המלוכה , \"שהמלכות ירושה \", דבן מלך הראוי לירש המלכות יש בו כח המלוכה עוד טרם שנעשה מלך בפועל . ובכחו של המלך לגלות ענין זה עוד בחייו. אלא שכל זמן שאביו המלך עוד בחיים הנה ה\"מלוכה\" של הבן היא חלק בלתי נפרד ממציאותו של אביו המלך. [וע\"ד ענין השליחות: אע\"פ שהשליח הוא בר-דעת בפ\"ע וכו', אבל כל כחו ותוקפו של השליח אינו אלא תוקפו של המשלח \" כמותו ממש \" (ולא נתבטל מציאותו של המשלח)]. ועד\"ז דוד המלך לא המליך את שלמה בתור מלך בפ\"ע , כ\"א רק שגילה אצלו כח עצמי של מלוכה שנמצא בו בהעלם; אמנם תוקפו של שלמה בחיי דוד אינו אלא תוקף מלכותו של דוד אביו ! וזהו גם מה שנשלח כ\"ק מו\"ח אדמו\"ר ע\"י אביו, עוד בחיי אביו , לענינים שהיו דרושים תקיפות ומס\"נ של נשיא בישראל ! משיחת י\"ב תמוז ה'תשמ\"ה ל\"הנחה פרטית\" או התרגום ללה\"ק של השיחה: https://thedailysicha.com/?date=06-11-2026 Synopsis The Tanach states (in the haftarah of parashas Chayei Sarah) that Dovid crowned his son Shlomo during his lifetime , though seemingly according to Torah law two kings cannot reign at the same time. This can be understood based on the Rogatchover’s statement that “An heir is the essence of the one who bequeaths .” Accordingly, since “kingship is inherited, ” it is understood that a son of a king who is fit to inherit the kingship possesses the power of kingship even before he becomes king in practice . And the ki",
-     "first_seen": "2026-11-06T12:05:13+00:00"
-    }
-   ],
+   "new": [],
    "latest": [
     {
      "id": "2026.11.6",
@@ -2357,7 +2345,7 @@
     }
    ],
    "total": 1421,
-   "last_success_at": "2026-11-06T12:05:13+00:00"
+   "last_success_at": "2026-11-07T11:02:53+00:00"
   },
   {
    "id": "learnchassidus",
@@ -2371,7 +2359,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-06T12:05:20+00:00",
+   "checked_at": "2026-11-07T11:02:59+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2384,7 +2372,7 @@
     }
    ],
    "total": 5,
-   "last_success_at": "2026-11-06T12:05:20+00:00"
+   "last_success_at": "2026-11-07T11:02:59+00:00"
   },
   {
    "id": "simplychassidus",
@@ -2398,7 +2386,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-06T12:05:21+00:00",
+   "checked_at": "2026-11-07T11:03:00+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2425,7 +2413,7 @@
     }
    ],
    "total": 4,
-   "last_success_at": "2026-11-06T12:05:21+00:00"
+   "last_success_at": "2026-11-07T11:03:00+00:00"
   },
   {
    "id": "alonei_chabad",
@@ -2438,7 +2426,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-06T12:05:23+00:00",
+   "checked_at": "2026-11-07T11:03:01+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -2455,7 +2443,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-06T12:05:23+00:00",
+   "checked_at": "2026-11-07T11:03:01+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -2472,7 +2460,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-06T12:05:23+00:00",
+   "checked_at": "2026-11-07T11:03:01+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2499,7 +2487,7 @@
     }
    ],
    "total": 303,
-   "last_success_at": "2026-11-06T12:05:23+00:00"
+   "last_success_at": "2026-11-07T11:03:01+00:00"
   },
   {
    "id": "lchaim",
@@ -2512,7 +2500,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-06T12:05:24+00:00",
+   "checked_at": "2026-11-07T11:03:02+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2574,7 +2562,7 @@
     }
    ],
    "total": 0,
-   "last_success_at": "2026-11-06T12:05:24+00:00"
+   "last_success_at": "2026-11-07T11:03:02+00:00"
   },
   {
    "id": "one_point",
@@ -2587,7 +2575,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-06T12:05:25+00:00",
+   "checked_at": "2026-11-07T11:03:03+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2628,7 +2616,7 @@
     }
    ],
    "total": 0,
-   "last_success_at": "2026-11-06T12:05:25+00:00"
+   "last_success_at": "2026-11-07T11:03:03+00:00"
   },
   {
    "id": "derher",
@@ -2641,7 +2629,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-06T12:05:26+00:00",
+   "checked_at": "2026-11-07T11:03:05+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -2658,7 +2646,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-06T12:05:26+00:00",
+   "checked_at": "2026-11-07T11:03:05+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -2675,10 +2663,25 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-06T12:05:26+00:00",
+   "checked_at": "2026-11-07T11:03:05+00:00",
    "status": "ok",
-   "new": [],
+   "new": [
+    {
+     "id": "content:e62c6fab53300245",
+     "title": "עדכון בתוכן הדף",
+     "url": "https://dvarmalchus.org",
+     "date": "",
+     "first_seen": "2026-11-07T11:03:05+00:00"
+    }
+   ],
    "latest": [
+    {
+     "id": "content:e62c6fab53300245",
+     "title": "עדכון בתוכן הדף",
+     "url": "https://dvarmalchus.org",
+     "date": "",
+     "first_seen": "2026-11-07T11:03:05+00:00"
+    },
     {
      "id": "content:fea051a08252ee7c",
      "title": "עדכון בתוכן הדף",
@@ -2723,7 +2726,7 @@
     }
    ],
    "total": 5,
-   "last_success_at": "2026-11-06T12:05:26+00:00"
+   "last_success_at": "2026-11-07T11:03:05+00:00"
   },
   {
    "id": "maynotecha_inst",
@@ -2736,7 +2739,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-06T12:05:28+00:00",
+   "checked_at": "2026-11-07T11:03:07+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -2753,7 +2756,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-06T12:05:28+00:00",
+   "checked_at": "2026-11-07T11:03:07+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2775,7 +2778,7 @@
     }
    ],
    "total": 0,
-   "last_success_at": "2026-11-06T12:05:28+00:00"
+   "last_success_at": "2026-11-07T11:03:07+00:00"
   },
   {
    "id": "anash",
@@ -2788,43 +2791,27 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-06T12:05:29+00:00",
+   "checked_at": "2026-11-07T11:03:08+00:00",
    "status": "ok",
    "new": [
     {
-     "id": "https://anash.org/?p=1128593",
-     "title": "Free Weekly Audio Story: The Rebbe Rashab’s Mystery Order",
-     "url": "https://anash.org/free-weekly-audio-story-the-rebbe-rashabs-mystery-order/",
-     "date": "Thu, 05 Nov 2026 22:42:00 +0000",
-     "blurb": "A Gutte Nacht with the Rebbe, a new free weekly audio series for children featuring true stories told by the Rebbe, begins with the story of a mysterious package delivered to the Frierdiker Rebbe in Vienna.",
-     "first_seen": "2026-11-06T12:05:29+00:00"
-    },
-    {
-     "id": "https://anash.org/?p=1128992",
-     "title": "The Alter Rebbe’s Handwritten Kabbalah Maamar Explained",
-     "url": "https://anash.org/the-alter-rebbes-handwritten-kabbalah-maamar-now-opened-up/",
-     "date": "Thu, 05 Nov 2026 17:20:45 +0000",
-     "blurb": "An unusual maamar in Torah Or, written by the Alter Rebbe himself and filled with references to Kabbalah, has been published in a new edition that brings together every source in full, along with explanations that make the maamar easier to learn and understand.",
-     "first_seen": "2026-11-06T12:05:29+00:00"
-    },
-    {
-     "id": "https://anash.org/?p=1128976",
-     "title": "The Night I Served as the Rebbe’s Cardiologist",
-     "url": "https://anash.org/the-night-i-served-as-the-rebbes-cardiologist/",
-     "date": "Thu, 05 Nov 2026 17:06:41 +0000",
-     "blurb": "When Dr. Ralph Silverman received an urgent call asking him to help care for the Rebbe following his heart attack, he found himself spending a night at 770, followed by a fascinating conversation with the Rebbe.",
-     "first_seen": "2026-11-06T12:05:29+00:00"
-    },
-    {
-     "id": "https://anash.org/?p=1118004",
-     "title": "Thousands of Dots Tell the Rebbe’s Global Impact",
-     "url": "https://anash.org/thousands-of-dots-tell-the-rebbes-global-impact/",
-     "date": "Thu, 05 Nov 2026 14:05:00 +0000",
-     "blurb": "A new interactive atlas uses modern technology to map the Rebbe’s global impact, bringing together the places the Rebbe lived and traveled, thousands of shluchim and Chabad houses, Tanya printings, letters, Merkos Shlichus visits, and more. The atlas contains 28,910 geo-referenced records spanning 186 countries and territories, from 1797 to today.",
-     "first_seen": "2026-11-06T12:05:29+00:00"
+     "id": "https://anash.org/?p=1129051",
+     "title": "I Made the Mistake of Misrepresenting the Rebbe",
+     "url": "https://anash.org/when-i-made-the-mistake-of-misrepresenting-the-rebbe/",
+     "date": "Fri, 06 Nov 2026 14:05:00 +0000",
+     "blurb": "When a group of Jewish students barricaded themselves in a shelter and threatened mass suicide, R' Dovid Eliezrie was called upon to intervene. But a startling phone call from the Rebbe’s mazkirus taught him a lesson he won't forget.",
+     "first_seen": "2026-11-07T11:03:08+00:00"
     }
    ],
    "latest": [
+    {
+     "id": "https://anash.org/?p=1129051",
+     "title": "I Made the Mistake of Misrepresenting the Rebbe",
+     "url": "https://anash.org/when-i-made-the-mistake-of-misrepresenting-the-rebbe/",
+     "date": "Fri, 06 Nov 2026 14:05:00 +0000",
+     "blurb": "When a group of Jewish students barricaded themselves in a shelter and threatened mass suicide, R' Dovid Eliezrie was called upon to intervene. But a startling phone call from the Rebbe’s mazkirus taught him a lesson he won't forget.",
+     "first_seen": "2026-11-07T11:03:08+00:00"
+    },
     {
      "id": "https://anash.org/?p=1128593",
      "title": "Free Weekly Audio Story: The Rebbe Rashab’s Mystery Order",
@@ -3074,8 +3061,8 @@
      "first_seen": "2026-10-18T04:52:22+00:00"
     }
    ],
-   "total": 6,
-   "last_success_at": "2026-11-06T12:05:29+00:00"
+   "total": 5,
+   "last_success_at": "2026-11-07T11:03:08+00:00"
   },
   {
    "id": "chabadinfo",
@@ -3088,7 +3075,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-06T12:05:31+00:00",
+   "checked_at": "2026-11-07T11:03:09+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -3105,7 +3092,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-06T12:05:31+00:00",
+   "checked_at": "2026-11-07T11:03:09+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -3122,7 +3109,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-06T12:05:31+00:00",
+   "checked_at": "2026-11-07T11:03:09+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -3168,7 +3155,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-06T12:05:31+00:00"
+   "last_success_at": "2026-11-07T11:03:09+00:00"
   },
   {
    "id": "kehot",
@@ -3181,34 +3168,9 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-06T12:05:34+00:00",
+   "checked_at": "2026-11-07T11:03:12+00:00",
    "status": "ok",
-   "new": [
-    {
-     "id": "ERE-IK2",
-     "title": "Igros Kodesh - The English Letters #2 (5710-5711)",
-     "url": "https://store.kehotonline.com/products.asp?dept=345",
-     "date": "",
-     "catalog_month": "2026-11",
-     "first_seen": "2026-11-06T12:05:34+00:00"
-    },
-    {
-     "id": "HL-SHMIMA",
-     "title": "Shmirat HaMamon",
-     "url": "https://store.kehotonline.com/products.asp?dept=344",
-     "date": "",
-     "catalog_month": "2026-10",
-     "first_seen": "2026-11-06T12:05:34+00:00"
-    },
-    {
-     "id": "HL-SHMIP",
-     "title": "Shmirat HaParasha",
-     "url": "https://store.kehotonline.com/products.asp?dept=344",
-     "date": "",
-     "catalog_month": "2026-10",
-     "first_seen": "2026-11-06T12:05:34+00:00"
-    }
-   ],
+   "new": [],
    "latest": [
     {
      "id": "EO-CHANCL",
@@ -3916,7 +3878,7 @@
     }
    ],
    "total": 198,
-   "last_success_at": "2026-11-06T12:05:34+00:00"
+   "last_success_at": "2026-11-07T11:03:12+00:00"
   }
  ],
  "browser_checks": {
