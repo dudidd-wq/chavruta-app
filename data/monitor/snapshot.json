@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-08T11:16:25+00:00",
+ "generated_at": "2026-11-09T12:52:05+00:00",
  "sources": [
   {
    "id": "chabadlibrary",
@@ -12,7 +12,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-11-08T11:15:15+00:00",
+   "checked_at": "2026-11-09T12:50:27+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -30,7 +30,7 @@
     "primary",
     "whatsnew"
    ],
-   "checked_at": "2026-11-08T11:15:15+00:00",
+   "checked_at": "2026-11-09T12:50:27+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -47,7 +47,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-11-08T11:15:15+00:00",
+   "checked_at": "2026-11-09T12:50:27+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -64,7 +64,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-11-08T11:15:15+00:00",
+   "checked_at": "2026-11-09T12:50:27+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -82,7 +82,7 @@
     "primary",
     "whatsnew"
    ],
-   "checked_at": "2026-11-08T11:15:15+00:00",
+   "checked_at": "2026-11-09T12:50:27+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -102,7 +102,7 @@
     }
    ],
    "total": 132,
-   "last_success_at": "2026-11-08T11:15:15+00:00"
+   "last_success_at": "2026-11-09T12:50:27+00:00"
   },
   {
    "id": "chabadlibrarybooks",
@@ -115,7 +115,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-11-08T11:15:16+00:00",
+   "checked_at": "2026-11-09T12:50:28+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -133,12 +133,12 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-08T11:15:16+00:00",
+   "checked_at": "2026-11-09T12:50:28+00:00",
    "status": "ok",
    "new": [],
    "latest": [],
    "total": 1501,
-   "last_success_at": "2026-11-08T11:15:16+00:00"
+   "last_success_at": "2026-11-09T12:50:28+00:00"
   },
   {
    "id": "chassidut_org",
@@ -152,12 +152,12 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-08T11:15:17+00:00",
+   "checked_at": "2026-11-09T12:50:29+00:00",
    "status": "ok",
    "new": [],
    "latest": [],
    "total": 4,
-   "last_success_at": "2026-11-08T11:15:17+00:00"
+   "last_success_at": "2026-11-09T12:50:29+00:00"
   },
   {
    "id": "biurim",
@@ -171,7 +171,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-08T11:15:19+00:00",
+   "checked_at": "2026-11-09T12:50:31+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -217,7 +217,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-08T11:15:19+00:00"
+   "last_success_at": "2026-11-09T12:50:31+00:00"
   },
   {
    "id": "hm_monsey",
@@ -231,8 +231,8 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-08T11:15:20+00:00",
-   "status": "ok",
+   "checked_at": "2026-11-09T12:50:33+00:00",
+   "status": "error",
    "new": [],
    "latest": [
     {
@@ -293,7 +293,9 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-08T11:15:20+00:00"
+   "error": "ConnectTimeout: HTTPSConnectionPool(host='heichalmenachemmonsey.org', port=443): Max retries exceeded with url: /feed/ (Caused by ConnectTimeoutError(<HTTPSConnection(host='hei",
+   "last_success_at": "2026-11-08T11:15:20+00:00",
+   "retained": true
   },
   {
    "id": "hiskashrus",
@@ -307,7 +309,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-08T11:15:22+00:00",
+   "checked_at": "2026-11-09T12:50:59+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -376,7 +378,7 @@
     }
    ],
    "total": 0,
-   "last_success_at": "2026-11-08T11:15:22+00:00"
+   "last_success_at": "2026-11-09T12:50:59+00:00"
   },
   {
    "id": "lichyot_chassidus",
@@ -390,7 +392,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-08T11:15:23+00:00",
+   "checked_at": "2026-11-09T12:51:01+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -500,7 +502,7 @@
     }
    ],
    "total": 1000,
-   "last_success_at": "2026-11-08T11:15:23+00:00"
+   "last_success_at": "2026-11-09T12:51:01+00:00"
   },
   {
    "id": "chabadzoom",
@@ -514,7 +516,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-08T11:15:25+00:00",
+   "checked_at": "2026-11-09T12:51:03+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -625,7 +627,7 @@
     }
    ],
    "total": 562,
-   "last_success_at": "2026-11-08T11:15:25+00:00"
+   "last_success_at": "2026-11-09T12:51:03+00:00"
   },
   {
    "id": "kovtzimdrive",
@@ -639,7 +641,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-08T11:15:28+00:00",
+   "checked_at": "2026-11-09T12:51:08+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -647,12 +649,12 @@
      "id": "https://www.kovtzimdrive.com/posts/bochurim-build-database-of-thousands-of-%E2%80%98he%E2%80%99aros%E2%80%99",
      "title": "bochurim build database of thousands of ‘he’aros’",
      "url": "https://www.kovtzimdrive.com/posts/bochurim-build-database-of-thousands-of-%E2%80%98he%E2%80%99aros%E2%80%99",
-     "date": "2026-11-08",
+     "date": "2026-11-09",
      "first_seen": "2026-10-20T07:59:38+00:00"
     }
    ],
    "total": 1,
-   "last_success_at": "2026-11-08T11:15:28+00:00"
+   "last_success_at": "2026-11-09T12:51:08+00:00"
   },
   {
    "id": "avita",
@@ -666,7 +668,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-08T11:15:31+00:00",
+   "checked_at": "2026-11-09T12:51:10+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -684,7 +686,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-08T11:15:31+00:00",
+   "checked_at": "2026-11-09T12:51:10+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -706,7 +708,7 @@
     }
    ],
    "total": 2,
-   "last_success_at": "2026-11-08T11:15:31+00:00"
+   "last_success_at": "2026-11-09T12:51:10+00:00"
   },
   {
    "id": "dvarmalchus770",
@@ -720,18 +722,9 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-08T11:15:32+00:00",
+   "checked_at": "2026-11-09T12:51:11+00:00",
    "status": "ok",
-   "new": [
-    {
-     "id": "http://dvarmalchus770.org/?p=5700",
-     "title": "Toldos 5752: The Essential Existence is Revealed",
-     "url": "https://dvarmalchus770.org/2026/11/07/toldos-5752-the-essential-existence-is-revealed-2/",
-     "date": "Sat, 07 Nov 2026 22:56:00 +0000",
-     "blurb": "This week the sicha examines a simple but deep concept: the distinction between “essential existence” (“etzem metzius“) and the revelation of that existence. This is illustrated by the difference between the birth of a person, the beginning of their essential existence, upon which everything they will do in the future depends, and the actual good deeds that […]",
-     "first_seen": "2026-11-08T11:15:32+00:00"
-    }
-   ],
+   "new": [],
    "latest": [
     {
      "id": "http://dvarmalchus770.org/?p=5700",
@@ -847,7 +840,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-08T11:15:32+00:00"
+   "last_success_at": "2026-11-09T12:51:11+00:00"
   },
   {
    "id": "soulwords",
@@ -861,7 +854,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-08T11:15:33+00:00",
+   "checked_at": "2026-11-09T12:51:12+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -931,7 +924,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-08T11:15:33+00:00"
+   "last_success_at": "2026-11-09T12:51:12+00:00"
   },
   {
    "id": "sie_weekly",
@@ -945,17 +938,9 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-08T11:15:35+00:00",
+   "checked_at": "2026-11-09T12:51:14+00:00",
    "status": "ok",
-   "new": [
-    {
-     "id": "https://drive.google.com/file/d/1EpylTOtROt8S2LoB7vLkAMlWZUpyZ9Pc/view",
-     "title": "Download",
-     "url": "https://drive.google.com/file/d/1EpylTOtROt8S2LoB7vLkAMlWZUpyZ9Pc/view",
-     "date": "",
-     "first_seen": "2026-11-08T11:15:35+00:00"
-    }
-   ],
+   "new": [],
    "latest": [
     {
      "id": "https://drive.google.com/file/d/1EpylTOtROt8S2LoB7vLkAMlWZUpyZ9Pc/view",
@@ -1022,7 +1007,7 @@
     }
    ],
    "total": 117,
-   "last_success_at": "2026-11-08T11:15:35+00:00"
+   "last_success_at": "2026-11-09T12:51:14+00:00"
   },
   {
    "id": "pls",
@@ -1036,18 +1021,9 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-08T11:15:37+00:00",
+   "checked_at": "2026-11-09T12:51:15+00:00",
    "status": "ok",
-   "new": [
-    {
-     "id": "72a29cd3-8ddc-49a9-8863-29004d8998bc",
-     "title": "Chelek 25, Toldos 3 - Rabbi Moshe B Perlstein",
-     "url": "https://sichaindepth.captivate.fm",
-     "date": "Sat, 07 Nov 2026 18:50:00 -0500",
-     "blurb": "Chelek 25, Toldos 3 - Rabbi Moshe B Perlstein",
-     "first_seen": "2026-11-08T11:15:37+00:00"
-    }
-   ],
+   "new": [],
    "latest": [
     {
      "id": "72a29cd3-8ddc-49a9-8863-29004d8998bc",
@@ -1171,7 +1147,7 @@
     }
    ],
    "total": 200,
-   "last_success_at": "2026-11-08T11:15:37+00:00"
+   "last_success_at": "2026-11-09T12:51:15+00:00"
   },
   {
    "id": "chayenu_ls",
@@ -1185,7 +1161,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-08T11:15:38+00:00",
+   "checked_at": "2026-11-09T12:51:17+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1212,7 +1188,7 @@
     }
    ],
    "total": 2,
-   "last_success_at": "2026-11-08T11:15:38+00:00"
+   "last_success_at": "2026-11-09T12:51:17+00:00"
   },
   {
    "id": "weekly_sicha",
@@ -1226,7 +1202,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-08T11:15:39+00:00",
+   "checked_at": "2026-11-09T12:51:18+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1234,7 +1210,7 @@
      "id": "https://theweeklysicha.org/episode/tws-chayei-sarah-87",
      "title": "tws chayei sarah 87",
      "url": "https://theweeklysicha.org/episode/tws-chayei-sarah-87",
-     "date": "2026-11-07T23:00:09.616Z",
+     "date": "2026-11-09T02:00:24.496Z",
      "first_seen": "2026-11-07T11:02:39+00:00"
     },
     {
@@ -1288,7 +1264,7 @@
     }
    ],
    "total": 119,
-   "last_success_at": "2026-11-08T11:15:39+00:00"
+   "last_success_at": "2026-11-09T12:51:18+00:00"
   },
   {
    "id": "theyeshiva",
@@ -1302,7 +1278,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-08T11:15:40+00:00",
+   "checked_at": "2026-11-09T12:51:20+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1420,7 +1396,7 @@
     }
    ],
    "total": 1545,
-   "last_success_at": "2026-11-08T11:15:40+00:00"
+   "last_success_at": "2026-11-09T12:51:20+00:00"
   },
   {
    "id": "chassidus_applied",
@@ -1434,10 +1410,43 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-08T11:15:43+00:00",
+   "checked_at": "2026-11-09T12:51:23+00:00",
    "status": "ok",
-   "new": [],
+   "new": [
+    {
+     "id": "yt:video:_pGjMHz1eWw",
+     "title": "Samach Vav Part 241:",
+     "url": "https://www.youtube.com/watch?v=_pGjMHz1eWw",
+     "date": "2026-11-09T04:39:47+00:00",
+     "blurb": "Shuv, even the revelation from above is through avodah b'koach atzmo.",
+     "first_seen": "2026-11-09T12:51:23+00:00"
+    },
+    {
+     "id": "yt:video:EvYUeTX9vd0",
+     "title": "Ep. 612: What Lessons Can Each of Us Learn From the International Gathering of Shluchim?",
+     "url": "https://www.youtube.com/watch?v=EvYUeTX9vd0",
+     "date": "2026-11-09T01:00:06+00:00",
+     "blurb": "",
+     "first_seen": "2026-11-09T12:51:23+00:00"
+    }
+   ],
    "latest": [
+    {
+     "id": "yt:video:_pGjMHz1eWw",
+     "title": "Samach Vav Part 241:",
+     "url": "https://www.youtube.com/watch?v=_pGjMHz1eWw",
+     "date": "2026-11-09T04:39:47+00:00",
+     "blurb": "Shuv, even the revelation from above is through avodah b'koach atzmo.",
+     "first_seen": "2026-11-09T12:51:23+00:00"
+    },
+    {
+     "id": "yt:video:EvYUeTX9vd0",
+     "title": "Ep. 612: What Lessons Can Each of Us Learn From the International Gathering of Shluchim?",
+     "url": "https://www.youtube.com/watch?v=EvYUeTX9vd0",
+     "date": "2026-11-09T01:00:06+00:00",
+     "blurb": "",
+     "first_seen": "2026-11-09T12:51:23+00:00"
+    },
     {
      "id": "yt:video:a6T2VA3jSy0",
      "title": "Chapter 37.03: Transforming Man and the World",
@@ -1451,7 +1460,7 @@
      "title": "Samach Vav Part 240:",
      "url": "https://www.youtube.com/watch?v=RuljX9ioXC0",
      "date": "2026-11-07T03:53:56+00:00",
-     "blurb": "Chochma -- dveikus, deeper ratzo, total bittul. Two levels in chochma -- ratzo and shuc -- eye of the mind, eye of the heart. Minister and servant, kabolas ol.",
+     "blurb": "Chochma -- dveikus, deeper ratzo, total bittul. Two levels in chochma -- ratzo and shuv -- eye of the mind, eye of the heart. Minister and servant, kabolas ol.",
      "first_seen": "2026-11-07T11:02:44+00:00"
     },
     {
@@ -1680,7 +1689,7 @@
     }
    ],
    "total": 15,
-   "last_success_at": "2026-11-08T11:15:43+00:00"
+   "last_success_at": "2026-11-09T12:51:23+00:00"
   },
   {
    "id": "neirot",
@@ -1694,7 +1703,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-08T11:15:43+00:00",
+   "checked_at": "2026-11-09T12:51:23+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1748,7 +1757,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-08T11:15:43+00:00"
+   "last_success_at": "2026-11-09T12:51:23+00:00"
   },
   {
    "id": "chassidus_explained",
@@ -1762,7 +1771,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-08T11:15:46+00:00",
+   "checked_at": "2026-11-09T12:51:25+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1824,7 +1833,7 @@
     }
    ],
    "total": 136,
-   "last_success_at": "2026-11-08T11:15:46+00:00"
+   "last_success_at": "2026-11-09T12:51:25+00:00"
   },
   {
    "id": "melukat",
@@ -1838,7 +1847,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-08T11:15:47+00:00",
+   "checked_at": "2026-11-09T12:51:26+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1900,7 +1909,7 @@
     }
    ],
    "total": 168,
-   "last_success_at": "2026-11-08T11:15:47+00:00"
+   "last_success_at": "2026-11-09T12:51:26+00:00"
   },
   {
    "id": "daily_maamar",
@@ -1914,10 +1923,43 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-08T11:15:48+00:00",
+   "checked_at": "2026-11-09T12:51:28+00:00",
    "status": "ok",
-   "new": [],
+   "new": [
+    {
+     "id": "67c3a954-68f1-4bda-a2b6-a2b0578a14ac",
+     "title": "Shabbos Parshas Toldos Mevorchim HaChodesh Kislev 5717 ,Maamorim Melukatim Vol. 1– Episode 9",
+     "url": "https://share.transistor.fm/s/9f0a87e2",
+     "date": "Mon, 09 Nov 2026 06:37:38 -0500",
+     "blurb": "This episode covers Chapter 9. The impossible can exist!!!!!!",
+     "first_seen": "2026-11-09T12:51:28+00:00"
+    },
+    {
+     "id": "9cb2bc80-51f8-4b45-a283-e1f62cc3be17",
+     "title": "Shabbos Parshas Toldos Mevorchim HaChodesh Kislev 5717 ,Maamorim Melukatim Vol. 1– Episode 6",
+     "url": "https://share.transistor.fm/s/ba5b93ae",
+     "date": "Sun, 08 Nov 2026 06:33:09 -0500",
+     "blurb": "This episode covers Chapter 8. It's only Hahsem!!",
+     "first_seen": "2026-11-09T12:51:28+00:00"
+    }
+   ],
    "latest": [
+    {
+     "id": "67c3a954-68f1-4bda-a2b6-a2b0578a14ac",
+     "title": "Shabbos Parshas Toldos Mevorchim HaChodesh Kislev 5717 ,Maamorim Melukatim Vol. 1– Episode 9",
+     "url": "https://share.transistor.fm/s/9f0a87e2",
+     "date": "Mon, 09 Nov 2026 06:37:38 -0500",
+     "blurb": "This episode covers Chapter 9. The impossible can exist!!!!!!",
+     "first_seen": "2026-11-09T12:51:28+00:00"
+    },
+    {
+     "id": "9cb2bc80-51f8-4b45-a283-e1f62cc3be17",
+     "title": "Shabbos Parshas Toldos Mevorchim HaChodesh Kislev 5717 ,Maamorim Melukatim Vol. 1– Episode 6",
+     "url": "https://share.transistor.fm/s/ba5b93ae",
+     "date": "Sun, 08 Nov 2026 06:33:09 -0500",
+     "blurb": "This episode covers Chapter 8. It's only Hahsem!!",
+     "first_seen": "2026-11-09T12:51:28+00:00"
+    },
     {
      "id": "fc8f77e9-322d-4b2d-ba58-28b2babab7aa",
      "title": "Shabbos Parshas Toldos Mevorchim HaChodesh Kislev 5717 ,Maamorim Melukatim Vol. 1– Episode 5",
@@ -2103,8 +2145,8 @@
      "first_seen": "2026-10-18T04:52:03+00:00"
     }
    ],
-   "total": 358,
-   "last_success_at": "2026-11-08T11:15:48+00:00"
+   "total": 360,
+   "last_success_at": "2026-11-09T12:51:28+00:00"
   },
   {
    "id": "wellsprings",
@@ -2118,7 +2160,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-08T11:15:49+00:00",
+   "checked_at": "2026-11-09T12:51:29+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2164,7 +2206,7 @@
     }
    ],
    "total": 125,
-   "last_success_at": "2026-11-08T11:15:49+00:00"
+   "last_success_at": "2026-11-09T12:51:29+00:00"
   },
   {
    "id": "daily_sicha",
@@ -2178,19 +2220,27 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-08T11:15:50+00:00",
+   "checked_at": "2026-11-09T12:51:30+00:00",
    "status": "ok",
    "new": [
     {
-     "id": "2026.11.8",
-     "title": "יום א' פ' תולדות, כ\"ח מרחשון, ה'תשפ\"ז",
+     "id": "2026.11.9",
+     "title": "יום ב' פ' תולדות, כ\"ט מרחשון, ה'תשפ\"ז",
      "url": "",
-     "date": "Sun, 08 Nov 2026 12:00:00 GMT",
-     "blurb": "התוכן עה\"פ [בשני דפ' תולדות] \"ויזרע יצחק בארץ ההיא וימצא בשנה ההיא מאה שערים ויברכהו ה'\" מצינו לכאו' ב' פירושים הפכיים מן הקצה אל הקצה : 1) יצחק זרע דגן כפשוטו ומצא \"מאה שערים\" - \"שאמדוה כמה ראוי' לעשות ועשתה על אחת שאמדוה מאה ורבותינו אמרו אומד זה למעשרות הי'\" (רש\"י ממדרשים) 2) מ\"ש בפרקי דר\"א \"וכי יצחק אבינו דגן זרע חס ושלום ?!\" אלא הכוונה ש\"זרע ( מצות ) מעשרות\" (ע\"ד \"זורע צדקות\") - הוא הפריש מעשר מממונו. וי\"ל שבזריעת דגן ישנם ב' אופנים: ש(רק) העיקר אצלו הוא המעשרות, אבל את השאר קיים אצלו עכ\"פ כמציאות של \" טפל \" (\"כל מעשיך לשם שמים\"), וזהו ה\"זריעת דגן\" של יצחק עפ\"י נגלה , וע\"ז בא הפדר\"א ואומר ש\" חס ושלום \" לומר שיצחק, א' מהאבות ש\" הן הן המרכבה \" שאין לו שום מציאות לעצמו, \"דגן זרע\" באופן כזה! אלא כל מציאותו של ה\"זריעת דגן\" (\"דרכיך\") שלו היתה רק \"כלי\" ל\" דעהו \"! ע\"ד עטיפת הטלית הוא רק ה\"כלי\" לקבלת עומ\"ש במעשה וכיו\"ב. ג' חלקים משיחת י\"ט כסלו ה'תשכ\"ה ל\"הנחה פרטית\" או התרגום ללה\"ק של השיחה: https://thedailysicha.com/?date=08-11-2026 Synopsis On the verse (in sheini of parashas Toldos), “Yitzchak sowed in that land, and in that year he found a hundredfold, and Hashem blessed him,” we find two interpretations that are seeming diametrically opposed from another : (1) Rashi, based on Midrashim, explains that Yitzchak sowed grain in the literal sense, and he found a hundredfold: “They estimated how much it ought to produce, and it produced one hundred times the amount they had estimated. And our Sages said that this estimation was for tithes.” (2) Pirkei D’Rabbi Eliezer states: “Did Y",
-     "first_seen": "2026-11-08T11:15:50+00:00"
+     "date": "Mon, 09 Nov 2026 12:00:00 GMT",
+     "blurb": "התוכן [המשך] ועפ\"י הנ\"ל יובן מ\"ש [בשני דפ' תולדות] \"ויזרע יצחק בארץ ההיא וימצא בשנה ההיא מאה שערים ויברכהו ה'\" – \"ויברכהו ה'\" בסוף , אף שלכאו' זוהי הסיבה ל\"וימצא .. מאה שערים\"? כי העבודה, \"ויזרע יצחק וגו'\", צ\"ל באתערותא דלתתא ובכח עצמו . ולכן כאשר מגיע מקום קשה כמו \"ארץ ההיא\", או זמן קשה כמו \"שנה ההיא\", או שניהם יחד, אין להתייאש ולומר שאין בכחו לפעול וכו', כי מכיון שבהשג\"פ נמצא הוא במצב זה ויש לו את הידיעות \"לזרוע\" וכיו\"ב, מוכח שעליו להתייגע ולהתעסק בזה. ואז, כאשר רואים מלמעלה שהוא מתייגע בכל כוחו, הנה \"ויברכהו ה'\" – נותנים לו מלמעלה שלא בערך יגיעתו. וכמשנת\"ל בהענין ד\"יפוצו מעיינותיך חוצה\": שגם בעניני \" חוצה \" בהם הוא מתעסק כמו עניני מסחר ומאכל ומשקה – \"זורע דגן\", צ\"ל ניכר שכל ענינם אינם אלא כלי ל\" מעיין \" עצמו, עד ש\" ח\"ו דגן זרע\". ואז \"ויברכהו ה'\" בגו\"ר. משיחת י\"ט כסלו ה'תשכ\"ה ל\"הנחה פרטית\" או התרגום ללה\"ק של השיחה: https://thedailysicha.com/?date=09-11-2026 Synopsis (Continued.) Based on the above, we can understand why in the verse (in sheini of parashas Toldos), “Yitzchak sowed in that land, and in that year he found a hundredfold, and Hashem blessed him,” the words “and Hashem blessed him” come at the end of the verse, even though this was the reason “he found... a hundredfold.” Because the service of “sowing” must come from an awakening from below and through one’s own efforts . Therefore, when one encounters a difficult place like “that land,” or a difficult time like “that year,” or both together, he must not despair and say he lacks the ability to accomplish anything",
+     "first_seen": "2026-11-09T12:51:30+00:00"
     }
    ],
    "latest": [
+    {
+     "id": "2026.11.9",
+     "title": "יום ב' פ' תולדות, כ\"ט מרחשון, ה'תשפ\"ז",
+     "url": "",
+     "date": "Mon, 09 Nov 2026 12:00:00 GMT",
+     "blurb": "התוכן [המשך] ועפ\"י הנ\"ל יובן מ\"ש [בשני דפ' תולדות] \"ויזרע יצחק בארץ ההיא וימצא בשנה ההיא מאה שערים ויברכהו ה'\" – \"ויברכהו ה'\" בסוף , אף שלכאו' זוהי הסיבה ל\"וימצא .. מאה שערים\"? כי העבודה, \"ויזרע יצחק וגו'\", צ\"ל באתערותא דלתתא ובכח עצמו . ולכן כאשר מגיע מקום קשה כמו \"ארץ ההיא\", או זמן קשה כמו \"שנה ההיא\", או שניהם יחד, אין להתייאש ולומר שאין בכחו לפעול וכו', כי מכיון שבהשג\"פ נמצא הוא במצב זה ויש לו את הידיעות \"לזרוע\" וכיו\"ב, מוכח שעליו להתייגע ולהתעסק בזה. ואז, כאשר רואים מלמעלה שהוא מתייגע בכל כוחו, הנה \"ויברכהו ה'\" – נותנים לו מלמעלה שלא בערך יגיעתו. וכמשנת\"ל בהענין ד\"יפוצו מעיינותיך חוצה\": שגם בעניני \" חוצה \" בהם הוא מתעסק כמו עניני מסחר ומאכל ומשקה – \"זורע דגן\", צ\"ל ניכר שכל ענינם אינם אלא כלי ל\" מעיין \" עצמו, עד ש\" ח\"ו דגן זרע\". ואז \"ויברכהו ה'\" בגו\"ר. משיחת י\"ט כסלו ה'תשכ\"ה ל\"הנחה פרטית\" או התרגום ללה\"ק של השיחה: https://thedailysicha.com/?date=09-11-2026 Synopsis (Continued.) Based on the above, we can understand why in the verse (in sheini of parashas Toldos), “Yitzchak sowed in that land, and in that year he found a hundredfold, and Hashem blessed him,” the words “and Hashem blessed him” come at the end of the verse, even though this was the reason “he found... a hundredfold.” Because the service of “sowing” must come from an awakening from below and through one’s own efforts . Therefore, when one encounters a difficult place like “that land,” or a difficult time like “that year,” or both together, he must not despair and say he lacks the ability to accomplish anything",
+     "first_seen": "2026-11-09T12:51:30+00:00"
+    },
     {
      "id": "2026.11.8",
      "title": "יום א' פ' תולדות, כ\"ח מרחשון, ה'תשפ\"ז",
@@ -2376,8 +2426,8 @@
      "first_seen": "2026-10-18T04:52:06+00:00"
     }
    ],
-   "total": 1422,
-   "last_success_at": "2026-11-08T11:15:50+00:00"
+   "total": 1423,
+   "last_success_at": "2026-11-09T12:51:30+00:00"
   },
   {
    "id": "learnchassidus",
@@ -2391,7 +2441,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-08T11:15:54+00:00",
+   "checked_at": "2026-11-09T12:51:35+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2404,7 +2454,7 @@
     }
    ],
    "total": 5,
-   "last_success_at": "2026-11-08T11:15:54+00:00"
+   "last_success_at": "2026-11-09T12:51:35+00:00"
   },
   {
    "id": "simplychassidus",
@@ -2418,7 +2468,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-08T11:15:55+00:00",
+   "checked_at": "2026-11-09T12:51:36+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2445,7 +2495,7 @@
     }
    ],
    "total": 4,
-   "last_success_at": "2026-11-08T11:15:55+00:00"
+   "last_success_at": "2026-11-09T12:51:36+00:00"
   },
   {
    "id": "alonei_chabad",
@@ -2458,7 +2508,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-08T11:15:56+00:00",
+   "checked_at": "2026-11-09T12:51:37+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -2475,7 +2525,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-08T11:15:56+00:00",
+   "checked_at": "2026-11-09T12:51:37+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -2492,7 +2542,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-08T11:15:56+00:00",
+   "checked_at": "2026-11-09T12:51:37+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2519,7 +2569,7 @@
     }
    ],
    "total": 303,
-   "last_success_at": "2026-11-08T11:15:56+00:00"
+   "last_success_at": "2026-11-09T12:51:37+00:00"
   },
   {
    "id": "lchaim",
@@ -2532,7 +2582,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-08T11:15:57+00:00",
+   "checked_at": "2026-11-09T12:51:39+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2594,7 +2644,7 @@
     }
    ],
    "total": 0,
-   "last_success_at": "2026-11-08T11:15:57+00:00"
+   "last_success_at": "2026-11-09T12:51:39+00:00"
   },
   {
    "id": "one_point",
@@ -2607,7 +2657,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-08T11:15:58+00:00",
+   "checked_at": "2026-11-09T12:51:40+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2648,7 +2698,7 @@
     }
    ],
    "total": 0,
-   "last_success_at": "2026-11-08T11:15:58+00:00"
+   "last_success_at": "2026-11-09T12:51:40+00:00"
   },
   {
    "id": "derher",
@@ -2661,7 +2711,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-08T11:15:59+00:00",
+   "checked_at": "2026-11-09T12:51:41+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -2678,7 +2728,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-08T11:15:59+00:00",
+   "checked_at": "2026-11-09T12:51:41+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -2695,7 +2745,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-08T11:15:59+00:00",
+   "checked_at": "2026-11-09T12:51:41+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2750,7 +2800,7 @@
     }
    ],
    "total": 5,
-   "last_success_at": "2026-11-08T11:15:59+00:00"
+   "last_success_at": "2026-11-09T12:51:41+00:00"
   },
   {
    "id": "maynotecha_inst",
@@ -2763,7 +2813,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-08T11:16:02+00:00",
+   "checked_at": "2026-11-09T12:51:43+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -2780,26 +2830,9 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-08T11:16:02+00:00",
+   "checked_at": "2026-11-09T12:51:43+00:00",
    "status": "ok",
-   "new": [
-    {
-     "id": "https://www.chabad.org/article.asp?aid=7411803",
-     "title": "Podcast: She Used Tanya to Disarm a Burglar Joanne Zagnoev in conversation with Chana Weisberg",
-     "url": "https://www.chabad.org/article.asp?aid=7411803",
-     "date": "Sat, 07 Nov 2026 12:00:00 EST",
-     "blurb": "Joanne Zagnoev is a clinical psychologist whose life was transformed by Chassidic teachings.",
-     "first_seen": "2026-11-08T11:16:02+00:00"
-    },
-    {
-     "id": "https://www.chabad.org/article.asp?aid=5740099",
-     "title": "Video: The 18th Century Jewish Mystical Work 'Tanya' in Manuscript By Eli Brackman",
-     "url": "https://www.chabad.org/article.asp?aid=5740099",
-     "date": "Sat, 07 Nov 2026 12:00:00 EST",
-     "blurb": "An analysis of the manuscript of Rabbi Schneur Zalman of Liadi's Tanya early edition, held at the British Library, London.",
-     "first_seen": "2026-11-08T11:16:02+00:00"
-    }
-   ],
+   "new": [],
    "latest": [
     {
      "id": "https://www.chabad.org/article.asp?aid=7411803",
@@ -2835,7 +2868,7 @@
     }
    ],
    "total": 2,
-   "last_success_at": "2026-11-08T11:16:02+00:00"
+   "last_success_at": "2026-11-09T12:51:43+00:00"
   },
   {
    "id": "anash",
@@ -2848,10 +2881,43 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-08T11:16:03+00:00",
+   "checked_at": "2026-11-09T12:51:45+00:00",
    "status": "ok",
-   "new": [],
+   "new": [
+    {
+     "id": "https://anash.org/?p=1130246",
+     "title": "Five New Members Join Rebbe’s Vaad for Russian Seforim",
+     "url": "https://anash.org/five-new-members-join-rebbes-vaad-for-russian-seforim/",
+     "date": "Mon, 09 Nov 2026 03:18:26 +0000",
+     "blurb": "Following the Kinus group photo, the special Vaad appointed by the Rebbe to retrieve the seforim, kisvei yad , and holy artifacts of the Rebbeim still held in Russia, appointed five new members to assist in their sacred mission.",
+     "first_seen": "2026-11-09T12:51:45+00:00"
+    },
+    {
+     "id": "https://anash.org/?p=1129906",
+     "title": "The Rebbe’s Army in One Photo",
+     "url": "https://anash.org/group-photo-international-kinus-hashluchim-5787/",
+     "date": "Sun, 08 Nov 2026 15:47:18 +0000",
+     "blurb": "Thousands of shluchim from across the globe gathered outside 770 Eastern Parkway on Sunday morning for the largest group photo of rabbis.",
+     "first_seen": "2026-11-09T12:51:45+00:00"
+    }
+   ],
    "latest": [
+    {
+     "id": "https://anash.org/?p=1130246",
+     "title": "Five New Members Join Rebbe’s Vaad for Russian Seforim",
+     "url": "https://anash.org/five-new-members-join-rebbes-vaad-for-russian-seforim/",
+     "date": "Mon, 09 Nov 2026 03:18:26 +0000",
+     "blurb": "Following the Kinus group photo, the special Vaad appointed by the Rebbe to retrieve the seforim, kisvei yad , and holy artifacts of the Rebbeim still held in Russia, appointed five new members to assist in their sacred mission.",
+     "first_seen": "2026-11-09T12:51:45+00:00"
+    },
+    {
+     "id": "https://anash.org/?p=1129906",
+     "title": "The Rebbe’s Army in One Photo",
+     "url": "https://anash.org/group-photo-international-kinus-hashluchim-5787/",
+     "date": "Sun, 08 Nov 2026 15:47:18 +0000",
+     "blurb": "Thousands of shluchim from across the globe gathered outside 770 Eastern Parkway on Sunday morning for the largest group photo of rabbis.",
+     "first_seen": "2026-11-09T12:51:45+00:00"
+    },
     {
      "id": "https://anash.org/?p=1129051",
      "title": "I Made the Mistake of Misrepresenting the Rebbe",
@@ -3109,8 +3175,8 @@
      "first_seen": "2026-10-18T04:52:22+00:00"
     }
    ],
-   "total": 5,
-   "last_success_at": "2026-11-08T11:16:03+00:00"
+   "total": 3,
+   "last_success_at": "2026-11-09T12:51:45+00:00"
   },
   {
    "id": "chabadinfo",
@@ -3123,7 +3189,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-08T11:16:05+00:00",
+   "checked_at": "2026-11-09T12:51:46+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -3140,7 +3206,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-08T11:16:05+00:00",
+   "checked_at": "2026-11-09T12:51:46+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -3157,7 +3223,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-08T11:16:05+00:00",
+   "checked_at": "2026-11-09T12:51:46+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -3203,7 +3269,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-08T11:16:05+00:00"
+   "last_success_at": "2026-11-09T12:51:46+00:00"
   },
   {
    "id": "kehot",
@@ -3216,7 +3282,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-08T11:16:07+00:00",
+   "checked_at": "2026-11-09T12:51:49+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -3925,8 +3991,8 @@
      "first_seen": "2026-10-22T05:10:35+00:00"
     }
    ],
-   "total": 198,
-   "last_success_at": "2026-11-08T11:16:07+00:00"
+   "total": 197,
+   "last_success_at": "2026-11-09T12:51:49+00:00"
   }
  ],
  "browser_checks": {

@@ -118,7 +118,6 @@
   "ELE-CHIT.M19",
   "ELE-CHIT.M70",
   "HO-RAMBMM1.L",
-  "HO-BNEIH6",
   "EY-REBBS.SB",
   "S-ONPU",
   "EO-THAN.H",
@@ -198,6 +197,7 @@
   "CA-BIRKS.L",
   "CA-BIRKM.MINI",
   "CA-BIRKM.M",
+  "HO-BNEIH6",
   "S-STH.AM",
   "S-TEHI.L",
   "HRE-SM41",
@@ -234,6 +234,6 @@
   "HP-ORHA11",
   "HP-STH.PFNT"
  ],
- "updated": "2026-11-08T11:16:25+00:00",
- "count": 198
+ "updated": "2026-11-09T12:52:05+00:00",
+ "count": 197
 }
