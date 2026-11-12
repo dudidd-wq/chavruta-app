@@ -309,6 +309,7 @@ function openReadingPreferences(options = {}) {
   dialog.append(h("div", { html: markup }));
   const shortcuts = h("nav", { class: "reading-shortcuts", "aria-label": "מצב לימוד וקישורי האתר" }, h("div", { class: "modesw sm", role: "radiogroup", "aria-label": "מצב עבודה" }, ...MODES.map(m => { const button = modeBtn(m); button.addEventListener("click", () => dialog.close()); return button; })));
   for (const [label, target] of [["הלימוד שלי", "study"], ["מחברת הלימוד והגיבוי", "notebook"], ["לקריאה בהמשך", "later"], ["המקורות שלי", "saved"], ["סטטוס הביאורים", "status"], ["כיסוי המפה", "coverage"], ["מפתח עניינים", "topics"], ["אודות ושיטת העבודה", "about"]]) shortcuts.append(h("a", { href: mkHash([target]), onclick: () => dialog.close() }, label));
+  shortcuts.append(h("a", { href: "status.html", onclick: () => dialog.close() }, "מצב המערכת"));
   shortcuts.append(h("button", { type: "button", onclick: () => { dialog.close(); requestAnimationFrame(showHelp); } }, "קיצורי מקלדת"));
   dialog.append(shortcuts);
   document.body.append(dialog);
@@ -475,6 +476,7 @@ const NAVITEMS = [
   { id: "books", icon: "i-read", label: "ספרים", href: () => mkHash(["books"]) },
   { id: "daily", icon: "i-sun", label: "לימוד יומי", href: () => mkHash(["daily"]) },
   { id: "new", icon: "i-flag", label: "מה חדש", href: () => mkHash(["new"]) },
+  { id: "sysstatus", icon: "i-status", label: "מצב המערכת", href: () => "status.html" },
   { id: "search", icon: "i-search", label: "חיפוש", act: () => openPalette(), kbd: "/" },
 ];
 function viewToNav(v) { return { home: "home", learn: "learn", biurim: "home", biur: "home", parsha: "home", sources: "sources", item: "sources", topics: "topics", books: "books", search: "search", new: "new", daily: "daily", tree: R.cur.seg[1] === "p" ? "home" : "tree", status: "", coverage: "", closure: "" }[v] ?? ""; }

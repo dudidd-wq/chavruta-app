@@ -1,0 +1,1205 @@
+{
+  "generated": "2026-11-13T01:29+02:00",
+  "generated_label": "13.11.2026, 01:29 שעון ישראל",
+  "timezone": "Asia/Jerusalem",
+  "coverage": {
+    "rows": [
+      {
+        "id": "adhz",
+        "name": "אדמו״ר הזקן",
+        "linked": 8390,
+        "total": 9542,
+        "pct": 87.9,
+        "status": "final",
+        "status_label": "סופי"
+      },
+      {
+        "id": "אדמו״ר האמצעי",
+        "name": "אדמו״ר האמצעי",
+        "linked": 1406,
+        "total": 8277,
+        "pct": 17.0,
+        "status": "in_progress",
+        "status_label": "בתהליך"
+      },
+      {
+        "id": "אדמו״ר מהר״ש",
+        "name": "אדמו״ר מהר״ש",
+        "linked": 2347,
+        "total": 4992,
+        "pct": 47.0,
+        "status": "in_progress",
+        "status_label": "בתהליך"
+      },
+      {
+        "id": "אדמו״ר הרש״ב",
+        "name": "אדמו״ר הרש״ב",
+        "linked": 2732,
+        "total": 4565,
+        "pct": 59.8,
+        "status": "in_progress",
+        "status_label": "בתהליך"
+      },
+      {
+        "id": "אדמו״ר הריי״צ",
+        "name": "אדמו״ר הריי״צ",
+        "linked": 898,
+        "total": 1781,
+        "pct": 50.4,
+        "status": "in_progress",
+        "status_label": "בתהליך"
+      },
+      {
+        "id": "הרבי",
+        "name": "הרבי",
+        "linked": 6618,
+        "total": 11967,
+        "pct": 55.3,
+        "status": "in_progress",
+        "status_label": "בתהליך"
+      }
+    ],
+    "totals": {
+      "linked": 22391,
+      "total": 41124,
+      "pct": 54.4
+    },
+    "rest": {
+      "linked": 14001,
+      "total": 31582,
+      "pct": 44.3,
+      "status": "in_progress",
+      "status_label": "בתהליך",
+      "rule_haiku_confirmed": 4147,
+      "note": "הקישורים לפי הכללים. Haiku אישר 4,147 מהם; הכרעת המשך עדיין רצה."
+    }
+  },
+  "correlation": {
+    "description": "מספר הפניות לכל יצירה, לפי האדמו״ר המצטט. ספירה מצטברת בלבד, כולל הפניות שטרם קושרו.",
+    "admorim": [
+      {
+        "name": "אדמו״ר הזקן",
+        "total": 9542,
+        "by_work": {
+          "zohar": 6725,
+          "yetzirah": 585,
+          "meorei_or": 364,
+          "shelah": 119,
+          "lt_arizal": 245,
+          "shaar_hakavanot": 160,
+          "ec": 267,
+          "pec": 155,
+          "tz": 222,
+          "pardes": 149,
+          "reshit_chochmah": 58,
+          "sefer_halikutim": 55,
+          "emek_hamelech": 70,
+          "bahir": 49,
+          "shaar_hapesukim": 53,
+          "zh": 48,
+          "ramaz": 24,
+          "mevo_shearim": 59,
+          "shaar_hagilgulim": 13,
+          "asara_maamarot": 23,
+          "mm": 36,
+          "shaar_hamitzvot": 31,
+          "shaar_hahakdamot": 12,
+          "shaar_maamarei_rashbi": 11,
+          "shaar_maamarei_razal": 3,
+          "shaar_ruach_hakodesh": 6
+        }
+      },
+      {
+        "name": "אדמו״ר האמצעי",
+        "total": 8277,
+        "by_work": {
+          "zohar": 5883,
+          "yetzirah": 720,
+          "meorei_or": 255,
+          "shelah": 84,
+          "lt_arizal": 236,
+          "shaar_hakavanot": 125,
+          "ec": 119,
+          "pec": 60,
+          "tz": 187,
+          "pardes": 36,
+          "reshit_chochmah": 22,
+          "sefer_halikutim": 58,
+          "emek_hamelech": 72,
+          "bahir": 39,
+          "shaar_hapesukim": 63,
+          "zh": 94,
+          "ramaz": 12,
+          "mevo_shearim": 71,
+          "shaar_hagilgulim": 10,
+          "asara_maamarot": 11,
+          "mm": 30,
+          "shaar_hamitzvot": 18,
+          "shaar_hahakdamot": 31,
+          "shaar_maamarei_rashbi": 23,
+          "shaar_maamarei_razal": 9,
+          "shaar_ruach_hakodesh": 9
+        }
+      },
+      {
+        "name": "אדמו״ר מהר״ש",
+        "total": 4992,
+        "by_work": {
+          "zohar": 2949,
+          "yetzirah": 291,
+          "meorei_or": 363,
+          "shelah": 91,
+          "lt_arizal": 170,
+          "shaar_hakavanot": 130,
+          "ec": 118,
+          "pec": 38,
+          "tz": 258,
+          "pardes": 109,
+          "reshit_chochmah": 99,
+          "sefer_halikutim": 17,
+          "emek_hamelech": 27,
+          "bahir": 67,
+          "shaar_hapesukim": 51,
+          "zh": 30,
+          "ramaz": 53,
+          "mevo_shearim": 27,
+          "shaar_hagilgulim": 12,
+          "asara_maamarot": 10,
+          "mm": 34,
+          "shaar_hamitzvot": 14,
+          "shaar_hahakdamot": 7,
+          "shaar_maamarei_rashbi": 12,
+          "shaar_maamarei_razal": 9,
+          "shaar_ruach_hakodesh": 6
+        }
+      },
+      {
+        "name": "אדמו״ר הרש״ב",
+        "total": 4565,
+        "by_work": {
+          "zohar": 2333,
+          "yetzirah": 356,
+          "meorei_or": 457,
+          "shelah": 139,
+          "lt_arizal": 146,
+          "shaar_hakavanot": 109,
+          "ec": 143,
+          "pec": 193,
+          "tz": 55,
+          "pardes": 66,
+          "reshit_chochmah": 31,
+          "sefer_halikutim": 27,
+          "emek_hamelech": 51,
+          "bahir": 40,
+          "shaar_hapesukim": 20,
+          "zh": 73,
+          "ramaz": 96,
+          "mevo_shearim": 59,
+          "shaar_hagilgulim": 22,
+          "asara_maamarot": 9,
+          "mm": 59,
+          "shaar_hamitzvot": 12,
+          "shaar_hahakdamot": 17,
+          "shaar_maamarei_rashbi": 37,
+          "shaar_maamarei_razal": 14,
+          "shaar_ruach_hakodesh": 1
+        }
+      },
+      {
+        "name": "אדמו״ר הריי״צ",
+        "total": 1781,
+        "by_work": {
+          "zohar": 968,
+          "yetzirah": 138,
+          "meorei_or": 103,
+          "shelah": 69,
+          "lt_arizal": 71,
+          "shaar_hakavanot": 34,
+          "ec": 39,
+          "pec": 48,
+          "tz": 12,
+          "pardes": 34,
+          "reshit_chochmah": 50,
+          "sefer_halikutim": 12,
+          "emek_hamelech": 32,
+          "bahir": 32,
+          "shaar_hapesukim": 9,
+          "zh": 21,
+          "ramaz": 19,
+          "mevo_shearim": 16,
+          "shaar_hagilgulim": 18,
+          "asara_maamarot": 9,
+          "mm": 2,
+          "shaar_hamitzvot": 14,
+          "shaar_hahakdamot": 11,
+          "shaar_maamarei_rashbi": 14,
+          "shaar_maamarei_razal": 3,
+          "shaar_ruach_hakodesh": 3
+        }
+      },
+      {
+        "name": "הרבי",
+        "total": 11967,
+        "by_work": {
+          "zohar": 7157,
+          "yetzirah": 574,
+          "meorei_or": 256,
+          "shelah": 800,
+          "lt_arizal": 268,
+          "shaar_hakavanot": 321,
+          "ec": 145,
+          "pec": 291,
+          "tz": 35,
+          "pardes": 242,
+          "reshit_chochmah": 267,
+          "sefer_halikutim": 278,
+          "emek_hamelech": 169,
+          "bahir": 158,
+          "shaar_hapesukim": 174,
+          "zh": 58,
+          "ramaz": 119,
+          "mevo_shearim": 48,
+          "shaar_hagilgulim": 174,
+          "asara_maamarot": 162,
+          "mm": 42,
+          "shaar_hamitzvot": 89,
+          "shaar_hahakdamot": 93,
+          "shaar_maamarei_rashbi": 14,
+          "shaar_maamarei_razal": 18,
+          "shaar_ruach_hakodesh": 15
+        }
+      }
+    ],
+    "works": [
+      {
+        "id": "zohar",
+        "label": "זהר",
+        "total": 26015
+      },
+      {
+        "id": "yetzirah",
+        "label": "ספר יצירה",
+        "total": 2664
+      },
+      {
+        "id": "meorei_or",
+        "label": "מאורי אור",
+        "total": 1798
+      },
+      {
+        "id": "shelah",
+        "label": "של״ה",
+        "total": 1302
+      },
+      {
+        "id": "lt_arizal",
+        "label": "לקוטי תורה / טעמי המצוות לאריז״ל",
+        "total": 1136
+      },
+      {
+        "id": "shaar_hakavanot",
+        "label": "שער הכוונות",
+        "total": 879
+      },
+      {
+        "id": "ec",
+        "label": "עץ חיים",
+        "total": 831
+      },
+      {
+        "id": "pec",
+        "label": "פרי עץ חיים",
+        "total": 785
+      },
+      {
+        "id": "tz",
+        "label": "תיקוני זהר",
+        "total": 769
+      },
+      {
+        "id": "pardes",
+        "label": "פרדס רמונים",
+        "total": 636
+      },
+      {
+        "id": "reshit_chochmah",
+        "label": "ראשית חכמה",
+        "total": 527
+      },
+      {
+        "id": "sefer_halikutim",
+        "label": "ספר הליקוטים",
+        "total": 447
+      },
+      {
+        "id": "emek_hamelech",
+        "label": "עמק המלך",
+        "total": 421
+      },
+      {
+        "id": "bahir",
+        "label": "ספר הבהיר",
+        "total": 385
+      },
+      {
+        "id": "shaar_hapesukim",
+        "label": "שער הפסוקים",
+        "total": 370
+      },
+      {
+        "id": "zh",
+        "label": "זהר חדש",
+        "total": 324
+      },
+      {
+        "id": "ramaz",
+        "label": "פירוש הרמ״ז על הזהר",
+        "total": 323
+      },
+      {
+        "id": "mevo_shearim",
+        "label": "מבוא שערים",
+        "total": 280
+      },
+      {
+        "id": "shaar_hagilgulim",
+        "label": "שער הגלגולים",
+        "total": 249
+      },
+      {
+        "id": "asara_maamarot",
+        "label": "עשרה מאמרות (רמ״ע)",
+        "total": 224
+      },
+      {
+        "id": "mm",
+        "label": "מקדש מלך על הזהר",
+        "total": 203
+      },
+      {
+        "id": "shaar_hamitzvot",
+        "label": "שער המצוות",
+        "total": 178
+      },
+      {
+        "id": "shaar_hahakdamot",
+        "label": "שער ההקדמות",
+        "total": 171
+      },
+      {
+        "id": "shaar_maamarei_rashbi",
+        "label": "שער מאמרי רשב״י",
+        "total": 111
+      },
+      {
+        "id": "shaar_maamarei_razal",
+        "label": "שער מאמרי רז״ל",
+        "total": 56
+      },
+      {
+        "id": "shaar_ruach_hakodesh",
+        "label": "שער רוח הקודש",
+        "total": 40
+      }
+    ]
+  },
+  "sefaria": {
+    "source": "Sefaria",
+    "titles_done": 60,
+    "titles_total": 62,
+    "segments": 109254,
+    "groups": [
+      {
+        "name": "חב\"ד",
+        "titles": 4,
+        "done": 4,
+        "partial": 0,
+        "failed": 0,
+        "segments": 10203
+      },
+      {
+        "name": "קבלה",
+        "titles": 42,
+        "done": 40,
+        "partial": 1,
+        "failed": 1,
+        "segments": 85623
+      },
+      {
+        "name": "מהר\"ל",
+        "titles": 16,
+        "done": 16,
+        "partial": 0,
+        "failed": 0,
+        "segments": 13428
+      }
+    ],
+    "titles": [
+      {
+        "sefaria_title": "Derekh Mitzvotekha",
+        "work": "דרך מצותיך",
+        "group": "חב\"ד",
+        "segments": 431,
+        "status": "done",
+        "status_label": "נקלט",
+        "licenses": [
+          "CC-BY-NC"
+        ],
+        "note": null
+      },
+      {
+        "sefaria_title": "Tanya",
+        "work": "לקוטי אמרים – תניא",
+        "group": "חב\"ד",
+        "segments": 1623,
+        "status": "done",
+        "status_label": "נקלט",
+        "licenses": [
+          "CC-BY-NC"
+        ],
+        "note": null
+      },
+      {
+        "sefaria_title": "Likkutei Torah",
+        "work": "לקוטי תורה",
+        "group": "חב\"ד",
+        "segments": 5166,
+        "status": "done",
+        "status_label": "נקלט",
+        "licenses": [
+          "CC-BY-NC"
+        ],
+        "note": null
+      },
+      {
+        "sefaria_title": "Torah Ohr",
+        "work": "תורה אור",
+        "group": "חב\"ד",
+        "segments": 2983,
+        "status": "done",
+        "status_label": "נקלט",
+        "licenses": [
+          "CC-BY-NC"
+        ],
+        "note": null
+      },
+      {
+        "sefaria_title": "Ohr Ne'erav",
+        "work": "אור נערב",
+        "group": "קבלה",
+        "segments": 1330,
+        "status": "done",
+        "status_label": "נקלט",
+        "licenses": [
+          "Public Domain"
+        ],
+        "note": null
+      },
+      {
+        "sefaria_title": "HaEmunot veHaDeot",
+        "work": "אמונות ודעות",
+        "group": "קבלה",
+        "segments": 214,
+        "status": "done",
+        "status_label": "נקלט",
+        "licenses": [
+          "Public Domain"
+        ],
+        "note": null
+      },
+      {
+        "sefaria_title": "Heikhalot Rabbati",
+        "work": "היכלות",
+        "group": "קבלה",
+        "segments": 192,
+        "status": "done",
+        "status_label": "נקלט",
+        "licenses": [
+          "unknown"
+        ],
+        "note": null
+      },
+      {
+        "sefaria_title": "Zohar",
+        "work": "זהר",
+        "group": "קבלה",
+        "segments": 16852,
+        "status": "done",
+        "status_label": "נקלט",
+        "licenses": [
+          "unknown"
+        ],
+        "note": null
+      },
+      {
+        "sefaria_title": "Zohar Chadash",
+        "work": "זהר חדש",
+        "group": "קבלה",
+        "segments": 4421,
+        "status": "done",
+        "status_label": "נקלט",
+        "licenses": [
+          "Public Domain"
+        ],
+        "note": null
+      },
+      {
+        "sefaria_title": "Duties of the Heart",
+        "work": "חובת הלבבות",
+        "group": "קבלה",
+        "segments": 2367,
+        "status": "done",
+        "status_label": "נקלט",
+        "licenses": [
+          "CC0",
+          "Public Domain"
+        ],
+        "note": null
+      },
+      {
+        "sefaria_title": "Chesed LeAvraham",
+        "work": "חסד לאברהם",
+        "group": "קבלה",
+        "segments": 1348,
+        "status": "done",
+        "status_label": "נקלט",
+        "licenses": [
+          "Public Domain"
+        ],
+        "note": null
+      },
+      {
+        "sefaria_title": "Kuzari",
+        "work": "כוזרי",
+        "group": "קבלה",
+        "segments": 350,
+        "status": "done",
+        "status_label": "נקלט",
+        "licenses": [
+          "CC-BY-SA"
+        ],
+        "note": null
+      },
+      {
+        "sefaria_title": "Guide for the Perplexed",
+        "work": "מורה נבוכים",
+        "group": "קבלה",
+        "segments": 1472,
+        "status": "done",
+        "status_label": "נקלט",
+        "licenses": [
+          "unknown"
+        ],
+        "note": null
+      },
+      {
+        "sefaria_title": "Ma'arekhet HaElokut",
+        "work": "מערכת האלקות",
+        "group": "קבלה",
+        "segments": 541,
+        "status": "done",
+        "status_label": "נקלט",
+        "licenses": [
+          "unknown"
+        ],
+        "note": null
+      },
+      {
+        "sefaria_title": "Mikdash Melekh on Zohar",
+        "work": "מקדש מלך על הזהר",
+        "group": "קבלה",
+        "segments": 9639,
+        "status": "done",
+        "status_label": "נקלט",
+        "licenses": [
+          "Public Domain"
+        ],
+        "note": null
+      },
+      {
+        "sefaria_title": "Sefer HaBahir",
+        "work": "ספר הבהיר",
+        "group": "קבלה",
+        "segments": 46,
+        "status": "done",
+        "status_label": "נקלט",
+        "licenses": [
+          "CC-BY-SA"
+        ],
+        "note": null
+      },
+      {
+        "sefaria_title": "Sefer HaIkkarim",
+        "work": "ספר העיקרים",
+        "group": "קבלה",
+        "segments": 1587,
+        "status": "done",
+        "status_label": "נקלט",
+        "licenses": [
+          "CC-BY"
+        ],
+        "note": null
+      },
+      {
+        "sefaria_title": "Sefer HaKanah",
+        "work": "ספר הקנה",
+        "group": "קבלה",
+        "segments": 1504,
+        "status": "done",
+        "status_label": "נקלט",
+        "licenses": [
+          "Public Domain"
+        ],
+        "note": null
+      },
+      {
+        "sefaria_title": "Sefer Yetzirah",
+        "work": "ספר יצירה",
+        "group": "קבלה",
+        "segments": 48,
+        "status": "done",
+        "status_label": "נקלט",
+        "licenses": [
+          "Public Domain"
+        ],
+        "note": null
+      },
+      {
+        "sefaria_title": "Avodat HaKodesh (Ibn Gabbai)",
+        "work": "עבודת הקודש (ר׳ מאיר ן׳ גבאי)",
+        "group": "קבלה",
+        "segments": 2211,
+        "status": "done",
+        "status_label": "נקלט",
+        "licenses": [
+          "unknown"
+        ],
+        "note": null
+      },
+      {
+        "sefaria_title": "Sefer Etz Chaim",
+        "work": "עץ חיים",
+        "group": "קבלה",
+        "segments": 901,
+        "status": "done",
+        "status_label": "נקלט",
+        "licenses": [
+          "Public Domain"
+        ],
+        "note": null
+      },
+      {
+        "sefaria_title": "Akeidat Yitzchak",
+        "work": "עקידת יצחק",
+        "group": "קבלה",
+        "segments": 1582,
+        "status": "done",
+        "status_label": "נקלט",
+        "licenses": [
+          "Public Domain"
+        ],
+        "note": null
+      },
+      {
+        "sefaria_title": "Mikdash Melekh, RaMaZ Commentary on Zohar",
+        "work": "פירוש הרמ״ז על הזהר",
+        "group": "קבלה",
+        "segments": 3209,
+        "status": "done",
+        "status_label": "נקלט",
+        "licenses": [
+          "Public Domain"
+        ],
+        "note": null
+      },
+      {
+        "sefaria_title": "Pardes Rimmonim",
+        "work": "פרדס רמונים",
+        "group": "קבלה",
+        "segments": 3151,
+        "status": "done",
+        "status_label": "נקלט",
+        "licenses": [
+          "Public Domain"
+        ],
+        "note": null
+      },
+      {
+        "sefaria_title": "Pri Etz Chaim",
+        "work": "פרי עץ חיים",
+        "group": "קבלה",
+        "segments": 3945,
+        "status": "done",
+        "status_label": "נקלט",
+        "licenses": [
+          "Public Domain"
+        ],
+        "note": null
+      },
+      {
+        "sefaria_title": "Reshit Chokhmah",
+        "work": "ראשית חכמה",
+        "group": "קבלה",
+        "segments": 5011,
+        "status": "done",
+        "status_label": "נקלט",
+        "licenses": [
+          "CC-BY-NC"
+        ],
+        "note": null
+      },
+      {
+        "sefaria_title": "Ramban on Deuteronomy",
+        "work": "רמב״ן (בדרך האמת)",
+        "group": "קבלה",
+        "segments": 384,
+        "status": "done",
+        "status_label": "נקלט",
+        "licenses": [
+          "CC0"
+        ],
+        "note": null
+      },
+      {
+        "sefaria_title": "Ramban on Exodus",
+        "work": "רמב״ן (בדרך האמת)",
+        "group": "קבלה",
+        "segments": 513,
+        "status": "done",
+        "status_label": "נקלט",
+        "licenses": [
+          "CC0"
+        ],
+        "note": null
+      },
+      {
+        "sefaria_title": "Ramban on Genesis",
+        "work": "רמב״ן (בדרך האמת)",
+        "group": "קבלה",
+        "segments": 683,
+        "status": "done",
+        "status_label": "נקלט",
+        "licenses": [
+          "CC0"
+        ],
+        "note": null
+      },
+      {
+        "sefaria_title": "Ramban on Leviticus",
+        "work": "רמב״ן (בדרך האמת)",
+        "group": "קבלה",
+        "segments": 274,
+        "status": "done",
+        "status_label": "נקלט",
+        "licenses": [
+          "CC0"
+        ],
+        "note": null
+      },
+      {
+        "sefaria_title": "Ramban on Numbers",
+        "work": "רמב״ן (בדרך האמת)",
+        "group": "קבלה",
+        "segments": 274,
+        "status": "done",
+        "status_label": "נקלט",
+        "licenses": [
+          "CC0"
+        ],
+        "note": null
+      },
+      {
+        "sefaria_title": "Recanati on the Torah",
+        "work": "רקאנטי",
+        "group": "קבלה",
+        "segments": 1836,
+        "status": "partial",
+        "status_label": "חלקי",
+        "licenses": [
+          "Public Domain"
+        ],
+        "note": "נקלט חלקית"
+      },
+      {
+        "sefaria_title": "Shomer Emunim",
+        "work": "שומר אמונים / אמונת חכמים",
+        "group": "קבלה",
+        "segments": 287,
+        "status": "done",
+        "status_label": "נקלט",
+        "licenses": [
+          "?"
+        ],
+        "note": null
+      },
+      {
+        "sefaria_title": "Shenei Luchot HaBerit",
+        "work": "של״ה",
+        "group": "קבלה",
+        "segments": 10881,
+        "status": "done",
+        "status_label": "נקלט",
+        "licenses": [
+          "Public Domain"
+        ],
+        "note": null
+      },
+      {
+        "sefaria_title": "Sha'ar HaGilgulim",
+        "work": "שער הגלגולים",
+        "group": "קבלה",
+        "segments": 854,
+        "status": "done",
+        "status_label": "נקלט",
+        "licenses": [
+          "Public Domain"
+        ],
+        "note": null
+      },
+      {
+        "sefaria_title": "Sha'ar HaHakdamot",
+        "work": "שער ההקדמות",
+        "group": "קבלה",
+        "segments": 722,
+        "status": "done",
+        "status_label": "נקלט",
+        "licenses": [
+          "Public Domain"
+        ],
+        "note": null
+      },
+      {
+        "sefaria_title": "Sha'ar HaKavanot",
+        "work": "שער הכוונות",
+        "group": "קבלה",
+        "segments": 1310,
+        "status": "done",
+        "status_label": "נקלט",
+        "licenses": [
+          "Public Domain"
+        ],
+        "note": null
+      },
+      {
+        "sefaria_title": "Sha'ar HaMitzvot",
+        "work": "שער המצוות",
+        "group": "קבלה",
+        "segments": 328,
+        "status": "done",
+        "status_label": "נקלט",
+        "licenses": [
+          "Public Domain"
+        ],
+        "note": null
+      },
+      {
+        "sefaria_title": "Sha'ar HaPesukim",
+        "work": "שער הפסוקים",
+        "group": "קבלה",
+        "segments": 2051,
+        "status": "done",
+        "status_label": "נקלט",
+        "licenses": [
+          "Public Domain"
+        ],
+        "note": null
+      },
+      {
+        "sefaria_title": "Sha'ar Ma'amarei Razal",
+        "work": "שער מאמרי רז״ל",
+        "group": "קבלה",
+        "segments": 153,
+        "status": "done",
+        "status_label": "נקלט",
+        "licenses": [
+          "Public Domain"
+        ],
+        "note": null
+      },
+      {
+        "sefaria_title": "Sha'ar Ma'amarei Rashbi",
+        "work": "שער מאמרי רשב״י",
+        "group": "קבלה",
+        "segments": 595,
+        "status": "done",
+        "status_label": "נקלט",
+        "licenses": [
+          "Public Domain"
+        ],
+        "note": null
+      },
+      {
+        "sefaria_title": "Sha'ar Ruach HaKodesh",
+        "work": "שער רוח הקודש",
+        "group": "קבלה",
+        "segments": 404,
+        "status": "done",
+        "status_label": "נקלט",
+        "licenses": [
+          "Public Domain"
+        ],
+        "note": null
+      },
+      {
+        "sefaria_title": "Sha'arei Orah",
+        "work": "שערי אורה (ר׳ יוסף גיקטילא)",
+        "group": "קבלה",
+        "segments": 1559,
+        "status": "done",
+        "status_label": "נקלט",
+        "licenses": [
+          "Public Domain"
+        ],
+        "note": null
+      },
+      {
+        "sefaria_title": "Sha'arei Kedusha",
+        "work": "שערי קדושה",
+        "group": "קבלה",
+        "segments": 461,
+        "status": "done",
+        "status_label": "נקלט",
+        "licenses": [
+          "Public Domain"
+        ],
+        "note": null
+      },
+      {
+        "sefaria_title": "Tomer Devorah",
+        "work": "תומר דבורה",
+        "group": "קבלה",
+        "segments": 133,
+        "status": "done",
+        "status_label": "נקלט",
+        "licenses": [
+          "Public Domain"
+        ],
+        "note": null
+      },
+      {
+        "sefaria_title": "Tikkunei Zohar",
+        "work": "תיקוני זהר",
+        "group": "קבלה",
+        "segments": 0,
+        "status": "failed",
+        "status_label": "נכשל",
+        "licenses": [],
+        "note": "לא נמצא במלואו בספריא"
+      },
+      {
+        "sefaria_title": "Ohr Chadash",
+        "work": "אור חדש",
+        "group": "מהר\"ל",
+        "segments": 844,
+        "status": "done",
+        "status_label": "נקלט",
+        "licenses": [
+          "Public Domain"
+        ],
+        "note": null
+      },
+      {
+        "sefaria_title": "Be'er HaGolah",
+        "work": "באר הגולה",
+        "group": "מהר\"ל",
+        "segments": 529,
+        "status": "done",
+        "status_label": "נקלט",
+        "licenses": [
+          "Public Domain"
+        ],
+        "note": null
+      },
+      {
+        "sefaria_title": "Gevurot Hashem",
+        "work": "גבורות השם",
+        "group": "מהר\"ל",
+        "segments": 1732,
+        "status": "done",
+        "status_label": "נקלט",
+        "licenses": [
+          "Public Domain"
+        ],
+        "note": null
+      },
+      {
+        "sefaria_title": "Gur Aryeh on Bamidbar",
+        "work": "גור אריה",
+        "group": "מהר\"ל",
+        "segments": 804,
+        "status": "done",
+        "status_label": "נקלט",
+        "licenses": [
+          "Public Domain"
+        ],
+        "note": null
+      },
+      {
+        "sefaria_title": "Gur Aryeh on Bereishit",
+        "work": "גור אריה",
+        "group": "מהר\"ל",
+        "segments": 1416,
+        "status": "done",
+        "status_label": "נקלט",
+        "licenses": [
+          "Public Domain"
+        ],
+        "note": null
+      },
+      {
+        "sefaria_title": "Gur Aryeh on Devarim",
+        "work": "גור אריה",
+        "group": "מהר\"ל",
+        "segments": 653,
+        "status": "done",
+        "status_label": "נקלט",
+        "licenses": [
+          "Public Domain"
+        ],
+        "note": null
+      },
+      {
+        "sefaria_title": "Gur Aryeh on Shemot",
+        "work": "גור אריה",
+        "group": "מהר\"ל",
+        "segments": 968,
+        "status": "done",
+        "status_label": "נקלט",
+        "licenses": [
+          "Public Domain"
+        ],
+        "note": null
+      },
+      {
+        "sefaria_title": "Gur Aryeh on Vayikra",
+        "work": "גור אריה",
+        "group": "מהר\"ל",
+        "segments": 873,
+        "status": "done",
+        "status_label": "נקלט",
+        "licenses": [
+          "Public Domain"
+        ],
+        "note": null
+      },
+      {
+        "sefaria_title": "Derush al HaTorah",
+        "work": "דרוש על התורה",
+        "group": "מהר\"ל",
+        "segments": 229,
+        "status": "done",
+        "status_label": "נקלט",
+        "licenses": [
+          "Public Domain"
+        ],
+        "note": null
+      },
+      {
+        "sefaria_title": "Derekh Chayyim",
+        "work": "דרך חיים",
+        "group": "מהר\"ל",
+        "segments": 1650,
+        "status": "done",
+        "status_label": "נקלט",
+        "licenses": [
+          "Public Domain"
+        ],
+        "note": null
+      },
+      {
+        "sefaria_title": "Drashot Maharal",
+        "work": "דרשות מהר\"ל",
+        "group": "מהר\"ל",
+        "segments": 141,
+        "status": "done",
+        "status_label": "נקלט",
+        "licenses": [
+          "Public Domain"
+        ],
+        "note": null
+      },
+      {
+        "sefaria_title": "Derashat Shabbat HaGadol",
+        "work": "דרשת שבת הגדול",
+        "group": "מהר\"ל",
+        "segments": 271,
+        "status": "done",
+        "status_label": "נקלט",
+        "licenses": [
+          "Public Domain"
+        ],
+        "note": null
+      },
+      {
+        "sefaria_title": "Netzach Yisrael",
+        "work": "נצח ישראל",
+        "group": "מהר\"ל",
+        "segments": 966,
+        "status": "done",
+        "status_label": "נקלט",
+        "licenses": [
+          "Public Domain"
+        ],
+        "note": null
+      },
+      {
+        "sefaria_title": "Ner Mitzvah",
+        "work": "נר מצוה",
+        "group": "מהר\"ל",
+        "segments": 90,
+        "status": "done",
+        "status_label": "נקלט",
+        "licenses": [
+          "Public Domain"
+        ],
+        "note": null
+      },
+      {
+        "sefaria_title": "Netivot Olam",
+        "work": "נתיבות עולם",
+        "group": "מהר\"ל",
+        "segments": 1248,
+        "status": "done",
+        "status_label": "נקלט",
+        "licenses": [
+          "Public Domain"
+        ],
+        "note": null
+      },
+      {
+        "sefaria_title": "Tiferet Yisrael",
+        "work": "תפארת ישראל",
+        "group": "מהר\"ל",
+        "segments": 1014,
+        "status": "done",
+        "status_label": "נקלט",
+        "licenses": [
+          "CC-BY-NC"
+        ],
+        "note": null
+      }
+    ]
+  },
+  "qa": {
+    "scope": "מדגם 5% מקישורי אדמו״ר הזקן",
+    "sample_frac": 0.05,
+    "status": "pending_review",
+    "status_label": "ממתין לבדיקה נוספת",
+    "strata": [
+      {
+        "id": "rule_haiku",
+        "label": "כשהכללים ו־Haiku הסכימו",
+        "agree_pct": 92.4,
+        "agree": 145,
+        "n": 157
+      },
+      {
+        "id": "sonnet",
+        "label": "הכרעות Sonnet",
+        "agree_pct": 70.6,
+        "agree": 149,
+        "n": 211
+      }
+    ]
+  }
+}
