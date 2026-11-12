@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-11T11:52:52+00:00",
+ "generated_at": "2026-11-12T12:41:55+00:00",
  "sources": [
   {
    "id": "chabadlibrary",
@@ -12,7 +12,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-11-11T11:51:37+00:00",
+   "checked_at": "2026-11-12T12:40:45+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -30,7 +30,7 @@
     "primary",
     "whatsnew"
    ],
-   "checked_at": "2026-11-11T11:51:37+00:00",
+   "checked_at": "2026-11-12T12:40:45+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -47,7 +47,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-11-11T11:51:37+00:00",
+   "checked_at": "2026-11-12T12:40:45+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -64,7 +64,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-11-11T11:51:37+00:00",
+   "checked_at": "2026-11-12T12:40:45+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -82,7 +82,7 @@
     "primary",
     "whatsnew"
    ],
-   "checked_at": "2026-11-11T11:51:37+00:00",
+   "checked_at": "2026-11-12T12:40:45+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -102,7 +102,7 @@
     }
    ],
    "total": 132,
-   "last_success_at": "2026-11-11T11:51:37+00:00"
+   "last_success_at": "2026-11-12T12:40:45+00:00"
   },
   {
    "id": "chabadlibrarybooks",
@@ -115,7 +115,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-11-11T11:51:37+00:00",
+   "checked_at": "2026-11-12T12:40:46+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -133,12 +133,12 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-11T11:51:37+00:00",
+   "checked_at": "2026-11-12T12:40:46+00:00",
    "status": "ok",
    "new": [],
    "latest": [],
    "total": 1501,
-   "last_success_at": "2026-11-11T11:51:37+00:00"
+   "last_success_at": "2026-11-12T12:40:46+00:00"
   },
   {
    "id": "chassidut_org",
@@ -152,12 +152,12 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-11T11:51:39+00:00",
+   "checked_at": "2026-11-12T12:40:47+00:00",
    "status": "ok",
    "new": [],
    "latest": [],
    "total": 4,
-   "last_success_at": "2026-11-11T11:51:39+00:00"
+   "last_success_at": "2026-11-12T12:40:47+00:00"
   },
   {
    "id": "biurim",
@@ -171,7 +171,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-11T11:51:40+00:00",
+   "checked_at": "2026-11-12T12:40:48+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -217,7 +217,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-11T11:51:40+00:00"
+   "last_success_at": "2026-11-12T12:40:48+00:00"
   },
   {
    "id": "hm_monsey",
@@ -231,23 +231,32 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-11T11:51:42+00:00",
+   "checked_at": "2026-11-12T12:40:50+00:00",
    "status": "ok",
-   "new": [],
+   "new": [
+    {
+     "id": "https://heichalmenachemmonsey.org/?p=10091",
+     "title": "המשך יו”ט של ר”ה תרס”ו – הרב משה אליהו גוראריה (מתעדכן)",
+     "url": "https://heichalmenachemmonsey.org/5666_moshe_gurary-2/",
+     "date": "Fri, 06 Nov 2026 04:45:50 +0000",
+     "blurb": "כל ליל שישי 11:00-10:00 להורדת חוברת המאמרים: “יו”ט של ר”ה”, “זה היום”, “שובה ישראל” לחצו כאן 1 – ד”ה יו”ט של ר”ה תרס”ו (ליל שישי פרשת חיי שרה תשפ”ז)",
+     "first_seen": "2026-11-12T12:40:50+00:00"
+    }
+   ],
    "latest": [
     {
      "id": "https://heichalmenachemmonsey.org/?p=7899",
      "title": "לעבן מיט די פרשה על פי חסידות – הרב אשר פרקש (מתעדכן)",
      "url": "https://heichalmenachemmonsey.org/reb_osher_forkosh_weekly/",
-     "date": "Tue, 03 Nov 2026 18:00:35 +0000",
-     "blurb": "ויצא יצחק לשוח בשדה: די טייערקייט פון תפילת מנחה (פרשת חיי שרה תשפ”ז) מקורות: קובץ התמים חוברת ח; קדושת לוי פרשת חיי שרה; ד”ה ויצחק בא תרס”ג, תשכ”ב; ד”ה לעולם יהא אדם זהיר תרצ”א...",
+     "date": "Wed, 11 Nov 2026 18:00:35 +0000",
+     "blurb": "ויזרע יצחק: פארזייען צדקה (פרשת תולדות תשפ”ז) מקורות: לקוטי שיחות חלק ה, תולדות ב; התוועדות יט כסלו תשכ”ה; לקוטי שיחות חלק י, וישלח – יט כסלו ויצא יצחק לשוח בשדה: די טייערקייט פון תפילת...",
      "first_seen": "2026-10-18T04:51:34+00:00"
     },
     {
      "id": "https://heichalmenachemmonsey.org/?p=9775",
      "title": "דרך מצותיך – הרב יוסף קליין (מתעדכן)",
      "url": "https://heichalmenachemmonsey.org/derech_mitzvosech_klyne/",
-     "date": "Tue, 03 Nov 2026 13:30:57 +0000",
+     "date": "Tue, 10 Nov 2026 13:30:57 +0000",
      "blurb": "סדרת שיעורים שנמסרו למשתתפי רשת כוללי בוקר ללימוד החסידות, בבית מדרש “בית מנחם” – בארא-פארק, בבית מדרש “היכל מנחם” – מאנסי, בבית מדרש “היכל החסידות” – לייקוואוד, בבית מדרש “היכל החסידות” – אוק-ענד-וויין (לייקוואוד),...",
      "first_seen": "2026-10-18T04:51:34+00:00"
     },
@@ -255,9 +264,25 @@
      "id": "https://heichalmenachemmonsey.org/?p=9269",
      "title": "המשך בשעה שהקדימו תער”ב חלק ג [מאמרים נז-צג] – הרב לימא וילהעלם (מתעדכן)",
      "url": "https://heichalmenachemmonsey.org/ayen_beis_vol_3_shiurim/",
-     "date": "Tue, 03 Nov 2026 04:30:37 +0000",
-     "blurb": "כל יום שני 9:45-10:45 בערב להמשך תער”ב חלק ראשון לחצו כאן להמשך תער”ב חלק שני לחצו כאן להורדת השיעורים בפורמט MP3 לחצו כאן להורדת חוברת המאמרים: “וידבר וגו’ המטות”, “ציון במשפט תפדה”, “ואתחנן”, “והי’...",
+     "date": "Tue, 10 Nov 2026 04:30:37 +0000",
+     "blurb": "כל יום שני 9:45-10:45 בערב להמשך תער”ב חלק ראשון לחצו כאן להמשך תער”ב חלק שני לחצו כאן להורדת השיעורים בפורמט MP3 לחצו כאן להורדת חוברת המאמרים: “ראה אנכי”, “שופטים ושוטרים”, “כי תצא” לחצו כאן...",
      "first_seen": "2026-10-18T04:51:34+00:00"
+    },
+    {
+     "id": "https://heichalmenachemmonsey.org/?p=9896",
+     "title": "תורה אור-לקוטי תורה – הרב לימא ווילהעלם {לשמיעה בלבד} (מתעדכן)",
+     "url": "https://heichalmenachemmonsey.org/likutei_torah_lima/",
+     "date": "Sun, 08 Nov 2026 19:00:23 +0000",
+     "blurb": "שיעור שבועי שנמסר ב’היכל התורה – תפארת דוד’, עירמאנט כל יום ראשון 10:00-9:00 שיעור 11: מאמר ד”ה אלה תולדות [פרשת תולדות, דף יז] – למה התעסקו האבות הקדושים בחפירות בארות ובעבודת ה’? (כ”ח מרחשון...",
+     "first_seen": "2026-10-18T04:51:34+00:00"
+    },
+    {
+     "id": "https://heichalmenachemmonsey.org/?p=10091",
+     "title": "המשך יו”ט של ר”ה תרס”ו – הרב משה אליהו גוראריה (מתעדכן)",
+     "url": "https://heichalmenachemmonsey.org/5666_moshe_gurary-2/",
+     "date": "Fri, 06 Nov 2026 04:45:50 +0000",
+     "blurb": "כל ליל שישי 11:00-10:00 להורדת חוברת המאמרים: “יו”ט של ר”ה”, “זה היום”, “שובה ישראל” לחצו כאן 1 – ד”ה יו”ט של ר”ה תרס”ו (ליל שישי פרשת חיי שרה תשפ”ז)",
+     "first_seen": "2026-11-12T12:40:50+00:00"
     },
     {
      "id": "https://heichalmenachemmonsey.org/?p=10089",
@@ -266,14 +291,6 @@
      "date": "Sun, 01 Nov 2026 20:30:10 +0000",
      "blurb": "תורה אור – חיי שרה, דף 30 במסגרת שיעורו השבועי – בשידור חי – כל יום ראשון 3:30-2:30 אחה”צ להורדת המאמר לחצו כאן",
      "first_seen": "2026-11-05T12:18:06+00:00"
-    },
-    {
-     "id": "https://heichalmenachemmonsey.org/?p=9896",
-     "title": "תורה אור-לקוטי תורה – הרב לימא ווילהעלם {לשמיעה בלבד} (מתעדכן)",
-     "url": "https://heichalmenachemmonsey.org/likutei_torah_lima/",
-     "date": "Sun, 01 Nov 2026 19:00:23 +0000",
-     "blurb": "שיעור שבועי שנמסר ב’היכל התורה – תפארת דוד’, עירמאנט כל יום רביעי שיעור 10: מאמר ד”ה יגלה לן טעמי’ [פרשת חיי שרה, דף 30] – איך אפשר להרגיש קדושת השבת כשאוכלים טשאלענט? (כ”א מרחשון...",
-     "first_seen": "2026-10-18T04:51:34+00:00"
     },
     {
      "id": "https://heichalmenachemmonsey.org/?p=10077",
@@ -293,7 +310,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-11T11:51:42+00:00"
+   "last_success_at": "2026-11-12T12:40:50+00:00"
   },
   {
    "id": "hiskashrus",
@@ -307,7 +324,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-11T11:51:44+00:00",
+   "checked_at": "2026-11-12T12:40:52+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -376,7 +393,7 @@
     }
    ],
    "total": 0,
-   "last_success_at": "2026-11-11T11:51:44+00:00"
+   "last_success_at": "2026-11-12T12:40:52+00:00"
   },
   {
    "id": "lichyot_chassidus",
@@ -390,19 +407,27 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-11T11:51:45+00:00",
+   "checked_at": "2026-11-12T12:40:53+00:00",
    "status": "ok",
    "new": [
     {
-     "id": "93706494-b9da-4205-8620-4baed0b8850b",
-     "title": "מאמר ד\"ה וכל העם רואים תרס\"ה - חלק ט",
+     "id": "77deb7c0-b211-4cf4-bafa-46e466fa4626",
+     "title": "מאמר ד\"ה מים רבים תשי\"ז - עיונים חלק א'",
      "url": "https://rabbi_osher_farkash_maamarim.captivate.fm",
-     "date": "Tue, 10 Nov 2026 04:00:00 -0500",
-     "blurb": "ביאור השלישי בענין ההתחדשות, חידוש מעיקרו",
-     "first_seen": "2026-11-11T11:51:45+00:00"
+     "date": "Wed, 11 Nov 2026 04:00:00 -0500",
+     "blurb": "ביאור הפירוש הראשון באחד, שלילת עבודה זרה, ענין השגחה פרטית",
+     "first_seen": "2026-11-12T12:40:53+00:00"
     }
    ],
    "latest": [
+    {
+     "id": "77deb7c0-b211-4cf4-bafa-46e466fa4626",
+     "title": "מאמר ד\"ה מים רבים תשי\"ז - עיונים חלק א'",
+     "url": "https://rabbi_osher_farkash_maamarim.captivate.fm",
+     "date": "Wed, 11 Nov 2026 04:00:00 -0500",
+     "blurb": "ביאור הפירוש הראשון באחד, שלילת עבודה זרה, ענין השגחה פרטית",
+     "first_seen": "2026-11-12T12:40:53+00:00"
+    },
     {
      "id": "93706494-b9da-4205-8620-4baed0b8850b",
      "title": "מאמר ד\"ה וכל העם רואים תרס\"ה - חלק ט",
@@ -525,7 +550,7 @@
     }
    ],
    "total": 1000,
-   "last_success_at": "2026-11-11T11:51:45+00:00"
+   "last_success_at": "2026-11-12T12:40:53+00:00"
   },
   {
    "id": "chabadzoom",
@@ -539,7 +564,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-11T11:51:47+00:00",
+   "checked_at": "2026-11-12T12:40:55+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -664,7 +689,7 @@
     }
    ],
    "total": 563,
-   "last_success_at": "2026-11-11T11:51:47+00:00"
+   "last_success_at": "2026-11-12T12:40:55+00:00"
   },
   {
    "id": "kovtzimdrive",
@@ -678,7 +703,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-11T11:51:50+00:00",
+   "checked_at": "2026-11-12T12:40:57+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -691,7 +716,7 @@
     }
    ],
    "total": 1,
-   "last_success_at": "2026-11-11T11:51:50+00:00"
+   "last_success_at": "2026-11-12T12:40:57+00:00"
   },
   {
    "id": "avita",
@@ -705,7 +730,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-11T11:51:53+00:00",
+   "checked_at": "2026-11-12T12:40:59+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -723,7 +748,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-11T11:51:53+00:00",
+   "checked_at": "2026-11-12T12:40:59+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -745,7 +770,7 @@
     }
    ],
    "total": 2,
-   "last_success_at": "2026-11-11T11:51:53+00:00"
+   "last_success_at": "2026-11-12T12:40:59+00:00"
   },
   {
    "id": "dvarmalchus770",
@@ -759,7 +784,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-11T11:51:55+00:00",
+   "checked_at": "2026-11-12T12:41:01+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -885,7 +910,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-11T11:51:55+00:00"
+   "last_success_at": "2026-11-12T12:41:01+00:00"
   },
   {
    "id": "soulwords",
@@ -899,7 +924,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-11T11:51:56+00:00",
+   "checked_at": "2026-11-12T12:41:02+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -969,7 +994,7 @@
     }
    ],
    "total": 0,
-   "last_success_at": "2026-11-11T11:51:56+00:00"
+   "last_success_at": "2026-11-12T12:41:02+00:00"
   },
   {
    "id": "sie_weekly",
@@ -983,7 +1008,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-11T11:51:57+00:00",
+   "checked_at": "2026-11-12T12:41:03+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1052,7 +1077,7 @@
     }
    ],
    "total": 117,
-   "last_success_at": "2026-11-11T11:51:57+00:00"
+   "last_success_at": "2026-11-12T12:41:03+00:00"
   },
   {
    "id": "pls",
@@ -1066,7 +1091,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-11T11:51:59+00:00",
+   "checked_at": "2026-11-12T12:41:05+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1192,7 +1217,7 @@
     }
    ],
    "total": 200,
-   "last_success_at": "2026-11-11T11:51:59+00:00"
+   "last_success_at": "2026-11-12T12:41:05+00:00"
   },
   {
    "id": "chayenu_ls",
@@ -1206,7 +1231,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-11T11:52:00+00:00",
+   "checked_at": "2026-11-12T12:41:06+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1233,7 +1258,7 @@
     }
    ],
    "total": 2,
-   "last_success_at": "2026-11-11T11:52:00+00:00"
+   "last_success_at": "2026-11-12T12:41:06+00:00"
   },
   {
    "id": "weekly_sicha",
@@ -1247,7 +1272,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-11T11:52:02+00:00",
+   "checked_at": "2026-11-12T12:41:07+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1309,7 +1334,7 @@
     }
    ],
    "total": 119,
-   "last_success_at": "2026-11-11T11:52:02+00:00"
+   "last_success_at": "2026-11-12T12:41:07+00:00"
   },
   {
    "id": "theyeshiva",
@@ -1323,19 +1348,27 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-11T11:52:03+00:00",
+   "checked_at": "2026-11-12T12:41:08+00:00",
    "status": "ok",
    "new": [
     {
-     "id": "https://www.theyeshiva.net/item/10025",
-     "title": "\"Who Are You, My Son?\" Every Journey in Your Life Is Helping You Discover Who You Really Are - Women's Toldot Class",
-     "url": "https://www.theyeshiva.net/item/10025",
-     "date": "Tue, 10 Nov 2026 09:30:00 -0500",
-     "blurb": "Why Did Rivka Want to Deceive Her Husband? A Revolutionary Interpretation to the Perplexing Story Why would Rivka, one of the great matriarchs of the Jewish people, instruct her beloved son Yaakov to deceive his father Yitzchak? Did she really believe that Yitzchak would not recognize the difference between his two sons? In this fascinating women's class on Parshas Toldos, we explore an extraordinary interpretation presented by Rabbi David Fohrman, suggesting that Rivka's intentions were far deeper than they initially appear. Perhaps Rivka was not asking Yaakov to become Esav, but rather challenging him to discover something about himself that he had never recognized. Yaakov was gentle, spiritual, introspective, a dweller of tents. Esav was bold, aggressive, confident, a man of action. But Rivka understood that Yaakov could not fulfill his extraordinary destiny if he remained confined to only one dimension of his personality. He needed to discover that within his own soul lay the courage, assertiveness, strength, and capacity to engage the world that he associated with his brother. The goal was not to abandon his authentic self, but to uncover its full depth and power. And this brings us to one of the most haunting and transformative questions in the entire Torah: \"מִי אַתָּה בְּנִי?\" — \"Who are you, my son?\" This is not merely Yitzchak's question to Yaakov. It is the question life asks every single one of us. Who are you, my daughter? Beneath your fears, defenses, insecuriti",
-     "first_seen": "2026-11-11T11:52:03+00:00"
+     "id": "https://www.theyeshiva.net/item/10026",
+     "title": "The Greatest High in the World Is Your Own Soul - Wednesday: Maamar Yafeh Sha'ah Achas #2",
+     "url": "https://www.theyeshiva.net/item/10026",
+     "date": "Wed, 11 Nov 2026 08:00:00 -0500",
+     "blurb": "You're Not Sick; You Just Never Felt Your Own Energy What if the greatest high you will ever experience is not found in a substance, a relationship, an achievement, or an extraordinary experience—but in your own soul? What if you could learn to generate your own energy, feel deeply alive from within, and experience a joy and vitality that do not depend on the world around you? In this revolutionary Chassidus class, we explore one of the most extraordinary teachings about the human psyche: the secret of loving Hashem \"with all your heart\" is learning how to live continuously connected to your own deepest Divine energy. When you are rooted in your authentic self, you reclaim your agency. You stop outsourcing your aliveness to other people, experiences, accomplishments, or external stimulation. You discover an infinite reservoir of vitality, passion, connection, and love already pulsating within your soul. And here lies the magnificent paradox: the more deeply you inhabit your own soul, the more profoundly you become connected to everything and everyone. When you touch the deepest truth of your being, you discover that you are not separate from the universe, because at the deepest level, all existence emerges from one Divine reality. This is why the greatest \"addicts\" in the world are the tzaddikim! They have discovered the ultimate source of ecstasy. They are passionately, relentlessly connected to the Divine energy of life itself. They do not need to escape themselves to exper",
+     "first_seen": "2026-11-12T12:41:08+00:00"
     }
    ],
    "latest": [
+    {
+     "id": "https://www.theyeshiva.net/item/10026",
+     "title": "The Greatest High in the World Is Your Own Soul - Wednesday: Maamar Yafeh Sha'ah Achas #2",
+     "url": "https://www.theyeshiva.net/item/10026",
+     "date": "Wed, 11 Nov 2026 08:00:00 -0500",
+     "blurb": "You're Not Sick; You Just Never Felt Your Own Energy What if the greatest high you will ever experience is not found in a substance, a relationship, an achievement, or an extraordinary experience—but in your own soul? What if you could learn to generate your own energy, feel deeply alive from within, and experience a joy and vitality that do not depend on the world around you? In this revolutionary Chassidus class, we explore one of the most extraordinary teachings about the human psyche: the secret of loving Hashem \"with all your heart\" is learning how to live continuously connected to your own deepest Divine energy. When you are rooted in your authentic self, you reclaim your agency. You stop outsourcing your aliveness to other people, experiences, accomplishments, or external stimulation. You discover an infinite reservoir of vitality, passion, connection, and love already pulsating within your soul. And here lies the magnificent paradox: the more deeply you inhabit your own soul, the more profoundly you become connected to everything and everyone. When you touch the deepest truth of your being, you discover that you are not separate from the universe, because at the deepest level, all existence emerges from one Divine reality. This is why the greatest \"addicts\" in the world are the tzaddikim! They have discovered the ultimate source of ecstasy. They are passionately, relentlessly connected to the Divine energy of life itself. They do not need to escape themselves to exper",
+     "first_seen": "2026-11-12T12:41:08+00:00"
+    },
     {
      "id": "https://www.theyeshiva.net/item/10025",
      "title": "\"Who Are You, My Son?\" Every Journey in Your Life Is Helping You Discover Who You Really Are - Women's Toldot Class",
@@ -1465,8 +1498,8 @@
      "first_seen": "2026-10-20T07:59:51+00:00"
     }
    ],
-   "total": 1547,
-   "last_success_at": "2026-11-11T11:52:03+00:00"
+   "total": 1548,
+   "last_success_at": "2026-11-12T12:41:08+00:00"
   },
   {
    "id": "chassidus_applied",
@@ -1480,19 +1513,27 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-11T11:52:06+00:00",
+   "checked_at": "2026-11-12T12:41:11+00:00",
    "status": "ok",
    "new": [
     {
-     "id": "yt:video:Ix2TbEPKBRI",
+     "id": "yt:video:mvt-hAfnfzo",
      "title": "Samach Vav",
-     "url": "https://www.youtube.com/watch?v=Ix2TbEPKBRI",
-     "date": "2026-11-11T03:45:25+00:00",
-     "blurb": "p. 198-199 vision of chochma is connected to avodah, ahava rabba is higher than avodah",
-     "first_seen": "2026-11-11T11:52:06+00:00"
+     "url": "https://www.youtube.com/watch?v=mvt-hAfnfzo",
+     "date": "2026-11-12T04:00:20+00:00",
+     "blurb": "p. 199: Even one who doesn't reach the sight of chochma, also has koach atzmo throughout the day due to his soul not being at peace without Torah and mitzvos. Ratzo -- in ohr, not etzem.",
+     "first_seen": "2026-11-12T12:41:11+00:00"
     }
    ],
    "latest": [
+    {
+     "id": "yt:video:mvt-hAfnfzo",
+     "title": "Samach Vav",
+     "url": "https://www.youtube.com/watch?v=mvt-hAfnfzo",
+     "date": "2026-11-12T04:00:20+00:00",
+     "blurb": "p. 199: Even one who doesn't reach the sight of chochma, also has koach atzmo throughout the day due to his soul not being at peace without Torah and mitzvos. Ratzo -- in ohr, not etzem.",
+     "first_seen": "2026-11-12T12:41:11+00:00"
+    },
     {
      "id": "yt:video:Ix2TbEPKBRI",
      "title": "Samach Vav",
@@ -1767,7 +1808,7 @@
     }
    ],
    "total": 15,
-   "last_success_at": "2026-11-11T11:52:06+00:00"
+   "last_success_at": "2026-11-12T12:41:11+00:00"
   },
   {
    "id": "neirot",
@@ -1781,7 +1822,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-11T11:52:06+00:00",
+   "checked_at": "2026-11-12T12:41:11+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1835,7 +1876,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-11T11:52:06+00:00"
+   "last_success_at": "2026-11-12T12:41:11+00:00"
   },
   {
    "id": "chassidus_explained",
@@ -1849,7 +1890,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-11T11:52:11+00:00",
+   "checked_at": "2026-11-12T12:41:13+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1911,7 +1952,7 @@
     }
    ],
    "total": 136,
-   "last_success_at": "2026-11-11T11:52:11+00:00"
+   "last_success_at": "2026-11-12T12:41:13+00:00"
   },
   {
    "id": "melukat",
@@ -1925,7 +1966,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-11T11:52:12+00:00",
+   "checked_at": "2026-11-12T12:41:15+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1987,7 +2028,7 @@
     }
    ],
    "total": 168,
-   "last_success_at": "2026-11-11T11:52:12+00:00"
+   "last_success_at": "2026-11-12T12:41:15+00:00"
   },
   {
    "id": "daily_maamar",
@@ -2001,19 +2042,27 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-11T11:52:14+00:00",
+   "checked_at": "2026-11-12T12:41:16+00:00",
    "status": "ok",
    "new": [
     {
-     "id": "9100ee21-1ca3-4b84-a458-1bfd0cce5c7d",
-     "title": "Shabbos Parshas Toldos Mevorchim HaChodesh Kislev 5717 ,Maamorim Melukatim Vol. 1– Episode 10",
-     "url": "https://share.transistor.fm/s/4f4720c8",
-     "date": "Tue, 10 Nov 2026 09:23:11 -0500",
-     "blurb": "This episode covers from Chapter 10 through the end of the Maamar. Everything we do counts on a cosmic level!!",
-     "first_seen": "2026-11-11T11:52:14+00:00"
+     "id": "ce719df5-eb6d-4d1d-80d3-3c4015ddc547",
+     "title": "Shabbos Parshas Vayishlach 13 Kislev 5727, Toras Menachem, Vol. 48 – Episode 1",
+     "url": "https://share.transistor.fm/s/f1bf2536",
+     "date": "Wed, 11 Nov 2026 09:21:29 -0500",
+     "blurb": "How Torah keeps the world going?",
+     "first_seen": "2026-11-12T12:41:16+00:00"
     }
    ],
    "latest": [
+    {
+     "id": "ce719df5-eb6d-4d1d-80d3-3c4015ddc547",
+     "title": "Shabbos Parshas Vayishlach 13 Kislev 5727, Toras Menachem, Vol. 48 – Episode 1",
+     "url": "https://share.transistor.fm/s/f1bf2536",
+     "date": "Wed, 11 Nov 2026 09:21:29 -0500",
+     "blurb": "How Torah keeps the world going?",
+     "first_seen": "2026-11-12T12:41:16+00:00"
+    },
     {
      "id": "9100ee21-1ca3-4b84-a458-1bfd0cce5c7d",
      "title": "Shabbos Parshas Toldos Mevorchim HaChodesh Kislev 5717 ,Maamorim Melukatim Vol. 1– Episode 10",
@@ -2223,8 +2272,8 @@
      "first_seen": "2026-10-18T04:52:03+00:00"
     }
    ],
-   "total": 361,
-   "last_success_at": "2026-11-11T11:52:14+00:00"
+   "total": 362,
+   "last_success_at": "2026-11-12T12:41:16+00:00"
   },
   {
    "id": "wellsprings",
@@ -2238,7 +2287,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-11T11:52:15+00:00",
+   "checked_at": "2026-11-12T12:41:17+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2284,7 +2333,7 @@
     }
    ],
    "total": 125,
-   "last_success_at": "2026-11-11T11:52:15+00:00"
+   "last_success_at": "2026-11-12T12:41:17+00:00"
   },
   {
    "id": "daily_sicha",
@@ -2298,19 +2347,27 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-11T11:52:16+00:00",
+   "checked_at": "2026-11-12T12:41:18+00:00",
    "status": "ok",
    "new": [
     {
-     "id": "2026.11.11",
-     "title": "יום ד' פ' תולדות, בדר\"ח כסלו, ה'תשפ\"ז",
+     "id": "2026.11.12",
+     "title": "יום ה' פ' תולדות, ב' כסלו, ה'תשפ\"ז",
      "url": "",
-     "date": "Wed, 11 Nov 2026 12:00:00 GMT",
-     "blurb": "התוכן [המשך] אלא, ממשיך אדנ\"ע, שה\"פנסאי\" יודע שהאש אינו שלו אלא של הפנס , ופעולת הפנסאי אינה אלא לעורר ולגלות את נקודת היהדות שיש בו בהעלם מצ\"ע . וכשהפנסאי יודע זאת – אינו בא לידי ישות מעבודתו וכו'. והמשיך החסיד ושאל: 'ואם הפנס נמצא במדבר שמם ?', שהוא יהודי כזה שאין בו שום מעלה , \" עני בדעת \" בקצה הכי אחרון, ואפי' כאשר מדברים עמו פעם אחר פעם אינו רוצה לשמוע – האם גם אז ישנו חיוב להדליק את ה\"פנס\"? והשיב אדנ\"ע: 'גם אז צריך להדליק הפנס', כדי 'שיראו שזהו מדבר שמם', ומישהו אחר לא ירצה להתנהג כמוהו. 'וגם שהמדבר השמם יתבייש מפני הפנס', שכאשר ישתדלו ויצליחו סוכ\"ס להדליק את ה\"פנס\" שלו, הנפה\"א, יתחיל להתבונן ולהסתכל ע\"ע ויתבייש בהנהגתו. משיחת י\"ג תמוז, ה'תשכ\"ב ל\"הנחה פרטית\" או התרגום ללה\"ק של השיחה: https://thedailysicha.com/?date=11-11-2026 Synopsis [Continued.] …But the Rebbe Nishmaso Eden went on to say that the lamplighter knows that the fire is not his own , but belongs to the lamp ; the lamplighter’s effect is merely to awaken and reveal the essential point of Yiddishkeit that is already hidden within the other person. When the lamplighter knows this, he does not develop a sense of self-importance from his service etc. The Chassid then asked: What if the lamp is located in a desolate wilderness , meaning, it is a Jew who possesses no virtues , who is “ poor in knowledge ” to the lowest extreme, and even when one speaks to him time and again he doesn’t want to listen – is there still an obligation to kindle the lamp? The Rebbe answered that even then one must kindle the lamp, so t",
-     "first_seen": "2026-11-11T11:52:16+00:00"
+     "date": "Thu, 12 Nov 2026 12:00:00 GMT",
+     "blurb": "התוכן [המשך] והמשיך החסיד ושאל: 'ומה אם הפנס נמצא בים ?', שהוא מלא תורה , \"מים\", כים, \" עשיר בדעת \" באופן הכי נעלה, ואעפ\"כ אין בו יראת-שמים, ונשאר באותו אופן של גסות כמו קודם שלמד – כיצד אפשר \"להדליק את הפנס\" הזה שיהי' בו יראת-שמים?! והשיב אדנ\"ע: 'צריכים להפשיט את הלבושים, לקפוץ לים ולהדליק את הפנס'. הגישה אל \"בן תורה\" צ\"ל לא ע\"י לבושי השכל וכיו\"ב אלא ע\"י אהבה פנימית שיש ליהודי א' לחבירו ומתוך מסנ\"פ , ואז יפעל עליו ע\"י עצם הנשמה . ומכיון שעבודה זו היא קשה ביותר וספק אם יצליח בזה, ולכן (דוקא) לאחר מענה זו חזר החסיד ושאל עוה\"פ: 'האם זהו אכן חסיד?' והרהר אדנ\"ע, והשיב: 'כן, זהו חסיד'. כי אעפ\"כ צריך לעשות זאת כי מדובר בפיקוח נפש . בסיום הענין שאל החסיד: 'האם יכולים לתפוס את הזולת בגרונו?', לפעול מס\"נ בזולת ולהכריח אותו וכו'. והשיב אדנ\"ע: 'בגרונו – לא!', מס\"נ צריך בנוגע לעצמו ולא בנוגע לזולת, 'אבל בכנף העליון של הבגד – כן', שלא נוגעים בגופו ובנשמתו של הזולת. משיחת י\"ג תמוז, ה'תשכ\"ב ל\"הנחה פרטית\" או התרגום ללה\"ק של השיחה: https://thedailysicha.com/?date=12-11-2026 Synopsis (Continued.) The Chassid continued: “But what if the lamp is in the sea ?” Meaning, one who is filled with Torah (“water”), who is “ rich in knowledge ” but nevertheless lacks fear of Heaven and remains just as coarse as he was before his studies – how does one light such a lamp? The Rebbe Nishmaso Eden replied: “One must remove one’s garments, jump into the sea, and light the lamp.” When it comes to a Torah scholar, the approach must be not with intellect etc., but with the deep, inner love one Jew has for anothe",
+     "first_seen": "2026-11-12T12:41:18+00:00"
     }
    ],
    "latest": [
+    {
+     "id": "2026.11.12",
+     "title": "יום ה' פ' תולדות, ב' כסלו, ה'תשפ\"ז",
+     "url": "",
+     "date": "Thu, 12 Nov 2026 12:00:00 GMT",
+     "blurb": "התוכן [המשך] והמשיך החסיד ושאל: 'ומה אם הפנס נמצא בים ?', שהוא מלא תורה , \"מים\", כים, \" עשיר בדעת \" באופן הכי נעלה, ואעפ\"כ אין בו יראת-שמים, ונשאר באותו אופן של גסות כמו קודם שלמד – כיצד אפשר \"להדליק את הפנס\" הזה שיהי' בו יראת-שמים?! והשיב אדנ\"ע: 'צריכים להפשיט את הלבושים, לקפוץ לים ולהדליק את הפנס'. הגישה אל \"בן תורה\" צ\"ל לא ע\"י לבושי השכל וכיו\"ב אלא ע\"י אהבה פנימית שיש ליהודי א' לחבירו ומתוך מסנ\"פ , ואז יפעל עליו ע\"י עצם הנשמה . ומכיון שעבודה זו היא קשה ביותר וספק אם יצליח בזה, ולכן (דוקא) לאחר מענה זו חזר החסיד ושאל עוה\"פ: 'האם זהו אכן חסיד?' והרהר אדנ\"ע, והשיב: 'כן, זהו חסיד'. כי אעפ\"כ צריך לעשות זאת כי מדובר בפיקוח נפש . בסיום הענין שאל החסיד: 'האם יכולים לתפוס את הזולת בגרונו?', לפעול מס\"נ בזולת ולהכריח אותו וכו'. והשיב אדנ\"ע: 'בגרונו – לא!', מס\"נ צריך בנוגע לעצמו ולא בנוגע לזולת, 'אבל בכנף העליון של הבגד – כן', שלא נוגעים בגופו ובנשמתו של הזולת. משיחת י\"ג תמוז, ה'תשכ\"ב ל\"הנחה פרטית\" או התרגום ללה\"ק של השיחה: https://thedailysicha.com/?date=12-11-2026 Synopsis (Continued.) The Chassid continued: “But what if the lamp is in the sea ?” Meaning, one who is filled with Torah (“water”), who is “ rich in knowledge ” but nevertheless lacks fear of Heaven and remains just as coarse as he was before his studies – how does one light such a lamp? The Rebbe Nishmaso Eden replied: “One must remove one’s garments, jump into the sea, and light the lamp.” When it comes to a Torah scholar, the approach must be not with intellect etc., but with the deep, inner love one Jew has for anothe",
+     "first_seen": "2026-11-12T12:41:18+00:00"
+    },
     {
      "id": "2026.11.11",
      "title": "יום ד' פ' תולדות, בדר\"ח כסלו, ה'תשפ\"ז",
@@ -2520,8 +2577,8 @@
      "first_seen": "2026-10-18T04:52:06+00:00"
     }
    ],
-   "total": 1425,
-   "last_success_at": "2026-11-11T11:52:16+00:00"
+   "total": 1426,
+   "last_success_at": "2026-11-12T12:41:18+00:00"
   },
   {
    "id": "learnchassidus",
@@ -2535,7 +2592,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-11T11:52:20+00:00",
+   "checked_at": "2026-11-12T12:41:23+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2548,7 +2605,7 @@
     }
    ],
    "total": 5,
-   "last_success_at": "2026-11-11T11:52:20+00:00"
+   "last_success_at": "2026-11-12T12:41:23+00:00"
   },
   {
    "id": "simplychassidus",
@@ -2562,7 +2619,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-11T11:52:20+00:00",
+   "checked_at": "2026-11-12T12:41:24+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2589,7 +2646,7 @@
     }
    ],
    "total": 4,
-   "last_success_at": "2026-11-11T11:52:20+00:00"
+   "last_success_at": "2026-11-12T12:41:24+00:00"
   },
   {
    "id": "alonei_chabad",
@@ -2602,7 +2659,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-11T11:52:22+00:00",
+   "checked_at": "2026-11-12T12:41:25+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -2619,7 +2676,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-11T11:52:22+00:00",
+   "checked_at": "2026-11-12T12:41:25+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -2636,7 +2693,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-11T11:52:22+00:00",
+   "checked_at": "2026-11-12T12:41:25+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2663,7 +2720,7 @@
     }
    ],
    "total": 303,
-   "last_success_at": "2026-11-11T11:52:22+00:00"
+   "last_success_at": "2026-11-12T12:41:25+00:00"
   },
   {
    "id": "lchaim",
@@ -2676,7 +2733,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-11T11:52:23+00:00",
+   "checked_at": "2026-11-12T12:41:26+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2738,7 +2795,7 @@
     }
    ],
    "total": 0,
-   "last_success_at": "2026-11-11T11:52:23+00:00"
+   "last_success_at": "2026-11-12T12:41:26+00:00"
   },
   {
    "id": "one_point",
@@ -2751,7 +2808,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-11T11:52:24+00:00",
+   "checked_at": "2026-11-12T12:41:28+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2792,7 +2849,7 @@
     }
    ],
    "total": 0,
-   "last_success_at": "2026-11-11T11:52:24+00:00"
+   "last_success_at": "2026-11-12T12:41:28+00:00"
   },
   {
    "id": "derher",
@@ -2805,7 +2862,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-11T11:52:25+00:00",
+   "checked_at": "2026-11-12T12:41:29+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -2822,7 +2879,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-11T11:52:25+00:00",
+   "checked_at": "2026-11-12T12:41:29+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -2839,7 +2896,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-11T11:52:25+00:00",
+   "checked_at": "2026-11-12T12:41:29+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2894,7 +2951,7 @@
     }
    ],
    "total": 5,
-   "last_success_at": "2026-11-11T11:52:25+00:00"
+   "last_success_at": "2026-11-12T12:41:29+00:00"
   },
   {
    "id": "maynotecha_inst",
@@ -2907,7 +2964,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-11T11:52:27+00:00",
+   "checked_at": "2026-11-12T12:41:31+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -2924,7 +2981,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-11T11:52:27+00:00",
+   "checked_at": "2026-11-12T12:41:31+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2962,7 +3019,7 @@
     }
    ],
    "total": 2,
-   "last_success_at": "2026-11-11T11:52:27+00:00"
+   "last_success_at": "2026-11-12T12:41:31+00:00"
   },
   {
    "id": "anash",
@@ -2975,10 +3032,59 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-11T11:52:28+00:00",
+   "checked_at": "2026-11-12T12:41:32+00:00",
    "status": "ok",
-   "new": [],
+   "new": [
+    {
+     "id": "https://anash.org/?p=1131352",
+     "title": "Chicago Bochurim Hear Firsthand from the Rebbe’s Cardiologist",
+     "url": "https://anash.org/chicago-bochurim-hear-firsthand-from-the-rebbes-cardiologist/",
+     "date": "Wed, 11 Nov 2026 23:26:08 +0000",
+     "blurb": "A group of Shluchim from Lubavitch Mesivta of Chicago visited the Rebbe’s cardiologist, Dr. Ira Weiss , on Rosh Chodesh Kislev for a special farbrengen and an opportunity to hear firsthand stories about the Rebbe.",
+     "first_seen": "2026-11-12T12:41:32+00:00"
+    },
+    {
+     "id": "https://anash.org/?p=1131046",
+     "title": "770 Celebrates Rosh Chodesh Kislev With Farbrengen",
+     "url": "https://anash.org/770-celebrates-rosh-chodesh-kislev-with-farbrengen/",
+     "date": "Wed, 11 Nov 2026 18:30:33 +0000",
+     "blurb": "Hundreds of Anash and bochurim gathered in 770 on Tuesday night for a farbrengen and seudas hoda’a celebrating the 49th anniversary of the miracle of Rosh Chodesh Kislev.",
+     "first_seen": "2026-11-12T12:41:32+00:00"
+    },
+    {
+     "id": "https://anash.org/?p=1130983",
+     "title": "9,000th Tanya Edition Printed Near the Rebbe’s Room",
+     "url": "https://anash.org/9000th-tanya-edition-printed-near-the-rebbes-room/",
+     "date": "Wed, 11 Nov 2026 16:11:59 +0000",
+     "blurb": "In a tradition to print every millennial Tanya in 770, the 9,000th edition of Tanya was printed near the Rebbe’s room, in conjunction with the International Kinus Hashluchim.",
+     "first_seen": "2026-11-12T12:41:32+00:00"
+    }
+   ],
    "latest": [
+    {
+     "id": "https://anash.org/?p=1131352",
+     "title": "Chicago Bochurim Hear Firsthand from the Rebbe’s Cardiologist",
+     "url": "https://anash.org/chicago-bochurim-hear-firsthand-from-the-rebbes-cardiologist/",
+     "date": "Wed, 11 Nov 2026 23:26:08 +0000",
+     "blurb": "A group of Shluchim from Lubavitch Mesivta of Chicago visited the Rebbe’s cardiologist, Dr. Ira Weiss , on Rosh Chodesh Kislev for a special farbrengen and an opportunity to hear firsthand stories about the Rebbe.",
+     "first_seen": "2026-11-12T12:41:32+00:00"
+    },
+    {
+     "id": "https://anash.org/?p=1131046",
+     "title": "770 Celebrates Rosh Chodesh Kislev With Farbrengen",
+     "url": "https://anash.org/770-celebrates-rosh-chodesh-kislev-with-farbrengen/",
+     "date": "Wed, 11 Nov 2026 18:30:33 +0000",
+     "blurb": "Hundreds of Anash and bochurim gathered in 770 on Tuesday night for a farbrengen and seudas hoda’a celebrating the 49th anniversary of the miracle of Rosh Chodesh Kislev.",
+     "first_seen": "2026-11-12T12:41:32+00:00"
+    },
+    {
+     "id": "https://anash.org/?p=1130983",
+     "title": "9,000th Tanya Edition Printed Near the Rebbe’s Room",
+     "url": "https://anash.org/9000th-tanya-edition-printed-near-the-rebbes-room/",
+     "date": "Wed, 11 Nov 2026 16:11:59 +0000",
+     "blurb": "In a tradition to print every millennial Tanya in 770, the 9,000th edition of Tanya was printed near the Rebbe’s room, in conjunction with the International Kinus Hashluchim.",
+     "first_seen": "2026-11-12T12:41:32+00:00"
+    },
     {
      "id": "https://anash.org/?p=1129224",
      "title": "After Decades in Captivity, Tzemach Tzedek’s Sefer Returns",
@@ -3260,8 +3366,8 @@
      "first_seen": "2026-10-18T04:52:22+00:00"
     }
    ],
-   "total": 2,
-   "last_success_at": "2026-11-11T11:52:28+00:00"
+   "total": 3,
+   "last_success_at": "2026-11-12T12:41:32+00:00"
   },
   {
    "id": "chabadinfo",
@@ -3274,7 +3380,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-11T11:52:30+00:00",
+   "checked_at": "2026-11-12T12:41:33+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -3291,7 +3397,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-11T11:52:30+00:00",
+   "checked_at": "2026-11-12T12:41:33+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -3308,7 +3414,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-11T11:52:30+00:00",
+   "checked_at": "2026-11-12T12:41:33+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -3354,7 +3460,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-11T11:52:30+00:00"
+   "last_success_at": "2026-11-12T12:41:33+00:00"
   },
   {
    "id": "kehot",
@@ -3367,7 +3473,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-11T11:52:35+00:00",
+   "checked_at": "2026-11-12T12:41:36+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -4077,7 +4183,7 @@
     }
    ],
    "total": 197,
-   "last_success_at": "2026-11-11T11:52:35+00:00"
+   "last_success_at": "2026-11-12T12:41:36+00:00"
   }
  ],
  "browser_checks": {
