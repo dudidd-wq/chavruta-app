@@ -1387,6 +1387,19 @@ body.source-reader-open { overflow: hidden; }
   .source-reader .sr-footer { max-height: 32dvh; overflow-y: auto; overscroll-behavior: contain; }
 }
 
+/* Docked citation panel: commentary stays visible beside the source. */
+body.source-reader-docked { overflow: auto; }
+@media (min-width: 1000px) {
+  body.source-reader-docked #app { padding-inline-end: min(42vw, 620px); }
+  .source-reader.sr-docked { width: min(42vw, 620px); }
+}
+.source-reader.sr-docked::backdrop { background: transparent; pointer-events: none; }
+.source-reader .sr-credit { font: 12px/1.7 var(--sans); color: var(--ink-3); flex-basis: 100%; margin: 4px 0 0; overflow-wrap: anywhere; }
+@media (max-width: 999px) {
+  body.source-reader-docked #app { padding-inline-end: 0; }
+  .source-reader.sr-docked, .source-reader.sr-docked.sr-wide { width: 100vw; }
+}
+
 /* Personal layers follow the reader's palette, typography and reduced-motion choice. */
 ::highlight(notebook-gold) { background: #e5bc5066; color: inherit; }
 ::highlight(notebook-green) { background: #62b18166; color: inherit; }

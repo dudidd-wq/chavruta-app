@@ -35,3 +35,5 @@ jobs:
         run: |
           node --check status.js
           node --check data/project-status.js
+          node --check app.js
+          node --check data/cite-resolutions.js
