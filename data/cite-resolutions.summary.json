@@ -1,0 +1,27 @@
+{
+  "schema": 1,
+  "generated": "2026-11-13",
+  "parashot": [
+    "בראשית",
+    "נח",
+    "לך לך",
+    "וירא"
+  ],
+  "stats": {
+    "files": 87,
+    "excerpts": 18479,
+    "unique": 3497,
+    "text": 3493,
+    "with_uid": 2262,
+    "otzar_links": 18,
+    "with_sefaria": 8,
+    "ref_only": 4
+  },
+  "licenses": {
+    "kehot-nc": 3032,
+    "chabadlibrary": 453,
+    "sefaria-pd": 6,
+    "excerpt": 4,
+    "pd-foundational": 2
+  }
+}
