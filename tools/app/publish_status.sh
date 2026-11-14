@@ -43,7 +43,7 @@ git switch -q -c "$BR"
 git add data/project-status.json data/project-status.js
 git -c user.name='chavruta-status[bot]' -c user.email='chavruta-status@users.noreply.github.com' \
   commit -q -m "רענון עמוד מצב המערכת ($(date '+%d.%m %H:%M'))"
-git push -q origin "$BR"
+git push -q "https://github.com/$REPO.git" "HEAD:refs/heads/$BR"
 URL=$(gh pr create -R "$REPO" --base main --head "$BR" \
   --title "רענון עמוד מצב המערכת ($(date '+%d.%m %H:%M'))" \
   --body "רענון אוטומטי של data/project-status.* מקובצי הצנרת בתיבה (tools/app/publish_status.sh). מספרים מצטברים בלבד, בלי טקסט מקורות.")
