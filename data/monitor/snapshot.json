@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-14T18:30:35+00:00",
+ "generated_at": "2026-11-14T18:34:18+00:00",
  "sources": [
   {
    "id": "chabadlibrary",
@@ -12,7 +12,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-11-14T18:16:51+00:00",
+   "checked_at": "2026-11-14T18:33:06+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -30,7 +30,7 @@
     "primary",
     "whatsnew"
    ],
-   "checked_at": "2026-11-14T18:16:51+00:00",
+   "checked_at": "2026-11-14T18:33:06+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -47,7 +47,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-11-14T18:16:51+00:00",
+   "checked_at": "2026-11-14T18:33:06+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -64,7 +64,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-11-14T18:16:51+00:00",
+   "checked_at": "2026-11-14T18:33:06+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -82,7 +82,7 @@
     "primary",
     "whatsnew"
    ],
-   "checked_at": "2026-11-14T18:16:51+00:00",
+   "checked_at": "2026-11-14T18:33:06+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -102,7 +102,7 @@
     }
    ],
    "total": 132,
-   "last_success_at": "2026-11-14T18:16:51+00:00"
+   "last_success_at": "2026-11-14T18:33:06+00:00"
   },
   {
    "id": "chabadlibrarybooks",
@@ -115,7 +115,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-11-14T18:16:52+00:00",
+   "checked_at": "2026-11-14T18:33:06+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -133,12 +133,12 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-14T18:16:52+00:00",
+   "checked_at": "2026-11-14T18:33:06+00:00",
    "status": "ok",
    "new": [],
    "latest": [],
    "total": 1501,
-   "last_success_at": "2026-11-14T18:16:52+00:00"
+   "last_success_at": "2026-11-14T18:33:06+00:00"
   },
   {
    "id": "chassidut_org",
@@ -152,12 +152,12 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-14T18:16:53+00:00",
+   "checked_at": "2026-11-14T18:33:08+00:00",
    "status": "ok",
    "new": [],
    "latest": [],
    "total": 4,
-   "last_success_at": "2026-11-14T18:16:53+00:00"
+   "last_success_at": "2026-11-14T18:33:08+00:00"
   },
   {
    "id": "biurim",
@@ -171,7 +171,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-14T18:16:54+00:00",
+   "checked_at": "2026-11-14T18:33:09+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -217,7 +217,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-14T18:16:54+00:00"
+   "last_success_at": "2026-11-14T18:33:09+00:00"
   },
   {
    "id": "hm_monsey",
@@ -231,7 +231,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-14T18:16:56+00:00",
+   "checked_at": "2026-11-14T18:33:11+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -317,7 +317,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-14T18:16:56+00:00"
+   "last_success_at": "2026-11-14T18:33:11+00:00"
   },
   {
    "id": "hiskashrus",
@@ -331,9 +331,17 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-14T18:30:35+00:00",
+   "checked_at": "2026-11-14T18:33:12+00:00",
    "status": "ok",
-   "new": [],
+   "new": [
+    {
+     "id": "39143",
+     "title": "Toldos · 5787 · קונטרס שבועי לאנ\"ש חסידי חב\"ד לחיזוק ההתקשרות",
+     "url": "https://torahprint.nyc3.cdn.digitaloceanspaces.com/pdfFiles/1794412047262_mxwbq_.pdf",
+     "date": "2026-11-13T00:00:00.000Z",
+     "first_seen": "2026-11-14T18:30:35+00:00"
+    }
+   ],
    "latest": [
     {
      "id": "39143",
@@ -343,29 +351,29 @@
      "first_seen": "2026-11-14T18:30:35+00:00"
     },
     {
-     "id": "38132",
-     "title": "Vayeira · 5787",
-     "url": "https://torahprint.nyc3.cdn.digitaloceanspaces.com/pdfFiles/1793199135955_6gmi1_.pdf",
-     "date": "2026-10-30T00:00:00.000Z",
-     "first_seen": "2026-10-29T06:06:38+00:00"
+     "id": "38045",
+     "title": "Vayeira · 5787 · A collection of teachings and directives from the Lubavitcher Rebbe regarding elections and political involvement.",
+     "url": "https://torahprint.nyc3.cdn.digitaloceanspaces.com/pdfFiles/1793022130850_hx8nc_miflagacharedit.pdf",
+     "date": "2026-10-31T00:00:00.000Z",
+     "first_seen": "2026-10-27T06:25:47+00:00"
     },
     {
      "id": "38133",
-     "title": "Vayeira · 5787 · קונטרס שבועי לאנ\"ש חסידי חב\"ד לחיזוק ההתקשרות לכ\"ק אדמו\"ר רבי מנחם מענדל בהרה\"ק רלו\"י מליובאוויטש",
+     "title": "Vayeira · 5787 · קונטרס שבועי לאנ\"ש חסידי חב\"ד לחיזוק ההתקשרות לכ\"ק אדמו\"ר",
      "url": "https://torahprint.nyc3.cdn.digitaloceanspaces.com/pdfFiles/1793199306940_m6c2p_.pdf",
      "date": "2026-10-30T00:00:00.000Z",
      "first_seen": "2026-10-29T06:06:38+00:00"
     },
     {
-     "id": "38045",
-     "title": "Vayeira · 5787 · מדור \"ניצוצי רבי\" - ליובאוויטש איננה מפלגתית",
-     "url": "https://torahprint.nyc3.cdn.digitaloceanspaces.com/pdfFiles/1793022130850_hx8nc_miflagacharedit.pdf",
-     "date": "2026-10-26T14:22:53.453Z",
-     "first_seen": "2026-10-27T06:25:47+00:00"
+     "id": "38132",
+     "title": "Vayeira · 5787 · גיליון שבועי לאנ\"ש חסידי חב\"ד לחיזוק ההתקשרות לכ\"ק אדמו\"ר",
+     "url": "https://torahprint.nyc3.cdn.digitaloceanspaces.com/pdfFiles/1793199135955_6gmi1_.pdf",
+     "date": "2026-10-30T00:00:00.000Z",
+     "first_seen": "2026-10-29T06:06:38+00:00"
     },
     {
      "id": "37659",
-     "title": "Lech-Lecha · 5787 · קונטרס שבועי לאנ\"ש חסידי חב\"ד לחיזוק ההתקשרות לכ\"ק אדמו\"ר רבי מנחם מענדל בהרה\"ק רלו\"י מליובאוויטש",
+     "title": "Lech-Lecha · 5787 · קונטרס שבועי לאנ\"ש חסידי חב\"ד לחיזוק ההתקשרות לכ\"ק אדמו\"ר",
      "url": "https://torahprint.nyc3.cdn.digitaloceanspaces.com/pdfFiles/1792588384099_1xivd_.pdf",
      "date": "2026-10-23T00:00:00.000Z",
      "first_seen": "2026-10-22T05:09:31+00:00"
@@ -406,8 +414,8 @@
      "first_seen": "2026-10-20T07:59:33+00:00"
     }
    ],
-   "total": 0,
-   "last_success_at": "2026-11-14T18:30:35+00:00"
+   "total": 10,
+   "last_success_at": "2026-11-14T18:33:12+00:00"
   },
   {
    "id": "lichyot_chassidus",
@@ -421,7 +429,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-14T18:16:59+00:00",
+   "checked_at": "2026-11-14T18:33:14+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -563,7 +571,7 @@
     }
    ],
    "total": 1000,
-   "last_success_at": "2026-11-14T18:16:59+00:00"
+   "last_success_at": "2026-11-14T18:33:14+00:00"
   },
   {
    "id": "chabadzoom",
@@ -577,7 +585,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-14T18:17:02+00:00",
+   "checked_at": "2026-11-14T18:33:16+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -702,7 +710,7 @@
     }
    ],
    "total": 563,
-   "last_success_at": "2026-11-14T18:17:02+00:00"
+   "last_success_at": "2026-11-14T18:33:16+00:00"
   },
   {
    "id": "kovtzimdrive",
@@ -716,7 +724,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-14T18:17:10+00:00",
+   "checked_at": "2026-11-14T18:33:18+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -729,7 +737,7 @@
     }
    ],
    "total": 1,
-   "last_success_at": "2026-11-14T18:17:10+00:00"
+   "last_success_at": "2026-11-14T18:33:18+00:00"
   },
   {
    "id": "avita",
@@ -743,7 +751,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-14T18:17:13+00:00",
+   "checked_at": "2026-11-14T18:33:20+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -761,7 +769,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-14T18:17:13+00:00",
+   "checked_at": "2026-11-14T18:33:20+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -783,7 +791,7 @@
     }
    ],
    "total": 2,
-   "last_success_at": "2026-11-14T18:17:13+00:00"
+   "last_success_at": "2026-11-14T18:33:20+00:00"
   },
   {
    "id": "dvarmalchus770",
@@ -797,7 +805,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-14T18:17:15+00:00",
+   "checked_at": "2026-11-14T18:33:22+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -923,7 +931,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-14T18:17:15+00:00"
+   "last_success_at": "2026-11-14T18:33:22+00:00"
   },
   {
    "id": "soulwords",
@@ -937,7 +945,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-14T18:17:16+00:00",
+   "checked_at": "2026-11-14T18:33:23+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1007,7 +1015,7 @@
     }
    ],
    "total": 0,
-   "last_success_at": "2026-11-14T18:17:16+00:00"
+   "last_success_at": "2026-11-14T18:33:23+00:00"
   },
   {
    "id": "sie_weekly",
@@ -1021,7 +1029,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-14T18:17:17+00:00",
+   "checked_at": "2026-11-14T18:33:24+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1090,7 +1098,7 @@
     }
    ],
    "total": 117,
-   "last_success_at": "2026-11-14T18:17:17+00:00"
+   "last_success_at": "2026-11-14T18:33:24+00:00"
   },
   {
    "id": "pls",
@@ -1104,7 +1112,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-14T18:17:19+00:00",
+   "checked_at": "2026-11-14T18:33:26+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1238,7 +1246,7 @@
     }
    ],
    "total": 200,
-   "last_success_at": "2026-11-14T18:17:19+00:00"
+   "last_success_at": "2026-11-14T18:33:26+00:00"
   },
   {
    "id": "chayenu_ls",
@@ -1252,7 +1260,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-14T18:17:20+00:00",
+   "checked_at": "2026-11-14T18:33:27+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1279,7 +1287,7 @@
     }
    ],
    "total": 2,
-   "last_success_at": "2026-11-14T18:17:20+00:00"
+   "last_success_at": "2026-11-14T18:33:27+00:00"
   },
   {
    "id": "weekly_sicha",
@@ -1293,7 +1301,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-14T18:17:21+00:00",
+   "checked_at": "2026-11-14T18:33:28+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1362,7 +1370,7 @@
     }
    ],
    "total": 120,
-   "last_success_at": "2026-11-14T18:17:21+00:00"
+   "last_success_at": "2026-11-14T18:33:28+00:00"
   },
   {
    "id": "theyeshiva",
@@ -1376,7 +1384,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-14T18:17:22+00:00",
+   "checked_at": "2026-11-14T18:33:29+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1526,7 +1534,7 @@
     }
    ],
    "total": 1549,
-   "last_success_at": "2026-11-14T18:17:22+00:00"
+   "last_success_at": "2026-11-14T18:33:29+00:00"
   },
   {
    "id": "chassidus_applied",
@@ -1540,7 +1548,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-14T18:17:26+00:00",
+   "checked_at": "2026-11-14T18:33:33+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1850,7 +1858,7 @@
     }
    ],
    "total": 15,
-   "last_success_at": "2026-11-14T18:17:26+00:00"
+   "last_success_at": "2026-11-14T18:33:33+00:00"
   },
   {
    "id": "neirot",
@@ -1864,7 +1872,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-14T18:17:26+00:00",
+   "checked_at": "2026-11-14T18:33:33+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1918,7 +1926,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-14T18:17:26+00:00"
+   "last_success_at": "2026-11-14T18:33:33+00:00"
   },
   {
    "id": "chassidus_explained",
@@ -1932,7 +1940,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-14T18:17:30+00:00",
+   "checked_at": "2026-11-14T18:33:35+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1994,7 +2002,7 @@
     }
    ],
    "total": 136,
-   "last_success_at": "2026-11-14T18:17:30+00:00"
+   "last_success_at": "2026-11-14T18:33:35+00:00"
   },
   {
    "id": "melukat",
@@ -2008,7 +2016,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-14T18:17:31+00:00",
+   "checked_at": "2026-11-14T18:33:36+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2070,7 +2078,7 @@
     }
    ],
    "total": 168,
-   "last_success_at": "2026-11-14T18:17:31+00:00"
+   "last_success_at": "2026-11-14T18:33:36+00:00"
   },
   {
    "id": "daily_maamar",
@@ -2084,7 +2092,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-14T18:17:32+00:00",
+   "checked_at": "2026-11-14T18:33:37+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2322,7 +2330,7 @@
     }
    ],
    "total": 364,
-   "last_success_at": "2026-11-14T18:17:32+00:00"
+   "last_success_at": "2026-11-14T18:33:37+00:00"
   },
   {
    "id": "wellsprings",
@@ -2336,7 +2344,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-14T18:17:34+00:00",
+   "checked_at": "2026-11-14T18:33:39+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2382,7 +2390,7 @@
     }
    ],
    "total": 125,
-   "last_success_at": "2026-11-14T18:17:34+00:00"
+   "last_success_at": "2026-11-14T18:33:39+00:00"
   },
   {
    "id": "daily_sicha",
@@ -2396,7 +2404,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-14T18:17:35+00:00",
+   "checked_at": "2026-11-14T18:33:40+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2626,7 +2634,7 @@
     }
    ],
    "total": 1427,
-   "last_success_at": "2026-11-14T18:17:35+00:00"
+   "last_success_at": "2026-11-14T18:33:40+00:00"
   },
   {
    "id": "learnchassidus",
@@ -2640,7 +2648,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-14T18:17:41+00:00",
+   "checked_at": "2026-11-14T18:33:46+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2653,7 +2661,7 @@
     }
    ],
    "total": 5,
-   "last_success_at": "2026-11-14T18:17:41+00:00"
+   "last_success_at": "2026-11-14T18:33:46+00:00"
   },
   {
    "id": "simplychassidus",
@@ -2667,7 +2675,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-14T18:17:42+00:00",
+   "checked_at": "2026-11-14T18:33:46+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2694,7 +2702,7 @@
     }
    ],
    "total": 4,
-   "last_success_at": "2026-11-14T18:17:42+00:00"
+   "last_success_at": "2026-11-14T18:33:46+00:00"
   },
   {
    "id": "alonei_chabad",
@@ -2707,7 +2715,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-14T18:17:43+00:00",
+   "checked_at": "2026-11-14T18:33:48+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -2724,7 +2732,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-14T18:17:43+00:00",
+   "checked_at": "2026-11-14T18:33:48+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -2741,7 +2749,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-14T18:17:43+00:00",
+   "checked_at": "2026-11-14T18:33:48+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2768,7 +2776,7 @@
     }
    ],
    "total": 303,
-   "last_success_at": "2026-11-14T18:17:43+00:00"
+   "last_success_at": "2026-11-14T18:33:48+00:00"
   },
   {
    "id": "lchaim",
@@ -2781,9 +2789,17 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-14T18:30:35+00:00",
+   "checked_at": "2026-11-14T18:33:49+00:00",
    "status": "ok",
-   "new": [],
+   "new": [
+    {
+     "id": "38861",
+     "title": "Chayei Sarah · 5787 · A weekly publication featuring teachings of the Rebbe, stories, customs, and insights on the weekly Torah portion.",
+     "url": "https://torahprint.nyc3.cdn.digitaloceanspaces.com/pdfFiles/1793951192396_aa5cy_lchaim_1947.pdf",
+     "date": "2026-11-06T00:00:00.000Z",
+     "first_seen": "2026-11-14T18:30:35+00:00"
+    }
+   ],
    "latest": [
     {
      "id": "38861",
@@ -2793,13 +2809,6 @@
      "first_seen": "2026-11-14T18:30:35+00:00"
     },
     {
-     "id": "37957",
-     "title": "Vayeira · 5787 · A weekly Chabad publication featuring teachings of the Rebbe, stories, and community news.",
-     "url": "https://torahprint.nyc3.cdn.digitaloceanspaces.com/pdfFiles/1792880926571_inlqb_lchaim_1946.pdf",
-     "date": "2026-10-30T00:00:00.000Z",
-     "first_seen": "2026-10-25T06:09:00+00:00"
-    },
-    {
      "id": "38345",
      "title": "Vayeira · 5787 · The Weekly Publication for Every Jewish Person",
      "url": "https://torahprint.nyc3.cdn.digitaloceanspaces.com/pdfFiles/1793338021614_t9om0_lchaim_1946.pdf",
@@ -2807,8 +2816,15 @@
      "first_seen": "2026-10-31T06:42:34+00:00"
     },
     {
+     "id": "37957",
+     "title": "Vayeira · 5787 · A weekly Chabad publication featuring teachings of the Rebbe, stories, and community news.",
+     "url": "https://torahprint.nyc3.cdn.digitaloceanspaces.com/pdfFiles/1792880926571_inlqb_lchaim_1946.pdf",
+     "date": "2026-10-30T00:00:00.000Z",
+     "first_seen": "2026-10-25T06:09:00+00:00"
+    },
+    {
      "id": "37591",
-     "title": "Lech-Lecha · 5787 · A weekly publication featuring teachings of the Rebbe, stories, customs, and Jewish thoughts.",
+     "title": "Lech-Lecha · 5787 · The Weekly Publication for Every Jewish Person",
      "url": "https://torahprint.nyc3.cdn.digitaloceanspaces.com/pdfFiles/1792488269323_ciqoo_lchaim_1945.pdf",
      "date": "2026-10-23T00:00:00.000Z",
      "first_seen": "2026-10-27T06:26:34+00:00"
@@ -2849,8 +2865,8 @@
      "first_seen": "2026-10-20T08:00:12+00:00"
     }
    ],
-   "total": 0,
-   "last_success_at": "2026-11-14T18:30:35+00:00"
+   "total": 10,
+   "last_success_at": "2026-11-14T18:33:49+00:00"
   },
   {
    "id": "one_point",
@@ -2863,7 +2879,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-14T18:17:45+00:00",
+   "checked_at": "2026-11-14T18:33:50+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2903,8 +2919,8 @@
      "first_seen": "2026-10-20T08:00:13+00:00"
     }
    ],
-   "total": 0,
-   "last_success_at": "2026-11-14T18:17:45+00:00"
+   "total": 10,
+   "last_success_at": "2026-11-14T18:33:50+00:00"
   },
   {
    "id": "derher",
@@ -2917,7 +2933,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-14T18:17:47+00:00",
+   "checked_at": "2026-11-14T18:33:52+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -2934,7 +2950,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-14T18:17:47+00:00",
+   "checked_at": "2026-11-14T18:33:52+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -2951,7 +2967,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-14T18:17:47+00:00",
+   "checked_at": "2026-11-14T18:33:52+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -3020,7 +3036,7 @@
     }
    ],
    "total": 5,
-   "last_success_at": "2026-11-14T18:17:47+00:00"
+   "last_success_at": "2026-11-14T18:33:52+00:00"
   },
   {
    "id": "maynotecha_inst",
@@ -3033,7 +3049,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-14T18:17:48+00:00",
+   "checked_at": "2026-11-14T18:33:54+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -3050,7 +3066,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-14T18:17:48+00:00",
+   "checked_at": "2026-11-14T18:33:54+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -3088,7 +3104,7 @@
     }
    ],
    "total": 2,
-   "last_success_at": "2026-11-14T18:17:48+00:00"
+   "last_success_at": "2026-11-14T18:33:54+00:00"
   },
   {
    "id": "anash",
@@ -3101,7 +3117,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-14T18:17:50+00:00",
+   "checked_at": "2026-11-14T18:33:55+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -3435,7 +3451,7 @@
     }
    ],
    "total": 6,
-   "last_success_at": "2026-11-14T18:17:50+00:00"
+   "last_success_at": "2026-11-14T18:33:55+00:00"
   },
   {
    "id": "chabadinfo",
@@ -3448,7 +3464,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-14T18:17:51+00:00",
+   "checked_at": "2026-11-14T18:33:56+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -3465,7 +3481,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-14T18:17:51+00:00",
+   "checked_at": "2026-11-14T18:33:56+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -3482,7 +3498,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-14T18:17:51+00:00",
+   "checked_at": "2026-11-14T18:33:56+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -3528,7 +3544,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-14T18:17:51+00:00"
+   "last_success_at": "2026-11-14T18:33:56+00:00"
   },
   {
    "id": "kehot",
@@ -3541,7 +3557,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-14T18:17:53+00:00",
+   "checked_at": "2026-11-14T18:33:59+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -4251,7 +4267,7 @@
     }
    ],
    "total": 197,
-   "last_success_at": "2026-11-14T18:17:53+00:00"
+   "last_success_at": "2026-11-14T18:33:59+00:00"
   }
  ],
  "browser_checks": {
@@ -4670,16 +4686,8 @@
    "note": "החוברת החדשה לתולדות נפתחה. שער ה־PDF מאמת 22 עמודים ועמודי מקור 780–787."
   },
   "hiskashrus": {
-   "checked_at": "2026-11-14T18:30:35+00:00",
+   "checked_at": "2026-10-30T07:03:39+00:00",
    "items": [
-    {
-     "title": "Toldos · 5787 · קונטרס שבועי לאנ\"ש חסידי חב\"ד לחיזוק ההתקשרות",
-     "url": "https://torahprint.nyc3.cdn.digitaloceanspaces.com/pdfFiles/1794412047262_mxwbq_.pdf",
-     "lang": "he",
-     "first_seen": "2026-11-14T18:30:35+00:00",
-     "issued_for": "ערב שבת קודש פרשת תולדות, ג׳ כסלו תשפ״ז (13.11.2026)",
-     "genre": "גיליון"
-    },
     {
      "title": "Lech-Lecha · 5787 · קונטרס שבועי לאנ\"ש חסידי חב\"ד לחיזוק ההתקשרות לכ\"ק אדמו\"ר רבי מנחם מענדל בהרה\"ק רלו\"י מליובאוויטש",
      "url": "https://torahprint.nyc3.cdn.digitaloceanspaces.com/pdfFiles/1792588384099_1xivd_.pdf",
@@ -4697,7 +4705,7 @@
      "genre": "גיליון"
     }
    ],
-   "note": "נוסף לאחר תיקון מזהה TorahTable (initialSections.printouts.items)"
+   "note": "PDF גיליון 1673 נפתח מחדש והשער ותוכן העניינים נבדקו; הטיוטה מ־29.10 אושרה. עותק הכפולות נשאר כפול, ומועדי הגילוי והגיליון נשמרו."
   },
   "hebrewbooks": {
    "items": [],
@@ -4710,16 +4718,8 @@
    "note": "שני עמודי המוצר שבספק נפתחו מחדש; אי־ההתאמות נמשכות והטיוטות נשארו לא מאושרות."
   },
   "lchaim": {
-   "checked_at": "2026-11-14T18:30:35+00:00",
+   "checked_at": "2026-11-01T06:21:55+00:00",
    "items": [
-    {
-     "title": "Chayei Sarah · 5787 · A weekly publication featuring teachings of the Rebbe, stories, customs, and insights on the weekly Torah portion.",
-     "url": "https://torahprint.nyc3.cdn.digitaloceanspaces.com/pdfFiles/1793951192396_aa5cy_lchaim_1947.pdf",
-     "lang": "en",
-     "first_seen": "2026-11-14T18:30:35+00:00",
-     "issued_for": "גיליון 1947, חיי שרה, כ״ו מרחשוון תשפ״ז (6.11.2026)",
-     "genre": "גיליון"
-    },
     {
      "title": "Vayeira · 5787 · A weekly Chabad publication featuring teachings of the Rebbe, stories, and community news.",
      "url": "https://torahprint.nyc3.cdn.digitaloceanspaces.com/pdfFiles/1792880926571_inlqb_lchaim_1946.pdf",
@@ -4737,7 +4737,7 @@
      "genre": "גיליון"
     }
    ],
-   "note": "נוסף לאחר תיקון מזהה TorahTable (initialSections.printouts.items)"
+   "note": "ה־PDF החדש של גיליון 1946 בן 4 עמודים נפתח מחדש. השער ותוכן שני מדורי השער אומתו; הטיוטה מ־31.10 אושרה. מועדי הגילוי ותאריך הגיליון נשמרו בנפרד."
   }
  }
 }
