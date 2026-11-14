@@ -1,77 +1,77 @@
 window.CHAVRUTA_PROJECT_STATUS = {
-  "generated": "2026-11-13T01:29+02:00",
-  "generated_label": "13.11.2026, 01:29 שעון ישראל",
+  "generated": "2026-11-14T20:02+02:00",
+  "generated_label": "14.11.2026, 20:02 שעון ישראל",
   "timezone": "Asia/Jerusalem",
   "coverage": {
     "rows": [
       {
         "id": "adhz",
         "name": "אדמו״ר הזקן",
-        "linked": 8390,
+        "linked": 8426,
         "total": 9542,
-        "pct": 87.9,
+        "pct": 88.3,
         "status": "final",
         "status_label": "סופי"
       },
       {
         "id": "אדמו״ר האמצעי",
         "name": "אדמו״ר האמצעי",
-        "linked": 1406,
+        "linked": 5858,
         "total": 8277,
-        "pct": 17.0,
+        "pct": 70.8,
         "status": "in_progress",
-        "status_label": "בתהליך"
+        "status_label": "בבדיקה חוזרת"
       },
       {
         "id": "אדמו״ר מהר״ש",
         "name": "אדמו״ר מהר״ש",
-        "linked": 2347,
+        "linked": 4507,
         "total": 4992,
-        "pct": 47.0,
+        "pct": 90.3,
         "status": "in_progress",
-        "status_label": "בתהליך"
+        "status_label": "בבדיקה חוזרת"
       },
       {
         "id": "אדמו״ר הרש״ב",
         "name": "אדמו״ר הרש״ב",
-        "linked": 2732,
+        "linked": 4097,
         "total": 4565,
-        "pct": 59.8,
+        "pct": 89.7,
         "status": "in_progress",
-        "status_label": "בתהליך"
+        "status_label": "בבדיקה חוזרת"
       },
       {
         "id": "אדמו״ר הריי״צ",
         "name": "אדמו״ר הריי״צ",
-        "linked": 898,
+        "linked": 1416,
         "total": 1781,
-        "pct": 50.4,
+        "pct": 79.5,
         "status": "in_progress",
-        "status_label": "בתהליך"
+        "status_label": "בבדיקה חוזרת"
       },
       {
         "id": "הרבי",
         "name": "הרבי",
-        "linked": 6618,
+        "linked": 9297,
         "total": 11967,
-        "pct": 55.3,
+        "pct": 77.7,
         "status": "in_progress",
-        "status_label": "בתהליך"
+        "status_label": "בבדיקה חוזרת"
       }
     ],
     "totals": {
-      "linked": 22391,
+      "linked": 33601,
       "total": 41124,
-      "pct": 54.4
+      "pct": 81.7
     },
     "rest": {
-      "linked": 14001,
+      "linked": 25175,
       "total": 31582,
-      "pct": 44.3,
+      "pct": 79.7,
       "status": "in_progress",
       "status_label": "בתהליך",
-      "rule_haiku_confirmed": 4147,
-      "note": "הקישורים לפי הכללים. Haiku אישר 4,147 מהם; הכרעת המשך עדיין רצה."
+      "rule_haiku_confirmed": 7999,
+      "note": "שאר האדמו״רים הוכרעו במנויים לפי עמוד וכותרת. בדיקה חוזרת עם טקסט ה־OCR של העמוד רצה עכשיו: 114 מתוך 10,650."
     }
   },
   "correlation": {
@@ -1199,6 +1199,74 @@ window.CHAVRUTA_PROJECT_STATUS = {
         "agree_pct": 70.6,
         "agree": 149,
         "n": 211
+      }
+    ]
+  },
+  "pipeline": [
+    {
+      "id": "wp007_ocr",
+      "label": "בדיקה חוזרת של הכרעות הקישור עם טקסט ה־OCR (WP-007)",
+      "done": 114,
+      "total": 10650,
+      "pct": 1.1,
+      "as_of": "14.11 19:29",
+      "status": "running",
+      "status_label": "רץ עכשיו",
+      "note": "קודם דרך המנויים, והשארית ל־Sonnet בתוך התקרה שאושרה."
+    },
+    {
+      "id": "fulltext",
+      "label": "טקסט מלא בחלון הציטוטים באתר",
+      "done": 3881,
+      "total": 4015,
+      "pct": 96.7,
+      "status": "running",
+      "status_label": "בתהליך",
+      "note": "ספרי קה״ת שזמינים רק באוצר החכמה עוד לא נטענו."
+    },
+    {
+      "id": "chrono",
+      "label": "תאריכים לשיחות, מאמרים ומכתבים (ציר זמן)",
+      "done": 42089,
+      "total": 57455,
+      "pct": 73.3,
+      "status": "running",
+      "status_label": "בתהליך",
+      "note": "ליום או לשבת מדויקים: 25,671. השאר ממתין לחילוץ בעזרת AI."
+    }
+  ],
+  "qa_subscription": {
+    "scope": "מדגם 5% מהכרעות המנויים אצל שאר האדמו״רים, מול מודל שני",
+    "status": "rechecking",
+    "status_label": "בבדיקה חוזרת עם OCR",
+    "strata": [
+      {
+        "id": "claude_linked",
+        "label": "קישורים של Claude Code",
+        "agree_pct": 61.9,
+        "agree": 345,
+        "n": 557
+      },
+      {
+        "id": "grok_linked",
+        "label": "קישורים של Grok Build",
+        "agree_pct": 50.2,
+        "agree": 135,
+        "n": 269
+      },
+      {
+        "id": "claude_none",
+        "label": "״לא נמצא״ של Claude Code",
+        "agree_pct": 20.1,
+        "agree": 27,
+        "n": 134
+      },
+      {
+        "id": "grok_none",
+        "label": "״לא נמצא״ של Grok Build",
+        "agree_pct": 19.8,
+        "agree": 25,
+        "n": 126
       }
     ]
   }
