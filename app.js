@@ -134,7 +134,7 @@ function loadChunk(name) {
     if (name === "new") query.set("v", newsVersion + "-" + Math.floor(Date.now() / 300000));
     if (name === "core" || name === "tree" || name === "book-catalog" || /^tree-(?:u[0-9]+|t)$/.test(name)) query.set("v", document.querySelector('meta[name="chavruta-tree-version"]')?.content || "tree");
     if (name === "core" || name === "links" || name === "search" || name === "parsha" || name === "topics" || name.startsWith("b:")) query.set("v", document.querySelector('meta[name="chavruta-corpus-version"]')?.content || document.querySelector('meta[name="chavruta-tree-version"]')?.content || "corpus");
-    if (name === "cite-resolutions") query.set("v", document.querySelector('script[src^="app.js?v="]')?.getAttribute("src")?.split("?v=")[1] || "cite");
+    if (name === "cite-resolutions" || name.startsWith("cite-text-")) query.set("v", document.querySelector('script[src^="app.js?v="]')?.getAttribute("src")?.split("?v=")[1] || "cite");
     if (attempt) query.set("retry", String(attempt));
     s.src = chunkFile(name) + (query.size ? "?" + query : ""); s.async = true;
     s.onerror = fail;
@@ -1002,7 +1002,7 @@ function sourceFromSelection(sel) {
   return { node: n?.id, title: n ? cleanT(n.t) : (row?.[4] || res?.book || "מקור"), author: n?.rb, book: res?.book || n?.col || n?.bk,
     url, originalUrl: sourceUrl, page: res?.page || row?.[0] || n?.pg, pdfPage: row?.[1] || n?.pgs,
     quote: sel.quote || row?.[5] || "", excerpts: row ? [sourceExcerpt(sel.ex, row)] : [],
-    license: res?.license, credit: CITE_LICENSE_CREDIT[res?.license] || "", uid: res?.uid, displayMode: res?.mode };
+    license: res?.license, credit: CITE_LICENSE_CREDIT[res?.license] || "", uid: res?.uid, displayMode: res?.mode, tx: res?.mode === "text" ? (lookupCiteRes("", sourceUrl)?.tx || res?.tx || "") : "" };
 }
 function sourceFromNode(n, url = n.u) {
   return { node: n.id, title: cleanT(n.t), author: n.rb, book: n.col || n.bk, url, page: n.pg, pdfPage: n.pgs };
@@ -1061,7 +1061,7 @@ const SourceReader = {
     this.noteCleanup?.(); this.noteCleanup = null;
     for (const cleanup of this.pageNoteCleanups || []) cleanup(); this.pageNoteCleanups = [];
     const d = this.dialog; this.dialog = null; ++this.ticket; this.stop();
-    document.removeEventListener("keydown", this.onKey); this.onKey = null;
+    if (this.onKey && typeof document.removeEventListener === "function") document.removeEventListener("keydown", this.onKey); this.onKey = null;
     d.close(); d.remove(); document.body.classList.remove("source-reader-open", "source-reader-docked");
     if (restore) {
       window.scrollTo(this.position.x, this.position.y); restoreAnchor(this.anchor);
@@ -1097,11 +1097,11 @@ const SourceReader = {
     d.addEventListener("cancel", e => { e.preventDefault(); this.close(); });
     d.addEventListener("click", e => { if (e.target === d && !this.docked) { const r = d.getBoundingClientRect(); if (e.clientX < r.left || e.clientX > r.right || e.clientY < r.top || e.clientY > r.bottom) this.close(); } });
     this.onKey = e => { if (e.key === "Escape") { e.preventDefault(); this.close(); } };
-    if (this.docked) { d.classList.add("sr-docked"); document.body.classList.add("source-reader-docked"); document.addEventListener("keydown", this.onKey); d.show(); }
+    if (this.docked) { d.classList.add("sr-docked"); document.body.classList.add("source-reader-docked"); if (typeof document.addEventListener === "function") document.addEventListener("keydown", this.onKey); d.show(); }
     else { d.showModal(); document.body.classList.add("source-reader-open"); }
     close.focus({ preventScroll: true });
     this.libraryRoot = null; this.libraryPage = this.target?.id;
-    this.mode = this.excerpts.length ? "excerpt" : sourceReaderMode(this.target);
+    this.mode = this.info.tx ? "full" : this.excerpts.length ? "excerpt" : sourceReaderMode(this.target);
     this.page = this.target?.page || 1; this.render();
     if (!this.excerpts.length && info.node) {
       this.pending = true; this.render();
@@ -1129,6 +1129,7 @@ const SourceReader = {
     if (!this.dialog) return;
     this.stop(); this.pending = !!this.pending;
     const modes = this.excerpts.length || this.info.node || this.mode === "excerpt" ? [["excerpt", "קטעים בביאור"]] : [];
+    if (this.info?.tx) modes.unshift(["full", "הדף המלא"]);
     if (this.target?.kind === "sefaria" || (["library", "maamarim", "mafteiach"].includes(this.target?.kind) && sourceGateway())) modes.push(["text", this.target.kind === "mafteiach" ? "בחירת נוסח ומסמך" : "טקסט המקור"]);
     const hideScan = this.info?.displayMode === "ref-only" || isOtzarUrl(this.info?.originalUrl || this.info?.url);
     if (!hideScan && ["pdf", "hebrewbooks", "drive"].includes(this.target?.kind)) modes.push(["scan", this.target.kind === "hebrewbooks" ? "צילום הדף" : "מסמך המקור"]);
@@ -1138,6 +1139,7 @@ const SourceReader = {
     this.noteCleanup?.(); this.noteCleanup = null;
     for (const cleanup of this.pageNoteCleanups || []) cleanup(); this.pageNoteCleanups = [];
     this.body.replaceChildren(); this.body.scrollTop = 0;
+    if (this.mode === "full") return this.renderFull();
     if (this.mode === "scan") return this.renderScan();
     if (this.mode === "text") return ["maamarim", "mafteiach"].includes(this.target.kind) ? this.renderRemote() : this.target.kind === "library" ? this.renderLibrary() : this.renderText();
     if (this.mode === "web") return this.renderWeb();
@@ -1318,6 +1320,25 @@ const SourceReader = {
       if (!this.dialog || this.mode !== "text" || this.controller !== controller) return;
       body.replaceChildren(h("div", { class: "sr-empty", role: "status" }, h("h3", null, "לא ניתן לטעון כעת את המקור מספריית חב״ד"), h("p", null, "אפשר לנסות שוב או לפתוח באתר המקור."), h("button", { type: "button", class: "btn", onclick: () => this.render() }, "ניסיון נוסף")));
     } finally { clearTimeout(timeout); }
+  },
+  async renderFull() {
+    const body = this.body, ticket = this.ticket, [shard, key] = String(this.info.tx || "").split("|");
+    body.append(h("p", { role: "status", class: "sr-status" }, "טוען את הדף המלא…"));
+    let entry = null;
+    try { entry = (await loadChunk("cite-text-" + shard))?.[key] || null; } catch (_) { entry = null; }
+    if (ticket !== this.ticket || !this.dialog || this.mode !== "full") return;
+    body.replaceChildren();
+    if (!entry?.t) { body.append(h("div", { class: "sr-empty", role: "status" }, h("h3", null, "לא ניתן לטעון כעת את הדף המלא"), h("p", null, "אפשר לעבור לקטעים בביאור או לצילום הדף."), h("button", { type: "button", class: "btn", onclick: () => this.render() }, "ניסיון נוסף"))); return; }
+    let blocks = String(entry.t).split(/\n{2,}/).map(x => x.trim()).filter(Boolean);
+    if (this.info?.license === "pd-foundational") blocks = blocks.map(stripModernApparatus).filter(Boolean);
+    body.append(h("p", { class: "sr-notice" }, entry.s === "ocr" ? "הדף המלא, מתוך סריקה (OCR). ייתכנו שגיאות זיהוי; לנוסח המדויק ראו את צילום הדף. הציטוט מסומן בטקסט." : "הדף המלא, מהטקסט הדיגיטלי של ספריית חב״ד. הציטוט מסומן בטקסט."));
+    const article = h("article", { class: "sr-text sr-full", dir: "rtl" });
+    for (const block of blocks) article.append(h("p", null, block));
+    body.append(article);
+    sourceTextFind(this, article);
+    this.noteCleanup = notebookMount(article, notebookSourceBase(this));
+    article.dataset.sourceUrl = this.original?.href || this.info.url;
+    notebookSourceRestore(this, article);
   },
   async renderText() {
     const body = this.body, target = this.target, controller = new AbortController(); this.controller = controller;
