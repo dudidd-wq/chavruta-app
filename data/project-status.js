@@ -1,6 +1,6 @@
 window.CHAVRUTA_PROJECT_STATUS = {
-  "generated": "2026-11-14T21:03+02:00",
-  "generated_label": "14.11.2026, 21:03 שעון ישראל",
+  "generated": "2026-11-14T21:05+02:00",
+  "generated_label": "14.11.2026, 21:05 שעון ישראל",
   "timezone": "Asia/Jerusalem",
   "coverage": {
     "rows": [
@@ -71,7 +71,7 @@ window.CHAVRUTA_PROJECT_STATUS = {
       "status": "in_progress",
       "status_label": "בתהליך",
       "rule_haiku_confirmed": 7999,
-      "note": "שאר האדמו״רים הוכרעו במנויים לפי עמוד וכותרת. בדיקה חוזרת עם טקסט ה־OCR של העמוד רצה עכשיו: 114 מתוך 10,650."
+      "note": "שאר האדמו״רים הוכרעו במנויים לפי עמוד וכותרת. בדיקה חוזרת עם טקסט ה־OCR של העמוד רצה עכשיו: 1,829 מתוך 10,650."
     }
   },
   "correlation": {
@@ -1206,10 +1206,10 @@ window.CHAVRUTA_PROJECT_STATUS = {
     {
       "id": "wp007_ocr",
       "label": "בדיקה חוזרת של הכרעות הקישור עם טקסט ה־OCR (WP-007)",
-      "done": 114,
+      "done": 1829,
       "total": 10650,
-      "pct": 1.1,
-      "as_of": "14.11 19:29",
+      "pct": 17.2,
+      "as_of": "14.11 21:05",
       "status": "running",
       "status_label": "רץ עכשיו",
       "note": "קודם דרך המנויים, והשארית ל־Sonnet בתוך התקרה שאושרה."
