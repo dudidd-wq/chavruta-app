@@ -1882,5 +1882,40 @@
     "why": "גיליון L'Chaim Weekly 1947 לשבת חיי שרה, כ״ו מרחשוון תשפ״ז. ה־PDF נפתח; אומתו השער והמאמרים שבכריכה.",
     "source_url": "https://torahprint.nyc3.cdn.digitaloceanspaces.com/pdfFiles/1793951192396_aa5cy_lchaim_1947.pdf",
     "checked_at": "2026-11-14T18:30:35+00:00"
+  },
+  "2854b16e3c3fdc90": {
+    "cls": "לא רלוונטי",
+    "why": "אותו קובץ מדור ניצוצי רבי על בחירות (וירא תשפ״ז) שכבר סווג לא רלוונטי; הכותרת השתנתה אחרי תיקון המזהה ולכן נוצר מפתח חדש.",
+    "source_url": "https://torahprint.nyc3.cdn.digitaloceanspaces.com/pdfFiles/1793022130850_hx8nc_miflagacharedit.pdf",
+    "checked_at": "2026-11-14T18:40:00+00:00",
+    "of": "67cbf1d9dfa9e22c"
+  },
+  "e4c00e2a81c9dff3": {
+    "cls": "כפול",
+    "why": "אותו PDF של התקשרות 1673 לוירא; כותרת מעט שונה אחרי תיקון המזהה. המפתח המקורי: 38a068bb3fa6157f.",
+    "source_url": "https://torahprint.nyc3.cdn.digitaloceanspaces.com/pdfFiles/1793199306940_m6c2p_.pdf",
+    "checked_at": "2026-11-14T18:40:00+00:00",
+    "of": "38a068bb3fa6157f"
+  },
+  "457692ba45bcae78": {
+    "cls": "כפול",
+    "why": "קובץ נוסף של גיליון התקשרות וירא שכבר סווג ככפול של 1673. המפתח המקורי: 8e0dd903b02f6fd4 / 38a068bb3fa6157f.",
+    "source_url": "https://torahprint.nyc3.cdn.digitaloceanspaces.com/pdfFiles/1793199135955_6gmi1_.pdf",
+    "checked_at": "2026-11-14T18:40:00+00:00",
+    "of": "38a068bb3fa6157f"
+  },
+  "5885f4a692597a10": {
+    "cls": "כפול",
+    "why": "אותו PDF של התקשרות 1672 ללך לך; כותרת מעט שונה אחרי תיקון המזהה. המפתח המקורי: 843c7d502c95703d.",
+    "source_url": "https://torahprint.nyc3.cdn.digitaloceanspaces.com/pdfFiles/1792588384099_1xivd_.pdf",
+    "checked_at": "2026-11-14T18:40:00+00:00",
+    "of": "843c7d502c95703d"
+  },
+  "4be55fb2916d1ada": {
+    "cls": "גיליון",
+    "why": "גיליון L'Chaim Weekly 1945 לשבת לך לך. אותו PDF שכבר סוכם; הכותרת השתנתה אחרי תיקון המזהה.",
+    "source_url": "https://torahprint.nyc3.cdn.digitaloceanspaces.com/pdfFiles/1792488269323_ciqoo_lchaim_1945.pdf",
+    "checked_at": "2026-11-14T18:40:00+00:00",
+    "of": "2bb13a865b60063f"
   }
 }
