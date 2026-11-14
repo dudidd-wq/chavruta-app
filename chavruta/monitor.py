@@ -144,6 +144,20 @@ def detect_sitemap(url: str, filter: str = "", follow: str = "") -> list[dict]:
     return sorted(items, key=lambda x: x["date"], reverse=True)
 
 
+def _torahtable_printouts(props: dict) -> list:
+    """Printouts used to be at pageProps.initialPrintouts; the live TorahTable
+    schema moved them to pageProps.initialSections.printouts.items."""
+    raw = props.get("initialPrintouts") or []
+    if raw:
+        return raw
+    block = (props.get("initialSections") or {}).get("printouts") or {}
+    if isinstance(block, dict):
+        return block.get("items") or []
+    if isinstance(block, list):
+        return block
+    return []
+
+
 def detect_torahtable(url: str) -> list[dict]:
     """TorahTable: דף הפרסום מגיע עם נתונים מובנים (__NEXT_DATA__) — רשימת הגליונות."""
     html = _get(url).text
@@ -152,7 +166,7 @@ def detect_torahtable(url: str) -> list[dict]:
         return []
     props = json.loads(m.group(1)).get("props", {}).get("pageProps", {})
     items = []
-    for p in props.get("initialPrintouts", []):
+    for p in _torahtable_printouts(props):
         week = p.get("week") or {}
         title = " · ".join(x for x in [week.get("name", ""), str(week.get("year", "") or ""),
                                        p.get("description", "")] if x)

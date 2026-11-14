@@ -1,6 +1,6 @@
 {
- "generated": "2026-11-14T18:18:13+00:00",
- "items": 58,
+ "generated": "2026-11-14T18:30:35+00:00",
+ "items": 63,
  "pending": 0,
  "counts": {
   "manual": 8,
@@ -92,8 +92,8 @@
    "id": "hiskashrus",
    "name": "התקשרות",
    "status": "ok",
-   "checked": "2026-11-14T18:16:58+00:00",
-   "lastSuccess": "2026-11-14T18:16:58+00:00",
+   "checked": "2026-11-14T18:30:35+00:00",
+   "lastSuccess": "2026-11-14T18:30:35+00:00",
    "retained": false
   },
   {
@@ -292,8 +292,8 @@
    "id": "lchaim",
    "name": "L'Chaim Weekly",
    "status": "ok",
-   "checked": "2026-11-14T18:17:44+00:00",
-   "lastSuccess": "2026-11-14T18:17:44+00:00",
+   "checked": "2026-11-14T18:30:35+00:00",
+   "lastSuccess": "2026-11-14T18:30:35+00:00",
    "retained": false
   },
   {
