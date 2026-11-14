@@ -500,5 +500,41 @@
     "checked": false,
     "drafted_at": "2026-11-04T06:53:04+00:00",
     "source_url": "https://www.chabad.org.il/Magazines/Articles.asp?CategoryID=5175"
+  },
+  "9888477fa3aec227": {
+    "he": "כרך ב׳ של Igros Kodesh – The English Letters, מכתבי הרבי באנגלית משנים תש״י–תשי״א (כריכה קשה, 480 עמודים). לפי תיאור קה״ת, הכרך פותח את שנות הנשיאות הראשונות, ויותר מ־75% מן המכתבים מתפרסמים כאן לראשונה, עם רקע היסטורי.",
+    "basis": "תיאור",
+    "checked": true,
+    "drafted_at": "2026-11-14T18:15:00+00:00",
+    "source_url": "https://store.kehotonline.com/prodinfo.asp?number=ERE-IK2",
+    "checked_at": "2026-11-14T18:15:00+00:00",
+    "verification": "דף המוצר ERE-IK2 נפתח; הכותרת, היקף 480 העמודים והאזכור שרוב המכתבים מתפרסמים לראשונה מופיעים בתיאור."
+  },
+  "42fb3cd49dc11683": {
+    "he": "חוברת Lightpoints באנגלית ממשנת הרבי על מועדי ישראל, כרך חנוכה (כריכה קשה, 52 עמודים). לפי תיאור קה״ת, זו סדרה ממשנת הרבי לחגים, והכרך הזה מוקדש לחנוכה; בהוצאת קה״ת ו־Or Hachassidus.",
+    "basis": "תיאור",
+    "checked": true,
+    "drafted_at": "2026-11-14T18:15:00+00:00",
+    "source_url": "https://store.kehotonline.com/prodinfo.asp?number=ERE-LIGHPC",
+    "checked_at": "2026-11-14T18:15:00+00:00",
+    "verification": "דף המוצר ERE-LIGHPC נפתח; התיאור מזהה את הסדרה ממשנת הרבי ואת כרך חנוכה, 52 עמודים."
+  },
+  "77b35bfe7b7190b9": {
+    "he": "מאמר כתוב באתר Anash המבאר את מאמר ״לשון אדמו״ר נשמתו עדן בעצמו״ שבתורה אור, אחרי יפה שעה אחת. לפי פתיחת הדף, הביאור עוסק בלבושי הנשמה על פי הזהר והאר״י, ומציג מהדורה חדשה וחינמית של המאמר עם מקורותיו.",
+    "basis": "תוכן הדף",
+    "checked": true,
+    "drafted_at": "2026-11-14T18:15:00+00:00",
+    "source_url": "https://anash.org/the-alter-rebbes-handwritten-kabbalah-maamar-now-opened-up/",
+    "checked_at": "2026-11-14T18:15:00+00:00",
+    "verification": "גוף העמוד נפתח ומזהה את מאמר תורה אור ואת הביאור הכתוב; שנת המאמר אינה תאריך הפרסום החדש."
+  },
+  "f05419faad2df4b4": {
+    "he": "תרגום לאנגלית של שיחת תולדות מתוך לקוטי שיחות חלק ג׳, במסגרת SIE Weekly (PDF). שער החוברת מציין את עמודים 780–787 בכרך המקורי.",
+    "basis": "פתיחת הקובץ",
+    "checked": true,
+    "drafted_at": "2026-11-14T18:15:00+00:00",
+    "source_url": "https://drive.google.com/file/d/1EpylTOtROt8S2LoB7vLkAMlWZUpyZ9Pc/view",
+    "checked_at": "2026-11-14T18:15:00+00:00",
+    "verification": "שער חוברת SIE נפתח ומאמת תולדות, לקוטי שיחות חלק ג׳ ועמודים 780–787. 22 עמודים; נוצר ב־6.11.2026."
   }
 }
