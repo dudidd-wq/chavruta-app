@@ -1651,5 +1651,224 @@
     "why": "המקור נפתח: כתבה ביוגרפית ליום פטירה, ללא פרסום כתוב חדש של מאמר, שיחה או מכתב מסוים.",
     "checked_at": "2026-11-04T06:56:45+00:00",
     "source_url": "https://anash.org/the-hungarian-journalist-with-a-unique-shlichus-from-the-rebbe/"
+  },
+  "264d70bb551cee95": {
+    "cls": "כפול",
+    "why": "קישור Download הכללי זוהה בקובץ המקורי כתולדות לקוטי שיחות חלק ג׳, ונשמר כרשומה המזוהה f05419faad2df4b4.",
+    "checked_at": "2026-11-14T18:15:00+00:00",
+    "source_url": "https://drive.google.com/file/d/1EpylTOtROt8S2LoB7vLkAMlWZUpyZ9Pc/view"
+  },
+  "9888477fa3aec227": {
+    "cls": "מקור",
+    "why": "נפתח דף המוצר בקה״ת: כרך ב׳ של מכתבי הרבי באנגלית (תש״י–תשי״א), ויותר מ־75% מהם מתפרסמים לראשונה.",
+    "source_url": "https://store.kehotonline.com/prodinfo.asp?number=ERE-IK2",
+    "checked_at": "2026-11-14T18:15:00+00:00"
+  },
+  "42fb3cd49dc11683": {
+    "cls": "ביאור",
+    "why": "נפתח דף המוצר: חוברת כתובה ממשנת הרבי על מועדי ישראל, כרך חנוכה — ביאור לסדרת תורות הרבי לחג.",
+    "source_url": "https://store.kehotonline.com/prodinfo.asp?number=ERE-LIGHPC",
+    "checked_at": "2026-11-14T18:15:00+00:00"
+  },
+  "77b35bfe7b7190b9": {
+    "cls": "ביאור",
+    "why": "העמוד המקורי נפתח: מאמר כתוב המבאר את מאמר לשון אדמו״ר נשמתו עדן בעצמו שבתורה אור, אחרי יפה שעה אחת.",
+    "source_url": "https://anash.org/the-alter-rebbes-handwritten-kabbalah-maamar-now-opened-up/",
+    "checked_at": "2026-11-14T18:15:00+00:00"
+  },
+  "9e4c8b032d038dc6": {
+    "cls": "לא רלוונטי",
+    "why": "פרסום שנתי חוזר של ביאור לקונטרס ראש חודש כסלו תשנ״ב. העמוד נפתח והושווה לגרסה מ־19.11.2025; זהו אותו חיבור שנתי עם עריכה קלה בפתיחה, ולא פרסום כתוב חדש. שנת המאמר נפרדת מתאריך הפוסט.",
+    "source_url": "https://dvarmalchus770.org/2026/11/09/15-kuntres-rosh-chodesh-kislev-5752-great-is-the-effort-from-below-2/",
+    "checked_at": "2026-11-14T18:15:00+00:00",
+    "previous_url": "https://dvarmalchus770.org/2025/11/19/15-kuntres-rosh-chodesh-kislev-5752-great-is-the-effort-from-below/"
+  },
+  "9c6428a8d88e97c6": {
+    "cls": "לא רלוונטי",
+    "why": "פרסום חוזר של טקסט ישן: גוף הביאור לשיחת תולדות תשנ״ב זהה, לאחר ניקוי נלווים, לגרסה מ־15.11.2025. אין כאן פרסום כתוב חדש.",
+    "source_url": "https://dvarmalchus770.org/2026/11/07/toldos-5752-the-essential-existence-is-revealed-2/",
+    "checked_at": "2026-11-14T18:15:00+00:00",
+    "previous_url": "https://dvarmalchus770.org/2025/11/15/toldos-5752-the-essential-existence-is-revealed-3/"
+  },
+  "881b11101e19f853": {
+    "cls": "לא רלוונטי",
+    "why": "פרסום חוזר של טקסט ישן: גוף המאמר על שיחת חיי שרה זהה כמעט לחלוטין לגרסה מ־12.11.2025 (שינוי ניסוח קל). אין כאן פרסום כתוב חדש.",
+    "source_url": "https://dvarmalchus770.org/2026/11/04/chayei-sara-the-message-beyond-the-sicha-2/",
+    "checked_at": "2026-11-14T18:15:00+00:00",
+    "previous_url": "https://dvarmalchus770.org/2025/11/12/chayei-sara-the-message-beyond-the-sicha/"
+  },
+  "9a36b520bb1e9267": {
+    "cls": "לא רלוונטי",
+    "why": "המקור נפתח: טור דעה על אופן קריאת מכתבי הרבי בהקשרם; אינו פרסום חדש של מאמר, שיחה או מכתב, ואינו ביאור של מכתב מסוים.",
+    "source_url": "https://anash.org/before-drawing-conclusions-from-the-rebbes-letters/",
+    "checked_at": "2026-11-14T18:15:00+00:00"
+  },
+  "cf0cc1c75aa734d1": {
+    "cls": "לא רלוונטי",
+    "why": "המקור נפתח: טור דעה על מצב הרחוב בשכונת הרבי; אינו פרסום כתוב מהסוגים המותרים.",
+    "source_url": "https://anash.org/is-this-how-we-treat-the-rebbes-shchuna/",
+    "checked_at": "2026-11-14T18:15:00+00:00"
+  },
+  "e135622037ebd61a": {
+    "cls": "לא רלוונטי",
+    "why": "המקור נפתח: כתבת זיכרונות על הוראת הרבי לרב Noson Gurary; זיכרונות מוחרגים.",
+    "source_url": "https://anash.org/the-rebbes-unusual-prescription-for-a-worried-chossid/",
+    "checked_at": "2026-11-14T18:15:00+00:00"
+  },
+  "5e62c1da3d7c038f": {
+    "cls": "לא רלוונטי",
+    "why": "המקור נפתח: ידיעה על התוועדות וסיפורים בעל־פה אצל הקרדיולוג של הרבי; התוועדויות וזיכרונות מוחרגים.",
+    "source_url": "https://anash.org/chicago-bochurim-hear-firsthand-from-the-rebbes-cardiologist/",
+    "checked_at": "2026-11-14T18:15:00+00:00"
+  },
+  "da0de14b157d7f23": {
+    "cls": "לא רלוונטי",
+    "why": "המקור נפתח: ידיעה על התוועדות וסעודת הודיה בראש חודש כסלו ב־770; אירועים והתוועדויות מוחרגים.",
+    "source_url": "https://anash.org/770-celebrates-rosh-chodesh-kislev-with-farbrengen/",
+    "checked_at": "2026-11-14T18:15:00+00:00"
+  },
+  "99d300005abf1814": {
+    "cls": "לא רלוונטי",
+    "why": "המקור נפתח: כתבת חדשות על הדפסת מהדורה ה־9,000 של התניא ליד חדרו של הרבי; אינה פרסום חדש של מאמר, שיחה או מכתב.",
+    "source_url": "https://anash.org/9000th-tanya-edition-printed-near-the-rebbes-room/",
+    "checked_at": "2026-11-14T18:15:00+00:00"
+  },
+  "4a993bb7187a0387": {
+    "cls": "לא רלוונטי",
+    "why": "המקור נפתח: כתבת חדשות על השבת ספר של הצמח צדק לספריית הרבי בכינוס השלוחים; אינה פרסום כתוב מהסוגים המותרים.",
+    "source_url": "https://anash.org/after-decades-in-captivity-tzemach-tzedeks-sefer-returns-to-rebbes-library/",
+    "checked_at": "2026-11-14T18:15:00+00:00"
+  },
+  "ac6cd957673ff0a4": {
+    "cls": "לא רלוונטי",
+    "why": "המקור נפתח: ידיעה על מינוי חברים חדשים לוועד להשבת ספרים מרוסיה; אינה פרסום כתוב מהסוגים המותרים.",
+    "source_url": "https://anash.org/five-new-members-join-rebbes-vaad-for-russian-seforim/",
+    "checked_at": "2026-11-14T18:15:00+00:00"
+  },
+  "c8b0b01981154d29": {
+    "cls": "לא רלוונטי",
+    "why": "המקור נפתח: ידיעה על תצלום הקבוצה בכינוס השלוחים; אירוע וכתבת חדשות מוחרגים.",
+    "source_url": "https://anash.org/group-photo-international-kinus-hashluchim-5787/",
+    "checked_at": "2026-11-14T18:15:00+00:00"
+  },
+  "71b88bf00984877b": {
+    "cls": "לא רלוונטי",
+    "why": "המקור נפתח: טור אישי/זיכרונות על טעות בייצוג דברי הרבי; אינו ביאור של מאמר, שיחה או מכתב מסוימים.",
+    "source_url": "https://anash.org/when-i-made-the-mistake-of-misrepresenting-the-rebbe/",
+    "checked_at": "2026-11-14T18:15:00+00:00"
+  },
+  "18c927b17b2c57f6": {
+    "cls": "לא רלוונטי",
+    "why": "המקור נפתח: סדרת שמע שבועית לילדים (A Gutte Nacht with the Rebbe); הקלטות וסיפורי שמע מוחרגים.",
+    "source_url": "https://anash.org/free-weekly-audio-story-the-rebbe-rashabs-mystery-order/",
+    "checked_at": "2026-11-14T18:15:00+00:00"
+  },
+  "90e52ac71294be7a": {
+    "cls": "לא רלוונטי",
+    "why": "המקור נפתח: כתבת זיכרונות של הקרדיולוג של הרבי; זיכרונות מוחרגים.",
+    "source_url": "https://anash.org/the-night-i-served-as-the-rebbes-cardiologist/",
+    "checked_at": "2026-11-14T18:15:00+00:00"
+  },
+  "d2e7d925eb9350c3": {
+    "cls": "לא רלוונטי",
+    "why": "המקור נפתח: כתבת חדשות על מפת נקודות של פעילות השלוחים; אינה פרסום כתוב מהסוגים המותרים.",
+    "source_url": "https://anash.org/thousands-of-dots-tell-the-rebbes-global-impact/",
+    "checked_at": "2026-11-14T18:15:00+00:00"
+  },
+  "d395a369028aa898": {
+    "cls": "לא רלוונטי",
+    "why": "המקור נפתח: כתבה שיווקית על רכישת ספר תורה לשלוחים; אינה פרסום כתוב מהסוגים המותרים.",
+    "source_url": "https://anash.org/buying-a-sefer-torah-its-all-about-trust-and-peace-of-mind/",
+    "checked_at": "2026-11-14T18:15:00+00:00"
+  },
+  "ac80c4bb8803e882": {
+    "cls": "לא רלוונטי",
+    "why": "לפי הכותרת זה סרטון (Video) על כתב־יד מוקדם של התניא. הקלטות וידאו מוחרגות; דף המקור באתר החזיר 403 ולכן הסיווג נשען על הכותרת.",
+    "source_url": "https://www.chabad.org/article.asp?aid=5740099",
+    "checked_at": "2026-11-14T18:15:00+00:00"
+  },
+  "1e0bc1183ba09c7f": {
+    "cls": "לא רלוונטי",
+    "why": "לפי הכותרת זה פודקאסט. פודקאסטים מוחרגים; דף המקור באתר החזיר 403 ולכן הסיווג נשען על הכותרת.",
+    "source_url": "https://www.chabad.org/article.asp?aid=7411803",
+    "checked_at": "2026-11-14T18:15:00+00:00"
+  },
+  "8cece4412d62bcaa": {
+    "cls": "לא רלוונטי",
+    "why": "נפתח דף המוצר: ספר מאת הרב שמעון גדסי; התיאור אינו מזהה מאמר, שיחה או מכתב מסוימים שהוא מבאר. ספק — לא נכנס.",
+    "source_url": "https://store.kehotonline.com/prodinfo.asp?number=HL-SHMIMA",
+    "checked_at": "2026-11-14T18:15:00+00:00"
+  },
+  "69e6c9801ff24ee4": {
+    "cls": "לא רלוונטי",
+    "why": "נפתח דף המוצר: ספר מאת הרב שמעון גדסי; התיאור אינו מזהה מאמר, שיחה או מכתב מסוימים שהוא מבאר. ספק — לא נכנס.",
+    "source_url": "https://store.kehotonline.com/prodinfo.asp?number=HL-SHMIP",
+    "checked_at": "2026-11-14T18:15:00+00:00"
+  },
+  "dd24587d4043d054": {
+    "cls": "לא רלוונטי",
+    "why": "נפתח דף המוצר של היכל הבעל שם טוב כרך 46; אין בתיאור זיהוי של מאמר, שיחה או מכתב מסוימים. ספק — לא נכנס.",
+    "source_url": "https://store.kehotonline.com/prodinfo.asp?number=HO-HEIC46",
+    "checked_at": "2026-11-14T18:15:00+00:00"
+  },
+  "d46a094ede4732d5": {
+    "cls": "לא רלוונטי",
+    "why": "נפתח דף המוצר: שו״ת יורה דעה של הצמח צדק. זה חיבור הלכתי, ואינו מאמר, שיחה, מכתב או הנחה כהגדרת המדור.",
+    "source_url": "https://store.kehotonline.com/prodinfo.asp?number=HTZ-TZEMT2",
+    "checked_at": "2026-11-14T18:15:00+00:00"
+  },
+  "bc68ad4c65d489ad": {
+    "cls": "לא רלוונטי",
+    "why": "נפתח דף המוצר: מדריך כללי לניגוני חב״ד מאת Mendel Berkowitz; אינו ביאור של מאמר, שיחה או מכתב מסוימים.",
+    "source_url": "https://store.kehotonline.com/prodinfo.asp?number=EO-UNDEN",
+    "checked_at": "2026-11-14T18:15:00+00:00"
+  },
+  "70b392168b7fd01c": {
+    "cls": "לא רלוונטי",
+    "why": "נפתח דף המוצר: סט שבעת הכרכים של שו״ת, חידושים על הש״ס ופסקי דינים של הצמח צדק. חיבור הלכתי, ואינו מהסוגים המותרים במדור.",
+    "source_url": "https://store.kehotonline.com/prodinfo.asp?number=HTZ-TZEMT.SB",
+    "checked_at": "2026-11-14T18:15:00+00:00"
+  },
+  "630d6e4e55fcbe91": {
+    "cls": "לא רלוונטי",
+    "why": "נפתח דף המוצר: חידושים על הש״ס של הצמח צדק; אינו מאמר, שיחה, מכתב או הנחה כהגדרת המדור.",
+    "source_url": "https://store.kehotonline.com/prodinfo.asp?number=HTZ-TZEMT6",
+    "checked_at": "2026-11-14T18:15:00+00:00"
+  },
+  "5ab87ce5b4a198da": {
+    "cls": "לא רלוונטי",
+    "why": "סידור תפילה במהדורת כיס; אינו פרסום מאמר, שיחה או מכתב, ואינו ביאור שלהם.",
+    "source_url": "https://store.kehotonline.com/prodinfo.asp?number=EPU-STH.AHM26",
+    "checked_at": "2026-11-14T18:15:00+00:00"
+  },
+  "4e07b2c533af8f3c": {
+    "cls": "לא רלוונטי",
+    "why": "סידור תפילה במהדורת כיס; אינו פרסום מאמר, שיחה או מכתב, ואינו ביאור שלהם.",
+    "source_url": "https://store.kehotonline.com/prodinfo.asp?number=EPU-STH.AHM12",
+    "checked_at": "2026-11-14T18:15:00+00:00"
+  },
+  "146374c6acd6a9f1": {
+    "cls": "לא רלוונטי",
+    "why": "סידור תפילה במהדורת כיס; אינו פרסום מאמר, שיחה או מכתב, ואינו ביאור שלהם.",
+    "source_url": "https://store.kehotonline.com/prodinfo.asp?number=EPU-STH.AHM18",
+    "checked_at": "2026-11-14T18:15:00+00:00"
+  },
+  "3ecb5fc9938591c5": {
+    "cls": "לא רלוונטי",
+    "why": "נפתח דף המוצר: ספר על חנוכה מאת הרב Dovber Pinson. התיאור אינו מזהה מאמר, שיחה או מכתב מסוימים של אדמו״ר שהוא מבאר. ספק — לא נכנס.",
+    "source_url": "https://store.kehotonline.com/prodinfo.asp?number=EO-CHANCL",
+    "checked_at": "2026-11-14T18:15:00+00:00"
+  },
+  "084ce2d0cb27ea60": {
+    "cls": "לא רלוונטי",
+    "why": "נפתח דף המוצר: ספר כללי על דמיון והתבוננות מאת הרב Dovber Pinson; אינו ביאור של מאמר, שיחה או מכתב מסוימים.",
+    "source_url": "https://store.kehotonline.com/prodinfo.asp?number=EO-VISU",
+    "checked_at": "2026-11-14T18:15:00+00:00"
+  },
+  "f05419faad2df4b4": {
+    "cls": "מקור",
+    "why": "נפתח קובץ ה־PDF: תרגום כתוב לאנגלית של שיחת תולדות מלקוטי שיחות חלק ג׳, עמודים 780–787; תאריך יצירת הקובץ 6.11.2026.",
+    "source_url": "https://drive.google.com/file/d/1EpylTOtROt8S2LoB7vLkAMlWZUpyZ9Pc/view",
+    "checked_at": "2026-11-14T18:15:00+00:00"
   }
 }

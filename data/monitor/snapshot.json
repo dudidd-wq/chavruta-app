@@ -4643,7 +4643,7 @@
    "last_attempt_at": "2026-11-04T06:53:04+00:00"
   },
   "sie_weekly": {
-   "checked_at": "2026-11-04T06:53:04+00:00",
+   "checked_at": "2026-11-14T18:15:00+00:00",
    "items": [
     {
      "title": "SIE Weekly · Noach · Likkutei Sichos Volume 3",
@@ -4684,9 +4684,19 @@
      "sections": [
       "whatsnew"
      ]
+    },
+    {
+     "title": "SIE Weekly · Toldos · Likkutei Sichos Volume 3",
+     "url": "https://drive.google.com/file/d/1EpylTOtROt8S2LoB7vLkAMlWZUpyZ9Pc/view",
+     "lang": "en",
+     "first_seen": "2026-11-08T11:15:35+00:00",
+     "genre": "תרגום שיחה",
+     "sections": [
+      "whatsnew"
+     ]
     }
    ],
-   "note": "הארכיון וחוברת חיי שרה חלק ג׳ נפתחו מחדש. שער ה־PDF מאמת 26 עמודים ועמודי מקור 772–780; הטיוטה מ־3.11 אושרה. לא נמצא קישור חדש נוסף."
+   "note": "החוברת החדשה לתולדות נפתחה. שער ה־PDF מאמת 22 עמודים ועמודי מקור 780–787."
   },
   "hiskashrus": {
    "checked_at": "2026-10-30T07:03:39+00:00",
