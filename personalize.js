@@ -117,8 +117,8 @@
   function addButton() {
     if (document.querySelector(".chs-btn")) return;
     var host = document.querySelector(".top .tools") || document.querySelector(".top");
-    var b = el("button", { type: "button", class: "tool chs-btn", "aria-haspopup": "dialog", "aria-expanded": "false", title: "התאמה אישית: סגנון וצבעים" },
-      '<span class="chs-dot" aria-hidden="true"></span><span class="lbl">סגנון</span>');
+    var b = el("button", { type: "button", class: "tool chs-btn", "aria-haspopup": "dialog", "aria-expanded": "false", "aria-label": "סגנון וצבעים", title: "התאמה אישית: סגנון וצבעים" },
+      '<svg aria-hidden="true"><use href="#n-style"/></svg><span class="lbl">סגנון</span>');
     b.addEventListener("click", open);
     if (host && host.classList.contains("tools")) host.insertBefore(b, host.firstChild); else if (host) { b.style.marginInlineStart = "auto"; host.appendChild(b); }
     else { b.className = "chs-fab on chs-btn"; document.body.appendChild(b); }
@@ -152,13 +152,34 @@
     hero.insertAdjacentElement("afterend", box);
   }
 
+  /* גיליון "עוד" בסרגל התחתון: באפליקציה shell.js בונה ומחווט אותו; בעמודים סטטיים (status.html) — כאן.
+     בשניהם מוסיפים לגיליון את "סגנון וצבעים". */
+  function wireMore() {
+    var more = document.getElementById("bn-more"), sheet = document.getElementById("bn-sheet");
+    if (!more || !sheet) return;
+    function shut(focus) { if (sheet.hidden) return; sheet.hidden = true; more.setAttribute("aria-expanded", "false"); document.body.classList.remove("bn-sheet-open"); if (focus) more.focus(); }
+    var grid = sheet.querySelector(".bn-grid");
+    if (grid && !grid.querySelector(".bn-style")) {
+      var st = el("button", { type: "button", class: "bn-i bn-s bn-style", "aria-label": "סגנון וצבעים", "aria-haspopup": "dialog" },
+        '<span class="bn-ic" aria-hidden="true"><svg aria-hidden="true"><use href="#n-style"/></svg></span><span class="bn-l" aria-hidden="true">סגנון וצבעים</span>');
+      st.addEventListener("click", function (e) { e.stopPropagation(); shut(); open({ currentTarget: more }); });
+      grid.appendChild(st);
+    }
+    if (more.dataset.wired) return;
+    more.dataset.wired = "1";
+    more.addEventListener("click", function () { if (!sheet.hidden) return shut(); sheet.hidden = false; more.setAttribute("aria-expanded", "true"); document.body.classList.add("bn-sheet-open"); var f = sheet.querySelector(".bn-grid a, .bn-grid button"); if (f) f.focus(); });
+    var x = sheet.querySelector(".bn-x"); if (x) x.addEventListener("click", function () { shut(true); });
+    document.addEventListener("keydown", function (e) { if (e.key === "Escape" && !sheet.hidden) { e.stopPropagation(); shut(true); } }, true);
+    document.addEventListener("click", function (e) { if (!sheet.hidden && !sheet.contains(e.target) && !more.contains(e.target)) shut(); });
+  }
   function init() {
-    addButton(); syncPrefs(); CS.apply(); decorate(); maybeToast();
+    addButton(); wireMore(); syncPrefs(); CS.apply(); decorate(); maybeToast();
     var view = document.getElementById("view");
     if (view && window.MutationObserver) new MutationObserver(function () { decorate(); }).observe(view, { childList: true });
     window.addEventListener("hashchange", function () { setTimeout(function () { decorate(); maybeToast(); }, 50); });
     // header may be re-rendered by the app; keep the button present
-    if (window.MutationObserver) { var top = document.querySelector(".top"); if (top) new MutationObserver(addButton).observe(top, { childList: true, subtree: true }); }
+    if (window.MutationObserver) { var top = document.querySelector(".top"); if (top) new MutationObserver(addButton).observe(top, { childList: true, subtree: true });
+      var bnav = document.querySelector(".bottombar"); if (bnav) new MutationObserver(wireMore).observe(bnav, { childList: true, subtree: true }); }
     window.addEventListener("storage", function (e) { if (e.key === CS.key) { render(CS.apply()); decorate(); } });
   }
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init); else init();
