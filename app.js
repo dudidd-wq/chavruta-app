@@ -135,6 +135,7 @@ function loadChunk(name) {
     if (name === "core" || name === "tree" || name === "book-catalog" || /^tree-(?:u[0-9]+|t)$/.test(name)) query.set("v", document.querySelector('meta[name="chavruta-tree-version"]')?.content || "tree");
     if (name === "core" || name === "links" || name === "search" || name === "parsha" || name === "topics" || name.startsWith("b:")) query.set("v", document.querySelector('meta[name="chavruta-corpus-version"]')?.content || document.querySelector('meta[name="chavruta-tree-version"]')?.content || "corpus");
     if (name === "cite-resolutions" || name.startsWith("cite-text-")) query.set("v", document.querySelector('script[src^="app.js?v="]')?.getAttribute("src")?.split("?v=")[1] || "cite");
+    if (name.startsWith("text/")) query.set("v", typeof ftVersion === "function" ? ftVersion(name) : "text");
     if (attempt) query.set("retry", String(attempt));
     s.src = chunkFile(name) + (query.size ? "?" + query : ""); s.async = true;
     s.onerror = fail;
@@ -493,12 +494,13 @@ const NAVITEMS = [
   { id: "tree", icon: "n-tree", label: "עץ הידע", bn: 1, href: () => mkHash(["tree"]) },
   { id: "topics", icon: "n-topics", label: "מפתח עניינים", href: () => mkHash(["topics"]) },
   { id: "books", icon: "n-books", label: "ספרים", href: () => mkHash(["books"]) },
+  { id: "read", icon: "n-read", label: "ספרייה", href: () => mkHash(["read"]) },
   { id: "daily", icon: "n-daily", label: "לימוד יומי", bn: 1, href: () => mkHash(["daily"]) },
   { id: "new", icon: "n-new", label: "מה חדש", bn: 1, href: () => mkHash(["new"]) },
   { id: "sysstatus", icon: "n-status", label: "מצב המערכת", href: () => "status.html" },
   { id: "search", icon: "n-search", label: "חיפוש", bn: 1, act: () => openPalette(), kbd: "/" },
 ];
-function viewToNav(v) { return { home: "home", learn: "learn", biurim: "home", biur: "home", parsha: "home", sources: "sources", item: "sources", topics: "topics", books: "books", search: "search", new: "new", daily: "daily", tree: R.cur.seg[1] === "p" ? "home" : "tree", status: "", coverage: "", closure: "" }[v] ?? ""; }
+function viewToNav(v) { return { home: "home", learn: "learn", biurim: "home", biur: "home", parsha: "home", sources: "sources", item: "sources", topics: "topics", books: "books", read: "read", search: "search", new: "new", daily: "daily", tree: R.cur.seg[1] === "p" ? "home" : "tree", status: "", coverage: "", closure: "" }[v] ?? ""; }
 function buildHistoryNavigation() {
   const host = $("#historynav"); if (!host || host.dataset.ready) return;
   host.dataset.ready = "1";
@@ -1121,6 +1123,12 @@ const SourceReader = {
     if (sourceURL(info.url) && info.url !== sourcePage) footer.append(h("a", { class: "linkbtn", href: info.url, target: "_blank", rel: "noopener noreferrer" }, "לספריא", icon("i-ext")));
     const credit = info.credit || CITE_LICENSE_CREDIT[info.license] || "";
     if (credit) footer.append(h("p", { class: "sr-credit" }, credit));
+    // הטקסט המלא בספרייה באתר (fulltext.js), כשהמקור הוא עמוד בספר שכבר נמצא בה
+    if (typeof ftReady === "function") ftReady().then(() => {
+      const q = info.quote ? { hl: String(info.quote).split(/\s+/).slice(0, 4).join(" ") } : {};
+      const a = ftReadLink(info.originalUrl || info.url, "קריאה בספר המלא", q) || ftReadLink(info.uid, "קריאה בספר המלא", q) || ftReadLink(info.node, "קריאה בספר המלא", q);
+      if (a && this.dialog === d) { a.classList.add("linkbtn"); a.addEventListener("click", () => this.close(false)); footer.insertBefore(a, footer.querySelector(".sr-credit")); }
+    });
 
     footer.prepend(sourceSaveControl(this)); footer.append(notebookSourceControl(this), notebookContextControl(() => notebookSourceBase(this))); footer.append(h("a", { class: "linkbtn", href: mkHash(["saved"]) }, "המקורות שלי"));
     d.append(this.bar, this.body, footer); document.body.append(d);
@@ -3960,6 +3968,9 @@ const TREE_WHERE = w => !w ? null : w.startsWith("hb:") ? { t: "היברובוק
 const treeUrl = u => u.startsWith("cl:") ? "https://www.chabadlibrary.org/books/" + u.slice(3) : u.startsWith("mm:") ? "https://maamarim.com/maamar.html?id=" + u.slice(3) : u;
 function treeSourceLink(label, url, info = {}) {
   const normalized = sourceURL(treeUrl(String(url || "")));
+  // טקסט מלא בספרייה (fulltext.js): הכותרת פותחת את הקורא באתר, והמקור נשאר בקישור קטן לידה
+  const read = typeof ftHashFor === "function" ? ftHashFor(String(url || "")) : null;
+  if (read) return h("span", { class: "ft-pair" }, h("a", { href: read, class: "ft-in", title: "קריאת הטקסט המלא באתר" }, label), normalized ? sourceLink({ ...info, title: info.title || label, url: normalized.href }, icon("i-ext"), { class: "ft-src", title: "המקור", "aria-label": "המקור: " + label }) : null);
   return normalized ? sourceLink({ ...info, title: info.title || label, url: normalized.href }, label) : label;
 }
 const TREE_PAGE = 150;
@@ -3993,6 +4004,7 @@ VIEWS.tree = async function (rest, q, ctx) {
   if (rest[0] === "m") return treePlaces(main, rest.slice(1), q, ctx);
   let T;
   try { T = await loadChunk("tree"); } catch (e) { main.append(h("div", { class: "empty" }, h("b", null, "לא ניתן לטעון את עץ הידע"), String(e.message || e))); return; }
+  if (typeof ftReady === "function") await ftReady();   // קישורי ״קריאה בספר״ ליחידות שיש להן טקסט מלא
   if (!ctx.alive()) return;
   if (T.series && typeof booksRegisterCatalog === "function") {
     try { booksRegisterCatalog(T, await loadChunk("book-catalog")); } catch (_) { /* The original tree remains usable if the optional shelf index is unavailable. */ }
@@ -4199,6 +4211,7 @@ VIEWS.parsha = async function (rest, q, ctx) {
   if (!p || p === S.home) { go(mkHash(["biurim"], Object.fromEntries([...q].filter(([k]) => k !== "mode"))), true); return; }
   Aside.detach?.();
   const main = $("#view");
+  if (typeof ftReady === "function") { await ftReady(); if (!ctx.alive()) return; }
   if (hasDocs(p)) {
     setPar(p);
     if (MODE === "research") { await Workspace.render(main, q, ctx); if (!ctx.keep) window.scrollTo(0, 0); return; }
@@ -5615,6 +5628,8 @@ VIEWS.search = async function (rest, q, ctx) {
     await draw();
   }
   const sheetCount = await sheetSearchResults(qs, resBox, ctx).catch(() => 0);
+  const libCount = typeof ftSearchSection === "function" ? await ftSearchSection(qs, resBox, ctx).catch(() => 0) : 0;
+  if (libCount) status.append(` · ועוד ${libCount >= 60 ? "60+" : libCount} בספרייה`);
   if (sheetCount) status.append(` · ועוד ${sheetCount} דפי שיעור`);
   if (!ctx.alive()) return;
   const noRes = h("div", { class: "empty" }, h("b", null, "לא נמצאו תוצאות"), "נסו מילה קצרה יותר, בלי תחילית, או בדקו את הסינון שלמעלה.");
@@ -5676,6 +5691,280 @@ function highlightWordsIn(root, qs) {
   }
   return c;
 }
+
+/* חברותא · קורא הטקסט המלא (#/read). ספרי קה״ת כפי שהם בספריית חב״ד, בחלקים שנטענים לפי הצורך (data/text/**, build_fulltext.py).
+   ספרייה → סדרה (עץ תוכן) → מאמר/פרק (כל עמודיו ברצף) → עמוד (עוגן #ft-<id>). כתובות: #/read · #/read/<slug> · #/read/<slug>/<id>[?hl=מילים]
+   קישורים מבחוץ: יחידות עץ הידע ומפות הפרשות (treeSourceLink), חלון המקור בביאורים, החיפוש. */
+const FT = { idx: null, ids: null, tocs: new Map(), ready: null };
+const FT_WINDOW = [12, 24];      // כמה עמודים לפני ואחרי עמוד היעד במאמר ארוך
+const FT_TEXT_RE = /chabadlibrary\.org\/books\/(\d{6,12})|^(?:cl|dh):(\d{6,12})|^(\d{9,12})(?:#\d+)?$/;
+
+/** גרסת קובץ טקסט לטעינה (data.js): האינדקס מתחדש כל שעה; השאר לפי הגרסה שבאינדקס */
+function ftVersion(name) {
+  if (name === "text/index") return "t" + Math.floor(Date.now() / 3600000);
+  const ix = D.chunks["text/index"]; if (!ix) return "text";
+  if (name === "text/map") return ix.v;
+  const slug = name.split("/")[1];
+  return ix.series.find(s => s.slug === slug)?.v || ix.v;
+}
+/** טוען אינדקס ומפת מזהים (פעם אחת). לא זורק: אם אין ספרייה, הקישורים נשארים כמו שהיו. */
+function ftReady() {
+  if (!FT.ready) FT.ready = (async () => {
+    try {
+      FT.idx = await loadChunk("text/index");
+      const m = await loadChunk("text/map"); FT.ids = new Map();
+      for (const [slug, deltas] of Object.entries(m)) { let v = 0; for (const d of deltas) { v += d; FT.ids.set(v, slug); } }
+    } catch (e) { FT.idx = FT.idx || null; FT.ids = FT.ids || new Map(); console.warn("fulltext", e); }
+    return FT;
+  })();
+  return FT.ready;
+}
+function ftSeries(slug) { return FT.idx?.series.find(s => s.slug === slug) || null; }
+/** כתובת בקורא למזהה/קישור של ספריית חב״ד (cl:ID, dh:ID:n, chabadlibrary.org/books/ID) — או null */
+function ftHashFor(urlOrUid, q) {
+  if (!FT.ids || !urlOrUid) return null;
+  const m = String(urlOrUid).match(FT_TEXT_RE); if (!m) return null;
+  const id = +(m[1] || m[2] || m[3]), slug = FT.ids.get(id);
+  return slug ? mkHash(["read", slug, String(id)], q || {}) : null;
+}
+/** עץ התוכן של סדרה, עם אינדקסים: byId, parent, leaves (סדר הקריאה) */
+async function ftToc(slug) {
+  if (FT.tocs.has(slug)) return FT.tocs.get(slug);
+  const raw = await loadChunk("text/" + slug + "/toc"), n = raw.n, byId = new Map(), parent = new Int32Array(n.length).fill(-1), leaves = [];
+  n.forEach((x, i) => { byId.set(x[0], i); if (Array.isArray(x[2])) for (const k of x[2]) parent[k] = i; });
+  const order = i => { if (Array.isArray(n[i][2])) n[i][2].forEach(order); else leaves.push(i); };
+  order(0);
+  const leafPos = new Map(leaves.map((i, p) => [i, p]));
+  const t = { slug, n, byId, parent, leaves, leafPos };
+  FT.tocs.set(slug, t); return t;
+}
+const ftIsLeaf = (t, i) => !Array.isArray(t.n[i][2]);
+const ftKids = (t, i) => Array.isArray(t.n[i][2]) ? t.n[i][2] : [];
+function ftPath(t, i) { const out = []; for (let j = i; j >= 0; j = t.parent[j]) out.unshift(j); return out; }
+/** מספר העמודים בצומת */
+function ftCount(t, i) { if (ftIsLeaf(t, i)) return 1; if (t.n[i]._c == null) t.n[i]._c = ftKids(t, i).reduce((a, k) => a + ftCount(t, k), 0); return t.n[i]._c; }
+/** "מסמך" = הצומת שהעמודים שלו נקראים ברצף: ההורה של עמוד, או צומת שיש לו ילדי־עמוד */
+function ftDocOf(t, i) { return ftIsLeaf(t, i) ? (t.parent[i] >= 0 ? t.parent[i] : i) : i; }
+const ftHasLeafKids = (t, i) => ftKids(t, i).some(k => ftIsLeaf(t, k));
+/** המסמכים בסדר הספר (לניווט הקודם/הבא) */
+function ftDocs(t) {
+  if (t.docs) return t.docs;
+  const out = [], seen = new Set();
+  for (const l of t.leaves) { const d = t.parent[l] >= 0 ? t.parent[l] : l; if (!seen.has(d)) { seen.add(d); out.push(d); } }
+  t.docs = out; t.docPos = new Map(out.map((d, p) => [d, p])); return out;
+}
+
+/* ---- ניקוי HTML: רק תגים מותרים, בלי מאפיינים (מלבד data-k / data-n מוכרים) ---- */
+const FT_TAGS = new Set(["P", "BR", "B", "I", "SUP", "SUB", "SMALL", "SPAN", "H1", "H2", "H3", "H4", "H5", "H6", "HR"]);
+const FT_KINDS = { pg: "ft-old", gp: "ft-gp", sm: "ft-sm", q: "ft-q", ks: "ft-ks" };
+function ftSafe(html, prefix) {
+  const doc = new DOMParser().parseFromString("<body>" + String(html || "") + "</body>", "text/html"), frag = document.createDocumentFragment();
+  const add = (from, to) => { for (const node of from.childNodes) {
+    if (node.nodeType === 3) { to.append(document.createTextNode(node.textContent)); continue; }
+    if (node.nodeType !== 1) continue;
+    const tag = node.tagName;
+    if (!FT_TAGS.has(tag)) { if (!/^(SCRIPT|STYLE|IFRAME|OBJECT|EMBED|SVG|MATH|TEMPLATE)$/.test(tag)) add(node, to); continue; }
+    const tagName = /^H[1-6]$/.test(tag) ? "H" + Math.min(6, Math.max(3, +tag[1] + 2)) : tag;   // כותרות הספר — מתחת לכותרת העמוד
+    const el = document.createElement(tagName.toLowerCase());
+    if (tag === "SPAN") { const k = node.getAttribute("data-k"); if (FT_KINDS[k]) el.className = FT_KINDS[k]; if (k === "pg") el.title = "עמוד במהדורה הקודמת"; if (k === "gp") el.textContent = "עמ׳ "; }
+    if (tag === "SUP" && prefix) {
+      const n = node.getAttribute("data-n");
+      if (/^e?\d{1,9}$/.test(n || "")) { const a = h("a", { class: "ft-ref", href: "#", id: prefix + "-r-" + n, "data-note": prefix + "-n-" + n, "aria-label": "הערה " + node.textContent }); el.append(a); add(node, a); to.append(el); continue; }
+    }
+    to.append(el); add(node, el);
+  } };
+  add(doc.body, frag); return frag;
+}
+/** טקסט העמוד: שורות בודדות (בלי <p>) הופכות לפסקאות */
+function ftBlocks(html) { return /<(p|h\d)>/.test(html) ? html : String(html || "").split(/\n+/).filter(s => s.trim()).map(s => "<p>" + s + "</p>").join(""); }
+
+function ftCrumbs(t, i, s) {
+  const nav = h("nav", { class: "crumbs", "aria-label": "מיקום" }, h("a", { href: mkHash(["read"]) }, "ספרייה"));
+  for (const j of ftPath(t, i)) nav.append(h("span", null, "›"), j === i ? h("span", { "aria-current": "page" }, t.n[j][1] || s.title) : h("a", { href: mkHash(["read", t.slug, String(t.n[j][0])]) }, j === 0 ? s.title : t.n[j][1]));
+  return nav;
+}
+function ftCredit(s, id) {
+  return h("p", { class: "ft-credit" }, s.credit, " ", h("a", { href: "https://www.chabadlibrary.org/books/" + (id || s.root), target: "_blank", rel: "noopener" }, "העמוד בספריית חב״ד", icon("i-ext")));
+}
+function ftFail(main, msg, e) { main.replaceChildren(h("div", { class: "empty" }, h("b", null, msg), e ? String(e.message || e) : "", h("br"), h("a", { href: mkHash(["read"]) }, "לספרייה"))); }
+
+VIEWS.read = async function (rest, q, ctx) {
+  const main = $("#view"); main.className = "main page ft"; main.textContent = "";
+  await ftReady(); if (!ctx.alive()) return;
+  if (!FT.idx) return ftFail(main, "הספרייה אינה זמינה כרגע");
+  if (!rest[0]) return ftHome(main, q);
+  const s = ftSeries(rest[0]); if (!s) return ftFail(main, "הספר לא נמצא בספרייה");
+  let t; try { t = await ftToc(s.slug); } catch (e) { return ftFail(main, "לא ניתן לטעון את תוכן הספר", e); }
+  if (!ctx.alive()) return;
+  const i = rest[1] ? t.byId.get(+rest[1]) : 0;
+  if (i == null) return ftFail(main, "העמוד לא נמצא בספר הזה");
+  if (!ftIsLeaf(t, i) && !ftHasLeafKids(t, i)) return ftTocView(main, s, t, i, q);
+  return ftDocView(main, s, t, i, q, ctx);
+};
+
+/* ---- דף הבית של הספרייה ---- */
+function ftHome(main, q) {
+  document.title = "ספרייה · חברותא";
+  const ix = FT.idx, pages = ix.series.reduce((a, s) => a + s.pages, 0);
+  main.append(h("h1", { class: "page-title" }, "ספרייה"),
+    h("p", { class: "lede" }, `הטקסט המלא של ספרי היסוד, לקריאה באתר: ${ix.series.length} סדרות, ${pages.toLocaleString("he")} עמודים. ספרי קה״ת כפי שהם בספריית חב״ד, לשימוש לא מסחרי ובייחוס לקה״ת.`));
+  const inp = h("input", { type: "search", class: "tree-q", placeholder: "סינון לפי שם ספר או רבי…", "aria-label": "סינון ספרים", value: q.get("f") || "" });
+  const box = h("div", { class: "ft-shelf" });
+  const draw = () => {
+    const f = norm(inp.value || ""); box.textContent = "";
+    const by = new Map();
+    for (const s of ix.series) { if (f && !norm(s.title + " " + s.rebbe).includes(f)) continue; (by.get(s.gen) || by.set(s.gen, []).get(s.gen)).push(s); }
+    for (const [g, list] of [...by].sort((a, b) => a[0] - b[0])) {
+      box.append(h("section", { class: "ft-gen", style: "--gc:" + gcol(g) }, h("h2", null, h("i", { class: "dot", "aria-hidden": "true" }), list[0].rebbe === "המגיד ממעזריטש" ? "הבעש״ט והמגיד" : list[0].rebbe),
+        h("div", { class: "ft-cards" }, ...list.map(s => h("a", { class: "ft-card", href: mkHash(["read", s.slug]) }, h("b", null, s.title), h("small", null, s.rebbe + " · " + s.pages.toLocaleString("he") + " עמ׳"))))));
+    }
+    if (!box.children.length) box.append(h("p", { class: "muted" }, "לא נמצא ספר בשם הזה."));
+  };
+  inp.addEventListener("input", debounce(() => { quietHash(mkHash(["read"], inp.value ? { f: inp.value } : {})); draw(); }));
+  main.append(h("div", { class: "tree-search" }, inp), box);
+  if (ix.pending?.length) main.append(h("details", { class: "ft-pending" }, h("summary", null, "בהמשך: " + ix.pending.length + " סדרות נוספות"),
+    h("p", { class: "muted" }, ix.pending.map(p => p.title + " (" + p.rebbe + ")").join(" · "))));
+  main.append(h("p", { class: "ft-credit" }, "הטקסטים: © Kehot Publication Society (הוצאת ספרים קה״ת), מתוך ספריית חב״ד (chabadlibrary.org). מוצגים לשימוש לא מסחרי, בייחוס לקה״ת. לכל ספר מצוין מקורו."));
+  draw(); window.scrollTo(0, 0);
+}
+
+/* ---- תוכן: סדרה או כרך ---- */
+function ftTocView(main, s, t, i, q) {
+  const title = i === 0 ? s.title : t.n[i][1];
+  document.title = title + (i ? " · " + s.title : "") + " · ספרייה · חברותא";
+  main.append(ftCrumbs(t, i, s), h("h1", { class: "page-title" }, title), h("p", { class: "lede" }, s.rebbe + " · " + ftCount(t, i).toLocaleString("he") + " עמודים"));
+  const inp = h("input", { type: "search", class: "tree-q", placeholder: "חיפוש כותרת או דיבור המתחיל…", "aria-label": "חיפוש בתוכן", value: q.get("f") || "" });
+  const box = h("div", { class: "ft-toc" });
+  const link = j => h("a", { href: mkHash(["read", t.slug, String(t.n[j][0])]) }, t.n[j][1] || "(ללא כותרת)");
+  const list = (j, depth) => {
+    const ol = h("ol", { class: "ft-toc-l" });
+    for (const k of ftKids(t, j)) {
+      if (ftIsLeaf(t, k)) { ol.append(h("li", { class: "ft-leaf" }, link(k))); continue; }
+      if (ftHasLeafKids(t, k) || depth >= 2) { ol.append(h("li", null, link(k), h("small", { class: "muted" }, " · " + ftCount(t, k) + " עמ׳"))); continue; }
+      const d = h("details", { open: depth === 0 && ftKids(t, j).length <= 8 ? "" : null }, h("summary", null, t.n[k][1], h("small", { class: "muted" }, " · " + ftCount(t, k) + " עמ׳")));
+      d.addEventListener("toggle", () => { if (d.open && d.childElementCount === 1) d.append(list(k, depth + 1), h("p", null, link(k), " ←")); }, { once: false });
+      if (d.open) d.append(list(k, depth + 1));
+      ol.append(h("li", null, d));
+    }
+    return ol;
+  };
+  const draw = () => {
+    const f = norm(inp.value || ""); box.textContent = "";
+    if (!f) { box.append(list(i, 0)); return; }
+    const hits = [], stack = [i];
+    while (stack.length && hits.length < 200) { const j = stack.pop(); if (j !== i && norm(t.n[j][1]).includes(f)) hits.push(j); stack.push(...ftKids(t, j).slice().reverse()); }
+    box.append(h("p", { class: "muted" }, hits.length >= 200 ? "200+ תוצאות" : hits.length + " תוצאות"),
+      h("ol", { class: "ft-toc-l ft-hits" }, ...hits.map(j => h("li", null, link(j), h("small", { class: "muted" }, " · " + ftPath(t, j).slice(1, -1).map(x => t.n[x][1]).join(" › "))))));
+  };
+  inp.addEventListener("input", debounce(() => { quietHash(mkHash(["read", t.slug, ...(i ? [String(t.n[i][0])] : [])], inp.value ? { f: inp.value } : {})); draw(); }));
+  main.append(h("div", { class: "tree-search" }, inp), box, ftCredit(s, t.n[i][0]));
+  draw(); window.scrollTo(0, 0);
+}
+
+/* ---- קריאה: מסמך (מאמר/פרק) — כל עמודיו ברצף, עם חלון סביב היעד במסמך ארוך ---- */
+async function ftDocView(main, s, t, i, q, ctx) {
+  const d = ftDocOf(t, i), docLeaves = ftIsLeaf(t, d) ? [d] : ftKids(t, d).filter(k => ftIsLeaf(t, k));
+  const target = ftIsLeaf(t, i) ? i : docLeaves[0];
+  const tp = Math.max(0, docLeaves.indexOf(target));
+  let from = Math.max(0, tp - FT_WINDOW[0]), to = Math.min(docLeaves.length, tp + FT_WINDOW[1]);
+  const title = t.n[d][1] || s.title;
+  document.title = title + " · " + s.title + " · חברותא";
+  const docs = ftDocs(t), dp = t.docPos.get(d);
+  const nav = () => h("nav", { class: "ft-docnav", "aria-label": "מעבר בין מאמרים" },
+    dp > 0 ? h("a", { class: "btn", href: mkHash(["read", t.slug, String(t.n[docs[dp - 1]][0])]), rel: "prev" }, "→ ", trunc(t.n[docs[dp - 1]][1], 40)) : h("span"),
+    h("a", { class: "btn ghost", href: mkHash(["read", t.slug, String(t.n[t.parent[d] >= 0 ? t.parent[d] : 0][0])]) }, "תוכן"),
+    dp < docs.length - 1 ? h("a", { class: "btn", href: mkHash(["read", t.slug, String(t.n[docs[dp + 1]][0])]), rel: "next" }, trunc(t.n[docs[dp + 1]][1], 40), " ←") : h("span"));
+  const tools = h("div", { class: "ft-tools" },
+    h("button", { type: "button", class: "btn sm", onclick: () => typeof openReadingPreferences === "function" && openReadingPreferences() }, icon("n-type"), "התאמת הקריאה"),
+    h("button", { type: "button", class: "btn sm", onclick: async () => { await copyText(absUrl(mkHash(["read", t.slug, String(t.n[target][0])], {}, { nomode: true }))); toast("הקישור הועתק"); } }, "העתקת קישור"));
+  const body = h("article", { class: "ft-body", lang: "he", dir: "rtl" });
+  main.append(ftCrumbs(t, d, s), h("header", { class: "ft-head" }, h("h1", { class: "page-title" }, title), h("p", { class: "lede" }, s.rebbe + " · " + s.title + (docLeaves.length > 1 ? " · " + docLeaves.length + " עמ׳" : "")), tools), nav(), body);
+  const before = h("button", { type: "button", class: "btn ft-more", onclick: () => grow(-1) }), after = h("button", { type: "button", class: "btn ft-more", onclick: () => grow(1) });
+  body.append(before, after);
+  const chunkOf = j => t.n[j][2];
+  const render = async (a, b, where) => {
+    const need = [...new Set(docLeaves.slice(a, b).map(chunkOf).filter(c => c >= 0))];
+    const loaded = await Promise.all(need.map(c => loadChunk(`text/${t.slug}/c${String(c).padStart(3, "0")}`)));
+    const rows = new Map(); for (const c of loaded) for (const r of c.p) rows.set(r[0], r);
+    const frag = document.createDocumentFragment();
+    for (const j of docLeaves.slice(a, b)) frag.append(ftPage(t, j, rows.get(t.n[j][0]), docLeaves.length > 1));
+    if (where < 0) before.after(frag); else after.before(frag);
+  };
+  const sync = () => {
+    before.hidden = from <= 0; before.textContent = "↑ " + Math.min(FT_WINDOW[1], from) + " עמודים קודמים";
+    after.hidden = to >= docLeaves.length; after.textContent = "עוד " + Math.min(FT_WINDOW[1], docLeaves.length - to) + " עמודים ↓";
+  };
+  const grow = async dir => {
+    if (dir < 0) { const a = Math.max(0, from - FT_WINDOW[1]); const anchor = body.querySelector(".ft-page"), y = anchor?.getBoundingClientRect().top; await render(a, from, -1); from = a; if (anchor) window.scrollBy(0, anchor.getBoundingClientRect().top - y); }
+    else { const b = Math.min(docLeaves.length, to + FT_WINDOW[1]); await render(to, b, 1); to = b; }
+    sync();
+  };
+  const wait = h("div", { class: "loading", role: "status" }, h("span", { class: "spin", "aria-hidden": "true" }), "טוען את הטקסט…");
+  body.prepend(wait);
+  try { await render(from, to, 1); } catch (e) { wait.replaceWith(h("div", { class: "empty" }, h("b", null, "לא ניתן לטעון את הטקסט"), String(e.message || e))); return; }
+  if (!ctx.alive()) return;
+  wait.remove(); sync();
+  main.append(nav(), ftCredit(s, t.n[target][0]));
+  body.addEventListener("click", e => {
+    const a = e.target.closest("a.ft-ref, a.ft-back"); if (!a) return;
+    e.preventDefault(); const el = document.getElementById(a.dataset.note); if (!el) return;
+    const det = el.closest("details"); if (det) det.open = true;
+    el.scrollIntoView({ block: "center" }); el.focus({ preventScroll: true });
+  });
+  const hl = q.get("hl");
+  const tEl = document.getElementById("ft-" + t.n[target][0]);
+  if (hl && tEl && typeof highlightWordsIn === "function") highlightWordsIn(tEl, hl);
+  if (tEl && (ftIsLeaf(t, i) && tp > 0 || hl)) { const m = tEl.querySelector("mark.sh"); (m || tEl).scrollIntoView({ block: m ? "center" : "start" }); tEl.classList.add("ft-target"); }
+  else window.scrollTo(0, 0);
+}
+function ftPage(t, j, row, marker) {
+  const id = t.n[j][0], sec = h("section", { class: "ft-page", id: "ft-" + id, "aria-label": t.n[j][1] || "עמוד" });
+  if (marker) sec.append(h("a", { class: "ft-pgmark", href: mkHash(["read", t.slug, String(id)]), title: "קישור לעמוד הזה" }, t.n[j][1]));
+  if (!row) { sec.append(h("p", { class: "muted" }, "הטקסט של העמוד הזה אינו זמין.")); return sec; }
+  const pre = "ft" + id, text = h("div", { class: "ft-text" }); text.append(ftSafe(ftBlocks(row[1]), pre)); sec.append(text);
+  const notes = row[2] || [];
+  if (notes.length) {
+    const ol = h("div", { class: "ft-notes-l" });
+    for (const [n, mark, html] of notes) {
+      const it = h("div", { class: "ft-note", id: n ? pre + "-n-" + n : null, tabindex: n ? "-1" : null }, mark ? h("b", { class: "ft-note-m" }, mark + ") ") : null);
+      it.append(ftSafe(html, "")); if (n) it.append(" ", h("a", { class: "ft-back", href: "#", "data-note": pre + "-r-" + n }, "↩"));
+      ol.append(it);
+    }
+    sec.append(h("details", { class: "ft-notes" }, h("summary", null, "הערות ומראי מקומות (" + notes.filter(x => x[0]).length + ")"), ol));
+  }
+  return sec;
+}
+
+/* ---- חיפוש: כותרות בכל ספרי הספרייה (נטען רק כשמחפשים) ---- */
+async function ftSearchHeadings(qs, max = 60) {
+  await ftReady(); if (!FT.idx) return [];
+  const f = norm(qs).trim(); if (!f) return [];
+  const words = f.split(/\s+/), out = [];
+  for (const s of FT.idx.series) {
+    let t; try { t = await ftToc(s.slug); } catch (e) { continue; }
+    for (let j = 1; j < t.n.length && out.length < max; j++) {
+      if (ftIsLeaf(t, j) && t.parent[j] >= 0 && ftHasLeafKids(t, t.parent[j]) && ftKids(t, t.parent[j]).length > 1) continue;   // עמודים בתוך מאמר: רק כותרת המאמר
+      const x = norm(t.n[j][1]); if (words.every(w => x.includes(w))) out.push({ s, t, j });
+    }
+    if (out.length >= max) break;
+  }
+  return out;
+}
+async function ftSearchSection(qs, resBox, ctx) {
+  const hits = await ftSearchHeadings(qs); if (!ctx.alive() || !hits.length) return 0;
+  resBox.append(h("section", { class: "res-grp", id: "res-library" }, h("h2", null, "בספרייה (טקסט מלא)", h("small", null, hits.length >= 60 ? "60+" : hits.length)),
+    h("p", { class: "muted" }, "מאמרים, פרקים ושיחות שהמילים מופיעות בכותרת שלהם, לקריאה מלאה באתר."),
+    h("div", null, ...hits.map(({ s, t, j }) => h("a", { class: "res-it", href: mkHash(["read", t.slug, String(t.n[j][0])]) },
+      h("div", { class: "t" }, t.n[j][1]), h("div", { class: "m" }, h("span", null, s.rebbe), h("span", null, [s.title, ...ftPath(t, j).slice(1, -1).map(x => t.n[x][1])].join(" › "))))))));
+  return hits.length;
+}
+
+/* ---- קישור "קריאה בספר" ליד מקור (עץ הידע, מפות, חלון המקור) ---- */
+function ftReadLink(urlOrUid, label = "קריאה בספר", q) {
+  const href = ftHashFor(urlOrUid, q); if (!href) return null;
+  return h("a", { class: "ft-readlink", href, title: "קריאת הטקסט המלא באתר" }, icon("n-read"), label);
+}
+setTimeout(() => { ftReady(); }, 2500);
 
 /* חברותא · ייצוא PDF בצד הלקוח (הדפסה לדפדפן): פרק, ביאור, הספר כולו, כרטיס פריט, רשימת מקורות או תוצאות חיפוש.
    מסמן את <body> ב־data-print; print.css מציג רק את מה שנבחר. בלי שרת ובלי רשת. */

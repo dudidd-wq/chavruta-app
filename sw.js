@@ -1,11 +1,15 @@
 /* Chavruta service worker: app-shell precache, network-first data, cache-first static assets. */
 "use strict";
 
-const CACHE_VERSION = "v4-5fd77f";
+const CACHE_VERSION = "v4-ft0001";
 const SHELL_CACHE = "chavruta-shell-" + CACHE_VERSION;
 const ASSET_CACHE = "chavruta-assets-" + CACHE_VERSION;
 const DATA_CACHE = "chavruta-data-" + CACHE_VERSION;
-const ALL_CACHES = [SHELL_CACHE, ASSET_CACHE, DATA_CACHE];
+// Full-text reader chunks (data/text/**, versioned by ?v=): cache-first, kept across shell updates,
+// capped so offline reading never grows without bound (oldest chunks are dropped first).
+const TEXT_CACHE = "chavruta-text-v1";
+const TEXT_CACHE_MAX = 120;
+const ALL_CACHES = [SHELL_CACHE, ASSET_CACHE, DATA_CACHE, TEXT_CACHE];
 
 const PRECACHE_URLS = [
   "./",
@@ -47,6 +51,31 @@ self.addEventListener("activate", (event) => {
 
 function isSameOrigin(url) {
   return url.origin === self.location.origin;
+}
+
+function isTextRequest(url) {
+  return url.pathname.indexOf("/data/text/") !== -1 && /\.js$/i.test(url.pathname) && !/\/data\/text\/index\.js$/i.test(url.pathname);
+}
+
+async function trimCache(cacheName, max) {
+  const cache = await caches.open(cacheName);
+  const keys = await cache.keys();
+  for (let i = 0; i < keys.length - max; i++) await cache.delete(keys[i]);
+}
+
+async function textFirst(request) {
+  const cache = await caches.open(TEXT_CACHE);
+  const cached = await cache.match(request);
+  if (cached) return cached;
+  const response = await fetch(request);
+  if (response && response.ok) {
+    // A new version of the same file replaces the old one.
+    const path = new URL(request.url).pathname;
+    for (const key of await cache.keys()) if (new URL(key.url).pathname === path) await cache.delete(key);
+    await cache.put(request, response.clone());
+    trimCache(TEXT_CACHE, TEXT_CACHE_MAX);
+  }
+  return response;
 }
 
 function isDataRequest(url) {
@@ -109,6 +138,10 @@ self.addEventListener("fetch", (event) => {
 
   if (isHtmlRequest(request, url)) {
     event.respondWith(networkFirst(request, SHELL_CACHE));
+    return;
+  }
+  if (isTextRequest(url)) {
+    event.respondWith(textFirst(request));
     return;
   }
   if (isDataRequest(url)) {
