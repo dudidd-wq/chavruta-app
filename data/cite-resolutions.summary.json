@@ -17,16 +17,16 @@
     "with_sefaria": 8,
     "ref_only": 4,
     "fulltext": {
-      "chars": 7775204,
-      "missing_cl": 50,
+      "chars": 8526202,
+      "missing_cl": 1,
       "missing_col": 2,
-      "missing_hb": 36,
+      "missing_hb": 33,
       "no_text_source": 54,
-      "pages_cl": 380,
+      "pages_cl": 429,
       "pages_col": 742,
-      "pages_hb": 1850,
-      "records_with_text_byNode": 820,
-      "records_with_text_byUrl": 2972,
+      "pages_hb": 1853,
+      "records_with_text_byNode": 857,
+      "records_with_text_byUrl": 3024,
       "skip_otzar": 19
     }
   },
