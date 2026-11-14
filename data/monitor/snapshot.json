@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-14T18:18:13+00:00",
+ "generated_at": "2026-11-14T18:30:35+00:00",
  "sources": [
   {
    "id": "chabadlibrary",
@@ -331,10 +331,17 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-14T18:16:58+00:00",
+   "checked_at": "2026-11-14T18:30:35+00:00",
    "status": "ok",
    "new": [],
    "latest": [
+    {
+     "id": "39143",
+     "title": "Toldos · 5787 · קונטרס שבועי לאנ\"ש חסידי חב\"ד לחיזוק ההתקשרות",
+     "url": "https://torahprint.nyc3.cdn.digitaloceanspaces.com/pdfFiles/1794412047262_mxwbq_.pdf",
+     "date": "2026-11-13T00:00:00.000Z",
+     "first_seen": "2026-11-14T18:30:35+00:00"
+    },
     {
      "id": "38132",
      "title": "Vayeira · 5787",
@@ -400,7 +407,7 @@
     }
    ],
    "total": 0,
-   "last_success_at": "2026-11-14T18:16:58+00:00"
+   "last_success_at": "2026-11-14T18:30:35+00:00"
   },
   {
    "id": "lichyot_chassidus",
@@ -2774,10 +2781,17 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-14T18:17:44+00:00",
+   "checked_at": "2026-11-14T18:30:35+00:00",
    "status": "ok",
    "new": [],
    "latest": [
+    {
+     "id": "38861",
+     "title": "Chayei Sarah · 5787 · A weekly publication featuring teachings of the Rebbe, stories, customs, and insights on the weekly Torah portion.",
+     "url": "https://torahprint.nyc3.cdn.digitaloceanspaces.com/pdfFiles/1793951192396_aa5cy_lchaim_1947.pdf",
+     "date": "2026-11-06T00:00:00.000Z",
+     "first_seen": "2026-11-14T18:30:35+00:00"
+    },
     {
      "id": "37957",
      "title": "Vayeira · 5787 · A weekly Chabad publication featuring teachings of the Rebbe, stories, and community news.",
@@ -2836,7 +2850,7 @@
     }
    ],
    "total": 0,
-   "last_success_at": "2026-11-14T18:17:44+00:00"
+   "last_success_at": "2026-11-14T18:30:35+00:00"
   },
   {
    "id": "one_point",
@@ -4656,8 +4670,16 @@
    "note": "החוברת החדשה לתולדות נפתחה. שער ה־PDF מאמת 22 עמודים ועמודי מקור 780–787."
   },
   "hiskashrus": {
-   "checked_at": "2026-10-30T07:03:39+00:00",
+   "checked_at": "2026-11-14T18:30:35+00:00",
    "items": [
+    {
+     "title": "Toldos · 5787 · קונטרס שבועי לאנ\"ש חסידי חב\"ד לחיזוק ההתקשרות",
+     "url": "https://torahprint.nyc3.cdn.digitaloceanspaces.com/pdfFiles/1794412047262_mxwbq_.pdf",
+     "lang": "he",
+     "first_seen": "2026-11-14T18:30:35+00:00",
+     "issued_for": "ערב שבת קודש פרשת תולדות, ג׳ כסלו תשפ״ז (13.11.2026)",
+     "genre": "גיליון"
+    },
     {
      "title": "Lech-Lecha · 5787 · קונטרס שבועי לאנ\"ש חסידי חב\"ד לחיזוק ההתקשרות לכ\"ק אדמו\"ר רבי מנחם מענדל בהרה\"ק רלו\"י מליובאוויטש",
      "url": "https://torahprint.nyc3.cdn.digitaloceanspaces.com/pdfFiles/1792588384099_1xivd_.pdf",
@@ -4675,7 +4697,7 @@
      "genre": "גיליון"
     }
    ],
-   "note": "PDF גיליון 1673 נפתח מחדש והשער ותוכן העניינים נבדקו; הטיוטה מ־29.10 אושרה. עותק הכפולות נשאר כפול, ומועדי הגילוי והגיליון נשמרו."
+   "note": "נוסף לאחר תיקון מזהה TorahTable (initialSections.printouts.items)"
   },
   "hebrewbooks": {
    "items": [],
@@ -4688,8 +4710,16 @@
    "note": "שני עמודי המוצר שבספק נפתחו מחדש; אי־ההתאמות נמשכות והטיוטות נשארו לא מאושרות."
   },
   "lchaim": {
-   "checked_at": "2026-11-01T06:21:55+00:00",
+   "checked_at": "2026-11-14T18:30:35+00:00",
    "items": [
+    {
+     "title": "Chayei Sarah · 5787 · A weekly publication featuring teachings of the Rebbe, stories, customs, and insights on the weekly Torah portion.",
+     "url": "https://torahprint.nyc3.cdn.digitaloceanspaces.com/pdfFiles/1793951192396_aa5cy_lchaim_1947.pdf",
+     "lang": "en",
+     "first_seen": "2026-11-14T18:30:35+00:00",
+     "issued_for": "גיליון 1947, חיי שרה, כ״ו מרחשוון תשפ״ז (6.11.2026)",
+     "genre": "גיליון"
+    },
     {
      "title": "Vayeira · 5787 · A weekly Chabad publication featuring teachings of the Rebbe, stories, and community news.",
      "url": "https://torahprint.nyc3.cdn.digitaloceanspaces.com/pdfFiles/1792880926571_inlqb_lchaim_1946.pdf",
@@ -4707,7 +4737,7 @@
      "genre": "גיליון"
     }
    ],
-   "note": "ה־PDF החדש של גיליון 1946 בן 4 עמודים נפתח מחדש. השער ותוכן שני מדורי השער אומתו; הטיוטה מ־31.10 אושרה. מועדי הגילוי ותאריך הגיליון נשמרו בנפרד."
+   "note": "נוסף לאחר תיקון מזהה TorahTable (initialSections.printouts.items)"
   }
  }
 }

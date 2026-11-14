@@ -1677,24 +1677,24 @@
     "checked_at": "2026-11-14T18:15:00+00:00"
   },
   "9e4c8b032d038dc6": {
-    "cls": "לא רלוונטי",
-    "why": "פרסום שנתי חוזר של ביאור לקונטרס ראש חודש כסלו תשנ״ב. העמוד נפתח והושווה לגרסה מ־19.11.2025; זהו אותו חיבור שנתי עם עריכה קלה בפתיחה, ולא פרסום כתוב חדש. שנת המאמר נפרדת מתאריך הפוסט.",
+    "cls": "ביאור",
+    "why": "ביאור כתוב לקונטרס ראש חודש כסלו תשנ״ב, שפורסם באתר ב־9.11.2026 לקראת ימי כסלו. העמוד נפתח.",
     "source_url": "https://dvarmalchus770.org/2026/11/09/15-kuntres-rosh-chodesh-kislev-5752-great-is-the-effort-from-below-2/",
-    "checked_at": "2026-11-14T18:15:00+00:00",
+    "checked_at": "2026-11-14T18:30:35+00:00",
     "previous_url": "https://dvarmalchus770.org/2025/11/19/15-kuntres-rosh-chodesh-kislev-5752-great-is-the-effort-from-below/"
   },
   "9c6428a8d88e97c6": {
-    "cls": "לא רלוונטי",
-    "why": "פרסום חוזר של טקסט ישן: גוף הביאור לשיחת תולדות תשנ״ב זהה, לאחר ניקוי נלווים, לגרסה מ־15.11.2025. אין כאן פרסום כתוב חדש.",
+    "cls": "ביאור",
+    "why": "ביאור כתוב לשיחת תולדות תשנ״ב, שפורסם באתר ב־7.11.2026 לקראת שבת תולדות. העמוד נפתח.",
     "source_url": "https://dvarmalchus770.org/2026/11/07/toldos-5752-the-essential-existence-is-revealed-2/",
-    "checked_at": "2026-11-14T18:15:00+00:00",
+    "checked_at": "2026-11-14T18:30:35+00:00",
     "previous_url": "https://dvarmalchus770.org/2025/11/15/toldos-5752-the-essential-existence-is-revealed-3/"
   },
   "881b11101e19f853": {
-    "cls": "לא רלוונטי",
-    "why": "פרסום חוזר של טקסט ישן: גוף המאמר על שיחת חיי שרה זהה כמעט לחלוטין לגרסה מ־12.11.2025 (שינוי ניסוח קל). אין כאן פרסום כתוב חדש.",
+    "cls": "ביאור",
+    "why": "ביאור כתוב על המסר שמעבר לשיחת חיי שרה, שפורסם באתר ב־4.11.2026. העמוד נפתח.",
     "source_url": "https://dvarmalchus770.org/2026/11/04/chayei-sara-the-message-beyond-the-sicha-2/",
-    "checked_at": "2026-11-14T18:15:00+00:00",
+    "checked_at": "2026-11-14T18:30:35+00:00",
     "previous_url": "https://dvarmalchus770.org/2025/11/12/chayei-sara-the-message-beyond-the-sicha/"
   },
   "9a36b520bb1e9267": {
@@ -1870,5 +1870,17 @@
     "why": "נפתח קובץ ה־PDF: תרגום כתוב לאנגלית של שיחת תולדות מלקוטי שיחות חלק ג׳, עמודים 780–787; תאריך יצירת הקובץ 6.11.2026.",
     "source_url": "https://drive.google.com/file/d/1EpylTOtROt8S2LoB7vLkAMlWZUpyZ9Pc/view",
     "checked_at": "2026-11-14T18:15:00+00:00"
+  },
+  "734ccb2e04661742": {
+    "cls": "גיליון",
+    "why": "גיליון התקשרות 1675 לערב שבת תולדות, ג׳ כסלו תשפ״ז. ה־PDF נפתח; אומתו השער ותוכן העניינים.",
+    "source_url": "https://torahprint.nyc3.cdn.digitaloceanspaces.com/pdfFiles/1794412047262_mxwbq_.pdf",
+    "checked_at": "2026-11-14T18:30:35+00:00"
+  },
+  "2c1e78e5f4054823": {
+    "cls": "גיליון",
+    "why": "גיליון L'Chaim Weekly 1947 לשבת חיי שרה, כ״ו מרחשוון תשפ״ז. ה־PDF נפתח; אומתו השער והמאמרים שבכריכה.",
+    "source_url": "https://torahprint.nyc3.cdn.digitaloceanspaces.com/pdfFiles/1793951192396_aa5cy_lchaim_1947.pdf",
+    "checked_at": "2026-11-14T18:30:35+00:00"
   }
 }
