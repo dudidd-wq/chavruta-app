@@ -46,4 +46,61 @@ class MonitorTests(unittest.TestCase):
             self.assertEqual(items[1]['first_seen'],'2026-09-30T00:00:00Z')
 
 
+
+
+    def test_dvarmalchus_uses_section_heading_not_generic_download_label(self):
+        html = """
+        <html><body>
+        <header><a class="elementor-icon" href="https://dvarmalchus.com/Download/F7EF0C70-45AF-42B9-98B0-1659886696F0.pdf"></a></header>
+        <h1>דבר מלכות</h1>
+        <h2>חוברות להורדה</h2>
+        <h3>ויצא תשפ”ז</h3>
+        <a href="https://dvarmalchus.com/Download/F7EF0C70-45AF-42B9-98B0-1659886696F0.pdf">להורדה</a>
+        </body></html>
+        """
+        class R:
+            text = html
+        with patch.object(monitor, "_get", return_value=R()):
+            items = monitor.detect_dvarmalchus("https://dvarmalchus.org/")
+        self.assertEqual(len(items), 1)
+        self.assertEqual(items[0]["title"], "דבר מלכות · ויצא תשפ״ז")
+        self.assertTrue(items[0]["url"].endswith(".pdf"))
+
+    def test_get_prefers_pc_inbox_html_when_manifest_matches(self):
+        import tempfile, os
+        with tempfile.TemporaryDirectory() as tmp:
+            inbox = Path(tmp)
+            (inbox / "page.html").write_text("<html><body>inbox-hit</body></html>", encoding="utf-8")
+            (inbox / "manifest.json").write_text(
+                '{"pages":[{"source_id":"demo","url":"https://example.org/page","file":"page.html","cloudflare":false}]}',
+                encoding="utf-8",
+            )
+            with patch.dict(os.environ, {"CHAVRUTA_PC_INBOX": str(inbox)}), \
+                 patch.object(monitor.requests, "get") as get:
+                resp = monitor._get("https://example.org/page")
+                get.assert_not_called()
+                self.assertEqual(resp.status_code, 200)
+                self.assertIn("inbox-hit", resp.text)
+
+    def test_get_skips_cloudflare_flagged_inbox_and_fetches_live(self):
+        import tempfile, os
+        from unittest.mock import Mock
+        with tempfile.TemporaryDirectory() as tmp:
+            inbox = Path(tmp)
+            (inbox / "page.html").write_text("<html>challenge</html>", encoding="utf-8")
+            (inbox / "manifest.json").write_text(
+                '{"pages":[{"url":"https://example.org/page","file":"page.html","cloudflare":true}]}',
+                encoding="utf-8",
+            )
+            live = Mock(status_code=200, text="live-ok")
+            with patch.dict(os.environ, {"CHAVRUTA_PC_INBOX": str(inbox)}), \
+                 patch.object(monitor.requests, "get", return_value=live) as get, \
+                 patch.object(monitor.time, "sleep"):
+                resp = monitor._get("https://example.org/page")
+                get.assert_called()
+                self.assertIs(resp, live)
+
+
+
 if __name__=='__main__': unittest.main()
+

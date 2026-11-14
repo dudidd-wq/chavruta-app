@@ -80,7 +80,7 @@ whatsnew:
   - {id: one_point, lang: en, name: One Point, url: "https://torahtable.com/publications/One-Point", detect: {type: torahtable, url: "https://torahtable.com/publications/One-Point"}, medium: text}
   - {id: derher, lang: en, name: Derher, url: "https://derher.org/", detect: {type: browser, url: "https://derher.org/"}, medium: bulletin}
   - {id: beitchabad, name: בית חב״ד, url: "https://he.chabad.org/", detect: {type: none}, medium: text}
-  - {id: dvarmalchus_org, name: dvarmalchus.org, url: "https://dvarmalchus.org", detect: {type: page_diff, url: "https://dvarmalchus.org"}, medium: bulletin}
+  - {id: dvarmalchus_org, name: dvarmalchus.org, url: "https://dvarmalchus.org", detect: {type: dvarmalchus, url: "https://dvarmalchus.org"}, medium: bulletin}
   - {id: maynotecha_inst, name: מכון מעיינותיך, url: "https://toratchabad.com/about-us", detect: {type: none}, medium: text}
   - {id: chabad_org_magazine, lang: en, name: "Chabad.org — Torah Texts (מגזין)", url: "https://www.chabad.org/torah-texts/", detect: {type: rss, url: "https://www.chabad.org/tools/rss/magazine_rss.xml", keep: "(?i)chassidus|chasidic|chassidic|hasidic|maamar|sicha|sichos|farbreng|kuntres|likkutei|tanya|torah ohr|hemshech|the rebbe|rebbe's|teachings|lubavitcher|alter rebbe|mitteler|tzemach|rashab|previous rebbe|frierdiker|\u05d7\u05e1\u05d9\u05d3|\u05e8\u05d1\u05d9|\u05de\u05d0\u05de\u05e8|\u05e9\u05d9\u05d7\u05d4"}, medium: news}
   - {id: anash, lang: en, name: Anash.org, url: "https://anash.org/", detect: {type: rss, url: "https://anash.org/feed/", keep: "(?i)chassidus|maamar|sicha|sichos|farbreng|kuntres|sefer|seforim|likkutei|tanya|torah ohr|hemshech|shiur|lahak|teachings|the rebbe"}, medium: news}

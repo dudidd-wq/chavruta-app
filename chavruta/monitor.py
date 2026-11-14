@@ -9,6 +9,7 @@
   json_catalog — קטלוג JSON (maamarim.com)
   wp_media     — ממשק המדיה של וורדפרס (קובצי PDF חדשים)
   page_diff    — השוואת קישורים בדף בין ריצה לריצה; בריצה הראשונה נקבע בסיס בלבד
+  dvarmalchus  — חוברת שבועית מקישורי ה־PDF באתר דבר מלכות
   browser      — האתר חוסם קוד; נבדק דרך הדפדפן (ראו browser_checks)
   none         — לא נעקב אוטומטית
 
@@ -21,6 +22,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import os
 import re
 import sys
 import time
@@ -48,7 +50,78 @@ def _now() -> str:
     return datetime.now(timezone.utc).isoformat(timespec="seconds")
 
 
+def _pc_inbox_dir() -> Path | None:
+    """Directory of public HTML dropped by the PC fetch (no cookies or profiles).
+
+    Override with CHAVRUTA_PC_INBOX. Default: data/monitor/pc_inbox, if present.
+    GitHub Actions normally has no such folder; an agent copies the PC inbox here
+    before a collect when box IPs are blocked.
+    """
+    env = (os.environ.get("CHAVRUTA_PC_INBOX") or "").strip()
+    if env:
+        path = Path(env)
+        return path if path.is_dir() else None
+    path = MON / "pc_inbox"
+    return path if path.is_dir() else None
+
+
+def _inbox_path_for(url: str) -> Path | None:
+    inbox = _pc_inbox_dir()
+    if inbox is None:
+        return None
+    want = url.rstrip("/")
+    manifest = inbox / "manifest.json"
+    if manifest.is_file():
+        try:
+            data = json.loads(manifest.read_text(encoding="utf-8"))
+        except json.JSONDecodeError:
+            data = {}
+        for page in data.get("pages") or data.get("items") or []:
+            raw = (page.get("url") or "").rstrip("/")
+            if raw not in (want, url):
+                continue
+            if page.get("cloudflare"):
+                return None
+            name = page.get("file") or page.get("path")
+            if not name:
+                return None
+            path = inbox / name
+            return path if path.is_file() else None
+    return None
+
+
+class _LocalResponse:
+    """Minimal requests-like object so detectors can reuse saved public HTML."""
+
+    def __init__(self, url: str, body: bytes):
+        self.url = url
+        self.content = body
+        self.status_code = 200
+        self.headers = {}
+        self.encoding = "utf-8"
+
+    @property
+    def text(self) -> str:
+        return self.content.decode(self.encoding, errors="replace")
+
+    def json(self):
+        return json.loads(self.content)
+
+    def raise_for_status(self) -> None:
+        return None
+
+
+def _inbox_response(url: str) -> _LocalResponse | None:
+    path = _inbox_path_for(url)
+    if path is None:
+        return None
+    return _LocalResponse(url, path.read_bytes())
+
+
 def _get(url: str) -> requests.Response:
+    local = _inbox_response(url)
+    if local is not None:
+        return local
     global _last
     wait = MIN_INTERVAL - (time.time() - _last)
     if wait > 0:
@@ -243,8 +316,62 @@ def detect_kehot_kuntreisim(url: str) -> list[dict]:
     return items
 
 
+
+def _nearest_heading(el) -> str:
+    cur = el
+    while cur is not None:
+        prev = cur.previous_sibling
+        while prev is not None:
+            name = getattr(prev, "name", None)
+            if name in ("h1", "h2", "h3", "h4"):
+                return prev.get_text(" ", strip=True)
+            finder = getattr(prev, "find_all", None)
+            if finder:
+                heads = finder(["h1", "h2", "h3", "h4"])
+                if heads:
+                    return heads[-1].get_text(" ", strip=True)
+            prev = prev.previous_sibling
+        cur = cur.parent
+    return ""
+
+
+def _normalize_heb_quotes(text: str) -> str:
+    return text.replace("”", "״").replace("“", "״").replace('"', "״")
+
+
+def detect_dvarmalchus(url: str) -> list[dict]:
+    """Weekly Dvar Malchus PDF lives on dvarmalchus.com, so page_diff on .org misses it."""
+    soup = BeautifulSoup(_get(url).text, "lxml")
+    skip_heads = {"דבר מלכות", "חוברות להורדה", "דבר מלכות להורדה", "מה בדבר מלכות?", "מנוי לדבר מלכות"}
+    best = {}
+    last_issue = ""
+    for el in soup.descendants:
+        name = getattr(el, "name", None)
+        if name in ("h1", "h2", "h3", "h4"):
+            heading = _normalize_heb_quotes(el.get_text(" ", strip=True)).strip()
+            if heading and heading not in skip_heads:
+                last_issue = heading
+            continue
+        if name != "a" or not el.get("href"):
+            continue
+        href = urljoin(url, el["href"])
+        host = urlparse(href).netloc.lower()
+        path = urlparse(href).path
+        if "dvarmalchus." not in host:
+            continue
+        if "/Download/" not in path and not path.lower().endswith(".pdf"):
+            continue
+        title = f"דבר מלכות · {last_issue}" if last_issue else "דבר מלכות"
+        score = 2 if last_issue else 0
+        prev = best.get(href)
+        if prev is None or score > prev[0]:
+            best[href] = (score, title)
+    return [{"id": href, "title": title[:200], "url": href, "date": ""} for href, (_, title) in best.items()]
+
+
 DETECTORS = {"kehot_kuntreisim": detect_kehot_kuntreisim, "kehot": detect_kehot, "rss": detect_rss, "json_catalog": detect_json_catalog, "wp_media": detect_wp_media,
-             "sitemap": detect_sitemap, "torahtable": detect_torahtable, "page_diff": detect_page_diff}
+             "sitemap": detect_sitemap, "torahtable": detect_torahtable, "page_diff": detect_page_diff,
+             "dvarmalchus": detect_dvarmalchus}
 RECENT = ("kehot", "kehot_kuntreisim")   # אתרי קטלוג עם תאריך: מציגים את כל מה שבחלון הזמן, לא רק את החדש מהריצה האחרונה
 
 
