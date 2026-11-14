@@ -133,7 +133,7 @@ function loadChunk(name) {
     if (name === "learning") query.set("v", document.querySelector('meta[name="chavruta-learning-version"]')?.content || "learning");
     if (name === "new") query.set("v", newsVersion + "-" + Math.floor(Date.now() / 300000));
     if (name === "core" || name === "tree" || name === "book-catalog" || /^tree-(?:u[0-9]+|t)$/.test(name)) query.set("v", document.querySelector('meta[name="chavruta-tree-version"]')?.content || "tree");
-    if (name === "core" || name === "links" || name === "search" || name === "parsha" || name === "topics" || name.startsWith("b:")) query.set("v", document.querySelector('meta[name="chavruta-corpus-version"]')?.content || document.querySelector('meta[name="chavruta-tree-version"]')?.content || "corpus");
+    if (name === "core" || name === "links" || name === "search" || name === "parsha" || name.startsWith("topics") || name.startsWith("b:")) query.set("v", document.querySelector('meta[name="chavruta-corpus-version"]')?.content || document.querySelector('meta[name="chavruta-tree-version"]')?.content || "corpus");
     if (name === "cite-resolutions" || name.startsWith("cite-text-")) query.set("v", document.querySelector('script[src^="app.js?v="]')?.getAttribute("src")?.split("?v=")[1] || "cite");
     if (name.startsWith("text/")) query.set("v", typeof ftVersion === "function" ? ftVersion(name) : "text");
     if (attempt) query.set("retry", String(attempt));
@@ -5292,8 +5292,9 @@ VIEWS.about = async function (rest, q, ctx) {
   if (!ctx.keep) window.scrollTo(0, 0);
 };
 
-/* חברותא · מפתח עניינים (#/topics, #/topics/<ערך>): מושגים, אישים, זמנים ודימויים — איפה הם בביאורים ובקטעי המקור.
-   הנתונים: data/topics.js (tools/app/build_topics.py). לכל ערך: הפרקים בביאורים (לפי משקל), קטעי המקור, ו״ראו גם״. */
+/* חברותא · מפתח עניינים (#/topics, #/topics/<ערך>): מושגים, אישים, זמנים ודימויים — איפה הם בביאורים, בקטעי המקור ובעץ הידע.
+   הנתונים: data/topics.js (tools/app/build_topics.py). לכל ערך: הפרקים בביאורים (לפי משקל) ו״ראו גם״.
+   בדף הערך נטענים גם data/topics-x.js (כל קטעי המקור, בלי חיתוך) ו־data/topics-u.js (יחידות העץ בתיוג אוטומטי, והפניות מפורשות לספר הערכים). */
 
 VIEWS.topics = async function (rest, q, ctx) {
   Aside.detach?.();
@@ -5310,7 +5311,7 @@ VIEWS.topics = async function (rest, q, ctx) {
   document.title = "מפתח עניינים · חברותא";
   const cat = q.get("c") || "", qs0 = q.get("q") || "", sort = q.get("s") || "ab";
   main.append(crumbs("מפתח עניינים"), h("h1", { class: "page-title" }, "מפתח עניינים"),
-    h("p", { class: "lede" }, `${T.terms.length} ערכים — מושגי החסידות, האישים, הזמנים והדימויים — ואיפה כל אחד מהם נידון בביאורים (${T.nsec.toLocaleString("he")} פרקים) ובקטעי המקור שבידינו. לכל ערך: הפרקים שבהם הוא עיקרי, קטעי המקור בלשון רבותינו, וערכים שבאים איתו בדרך כלל.`));
+    h("p", { class: "lede" }, `${T.terms.length} ערכים — מושגי החסידות, האישים, הזמנים והדימויים — ואיפה כל אחד מהם נידון בביאורים (${T.nsec.toLocaleString("he")} פרקים), בקטעי המקור שבידינו${T.stats?.units_tagged ? ` ובעץ הידע (${T.stats.units_tagged.toLocaleString("he")} יחידות, בתיוג אוטומטי)` : ""}. לכל ערך: הפרקים שבהם הוא עיקרי, קטעי המקור בלשון רבותינו, יחידות העץ שהוא מופיע בהן, וערכים שבאים איתו בדרך כלל.`));
   const inp = h("input", { type: "search", class: "tp-q", placeholder: "סינון הערכים…", value: qs0, "aria-label": "סינון הערכים" });
   const bar = h("div", { class: "chips", role: "group", "aria-label": "קטגוריה" });
   const sortBar = h("div", { class: "chips tp-sort", role: "group", "aria-label": "סדר" });
@@ -5334,7 +5335,7 @@ VIEWS.topics = async function (rest, q, ctx) {
     const az = h("nav", { class: "tp-az", "aria-label": "אותיות" }, [...groups.keys()].map(k => h("a", { href: "#", onclick: e => { e.preventDefault(); document.getElementById("tp-" + k)?.scrollIntoView({ block: "start" }); } }, k)));
     body.append(az);
     for (const [k, xs] of groups) body.append(h("section", { class: "tp-letter", id: "tp-" + k }, h("h2", null, k),
-      h("ul", { class: "tp-list" }, xs.map(t => h("li", null, h("a", { href: mkHash(["topics", t.t]) }, t.t), h("span", { class: "tp-n" }, `${t.n} פרקים · ${t.docs} ביאורים`), t.see.length ? h("span", { class: "tp-see" }, "ראו גם: ", t.see.slice(0, 3).join(" · ")) : null)))));
+      h("ul", { class: "tp-list" }, xs.map(t => h("li", null, h("a", { href: mkHash(["topics", t.t]) }, t.t), h("span", { class: "tp-n" }, topicCounts(t)), t.see.length ? h("span", { class: "tp-see" }, "ראו גם: ", t.see.slice(0, 3).join(" · ")) : null)))));
   };
   let tmo; inp.addEventListener("input", () => { clearTimeout(tmo); tmo = setTimeout(() => { state.q = inp.value.trim(); sync(); draw(); }, 200); });
   main.append(h("div", { class: "tp-tools" }, inp, sortBar), bar, body);
@@ -5347,7 +5348,7 @@ async function topicPage(main, T, t, byName, crumbs, ctx) {
   main.append(crumbs(h("a", { href: mkHash(["topics"]) }, "מפתח עניינים"), t.t),
     h("p", { class: "tp-cat" }, h("a", { href: mkHash(["topics"], { c: t.c }) }, t.c)),
     h("h1", { class: "page-title" }, t.t),
-    h("p", { class: "lede" }, `נידון ב־${t.n} פרקים ב־${t.docs} ביאורים, ומופיע ב־${t.nx} קטעי מקור.`, t.f.length ? h("span", { class: "tp-forms" }, " צורות שנכללו: ", t.f.join(" · "), ".") : null));
+    h("p", { class: "lede" }, topicLede(t), t.f.length ? h("span", { class: "tp-forms" }, " צורות שנכללו: ", t.f.join(" · "), ".") : null));
   if (t.see.length) main.append(h("div", { class: "tp-related" }, h("b", null, "ראו גם"), h("div", { class: "tp-cloud" }, t.see.map(s => byName.get(s)).filter(Boolean).map(x => h("a", { class: "tp-chip", href: mkHash(["topics", x.t]) }, x.t, h("small", null, x.n))))));
   // הפרקים — מקובצים לפי ביאור, הביאורים לפי סך המשקל
   const per = new Map();
@@ -5356,7 +5357,7 @@ async function topicPage(main, T, t, byName, crumbs, ctx) {
   const words = t.f.concat([t.t]);
   const re = wordReForms(words);
   const sec = h("section", { class: "tp-sec" }, h("h2", null, "בביאורים", h("small", null, docs.length)));
-  const list = h("div", { class: "tp-docs" }); sec.append(list); main.append(sec);
+  const list = h("div", { class: "tp-docs" }); sec.append(list); if (docs.length) main.append(sec);
   const PER = 8; let shown = 0;
   const more = h("button", { class: "btn", onclick: () => drawDocs() });
   const drawDocs = async () => {
@@ -5378,9 +5379,13 @@ async function topicPage(main, T, t, byName, crumbs, ctx) {
     more.hidden = shown >= docs.length; more.textContent = `עוד ביאורים (${docs.length - shown})`;
   };
   sec.append(more); await drawDocs();
-  // קטעי המקור
-  if (t.x.length) {
-    const xs = t.x.filter(x => getDoc(x[0]));
+  // קטעי המקור — הרשימה המלאה (data/topics-x.js)
+  let TX = null;
+  if (t.nx) { try { TX = await loadChunk("topics-x"); } catch (e) {} }
+  if (!ctx.alive()) return;
+  const allx = (TX && TX.x[t.t]) || t.x || [];
+  if (allx.length) {
+    const xs = allx.filter(x => getDoc(x[0]));
     const xsec = h("section", { class: "tp-sec" }, h("h2", null, "בקטעי המקור", h("small", null, xs.length)),
       h("p", { class: "muted" }, "הקטעים מלשון רבותינו שנאספו לביאורים, ושהערך מופיע בהם. לחיצה פותחת את הקטע בתוך הביאור."));
     const ul = h("ul", { class: "tp-ex" }); xsec.append(ul); main.append(xsec);
@@ -5402,8 +5407,59 @@ async function topicPage(main, T, t, byName, crumbs, ctx) {
     };
     xsec.append(xmore); await drawEx();
   }
-  main.append(h("p", { class: "card-note" }, "המפתח נבנה במכונה מתוך מילון מושגים קבוע (ערך וצורות הכתיב שלו); ״ראו גם״ — ערכים שבאים יחד באותם פרקים יותר מן הצפוי. ייתכנו הופעות שאינן במובן המושגי. ", h("a", { href: mkHash(["search"], { q: t.t }) }, "חיפוש חופשי של ״" + t.t + "״")));
+  if (t.nu || t.ne) await topicTree(main, t, ctx);
+  main.append(h("p", { class: "card-note" }, "המפתח נבנה במכונה מתוך מילון מושגים קבוע (ערך וצורות הכתיב שלו), ובו גם ערכים שנלקחו מכותרות ספר הערכים שמצוטטות בהערות שבידינו; ״ראו גם״ — ערכים שבאים יחד באותם פרקים יותר מן הצפוי. ייתכנו הופעות שאינן במובן המושגי. ", h("a", { href: mkHash(["search"], { q: t.t }) }, "חיפוש חופשי של ״" + t.t + "״")));
   if (!ctx.keep) window.scrollTo(0, 0);
+}
+
+function topicCounts(t) {
+  return [t.n ? `${t.n} פרקים · ${t.docs} ביאורים` : "", t.nu ? `${t.nu.toLocaleString("he")} יחידות בעץ` : "", t.ne ? `${t.ne} הפניות בספר הערכים` : ""].filter(Boolean).join(" · ") || "—";
+}
+function topicLede(t) {
+  const xs = [];
+  if (t.n) xs.push(`נידון ב־${t.n} פרקים ב־${t.docs} ביאורים`);
+  if (t.nx) xs.push(`מופיע ב־${t.nx.toLocaleString("he")} קטעי מקור`);
+  if (t.nu) xs.push(`וב־${t.nu.toLocaleString("he")} יחידות של עץ הידע (תיוג אוטומטי)`);
+  if (t.ne) xs.push(`ובהערות שבידינו יש ${t.ne} הפניות לספר הערכים חב״ד בערך הזה`);
+  if (xs.length) xs[0] = xs[0].replace(/^וב־/, "מופיע ב־").replace(/^ובהערות/, "בהערות");
+  return (xs.join(", ") || "ערך במפתח") + "." + (t.o === "erchim" ? " הערך נוסף לפי כותרת בספר הערכים חב״ד שמצוטטת בהערות." : "");
+}
+
+/* עץ הידע בדף הערך: יחידות בתיוג אוטומטי (מופע מילוני בטקסט שבידינו, בלי בדיקה עניינית), והפניות מפורשות לספר הערכים מתוך הערות השוליים */
+async function topicTree(main, t, ctx) {
+  let TU; try { TU = await loadChunk("topics-u"); } catch (e) { return; }
+  let T; try { T = await loadChunk("tree"); } catch (e) { return; }
+  if (!ctx.alive()) return;
+  const es = (TU.e && TU.e[t.t]) || [];
+  if (es.length) {
+    const esec = h("section", { class: "tp-sec" }, h("h2", null, "הפניות לספר הערכים חב״ד", h("small", null, es.length)),
+      h("p", { class: "muted" }, "מקומות שבהם העורכים הפנו בהערה לספר הערכים חב״ד בערך הזה — ציון ביבליוגרפי בלבד (כרך, ערך, סעיף, עמוד), בלי טקסט של ספר הערכים. חלק מן ההפניות נקראו משכבת טקסט סרוקה, וייתכנו בהן שגיאות קריאה."));
+    const ids = es.map(e => e[0]).filter(i => i >= 0);
+    await treeEnsure(T, ids);
+    const ul = h("ul", { class: "tp-ex" });
+    for (const [i, vol, entry, sub, sect, page] of es) {
+      const where = ["ספר הערכים", vol ? "כרך " + vol : "", "ערך " + entry + (sub ? " – " + sub : ""), sect ? "ס׳ " + sect : "", page ? "ע׳ " + page : ""].filter(Boolean).join(" · ");
+      const u = i >= 0 ? treeRow(T, i) : null;
+      ul.append(h("li", null, u ? h("span", null, treeSourceLink(u[2] || "(ללא כותרת)", u[8], { author: T.rebbeim[T.books[u[0]][0]], book: T.books[u[0]][1], page: u[4] }), h("small", { class: "muted" }, " · " + T.books[u[0]][1])) : h("span", { class: "muted" }, "(מקום ההערה לא שויך ליחידה)"),
+        h("div", { class: "muted sm" }, where)));
+    }
+    esec.append(ul); main.append(esec);
+  }
+  const us = (TU.u && TU.u[t.t]) || [];
+  if (!us.length) return;
+  const usec = h("section", { class: "tp-sec" }, h("h2", null, "ביחידות עץ הידע", h("small", null, us.length.toLocaleString("he"))),
+    h("p", { class: "muted" }, h("b", null, "תיוג אוטומטי: "), "יחידות שיש לנו את הטקסט שלהן, והערך מופיע בהן שלוש פעמים לפחות או בכותרת. זה מופע מילוני ולא בדיקה עניינית. מסודר לפי הופעה בכותרת ואחר כך לפי מספר ההופעות."));
+  const box = h("div"); usec.append(box); main.append(usec);
+  const PER = 25; let shown = 0;
+  const umore = h("button", { class: "btn", onclick: () => drawU() });
+  const drawU = async () => {
+    const slice = us.slice(shown, shown + PER); shown += slice.length;
+    await treeEnsure(T, slice.map(r => r[0]));
+    if (!ctx.alive()) return;
+    box.append(treeTable(T, slice.map(r => r[0]), true));
+    umore.hidden = shown >= us.length; umore.textContent = `עוד יחידות (${(us.length - shown).toLocaleString("he")})`;
+  };
+  usec.append(umore); await drawU();
 }
 
 /* ביטוי להדגשת כל צורות הערך (בלי ניקוד וגרשיים, עם אותיות שימוש) */
