@@ -17,17 +17,20 @@
     "with_sefaria": 8,
     "ref_only": 4,
     "fulltext": {
-      "chars": 8526202,
+      "chars": 8529069,
       "missing_cl": 1,
       "missing_col": 2,
       "missing_hb": 33,
-      "no_text_source": 54,
+      "missing_otzar": 18,
+      "missing_otzar_page": 1,
+      "no_text_source": 50,
       "pages_cl": 429,
       "pages_col": 742,
       "pages_hb": 1853,
-      "records_with_text_byNode": 857,
-      "records_with_text_byUrl": 3024,
-      "skip_otzar": 19
+      "pages_sefaria": 3,
+      "records_with_text_byNode": 860,
+      "records_with_text_byUrl": 3027,
+      "skip_publisher": 5
     }
   },
   "licenses": {
