@@ -1,0 +1,5 @@
+Theme fonts (personalization styles): Karantina, Heebo, Rubik, IBM Plex Sans Hebrew.
+All are licensed under the SIL Open Font License, Version 1.1 (https://openfontlicense.org).
+Copyright: Karantina (c) The Karantina Project Authors; Heebo (c) The Heebo Project Authors;
+Rubik (c) The Rubik Project Authors; IBM Plex (c) IBM Corp.
+Files are the Hebrew and Latin woff2 subsets served by Google Fonts, self-hosted for offline use.

@@ -14,9 +14,49 @@
 <meta property="og:title" content="מצב המערכת — חברותא">
 <meta property="og:description" content="כיסוי קישור ההפניות, מפת הקשרים, קליטת טקסט פתוח מספריא ובקרת איכות.">
 <link rel="stylesheet" href="app.css?v=262c9660d280">
+<link rel="stylesheet" href="personalize.css?v=78b3d2dd07e8" id="chs-css">
 <link rel="stylesheet" href="status.css?v=20261114b">
 <meta name="theme-color" content="#faf7f0">
 <script>(function(){var r=document.documentElement,n="sefer",t="";try{n=localStorage.getItem("chavruta-theme-name")||n;t=localStorage.getItem("chavruta-theme")||"";}catch(e){}if(!/^(sefer|techelet|zayit|dyo)$/.test(n))n="sefer";r.setAttribute("data-theme-name",n);if(t==="light"||t==="dark")r.setAttribute("data-theme",t);})();</script>
+<script id="chs-head">(function () {
+  var K = "chavruta-style-v1", r = document.documentElement, mq = window.matchMedia("(prefers-color-scheme: dark)");
+  function read() { var s = {}; try { s = JSON.parse(localStorage.getItem(K) || "{}") || {}; } catch (e) {} return {
+    style: /^(classic|editorial|depth|discovery)$/.test(s.style) ? s.style : "classic",
+    accent: /^#[0-9a-f]{6}$/i.test(s.accent || "") ? s.accent.toLowerCase() : "",
+    size: /^(s|m|l|xl)$/.test(s.size) ? s.size : "m", seen: !!s.seen }; }
+  function hx(c) { c = (c || "").trim(); if (/^#[0-9a-f]{3}$/i.test(c)) c = "#" + c[1] + c[1] + c[2] + c[2] + c[3] + c[3]; return /^#[0-9a-f]{6}$/i.test(c) ? c.toLowerCase() : ""; }
+  function rgb(c) { return [1, 3, 5].map(function (i) { return parseInt(c.slice(i, i + 2), 16); }); }
+  function mix(a, b, t) { var x = rgb(a), y = rgb(b); return "#" + x.map(function (v, i) { return Math.round(v * (1 - t) + y[i] * t).toString(16).padStart(2, "0"); }).join(""); }
+  function lum(c) { var x = rgb(c).map(function (v) { v /= 255; return v <= .04045 ? v / 12.92 : Math.pow((v + .055) / 1.055, 2.4); }); return x[0] * .2126 + x[1] * .7152 + x[2] * .0722; }
+  function con(a, b) { var x = lum(a), y = lum(b); return (Math.max(x, y) + .05) / (Math.min(x, y) + .05); }
+  function fit(acc, paper, card) { var dark = lum(paper) < .2, to = dark ? "#ffffff" : "#000000", v = acc;
+    for (var i = 0; i <= 20; i++) { v = mix(acc, to, i / 20); if (con(v, paper) >= 4.5 && con(v, card) >= 4.5) break; }
+    return { c: v, changed: v !== acc, on: con("#ffffff", v) >= con("#111111", v) ? "#ffffff" : "#111111" }; }
+  function tone() { var st = r.getAttribute("data-style"), t = r.getAttribute("data-theme");
+    if (st === "depth") return "dark"; if (t === "light" || t === "dark") return t; return mq.matches ? "dark" : "light"; }
+  function apply(s) {
+    s = s || read();
+    r.setAttribute("data-style", s.style); r.setAttribute("data-size", s.size);
+    if (s.style === "depth") { r.setAttribute("data-theme", "dark"); r.setAttribute("data-chs-forced", ""); }
+    else if (r.hasAttribute("data-chs-forced")) { r.removeAttribute("data-chs-forced"); var t = null; try { t = localStorage.getItem("chavruta-theme"); } catch (e) {}
+      if (t === "light" || t === "dark") r.setAttribute("data-theme", t); else r.removeAttribute("data-theme"); }
+    r.setAttribute("data-tone", tone());
+    var el = document.getElementById("chs-accent"), res = null;
+    if (el) el.textContent = "";
+    if (s.accent) {
+      var cs = getComputedStyle(r), paper = hx(cs.getPropertyValue("--paper")) || "#ffffff", card = hx(cs.getPropertyValue("--card")) || paper, ink = hx(cs.getPropertyValue("--ink")) || "#111111";
+      res = fit(s.accent, paper, card); var a = res.c;
+      if (!el) { el = document.createElement("style"); el.id = "chs-accent"; document.head.appendChild(el); }
+      el.textContent = ":root:root:root:root{--accent:" + a + " !important;--accent-2:" + mix(a, ink, .28) + " !important;--accent-soft:" + mix(paper, a, .12) +
+        " !important;--accent-line:" + mix(paper, a, .45) + " !important;--on-accent:" + res.on + ";}";
+    }
+    var m = document.querySelector('meta[name="theme-color"]'); if (m) { var p = hx(getComputedStyle(r).getPropertyValue("--paper")); if (p) m.setAttribute("content", p); }
+    return res;
+  }
+  window.chavrutaStyle = { key: K, read: read, apply: apply, tone: tone, contrast: con, mix: mix, fit: fit, hex: hx };
+  apply();
+  mq.addEventListener && mq.addEventListener("change", function () { apply(); });
+})();</script>
 </head>
 <body>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
@@ -62,5 +102,6 @@
 <nav class="bottombar no-print" aria-label="ניווט ראשי (תחתון)"><div class="bn" id="bn"><a class="bn-i" data-nav="home" href="index.html#/home"><svg aria-hidden="true"><use href="#i-read"></use></svg><span>ראשי</span></a><a class="bn-i" data-nav="learn" href="index.html#/learn"><svg aria-hidden="true"><use href="#i-list"></use></svg><span>שערי לימוד</span></a><a class="bn-i" data-nav="sources" href="index.html#/sources"><svg aria-hidden="true"><use href="#i-list"></use></svg><span>מקורות</span></a><a class="bn-i" data-nav="tree" href="index.html#/tree"><svg aria-hidden="true"><use href="#i-tree"></use></svg><span>עץ הידע</span></a><a class="bn-i" data-nav="topics" href="index.html#/topics"><svg aria-hidden="true"><use href="#i-toc"></use></svg><span>מפתח עניינים</span></a><a class="bn-i" data-nav="books" href="index.html#/books"><svg aria-hidden="true"><use href="#i-read"></use></svg><span>ספרים</span></a><a class="bn-i" data-nav="daily" href="index.html#/daily"><svg aria-hidden="true"><use href="#i-sun"></use></svg><span>לימוד יומי</span></a><a class="bn-i" data-nav="new" href="index.html#/new"><svg aria-hidden="true"><use href="#i-flag"></use></svg><span>מה חדש</span></a><a class="bn-i" data-nav="sysstatus" href="status.html" aria-current="page"><svg aria-hidden="true"><use href="#i-status"></use></svg><span>מצב המערכת</span></a><a class="bn-i" data-nav="search" href="index.html#/search"><svg aria-hidden="true"><use href="#i-search"></use></svg><span>חיפוש</span></a></div></nav>
 <script src="data/project-status.js?v=20261114b"></script>
 <script src="status.js?v=20261114b"></script>
+<script src="personalize.js?v=78b3d2dd07e8" id="chs-js" defer></script>
 </body>
 </html>
