@@ -16,7 +16,7 @@ from playwright.async_api import async_playwright
 
 BASE = sys.argv[1] if len(sys.argv) > 1 else "http://127.0.0.1:8765/"
 STYLES = ["classic", "editorial", "depth", "discovery"]
-PAGES = ["index.html#/home", "index.html#/biur/N01", "index.html#/new", "index.html#/tree", "status.html"]
+PAGES = ["index.html#/home", "index.html#/biur/N01", "index.html#/new", "index.html#/tree", "index.html#/read", "index.html#/read/tanya/3401310006", "status.html"]
 TONES = ["light", "dark"]
 
 CONTRAST_JS = """() => {
@@ -30,7 +30,7 @@ CONTRAST_JS = """() => {
     btn: !!document.querySelector('.chs-btn') };
 }"""
 
-EXPECT_ACTIVE = {"index.html#/home": "home", "index.html#/biur/N01": "home", "index.html#/new": "new", "index.html#/tree": "tree", "status.html": "sysstatus"}
+EXPECT_ACTIVE = {"index.html#/home": "home", "index.html#/biur/N01": "home", "index.html#/new": "new", "index.html#/tree": "tree", "index.html#/read": "read", "index.html#/read/tanya/3401310006": "read", "status.html": "sysstatus"}
 
 BARS_JS = """(expect) => {
   const out = { problems: [] }, P = m => out.problems.push(m);

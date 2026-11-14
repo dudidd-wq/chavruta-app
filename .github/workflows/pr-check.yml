@@ -37,6 +37,9 @@ jobs:
           node --check data/project-status.js
           node --check app.js
           node --check data/cite-resolutions.js
+          node --check data/text/index.js
+          node --check data/text/map.js
+          node --check sw.js
 
       - name: Personalization styles smoke test (each style loads without JS errors)
         run: |
