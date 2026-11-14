@@ -1331,7 +1331,12 @@ const SourceReader = {
     if (!entry?.t) { body.append(h("div", { class: "sr-empty", role: "status" }, h("h3", null, "לא ניתן לטעון כעת את הדף המלא"), h("p", null, "אפשר לעבור לקטעים בביאור או לצילום הדף."), h("button", { type: "button", class: "btn", onclick: () => this.render() }, "ניסיון נוסף"))); return; }
     let blocks = String(entry.t).split(/\n{2,}/).map(x => x.trim()).filter(Boolean);
     if (this.info?.license === "pd-foundational") blocks = blocks.map(stripModernApparatus).filter(Boolean);
-    body.append(h("p", { class: "sr-notice" }, entry.s === "ocr" ? "הדף המלא, מתוך סריקה (OCR). ייתכנו שגיאות זיהוי; לנוסח המדויק ראו את צילום הדף. הציטוט מסומן בטקסט." : "הדף המלא, מהטקסט הדיגיטלי של ספריית חב״ד. הציטוט מסומן בטקסט."));
+    const notice = entry.s === "ocr"
+      ? "הדף המלא, מתוך סריקה (OCR). ייתכנו שגיאות זיהוי; לנוסח המדויק ראו את צילום הדף. הציטוט מסומן בטקסט."
+      : entry.s === "sefaria" || entry.ed
+        ? ("הדף המלא, נוסח היסוד" + (entry.ed ? " מתוך המהדורה: " + entry.ed : "") + ". הציטוט מסומן בטקסט.")
+        : "הדף המלא, מהטקסט הדיגיטלי של ספריית חב״ד. הציטוט מסומן בטקסט.";
+    body.append(h("p", { class: "sr-notice" }, notice));
     const article = h("article", { class: "sr-text sr-full", dir: "rtl" });
     for (const block of blocks) article.append(h("p", null, block));
     body.append(article);
