@@ -1,6 +1,6 @@
 window.CHAVRUTA_PROJECT_STATUS = {
-  "generated": "2026-11-14T20:02+02:00",
-  "generated_label": "14.11.2026, 20:02 שעון ישראל",
+  "generated": "2026-11-14T21:03+02:00",
+  "generated_label": "14.11.2026, 21:03 שעון ישראל",
   "timezone": "Asia/Jerusalem",
   "coverage": {
     "rows": [
@@ -1217,9 +1217,9 @@ window.CHAVRUTA_PROJECT_STATUS = {
     {
       "id": "fulltext",
       "label": "טקסט מלא בחלון הציטוטים באתר",
-      "done": 3881,
+      "done": 3887,
       "total": 4015,
-      "pct": 96.7,
+      "pct": 96.8,
       "status": "running",
       "status_label": "בתהליך",
       "note": "ספרי קה״ת שזמינים רק באוצר החכמה עוד לא נטענו."
