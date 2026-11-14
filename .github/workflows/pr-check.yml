@@ -37,3 +37,13 @@ jobs:
           node --check data/project-status.js
           node --check app.js
           node --check data/cite-resolutions.js
+
+      - name: Personalization styles smoke test (each style loads without JS errors)
+        run: |
+          pip install --quiet playwright==1.48.0
+          python -m playwright install --with-deps chromium
+          python -m http.server 8765 --bind 127.0.0.1 >/dev/null 2>&1 &
+          sleep 1
+          node --check personalize.js
+          node --check personalize-head.js
+          python tests/theme_smoke.py http://127.0.0.1:8765/

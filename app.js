@@ -423,9 +423,9 @@ let routeSeq = 0;
 const R = { cur: { seg: [], q: new URLSearchParams() }, view: null, ctx: null };
 const MODE_KEY = "chavruta-mode";
 const MODES = [
-  { id: "read", n: 1, label: "קריאה", icon: "i-read", hint: "קריאה רציפה בעמודה אחת, הערות בשוליים" },
-  { id: "links", n: 2, label: "קשרים", icon: "i-links", hint: "לוח קשרים לכל קטע, ציטוט או פריט שנבחר" },
-  { id: "research", n: 3, label: "חקר", icon: "i-research", hint: "שלשלת דורות, מטריצת פסוק × דורות ומפה" },
+  { id: "read", n: 1, label: "קריאה", icon: "n-read", hint: "קריאה רציפה בעמודה אחת, הערות בשוליים" },
+  { id: "links", n: 2, label: "קשרים", icon: "n-links", hint: "לוח קשרים לכל קטע, ציטוט או פריט שנבחר" },
+  { id: "research", n: 3, label: "חקר", icon: "n-research", hint: "שלשלת דורות, מטריצת פסוק × דורות ומפה" },
 ];
 const SelListeners = new Set();
 function selectNode(id, opts = {}) { S.selNode = id || null; for (const f of SelListeners) f(id, opts); }
@@ -485,30 +485,31 @@ function pdfMenu() {
 }
 
 /* ---------- סרגל עליון, מצבים ---------- */
+/* bn: 1 — מופיע בסרגל התחתון בנייד (חמישה לכל היותר); השאר נכנסים לגיליון "עוד". */
 const NAVITEMS = [
-  { id: "home", icon: "i-read", label: "ראשי", href: () => mkHash(["home"]) },
-  { id: "learn", icon: "i-list", label: "שערי לימוד", href: () => mkHash(["learn"]) },
-  { id: "sources", icon: "i-list", label: "מקורות", href: () => mkHash(["sources"]) },
-  { id: "tree", icon: "i-tree", label: "עץ הידע", href: () => mkHash(["tree"]) },
-  { id: "topics", icon: "i-toc", label: "מפתח עניינים", href: () => mkHash(["topics"]) },
-  { id: "books", icon: "i-read", label: "ספרים", href: () => mkHash(["books"]) },
-  { id: "daily", icon: "i-sun", label: "לימוד יומי", href: () => mkHash(["daily"]) },
-  { id: "new", icon: "i-flag", label: "מה חדש", href: () => mkHash(["new"]) },
-  { id: "sysstatus", icon: "i-status", label: "מצב המערכת", href: () => "status.html" },
-  { id: "search", icon: "i-search", label: "חיפוש", act: () => openPalette(), kbd: "/" },
+  { id: "home", icon: "n-home", label: "ראשי", bn: 1, href: () => mkHash(["home"]) },
+  { id: "learn", icon: "n-gates", label: "שערי לימוד", href: () => mkHash(["learn"]) },
+  { id: "sources", icon: "n-sources", label: "מקורות", href: () => mkHash(["sources"]) },
+  { id: "tree", icon: "n-tree", label: "עץ הידע", bn: 1, href: () => mkHash(["tree"]) },
+  { id: "topics", icon: "n-topics", label: "מפתח עניינים", href: () => mkHash(["topics"]) },
+  { id: "books", icon: "n-books", label: "ספרים", href: () => mkHash(["books"]) },
+  { id: "daily", icon: "n-daily", label: "לימוד יומי", bn: 1, href: () => mkHash(["daily"]) },
+  { id: "new", icon: "n-new", label: "מה חדש", bn: 1, href: () => mkHash(["new"]) },
+  { id: "sysstatus", icon: "n-status", label: "מצב המערכת", href: () => "status.html" },
+  { id: "search", icon: "n-search", label: "חיפוש", bn: 1, act: () => openPalette(), kbd: "/" },
 ];
 function viewToNav(v) { return { home: "home", learn: "learn", biurim: "home", biur: "home", parsha: "home", sources: "sources", item: "sources", topics: "topics", books: "books", search: "search", new: "new", daily: "daily", tree: R.cur.seg[1] === "p" ? "home" : "tree", status: "", coverage: "", closure: "" }[v] ?? ""; }
 function buildHistoryNavigation() {
   const host = $("#historynav"); if (!host || host.dataset.ready) return;
   host.dataset.ready = "1";
-  const back = h("button", { type: "button", class: "history-arrow", "aria-label": "אחורה לעמוד הקודם", title: "אחורה לעמוד הקודם", onclick: () => history.back() }, icon("i-back"));
-  const forward = h("button", { type: "button", class: "history-arrow history-forward", "aria-label": "קדימה לעמוד הבא", title: "קדימה לעמוד הבא", onclick: () => history.forward() }, icon("i-back"));
+  const back = h("button", { type: "button", class: "history-arrow", "aria-label": "אחורה לעמוד הקודם", title: "אחורה לעמוד הקודם", onclick: () => history.back() }, icon("n-back"));
+  const forward = h("button", { type: "button", class: "history-arrow history-forward", "aria-label": "קדימה לעמוד הבא", title: "קדימה לעמוד הבא", onclick: () => history.forward() }, icon("n-back"));
   const sync = () => {
     const nav = window.navigation;
     back.disabled = typeof nav?.canGoBack === "boolean" ? !nav.canGoBack : history.length < 2;
     forward.disabled = typeof nav?.canGoForward === "boolean" ? !nav.canGoForward : false;
   };
-  host.append(back, forward, h("a", { class: "history-topics", "data-nav": "topics", href: mkHash(["topics"]) }, icon("i-toc"), "מפתח עניינים"), h("a", { class: "history-topics history-books", "data-nav": "books", href: mkHash(["books"]) }, icon("i-read"), "ספרים"));
+  host.append(back, forward, h("a", { class: "history-topics", "data-nav": "topics", href: mkHash(["topics"]) }, icon("n-topics"), "מפתח עניינים"), h("a", { class: "history-topics history-books", "data-nav": "books", href: mkHash(["books"]) }, icon("n-books"), "ספרים"));
   window.navigation?.addEventListener?.("currententrychange", sync);
   for (const event of ["hashchange", "popstate", "pageshow"]) window.addEventListener(event, sync);
   sync();
@@ -547,13 +548,42 @@ function buildChrome() {
   buildHistoryNavigation();
   const nav = $("#mainnav"); nav.textContent = "";
   for (const it of NAVITEMS) nav.append(h(it.act ? "button" : "a", { class: "nav-i", "data-nav": it.id, href: it.act ? null : it.href(), onclick: it.act ? it.act : null, title: it.kbd ? "קיצור: " + it.kbd : it.label, "aria-label": it.label }, icon(it.icon), h("span", { class: "lbl", "aria-hidden": "true" }, it.label)));
-  const bn = $("#bn"); if (bn) { bn.textContent = ""; for (const it of NAVITEMS) bn.append(h(it.act ? "button" : "a", { class: "bn-i", "data-nav": it.id, href: it.act ? null : it.href(), onclick: it.act ? it.act : null }, icon(it.icon), h("span", null, it.label))); }
+  buildBottomNav();
   const ms = $("#modesw"); ms.textContent = ""; for (const m of MODES) ms.append(modeBtn(m));
   $("#disp-btn").addEventListener("click", () => { closeMenu(); openReadingPreferences(); });
   $("#pdf-btn").addEventListener("click", e => openMenu(e.currentTarget, pdfMenu(), "menu-pdf"));
   $("#toc-btn")?.addEventListener("click", () => openToc());
   $("#reading-exit-focus")?.addEventListener("click", () => window.chavrutaPreferences.update({ focus: false }));
   applyPrefs();
+}
+/* סרגל תחתון (נייד): הפריטים המסומנים bn, ואחריהם "עוד" — גיליון עם שאר היעדים.
+   כשהיעד הנוכחי נמצא בגיליון, "עוד" מסומן ב־CSS (:has), בלי קוד ב־updateChrome.
+   כל פריט: אזור מגע ≥ 44px, aria-label, עטיפת אייקון (.bn-ic) לסימון הפעיל לפי הערכה. */
+function bnItem(it, cls) {
+  return h(it.act ? "button" : "a", { class: cls, "data-nav": it.id, href: it.act ? null : it.href(), type: it.act ? "button" : null, "aria-label": it.label, onclick: it.act ? () => { closeBnSheet(); it.act(); } : () => closeBnSheet() },
+    h("span", { class: "bn-ic", "aria-hidden": "true" }, icon(it.icon)), h("span", { class: "bn-l", "aria-hidden": "true" }, it.label));
+}
+function closeBnSheet(focus) {
+  const sh = $("#bn-sheet"), mb = $("#bn-more"); if (!sh || sh.hidden) return;
+  sh.hidden = true; mb?.setAttribute("aria-expanded", "false"); document.body.classList.remove("bn-sheet-open");
+  if (focus) mb?.focus();
+}
+function buildBottomNav() {
+  const bn = $("#bn"); if (!bn) return;
+  bn.textContent = ""; $("#bn-sheet")?.remove();
+  const prim = NAVITEMS.filter(it => it.bn), rest = NAVITEMS.filter(it => !it.bn);
+  for (const it of prim) bn.append(bnItem(it, "bn-i"));
+  if (!rest.length) return;
+  const sheet = h("div", { class: "bn-sheet", id: "bn-sheet", role: "dialog", "aria-label": "עוד יעדים", hidden: "" },
+    h("div", { class: "bn-sheet-h" }, h("b", null, "עוד"), h("button", { type: "button", class: "bn-x", "aria-label": "סגירה", onclick: () => closeBnSheet(true) }, icon("n-close"))),
+    h("div", { class: "bn-grid" }, ...rest.map(it => bnItem(it, "bn-i bn-s"))));
+  const more = h("button", { type: "button", class: "bn-i bn-more", id: "bn-more", "data-wired": "1", "aria-label": "עוד יעדים", "aria-haspopup": "dialog", "aria-expanded": "false", "aria-controls": "bn-sheet",
+    onclick: () => { if (!sheet.hidden) return closeBnSheet(); sheet.hidden = false; more.setAttribute("aria-expanded", "true"); document.body.classList.add("bn-sheet-open"); sheet.querySelector("a,button:not(.bn-x)")?.focus(); } },
+    h("span", { class: "bn-ic", "aria-hidden": "true" }, icon("n-more")), h("span", { class: "bn-l", "aria-hidden": "true" }, "עוד"));
+  bn.append(more); bn.closest(".bottombar")?.append(sheet);
+  document.addEventListener("keydown", e => { if (e.key === "Escape" && !sheet.hidden) { e.stopPropagation(); closeBnSheet(true); } }, true);
+  document.addEventListener("click", e => { if (!sheet.hidden && !sheet.contains(e.target) && !more.contains(e.target)) closeBnSheet(); });
+  window.addEventListener("hashchange", () => closeBnSheet());
 }
 function updateChrome() {
   const cur = viewToNav(R.view);
