@@ -16,7 +16,12 @@
         if (k === "class") el.className = v;
         else if (k === "html") el.innerHTML = v;
         else if (k.startsWith("on") && typeof v === "function") el.addEventListener(k.slice(2), v);
-        else if (k === "style" && typeof v === "object") Object.assign(el.style, v);
+        else if (k === "style" && typeof v === "object") {
+          for (const [sk, sv] of Object.entries(v)) {
+            if (sk.startsWith("--")) el.style.setProperty(sk, sv);
+            else el.style[sk] = sv;
+          }
+        }
         else el.setAttribute(k, v === true ? "" : v);
       }
     }
@@ -39,7 +44,27 @@
   const sef = data.sefaria;
   const qa = data.qa;
 
-  document.getElementById("sys-updated").textContent = "עודכן: " + data.generated_label;
+  const upd = document.getElementById("sys-updated");
+  upd.textContent = "עודכן: " + data.generated_label;
+  const ageH = (Date.now() - Date.parse(data.generated)) / 3600000;
+  if (ageH > 6) {
+    upd.append(" ", h("span", { class: "badge progress" }, "הנתונים לא רועננו " + Math.floor(ageH) + " שעות"));
+  }
+
+  const pipe = data.pipeline || [];
+  const pipeCards = pipe.map((r) => h("article", { class: "card pipe-card" },
+    h("h3", null, r.label),
+    h("div", { class: "tot-num" }, r.pct.toLocaleString("he-IL") + "%", h("small", null, fmt(r.done) + " מתוך " + fmt(r.total))),
+    h("div", { class: "bar" + (r.status === "done" ? " final" : ""), style: { "--val": r.pct + "%" }, role: "progressbar", "aria-valuemin": "0", "aria-valuemax": "100", "aria-valuenow": String(r.pct), "aria-label": r.label + ": " + r.pct + "%" }, h("i")),
+    h("p", { class: "tot-note" }, h("span", { class: "badge " + (r.status === "done" ? "final" : "progress") }, r.status_label), " ", r.note || "", r.as_of ? " (מונה מ־" + r.as_of + ")" : "")
+  ));
+  const subQa = data.qa_subscription;
+  const subQaCards = subQa ? subQa.strata.map((s) => h("article", { class: "card qa-card" },
+    h("h3", null, s.label),
+    h("div", { class: "pct" }, s.agree_pct.toLocaleString("he-IL") + "%"),
+    h("p", null, "הסכמה במדגם: ", fmt(s.agree), " מתוך ", fmt(s.n)),
+    h("p", null, h("span", { class: "badge review" }, subQa.status_label))
+  )) : [];
 
   const covBody = cov.rows.map((row) => {
     const isFinal = row.status === "final";
@@ -135,11 +160,16 @@
     h("td", null, (t.licenses || []).join(", ") || "—")
   ));
 
-  root.append(
+  root.append(...[
+    pipe.length ? h("section", { "aria-labelledby": "h-pipe" },
+      h("h2", { id: "h-pipe" }, "מה רץ עכשיו"),
+      h("p", { class: "sec-lead" }, "העבודות הפעילות במערכת, עם המספרים מהקבצים שלהן."),
+      h("div", { class: "qa-grid pipe-grid" }, pipeCards)
+    ) : null,
     h("p", { class: "sys-lead" }, "עמוד זה מציג את התקדמות בניית מפת הקישורים בין המקורות, את קליטת הטקסט הפתוח מספריא, ואת שיעורי ההסכמה בבקרת האיכות. מוצגים מספרים מצטברים ושמות יצירות בלבד, בלי טקסט המקורות."),
     h("section", { "aria-labelledby": "h-cov" },
       h("h2", { id: "h-cov" }, "קישור הפניות"),
-      h("p", { class: "sec-lead" }, "כל הפניה בכתבי האדמו״רים מחוברת, כשאפשר, אל היחידה שהיא מצביעה עליה בעץ. אצל אדמו״ר הזקן הריצה הסתיימה. אצל שאר האדמו״רים הריצה הזולה עדיין בתהליך."),
+      h("p", { class: "sec-lead" }, "כל הפניה בכתבי האדמו״רים מחוברת, כשאפשר, אל היחידה שהיא מצביעה עליה בעץ. אצל אדמו״ר הזקן הריצה הסתיימה. אצל שאר האדמו״רים ההכרעות עוברות עכשיו בדיקה חוזרת."),
       h("div", { class: "sys-grid cov-grid" },
         h("div", { class: "card" }, covTable),
         h("div", { class: "card tot-card" },
@@ -182,7 +212,9 @@
     h("section", { "aria-labelledby": "h-qa" },
       h("h2", { id: "h-qa" }, "בקרת איכות"),
       h("p", { class: "sec-lead" }, qa.scope + ". שיעורי ההסכמה האלה ממתינים לבדיקה נוספת של מודל שלישי, ועדיין אינם סופיים."),
-      h("div", { class: "qa-grid" }, qaCards)
+      h("div", { class: "qa-grid" }, qaCards),
+      subQa ? h("p", { class: "sec-lead" }, subQa.scope + ". בגלל ההסכמה הנמוכה רצה עכשיו בדיקה חוזרת עם טקסט ה־OCR של העמוד.") : null,
+      subQa ? h("div", { class: "qa-grid" }, subQaCards) : null
     )
-  );
+  ].filter(Boolean));
 })();

@@ -109,9 +109,34 @@ def _iter_jsonl(path: Path):
                 yield json.loads(line)
 
 
+def _first(root: Path, *rels: str) -> Path:
+    """Newest pipeline output first; older files stay as fallbacks."""
+    for rel in rels:
+        if (root / rel).exists():
+            return root / rel
+    raise FileNotFoundError(rels[-1])
+
+
+def _ocr_progress(root: Path) -> dict | None:
+    # Optional live counter written by the box monitor; falls back to the last merge.
+    for rel in ("ops/wp007/ocr_readjudicate/PROGRESS_PUBLIC.json", "ops/wp007/ocr_readjudicate/MERGE_OCR_SUMMARY.json"):
+        path = root / rel
+        if path.exists():
+            d = _load(path)
+            done = int(d.get("answered") or 0)
+            total = int(d.get("total") or (done + int(d.get("remaining") or 0)))
+            if total:
+                as_of = datetime.fromtimestamp(path.stat().st_mtime, TZ).strftime("%d.%m %H:%M")
+                return {"done": done, "total": total, "pct": _pct(done, total), "as_of": as_of}
+    return None
+
+
 def build_coverage(root: Path) -> dict:
-    adhz_summary = _load(root / "ops/wp007/SUMMARY_adhz_v2.json")
-    rest_summary = _load(root / "run_wp007_rest/SUMMARY_rules.json")
+    adhz_summary = _load(_first(root, "ops/wp007/SUMMARY_adhz_v3.json", "ops/wp007/SUMMARY_adhz_v2.json"))
+    if "citations" not in adhz_summary and "total" in adhz_summary:
+        adhz_summary["citations"] = adhz_summary["total"]
+    rest_summary = _load(_first(root, "ops/wp007/SUMMARY_rest.json", "run_wp007_rest/SUMMARY_rules.json"))
+    ocr = _ocr_progress(root)
     accept_path = root / "run_wp007_rest/ACCEPT.json"
     accept = _load(accept_path) if accept_path.exists() else {}
 
@@ -146,7 +171,7 @@ def build_coverage(root: Path) -> dict:
                 "total": total,
                 "pct": float(item["pct"]),
                 "status": "in_progress",
-                "status_label": "בתהליך",
+                "status_label": "בבדיקה חוזרת" if ocr and ocr["done"] < ocr["total"] else "בתהליך",
             }
         )
 
@@ -169,19 +194,23 @@ def build_coverage(root: Path) -> dict:
             "status": "in_progress",
             "status_label": "בתהליך",
             "rule_haiku_confirmed": confirmed,
-            "note": f"הקישורים לפי הכללים. Haiku אישר {confirmed:,} מהם; הכרעת המשך עדיין רצה.",
+            "note": (
+                f"שאר האדמו״רים הוכרעו במנויים לפי עמוד וכותרת. בדיקה חוזרת עם טקסט ה־OCR של העמוד רצה עכשיו: {ocr['done']:,} מתוך {ocr['total']:,}."
+                if ocr and ocr["done"] < ocr["total"]
+                else f"הקישורים לפי הכללים. Haiku אישר {confirmed:,} מהם; הכרעת המשך עדיין רצה."
+            ),
         },
     }
 
 
 def build_correlation(root: Path) -> dict:
     counts: dict[str, Counter] = defaultdict(Counter)
-    adhz = root / "ops/wp007/links_adhz_v2.jsonl"
+    adhz = _first(root, "ops/wp007/links_adhz_v3.jsonl", "ops/wp007/links_adhz_v2.jsonl")
     if adhz.exists():
         for rec in _iter_jsonl(adhz):
             work = rec.get("work") or ""
             counts["אדמו״ר הזקן"][work] += 1
-    rest = root / "run_wp007_rest/links_rules.jsonl"
+    rest = _first(root, "ops/wp007/links_rest.jsonl", "run_wp007_rest/links_rules.jsonl")
     if rest.exists():
         for rec in _iter_jsonl(rest):
             rebbe = rec.get("rebbe") or ""
@@ -304,6 +333,65 @@ def build_qa(root: Path) -> dict:
     }
 
 
+def build_subscription_qa(root: Path) -> dict | None:
+    path = root / "ops/wp007/QA_subscription.json"
+    if not path.exists():
+        return None
+    qa = _load(path)
+    strata = qa.get("by_stratum") or {}
+    labels = [("claude:linked", "קישורים של Claude Code"), ("grok:linked", "קישורים של Grok Build"),
+              ("claude:none", "״לא נמצא״ של Claude Code"), ("grok:none", "״לא נמצא״ של Grok Build")]
+    out = []
+    for key, label in labels:
+        s = strata.get(key)
+        if s:
+            out.append({"id": key.replace(":", "_"), "label": label, "agree_pct": s.get("agree_pct"), "agree": s.get("agree"), "n": s.get("n")})
+    return {
+        "scope": "מדגם 5% מהכרעות המנויים אצל שאר האדמו״רים, מול מודל שני",
+        "status": "rechecking",
+        "status_label": "בבדיקה חוזרת עם OCR",
+        "strata": out,
+    }
+
+
+def _fulltext(app_root: Path) -> dict | None:
+    path = app_root / "data/cite-resolutions.js"
+    if not path.exists():
+        return None
+    raw = path.read_text(encoding="utf-8")
+    d = json.loads(raw[raw.index(",") + 1: raw.rindex(")")])
+    ft = (d.get("stats") or {}).get("fulltext") or {}
+    total = len(d.get("byNode") or {}) + len(d.get("byUrl") or {})
+    done = int(ft.get("records_with_text_byNode") or 0) + int(ft.get("records_with_text_byUrl") or 0)
+    return {"done": done, "total": total, "pct": _pct(done, total)} if total else None
+
+
+def build_pipeline(root: Path, app_root: Path) -> list[dict]:
+    """Current work items with real counts, so the page shows what runs now."""
+    rows = []
+    ocr = _ocr_progress(root)
+    if ocr:
+        rows.append({"id": "wp007_ocr", "label": "בדיקה חוזרת של הכרעות הקישור עם טקסט ה־OCR (WP-007)",
+                     **ocr, "status": "running" if ocr["done"] < ocr["total"] else "done",
+                     "status_label": "רץ עכשיו" if ocr["done"] < ocr["total"] else "הסתיים",
+                     "note": "קודם דרך המנויים, והשארית ל־Sonnet בתוך התקרה שאושרה."})
+    ft = _fulltext(app_root)
+    if ft:
+        rows.append({"id": "fulltext", "label": "טקסט מלא בחלון הציטוטים באתר", **ft,
+                     "status": "running" if ft["done"] < ft["total"] else "done",
+                     "status_label": "בתהליך" if ft["done"] < ft["total"] else "הסתיים",
+                     "note": "ספרי קה״ת שזמינים רק באוצר החכמה עוד לא נטענו."})
+    chrono_path = root / "ops/chrono/coverage.json"
+    if chrono_path.exists():
+        c = _load(chrono_path)
+        done, total = int(c.get("any_date") or 0), int(c.get("units") or 0)
+        if total:
+            rows.append({"id": "chrono", "label": "תאריכים לשיחות, מאמרים ומכתבים (ציר זמן)", "done": done, "total": total,
+                         "pct": _pct(done, total), "status": "running", "status_label": "בתהליך",
+                         "note": f"ליום או לשבת מדויקים: {int(c.get('day_or_shabbat') or 0):,}. השאר ממתין לחילוץ בעזרת AI."})
+    return rows
+
+
 def _assert_safe(obj, path="$"):
     if isinstance(obj, dict):
         for key, value in obj.items():
@@ -317,8 +405,9 @@ def _assert_safe(obj, path="$"):
         raise ValueError(f"oversized string at {path} ({len(obj)} chars)")
 
 
-def build(root: Path) -> dict:
+def build(root: Path, app_root: Path | None = None) -> dict:
     iso, label = _now_label()
+    app_root = app_root or Path(".")
     payload = {
         "generated": iso,
         "generated_label": label,
@@ -327,7 +416,11 @@ def build(root: Path) -> dict:
         "correlation": build_correlation(root),
         "sefaria": build_sefaria(root),
         "qa": build_qa(root),
+        "pipeline": build_pipeline(root, app_root),
     }
+    sub_qa = build_subscription_qa(root)
+    if sub_qa:
+        payload["qa_subscription"] = sub_qa
     _assert_safe(payload)
     return payload
 
@@ -362,7 +455,7 @@ def main(argv: list[str] | None = None) -> int:
     if not root.exists():
         print(f"data root not found: {root}", file=sys.stderr)
         return 2
-    payload = build(root)
+    payload = build(root, args.out.resolve().parent.parent)
     write_payload(payload, args.out)
     print(f"wrote {args.out} and {args.out.with_suffix('.js')}")
     return 0

@@ -106,8 +106,11 @@ def check_status_json() -> None:
         if missing:
             raise SystemExit(f"coverage row missing {missing}")
         if row["name"] == "אדמו״ר הזקן":
-            if row["linked"] != 8390 or row["total"] != 9542 or row["status"] != "final":
-                raise SystemExit("Adah\"z coverage must stay 8,390/9,542 final unless intentionally updated")
+            # Finalized run: total is fixed; later reviews may only add links (8,390 -> 8,426 after the Sonnet retry).
+            if not 8390 <= row["linked"] <= 9542 or row["total"] != 9542 or row["status"] != "final":
+                raise SystemExit("Adah\"z coverage must stay final, 9,542 citations, linked >= 8,390")
+        elif not 0 <= row["linked"] <= row["total"]:
+            raise SystemExit(f"{row['name']} linked count out of range")
         elif row["status"] != "in_progress":
             raise SystemExit(f"{row['name']} must be marked in_progress until finalized")
     qa = {s["id"]: s for s in data["qa"]["strata"]}
@@ -140,6 +143,8 @@ def check_status_html() -> None:
         raise SystemExit("status.html must keep the draft banner")
     if 'id="sys-root"' not in raw:
         raise SystemExit("status.html is missing the status root")
+    if 'class="bottombar' not in raw or 'id="bn"' not in raw:
+        raise SystemExit("status.html must keep the mobile bottom navigation bar")
     if parser.errors:
         raise SystemExit("; ".join(parser.errors))
 
