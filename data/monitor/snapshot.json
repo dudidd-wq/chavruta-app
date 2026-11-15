@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-14T20:32:59+00:00",
+ "generated_at": "2026-11-15T11:57:23+00:00",
  "sources": [
   {
    "id": "chabadlibrary",
@@ -12,7 +12,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-11-14T20:31:44+00:00",
+   "checked_at": "2026-11-15T11:56:09+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -30,7 +30,7 @@
     "primary",
     "whatsnew"
    ],
-   "checked_at": "2026-11-14T20:31:44+00:00",
+   "checked_at": "2026-11-15T11:56:09+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -47,7 +47,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-11-14T20:31:44+00:00",
+   "checked_at": "2026-11-15T11:56:09+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -64,7 +64,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-11-14T20:31:44+00:00",
+   "checked_at": "2026-11-15T11:56:09+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -82,7 +82,7 @@
     "primary",
     "whatsnew"
    ],
-   "checked_at": "2026-11-14T20:31:44+00:00",
+   "checked_at": "2026-11-15T11:56:09+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -102,7 +102,7 @@
     }
    ],
    "total": 132,
-   "last_success_at": "2026-11-14T20:31:44+00:00"
+   "last_success_at": "2026-11-15T11:56:09+00:00"
   },
   {
    "id": "chabadlibrarybooks",
@@ -115,7 +115,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-11-14T20:31:44+00:00",
+   "checked_at": "2026-11-15T11:56:09+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -133,12 +133,12 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-14T20:31:44+00:00",
+   "checked_at": "2026-11-15T11:56:09+00:00",
    "status": "ok",
    "new": [],
    "latest": [],
    "total": 1501,
-   "last_success_at": "2026-11-14T20:31:44+00:00"
+   "last_success_at": "2026-11-15T11:56:09+00:00"
   },
   {
    "id": "chassidut_org",
@@ -152,12 +152,12 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-14T20:31:46+00:00",
+   "checked_at": "2026-11-15T11:56:11+00:00",
    "status": "ok",
    "new": [],
    "latest": [],
    "total": 4,
-   "last_success_at": "2026-11-14T20:31:46+00:00"
+   "last_success_at": "2026-11-15T11:56:11+00:00"
   },
   {
    "id": "biurim",
@@ -171,7 +171,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-14T20:31:47+00:00",
+   "checked_at": "2026-11-15T11:56:12+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -217,7 +217,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-14T20:31:47+00:00"
+   "last_success_at": "2026-11-15T11:56:12+00:00"
   },
   {
    "id": "hm_monsey",
@@ -231,7 +231,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-14T20:31:49+00:00",
+   "checked_at": "2026-11-15T11:56:14+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -317,7 +317,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-14T20:31:49+00:00"
+   "last_success_at": "2026-11-15T11:56:14+00:00"
   },
   {
    "id": "hiskashrus",
@@ -331,7 +331,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-14T20:31:51+00:00",
+   "checked_at": "2026-11-15T11:56:15+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -407,7 +407,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-14T20:31:51+00:00"
+   "last_success_at": "2026-11-15T11:56:15+00:00"
   },
   {
    "id": "lichyot_chassidus",
@@ -421,7 +421,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-14T20:31:52+00:00",
+   "checked_at": "2026-11-15T11:56:17+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -563,7 +563,7 @@
     }
    ],
    "total": 1000,
-   "last_success_at": "2026-11-14T20:31:52+00:00"
+   "last_success_at": "2026-11-15T11:56:17+00:00"
   },
   {
    "id": "chabadzoom",
@@ -577,7 +577,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-14T20:31:55+00:00",
+   "checked_at": "2026-11-15T11:56:18+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -702,7 +702,7 @@
     }
    ],
    "total": 563,
-   "last_success_at": "2026-11-14T20:31:55+00:00"
+   "last_success_at": "2026-11-15T11:56:18+00:00"
   },
   {
    "id": "kovtzimdrive",
@@ -716,7 +716,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-14T20:31:58+00:00",
+   "checked_at": "2026-11-15T11:56:21+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -724,12 +724,12 @@
      "id": "https://www.kovtzimdrive.com/posts/bochurim-build-database-of-thousands-of-%E2%80%98he%E2%80%99aros%E2%80%99",
      "title": "bochurim build database of thousands of ‘he’aros’",
      "url": "https://www.kovtzimdrive.com/posts/bochurim-build-database-of-thousands-of-%E2%80%98he%E2%80%99aros%E2%80%99",
-     "date": "2026-11-14",
+     "date": "2026-11-11",
      "first_seen": "2026-10-20T07:59:38+00:00"
     }
    ],
    "total": 1,
-   "last_success_at": "2026-11-14T20:31:58+00:00"
+   "last_success_at": "2026-11-15T11:56:21+00:00"
   },
   {
    "id": "avita",
@@ -743,7 +743,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-14T20:32:01+00:00",
+   "checked_at": "2026-11-15T11:56:23+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -761,7 +761,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-14T20:32:01+00:00",
+   "checked_at": "2026-11-15T11:56:23+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -783,7 +783,7 @@
     }
    ],
    "total": 2,
-   "last_success_at": "2026-11-14T20:32:01+00:00"
+   "last_success_at": "2026-11-15T11:56:23+00:00"
   },
   {
    "id": "dvarmalchus770",
@@ -797,10 +797,27 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-14T20:32:03+00:00",
+   "checked_at": "2026-11-15T11:56:24+00:00",
    "status": "ok",
-   "new": [],
+   "new": [
+    {
+     "id": "http://dvarmalchus770.org/?p=5711",
+     "title": "Vayetzei 5752: We Need Only to Open the Eyes",
+     "url": "https://dvarmalchus770.org/2026/11/14/vayetzei-5752-we-need-only-to-open-the-eyes-2/",
+     "date": "Sat, 14 Nov 2026 23:09:00 +0000",
+     "blurb": "Thos sicha was said on Shabbos Vayeitze, which corresponded in 5752 to the 9th of Kislev, the birthday and hillula (day of passing) of the Mitteler Rebbe, the 2nd Rebbe of Chabad. The Alter Rebbe, his father, represented the attribute of Chochma (wisdom), and his son the Mitteler Rebbe represents the attribute of Bina (understanding). Just as Bina […]",
+     "first_seen": "2026-11-15T11:56:24+00:00"
+    }
+   ],
    "latest": [
+    {
+     "id": "http://dvarmalchus770.org/?p=5711",
+     "title": "Vayetzei 5752: We Need Only to Open the Eyes",
+     "url": "https://dvarmalchus770.org/2026/11/14/vayetzei-5752-we-need-only-to-open-the-eyes-2/",
+     "date": "Sat, 14 Nov 2026 23:09:00 +0000",
+     "blurb": "Thos sicha was said on Shabbos Vayeitze, which corresponded in 5752 to the 9th of Kislev, the birthday and hillula (day of passing) of the Mitteler Rebbe, the 2nd Rebbe of Chabad. The Alter Rebbe, his father, represented the attribute of Chochma (wisdom), and his son the Mitteler Rebbe represents the attribute of Bina (understanding). Just as Bina […]",
+     "first_seen": "2026-11-15T11:56:24+00:00"
+    },
     {
      "id": "http://dvarmalchus770.org/?p=5710",
      "title": "15) Kuntres Rosh Chodesh Kislev, 5752: Great is the Effort From Below",
@@ -923,7 +940,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-14T20:32:03+00:00"
+   "last_success_at": "2026-11-15T11:56:24+00:00"
   },
   {
    "id": "soulwords",
@@ -937,7 +954,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-14T20:32:04+00:00",
+   "checked_at": "2026-11-15T11:56:26+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1007,7 +1024,7 @@
     }
    ],
    "total": 0,
-   "last_success_at": "2026-11-14T20:32:04+00:00"
+   "last_success_at": "2026-11-15T11:56:26+00:00"
   },
   {
    "id": "sie_weekly",
@@ -1021,7 +1038,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-14T20:32:06+00:00",
+   "checked_at": "2026-11-15T11:56:27+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1090,7 +1107,7 @@
     }
    ],
    "total": 117,
-   "last_success_at": "2026-11-14T20:32:06+00:00"
+   "last_success_at": "2026-11-15T11:56:27+00:00"
   },
   {
    "id": "pls",
@@ -1104,7 +1121,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-14T20:32:08+00:00",
+   "checked_at": "2026-11-15T11:56:29+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1238,7 +1255,7 @@
     }
    ],
    "total": 200,
-   "last_success_at": "2026-11-14T20:32:08+00:00"
+   "last_success_at": "2026-11-15T11:56:29+00:00"
   },
   {
    "id": "chayenu_ls",
@@ -1252,7 +1269,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-14T20:32:09+00:00",
+   "checked_at": "2026-11-15T11:56:30+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1279,7 +1296,7 @@
     }
    ],
    "total": 2,
-   "last_success_at": "2026-11-14T20:32:09+00:00"
+   "last_success_at": "2026-11-15T11:56:30+00:00"
   },
   {
    "id": "weekly_sicha",
@@ -1293,7 +1310,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-14T20:32:10+00:00",
+   "checked_at": "2026-11-15T11:56:31+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1301,7 +1318,7 @@
      "id": "https://theweeklysicha.org/episode/tws-toldos-87",
      "title": "tws toldos 87",
      "url": "https://theweeklysicha.org/episode/tws-toldos-87",
-     "date": "2026-11-14T04:00:06.957Z",
+     "date": "2026-11-15T03:00:14.100Z",
      "first_seen": "2026-11-13T12:11:10+00:00"
     },
     {
@@ -1362,7 +1379,7 @@
     }
    ],
    "total": 120,
-   "last_success_at": "2026-11-14T20:32:10+00:00"
+   "last_success_at": "2026-11-15T11:56:31+00:00"
   },
   {
    "id": "theyeshiva",
@@ -1376,7 +1393,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-14T20:32:12+00:00",
+   "checked_at": "2026-11-15T11:56:32+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1526,7 +1543,7 @@
     }
    ],
    "total": 1549,
-   "last_success_at": "2026-11-14T20:32:12+00:00"
+   "last_success_at": "2026-11-15T11:56:32+00:00"
   },
   {
    "id": "chassidus_applied",
@@ -1540,24 +1557,24 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-14T20:32:15+00:00",
+   "checked_at": "2026-11-15T11:56:35+00:00",
    "status": "ok",
    "new": [],
    "latest": [
+    {
+     "id": "yt:video:UiT6rVYhjb0",
+     "title": "Chapter 37.04: How Torah and Prayer Transform the Physical",
+     "url": "https://www.youtube.com/watch?v=UiT6rVYhjb0",
+     "date": "2026-11-15T03:00:08+00:00",
+     "blurb": "Chapter 37.03: Transforming Man and the World The Tanya Applied radio show is broadcast every Saturday night, 10–10:30PM ET on WSNR 620 AM – Metro NY area WJPR 1640 AM — Highland Park and Edison, NJ Online: www.talklinenetwork.com By phone: Listen Line: 641-741-0389 Many of us may be familiar with some of the central ideas in Tanya – including the battle of the two souls; what defines man and makes us tick; how we can control our temptations; how we can become more loving; what we can do to curb and harness our vices, like anger, jealousy, and depression; the formula for growth; how we can develop a healthy relationship with G-d; and why we are here. In this 30-minute program, you will learn how these ideas can be applied to your life today. You will discover secrets to a successful life that will transform you and your relationships. Rabbi Simon Jacobson is the best-selling author of Toward a Meaningful Life, and he is the creator of the acclaimed and popular MyLife: Chassidus Applied series, which has empowered and transformed hundreds of thousands through Torah and Chassidus. Now, Rabbi Jacobson brings his vast scholarship and years of experience to Tanya. Please join Rabbi Simon Jacobson for this exhilarating journey into your psyche and soul. You will come away with life-changing practical guidance and direction, addressing all the issues and challenges you face in life. For more info: www.chassidusapplied.com/tanya Music by Zalman Goldstein • www.ChabadMusic.coms of the",
+     "first_seen": "2026-11-14T11:27:23+00:00"
+    },
     {
      "id": "yt:video:HfAwL7uY1Q8",
      "title": "Samach Vav",
      "url": "https://www.youtube.com/watch?v=HfAwL7uY1Q8",
      "date": "2026-11-14T03:56:19+00:00",
-     "blurb": "",
-     "first_seen": "2026-11-14T11:27:23+00:00"
-    },
-    {
-     "id": "yt:video:UiT6rVYhjb0",
-     "title": "Chapter 37.04: How Torah and Prayer Transform the Physical",
-     "url": "https://www.youtube.com/watch?v=UiT6rVYhjb0",
-     "date": "2026-11-13T17:34:39+00:00",
-     "blurb": "Chapter 37.03: Transforming Man and the World The Tanya Applied radio show is broadcast every Saturday night, 10–10:30PM ET on WSNR 620 AM – Metro NY area WJPR 1640 AM — Highland Park and Edison, NJ Online: www.talklinenetwork.com By phone: Listen Line: 641-741-0389 Many of us may be familiar with some of the central ideas in Tanya – including the battle of the two souls; what defines man and makes us tick; how we can control our temptations; how we can become more loving; what we can do to curb and harness our vices, like anger, jealousy, and depression; the formula for growth; how we can develop a healthy relationship with G-d; and why we are here. In this 30-minute program, you will learn how these ideas can be applied to your life today. You will discover secrets to a successful life that will transform you and your relationships. Rabbi Simon Jacobson is the best-selling author of Toward a Meaningful Life, and he is the creator of the acclaimed and popular MyLife: Chassidus Applied series, which has empowered and transformed hundreds of thousands through Torah and Chassidus. Now, Rabbi Jacobson brings his vast scholarship and years of experience to Tanya. Please join Rabbi Simon Jacobson for this exhilarating journey into your psyche and soul. You will come away with life-changing practical guidance and direction, addressing all the issues and challenges you face in life. For more info: www.chassidusapplied.com/tanya Music by Zalman Goldstein • www.ChabadMusic.coms of the",
+     "blurb": "Shuv in Ohr due to Atzmus. Shuv in Atzmus -- seeded and rooted in Atzmus",
      "first_seen": "2026-11-14T11:27:23+00:00"
     },
     {
@@ -1570,7 +1587,7 @@
     },
     {
      "id": "yt:video:mvt-hAfnfzo",
-     "title": "Samach Vav",
+     "title": "Samach Vav Part 244:",
      "url": "https://www.youtube.com/watch?v=mvt-hAfnfzo",
      "date": "2026-11-12T04:00:20+00:00",
      "blurb": "p. 199: Even one who doesn't reach the sight of chochma, also has koach atzmo throughout the day due to his soul not being at peace without Torah and mitzvos. Ratzo -- in ohr, not etzem.",
@@ -1578,10 +1595,10 @@
     },
     {
      "id": "yt:video:Ix2TbEPKBRI",
-     "title": "Samach Vav",
+     "title": "Samach Vav Part 243: Re'iyah results from far more avodah and yegiah b'koach atzmo than ahava rabba",
      "url": "https://www.youtube.com/watch?v=Ix2TbEPKBRI",
      "date": "2026-11-11T03:45:25+00:00",
-     "blurb": "p. 198-199 vision of chochma is connected to avodah, ahava rabba is higher than avodah",
+     "blurb": "Samach Vav p. 198-199: The resonance of re'iyah comes through human effort. It may come suddenly (as a sudden epiphany), not because it's a revelation from above, but because it is a deeper idea that requires a leap (rather than being reached through a progressive process). Or we may say that the re'iyah itself is a revelation, but one that directly grows out of intellectual exertion and sustained focus and concentration. Unlike ahava rabba, which is of a different category than the avodah that precedes it; re'iyah therefore results from far more avodah and yegiah b'koach atzmo than ahava rabba.",
      "first_seen": "2026-11-11T11:52:06+00:00"
     },
     {
@@ -1850,7 +1867,7 @@
     }
    ],
    "total": 15,
-   "last_success_at": "2026-11-14T20:32:15+00:00"
+   "last_success_at": "2026-11-15T11:56:35+00:00"
   },
   {
    "id": "neirot",
@@ -1864,7 +1881,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-14T20:32:15+00:00",
+   "checked_at": "2026-11-15T11:56:35+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1918,7 +1935,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-14T20:32:15+00:00"
+   "last_success_at": "2026-11-15T11:56:35+00:00"
   },
   {
    "id": "chassidus_explained",
@@ -1932,7 +1949,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-14T20:32:18+00:00",
+   "checked_at": "2026-11-15T11:56:38+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1994,7 +2011,7 @@
     }
    ],
    "total": 136,
-   "last_success_at": "2026-11-14T20:32:18+00:00"
+   "last_success_at": "2026-11-15T11:56:38+00:00"
   },
   {
    "id": "melukat",
@@ -2008,7 +2025,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-14T20:32:19+00:00",
+   "checked_at": "2026-11-15T11:56:39+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2070,7 +2087,7 @@
     }
    ],
    "total": 168,
-   "last_success_at": "2026-11-14T20:32:19+00:00"
+   "last_success_at": "2026-11-15T11:56:39+00:00"
   },
   {
    "id": "daily_maamar",
@@ -2084,10 +2101,27 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-14T20:32:21+00:00",
+   "checked_at": "2026-11-15T11:56:41+00:00",
    "status": "ok",
-   "new": [],
+   "new": [
+    {
+     "id": "668e5fa8-5378-421c-ac4d-5cf6d91e6de0",
+     "title": "Shabbos Parshas Vayishlach 13 Kislev 5727, Toras Menachem, Vol. 48 – Episode 4",
+     "url": "https://share.transistor.fm/s/8b66a51c",
+     "date": "Sat, 14 Nov 2026 20:34:23 -0500",
+     "blurb": "This episode covers from Chapter 4 through the end of the Maamar. The Chosson's Aliyah before the wedding, setting up the creative energy o build a new world.",
+     "first_seen": "2026-11-15T11:56:41+00:00"
+    }
+   ],
    "latest": [
+    {
+     "id": "668e5fa8-5378-421c-ac4d-5cf6d91e6de0",
+     "title": "Shabbos Parshas Vayishlach 13 Kislev 5727, Toras Menachem, Vol. 48 – Episode 4",
+     "url": "https://share.transistor.fm/s/8b66a51c",
+     "date": "Sat, 14 Nov 2026 20:34:23 -0500",
+     "blurb": "This episode covers from Chapter 4 through the end of the Maamar. The Chosson's Aliyah before the wedding, setting up the creative energy o build a new world.",
+     "first_seen": "2026-11-15T11:56:41+00:00"
+    },
     {
      "id": "7cf520bb-24f1-48cb-9e13-3f840234e58a",
      "title": "Shabbos Parshas Vayishlach 13 Kislev 5727, Toras Menachem, Vol. 48 – Episode 3",
@@ -2321,8 +2355,8 @@
      "first_seen": "2026-10-18T04:52:03+00:00"
     }
    ],
-   "total": 364,
-   "last_success_at": "2026-11-14T20:32:21+00:00"
+   "total": 365,
+   "last_success_at": "2026-11-15T11:56:41+00:00"
   },
   {
    "id": "wellsprings",
@@ -2336,7 +2370,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-14T20:32:22+00:00",
+   "checked_at": "2026-11-15T11:56:42+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2382,7 +2416,7 @@
     }
    ],
    "total": 125,
-   "last_success_at": "2026-11-14T20:32:22+00:00"
+   "last_success_at": "2026-11-15T11:56:42+00:00"
   },
   {
    "id": "daily_sicha",
@@ -2396,10 +2430,27 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-14T20:32:23+00:00",
+   "checked_at": "2026-11-15T11:56:43+00:00",
    "status": "ok",
-   "new": [],
+   "new": [
+    {
+     "id": "2026.11.15",
+     "title": "יום א' פ' ויצא, ה' כסלו, ה'תשפ\"ז",
+     "url": "",
+     "date": "Sun, 15 Nov 2026 12:00:00 GMT",
+     "blurb": "התוכן עפ\"י הפס\"ד ש\"כל פינות שאתה פונה לא יהו אלא דרך ימין \" צ\"ל הסדר בפסוק [ראשון דפ' ויצא] \"ופרצת ימה וקדמה וצפונה ונגבה\" – מערב, מזרח, צפון ודרום – ימין בסוף ! והביאור: כאן מדובר במצב שנדרשת העבודה באופן של \" ופרצת \" – למעלה מסדר והדרגה , והוא, כאשר א' חטא ופגם ועבר את הדרך שאצלו העבודה היא לא באופן של סדר והדרגה (שאז ימין קודם) אלא באופן של \" דילוג \" מן הקצה אל הקצה – עבודת התשובה , וזהו הסדר בפסוק: כאשר צר לו מאוד מזה שנמצא ב\" מערב \" – מלשון ערב ולילה, ור\"ת \" ר חל מ בכה ע ל ב ני' כי איננו \" – אין גילוי אלקות בנפשו, ה\"ה \" מדלג \" מן הקצה אל הקצה – מ\" ימה \" ל\" קדמה \" – קדמונו של עולם, ומתחיל עבודתו עם \" צפונה \" ( שמאל וגבורה ) – סייגים וגדרים (שנצרך לבעל-תשובה וכו'), ואז מגיע ל\" ונגבה \" – הלוך ונסוע הנגבה \" – עד חסד דעתיק וכו'. א' השיחות דהתוועדות י\"ב תמוז ה'תשכ\"ג ל\"הנחה פרטית\" או התרגום ללה\"ק של השיחה: https://thedailysicha.com/?date=15-11-2026 Synopsis Based on the rule that “Whenever you turn, you should turn only toward the right ,” the directions in the verse (in rishon of Parashas Vayetzei), “you will spread out powerfully to the west, to the east, to the north, and to the south” are seemingly out of order. The explanation is that the verse is speaking about the service of “ spreading out ,” where a person has sinned etc. and he must rise above the normal order and jump from one extreme to the other – the service of teshuvah . This explains the order in the verse: When a person is deeply distressed by the fact that he finds himself in the “ west ” (ma’arav, associated ",
+     "first_seen": "2026-11-15T11:56:43+00:00"
+    }
+   ],
    "latest": [
+    {
+     "id": "2026.11.15",
+     "title": "יום א' פ' ויצא, ה' כסלו, ה'תשפ\"ז",
+     "url": "",
+     "date": "Sun, 15 Nov 2026 12:00:00 GMT",
+     "blurb": "התוכן עפ\"י הפס\"ד ש\"כל פינות שאתה פונה לא יהו אלא דרך ימין \" צ\"ל הסדר בפסוק [ראשון דפ' ויצא] \"ופרצת ימה וקדמה וצפונה ונגבה\" – מערב, מזרח, צפון ודרום – ימין בסוף ! והביאור: כאן מדובר במצב שנדרשת העבודה באופן של \" ופרצת \" – למעלה מסדר והדרגה , והוא, כאשר א' חטא ופגם ועבר את הדרך שאצלו העבודה היא לא באופן של סדר והדרגה (שאז ימין קודם) אלא באופן של \" דילוג \" מן הקצה אל הקצה – עבודת התשובה , וזהו הסדר בפסוק: כאשר צר לו מאוד מזה שנמצא ב\" מערב \" – מלשון ערב ולילה, ור\"ת \" ר חל מ בכה ע ל ב ני' כי איננו \" – אין גילוי אלקות בנפשו, ה\"ה \" מדלג \" מן הקצה אל הקצה – מ\" ימה \" ל\" קדמה \" – קדמונו של עולם, ומתחיל עבודתו עם \" צפונה \" ( שמאל וגבורה ) – סייגים וגדרים (שנצרך לבעל-תשובה וכו'), ואז מגיע ל\" ונגבה \" – הלוך ונסוע הנגבה \" – עד חסד דעתיק וכו'. א' השיחות דהתוועדות י\"ב תמוז ה'תשכ\"ג ל\"הנחה פרטית\" או התרגום ללה\"ק של השיחה: https://thedailysicha.com/?date=15-11-2026 Synopsis Based on the rule that “Whenever you turn, you should turn only toward the right ,” the directions in the verse (in rishon of Parashas Vayetzei), “you will spread out powerfully to the west, to the east, to the north, and to the south” are seemingly out of order. The explanation is that the verse is speaking about the service of “ spreading out ,” where a person has sinned etc. and he must rise above the normal order and jump from one extreme to the other – the service of teshuvah . This explains the order in the verse: When a person is deeply distressed by the fact that he finds himself in the “ west ” (ma’arav, associated ",
+     "first_seen": "2026-11-15T11:56:43+00:00"
+    },
     {
      "id": "2026.11.13",
      "title": "יום ועש\"ק פ' תולדות, ג' כסלו, ה'תשפ\"ז",
@@ -2625,8 +2676,8 @@
      "first_seen": "2026-10-18T04:52:06+00:00"
     }
    ],
-   "total": 1427,
-   "last_success_at": "2026-11-14T20:32:23+00:00"
+   "total": 1428,
+   "last_success_at": "2026-11-15T11:56:43+00:00"
   },
   {
    "id": "learnchassidus",
@@ -2640,7 +2691,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-14T20:32:29+00:00",
+   "checked_at": "2026-11-15T11:56:47+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2653,7 +2704,7 @@
     }
    ],
    "total": 5,
-   "last_success_at": "2026-11-14T20:32:29+00:00"
+   "last_success_at": "2026-11-15T11:56:47+00:00"
   },
   {
    "id": "simplychassidus",
@@ -2667,7 +2718,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-14T20:32:29+00:00",
+   "checked_at": "2026-11-15T11:56:51+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2694,7 +2745,7 @@
     }
    ],
    "total": 4,
-   "last_success_at": "2026-11-14T20:32:29+00:00"
+   "last_success_at": "2026-11-15T11:56:51+00:00"
   },
   {
    "id": "alonei_chabad",
@@ -2707,7 +2758,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-14T20:32:31+00:00",
+   "checked_at": "2026-11-15T11:56:53+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -2724,7 +2775,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-14T20:32:31+00:00",
+   "checked_at": "2026-11-15T11:56:53+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -2741,7 +2792,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-14T20:32:31+00:00",
+   "checked_at": "2026-11-15T11:56:53+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2768,7 +2819,7 @@
     }
    ],
    "total": 303,
-   "last_success_at": "2026-11-14T20:32:31+00:00"
+   "last_success_at": "2026-11-15T11:56:53+00:00"
   },
   {
    "id": "lchaim",
@@ -2781,7 +2832,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-14T20:32:32+00:00",
+   "checked_at": "2026-11-15T11:56:54+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2850,7 +2901,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-14T20:32:32+00:00"
+   "last_success_at": "2026-11-15T11:56:54+00:00"
   },
   {
    "id": "one_point",
@@ -2863,7 +2914,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-14T20:32:33+00:00",
+   "checked_at": "2026-11-15T11:56:55+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2904,7 +2955,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-14T20:32:33+00:00"
+   "last_success_at": "2026-11-15T11:56:55+00:00"
   },
   {
    "id": "derher",
@@ -2917,7 +2968,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-14T20:32:34+00:00",
+   "checked_at": "2026-11-15T11:56:56+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -2934,7 +2985,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-14T20:32:34+00:00",
+   "checked_at": "2026-11-15T11:56:56+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -2951,7 +3002,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-14T20:32:34+00:00",
+   "checked_at": "2026-11-15T11:56:56+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -3027,7 +3078,7 @@
     }
    ],
    "total": 1,
-   "last_success_at": "2026-11-14T20:32:34+00:00"
+   "last_success_at": "2026-11-15T11:56:56+00:00"
   },
   {
    "id": "maynotecha_inst",
@@ -3040,7 +3091,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-14T20:32:36+00:00",
+   "checked_at": "2026-11-15T11:56:58+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -3057,7 +3108,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-14T20:32:36+00:00",
+   "checked_at": "2026-11-15T11:56:58+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -3094,8 +3145,8 @@
      "first_seen": "2026-10-22T05:10:29+00:00"
     }
    ],
-   "total": 2,
-   "last_success_at": "2026-11-14T20:32:36+00:00"
+   "total": 0,
+   "last_success_at": "2026-11-15T11:56:58+00:00"
   },
   {
    "id": "anash",
@@ -3108,7 +3159,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-14T20:32:37+00:00",
+   "checked_at": "2026-11-15T11:56:59+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -3116,7 +3167,7 @@
      "id": "https://anash.org/?p=1130977",
      "title": "Before Drawing Conclusions From the Rebbe’s Letters…",
      "url": "https://anash.org/before-drawing-conclusions-from-the-rebbes-letters/",
-     "date": "Fri, 13 Nov 2026 01:35:48 +0000",
+     "date": "Fri, 13 Nov 2026 14:03:48 +0000",
      "blurb": "When the Rebbe says something at a Farbrengen, and certainly when the Rebbe writes to a specific person or entity, it must be taken in the right context and background. A Shliach wanted to make a teen hub for teenagers who would likely never attend a regular program. What would this hub be for? What would its hours be? Who would it be open to? What would be done there? All of this is not said.",
      "first_seen": "2026-11-13T12:12:22+00:00"
     },
@@ -3441,8 +3492,8 @@
      "first_seen": "2026-10-18T04:52:22+00:00"
     }
    ],
-   "total": 6,
-   "last_success_at": "2026-11-14T20:32:37+00:00"
+   "total": 4,
+   "last_success_at": "2026-11-15T11:56:59+00:00"
   },
   {
    "id": "collive",
@@ -3455,7 +3506,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-14T20:32:39+00:00",
+   "checked_at": "2026-11-15T11:57:01+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -3472,7 +3523,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-14T20:32:39+00:00",
+   "checked_at": "2026-11-15T11:57:01+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -3489,12 +3540,12 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-14T20:32:39+00:00",
-   "status": "baseline",
+   "checked_at": "2026-11-15T11:57:01+00:00",
+   "status": "ok",
    "new": [],
    "latest": [],
    "total": 20,
-   "last_success_at": "2026-11-14T20:32:39+00:00"
+   "last_success_at": "2026-11-15T11:57:01+00:00"
   },
   {
    "id": "abc770",
@@ -3507,7 +3558,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-14T20:32:41+00:00",
+   "checked_at": "2026-11-15T11:57:02+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -3553,7 +3604,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-14T20:32:41+00:00"
+   "last_success_at": "2026-11-15T11:57:02+00:00"
   },
   {
    "id": "kehot",
@@ -3566,7 +3617,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-14T20:32:43+00:00",
+   "checked_at": "2026-11-15T11:57:05+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -4276,7 +4327,7 @@
     }
    ],
    "total": 197,
-   "last_success_at": "2026-11-14T20:32:43+00:00"
+   "last_success_at": "2026-11-15T11:57:05+00:00"
   }
  ],
  "browser_checks": {
