@@ -83,7 +83,8 @@
 
   if ("serviceWorker" in navigator) {
     var swUrl = new URL("sw.js", window.location.href);
-    navigator.serviceWorker.register(swUrl).catch(function () { /* registration is optional */ });
+    // Don't reuse a cached sw.js; a new CACHE_VERSION must reach phones on the next visit.
+    navigator.serviceWorker.register(swUrl, { updateViaCache: "none" }).catch(function () { /* registration is optional */ });
   }
 
   if (isStandalone() || wasDismissed()) return;

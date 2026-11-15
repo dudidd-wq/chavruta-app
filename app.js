@@ -5157,9 +5157,14 @@ VIEWS.home = async function (rest, q, ctx) {
   const today = new Date(), wk = weekParsha(today), wks = weekParshas(today), hd = hebDate(today);
   const H = docsOf(S.home);          // פרשת הבית — בלי תלות בפרשה שנבחרה לאחרונה
   const nBiurim = new Set((S.core.docs || []).filter(d => d.kind !== "dorot").map(d => d.id)).size;
-  const learning = await loadChunk("learning").catch(() => null);
+  const [learning, ft] = await Promise.all([
+    loadChunk("learning").catch(() => null),
+    loadChunk("text/index").catch(() => null),
+  ]);
   if (!ctx.alive()) return;
   const nSrc = H.nodes.length + Object.values(site.sources || {}).reduce((a, b) => a + b, 0);
+  const nSeries = ft?.series?.length || 0;
+  const nPages = (ft?.series || []).reduce((a, s) => a + (s.pages || 0), 0);
 
   // שער
   const sin = h("input", { type: "search", name: "q", placeholder: "חיפוש ד״ה, פסוק או מושג…", "aria-label": "חיפוש באתר", autocomplete: "off" });
@@ -5173,7 +5178,14 @@ VIEWS.home = async function (rest, q, ctx) {
     h("form", { class: "h-search", role: "search", onsubmit: e => { e.preventDefault(); const v = sin.value.trim(); go(mkHash(["search"], v ? { q: v } : {})); } },
       icon("i-search"), sin, h("button", { class: "btn primary", type: "submit" }, "חיפוש")),
     h("ul", { class: "h-stats" },
-      [[ps.length, "פרשיות"], [nBiurim, "ביאורים ושרשראות"], [nSrc, "מקורות ממופים"], [site.tree?.units || 0, "יחידות בעץ הידע"]].map(([n, l]) => h("li", null, h("b", null, fmt(n)), h("span", null, l)))),
+      [
+        [ps.length, "פרשיות", mkHash(["home"], {}, { nomode: true })],
+        [nBiurim, "ביאורים ושרשראות", mkHash(["learn"])],
+        nSeries ? [nSeries, "סדרות בספרייה", mkHash(["read"])] : null,
+        nPages ? [nPages, "עמודים לקריאה", mkHash(["read"])] : null,
+        [nSrc, "מקורות ממופים", mkHash(["sources"])],
+        [site.tree?.units || 0, "יחידות בעץ הידע", mkHash(["tree"])],
+      ].filter(Boolean).map(([n, l, href]) => h("li", null, h("a", { href }, h("b", null, fmt(n)), h("span", null, l))))),
     continueLink());
 
   // הפרשיות
@@ -5210,6 +5222,11 @@ VIEWS.home = async function (rest, q, ctx) {
   const newsItems = freshFeed ? freshNewsItems(freshFeed) : [];
   const N = { generated: (freshFeed?.generated || "").slice(0, 10), n: newsItems.length, sources: freshFeed?.sources || 0, top: newsItems }, T = site.tree || {};
   const trio = h("section", { class: "h-sec h-trio", "aria-label": "עוד בחברותא" },
+    h("article", { class: "hx" },
+      h("p", { class: "hx-k" }, icon("i-read"), "ספרייה"),
+      h("h2", null, h("a", { href: mkHash(["read"]) }, "ספרייה לקריאה באתר")),
+      h("p", null, nSeries ? `${fmt(nSeries)} סדרות, ${fmt(nPages)} עמודים — הטקסט המלא של ספרי היסוד, לשימוש לא מסחרי ובייחוס להוצאה.` : "הטקסט המלא של ספרי היסוד, לקריאה באתר."),
+      h("p", { class: "hx-go" }, h("a", { href: mkHash(["read"]) }, "לספרייה ←"))),
     h("article", { class: "hx" },
       h("p", { class: "hx-k" }, icon("i-sun"), "היום", hd ? h("span", { class: "hx-d" }, hd) : null),
       h("h2", null, h("a", { href: mkHash(["daily"]) }, "לימוד יומי")),
@@ -5252,7 +5269,16 @@ VIEWS.about = async function (rest, q, ctx) {
   const main = $("#view"); main.className = "main page about"; main.textContent = "";
   document.title = "אודות ושיטת העבודה · חברותא";
   const site = (S.core.site || {});
-  const nCh = Object.values(site.chains || {}).reduce((a, x) => a + (x.length || 0), 0);
+  const homeDocs = docsOf(S.home);
+  const nVerse = homeDocs.verse.length, nHomeChains = homeDocs.chain.length;
+  const chainPars = Object.entries(site.chains || {}).filter(([, c]) => c.length);
+  const nCh = chainPars.reduce((a, [, c]) => a + c.length, 0);
+  const chainNames = chainPars.map(([n]) => n);
+  const chainLabel = !chainNames.length ? "בפרשות נוספות" : chainNames.length === 1 ? "בפרשת " + chainNames[0] : "ב" + chainNames.slice(0, -1).join(", ") + " ו" + chainNames.at(-1);
+  const ft = await loadChunk("text/index").catch(() => null);
+  if (!ctx.alive()) return;
+  const nSeries = ft?.series?.length || 0;
+  const nPages = (ft?.series || []).reduce((a, s) => a + (s.pages || 0), 0);
   const P = (...c) => h("p", null, ...c);
   const A = (href, t, ext) => h("a", ext ? { href, target: "_blank", rel: "noopener" } : { href }, t);
   const sec = (id, title, ...body) => h("section", { class: "ab-sec", id }, h("h2", null, title), ...body);
@@ -5271,7 +5297,8 @@ VIEWS.about = async function (rest, q, ctx) {
     h("div", { class: "ab-note", role: "note" }, h("b", null, "חשוב לדעת: "), "זו טיוטה בעבודה. הביאורים נכתבו בסיוע בינה מלאכותית ונבדקו מול המקורות, אבל לא עברו בקרה רבנית או תורנית. אין להסתמך עליהם להלכה או למעשה לפני עיון במקורות עצמם."),
     sec("what", "מה יש באתר",
       h("dl", { class: "ab-dl" },
-        h("dt", null, A(mkHash(["home"], {}, { nomode: true }), "הפרשיות")), h("dd", null, `בפרשת בראשית — ביאור מלא לכל הפסוקים (27 ביאורי פסוק ו־20 שרשראות). מפרשת נח — שרשראות מבוארות (${nCh || 4} עד עכשיו), ופסוקים נוספים בשלב ב׳. בשאר הפרשיות — מיפוי המקורות, לקראת הביאור.`),
+        h("dt", null, A(mkHash(["home"], {}, { nomode: true }), "הפרשיות")), h("dd", null, `בפרשת ${S.home} — ביאור מלא לכל הפסוקים (${nVerse} ביאורי פסוק ו־${nHomeChains} שרשראות). ${chainLabel} — שרשראות מבוארות (${nCh} עד עכשיו). בשאר הפרשיות — מיפוי המקורות, לקראת הביאור.`),
+        h("dt", null, A(mkHash(["read"]), "ספרייה")), h("dd", null, nSeries ? `הטקסט המלא של ספרי היסוד לקריאה באתר: ${nSeries.toLocaleString("he")} סדרות, ${nPages.toLocaleString("he")} עמודים, לשימוש לא מסחרי ובייחוס להוצאה.` : "הטקסט המלא של ספרי היסוד, לקריאה באתר."),
         h("dt", null, "שלושה מצבי קריאה"), h("dd", null, "בפרשת בראשית: קריאה — עמודה אחת והערות בשוליים; קשרים — לכל קטע או ציטוט: מאיפה הוא ומה עוד מתקשר אליו; חקר — שלשלת הדורות, מטריצת פסוק × דורות ומפת המקורות."),
         h("dt", null, A(mkHash(["tree"]), "עץ הידע")), h("dd", null, "קטלוג המיקום של תורת רבותינו נשיאינו — מאמרים, שיחות, אגרות ורשימות — לפי ספר, כרך, עמוד ושנה, עם קישור למקום ברשת."),
         h("dt", null, A(mkHash(["sources"]), "מקורות")), h("dd", null, "כל הפריטים שבמפת פרשת בראשית, עם שנות האמירה, הכתיבה והפרסום, וסינון לפי רבי, סוג וביאור."),
