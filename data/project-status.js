@@ -1,6 +1,6 @@
 window.CHAVRUTA_PROJECT_STATUS = {
-  "generated": "2026-11-15T05:19+02:00",
-  "generated_label": "15.11.2026, 05:19 שעון ישראל",
+  "generated": "2026-11-15T06:49+02:00",
+  "generated_label": "15.11.2026, 06:49 שעון ישראל",
   "timezone": "Asia/Jerusalem",
   "coverage": {
     "rows": [
@@ -20,7 +20,7 @@ window.CHAVRUTA_PROJECT_STATUS = {
         "total": 8277,
         "pct": 70.8,
         "status": "in_progress",
-        "status_label": "בבדיקה חוזרת"
+        "status_label": "בתהליך"
       },
       {
         "id": "אדמו״ר מהר״ש",
@@ -29,7 +29,7 @@ window.CHAVRUTA_PROJECT_STATUS = {
         "total": 4992,
         "pct": 90.3,
         "status": "in_progress",
-        "status_label": "בבדיקה חוזרת"
+        "status_label": "בתהליך"
       },
       {
         "id": "אדמו״ר הרש״ב",
@@ -38,7 +38,7 @@ window.CHAVRUTA_PROJECT_STATUS = {
         "total": 4565,
         "pct": 89.7,
         "status": "in_progress",
-        "status_label": "בבדיקה חוזרת"
+        "status_label": "בתהליך"
       },
       {
         "id": "אדמו״ר הריי״צ",
@@ -47,7 +47,7 @@ window.CHAVRUTA_PROJECT_STATUS = {
         "total": 1781,
         "pct": 79.5,
         "status": "in_progress",
-        "status_label": "בבדיקה חוזרת"
+        "status_label": "בתהליך"
       },
       {
         "id": "הרבי",
@@ -56,7 +56,7 @@ window.CHAVRUTA_PROJECT_STATUS = {
         "total": 11967,
         "pct": 77.7,
         "status": "in_progress",
-        "status_label": "בבדיקה חוזרת"
+        "status_label": "בתהליך"
       }
     ],
     "totals": {
@@ -71,7 +71,7 @@ window.CHAVRUTA_PROJECT_STATUS = {
       "status": "in_progress",
       "status_label": "בתהליך",
       "rule_haiku_confirmed": 7999,
-      "note": "שאר האדמו״רים הוכרעו במנויים לפי עמוד וכותרת. בדיקה חוזרת עם טקסט ה־OCR של העמוד רצה עכשיו: 9,840 מתוך 10,650."
+      "note": "הקישורים לפי הכללים. Haiku אישר 7,999 מהם; הכרעת המשך עדיין רצה."
     }
   },
   "correlation": {
@@ -1206,12 +1206,12 @@ window.CHAVRUTA_PROJECT_STATUS = {
     {
       "id": "wp007_ocr",
       "label": "בדיקה חוזרת של הכרעות הקישור עם טקסט ה־OCR (WP-007)",
-      "done": 9840,
+      "done": 10650,
       "total": 10650,
-      "pct": 92.4,
-      "as_of": "15.11 05:03",
-      "status": "running",
-      "status_label": "רץ עכשיו",
+      "pct": 100.0,
+      "as_of": "15.11 06:01",
+      "status": "done",
+      "status_label": "הסתיים",
       "note": "קודם דרך המנויים, והשארית ל־Sonnet בתוך התקרה שאושרה."
     },
     {
