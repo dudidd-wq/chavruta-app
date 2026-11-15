@@ -486,21 +486,29 @@ function pdfMenu() {
 }
 
 /* ---------- סרגל עליון, מצבים ---------- */
-/* bn: 1 — מופיע בסרגל התחתון בנייד (חמישה לכל היותר); השאר נכנסים לגיליון "עוד". */
+/* bn: 1 — מופיע בסרגל התחתון בנייד; main: false — לא בסרגל העליון (חיפוש קבוע בכלי הסרגל). */
 const NAVITEMS = [
   { id: "home", icon: "n-home", label: "ראשי", bn: 1, href: () => mkHash(["home"]) },
-  { id: "learn", icon: "n-gates", label: "שערי לימוד", href: () => mkHash(["learn"]) },
-  { id: "sources", icon: "n-sources", label: "מקורות", href: () => mkHash(["sources"]) },
-  { id: "tree", icon: "n-tree", label: "עץ הידע", bn: 1, href: () => mkHash(["tree"]) },
-  { id: "topics", icon: "n-topics", label: "מפתח עניינים", href: () => mkHash(["topics"]) },
-  { id: "books", icon: "n-books", label: "ספרים", href: () => mkHash(["books"]) },
-  { id: "read", icon: "n-read", label: "ספרייה", href: () => mkHash(["read"]) },
-  { id: "daily", icon: "n-daily", label: "לימוד יומי", bn: 1, href: () => mkHash(["daily"]) },
-  { id: "new", icon: "n-new", label: "מה חדש", bn: 1, href: () => mkHash(["new"]) },
-  { id: "sysstatus", icon: "n-status", label: "מצב המערכת", href: () => "status.html" },
-  { id: "search", icon: "n-search", label: "חיפוש", bn: 1, act: () => openPalette(), kbd: "/" },
+  { id: "read", icon: "n-read", label: "ספרייה", bn: 1, href: () => mkHash(["read"]) },
+  { id: "learn", icon: "n-gates", label: "ביאורים", bn: 1, href: () => mkHash(["learn"]) },
+  { id: "tree", icon: "n-tree", label: "עץ וזמן", href: () => mkHash(["tree"]) },
+  { id: "topics", icon: "n-topics", label: "מפתח", href: () => mkHash(["topics"]) },
+  { id: "new", icon: "n-new", label: "מה חדש", href: () => mkHash(["new"]) },
+  { id: "search", icon: "n-search", label: "חיפוש", bn: 1, main: false, act: () => openPalette(), kbd: "/" },
 ];
-function viewToNav(v) { return { home: "home", learn: "learn", biurim: "home", biur: "home", parsha: "home", sources: "sources", item: "sources", topics: "topics", books: "books", read: "read", search: "search", new: "new", daily: "daily", tree: R.cur.seg[1] === "p" ? "home" : "tree", status: "", coverage: "", closure: "" }[v] ?? ""; }
+function viewToNav(v) {
+  return {
+    home: "home",
+    read: "read", books: "read",
+    learn: "learn", biurim: "learn", biur: "learn", parsha: "learn",
+    sheets: "learn", daily: "learn", study: "learn", notebook: "learn", saved: "learn",
+    tree: "tree", sources: "tree", item: "tree",
+    topics: "topics",
+    new: "new", later: "new",
+    search: "search",
+    status: "", coverage: "", closure: "", about: "",
+  }[v] ?? "";
+}
 function buildHistoryNavigation() {
   const host = $("#historynav"); if (!host || host.dataset.ready) return;
   host.dataset.ready = "1";
@@ -511,7 +519,7 @@ function buildHistoryNavigation() {
     back.disabled = typeof nav?.canGoBack === "boolean" ? !nav.canGoBack : history.length < 2;
     forward.disabled = typeof nav?.canGoForward === "boolean" ? !nav.canGoForward : false;
   };
-  host.append(back, forward, h("a", { class: "history-topics", "data-nav": "topics", href: mkHash(["topics"]) }, icon("n-topics"), "מפתח עניינים"), h("a", { class: "history-topics history-books", "data-nav": "books", href: mkHash(["books"]) }, icon("n-books"), "ספרים"));
+  host.append(back, forward);
   window.navigation?.addEventListener?.("currententrychange", sync);
   for (const event of ["hashchange", "popstate", "pageshow"]) window.addEventListener(event, sync);
   sync();
@@ -549,7 +557,14 @@ function buildParshaSel() {
 function buildChrome() {
   buildHistoryNavigation();
   const nav = $("#mainnav"); nav.textContent = "";
-  for (const it of NAVITEMS) nav.append(h(it.act ? "button" : "a", { class: "nav-i", "data-nav": it.id, href: it.act ? null : it.href(), onclick: it.act ? it.act : null, title: it.kbd ? "קיצור: " + it.kbd : it.label, "aria-label": it.label }, icon(it.icon), h("span", { class: "lbl", "aria-hidden": "true" }, it.label)));
+  for (const it of NAVITEMS) {
+    if (it.main === false) continue;
+    nav.append(h(it.act ? "button" : "a", { class: "nav-i", "data-nav": it.id, href: it.act ? null : it.href(), onclick: it.act ? it.act : null, title: it.kbd ? "קיצור: " + it.kbd : it.label, "aria-label": it.label }, icon(it.icon), h("span", { class: "lbl", "aria-hidden": "true" }, it.label)));
+  }
+  const tools = $(".tools");
+  if (tools && !tools.querySelector("#search-btn")) {
+    tools.prepend(h("button", { type: "button", class: "tool", id: "search-btn", "aria-label": "חיפוש באתר", title: "חיפוש (קיצור: /)", onclick: () => openPalette() }, icon("n-search"), h("span", { class: "lbl" }, "חיפוש")));
+  }
   buildBottomNav();
   const ms = $("#modesw"); ms.textContent = ""; for (const m of MODES) ms.append(modeBtn(m));
   $("#disp-btn").addEventListener("click", () => { closeMenu(); openReadingPreferences(); });
@@ -3991,7 +4006,7 @@ async function treeBookIds(T, b) {
 }
 
 function treeHead(main, title, crumbs, lede) {
-  const nav = h("nav", { class: "crumbs", "aria-label": "מיקום" }, h("a", { href: mkHash(["tree"]) }, "עץ הידע"));
+  const nav = h("nav", { class: "crumbs", "aria-label": "מיקום" }, h("a", { href: mkHash(["tree"]) }, "עץ וזמן"));
   for (const [t, href] of crumbs) nav.append(h("span", null, "›"), href ? h("a", { href }, t) : h("span", null, t));
   main.append(crumbs.length ? nav : null, h("h1", { class: "page-title" }, title), lede ? h("p", { class: "lede" }, lede) : null);
 }
@@ -4024,9 +4039,10 @@ VIEWS.tree = async function (rest, q, ctx) {
 };
 
 function treeHome(main, T, q) {
-  treeHead(main, "עץ הידע", [], `קטלוג המיקום של תורת רבותינו נשיאינו, מהבעש״ט והמגיד ועד הרבי: ${T.nunits.toLocaleString("he")} יחידות (מאמרים, שיחות, אגרות, רשימות והתוועדויות) ו־${T.series.length} סדרות ספרים. לכל יחידה — ספר, כרך, עמוד ושנה, וקישור למקום שבו היא נמצאת ברשת. העץ נבנה מספריית חב״ד, ממפתחות הכרכים בהיברובוקס, מ־maamarim.com ומקונטרסי קה״ת; רשימת הסדרות והכרכים הושלמה מחב״דפדיה.`);
+  document.title = "עץ וזמן · חברותא";
+  treeHead(main, "עץ וזמן", [], `קטלוג המיקום של תורת רבותינו נשיאינו, מהבעש״ט והמגיד ועד הרבי: ${T.nunits.toLocaleString("he")} יחידות (מאמרים, שיחות, אגרות, רשימות והתוועדויות) ו־${T.series.length} סדרות ספרים. לכל יחידה — ספר, כרך, עמוד ושנה, וקישור למקום שבו היא נמצאת ברשת. העץ נבנה מספריית חב״ד, ממפתחות הכרכים בהיברובוקס, מ־maamarim.com ומקונטרסי קה״ת; רשימת הסדרות והכרכים הושלמה מחב״דפדיה.`);
   main.append(h("p", { class: "card-note" }, `עדכון אחרון: ${T.built.split("-").reverse().join(".")}. מוצגים רישומי הקטלוג והמקורות שנאספו. רישום כרך או קישור לעותק אינם אישור להשלמת המיפוי או הטקסט.`));
-  main.append(h("p", { class: "card-note" }, h("a", { href: mkHash(["learn"]) }, "לימוד לפי תפילה, מאמרי חז״ל, מועדים וסוגיות ←")));
+  main.append(h("p", { class: "card-note" }, "הספרים שלמטה מסודרים מהבעש״ט עד הרבי. ציר זמן מפורט יתווסף כאן בשלב הבא. ", h("a", { href: mkHash(["learn"]) }, "לימוד לפי תפילה, מאמרי חז״ל, מועדים וסוגיות ←")));
   // חיפוש בכותרות
   const inp = h("input", { type: "search", class: "tree-q", placeholder: "חיפוש ד״ה או כותרת בכל העץ…", value: q.get("q") || "", "aria-label": "חיפוש בעץ הידע" });
   const res = h("div", { class: "tree-res" });
@@ -4748,6 +4764,13 @@ function booksCover(T, id, covers) {
   covers.add(host, id); return host;
 }
 VIEWS.books = async function(rest, q, ctx) {
+  if (!rest.length) {
+    const qobj = {};
+    for (const [k, v] of q) if (v) qobj[k] = v;
+    qobj.tab = "editions";
+    go(mkHash(["read"], qobj), true);
+    return;
+  }
   ctx.prevCleanup?.();
   void booksCoverManifest();
   const main = $("#view"); main.className = "main page wide books"; main.replaceChildren(h("p", { class: "loading", role: "status" }, "טוען את מדף הספרים…"));
@@ -4768,11 +4791,10 @@ VIEWS.books = async function(rest, q, ctx) {
   if (rest[0] === "b" && /^\d+$/.test(rest[1] || "") && T.books[Number(rest[1])]) return booksBook(main, T, Number(rest[1]), q, ctx, covers);
   if (rest[0] === "v" && /^[0-9]+$/.test(rest[1] || "") && /^[0-9]+$/.test(rest[2] || "") && booksEntry(T, "v:" + rest[1] + ":" + rest[2])) return booksBook(main, T, "v:" + rest[1] + ":" + rest[2], q, ctx, covers);
   if (rest[0] === "s" && /^[0-9]+$/.test(rest[1] || "") && booksEntry(T, "s:" + rest[1])) return booksBook(main, T, "s:" + rest[1], q, ctx, covers);
-  if (rest.length) { main.append(h("p", { class: "empty" }, "הספר לא נמצא"), h("a", { href: mkHash(["books"]) }, "חזרה לכל הספרים")); return; }
-  booksShelf(main, T, q, ctx, covers);
+  main.append(h("p", { class: "empty" }, "הספר לא נמצא"), h("a", { href: mkHash(["read"], { tab: "editions" }) }, "חזרה למדף המהדורות"));
 };
-function booksShelf(main, T, q, ctx, initialCovers) {
-  main.append(h("h1", { class: "page-title" }, "ספרים"), h("p", { class: "lede" }, "ספר אחד בכל כרטיס. בתוך הספר בוחרים כרך, מהדורה ומקור; כל הפניה נשמרת ברישום המקורי שלה."));
+function booksShelf(main, T, q, ctx, initialCovers, opts = {}) {
+  if (!opts.embedded) main.append(h("h1", { class: "page-title" }, "ספרים"), h("p", { class: "lede" }, "ספר אחד בכל כרטיס. בתוך הספר בוחרים כרך, מהדורה ומקור; כל הפניה נשמרת ברישום המקורי שלה."));
   const search = h("input", { type: "search", value: q.get("q") || "", placeholder: "חיפוש בשם ספר…", "aria-label": "חיפוש ספר" });
   const filter = h("select", { "aria-label": "ספרים לפי רבי" }, h("option", { value: "" }, "כל הרביים"), ...T.rebbeim.map((name, r) => h("option", { value: r, selected: q.get("r") === String(r) }, name)), ...(T.books.some(b => b[0] < 0) ? [h("option", { value: "-1", selected: q.get("r") === "-1" }, "אוספי פרסומים")] : []));
   const mapping = h("select", { "aria-label": "מצב מיפוי הספר", value: q.get("m") || "" }, h("option", { value: "" }, "כל מצבי המיפוי"), h("option", { value: "mapped", selected: q.get("m") === "mapped" }, "יש יחידות מקוטלגות"), h("option", { value: "pending", selected: q.get("m") === "pending" }, "טרם מופו יחידות"));
@@ -4780,8 +4802,9 @@ function booksShelf(main, T, q, ctx, initialCovers) {
   const shelf = h("div"), more = h("div", { class: "books-more" }), pendingSources = h("div",{class:"books-pending-sources"});
   const photographed = h("input", { type: "checkbox", checked: q.get("covers") === "1", "aria-label": "רק ספרים עם צילום שער מקושר" });
   const refresh = h("button", { class: "btn", type: "button" }, "רענון צילומי השער");
-  main.append(h("div", { class: "books-filters" }, search, filter, mapping, h("label", { class: "books-cover-filter" }, photographed, "רק עם צילום שער"), refresh), status, shelf, more, pendingSources,
-    h("p", { class: "books-note muted" }, "צילום השער מזוהה עם המהדורה שמצוינת מתחתיו. ברישום ללא צילום מקושר אין תמונה שממתינה לטעינה. מהדורות ומקורות נפתחים בבחירה מפורשת בתוך הספר."));
+  main.append(h("div", { class: "books-filters" }, search, filter, mapping, h("label", { class: "books-cover-filter" }, photographed, "רק עם צילום שער")), status, shelf, more, pendingSources,
+    h("p", { class: "books-note muted" }, "צילום השער מזוהה עם המהדורה שמצוינת מתחתיו. ברישום ללא צילום מקושר אין תמונה שממתינה לטעינה. מהדורות ומקורות נפתחים בבחירה מפורשת בתוך הספר."),
+    h("details", { class: "books-advanced" }, h("summary", null, "כלים למדף"), refresh));
   let limit = BOOK_SHELF_PAGE, covers = initialCovers, first = true;
   const draw = () => {
     if (!first) { covers.close(); covers = booksCovers(T); } first = false;
@@ -4826,7 +4849,7 @@ function booksShelf(main, T, q, ctx, initialCovers) {
 async function booksBook(main, T, id, q, ctx, covers) {
   const entry = booksEntry(T, id), { r, name, source } = entry;
   document.title = name + " · ספרים · חברותא";
-  main.append(h("nav", { class: "crumbs", "aria-label": "מיקום" }, h("a", { href: mkHash(["books"]) }, "ספרים"), " › ", h("a", { href: mkHash(["books"], { r }) }, T.rebbeim[r] || "אוספי פרסומים")),
+  main.append(h("nav", { class: "crumbs", "aria-label": "מיקום" }, h("a", { href: mkHash(["read"], { tab: "editions" }) }, "ספרייה"), " › ", h("a", { href: mkHash(["read"], { tab: "editions", r }) }, T.rebbeim[r] || "אוספי פרסומים")),
     h("header", { class: "books-book-head" }, booksCover(T, id, covers), h("div", null, h("h1", { class: "page-title" }, name), h("p", { class: "muted" }, [T.rebbeim[r], source].filter(Boolean).join(" · ")), h("a", { href: entry.series == null ? mkHash(["tree", "b", id]) : mkHash(["tree", "r", r], { s: entry.series }) }, "הספר בעץ הידע"))));
   if (entry.collection?.kind === "publisher_collection") main.append(h("p", { class: "books-note" }, "אוסף של " + entry.collection.count + " קובצי פרסום נפרדים מאתר קה״ת: מאמרים, שיחות ותדפיסים. קה״ת היא ההוצאה לאור; לא נקבע לאוסף מחבר אחד. הרישום אינו ספר אחד בעל מספר פרקים זה."));
   if (entry.collection?.kind === "source_index") main.append(h("p",{class:"books-note"},"זהו מפתח הכולל "+entry.collection.count+" רישומי מקורות, ולא כרך מודפס אחד."));
@@ -5022,9 +5045,19 @@ VIEWS.learn = async function(rest, q, ctx) {
   if (!ctx.alive()) return;
   const gateId = rest[0], anchorId = rest[1], gate = catalog.gates.find(g => g.id === gateId);
   if (!gateId) {
-    document.title = "שערי הלימוד · חברותא";
-    main.append(learningGateCards(catalog, { page: true }),
-      h("p", { class: "learning-meta" }, fmt(learningRecords(S.core, catalog).length) + " ביאורים ייחודיים. ביאור המשויך לכמה שערים נספר פעם אחת בסך הכול."),
+    document.title = "ביאורים · חברותא";
+    const n = learningRecords(S.core, catalog).length;
+    main.append(
+      h("h1", { class: "page-title" }, "ביאורים"),
+      h("p", { class: "lede" }, "ביאורים על מאמרי חסידות, לפי פרשה, מועד, תפילה וסוגיה. חלק מן הביאורים הם טיוטה, ומסומנים בראש העמוד."),
+      h("nav", { class: "lib-tabs learn-links", "aria-label": "עוד בביאורים" },
+        h("a", { href: mkHash(["biurim"]) }, "ספר הביאורים · בראשית"),
+        h("a", { href: mkHash(["daily"]) }, "לימוד יומי"),
+        h("a", { href: mkHash(["sheets"]) }, "דפי שיעור"),
+        h("a", { href: mkHash(["study"]) }, "הלימוד שלי")),
+      continueLink(),
+      learningGateCards(catalog, { page: false }),
+      h("p", { class: "learning-meta" }, fmt(n) + " ביאורים ייחודיים. ביאור המשויך לכמה שערים נספר פעם אחת בסך הכול."),
       h("p", null, h("a", { href: mkHash(["topics"]) }, "מפתח הנושאים המשותף לכל השערים ←")));
     return;
   }
@@ -5036,7 +5069,7 @@ VIEWS.learn = async function(rest, q, ctx) {
   const heading = h("h1", { class: "page-title", tabindex: "-1" }, anchor?.title || gate.title);
   main.append(h("nav", { class: "crumbs", "aria-label": "מיקום" },
     h("a", { href: mkHash(["home"]) }, "חברותא"), h("span", { "aria-hidden": "true" }, "›"),
-    h("a", { href: mkHash(["learn"]) }, "שערי הלימוד"), h("span", { "aria-hidden": "true" }, "›"),
+    h("a", { href: mkHash(["learn"]) }, "ביאורים"), h("span", { "aria-hidden": "true" }, "›"),
     anchor ? h("a", { href: mkHash(["learn", gateId]) }, gate.title) : h("span", { "aria-current": "page" }, gate.title),
     anchor ? [h("span", { "aria-hidden": "true" }, "›"), h("span", { "aria-current": "page" }, anchor.title)] : null),
     h("header", { class: "learning-header" }, heading,
@@ -5152,115 +5185,71 @@ function parshaPager(p) {
 VIEWS.home = async function (rest, q, ctx) {
   Aside.detach?.();
   const main = $("#view"); main.className = "main home"; main.textContent = "";
-  document.title = "חברותא · ביאורים על מאמרי רבותינו נשיאינו";
+  document.title = "חברותא · לימוד במאמרי חסידות";
   const site = S.core.site || {}, ps = S.core.parshiyot || [];
   const today = new Date(), wk = weekParsha(today), wks = weekParshas(today), hd = hebDate(today);
-  const H = docsOf(S.home);          // פרשת הבית — בלי תלות בפרשה שנבחרה לאחרונה
-  const nBiurim = new Set((S.core.docs || []).filter(d => d.kind !== "dorot").map(d => d.id)).size;
-  const [learning, ft] = await Promise.all([
-    loadChunk("learning").catch(() => null),
+  const [ft, freshFeed] = await Promise.all([
     loadChunk("text/index").catch(() => null),
+    loadChunk("new").catch(() => null),
   ]);
   if (!ctx.alive()) return;
-  const nSrc = H.nodes.length + Object.values(site.sources || {}).reduce((a, b) => a + b, 0);
+  const nBiurim = new Set((S.core.docs || []).filter(d => d.kind !== "dorot").map(d => d.id)).size;
   const nSeries = ft?.series?.length || 0;
   const nPages = (ft?.series || []).reduce((a, s) => a + (s.pages || 0), 0);
+  const newsItems = freshFeed ? freshNewsItems(freshFeed) : [];
+  const N = { generated: (freshFeed?.generated || "").slice(0, 10), n: newsItems.length, sources: freshFeed?.sources || 0, top: newsItems };
+  const T = site.tree || {};
 
-  // שער
-  const sin = h("input", { type: "search", name: "q", placeholder: "חיפוש ד״ה, פסוק או מושג…", "aria-label": "חיפוש באתר", autocomplete: "off" });
+  const sin = h("input", { type: "search", name: "q", placeholder: "חיפוש ספר, ביאור, מושג או ד״ה…", "aria-label": "חיפוש באתר", autocomplete: "off" });
   const hero = h("section", { class: "h-hero", "aria-labelledby": "h-title" },
     h("p", { class: "h-bsd", "aria-hidden": "true" }, "בס״ד"),
-    h("p", { class: "h-kicker" }, "מערכת לימוד וניתוח של מאמרי חסידות"),
+    h("p", { class: "h-kicker" }, "מערכת לימוד למאמרי חסידות"),
     h("h1", { class: "h-title", id: "h-title" }, "חברותא"),
-    h("p", { class: "h-sub" }, "מאמרי חסידות — פרשיות, מועדים, תפילה ומאמרי חז״ל"),
-    h("div", { class: "h-rule", "aria-hidden": "true" }, h("i"), h("span", null, "❖"), h("i")),
-    h("p", { class: "h-purpose" }, "חברותא מלווה את הלומד במאמרי החסידות: ביאורים רציפים, מקורות ושרשראות דורות, לפי פרשה, מועד, תפילה או סוגיה. הביאורים שפורסמו והמקורות ללימוד מוצגים בנפרד, וכל ציטוט מקושר אל מקורו."),
+    h("p", { class: "h-purpose" }, "חברותא מלווה את הלומד במאמרי החסידות ובספרי היסוד: ביאורים רציפים, ספרייה לקריאה, ומקורות מקושרים. אפשר להתחיל גם בלי רקע מוקדם — בחיפוש, בספר, או בביאור של פרשת השבוע."),
     h("form", { class: "h-search", role: "search", onsubmit: e => { e.preventDefault(); const v = sin.value.trim(); go(mkHash(["search"], v ? { q: v } : {})); } },
-      icon("i-search"), sin, h("button", { class: "btn primary", type: "submit" }, "חיפוש")),
-    h("ul", { class: "h-stats" },
-      [
-        [ps.length, "פרשיות", mkHash(["home"], {}, { nomode: true })],
-        [nBiurim, "ביאורים ושרשראות", mkHash(["learn"])],
-        nSeries ? [nSeries, "סדרות בספרייה", mkHash(["read"])] : null,
-        nPages ? [nPages, "עמודים לקריאה", mkHash(["read"])] : null,
-        [nSrc, "מקורות ממופים", mkHash(["sources"])],
-        [site.tree?.units || 0, "יחידות בעץ הידע", mkHash(["tree"])],
-      ].filter(Boolean).map(([n, l, href]) => h("li", null, h("a", { href }, h("b", null, fmt(n)), h("span", null, l))))),
-    continueLink());
+      icon("i-search"), sin, h("button", { class: "btn primary", type: "submit" }, "חיפוש")));
 
-  // הפרשיות
-  const cards = ps.map(p => {
-    const P = parshaInfo(p.n), href = parshaHrefOf(p.n);
-    const D = docsOf(p.n);
-    const stats = p.home ? [`${H.books.length} ביאורים`, `${H.chain.length} שרשראות דורות`, `${fmt(H.nodes.length)} פריטי מקור`]
-      : [P.chains.length ? (P.chains.length === 1 ? "שרשרת מבוארת אחת" : `${P.chains.length} שרשראות מבוארות`) : null, D.nodes.length ? `${fmt(D.nodes.length)} פריטי מקור` : null, P.src ? `${fmt(P.src)} מקורות במיפוי` : null].filter(Boolean);
-    const isWk = wks.includes(p.n);
-    return h("li", { class: "pc" + (isWk ? " is-week" : "") + " st-" + P.stage },
-      h("span", { class: "pc-ord", "aria-hidden": "true" }, P.ord),
-      h("div", { class: "pc-b" },
-        h("p", { class: "pc-k" }, h("span", { class: "stage s-" + P.stage }, STAGE_LABEL[P.stage]), isWk ? h("span", { class: "wk" }, "פרשת השבוע") : null),
-        h("h3", null, h("a", { href }, p.he)),
-        h("p", { class: "pc-s" }, stats.join(" · ")),
-        h("p", { class: "pc-d" }, PARSHA_DESC[p.n] || (P.chains.length ? "שרשראות מבוארות על פסוקי הפרשה, ומיפוי כל המקורות בעץ הידע." : "מיפוי המקורות מעץ הידע: המאמרים, השיחות והאגרות על הפרשה. הביאורים — בשלב הבא.")),
-        P.chains.length ? h("ul", { class: "pc-ch", "aria-label": "השרשראות ב" + p.he }, P.chains.map(c => h("li", null, h("a", { href: c.u }, "״" + c.t + "״"), h("small", null, c.a)))) : null,
-        p.home ? h("p", { class: "pc-go" }, h("a", { href }, "לספר הביאורים ←")) : null));
-  });
-  const books = [...new Set(ps.map(p => p.b || "בראשית"))];
-  const parshiyot = h("section", { class: "h-sec", "aria-labelledby": "h-ps" },
-    h("header", { class: "h-sec-h" }, h("h2", { id: "h-ps" }, "הפרשיות"), h("p", null, "כל פרשה — ספר משלה. בבראשית: ביאור מלא של כל הפסוקים; " + (ps.filter(x => !x.home && (S.core.site?.chains || {})[x.n]?.length).map(x => "ב" + x.n).join(", ") || "בנח") + ": שרשראות מבוארות; בשאר — מיפוי המקורות מעץ הידע, לקראת הביאור.")),
-    books.map(b => {
-      const idx = ps.map((p, i) => (p.b || "בראשית") === b ? i : -1).filter(i => i >= 0);
-      const open = b === "בראשית" || idx.some(i => wks.includes(ps[i].n));
-      return h("details", { class: "h-book", open: open || null },
-        h("summary", null, h("h3", { class: "h-book-t" }, "ספר " + b), h("span", { class: "tag mute" }, idx.length + " פרשיות")),
-        h("ol", { class: "h-pgrid" }, idx.map(i => cards[i])));
-    }));
+  const weekCard = (() => {
+    if (!wk) return null;
+    const P = parshaInfo(wk), href = parshaHrefOf(wk);
+    const rec = ps.find(p => p.n === wk);
+    return h("section", { class: "h-sec h-week", "aria-labelledby": "h-week" },
+      h("p", { class: "hx-k" }, "פרשת השבוע", hd ? h("span", { class: "hx-d" }, hd) : null),
+      h("h2", { id: "h-week" }, h("a", { href }, rec?.he || ("פרשת " + wk))),
+      h("p", null, P.stage === "full" ? "ספר ביאורים מלא לפרשה." : P.stage === "chains" ? "שרשראות מבוארות, ומיפוי המקורות." : "מיפוי המקורות מעץ הידע; הביאורים יתווספו בהמשך."),
+      h("p", { class: "hx-go" }, h("a", { href }, "לפרשת " + wk + " ←")));
+  })();
 
-  // לימוד יומי · מה חדש · עץ הידע
-  const freshFeed = await loadChunk("new").catch(() => null);
-  if (!ctx.alive()) return;
-  const newsItems = freshFeed ? freshNewsItems(freshFeed) : [];
-  const N = { generated: (freshFeed?.generated || "").slice(0, 10), n: newsItems.length, sources: freshFeed?.sources || 0, top: newsItems }, T = site.tree || {};
-  const trio = h("section", { class: "h-sec h-trio", "aria-label": "עוד בחברותא" },
+  const entries = h("section", { class: "h-sec h-entries", "aria-label": "כניסות לאתר" },
     h("article", { class: "hx" },
-      h("p", { class: "hx-k" }, icon("i-read"), "ספרייה"),
-      h("h2", null, h("a", { href: mkHash(["read"]) }, "ספרייה לקריאה באתר")),
-      h("p", null, nSeries ? `${fmt(nSeries)} סדרות, ${fmt(nPages)} עמודים — הטקסט המלא של ספרי היסוד, לשימוש לא מסחרי ובייחוס להוצאה.` : "הטקסט המלא של ספרי היסוד, לקריאה באתר."),
+      h("p", { class: "hx-k" }, icon("i-book"), "ספרייה"),
+      h("h2", null, h("a", { href: mkHash(["read"]) }, "ספרייה לקריאה")),
+      h("p", null, nSeries ? `${fmt(nSeries)} סדרות, ${fmt(nPages)} עמודים — ספרי היסוד של קה״ת, וגם מדף מהדורות.` : "ספרי היסוד לקריאה באתר, ומדף מהדורות."),
       h("p", { class: "hx-go" }, h("a", { href: mkHash(["read"]) }, "לספרייה ←"))),
     h("article", { class: "hx" },
-      h("p", { class: "hx-k" }, icon("i-sun"), "היום", hd ? h("span", { class: "hx-d" }, hd) : null),
-      h("h2", null, h("a", { href: mkHash(["daily"]) }, "לימוד יומי")),
-      h("p", null, "שיעורי היום לפי הלוח: תניא יומי (מנוקד), ותורה אור ולקוטי תורה — עם קישור לנוסח המנוקד של חסידות בהירה, ומעבר ליום הקודם והבא."),
-      h("p", { class: "hx-go" }, h("a", { href: mkHash(["daily"]) }, "ללימוד של היום ←"))),
+      h("p", { class: "hx-k" }, icon("i-read"), "ביאורים"),
+      h("h2", null, h("a", { href: mkHash(["learn"]) }, "ביאורים ושיעורים")),
+      h("p", null, `${fmt(nBiurim)} ביאורים שפורסמו, לימוד יומי, ודפי שיעור. הביאורים הם טיוטה, ומסומנים בהתאם.`),
+      h("p", { class: "hx-go" }, h("a", { href: mkHash(["learn"]) }, "לביאורים ←"))),
     h("article", { class: "hx" },
-      h("p", { class: "hx-k" }, icon("i-flag"), "מה חדש", N.generated ? h("span", { class: "hx-d" }, N.generated.split("-").reverse().join(".")) : null),
-      h("h2", null, h("a", { href: mkHash(["new"]) }, "מה חדש בעולם החסידות")),
-      (N.top || []).length ? h("ul", { class: "hx-list" }, N.top.slice(0, 3).map(i => h("li", null, h("a", { href: i.u, target: "_blank", rel: "noopener", dir: i.lang === "he" ? "rtl" : "auto" }, i.t), h("small", null, i.src)))) : h("p", null, "פרסומים כתובים חדשים מן האתרים שבמעקב."),
-      h("p", { class: "hx-go" }, h("a", { href: mkHash(["new"]) }, N.n ? `כל ${N.n} הפריטים · ${N.sources} מקורות במעקב ←` : "לכל הפריטים ←"))),
-    h("article", { class: "hx" },
-      h("p", { class: "hx-k" }, icon("i-tree"), "קטלוג"),
+      h("p", { class: "hx-k" }, icon("i-tree"), "עץ וזמן"),
       h("h2", null, h("a", { href: mkHash(["tree"]) }, "עץ הידע")),
-      h("p", null, `איפה נמצא כל מאמר, שיחה ואגרת של רבותינו נשיאינו, מהבעש״ט ועד הרבי: ${fmt(T.units || 0)} יחידות ב־${T.series || 0} סדרות ספרים — ספר, כרך, עמוד ושנה, וקישור למקום ברשת.`),
+      h("p", null, `איפה נמצא כל מאמר, שיחה ואגרת, מהבעש״ט עד הרבי: ${fmt(T.units || 0)} יחידות ב־${T.series || 0} סדרות.`),
       h("p", { class: "hx-go" }, h("a", { href: mkHash(["tree"]) }, "לעץ הידע ←"))),
     h("article", { class: "hx" },
       h("p", { class: "hx-k" }, icon("i-list"), "מפתח"),
-      h("h2", null, h("a", { href: mkHash(["topics"], {}, { nomode: true }) }, "מפתח עניינים")),
-      h("p", null, "מושגי החסידות, האישים, הזמנים והדימויים — מ״אור אין סוף״ ועד ״תיבת נח״ — ובאילו ביאורים ובאילו קטעי מקור כל אחד מהם נידון."),
-      h("p", { class: "hx-go" }, h("a", { href: mkHash(["topics"], {}, { nomode: true }) }, "למפתח העניינים ←"))));
+      h("h2", null, h("a", { href: mkHash(["topics"]) }, "מפתח עניינים")),
+      h("p", null, "מושגים, אישים, זמנים ודימויים — ואיפה הם נדונים בביאורים ובמקורות."),
+      h("p", { class: "hx-go" }, h("a", { href: mkHash(["topics"]) }, "למפתח ←"))),
+    h("article", { class: "hx" },
+      h("p", { class: "hx-k" }, icon("i-flag"), "מה חדש", N.generated ? h("span", { class: "hx-d" }, N.generated.split("-").reverse().join(".")) : null),
+      h("h2", null, h("a", { href: mkHash(["new"]) }, "מה חדש בעולם החסידות")),
+      (N.top || []).length ? h("ul", { class: "hx-list" }, N.top.slice(0, 2).map(i => h("li", null, h("a", { href: i.u, target: "_blank", rel: "noopener", dir: i.lang === "he" ? "rtl" : "auto" }, i.t), h("small", null, i.src)))) : h("p", null, "פרסומים כתובים חדשים מן האתרים שבמעקב."),
+      h("p", { class: "hx-go" }, h("a", { href: mkHash(["new"]) }, N.n ? `כל ${N.n} הפריטים ←` : "לכל הפריטים ←"))));
 
-  // איך לומדים
-  const how = h("section", { class: "h-sec h-how", "aria-labelledby": "h-how" },
-    h("header", { class: "h-sec-h" }, h("h2", { id: "h-how" }, "איך לומדים בחברותא"), h("p", null, "שלושה מצבי עבודה לכל ביאור; המעבר ביניהם שומר על מקום הקריאה.")),
-    h("ol", { class: "how" }, MODES.map(m => h("li", null, h("span", { class: "how-i" }, icon(m.icon)), h("b", null, m.label), h("span", null, {
-      read: "עמודה אחת, ההערות בשוליים: קריאה רציפה של הביאור, וכל ציטוט נפתח במקומו.",
-      links: "לכל קטע, ציטוט או פריט: מאיפה הוא, ומה עוד בפרשה מתקשר אליו.",
-      research: "שלשלת הדורות, מטריצת פסוק × דור, ומפת המקורות על ציר הזמן.",
-    }[m.id]), h("kbd", { title: "קיצור מקלדת" }, m.n)))));
-
-  main.append(hero, readingSetupInvite(), studyShelf(), ...(learning ? [learningGateCards(learning)] : []), parshiyot, trio, how);
+  main.append(...[hero, readingSetupInvite(), weekCard, continueLink(), studyShelf(), entries].filter(Boolean));
   if (!ctx.keep) window.scrollTo(0, 0);
 };
-
 
 /* חברותא · אודות ושיטת העבודה (#/about): מה יש באתר, איך נבנה כל ביאור, מה לא נעשה, המקורות והרישיונות */
 
@@ -5871,9 +5860,56 @@ function ftCredit(s, id) {
 }
 function ftFail(main, msg, e) { main.replaceChildren(h("div", { class: "empty" }, h("b", null, msg), e ? String(e.message || e) : "", h("br"), h("a", { href: mkHash(["read"]) }, "לספרייה"))); }
 
+function libraryTabs(active) {
+  const tab = (id, href, label) => h("a", { href, role: "tab", "aria-selected": active === id ? "true" : "false", "aria-current": active === id ? "page" : null }, label);
+  return h("nav", { class: "lib-tabs", role: "tablist", "aria-label": "מדורי הספרייה" },
+    tab("read", mkHash(["read"]), "לקריאה"),
+    tab("editions", mkHash(["read"], { tab: "editions" }), "מהדורות"));
+}
+function libraryForthcoming() {
+  return h("section", { class: "lib-soon", "aria-label": "סדרות בהכנה לספרייה" },
+    h("h2", { class: "lib-soon-h" }, "בהכנה לספרייה"),
+    h("div", { class: "lib-soon-grid" },
+      h("article", { class: "lib-soon-card" },
+        h("h3", null, "ספר הערכים"),
+        h("p", null, "שמונה כרכים נקלטו להכנה (כרכים ט–י חסרים או חלקיים). הטקסט המלא ייכנס לקריאה באתר בשלב הבא."),
+        h("p", { class: "hx-go" }, h("a", { href: mkHash(["topics"]) }, "הפניות במפתח העניינים ←"))),
+      h("article", { class: "lib-soon-card" },
+        h("h3", null, "קונטרסי קה״ת"),
+        h("p", null, "132 קונטרסים נקלטו ממקורות קה״ת. הטקסט המלא ייכנס לספרייה לאחר חילוץ תקין של העמודים."),
+        h("p", { class: "hx-go" }, h("a", { href: mkHash(["tree"]) }, "רישום בעץ הידע ←")))));
+}
+function libraryIntro(main, active, lede) {
+  main.append(
+    h("h1", { class: "page-title" }, "ספרייה"),
+    h("p", { class: "lede" }, lede),
+    libraryTabs(active),
+    active === "read" ? libraryForthcoming() : null);
+}
+
+async function libraryEditions(main, q, ctx) {
+  ctx.prevCleanup?.();
+  void booksCoverManifest();
+  main.className = "main page wide books ft";
+  document.title = "מהדורות · ספרייה · חברותא";
+  main.replaceChildren();
+  libraryIntro(main, "editions", "ספר אחד בכל כרטיס. בתוך הספר בוחרים כרך, מהדורה ומקור; כל הפניה נשמרת ברישום המקורי שלה.");
+  const host = h("div", { class: "lib-editions" }, h("p", { class: "loading", role: "status" }, "טוען את מדף המהדורות…"));
+  main.append(host);
+  let T;
+  try { [T] = await Promise.all([loadChunk("tree"), booksCoverManifest()]); if (T.series) booksRegisterCatalog(T, await loadChunk("book-catalog")); }
+  catch (_) { if (ctx.alive()) host.replaceChildren(h("div", { class: "empty" }, "לא ניתן לטעון את המהדורות כעת.", h("button", { class: "btn", type: "button", onclick: () => route() }, "ניסיון נוסף"))); return; }
+  if (!ctx.alive()) return;
+  host.replaceChildren();
+  const covers = booksCovers(T); ctx.cleanup = () => covers.close();
+  booksShelf(host, T, q, ctx, covers, { embedded: true });
+  if (!ctx.keep) window.scrollTo(0, 0);
+}
+
 VIEWS.read = async function (rest, q, ctx) {
   const main = $("#view"); main.className = "main page ft"; main.textContent = "";
   await ftReady(); if (!ctx.alive()) return;
+  if (!rest[0] && (q.get("tab") || "") === "editions") return libraryEditions(main, q, ctx);
   if (!FT.idx) return ftFail(main, "הספרייה אינה זמינה כרגע");
   if (!rest[0]) return ftHome(main, q);
   const s = ftSeries(rest[0]); if (!s) return ftFail(main, "הספר לא נמצא בספרייה");
@@ -5889,8 +5925,7 @@ VIEWS.read = async function (rest, q, ctx) {
 function ftHome(main, q) {
   document.title = "ספרייה · חברותא";
   const ix = FT.idx, pages = ix.series.reduce((a, s) => a + s.pages, 0);
-  main.append(h("h1", { class: "page-title" }, "ספרייה"),
-    h("p", { class: "lede" }, `הטקסט המלא של ספרי היסוד, לקריאה באתר: ${ix.series.length} סדרות, ${pages.toLocaleString("he")} עמודים. ספרי קה״ת כפי שהם בספריית חב״ד, לשימוש לא מסחרי ובייחוס לקה״ת.`));
+  libraryIntro(main, "read", `הטקסט המלא של ספרי היסוד, לקריאה באתר: ${ix.series.length} סדרות, ${pages.toLocaleString("he")} עמודים. ספרי קה״ת כפי שהם בספריית חב״ד, לשימוש לא מסחרי ובייחוס לקה״ת.`);
   const inp = h("input", { type: "search", class: "tree-q", placeholder: "סינון לפי שם ספר או רבי…", "aria-label": "סינון ספרים", value: q.get("f") || "" });
   const box = h("div", { class: "ft-shelf" });
   const draw = () => {
