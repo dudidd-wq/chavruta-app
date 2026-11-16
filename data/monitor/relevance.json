@@ -1948,5 +1948,49 @@
     "source_url": "https://dvarmalchus770.org/2026/11/14/vayetzei-5752-we-need-only-to-open-the-eyes-2/",
     "checked_at": "2026-11-15T13:10:00+00:00",
     "previous_url": "https://dvarmalchus770.org/2025/11/22/vayetzei-5752-we-need-only-to-open-the-eyes/"
+  },
+  "fd339d351aadc558": {
+    "cls": "מקור",
+    "why": "נפתח קובץ ה־PDF: תרגום כתוב לאנגלית של שיחת ויצא מלקוטי שיחות חלק ג׳, עמודים 787–794; הקובץ נוצר ב־13.11.2026.",
+    "source_url": "https://drive.google.com/file/d/16u-GgMMQhQ8JPZ7qcFR_7W28VJgyPsRM/view",
+    "checked_at": "2026-11-16T13:20:00+00:00"
+  },
+  "d19bfcea7c03ccc4": {
+    "cls": "כפול",
+    "why": "קישור Download הכללי זוהה בקובץ המקורי כויצא לקוטי שיחות חלק ג׳, ונשמר כרשומה המזוהה fd339d351aadc558.",
+    "duplicate_of": "fd339d351aadc558",
+    "checked_at": "2026-11-16T13:20:00+00:00",
+    "source_url": "https://drive.google.com/file/d/16u-GgMMQhQ8JPZ7qcFR_7W28VJgyPsRM/view"
+  },
+  "67073e6df0ef3fe1": {
+    "cls": "לא רלוונטי",
+    "why": "סיפור זיכרונות על ברכת הרבי למורה; אינו פרסום של מאמר, שיחה או מכתב ואינו ביאור.",
+    "source_url": "https://anash.org/the-teacher-who-needed-children-and-the-rebbes-promise/",
+    "checked_at": "2026-11-16T13:20:00+00:00"
+  },
+  "0c8a02fd519d2fc6": {
+    "cls": "לא רלוונטי",
+    "why": "כתבה על מיזם מקוון ותוכנית לימוד למאמרים המוגהים (כלי/תוכנית), לא פרסום כתוב של מאמר או ביאור.",
+    "source_url": "https://anash.org/he-wanted-a-better-way-to-learn-the-rebbes-maamarim-so-he-built-one/",
+    "checked_at": "2026-11-16T13:20:00+00:00"
+  },
+  "af18c5d22b5d577f": {
+    "cls": "לא רלוונטי",
+    "why": "כתבת חדשות על ספר איורים לתניא היומי (Sketches in Tanya); כלי עזר חזותי ולא ביאור כתוב של מאמר, שיחה או מכתב מסוים.",
+    "source_url": "https://anash.org/sydney-educator-turns-daily-tanya-sketches-into-new-book/",
+    "checked_at": "2026-11-16T13:20:00+00:00"
+  },
+  "45d6a58e8cecc571": {
+    "cls": "ביאור",
+    "why": "אותו מאמר שסווג אתמול במפתח 9ded500b298001af; הכותרת בפיד השתנתה ולכן נוצר מפתח חדש. ביאור כתוב באנגלית לשיחת ש״פ ויצא תשנ״ב (ט׳ כסלו); פרסום שנתי חוזר של ביאור כתוב נכנס.",
+    "source_url": "https://dvarmalchus770.org/2026/11/14/vayetzei-5752-we-need-only-to-open-the-eyes-2/",
+    "checked_at": "2026-11-16T13:20:00+00:00",
+    "previous_url": "https://dvarmalchus770.org/2025/11/22/vayetzei-5752-we-need-only-to-open-the-eyes/"
+  },
+  "4caa0dc33c6bf44e": {
+    "cls": "מקור",
+    "why": "דף המחלקה (dept=345) מקשר למוצר ERE-IK2, שסווג ב־14.11 במפתח 9888477fa3aec227: כרך ב׳ של מכתבי הרבי באנגלית (תש״י–תשי״א), ויותר מ־75% מהם בפרסום ראשון.",
+    "source_url": "https://store.kehotonline.com/prodinfo.asp?number=ERE-IK2",
+    "checked_at": "2026-11-16T13:20:00+00:00"
   }
 }

@@ -4890,7 +4890,7 @@
    "last_attempt_at": "2026-11-04T06:53:04+00:00"
   },
   "sie_weekly": {
-   "checked_at": "2026-11-14T18:15:00+00:00",
+   "checked_at": "2026-11-16T13:20:00+00:00",
    "items": [
     {
      "title": "SIE Weekly · Noach · Likkutei Sichos Volume 3",
@@ -4941,9 +4941,19 @@
      "sections": [
       "whatsnew"
      ]
+    },
+    {
+     "title": "SIE Weekly · Vayeitzei · Likkutei Sichos Volume 3",
+     "url": "https://drive.google.com/file/d/16u-GgMMQhQ8JPZ7qcFR_7W28VJgyPsRM/view",
+     "lang": "en",
+     "first_seen": "2026-11-16T12:43:46+00:00",
+     "genre": "תרגום שיחה",
+     "sections": [
+      "whatsnew"
+     ]
     }
    ],
-   "note": "החוברת החדשה לתולדות נפתחה. שער ה־PDF מאמת 22 עמודים ועמודי מקור 780–787."
+   "note": "החוברת החדשה לויצא נפתחה. שער ה־PDF מאמת 26 עמודים ועמודי מקור 787–794 (חלק ג׳)."
   },
   "hiskashrus": {
    "checked_at": "2026-10-30T07:03:39+00:00",
