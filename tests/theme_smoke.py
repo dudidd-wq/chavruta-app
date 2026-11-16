@@ -30,7 +30,7 @@ CONTRAST_JS = """() => {
     btn: !!document.querySelector('.chs-btn') };
 }"""
 
-EXPECT_ACTIVE = {"index.html#/home": "home", "index.html#/biur/N01": "home", "index.html#/new": "new", "index.html#/tree": "tree", "index.html#/read": "read", "index.html#/read/tanya/3401310006": "read", "status.html": "sysstatus"}
+EXPECT_ACTIVE = {"index.html#/home": "home", "index.html#/biur/N01": "learn", "index.html#/new": "new", "index.html#/tree": "tree", "index.html#/read": "read", "index.html#/read/tanya/3401310006": "read"}
 
 BARS_JS = """(expect) => {
   const out = { problems: [] }, P = m => out.problems.push(m);

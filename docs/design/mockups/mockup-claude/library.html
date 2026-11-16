@@ -1,0 +1,325 @@
+<!doctype html>
+<html dir="rtl" lang="he" data-theme="editorial">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ספרייה · חברותא</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;500;600;700&family=Frank+Ruhl+Libre:wght@400;500;600;700;800&family=Noto+Serif+Hebrew:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- icon sprite -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="m20 20-4.2-4.2"/></symbol>
+  <symbol id="i-home" viewBox="0 0 24 24"><path d="M4 10.5 12 4l8 6.5V20h-5v-6h-6v6H4z"/></symbol>
+  <symbol id="i-book" viewBox="0 0 24 24"><path d="M4 5.5C4 4.7 4.7 4 5.5 4H11v16H5.5c-.8 0-1.5-.7-1.5-1.5z"/><path d="M13 4h5.5c.8 0 1.5.7 1.5 1.5v13c0 .8-.7 1.5-1.5 1.5H13z"/></symbol>
+  <symbol id="i-pen" viewBox="0 0 24 24"><path d="M5 19h14"/><path d="M7 15.5 15.5 7l2 2L9 17.5H7z"/></symbol>
+  <symbol id="i-tree" viewBox="0 0 24 24"><circle cx="12" cy="5" r="2"/><circle cx="6" cy="18" r="2"/><circle cx="18" cy="18" r="2"/><path d="M12 7v5M12 12H6v4M12 12h6v4"/></symbol>
+  <symbol id="i-index" viewBox="0 0 24 24"><path d="M5 5h14M5 10h14M5 15h9M5 20h6"/></symbol>
+  <symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M6 6l2.5 2.5M15.5 15.5 18 18M6 18l2.5-2.5M15.5 8.5 18 6"/></symbol>
+  <symbol id="i-more" viewBox="0 0 24 24"><circle cx="5" cy="12" r="1.3"/><circle cx="12" cy="12" r="1.3"/><circle cx="19" cy="12" r="1.3"/></symbol>
+  <symbol id="i-bookmark" viewBox="0 0 24 24"><path d="M7 4h10v16l-5-3.5L7 20z"/></symbol>
+  <symbol id="i-notes" viewBox="0 0 24 24"><rect x="5" y="4" width="14" height="16" rx="1.5"/><path d="M9 9h6M9 13h6M9 17h3"/></symbol>
+  <symbol id="i-layers" viewBox="0 0 24 24"><path d="m12 4 8 4-8 4-8-4z"/><path d="m4 12 8 4 8-4M4 16l8 4 8-4"/></symbol>
+  <symbol id="i-sheet" viewBox="0 0 24 24"><path d="M6 4h8l4 4v12H6z"/><path d="M14 4v4h4"/></symbol>
+  <symbol id="i-chev" viewBox="0 0 24 24"><path d="m9 6 6 6-6 6"/></symbol>
+</svg>
+
+<div class="draft" role="note">
+  <div class="wrap">
+    <span class="txt"><b>טיוטה</b> · נכתב בסיוע בינה מלאכותית ונבדק מול המקורות. לא עבר בקרה רבנית. <a href="#">פרטים</a></span>
+    <button class="x" data-close-draft aria-label="סגירה">✕</button>
+  </div>
+</div>
+
+<header class="site-header">
+  <div class="wrap">
+    <span class="bsd">בס״ד</span>
+    <a class="logo" href="index.html"><span class="logo-mark" aria-hidden="true"><i></i><i></i></span>חברותא</a>
+    <nav class="main-nav" aria-label="ניווט ראשי">
+      <a href="index.html">ראשי</a>
+      <a href="library.html" aria-current="page">ספרייה</a>
+      <a href="#">ביאורים</a>
+      <a href="#">עץ וזמן</a>
+      <a href="#">מפתח</a>
+      <a href="#">מה חדש</a>
+    </nav>
+    <div class="tools">
+      <label class="hsearch"><svg class="ic"><use href="#i-search"/></svg><span>חיפוש באתר</span><kbd>/</kbd></label>
+      <button class="icon-btn only-mobile" aria-label="חיפוש"><svg class="ic"><use href="#i-search"/></svg></button>
+      <button class="icon-btn" data-open-view aria-label="תצוגה"><span class="aa">Aa</span><span class="lbl">תצוגה</span></button>
+    </div>
+
+    <div class="view-panel" id="view-panel" role="dialog" aria-label="הגדרות תצוגה">
+      <div class="sheet-handle"></div>
+      <div class="row">
+        <h4>ערכת נושא</h4>
+        <div class="seg">
+          <button data-set="theme" data-val="editorial">עריכתי</button>
+          <button data-set="theme" data-val="light">אור ועומק</button>
+          <button data-set="theme" data-val="discovery">גילוי</button>
+        </div>
+      </div>
+      <div class="row">
+        <h4>צבע הדגשה</h4>
+        <div class="swatches">
+          <button data-set="accent" data-val="bordeaux" style="--c:#7A2335" aria-label="בורדו"></button>
+          <button data-set="accent" data-val="ink" style="--c:#2F4A7A" aria-label="כחול דיו"></button>
+          <button data-set="accent" data-val="olive" style="--c:#4F6B3A" aria-label="זית"></button>
+          <button data-set="accent" data-val="teal" style="--c:#2E7C83" aria-label="טורקיז"></button>
+          <button data-set="accent" data-val="gold" style="--c:#D4A24C" aria-label="זהב"></button>
+        </div>
+      </div>
+      <div class="row">
+        <h4>גודל גופן</h4>
+        <div class="seg">
+          <button data-set="size" data-val="md">רגיל</button>
+          <button data-set="size" data-val="lg">גדול</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<div class="scrim" id="scrim"></div>
+
+<main class="wrap">
+
+  <!-- PAGE HEAD 7 + 4 -->
+  <section class="page-head grid12">
+    <div class="ph-main">
+      <div class="kicker">ספרי היסוד, בטקסט מלא</div>
+      <h1>ספרייה</h1>
+      <p class="lede">ספרי קה״ת כפי שהם בספריית חב״ד, מסודרים לפי דורות מהבעש״ט ועד הרבי. לשימוש לא מסחרי ובייחוס לקה״ת.</p>
+    </div>
+    <div class="ph-side">
+      <div class="stats">
+        <div class="stat"><b>34</b><span>סדרות</span></div>
+        <div class="stat"><b>43,609</b><span>עמודים</span></div>
+        <div class="stat"><b>8</b><span>דורות</span></div>
+      </div>
+    </div>
+  </section>
+
+  <nav class="tabs" aria-label="תצוגת ספרייה">
+    <a href="library.html" aria-current="page">לקריאה <span class="tab-n">34</span></a>
+    <a href="#">מהדורות</a>
+  </nav>
+
+  <div class="toolbar grid12">
+    <label class="filter">
+      <svg class="ic"><use href="#i-search"/></svg>
+      <input type="search" placeholder="סינון לפי שם ספר או רבי…" aria-label="סינון">
+    </label>
+    <div class="legend">
+      <span><span class="star">✦</span> ספר יסוד</span>
+      <span>מספרי עמודים לפי מהדורת קה״ת</span>
+    </div>
+  </div>
+
+  <!-- proportional generation bar (from direction ג) -->
+  <div class="genbar" aria-label="היקף הספרייה לפי דור">
+    <div class="cap"><span>הבעש״ט</span><span>היקף לפי עמודים</span><span>הרבי</span></div>
+    <div class="bar">
+      <a href="#g1" style="--w:1479;--c:var(--gen-1)" title="הבעש״ט · 1,479 עמ׳"><span class="full">הבעש״ט</span><span class="short">בעש״ט</span></a>
+      <a href="#g2" style="--w:3655;--c:var(--gen-2)" title="אדמו״ר הזקן · 3,655 עמ׳"><span class="full">אדמו״ר הזקן</span><span class="short">הזקן</span></a>
+      <a href="#g3" style="--w:6281;--c:var(--gen-3)" title="אדמו״ר האמצעי · 6,281 עמ׳"><span class="full">אדמו״ר האמצעי</span><span class="short">האמצעי</span></a>
+      <a href="#g4" style="--w:4225;--c:var(--gen-4)" title="הצמח צדק · 4,225 עמ׳"><span class="full">הצמח צדק</span><span class="short">צ״צ</span></a>
+      <a href="#g5" style="--w:5705;--c:var(--gen-5)" title="אדמו״ר מהר״ש · 5,705 עמ׳"><span class="full">מהר״ש</span><span class="short">מהר״ש</span></a>
+      <a href="#g6" style="--w:1807;--c:var(--gen-6)" title="אדמו״ר הרש״ב · 1,807 עמ׳"><span class="full">רש״ב</span><span class="short">רש״ב</span></a>
+      <a href="#g7" style="--w:3133;--c:var(--gen-7)" title="אדמו״ר הריי״צ · 3,133 עמ׳"><span class="full">ריי״צ</span><span class="short">ריי״צ</span></a>
+      <a href="#g8" style="--w:17324;--c:var(--gen-8)" title="הרבי · 17,324 עמ׳"><span class="full">הרבי</span><span class="short">הרבי</span></a>
+    </div>
+  </div>
+
+  <!-- GENERATIONS 3 + 9 -->
+  <div class="gens">
+
+    <section class="gen grid12" id="g1" style="--c:var(--gen-1)">
+      <div class="gen-head">
+        <span class="station"></span>
+        <h3>הבעש״ט</h3>
+        <div class="years">תנ״ח–תק״כ</div>
+        <div class="tally">2 ספרים · 1,479 עמ׳</div>
+        <div class="tally-bar" style="--p:8.5%"><i></i></div>
+      </div>
+      <ul class="books">
+        <li class="core"><a href="#"><span class="t">כתר שם טוב</span><span class="p">957 עמ׳</span></a></li>
+        <li><a href="#"><span><span class="t">אור תורה</span><span class="by">המגיד ממעזריטש</span></span><span class="p">522 עמ׳</span></a></li>
+      </ul>
+    </section>
+
+    <section class="gen grid12" id="g2" style="--c:var(--gen-2)">
+      <div class="gen-head">
+        <span class="station"></span>
+        <h3>אדמו״ר הזקן</h3>
+        <div class="years">תק״ה–תקע״ג</div>
+        <div class="tally">5 ספרים · 3,655 עמ׳</div>
+        <div class="tally-bar" style="--p:21%"><i></i></div>
+      </div>
+      <ul class="books">
+        <li class="core"><a href="#"><span class="t">תניא</span><span class="p">119 עמ׳</span></a></li>
+        <li class="core"><a href="#"><span class="t">תורה אור</span><span class="p">524 עמ׳</span></a></li>
+        <li class="core"><a href="#"><span class="t">לקוטי תורה</span><span class="p">1,295 עמ׳</span></a></li>
+        <li><a href="#"><span class="t">מאמרי אדמו״ר הזקן</span><span class="p">1,484 עמ׳</span></a></li>
+        <li><a href="#"><span class="t">אגרות קודש</span><span class="p">233 עמ׳</span></a></li>
+      </ul>
+    </section>
+
+    <section class="gen grid12" id="g3" style="--c:var(--gen-3)">
+      <div class="gen-head">
+        <span class="station"></span>
+        <h3>אדמו״ר האמצעי</h3>
+        <div class="years">תקל״ד–תקפ״ח</div>
+        <div class="tally">8 ספרים · 6,281 עמ׳</div>
+        <div class="tally-bar" style="--p:36%"><i></i></div>
+      </div>
+      <ul class="books">
+        <li class="core"><a href="#"><span class="t">תורת חיים</span><span class="p">2,920 עמ׳</span></a></li>
+        <li><a href="#"><span class="t">מאמרי אדמו״ר האמצעי</span><span class="p">1,150 עמ׳</span></a></li>
+        <li><a href="#"><span class="t">פירוש המילות</span><span class="p">525 עמ׳</span></a></li>
+        <li><a href="#"><span class="t">אמרי בינה</span><span class="p">428 עמ׳</span></a></li>
+        <li><a href="#"><span class="t">שערי תשובה</span><span class="p">574 עמ׳</span></a></li>
+        <li><a href="#"><span class="t">שערי אורה</span><span class="p">282 עמ׳</span></a></li>
+        <li><a href="#"><span class="t">נר מצוה ותורה אור</span><span class="p">276 עמ׳</span></a></li>
+        <li><a href="#"><span class="t">אגרות קודש</span><span class="p">126 עמ׳</span></a></li>
+      </ul>
+    </section>
+
+    <section class="gen grid12" id="g4" style="--c:var(--gen-4)">
+      <div class="gen-head">
+        <span class="station"></span>
+        <h3>הצמח צדק</h3>
+        <div class="years">תקמ״ט–תרכ״ו</div>
+        <div class="tally">6 ספרים · 4,225 עמ׳</div>
+        <div class="tally-bar" style="--p:24%"><i></i></div>
+      </div>
+      <ul class="books">
+        <li class="core"><a href="#"><span class="t">אור התורה</span><span class="p">2,325 עמ׳</span></a></li>
+        <li><a href="#"><span class="t">דרך מצותיך</span><span class="p">474 עמ׳</span></a></li>
+        <li><a href="#"><span class="t">מאמרי אדמו״ר הצמח צדק</span><span class="p">312 עמ׳</span></a></li>
+        <li><a href="#"><span class="t">יהל אור על תהלים</span><span class="p">627 עמ׳</span></a></li>
+        <li><a href="#"><span class="t">ספר החקירה</span><span class="p">362 עמ׳</span></a></li>
+        <li><a href="#"><span class="t">אגרות קודש</span><span class="p">125 עמ׳</span></a></li>
+      </ul>
+    </section>
+
+    <section class="gen grid12" id="g5" style="--c:var(--gen-5)">
+      <div class="gen-head">
+        <span class="station"></span>
+        <h3>אדמו״ר מהר״ש</h3>
+        <div class="years">תקצ״ד–תרמ״ג</div>
+        <div class="tally">ספר אחד · 5,705 עמ׳</div>
+        <div class="tally-bar" style="--p:33%"><i></i></div>
+      </div>
+      <ul class="books">
+        <li class="core"><a href="#"><span class="t">תורת שמואל</span><span class="p">5,705 עמ׳</span></a></li>
+      </ul>
+    </section>
+
+    <section class="gen grid12" id="g6" style="--c:var(--gen-6)">
+      <div class="gen-head">
+        <span class="station"></span>
+        <h3>אדמו״ר הרש״ב</h3>
+        <div class="years">תרכ״א–תר״פ</div>
+        <div class="tally">3 ספרים · 1,807 עמ׳</div>
+        <div class="tally-bar" style="--p:10%"><i></i></div>
+      </div>
+      <ul class="books">
+        <li class="core"><a href="#"><span class="t">המשך תער״ב</span><span class="p">1,577 עמ׳</span></a></li>
+        <li><a href="#"><span class="t">קונטרס ומעין</span><span class="p">69 עמ׳</span></a></li>
+        <li><a href="#"><span class="t">אגרות קודש</span><span class="p">161 עמ׳</span></a></li>
+      </ul>
+    </section>
+
+    <section class="gen grid12" id="g7" style="--c:var(--gen-7)">
+      <div class="gen-head">
+        <span class="station"></span>
+        <h3>אדמו״ר הריי״צ</h3>
+        <div class="years">תר״מ–תש״י</div>
+        <div class="tally">3 ספרים · 3,133 עמ׳</div>
+        <div class="tally-bar" style="--p:18%"><i></i></div>
+      </div>
+      <ul class="books">
+        <li><a href="#"><span class="t">ספר המאמרים</span><span class="p">518 עמ׳</span></a></li>
+        <li><a href="#"><span class="t">ספר השיחות</span><span class="p">1,179 עמ׳</span></a></li>
+        <li><a href="#"><span class="t">אגרות קודש</span><span class="p">1,436 עמ׳</span></a></li>
+      </ul>
+    </section>
+
+    <section class="gen grid12" id="g8" style="--c:var(--gen-8)">
+      <div class="gen-head">
+        <span class="station"></span>
+        <h3>הרבי</h3>
+        <div class="years">תרס״ב–תשנ״ד</div>
+        <div class="tally">6 ספרים · 17,324 עמ׳</div>
+        <div class="tally-bar" style="--p:100%"><i></i></div>
+      </div>
+      <ul class="books">
+        <li class="core"><a href="#"><span class="t">לקוטי שיחות</span><span class="p">3,203 עמ׳</span></a></li>
+        <li><a href="#"><span class="t">היום יום</span><span class="p">383 עמ׳</span></a></li>
+        <li><a href="#"><span class="t">ספר המאמרים מלוקט</span><span class="p">214 עמ׳</span></a></li>
+        <li><a href="#"><span class="t">תורת מנחם</span><span class="p">2,270 עמ׳</span></a></li>
+        <li><a href="#"><span class="t">רשימות</span><span class="p">192 עמ׳</span></a></li>
+        <li><a href="#"><span class="t">אגרות קודש</span><span class="p">11,062 עמ׳</span></a></li>
+      </ul>
+    </section>
+  </div>
+
+  <!-- בהכנה — moved to the bottom, folded -->
+  <details class="prep">
+    <summary>
+      <h2>בהכנה לספרייה</h2>
+      <span class="meta">2 סדרות נקלטו ויצטרפו לקריאה בשלב הבא</span>
+      <span class="chev">פירוט </span>
+    </summary>
+    <div class="cards grid12">
+      <div class="card">
+        <span class="tag">בהכנה</span>
+        <h3>ספר הערכים</h3>
+        <p>שמונה כרכים נקלטו להכנה (כרכים ט׳–י׳ חסרים או חלקיים). הטקסט המלא ייכנס לקריאה באתר בשלב הבא.</p>
+        <a href="#">הפניות במפתח העניינים ←</a>
+      </div>
+      <div class="card">
+        <span class="tag">בהכנה</span>
+        <h3>קונטרסי קה״ת</h3>
+        <p>132 קונטרסים נקלטו ממקורות קה״ת. הטקסט המלא ייכנס לספרייה לאחר חילוץ תקין של העמודים.</p>
+        <a href="#">רישום בעץ הידע ←</a>
+      </div>
+    </div>
+  </details>
+
+  <p class="credits">הטקסטים: © Kehot Publication Society (הוצאת ספרים קה״ת), מתוך ספריית חב״ד (chabadlibrary.org). מוצגים לשימוש לא מסחרי, בייחוס לקה״ת. לכל ספר מצוין מקורו.</p>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap grid12">
+    <div class="foot-brand">
+      <a class="logo" href="index.html"><span class="logo-mark" aria-hidden="true"><i></i><i></i></span>חברותא</a>
+      <p>ביאורים על דברי רבותינו נשיאינו, פרשה אחר פרשה.</p>
+    </div>
+    <nav class="foot-links" aria-label="קישורי פוטר">
+      <a href="library.html">ספרייה</a>
+      <a href="#">ביאורים</a>
+      <a href="#">עץ וזמן</a>
+      <a href="#">מפתח</a>
+      <a href="#">הפרשיות: פרשת בראשית</a>
+      <a href="#">אודות ושיטת העבודה</a>
+    </nav>
+    <p class="foot-note">טיוטה: נכתב בסיוע בינה מלאכותית, בלי בקרה רבנית. הציטוטים בלשון המקור, לשם לימוד. · <a href="#">מצב המערכת</a></p>
+  </div>
+</footer>
+
+<nav class="tabbar" aria-label="ניווט תחתון">
+  <a href="index.html"><svg class="ic"><use href="#i-home"/></svg>ראשי</a>
+  <a href="library.html" aria-current="page"><svg class="ic"><use href="#i-book"/></svg>ספרייה</a>
+  <a href="#"><svg class="ic"><use href="#i-pen"/></svg>ביאורים</a>
+  <a href="#"><svg class="ic"><use href="#i-tree"/></svg>עץ וזמן</a>
+  <a href="#"><svg class="ic"><use href="#i-more"/></svg>עוד</a>
+</nav>
+
+<script src="app.js"></script>
+</body>
+</html>
