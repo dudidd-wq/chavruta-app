@@ -1,7 +1,7 @@
 /* Chavruta service worker: app-shell precache, network-first data, cache-first static assets. */
 "use strict";
 
-const CACHE_VERSION = "v5-home15";
+const CACHE_VERSION = "v6-combined4";
 const SHELL_CACHE = "chavruta-shell-" + CACHE_VERSION;
 const ASSET_CACHE = "chavruta-assets-" + CACHE_VERSION;
 const DATA_CACHE = "chavruta-data-" + CACHE_VERSION;
@@ -19,6 +19,7 @@ const PRECACHE_URLS = [
   "./print.css",
   "./personalize.js",
   "./personalize.css",
+  "./combined.css",
   "./manifest.webmanifest",
   "./pwa.js",
   "./icons/icon-192.png",

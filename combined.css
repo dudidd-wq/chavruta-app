@@ -1,0 +1,359 @@
+/* חברותא · העיצוב המשולב (״דף ספר״ × ״בית מדרש בעריכה עכשווית״).
+   נטען אחרון — אחרי app.css ו־personalize.css — וחל על כל הסגנונות: קלאסי, מגזין, אור ועומק, גילוי.
+   משותף לכולם: ציר יישור ימני אחד (כותרת, תוכן ופוטר על אותו max-width), רשת 12 עמודות עם gutter של 24px,
+   ושלושה תפקידי גופן: כותרות Frank Ruhl Libre · קריאה Noto Serif Hebrew · ממשק Assistant.
+   הסגנונות משנים רק צבע, משטח ואווירה. בלי ריווח אותיות בעברית ובלי יישור דו־צדדי בטקסט קצר. */
+
+/* ===== אסימונים ===== */
+:root {
+  --f-head: "Frank Ruhl Libre", "David Libre", "Noto Serif Hebrew", "Times New Roman", serif;
+  --f-body: "Noto Serif Hebrew", "Frank Ruhl Libre", "David Libre", "Times New Roman", serif;
+  --f-ui: "Assistant", "Segoe UI", "Arial Hebrew", Arial, sans-serif;
+  --wrap: 1160px;          /* רוחב התוכן המרבי — זהה לכותרת, לתוכן ולפוטר */
+  --col-gap: 24px;         /* gutter של רשת 12 העמודות */
+  --edge: clamp(16px, 4vw, 32px);
+  --axis: max(var(--edge), calc((100% - var(--wrap)) / 2));  /* ריפוד שמציב תוכן על הציר, ברכיב ברוחב מלא */
+  --r-card: 8px;
+  --sec-gap: 64px;
+}
+@media (max-width: 720px) { :root { --sec-gap: 40px; } }
+
+/* ===== טיפוגרפיה: כותרות בפרנק ריהל, בלי ריווח אותיות ===== */
+:root h1, :root h2, :root h3, :root h4 { font-family: var(--f-head); }
+:root[data-style] :is(h1, h2, h3, h4, .h-title, .page-title, .h-kicker, .lib-kicker) { letter-spacing: 0; }
+:root .brand b { font-family: var(--f-head); letter-spacing: 0; }
+
+/* ===== ציר אחד: הודעת הטיוטה, הכותרת והפוטר יושבים על אותו קו ===== */
+@media (max-width: 720px) {
+  :root[data-style] .top { padding-inline: max(var(--edge), env(safe-area-inset-right)) max(calc(var(--edge) - .5rem), env(safe-area-inset-left)); }
+}
+@media (min-width: 721px) {
+  :root .top { padding-inline: var(--axis); }
+  /* בתצוגות הקריאה הכותרת כוללת גם את מתג המצבים ושדה החיפוש, ולכן לא נצמדת לציר ה-1160 */
+  :root[data-style] body.has-modes .top { padding-inline: var(--edge); }
+  :root .draftbar { justify-content: flex-start; text-align: start; padding-inline: var(--axis) calc(var(--axis) + 1.6rem); }
+  :root .draftbar .db-panel { margin-inline: 0; }
+}
+:root[data-style] .top :is(.brand, .psw, .historynav, .mainnav, .modesw, .tools) { flex-shrink: 0; }
+:root .site-foot { padding-inline: var(--axis); }
+
+/* ===== כותרת בנייד: שורה אחת — מותג, פרשה, חץ אחורה והכלים העיקריים =====
+   חיפוש זמין בסרגל התחתון ובשער; ערכת הצבעים והתאורה נמצאות גם ב״סגנון״ וגם ב״התאמה אישית״,
+   ולכן כפתור הערכה, חץ ״קדימה״ ושורת החיצים הנפרדת מוסתרים בנייד. PDF נשאר בתצוגות הקריאה. */
+@media (max-width: 720px) {
+  :root { --top-h: 3.1rem; }
+  :root[data-style] .top { flex-wrap: nowrap; row-gap: 0; }
+  :root[data-style] .top .historynav { order: 0; flex: none; margin-inline-start: auto; border-top: 0; }
+  :root[data-style] .top .historynav .history-forward, :root[data-style] .top .history-topics { display: none; }
+  :root[data-style] .top .tools { margin-inline-start: 0; }
+  :root[data-style] .top .tools :is(#search-btn, .thw) { display: none; }
+  :root[data-style] body:not(.has-modes) .top #pdf-btn { display: none; }
+  :root[data-style] .top .psw { flex: 0 1 auto; min-width: 0; }
+  :root[data-style] .top .psw > summary { max-width: 100%; }
+  :root[data-style] .top .psw-l { min-width: 0; overflow: hidden; text-overflow: ellipsis; }
+}
+:root .site-foot .sf-in { max-width: none; margin: 0; }
+
+/* ===== כותרת: שש תוויות טקסט מלאות (בלי אייקונים) ושדה חיפוש קבוע ===== */
+@media (min-width: 1280px) {
+  :root[data-style] body:not(.has-modes) .top .mainnav .nav-i .lbl { display: inline; }
+  :root[data-style] body:not(.has-modes) .top .mainnav .nav-i svg { display: none; }
+  :root[data-style] body:not(.has-modes) .top .mainnav .nav-i { padding-inline: .5rem; }
+}
+:root .top { column-gap: .75rem; }
+:root .mainnav { margin-inline-start: .25rem; }
+:root .nav-i { font: 600 .95rem/1.3 var(--f-ui); }
+:root .top .tools #search-btn { order: -1; }
+@media (min-width: 1101px) {
+  :root[data-style] .top .tools #search-btn {
+    justify-content: flex-start; gap: .5rem; width: clamp(11rem, 16vw, 15rem); min-height: 44px; padding: 0 .75rem;
+    border: 1px solid var(--rule); border-radius: var(--r-card); background: var(--card); color: var(--ink-3);
+    font: 400 .9rem/1 var(--f-ui); margin-inline-end: .35rem;
+  }
+  :root[data-style] .top .tools #search-btn .lbl { display: inline; flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; text-align: start; }
+  :root[data-style] .top .tools #search-btn:hover { border-color: var(--accent-line); color: var(--ink-2); }
+  :root[data-style] .top .tools #search-btn svg { width: 1.05rem; height: 1.05rem; }
+}
+.search-kbd { display: none; }
+@media (min-width: 1101px) { :root[data-style] .top #search-btn .search-kbd { display: inline-block; } }
+:root[data-style="editorial"] .top .tools #search-btn { border-color: var(--ink); }
+:root[data-style="depth"] .top .tools #search-btn { background: rgba(255,255,255,.04); }
+:root[data-style="discovery"] .top .tools #search-btn { background: var(--paper-2); border-color: transparent; }
+
+/* ===== טקסט קצר בשער ובספרייה: יישור לתחילת השורה (גובר על כלל היישור הדו־צדדי של הקריאה) ===== */
+html body #view:is(.home, .lib-home) :is(p, li) { text-align: start; text-align-last: auto; word-spacing: normal; }
+
+/* ===== מעטפת העמוד: שער וספרייה על הציר ===== */
+:root .main.home, :root .main.lib-home {
+  box-sizing: content-box; max-width: var(--wrap); margin-inline: auto;
+  padding: 48px var(--edge) 72px;
+}
+@media (max-width: 720px) { :root .main.home, :root .main.lib-home { padding-top: 24px; padding-bottom: 48px; } }
+
+/* עמודי אינדקס (ביאורים, מפתח, מה חדש — .ix-page מסומן ב־app.js): אותו ציר של 1160px.
+   רק המעטפת מתרחבת; פסקאות פתיח נשארות ברוחב קריאה, ודפי הקריאה עצמם אינם מסומנים. */
+:root .main.page.ix-page { box-sizing: content-box; max-width: var(--wrap); margin-inline: auto; padding-inline: var(--edge); }
+.main.page.ix-page :is(.lede, .h-sec-h > p, .page-title + p) { max-width: 48rem; }
+/* חמשת שערי הלימוד: רשומות שלמות ברוחב השורה (שם 3 · תיאור 6 · מונה 3) — אין שורה עם פריט בודד */
+.main.page.ix-page .learning-gates { grid-template-columns: minmax(0, 1fr); gap: 0; }
+.main.page.ix-page .learning-gate { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--col-gap); align-items: baseline; padding: 18px 4px; border: 0; border-bottom: 1px solid var(--rule); border-radius: 0; background: none; box-shadow: none; }
+.main.page.ix-page .learning-gate h3 { grid-column: span 3; margin: 0; font: 700 1.3rem/1.35 var(--f-head); }
+.main.page.ix-page .learning-gate p { grid-column: span 6; margin: 0; font: 400 1rem/1.65 var(--f-body); color: var(--ink-2); }
+.main.page.ix-page .learning-gate small { grid-column: span 3; font: 400 .85rem/1.5 var(--f-ui); color: var(--ink-3); text-align: end; }
+.main.page.ix-page .learning-gate:hover h3, .main.page.ix-page .learning-gate:focus-visible h3 { color: var(--accent); }
+.main.page.ix-page .learning-gate:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+@media (max-width: 760px) {
+  .main.page.ix-page .learning-gate { grid-template-columns: minmax(0, 1fr); row-gap: .35rem; }
+  .main.page.ix-page .learning-gate > * { grid-column: auto; text-align: start; }
+}
+
+/* =====================================================================
+   שער (#/home)
+   ===================================================================== */
+/* --- פתיח 8 + פרשת השבוע 4 --- */
+/* סדר ה־DOM: פתיח (עם החיפוש) → פרשת השבוע → קיצורי החיפוש. בדסקטופ הקיצורים חוזרים לעמודת הפתיח (שורה 2)
+   ופרשת השבוע תופסת את שתי השורות; בנייד הסדר החזותי זהה לסדר המקלדת. */
+.h-lead { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); grid-template-rows: auto 1fr; column-gap: var(--col-gap); row-gap: 0; align-items: start; margin: 0 0 var(--sec-gap); }
+.h-intro { grid-column: 1 / span 8; grid-row: 1; min-width: 0; padding-top: 8px; }
+.h-week { grid-column: 9 / span 4; grid-row: 1 / span 2; min-width: 0; }
+.h-lead > .h-quick { grid-column: 1 / span 8; grid-row: 2; }
+@media (max-width: 900px) {
+  .h-lead { grid-template-columns: minmax(0, 1fr); grid-template-rows: none; row-gap: 20px; }
+  .h-intro, .h-week, .h-lead > .h-quick { grid-column: auto; grid-row: auto; }
+  .h-lead > .h-quick { margin-top: 0; }
+}
+@media (max-width: 720px) {
+  .main.home .h-kicker { margin-bottom: .6rem; }
+  .main.home .h-purpose { margin-top: .9rem; }
+  .main.home .h-search { margin-top: 1rem; }
+}
+.main.home .h-kicker { display: flex; align-items: center; gap: .75rem; margin: 0 0 1rem; font: 600 .95rem/1.4 var(--f-ui); color: var(--accent); }
+.main.home .h-kicker::before { content: ""; width: 2rem; height: 0; border-top: 1px solid currentColor; flex: none; }
+.main.home .h-title { margin: 0; font: 700 clamp(2.6rem, 1.4rem + 3.6vw, 4.4rem)/1.12 var(--f-head); color: var(--ink); text-align: start; text-wrap: balance; }
+.main.home .h-purpose { margin: 1.25rem 0 0; max-width: 34rem; font: 400 clamp(1.05rem, 1rem + .3vw, 1.2rem)/1.8 var(--f-body); color: var(--ink-2); }
+.main.home .h-search { display: block; max-width: 40rem; margin: 1.15rem 0 0; padding: 0; border: 0; border-radius: 0; background: none; box-shadow: none; }
+.main.home .h-search:focus-within { box-shadow: none; }
+.h-search-l { display: block; margin: 0 0 .5rem; font: 600 .9rem/1.4 var(--f-ui); color: var(--ink-2); }
+.h-search-row { display: flex; align-items: stretch; min-height: 52px; border: 1px solid var(--rule); border-radius: var(--r-card); background: var(--card); overflow: hidden; }
+.h-search-row:focus-within { border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft); }
+.h-search-row > svg { align-self: center; width: 1.15rem; height: 1.15rem; margin-inline: 1rem .5rem; color: var(--ink-3); flex: none; }
+.main.home .h-search input { flex: 1; min-width: 0; border: 0; outline: 0; background: none; color: var(--ink); font: 400 1.02rem var(--f-ui); padding: 0 .25rem; }
+.main.home .h-search input::placeholder { color: var(--ink-3); }
+.main.home .h-search .btn { border-radius: 0; padding: 0 1.4rem; font: 700 .95rem var(--f-ui); }
+.h-quick { display: flex; flex-wrap: wrap; align-items: baseline; gap: .25rem 1rem; margin: .85rem 0 0; font: 400 .9rem/1.5 var(--f-ui); color: var(--ink-3); }
+.h-quick a { color: var(--ink-2); text-decoration: underline; text-decoration-color: var(--rule); text-underline-offset: .3em; }
+.h-quick a:hover { color: var(--accent); text-decoration-color: currentColor; }
+
+/* --- פרשת השבוע: המשטח המודגש היחיד במסך --- */
+.h-week { display: flex; flex-direction: column; gap: .75rem; padding: 24px 24px 20px; border: 1px solid var(--rule); border-top: 3px solid var(--accent); border-radius: var(--r-card); background: color-mix(in srgb, var(--accent-soft) 55%, var(--card)); }
+@media (min-width: 901px) { .h-week { align-self: stretch; } }
+.h-week-k { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .25rem 1rem; margin: 0; font: 600 .85rem/1.4 var(--f-ui); color: var(--accent); }
+.h-week-k span + span { color: var(--ink-3); font-weight: 400; }
+.main.home .h-week-t { margin: .25rem 0 0; font: 700 clamp(2.4rem, 1.8rem + 1.6vw, 3.4rem)/1.1 var(--f-head); }
+.h-week-t a { color: var(--ink); text-decoration: none; }
+.h-week-t a:hover { color: var(--accent); }
+.h-week-d { margin: 0; font: 400 1rem/1.75 var(--f-body); color: var(--ink-2); }
+.h-week-m { margin: 0; font: 400 .85rem/1.5 var(--f-ui); color: var(--ink-3); }
+.h-week-go { margin: auto 0 0; padding-top: .9rem; border-top: 1px solid var(--rule); font: 700 .95rem var(--f-ui); }
+.h-week-go a { text-decoration: none; }
+.h-week-go a:hover { text-decoration: underline; }
+
+/* --- שורה משנית: המשך קריאה והזמנה להתאמה, קומפקטיות --- */
+.h-after { display: flex; flex-wrap: wrap; align-items: stretch; gap: 12px var(--col-gap); margin: calc(var(--sec-gap) * -.5) 0 var(--sec-gap); }
+.main.home .h-after .continue { margin: 0; border-radius: var(--r-card); }
+.main.home :is(.reading-setup-invite, .chs-invite) { flex: 1 1 22rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; margin: 0; padding: 12px 16px; gap: 8px 16px; border: 1px solid var(--rule); border-radius: var(--r-card); background: var(--paper-2); box-shadow: none; color: var(--ink); font: 400 .9rem/1.5 var(--f-ui); }
+.main.home :is(.reading-setup-invite, .chs-invite) h2 { margin: 0; font: 700 1rem/1.4 var(--f-ui); color: var(--ink); }
+.main.home :is(.reading-setup-invite, .chs-invite) p { margin: 0; color: var(--ink-2); }
+.chs-invite-a { display: flex; align-items: center; flex-wrap: wrap; gap: 10px 16px; }
+.chs-invite-a button { min-height: 44px; }
+.main.home .h-after:empty { display: none; }
+
+/* --- כותרת מקטע --- */
+.h-sec-row { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: .25rem 1.5rem; margin: 0 0 20px; }
+.main.home .h-sec-row h2 { margin: 0; padding: 0; border: 0; font: 700 clamp(1.6rem, 1.3rem + .8vw, 2rem)/1.25 var(--f-head); }
+.h-sec-row p { margin: 0; font: 400 .9rem var(--f-ui); color: var(--ink-3); }
+
+/* --- כניסות: שורה שלמה של 3 כרטיסים, ואחריה שורה שלמה של 2 --- */
+.main.home .h-entries { display: block; margin: 0 0 var(--sec-gap); }
+.h-cards, .h-rows, .h-row-list { list-style: none; margin: 0; padding: 0; }
+.h-cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--col-gap); }
+.h-card { position: relative; display: flex; flex-direction: column; gap: .6rem; min-width: 0; padding: 24px; border: 1px solid var(--rule); border-radius: var(--r-card); background: var(--card); transition: border-color .15s, box-shadow .15s, transform .15s; }
+.h-card:hover { border-color: var(--accent-line); }
+.h-card-n { position: absolute; top: 26px; inset-inline-end: 24px; margin: 0; font: 600 .8rem/1 var(--f-ui); color: var(--accent); font-variant-numeric: tabular-nums; }
+.main.home .h-card h3 { margin: 0; padding-inline-end: 2.5rem; font: 700 1.6rem/1.25 var(--f-head); }
+.h-card h3 a { color: var(--ink); text-decoration: none; }
+.h-card h3 a::after { content: ""; position: absolute; inset: 0; border-radius: inherit; }
+.h-card:hover h3 a { color: var(--accent); }
+.h-card h3 a:focus-visible { outline: 0; }
+.h-card:has(h3 a:focus-visible) { outline: 2px solid var(--accent); outline-offset: 2px; }
+.h-card-d { margin: 0; font: 400 1rem/1.7 var(--f-body); color: var(--ink-2); }
+.h-card-go { margin: auto 0 0; padding-top: .5rem; font: 700 .92rem var(--f-ui); color: var(--accent); }
+
+.h-rows { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 var(--col-gap); margin-top: 32px; }
+.h-row { position: relative; display: grid; grid-template-columns: minmax(0, 1fr) auto; align-content: start; gap: .35rem 1rem; padding: 20px 0 22px; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); min-width: 0; }
+.main.home .h-row h3 { grid-column: 1; margin: 0; font: 700 1.45rem/1.3 var(--f-head); display: flex; align-items: baseline; gap: .75rem; }
+.h-row h3 small { font: 400 .8rem var(--f-ui); color: var(--ink-3); }
+.h-row h3 a { color: var(--ink); text-decoration: none; }
+.h-row:not(.h-row-news) h3 a::after { content: ""; position: absolute; inset: 0; }
+.h-row:hover h3 a { color: var(--accent); }
+.h-row > p, .h-row-list, .h-row-more { grid-column: 1; margin: 0; }
+.h-row > p { font: 400 .98rem/1.65 var(--f-body); color: var(--ink-2); }
+.h-row-go { grid-column: 2; grid-row: 1 / span 2; align-self: center; font: 400 1.4rem/1 var(--f-ui); color: var(--accent); transition: transform .15s; }
+.h-row:hover .h-row-go { transform: translateX(-4px); }
+.h-row-list { display: grid; gap: .35rem; }
+.h-row-list li { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0 .6rem; min-width: 0; }
+.h-row-list a { font: 600 .95rem/1.5 var(--f-body); color: var(--ink); text-decoration: none; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 100%; }
+.h-row-list a:hover { color: var(--accent); text-decoration: underline; }
+.h-row-list small { font: 400 .78rem var(--f-ui); color: var(--ink-3); }
+.h-row-more { justify-self: start; margin-top: .25rem; font: 700 .9rem var(--f-ui); text-decoration: none; }
+.h-row-more:hover { text-decoration: underline; }
+@media (max-width: 900px) { .h-cards { grid-template-columns: minmax(0, 1fr); gap: 16px; } }
+@media (max-width: 640px) { .h-rows { grid-template-columns: minmax(0, 1fr); margin-top: 16px; } .h-row + .h-row { border-top: 0; } }
+
+/* --- הלימוד שלי: פס קומפקטי --- */
+.main.home .study-shelf { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 20px; margin: 0; padding: 14px 0; border-block: 1px solid var(--rule); }
+.main.home .study-shelf h2 { margin: 0; padding: 0; border: 0; font: 700 1rem/1.4 var(--f-ui); color: var(--ink); }
+.main.home .study-shelf .study-links { margin: 0; gap: 4px 16px; }
+.main.home .study-shelf .study-links .btn { padding: 0; border: 0; background: none; border-radius: 0; font: 600 .9rem var(--f-ui); color: var(--accent); min-height: 32px; }
+.main.home .study-shelf .study-links .btn:hover { text-decoration: underline; }
+.main.home .study-shelf > p { flex: 1 1 100%; margin: 0; font: 400 .85rem/1.5 var(--f-ui); color: var(--ink-3); }
+.main.home .study-shelf .study-recent { flex: 1 1 100%; margin: 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 4px 24px; }
+.main.home .study-shelf .study-recent small { color: var(--ink-3); margin-inline-start: .4rem; }
+
+/* --- "מאיפה מתחילים" (סגנון גילוי): ארבעה פריטים — שורה שלמה או 2+2 --- */
+.main.home .chs-start { margin: 0 0 var(--sec-gap); }
+.main.home .chs-start h2 { font: 700 clamp(1.6rem, 1.3rem + .8vw, 2rem)/1.25 var(--f-head); }
+.main.home .chs-start-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+@media (max-width: 1000px) { .main.home .chs-start-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 560px) { .main.home .chs-start-grid { grid-template-columns: minmax(0, 1fr); } }
+
+/* =====================================================================
+   ספרייה (#/read, #/read?tab=editions)
+   ===================================================================== */
+.lib-head { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--col-gap); align-items: end; margin: 0 0 32px; }
+.lib-head-t { grid-column: span 8; min-width: 0; }
+.lib-stats { grid-column: span 4; display: flex; justify-content: flex-end; gap: 32px; list-style: none; margin: 0; padding: 0 0 .4rem; }
+.lib-stats li { display: flex; flex-direction: column; align-items: flex-start; }
+.lib-stats b { font: 700 2rem/1.1 var(--f-head); color: var(--ink); font-variant-numeric: tabular-nums; }
+.lib-stats span { font: 400 .85rem var(--f-ui); color: var(--ink-3); }
+.lib-kicker { margin: 0 0 .5rem; font: 600 .95rem var(--f-ui); color: var(--accent); }
+.main.lib-home .page-title { margin: 0; font: 700 clamp(2.6rem, 1.8rem + 2.6vw, 4rem)/1.1 var(--f-head); }
+.main.lib-home .lib-head .lede { margin: 1rem 0 0; max-width: 36rem; font: 400 1.1rem/1.8 var(--f-body); color: var(--ink-2); }
+@media (max-width: 760px) {
+  .lib-head { grid-template-columns: minmax(0, 1fr); row-gap: 20px; }
+  .lib-head-t, .lib-stats { grid-column: auto; }
+  .lib-stats { justify-content: flex-start; }
+  .lib-stats b { font-size: 1.6rem; }
+}
+
+/* --- לשוניות ברמת העמוד: קו תחתון, ברוחב התוכן --- */
+:root .lib-tabs[role="tablist"] { display: flex; gap: 0 28px; margin: 0 0 24px; padding: 0; border-bottom: 1px solid var(--rule); }
+:root .lib-tabs[role="tablist"] a { display: inline-flex; align-items: baseline; gap: .45rem; min-height: 44px; padding: .55rem 0 .65rem; margin-bottom: -1px; border: 0; border-bottom: 2px solid transparent; border-radius: 0; background: none; color: var(--ink-3); font: 600 1.05rem/1.4 var(--f-ui); text-decoration: none; }
+:root .lib-tabs[role="tablist"] a:hover { color: var(--ink); }
+:root .lib-tabs[role="tablist"] a[aria-selected="true"] { border-bottom-color: var(--accent); background: none; color: var(--ink); }
+:root .lib-tabs[role="tablist"] a small { font: 400 .8rem var(--f-ui); color: var(--ink-3); font-variant-numeric: tabular-nums; }
+
+/* --- סינון: ברוחב 9 עמודות, כמו רשימת הספרים --- */
+.main.lib-home .lib-filter { display: flex; align-items: center; gap: .5rem; margin: 0 0 8px; margin-inline-start: calc((100% + var(--col-gap)) * 3 / 12); padding: 0 1rem; min-height: 48px; border: 1px solid var(--rule); border-radius: var(--r-card); background: var(--card); }
+.main.lib-home .lib-filter:focus-within { border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft); }
+.main.lib-home .lib-filter svg { width: 1.05rem; height: 1.05rem; color: var(--ink-3); flex: none; }
+.main.lib-home .lib-filter .tree-q { flex: 1; max-width: none; padding: .7rem .25rem; border: 0; border-radius: 0; background: none; outline: 0; font: 400 1rem var(--f-ui); }
+@media (max-width: 760px) { .main.lib-home .lib-filter { margin-inline-start: 0; } }
+
+/* --- דור = שורה: 3 עמודות לשם הדור, 9 לרשימת הספרים בזרימה --- */
+.main.lib-home .ft-shelf { display: block; margin: 0; }
+.main.lib-home .ft-gen { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--col-gap); padding: 28px 0; border-bottom: 1px solid var(--rule); }
+.main.lib-home .ft-gen-h { grid-column: span 3; min-width: 0; padding-inline-start: 18px; position: relative; }
+.main.lib-home .ft-gen-h::before { content: ""; position: absolute; inset-block: .35rem .2rem; inset-inline-start: 4px; width: 2px; background: color-mix(in srgb, var(--gc, var(--accent)) 35%, transparent); }
+.main.lib-home .ft-gen h2 { position: relative; display: block; margin: 0; padding: 0; border: 0; font: 700 1.35rem/1.3 var(--f-head); color: var(--ink); }
+.main.lib-home .ft-gen h2 .dot { position: absolute; top: .45em; inset-inline-start: -18px; width: 12px; height: 12px; border-radius: 50%; background: var(--gc, var(--accent)); box-shadow: 0 0 0 3px var(--paper); }
+.main.lib-home .ft-gen-h p { margin: .35rem 0 0; font: 400 .85rem/1.5 var(--f-ui); color: var(--ink-3); font-variant-numeric: tabular-nums; }
+.main.lib-home .ft-list { grid-column: span 9; min-width: 0; list-style: none; margin: 0; padding: 0; columns: 3 13rem; column-gap: var(--col-gap); }
+.main.lib-home .ft-list li { break-inside: avoid; border-bottom: 1px solid var(--rule-2); }
+.main.lib-home .ft-card { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: baseline; gap: 0 .75rem; padding: .65rem 0; border: 0; border-radius: 0; background: none; box-shadow: none; transform: none; color: var(--ink); text-decoration: none; }
+.main.lib-home .ft-card b { font: 600 1.08rem/1.4 var(--f-head); }
+.main.lib-home .ft-card .ft-pp { grid-column: 2; grid-row: 1; font: 400 .8rem var(--f-ui); color: var(--ink-3); white-space: nowrap; font-variant-numeric: tabular-nums; }
+.main.lib-home .ft-card .ft-by { grid-column: 1; font: 400 .78rem var(--f-ui); color: var(--ink-3); }
+.main.lib-home .ft-card:hover b, .main.lib-home .ft-card:focus-visible b { color: var(--accent); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: .2em; }
+@media (max-width: 760px) {
+  .main.lib-home .ft-gen { grid-template-columns: minmax(0, 1fr); row-gap: 10px; padding: 22px 0; }
+  .main.lib-home .ft-gen-h, .main.lib-home .ft-list { grid-column: auto; }
+  .main.lib-home .ft-list { columns: 1; }
+}
+
+/* --- בהכנה לספרייה: מקופל, אחרי האוסף --- */
+.main.lib-home .lib-soon { margin: 40px 0 0; padding: 0; border-bottom: 1px solid var(--rule); }
+.main.lib-home .lib-soon > summary { display: flex; flex-wrap: wrap; align-items: baseline; gap: .25rem 1rem; min-height: 52px; padding: 14px 0; cursor: pointer; list-style: none; border-top: 1px solid var(--rule); }
+.main.lib-home .lib-soon > summary::-webkit-details-marker { display: none; }
+.main.lib-home .lib-soon > summary::after { content: "פירוט ▾"; margin-inline-start: auto; font: 600 .88rem var(--f-ui); color: var(--accent); }
+.main.lib-home .lib-soon[open] > summary::after { content: "סגירה ▴"; }
+.main.lib-home .lib-soon-h { font: 700 1.3rem/1.3 var(--f-head); margin: 0; }
+.main.lib-home .lib-soon > summary span { font: 400 .9rem var(--f-ui); color: var(--ink-3); }
+.lib-soon-list { list-style: none; margin: 0 0 16px; padding: 0; }
+.lib-soon-list li { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--col-gap); padding: 12px 0; border-top: 1px solid var(--rule-2); font: 400 .95rem/1.65 var(--f-ui); color: var(--ink-2); }
+.lib-soon-list li > b { grid-column: span 3; font: 600 1.05rem/1.5 var(--f-head); color: var(--ink); }
+.lib-soon-list li > span, .lib-soon-list li > a { grid-column: 4 / -1; }
+.lib-soon-list li > a { font-weight: 600; text-decoration: none; }
+@media (max-width: 760px) { .lib-soon-list li { grid-template-columns: minmax(0, 1fr); } .lib-soon-list li > * { grid-column: auto !important; } }
+.main.lib-home .ft-credit { margin: 24px 0 0; font: 400 .82rem/1.6 var(--f-ui); color: var(--ink-3); max-width: 48rem; }
+
+/* מדף המהדורות בתוך הספרייה: אותו ציר; שאר המדף ללא שינוי */
+.main.lib-home.books .lib-editions { margin-top: 8px; }
+:root .main.lib-home .books-group-head h2 { margin: 0; padding: 0; border: 0; font: 700 1.35rem/1.3 var(--f-head); }
+
+/* =====================================================================
+   אווירה לפי סגנון — צבע ומשטח בלבד; הצורה, הרשת והגופנים משותפים
+   ===================================================================== */
+/* מגזין: קווים שחורים חדים, בלי משטחים צבעוניים */
+:root[data-style="editorial"] .main.home .h-title { font-size: clamp(2.8rem, 1.4rem + 4vw, 4.8rem); line-height: 1.08; }
+:root[data-style="editorial"] .h-week { background: var(--paper-2); border-color: transparent; border-top: 3px solid var(--ink); }
+:root[data-style="editorial"] .h-card { border-color: var(--ink); }
+:root[data-style="editorial"] .h-card:hover { box-shadow: 4px 4px 0 var(--ink); }
+:root[data-style="editorial"] .h-row, :root[data-style="editorial"] .main.lib-home .ft-gen, :root[data-style="editorial"] .lib-tabs[role="tablist"] { border-color: var(--ink); }
+:root[data-style="editorial"] .main.home .h-search .btn.primary { background: var(--ink); border-color: var(--ink); }
+:root[data-style="editorial"] .h-search-row { border-color: var(--ink); }
+
+/* אור ועומק: זכוכית כהה וזוהר זהוב */
+:root[data-style="depth"] .main.home .h-title { color: transparent; font-weight: 700; filter: drop-shadow(0 0 22px rgba(255,180,90,.25)); padding-bottom: .08em; }
+:root[data-style="depth"] .h-week { position: relative; overflow: hidden; background: linear-gradient(160deg, rgba(255,196,107,.16), rgba(255,140,60,.04)); border-color: var(--accent-line); border-top-color: var(--accent); box-shadow: var(--shadow); }
+:root[data-style="depth"] .h-week::after { content: ""; position: absolute; inset-block-end: -30%; inset-inline-end: -20%; width: 70%; aspect-ratio: 1; border-radius: 50%; background: radial-gradient(closest-side, rgba(255,186,90,.18), transparent); pointer-events: none; }
+:root[data-style="depth"] .h-week > * { position: relative; z-index: 1; }
+:root[data-style="depth"] .h-card { background: linear-gradient(160deg, rgba(255,255,255,.06), rgba(255,255,255,.02)); box-shadow: var(--shadow); }
+:root[data-style="depth"] .h-card:hover { transform: translateY(-2px); border-color: var(--accent-line); box-shadow: 0 20px 50px -22px rgba(255,170,80,.45); }
+:root[data-style="depth"] .h-search-row, :root[data-style="depth"] .main.lib-home .lib-filter { background: rgba(255,255,255,.04); }
+:root[data-style="depth"] .main.lib-home .ft-gen h2 .dot { box-shadow: 0 0 0 3px var(--paper), 0 0 10px var(--glow); }
+
+/* גילוי: משטחים פסטליים בכרטיסים, צבע מלא לפרשת השבוע */
+:root[data-style="discovery"] .h-week { background: var(--lemon); border-color: transparent; border-top-color: var(--accent); color: var(--on-fill); }
+:root[data-style="discovery"] .h-week :is(.h-week-t a, .h-week-d) { color: var(--on-fill); }
+:root[data-style="discovery"] .h-card { border-color: transparent; background: var(--sky); }
+:root[data-style="discovery"] .h-card:nth-child(2) { background: var(--mint); }
+:root[data-style="discovery"] .h-card:nth-child(3) { background: var(--peach); }
+:root[data-style="discovery"] .h-card :is(h3 a, .h-card-d) { color: var(--on-fill); }
+:root[data-style="discovery"] .h-card:hover { transform: translateY(-3px); }
+/* ניגודיות: טקסט קטן על משטח צבוע מקבל צבע טקסט סמנטי; צבע ההדגשה האישי נשאר בקווים ובמסגרות.
+   (נמדד: צבע אישי זהוב/כחול ירד ל־3.5–4.0 על לימון/פסטל ועל נייר־2 במגזין) */
+:root[data-style="discovery"] .h-card :is(.h-card-n, .h-card-go),
+:root[data-style="discovery"] .h-week :is(.h-week-k span, .h-week-go a) { color: var(--on-fill); }
+:root[data-style="editorial"] .h-week :is(.h-week-k span:first-child, .h-week-go a) { color: var(--ink); }
+:root[data-style="discovery"] .main.home .h-search .btn.primary { background: var(--ink); border-color: var(--ink); color: var(--paper); }
+:root[data-style="discovery"] .h-search-row { border-width: 2px; border-color: var(--ink); }
+
+@media (prefers-reduced-motion: reduce) { .h-card, .h-row-go { transition: none; } :root[data-style] .h-card:hover { transform: none; } }
+
+/* ===== הדפסה ===== */
+@media print {
+  .h-lead { display: block; }
+  .h-week { break-inside: avoid; margin-top: 1rem; }
+  .h-after, .h-quick, .lib-filter, .lib-tabs { display: none !important; }
+}
+
+
+/* הסברים ארוכים מאחורי ״מידע״ — שורה אחת כשהוא סגור */
+.page-info { margin: .25rem 0 .85rem; max-width: 40rem; font: 400 .95rem/1.65 var(--f-body); color: var(--ink-2); }
+.page-info > summary { cursor: pointer; width: fit-content; font: 600 .85rem/1.4 var(--f-ui); color: var(--ink-2); }
+.page-info > summary:hover, .page-info > summary:focus-visible { color: var(--ink); }
+.page-info[open] { margin-bottom: 1.1rem; }
+.page-info p { margin: .55rem 0 0; }
+.page-info p + p { margin-top: .4rem; }
+.main.lib-home .lib-head .page-info { margin-top: .65rem; }

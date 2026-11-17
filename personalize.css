@@ -1,4 +1,6 @@
 /* חברותא · התאמה אישית: שלושה סגנונות (מגזין · אור ועומק · גילוי), צבע מוביל, גודל טקסט.
+   העיצוב המשולב: כל הסגנונות חולקים את שלושת תפקידי הגופן (כותרות Frank Ruhl Libre, ממשק Assistant, קריאה Noto Serif Hebrew)
+   ואת הציר והרשת שב־combined.css; כאן משתנים רק צבע, משטח ואווירה.
    שכבה נפרדת מעל app.css: :root[data-style] × [data-tone]. "classic" = העיצוב הקיים, בלי שינוי.
    נטען אחרי app.css; personalize.js + סקריפט קצר ב-<head> מציבים את התכונות לפני הציור הראשון. */
 @font-face { font-family: "Karantina"; font-weight: 700; font-display: swap; src: url(fonts/karantina-hebrew-700-normal.woff2) format("woff2"); unicode-range: U+0307-0308, U+0590-05FF, U+200C-2010, U+20AA, U+25CC, U+FB1D-FB4F; }
@@ -25,7 +27,7 @@
   --rule: #d6d3cb; --rule-2: #ebe9e3; --accent: #c8321f; --accent-2: #9c2414; --accent-soft: #fbe6e1; --accent-line: #e7a194;
   --hl: #ffe6a0; --quote-bg: #f3f2ee; --quote-ink: #111111; --map-band: #f6f5f1; --map-grid: #e3e0d8;
   --shadow: 0 0 0 1px #111111; --ok: #2f6a45; --warn: #7f520c; --bad: #8d3a2e; --ok-soft: #e4eee6; --warn-soft: #f6edd2; --bad-soft: #f6e0db;
-  --sans: "IBM Plex Sans Hebrew", "Assistant", "Segoe UI", Arial, sans-serif; --display: "Karantina", "IBM Plex Sans Hebrew", sans-serif;
+  --sans: "Assistant", "Segoe UI", Arial, sans-serif; --display: "Frank Ruhl Libre", "David Libre", serif;
   --r1: 0px; --r2: 0px; --r3: 0px; color-scheme: light;
 }
 :root:root:root[data-style="editorial"][data-tone="dark"] {
@@ -40,7 +42,7 @@
   --hl: #4f3e15; --quote-bg: #151d31; --quote-ink: #f7eedb; --map-band: #10172a; --map-grid: #232c43;
   --shadow: 0 1px 0 rgba(255,220,160,.06) inset, 0 18px 50px -18px rgba(0,0,0,.7); --ok: #8fd0a4; --warn: #f0c070; --bad: #f0a294; --ok-soft: #16281f; --warn-soft: #2f2611; --bad-soft: #34201d;
   --gx: #7f7a70; --glow: rgba(255,186,90,.45);
-  --sans: "Heebo", "Assistant", "Segoe UI", Arial, sans-serif; --display: "Heebo", "Assistant", sans-serif;
+  --sans: "Assistant", "Segoe UI", Arial, sans-serif; --display: "Frank Ruhl Libre", "David Libre", serif;
   --r1: 6px; --r2: 14px; --r3: 22px; color-scheme: dark;
 }
 :root:root:root[data-style="discovery"] {
@@ -49,7 +51,7 @@
   --hl: #ffe9a6; --quote-bg: #f4f6fb; --quote-ink: #17203b; --map-band: #f6f8fc; --map-grid: #e3e8f2;
   --shadow: 0 2px 0 #17203b; --ok: #2f6a45; --warn: #7f520c; --bad: #8d3a2e; --ok-soft: #e2f3e8; --warn-soft: #fff1cc; --bad-soft: #ffe3dc;
   --sun: #ffc23d; --coral: #ff6a4d; --sky: #cfe6ff; --mint: #c9f1df; --peach: #ffe1d6; --lemon: #fff1c4; --on-fill: #17203b;
-  --sans: "Rubik", "Assistant", "Segoe UI", Arial, sans-serif; --display: "Rubik", "Assistant", sans-serif;
+  --sans: "Assistant", "Segoe UI", Arial, sans-serif; --display: "Frank Ruhl Libre", "David Libre", serif;
   --r1: 8px; --r2: 14px; --r3: 24px; color-scheme: light;
 }
 :root:root:root[data-style="discovery"][data-tone="dark"] {
@@ -305,10 +307,10 @@
 .chs-thumb[data-s="classic"]::before { content: "חברותא"; position: absolute; inset: 0; display: grid; place-items: center; font: 700 1.3rem/1 "Frank Ruhl Libre", serif; color: #26211b; }
 .chs-thumb[data-s="classic"]::after { content: ""; position: absolute; inset-inline: 25%; bottom: .7rem; height: 2px; background: #76283a; }
 .chs-thumb[data-s="editorial"] { background: #fff; border: 1px solid #ddd; }
-.chs-thumb[data-s="editorial"]::before { content: "פסוק אחר פסוק."; position: absolute; inset-inline-start: .5rem; top: .45rem; font: 700 1.6rem/.9 "Karantina", sans-serif; color: #111; }
+.chs-thumb[data-s="editorial"]::before { content: "פסוק אחר פסוק."; position: absolute; inset-inline-start: .5rem; top: .45rem; font: 700 1.15rem/1.05 "Frank Ruhl Libre", serif; color: #111; }
 .chs-thumb[data-s="editorial"]::after { content: ""; position: absolute; inset-inline-end: .5rem; bottom: .5rem; width: 1.6rem; height: 1.6rem; border-radius: 50%; background: #c8321f; }
 .chs-thumb[data-s="depth"] { background: radial-gradient(circle at 70% 20%, rgba(255,180,90,.45), transparent 55%), #0b0f1a; }
-.chs-thumb[data-s="depth"]::before { content: "אור אחד"; position: absolute; inset-inline-start: .55rem; top: .5rem; font: 900 1.15rem/1 "Heebo", sans-serif; color: #ffc46b; text-shadow: 0 0 12px rgba(255,180,90,.6); }
+.chs-thumb[data-s="depth"]::before { content: "אור אחד"; position: absolute; inset-inline-start: .55rem; top: .5rem; font: 700 1.15rem/1 "Frank Ruhl Libre", serif; color: #ffc46b; text-shadow: 0 0 12px rgba(255,180,90,.6); }
 .chs-thumb[data-s="depth"]::after { content: ""; position: absolute; inset-inline-end: 1rem; top: .8rem; width: .55rem; height: .55rem; border-radius: 50%; background: #ffd99e; box-shadow: 0 0 10px 3px rgba(255,180,90,.8), -1.1rem 1.2rem 0 -1px #ffd99e, 1.1rem 1.2rem 0 -1px #ffd99e, 0 2.3rem 0 0 #ffd99e; }
 .chs-thumb[data-s="discovery"] { background: #fff; border: 1px solid #e3e6ef; }
 .chs-thumb[data-s="discovery"]::before { content: ""; position: absolute; inset-inline-start: .45rem; top: .45rem; width: 55%; height: 1.3rem; border-radius: 999px; background: #ffc23d; box-shadow: 0 1.65rem 0 #cfe6ff; }
