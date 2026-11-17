@@ -324,7 +324,7 @@ function openReadingPreferences(options = {}) {
   if (!P) return;
   document.getElementById("reading-preferences")?.close();
   const dialog = h("dialog", { id: "reading-preferences", class: "reading-preferences no-print", "aria-labelledby": "chv-preferences-title" });
-  const markup = "    <section class=\"reading-preferences-content\" id=\"reading-preferences-content\" aria-labelledby=\"chv-preferences-title\">\n      <div class=\"chv-preferences-heading\"><div><h2 id=\"chv-preferences-title\">סביבת הלימוד שלי</h2><p class=\"chv-pref-status\" role=\"status\" aria-live=\"polite\">כל שינוי מופיע מיד בקריאה.</p><p class=\"chv-pref-error\" role=\"alert\" hidden></p></div><div class=\"chv-heading-actions\"><button type=\"button\" data-action=\"type\">סיום התאמה</button><button type=\"button\" data-action=\"quick-start\">התאמה מהירה</button></div></div>\n      <section class=\"chv-quick-preview\" aria-label=\"תצוגת קריאה מקדימה\" hidden><p>אפשר ללמוד בקצב שלך, בגופן ובצבעים שנוחים לך. התצוגה מתעדכנת עם כל בחירה.</p></section>\n      <div class=\"chv-pref-columns\">\n        <details open><summary>אותיות וריווח</summary><div class=\"chv-pref-fields\">\n          <label class=\"chv-quick-control\">גופן הקריאה<select data-pref=\"family\"><option value=\"frank\">פרנק ריהל ליברה</option><option value=\"assistant\">אסיסטנט</option><option value=\"arial\">Arial — מהמכשיר</option><option value=\"david\">David — אם מותקן</option><option value=\"narkisim\">Narkisim — אם מותקן</option><option value=\"times\">Times New Roman — אם מותקן</option></select></label>\n          <label class=\"chv-quick-control\" for=\"chv-pref-font\">גודל האות <output aria-hidden=\"true\" data-value=\"font\">21</output><input type=\"range\" min=\"16\" max=\"36\" step=\"1\" value=\"21\" data-setting=\"font\" data-pref=\"font\" id=\"chv-pref-font\"></label>\n          <label>משקל האות<select data-pref=\"weight\"><option value=\"400\">רגיל</option><option value=\"500\">מודגש מעט</option></select></label>\n          <label for=\"chv-pref-leading\">מרווח בין שורות <output aria-hidden=\"true\" data-value=\"leading\">1.9</output><input type=\"range\" min=\"1.35\" max=\"2.5\" step=\"0.05\" value=\"1.9\" data-pref=\"leading\" id=\"chv-pref-leading\"></label>\n          <label for=\"chv-pref-paragraph\">מרווח בין פסקאות <output aria-hidden=\"true\" data-value=\"paragraph\">1</output><input type=\"range\" min=\"0.4\" max=\"2.5\" step=\"0.1\" value=\"1\" data-pref=\"paragraph\" id=\"chv-pref-paragraph\"></label>\n          <label for=\"chv-pref-word\">מרווח בין מילים <output aria-hidden=\"true\" data-value=\"word\">0</output><input type=\"range\" min=\"0\" max=\"0.5\" step=\"0.025\" value=\"0\" data-pref=\"word\" id=\"chv-pref-word\"></label>\n          <label for=\"chv-pref-letter\">מרווח בין אותיות <output aria-hidden=\"true\" data-value=\"letter\">0</output><input type=\"range\" min=\"0\" max=\"0.12\" step=\"0.01\" value=\"0\" data-pref=\"letter\" id=\"chv-pref-letter\"></label>\n          <p class=\"chv-pref-caption\">פסקאות התוכן מוצגות תמיד ביישור לשני הצדדים.</p>\n        </div></details>\n        <details><summary>צבעים ותאורה</summary><div class=\"chv-pref-fields\">\n          <label class=\"chv-quick-control\">תאורה<select data-pref=\"theme\"><option value=\"system\">לפי המכשיר</option><option value=\"light\">בהירה</option><option value=\"dark\">כהה</option></select></label>\n          <div class=\"chv-pref-wide chv-quick-control\"><span>ערכת צבעים</span><div class=\"chv-palette-choices\" role=\"group\" aria-label=\"ערכת צבעים\"><button type=\"button\" data-palette=\"sefer\" aria-pressed=\"true\" >ספר</button><button type=\"button\" data-palette=\"techelet\" aria-pressed=\"false\" >תכלת</button><button type=\"button\" data-palette=\"zayit\" aria-pressed=\"false\" >זית</button><button type=\"button\" data-palette=\"dyo\" aria-pressed=\"false\" >ניגודיות</button></div></div>\n          <p class=\"chv-pref-caption chv-pref-wide\">הצבעים האישיים נשמרים בנפרד לתאורה בהירה וכהה. בחירת ערכה מחליפה את הצבעים האישיים.</p>\n          <label class=\"chv-color-field\">רקע הקריאה<input type=\"color\" data-color=\"paper\" value=\"#faf7f0\"></label>\n          <label class=\"chv-color-field\">צבע האותיות<input type=\"color\" data-color=\"ink\" value=\"#26211b\"></label>\n          <label class=\"chv-color-field\">קישורים והדגשות<input type=\"color\" data-color=\"accent\" value=\"#76283a\"></label>\n          <label class=\"chv-color-field\">רקע המקור<input type=\"color\" data-color=\"surface\" value=\"#fffdf9\"></label>\n          <label class=\"chv-color-field\">רקע הציטוט הנבחר<input type=\"color\" data-color=\"soft\" value=\"#f1e3e1\"></label>\n          <div class=\"chv-contrast chv-pref-wide\"><span class=\"chv-contrast-text\" aria-live=\"polite\"></span><button type=\"button\" data-personal=\"repair-contrast\"  hidden>שיפור ניגודיות</button></div>\n        </div></details>\n        <details><summary>פריסה ומקורות</summary><div class=\"chv-pref-fields\">\n          <label for=\"chv-pref-width\">רוחב שורת הקריאה <output aria-hidden=\"true\" data-value=\"width\">66 תווים בקירוב</output><input type=\"range\" min=\"40\" max=\"100\" step=\"2\" value=\"66\" data-pref=\"width\" id=\"chv-pref-width\"></label>\n          <label for=\"chv-pref-margin\">שוליים <output aria-hidden=\"true\" data-value=\"margin\">30</output><input type=\"range\" min=\"12\" max=\"64\" step=\"2\" value=\"30\" data-pref=\"margin\" id=\"chv-pref-margin\"></label>\n          <label>פתיחת מקור<select data-pref=\"sourcePlace\"><option value=\"auto\">לצד הטקסט, ובנייד מתחת לציטוט</option><option value=\"inline\">תמיד מתחת לציטוט</option></select></label>\n          <label class=\"chv-check\"><input type=\"checkbox\" data-pref=\"toc\" checked> תוכן עניינים</label>\n          <label class=\"chv-check\"><input type=\"checkbox\" data-pref=\"focus\"> מיקוד בקריאה</label>\n          <label class=\"chv-check\"><input type=\"checkbox\" data-pref=\"quoteTint\" checked> רקע לאזורי ציטוט</label>\n          <label class=\"chv-check chv-pref-wide\"><input type=\"checkbox\" data-pref=\"sourceLinked\" checked> אותם גופן, גודל וריווח גם במקור</label>\n          <div class=\"chv-source-prefs chv-pref-wide\" hidden><label>גופן המקור<select data-pref=\"sourceFamily\"><option value=\"frank\">פרנק ריהל ליברה</option><option value=\"assistant\">אסיסטנט</option><option value=\"arial\">Arial — מהמכשיר</option><option value=\"david\">David — אם מותקן</option><option value=\"narkisim\">Narkisim — אם מותקן</option><option value=\"times\">Times New Roman — אם מותקן</option></select></label><label for=\"chv-pref-sourceFont\">גודל המקור <output aria-hidden=\"true\" data-value=\"sourceFont\">20</output><input type=\"range\" min=\"16\" max=\"36\" step=\"1\" value=\"20\" data-pref=\"sourceFont\" id=\"chv-pref-sourceFont\"></label><label for=\"chv-pref-sourceLeading\">מרווח שורות במקור <output aria-hidden=\"true\" data-value=\"sourceLeading\">1.85</output><input type=\"range\" min=\"1.35\" max=\"2.5\" step=\"0.05\" value=\"1.85\" data-pref=\"sourceLeading\" id=\"chv-pref-sourceLeading\"></label></div>\n        </div></details>\n        <details><summary>הסביבות השמורות שלי</summary><div class=\"chv-pref-fields\">\n          <label class=\"chv-pref-wide\">שם לסביבה<input type=\"text\" class=\"chv-profile-name\" maxlength=\"40\" placeholder=\"למשל: לימוד ערב\"></label>\n          <button type=\"button\" data-personal=\"save-profile\" >שמירת סביבה חדשה</button>\n          <label class=\"chv-pref-wide\">סביבה שמורה<select class=\"chv-profile-select\"><option value=\"\">בחירת סביבה</option></select></label>\n          <div class=\"chv-pref-actions chv-pref-wide\"><button type=\"button\" data-personal=\"update-profile\"  disabled>עדכון הסביבה שנבחרה</button><button type=\"button\" data-personal=\"delete-profile\"  disabled>מחיקה</button></div>\n          <div class=\"chv-pref-actions chv-pref-wide\"><button type=\"button\" data-personal=\"export\" >ייצוא העדפות</button><label class=\"chv-import\">ייבוא העדפות<input type=\"file\" accept=\"application/json,.json\" class=\"chv-import-file\"></label></div>\n          <p class=\"chv-pref-caption chv-pref-wide\">השמירה היא בדפדפן הזה. להעברה למכשיר אחר אפשר לייצא ולייבא את ההעדפות.</p>\n        </div></details>\n      </div>\n      <div class=\"chv-quick-actions\" hidden><button type=\"button\" data-action=\"type\">נוח לי, אפשר ללמוד</button><button type=\"button\" data-action=\"all-settings\">כל אפשרויות ההתאמה</button><p class=\"chv-pref-caption\">ההעדפות נשמרות בדפדפן הזה. אפשר לחזור להתאמה דרך הכפתור שבראש האתר.</p></div>\n      <div class=\"chv-preferences-footer\"><button type=\"button\" data-personal=\"reset\" >חזרה לעיצוב המקורי</button><button type=\"button\" data-personal=\"undo-reset\"  hidden>ביטול האיפוס</button><span>נוסח הלימוד נשאר כפי שהוא.</span></div>\n    </section>\n";
+  const markup = "    <section class=\"reading-preferences-content\" id=\"reading-preferences-content\" aria-labelledby=\"chv-preferences-title\">\n      <div class=\"chv-preferences-heading\"><div><h2 id=\"chv-preferences-title\">סביבת הלימוד שלי</h2><p class=\"chv-pref-status\" role=\"status\" aria-live=\"polite\">כל שינוי מופיע מיד בקריאה.</p><p class=\"chv-pref-error\" role=\"alert\" hidden></p></div><div class=\"chv-heading-actions\"><button type=\"button\" data-action=\"type\">סיום התאמה</button><button type=\"button\" data-action=\"quick-start\">התאמה מהירה</button></div></div>\n      <section class=\"chv-quick-preview\" aria-label=\"תצוגת קריאה מקדימה\" hidden><p>אפשר ללמוד בקצב שלך, בגופן ובצבעים שנוחים לך. התצוגה מתעדכנת עם כל בחירה.</p></section>\n      <div class=\"chv-pref-columns\">\n        <details open><summary>אותיות וריווח</summary><div class=\"chv-pref-fields\">\n          <label class=\"chv-quick-control\">גופן הקריאה<select data-pref=\"family\"><option value=\"noto\">נוטו סריף עברית</option><option value=\"frank\">פרנק ריהל ליברה</option><option value=\"assistant\">אסיסטנט</option><option value=\"arial\">Arial — מהמכשיר</option><option value=\"david\">David — אם מותקן</option><option value=\"narkisim\">Narkisim — אם מותקן</option><option value=\"times\">Times New Roman — אם מותקן</option></select></label>\n          <label class=\"chv-quick-control\" for=\"chv-pref-font\">גודל האות <output aria-hidden=\"true\" data-value=\"font\">21</output><input type=\"range\" min=\"16\" max=\"36\" step=\"1\" value=\"21\" data-setting=\"font\" data-pref=\"font\" id=\"chv-pref-font\"></label>\n          <label>משקל האות<select data-pref=\"weight\"><option value=\"400\">רגיל</option><option value=\"500\">מודגש מעט</option></select></label>\n          <label for=\"chv-pref-leading\">מרווח בין שורות <output aria-hidden=\"true\" data-value=\"leading\">1.9</output><input type=\"range\" min=\"1.35\" max=\"2.5\" step=\"0.05\" value=\"1.9\" data-pref=\"leading\" id=\"chv-pref-leading\"></label>\n          <label for=\"chv-pref-paragraph\">מרווח בין פסקאות <output aria-hidden=\"true\" data-value=\"paragraph\">1</output><input type=\"range\" min=\"0.4\" max=\"2.5\" step=\"0.1\" value=\"1\" data-pref=\"paragraph\" id=\"chv-pref-paragraph\"></label>\n          <label for=\"chv-pref-word\">מרווח בין מילים <output aria-hidden=\"true\" data-value=\"word\">0</output><input type=\"range\" min=\"0\" max=\"0.5\" step=\"0.025\" value=\"0\" data-pref=\"word\" id=\"chv-pref-word\"></label>\n          <label for=\"chv-pref-letter\">מרווח בין אותיות <output aria-hidden=\"true\" data-value=\"letter\">0</output><input type=\"range\" min=\"0\" max=\"0.12\" step=\"0.01\" value=\"0\" data-pref=\"letter\" id=\"chv-pref-letter\"></label>\n          <p class=\"chv-pref-caption\">פסקאות התוכן מוצגות תמיד ביישור לשני הצדדים.</p>\n        </div></details>\n        <details><summary>צבעים ותאורה</summary><div class=\"chv-pref-fields\">\n          <label class=\"chv-quick-control\">תאורה<select data-pref=\"theme\"><option value=\"system\">לפי המכשיר</option><option value=\"light\">בהירה</option><option value=\"dark\">כהה</option></select></label>\n          <div class=\"chv-pref-wide chv-quick-control\"><span>ערכת צבעים</span><div class=\"chv-palette-choices\" role=\"group\" aria-label=\"ערכת צבעים\"><button type=\"button\" data-palette=\"sefer\" aria-pressed=\"true\" >ספר</button><button type=\"button\" data-palette=\"techelet\" aria-pressed=\"false\" >תכלת</button><button type=\"button\" data-palette=\"zayit\" aria-pressed=\"false\" >זית</button><button type=\"button\" data-palette=\"dyo\" aria-pressed=\"false\" >ניגודיות</button></div></div>\n          <p class=\"chv-pref-caption chv-pref-wide\">הצבעים האישיים נשמרים בנפרד לתאורה בהירה וכהה. בחירת ערכה מחליפה את הצבעים האישיים.</p>\n          <label class=\"chv-color-field\">רקע הקריאה<input type=\"color\" data-color=\"paper\" value=\"#faf7f0\"></label>\n          <label class=\"chv-color-field\">צבע האותיות<input type=\"color\" data-color=\"ink\" value=\"#26211b\"></label>\n          <label class=\"chv-color-field\">קישורים והדגשות<input type=\"color\" data-color=\"accent\" value=\"#76283a\"></label>\n          <label class=\"chv-color-field\">רקע המקור<input type=\"color\" data-color=\"surface\" value=\"#fffdf9\"></label>\n          <label class=\"chv-color-field\">רקע הציטוט הנבחר<input type=\"color\" data-color=\"soft\" value=\"#f1e3e1\"></label>\n          <div class=\"chv-contrast chv-pref-wide\"><span class=\"chv-contrast-text\" aria-live=\"polite\"></span><button type=\"button\" data-personal=\"repair-contrast\"  hidden>שיפור ניגודיות</button></div>\n        </div></details>\n        <details><summary>פריסה ומקורות</summary><div class=\"chv-pref-fields\">\n          <label for=\"chv-pref-width\">רוחב שורת הקריאה <output aria-hidden=\"true\" data-value=\"width\">66 תווים בקירוב</output><input type=\"range\" min=\"40\" max=\"100\" step=\"2\" value=\"66\" data-pref=\"width\" id=\"chv-pref-width\"></label>\n          <label for=\"chv-pref-margin\">שוליים <output aria-hidden=\"true\" data-value=\"margin\">30</output><input type=\"range\" min=\"12\" max=\"64\" step=\"2\" value=\"30\" data-pref=\"margin\" id=\"chv-pref-margin\"></label>\n          <label>פתיחת מקור<select data-pref=\"sourcePlace\"><option value=\"auto\">לצד הטקסט, ובנייד מתחת לציטוט</option><option value=\"inline\">תמיד מתחת לציטוט</option></select></label>\n          <label class=\"chv-check\"><input type=\"checkbox\" data-pref=\"toc\" checked> תוכן עניינים</label>\n          <label class=\"chv-check\"><input type=\"checkbox\" data-pref=\"focus\"> מיקוד בקריאה</label>\n          <label class=\"chv-check\"><input type=\"checkbox\" data-pref=\"quoteTint\" checked> רקע לאזורי ציטוט</label>\n          <label class=\"chv-check chv-pref-wide\"><input type=\"checkbox\" data-pref=\"sourceLinked\" checked> אותם גופן, גודל וריווח גם במקור</label>\n          <div class=\"chv-source-prefs chv-pref-wide\" hidden><label>גופן המקור<select data-pref=\"sourceFamily\"><option value=\"noto\">נוטו סריף עברית</option><option value=\"frank\">פרנק ריהל ליברה</option><option value=\"assistant\">אסיסטנט</option><option value=\"arial\">Arial — מהמכשיר</option><option value=\"david\">David — אם מותקן</option><option value=\"narkisim\">Narkisim — אם מותקן</option><option value=\"times\">Times New Roman — אם מותקן</option></select></label><label for=\"chv-pref-sourceFont\">גודל המקור <output aria-hidden=\"true\" data-value=\"sourceFont\">20</output><input type=\"range\" min=\"16\" max=\"36\" step=\"1\" value=\"20\" data-pref=\"sourceFont\" id=\"chv-pref-sourceFont\"></label><label for=\"chv-pref-sourceLeading\">מרווח שורות במקור <output aria-hidden=\"true\" data-value=\"sourceLeading\">1.85</output><input type=\"range\" min=\"1.35\" max=\"2.5\" step=\"0.05\" value=\"1.85\" data-pref=\"sourceLeading\" id=\"chv-pref-sourceLeading\"></label></div>\n        </div></details>\n        <details><summary>הסביבות השמורות שלי</summary><div class=\"chv-pref-fields\">\n          <label class=\"chv-pref-wide\">שם לסביבה<input type=\"text\" class=\"chv-profile-name\" maxlength=\"40\" placeholder=\"למשל: לימוד ערב\"></label>\n          <button type=\"button\" data-personal=\"save-profile\" >שמירת סביבה חדשה</button>\n          <label class=\"chv-pref-wide\">סביבה שמורה<select class=\"chv-profile-select\"><option value=\"\">בחירת סביבה</option></select></label>\n          <div class=\"chv-pref-actions chv-pref-wide\"><button type=\"button\" data-personal=\"update-profile\"  disabled>עדכון הסביבה שנבחרה</button><button type=\"button\" data-personal=\"delete-profile\"  disabled>מחיקה</button></div>\n          <div class=\"chv-pref-actions chv-pref-wide\"><button type=\"button\" data-personal=\"export\" >ייצוא העדפות</button><label class=\"chv-import\">ייבוא העדפות<input type=\"file\" accept=\"application/json,.json\" class=\"chv-import-file\"></label></div>\n          <p class=\"chv-pref-caption chv-pref-wide\">השמירה היא בדפדפן הזה. להעברה למכשיר אחר אפשר לייצא ולייבא את ההעדפות.</p>\n        </div></details>\n      </div>\n      <div class=\"chv-quick-actions\" hidden><button type=\"button\" data-action=\"type\">נוח לי, אפשר ללמוד</button><button type=\"button\" data-action=\"all-settings\">כל אפשרויות ההתאמה</button><p class=\"chv-pref-caption\">ההעדפות נשמרות בדפדפן הזה. אפשר לחזור להתאמה דרך הכפתור שבראש האתר.</p></div>\n      <div class=\"chv-preferences-footer\"><button type=\"button\" data-personal=\"reset\" >חזרה לעיצוב המקורי</button><button type=\"button\" data-personal=\"undo-reset\"  hidden>ביטול האיפוס</button><span>נוסח הלימוד נשאר כפי שהוא.</span></div>\n    </section>\n";
   dialog.append(h("div", { html: markup }));
   const shortcuts = h("nav", { class: "reading-shortcuts", "aria-label": "מצב לימוד וקישורי האתר" }, h("div", { class: "modesw sm", role: "radiogroup", "aria-label": "מצב עבודה" }, ...MODES.map(m => { const button = modeBtn(m); button.addEventListener("click", () => dialog.close()); return button; })));
   for (const [label, target] of [["הלימוד שלי", "study"], ["מחברת הלימוד והגיבוי", "notebook"], ["לקריאה בהמשך", "later"], ["המקורות שלי", "saved"], ["סטטוס הביאורים", "status"], ["כיסוי המפה", "coverage"], ["מפתח עניינים", "topics"], ["אודות ושיטת העבודה", "about"]]) shortcuts.append(h("a", { href: mkHash([target]), onclick: () => dialog.close() }, label));
@@ -563,7 +563,7 @@ function buildChrome() {
   }
   const tools = $(".tools");
   if (tools && !tools.querySelector("#search-btn")) {
-    tools.prepend(h("button", { type: "button", class: "tool", id: "search-btn", "aria-label": "חיפוש באתר", title: "חיפוש (קיצור: /)", onclick: () => openPalette() }, icon("n-search"), h("span", { class: "lbl" }, "חיפוש")));
+    tools.prepend(h("button", { type: "button", class: "tool", id: "search-btn", "aria-label": "חיפוש באתר", title: "חיפוש (קיצור: /)", onclick: () => openPalette() }, icon("n-search"), h("span", { class: "lbl" }, "חיפוש בספרים ובביאורים"), h("kbd", { class: "search-kbd", "aria-hidden": "true" }, "/")));
   }
   buildBottomNav();
   const ms = $("#modesw"); ms.textContent = ""; for (const m of MODES) ms.append(modeBtn(m));
@@ -3690,7 +3690,7 @@ function filterNews(items, filters) {
 }
 function newsDate(value) { const t = newsTime(value); return t == null ? "" : new Intl.DateTimeFormat("he-IL", { day: "2-digit", month: "2-digit", year: "numeric", timeZone: "Asia/Jerusalem" }).format(t); }
 VIEWS.new = async function (rest, q, ctx) {
-  const main = $("#view"); main.className = "main page"; main.textContent = "";
+  const main = $("#view"); main.className = "main page ix-page"; main.textContent = "";
   document.title = "מה חדש · חברותא";
   let W;
   try { W = await loadChunk("new"); } catch (_) { main.append(h("div", { class: "empty" }, h("b", null, "לא ניתן לטעון את המדור"), h("p", null, "אפשר לנסות שוב בעוד כמה רגעים."), h("button", { class: "btn", onclick: () => route() }, "ניסיון נוסף"))); return; }
@@ -5081,7 +5081,8 @@ function learningBrowseSources(host, places, gate, q) {
 }
 VIEWS.learn = async function(rest, q, ctx) {
   Aside.detach?.();
-  const main = $("#view"); main.className = "main page learning"; main.textContent = "";
+  /* עמוד האינדקס (#/learn בלי שער) על הציר המשותף; דפי השער והקריאה נשארים ברוחבם */
+  const main = $("#view"); main.className = "main page learning" + (rest[0] ? "" : " ix-page"); main.textContent = "";
   if (!ctx.keep) window.scrollTo(0, 0);
   let catalog;
   try { catalog = await loadChunk("learning"); }
@@ -5244,54 +5245,65 @@ VIEWS.home = async function (rest, q, ctx) {
   const N = { generated: (freshFeed?.generated || "").slice(0, 10), n: newsItems.length, sources: freshFeed?.sources || 0, top: newsItems };
   const T = site.tree || {};
 
-  const sin = h("input", { type: "search", name: "q", placeholder: "חיפוש ספר, ביאור, מושג או ד״ה…", "aria-label": "חיפוש באתר", autocomplete: "off" });
-  const hero = h("section", { class: "h-hero", "aria-labelledby": "h-title" },
-    h("p", { class: "h-bsd", "aria-hidden": "true" }, "בס״ד"),
-    h("p", { class: "h-kicker" }, "מערכת לימוד למאמרי חסידות"),
-    h("h1", { class: "h-title", id: "h-title" }, "חברותא"),
-    h("p", { class: "h-purpose" }, "חברותא מלווה את הלומד במאמרי החסידות ובספרי היסוד: ביאורים רציפים, ספרייה לקריאה, ומקורות מקושרים. אפשר להתחיל גם בלי רקע מוקדם — בחיפוש, בספר, או בביאור של פרשת השבוע."),
-    h("form", { class: "h-search", role: "search", onsubmit: e => { e.preventDefault(); const v = sin.value.trim(); go(mkHash(["search"], v ? { q: v } : {})); } },
-      icon("i-search"), sin, h("button", { class: "btn primary", type: "submit" }, "חיפוש")));
+  /* עיצוב משולב: פתיח על 8 עמודות ופרשת השבוע על 4 (.h-lead), ואחריהם כניסות בשורות שלמות — 3 כרטיסים ואז 2 שורות. */
+  const sin = h("input", { type: "search", name: "q", id: "h-q", placeholder: "ספר, ביאור, מושג או ד״ה…", autocomplete: "off" });
+  const search = q => go(mkHash(["search"], q ? { q } : {}));
+  const intro = h("div", { class: "h-intro" },
+    h("p", { class: "h-kicker" }, "חברותא · מערכת לימוד למאמרי חסידות"),
+    h("h1", { class: "h-title", id: "h-title" }, "לפתוח ספר.", h("br"), "להעמיק יחד."),
+    h("p", { class: "h-purpose" }, "מאמרי החסידות וספרי היסוד, עם ביאורים רציפים ומקורות מקושרים. אפשר להתחיל בלי רקע מוקדם: בחיפוש, בספר או בפרשת השבוע."),
+    h("form", { class: "h-search", role: "search", "aria-label": "חיפוש באתר", onsubmit: e => { e.preventDefault(); search(sin.value.trim()); } },
+      h("label", { class: "h-search-l", for: "h-q" }, "חיפוש בספרים ובביאורים"),
+      h("div", { class: "h-search-row" }, icon("i-search"), sin, h("button", { class: "btn primary", type: "submit" }, "חיפוש"))));
+  /* קיצורי החיפוש באים אחרי פרשת השבוע ב־DOM: בנייד הכרטיס צמוד לטופס החיפוש, ובדסקטופ ה־CSS מחזיר אותם לעמודת הפתיח */
+  const quick = h("p", { class: "h-quick" }, h("span", null, "אפשר להתחיל כאן:"),
+    ...["תניא", "לקוטי תורה", "המשך תער״ב"].map(t => h("a", { href: mkHash(["search"], { q: t }) }, t)));
 
   const weekCard = (() => {
-    if (!wk) return null;
+    if (!wk) return h("aside", { class: "h-week", "aria-labelledby": "h-week" },
+      h("p", { class: "h-week-k" }, h("span", null, "לימוד יומי"), hd ? h("span", null, hd) : null),
+      h("h2", { id: "h-week", class: "h-week-t" }, h("a", { href: mkHash(["daily"]) }, "תניא, תורה אור ולקוטי תורה")),
+      h("p", { class: "h-week-d" }, "השבוע אין קריאת פרשה רגילה. אפשר להמשיך בשיעור היומי."),
+      h("p", { class: "h-week-go" }, h("a", { href: mkHash(["daily"]) }, "ללימוד היומי ←")));
     const P = parshaInfo(wk), href = parshaHrefOf(wk);
-    const rec = ps.find(p => p.n === wk);
-    return h("section", { class: "h-sec h-week", "aria-labelledby": "h-week" },
-      h("p", { class: "hx-k" }, "פרשת השבוע", hd ? h("span", { class: "hx-d" }, hd) : null),
-      h("h2", { id: "h-week" }, h("a", { href }, rec?.he || ("פרשת " + wk))),
-      h("p", null, P.stage === "full" ? "ספר ביאורים מלא לפרשה." : P.stage === "chains" ? "שרשראות מבוארות, ומיפוי המקורות." : "מיפוי המקורות מעץ הידע; הביאורים יתווספו בהמשך."),
-      h("p", { class: "hx-go" }, h("a", { href }, "לפרשת " + wk + " ←")));
+    const extra = wks.length > 1 ? wks.slice(1).map(x => "–" + x).join("") : "";
+    /* המצב כבר מתואר ב־.h-week-d; כאן רק הכמויות */
+    const meta = [P.chains.length ? `${fmt(P.chains.length)} שרשראות` : "", P.src ? `${fmt(P.src)} מקורות` : ""].filter(Boolean).join(" · ");
+    return h("aside", { class: "h-week", "aria-labelledby": "h-week" },
+      h("p", { class: "h-week-k" }, h("span", null, "פרשת השבוע"), h("span", null, hd || "ספר " + P.book)),
+      h("h2", { id: "h-week", class: "h-week-t" }, h("a", { href }, wk + extra)),
+      h("p", { class: "h-week-d" }, P.stage === "full" ? "ספר ביאורים מלא לפרשה: פסוק אחר פסוק, דור אחר דור." : P.stage === "chains" ? "שרשראות מבוארות על פסוקי הפרשה, ומיפוי המקורות." : "מיפוי המקורות מעץ הידע. הביאורים יתווספו בהמשך."),
+      meta ? h("p", { class: "h-week-m" }, meta) : null,
+      h("p", { class: "h-week-go" }, h("a", { href }, "ללימוד הפרשה ←")));
   })();
+  const lead = h("section", { class: "h-lead", "aria-labelledby": "h-title" }, intro, weekCard, quick);
 
-  const entries = h("section", { class: "h-sec h-entries", "aria-label": "כניסות לאתר" },
-    h("article", { class: "hx" },
-      h("p", { class: "hx-k" }, icon("i-book"), "ספרייה"),
-      h("h2", null, h("a", { href: mkHash(["read"]) }, "ספרייה לקריאה")),
-      h("p", null, nSeries ? `${fmt(nSeries)} סדרות, ${fmt(nPages)} עמודים — ספרי היסוד של קה״ת, וגם מדף מהדורות.` : "ספרי היסוד לקריאה באתר, ומדף מהדורות."),
-      h("p", { class: "hx-go" }, h("a", { href: mkHash(["read"]) }, "לספרייה ←"))),
-    h("article", { class: "hx" },
-      h("p", { class: "hx-k" }, icon("i-read"), "ביאורים"),
-      h("h2", null, h("a", { href: mkHash(["learn"]) }, "ביאורים ושיעורים")),
-      h("p", null, `${fmt(nBiurim)} ביאורים שפורסמו, לימוד יומי, ודפי שיעור. הביאורים הם טיוטה, ומסומנים בהתאם.`),
-      h("p", { class: "hx-go" }, h("a", { href: mkHash(["learn"]) }, "לביאורים ←"))),
-    h("article", { class: "hx" },
-      h("p", { class: "hx-k" }, icon("i-tree"), "עץ וזמן"),
-      h("h2", null, h("a", { href: mkHash(["tree"]) }, "עץ הידע")),
-      h("p", null, `איפה נמצא כל מאמר, שיחה ואגרת, מהבעש״ט עד הרבי: ${fmt(T.units || 0)} יחידות ב־${T.series || 0} סדרות.`),
-      h("p", { class: "hx-go" }, h("a", { href: mkHash(["tree"]) }, "לעץ הידע ←"))),
-    h("article", { class: "hx" },
-      h("p", { class: "hx-k" }, icon("i-list"), "מפתח"),
-      h("h2", null, h("a", { href: mkHash(["topics"]) }, "מפתח עניינים")),
-      h("p", null, "מושגים, אישים, זמנים ודימויים — ואיפה הם נדונים בביאורים ובמקורות."),
-      h("p", { class: "hx-go" }, h("a", { href: mkHash(["topics"]) }, "למפתח ←"))),
-    h("article", { class: "hx" },
-      h("p", { class: "hx-k" }, icon("i-flag"), "מה חדש", N.generated ? h("span", { class: "hx-d" }, N.generated.split("-").reverse().join(".")) : null),
-      h("h2", null, h("a", { href: mkHash(["new"]) }, "מה חדש בעולם החסידות")),
-      (N.top || []).length ? h("ul", { class: "hx-list" }, N.top.slice(0, 2).map(i => h("li", null, h("a", { href: i.u, target: "_blank", rel: "noopener", dir: i.lang === "he" ? "rtl" : "auto" }, i.t), h("small", null, i.src)))) : h("p", null, "פרסומים כתובים חדשים מן האתרים שבמעקב."),
-      h("p", { class: "hx-go" }, h("a", { href: mkHash(["new"]) }, N.n ? `כל ${N.n} הפריטים ←` : "לכל הפריטים ←"))));
+  const after = [continueLink(), readingSetupInvite()].filter(Boolean);
 
-  main.append(...[hero, readingSetupInvite(), weekCard, continueLink(), studyShelf(), entries].filter(Boolean));
+  const card = (ord, href, title, desc, go) => h("li", { class: "h-card" },
+    h("p", { class: "h-card-n", "aria-hidden": "true" }, ord),
+    h("h3", null, h("a", { href }, title)),
+    h("p", { class: "h-card-d" }, desc),
+    h("p", { class: "h-card-go", "aria-hidden": "true" }, go + " ←"));
+  const newsDate = N.generated ? N.generated.split("-").reverse().join(".") : "";
+  const entries = h("section", { class: "h-entries", "aria-labelledby": "h-entries-t" },
+    h("header", { class: "h-sec-row" }, h("h2", { id: "h-entries-t" }, "דרכים להיכנס ללימוד"), h("p", null, "מהמקור אל ההבנה")),
+    h("ul", { class: "h-cards" },
+      card("01", mkHash(["read"]), "ספרייה", nSeries ? `ספרי היסוד בטקסט מלא: ${fmt(nSeries)} סדרות, ${fmt(nPages)} עמודים. וגם מדף מהדורות.` : "ספרי היסוד לקריאה באתר, ומדף מהדורות.", "אל הספרים"),
+      card("02", mkHash(["learn"]), "ביאורים", `${fmt(nBiurim)} ביאורים לפי פרשה, מועד ונושא, לימוד יומי ודפי שיעור. הביאורים הם טיוטה, ומסומנים כך.`, "אל שערי הלימוד"),
+      card("03", mkHash(["tree"]), "עץ וזמן", `איפה נמצא כל מאמר, שיחה ואגרת, מהבעש״ט עד הרבי: ${fmt(T.units || 0)} יחידות ב־${T.series || 0} סדרות.`, "לראות את ההקשר")),
+    h("ul", { class: "h-rows" },
+      h("li", { class: "h-row" },
+        h("h3", null, h("a", { href: mkHash(["topics"]) }, "מפתח")),
+        h("p", null, "מושגים, אישים, זמנים ודימויים, ואיפה הם נדונים בביאורים ובמקורות."),
+        h("span", { class: "h-row-go", "aria-hidden": "true" }, "←")),
+      h("li", { class: "h-row h-row-news" },
+        h("h3", null, h("a", { href: mkHash(["new"]) }, "מה חדש"), newsDate ? h("small", null, newsDate) : null),
+        (N.top || []).length ? h("ul", { class: "h-row-list" }, N.top.slice(0, 2).map(i => h("li", null, h("a", { href: i.u, target: "_blank", rel: "noopener", dir: i.lang === "he" ? "rtl" : "auto" }, i.t), h("small", null, i.src))))
+          : h("p", null, "פרסומים כתובים חדשים מן האתרים שבמעקב."),
+        h("a", { class: "h-row-more", href: mkHash(["new"]) }, N.n ? `כל ${fmt(N.n)} הפריטים ←` : "לכל הפריטים ←"))));
+
+  main.append(...[lead, after.length ? h("div", { class: "h-after" }, ...after) : null, entries, studyShelf()].filter(Boolean));
   if (!ctx.keep) window.scrollTo(0, 0);
 };
 
@@ -5358,7 +5370,7 @@ VIEWS.about = async function (rest, q, ctx) {
 
 VIEWS.topics = async function (rest, q, ctx) {
   Aside.detach?.();
-  const main = $("#view"); main.className = "main page topics"; main.textContent = "";
+  const main = $("#view"); main.className = "main page topics" + (rest.length ? "" : " ix-page"); main.textContent = "";
   let T;
   try { T = await loadChunk("topics"); } catch (e) { main.append(h("div", { class: "empty" }, h("b", null, "לא ניתן לטעון את מפתח העניינים"), String(e.message || e))); return; }
   if (!ctx.alive()) return;
@@ -5904,37 +5916,40 @@ function ftCredit(s, id) {
 }
 function ftFail(main, msg, e) { main.replaceChildren(h("div", { class: "empty" }, h("b", null, msg), e ? String(e.message || e) : "", h("br"), h("a", { href: mkHash(["read"]) }, "לספרייה"))); }
 
-function libraryTabs(active) {
-  const tab = (id, href, label) => h("a", { href, role: "tab", "aria-selected": active === id ? "true" : "false", "aria-current": active === id ? "page" : null }, label);
+function libraryTabs(active, counts = {}) {
+  const tab = (id, href, label) => h("a", { href, role: "tab", "aria-selected": active === id ? "true" : "false", "aria-current": active === id ? "page" : null }, label, counts[id] ? h("small", null, fmt(counts[id])) : null);
   return h("nav", { class: "lib-tabs", role: "tablist", "aria-label": "מדורי הספרייה" },
     tab("read", mkHash(["read"]), "לקריאה"),
     tab("editions", mkHash(["read"], { tab: "editions" }), "מהדורות"));
 }
-function libraryForthcoming() {
-  return h("section", { class: "lib-soon", "aria-label": "סדרות בהכנה לספרייה" },
-    h("h2", { class: "lib-soon-h" }, "בהכנה לספרייה"),
-    h("div", { class: "lib-soon-grid" },
-      h("article", { class: "lib-soon-card" },
-        h("h3", null, "ספר הערכים"),
-        h("p", null, "שמונה כרכים נקלטו להכנה (כרכים ט–י חסרים או חלקיים). הטקסט המלא ייכנס לקריאה באתר בשלב הבא."),
-        h("p", { class: "hx-go" }, h("a", { href: mkHash(["topics"]) }, "הפניות במפתח העניינים ←"))),
-      h("article", { class: "lib-soon-card" },
-        h("h3", null, "קונטרסי קה״ת"),
-        h("p", null, "132 קונטרסים נקלטו ממקורות קה״ת. הטקסט המלא ייכנס לספרייה לאחר חילוץ תקין של העמודים."),
-        h("p", { class: "hx-go" }, h("a", { href: mkHash(["tree"]) }, "רישום בעץ הידע ←")))));
+/* "בהכנה לספרייה": אחרי האוסף, מקופל (העיצוב המשולב — תוכן זמין קודם) */
+function libraryForthcoming(pending = []) {
+  pending = pending.filter(p => p && p.title && !/ספר הערכים|קונטרס/.test(p.title));
+  return h("details", { class: "lib-soon" },
+    h("summary", null, h("b", { class: "lib-soon-h" }, "בהכנה לספרייה"), h("span", null, `${2 + pending.length} סדרות נקלטו ויצטרפו לקריאה בהמשך`)),
+    h("ul", { class: "lib-soon-list" },
+      h("li", null, h("b", null, "ספר הערכים"),
+        h("span", null, "שמונה כרכים נקלטו להכנה (כרכים ט–י חסרים או חלקיים). הטקסט המלא ייכנס לקריאה באתר בשלב הבא. "),
+        h("a", { href: mkHash(["topics"]) }, "הפניות במפתח העניינים ←")),
+      h("li", null, h("b", null, "קונטרסי קה״ת"),
+        h("span", null, "132 קונטרסים נקלטו ממקורות קה״ת. הטקסט המלא ייכנס לספרייה לאחר חילוץ תקין של העמודים. "),
+        h("a", { href: mkHash(["tree"]) }, "רישום בעץ הידע ←")),
+      ...pending.map(p => h("li", null, h("b", null, p.title), h("span", null, p.rebbe)))));
 }
-function libraryIntro(main, active, lede) {
-  main.append(
-    h("h1", { class: "page-title" }, "ספרייה"),
-    h("p", { class: "lede" }, lede),
-    libraryTabs(active),
-    active === "read" ? libraryForthcoming() : null);
+function libraryIntro(main, active, lede, stats) {
+  main.append(h("header", { class: "lib-head" },
+    h("div", { class: "lib-head-t" },
+      h("p", { class: "lib-kicker" }, "ספרי היסוד, בטקסט מלא"),
+      h("h1", { class: "page-title" }, "ספרייה"),
+      h("p", { class: "lede" }, lede)),
+    stats ? h("ul", { class: "lib-stats" }, stats.map(([n, l]) => h("li", null, h("b", null, fmt(n)), h("span", null, l)))) : null),
+    libraryTabs(active, { read: FT.idx?.series?.length || 0 }));
 }
 
 async function libraryEditions(main, q, ctx) {
   ctx.prevCleanup?.();
   void booksCoverManifest();
-  main.className = "main page wide books ft";
+  main.className = "main page wide books ft lib-home";
   document.title = "מהדורות · ספרייה · חברותא";
   main.replaceChildren();
   libraryIntro(main, "editions", "ספר אחד בכל כרטיס. בתוך הספר בוחרים כרך, מהדורה ומקור; כל הפניה נשמרת ברישום המקורי שלה.");
@@ -5968,24 +5983,33 @@ VIEWS.read = async function (rest, q, ctx) {
 /* ---- דף הבית של הספרייה ---- */
 function ftHome(main, q) {
   document.title = "ספרייה · חברותא";
-  const ix = FT.idx, pages = ix.series.reduce((a, s) => a + s.pages, 0);
-  libraryIntro(main, "read", `הטקסט המלא של ספרי היסוד, לקריאה באתר: ${ix.series.length} סדרות, ${pages.toLocaleString("he")} עמודים. ספרי קה״ת כפי שהם בספריית חב״ד, לשימוש לא מסחרי ובייחוס לקה״ת.`);
-  const inp = h("input", { type: "search", class: "tree-q", placeholder: "סינון לפי שם ספר או רבי…", "aria-label": "סינון ספרים", value: q.get("f") || "" });
+  main.classList.add("lib-home");
+  const ix = FT.idx, pages = ix.series.reduce((a, s) => a + s.pages, 0), nGen = new Set(ix.series.map(s => s.gen)).size;
+  libraryIntro(main, "read", "ספרי קה״ת כפי שהם בספריית חב״ד, מסודרים לפי דורות מהבעש״ט ועד הרבי. לשימוש לא מסחרי ובייחוס לקה״ת.",
+    [[ix.series.length, "סדרות"], [pages, "עמודים"], [nGen, "דורות"]]);
+  const inp = h("input", { type: "search", class: "tree-q", placeholder: "סינון לפי שם ספר או רבי…", "aria-label": "סינון הספרייה", value: q.get("f") || "" });
+  /* העיצוב המשולב: כל דור הוא שורה — שם הדור בעמודה הימנית (3), והספרים כרשימה טיפוגרפית בזרימה (9). אין רשת עם חורים. */
   const box = h("div", { class: "ft-shelf" });
+  /* שם הדור נקבע מכל ספרי הדור, לפני הסינון — כך שהכותרת לא משתנה לפי תוצאות החיפוש */
+  const genRebbes = new Map();
+  for (const s of ix.series) { const a = genRebbes.get(s.gen) || genRebbes.set(s.gen, []).get(s.gen); if (!a.includes(s.rebbe)) a.push(s.rebbe); }
+  const genName = g => { const a = genRebbes.get(g) || []; return a.includes("הבעש״ט") && a.includes("המגיד ממעזריטש") ? "הבעש״ט והמגיד" : a[0] || ""; };
   const draw = () => {
     const f = norm(inp.value || ""); box.textContent = "";
     const by = new Map();
     for (const s of ix.series) { if (f && !norm(s.title + " " + s.rebbe).includes(f)) continue; (by.get(s.gen) || by.set(s.gen, []).get(s.gen)).push(s); }
     for (const [g, list] of [...by].sort((a, b) => a[0] - b[0])) {
-      box.append(h("section", { class: "ft-gen", style: "--gc:" + gcol(g) }, h("h2", null, h("i", { class: "dot", "aria-hidden": "true" }), list[0].rebbe === "המגיד ממעזריטש" ? "הבעש״ט והמגיד" : list[0].rebbe),
-        h("div", { class: "ft-cards" }, ...list.map(s => h("a", { class: "ft-card", href: mkHash(["read", s.slug]) }, h("b", null, s.title), h("small", null, s.rebbe + " · " + s.pages.toLocaleString("he") + " עמ׳"))))));
+      const name = genName(g), lead = (genRebbes.get(g) || [])[0], sum = list.reduce((a, s) => a + s.pages, 0);
+      box.append(h("section", { class: "ft-gen", style: "--gc:" + gcol(g), "aria-label": name },
+        h("header", { class: "ft-gen-h" }, h("h2", null, h("i", { class: "dot", "aria-hidden": "true" }), name),
+          h("p", null, (list.length === 1 ? "ספר אחד" : list.length + " ספרים") + " · " + sum.toLocaleString("he") + " עמ׳")),
+        h("ul", { class: "ft-list" }, ...list.map(s => h("li", null, h("a", { class: "ft-card", href: mkHash(["read", s.slug]) },
+          h("b", null, s.title), s.rebbe !== lead ? h("small", { class: "ft-by" }, s.rebbe) : null, h("small", { class: "ft-pp" }, s.pages.toLocaleString("he") + " עמ׳")))))));
     }
     if (!box.children.length) box.append(h("p", { class: "muted" }, "לא נמצא ספר בשם הזה."));
   };
   inp.addEventListener("input", debounce(() => { quietHash(mkHash(["read"], inp.value ? { f: inp.value } : {})); draw(); }));
-  main.append(h("div", { class: "tree-search" }, inp), box);
-  if (ix.pending?.length) main.append(h("details", { class: "ft-pending" }, h("summary", null, "בהמשך: " + ix.pending.length + " סדרות נוספות"),
-    h("p", { class: "muted" }, ix.pending.map(p => p.title + " (" + p.rebbe + ")").join(" · "))));
+  main.append(h("div", { class: "tree-search lib-filter" }, icon("i-search"), inp), box, libraryForthcoming(ix.pending || []));
   main.append(h("p", { class: "ft-credit" }, "הטקסטים: © Kehot Publication Society (הוצאת ספרים קה״ת), מתוך ספריית חב״ד (chabadlibrary.org). מוצגים לשימוש לא מסחרי, בייחוס לקה״ת. לכל ספר מצוין מקורו."));
   draw(); window.scrollTo(0, 0);
 }

@@ -14,8 +14,9 @@
 <meta property="og:title" content="חברותא — ביאורים על מאמרי רבותינו נשיאינו">
 <meta property="og:description" content="ביאורים על דברי רבותינו נשיאינו על פרשות התורה — פסוק אחר פסוק, דור אחר דור. כל ציטוט מקושר אל מקורו.">
 
-<link rel="stylesheet" href="app.css?v=ia-phase1">
-<link rel="stylesheet" href="personalize.css?v=5fd77f90ada1" id="chs-css">
+<link rel="stylesheet" href="app.css?v=combined1">
+<link rel="stylesheet" href="personalize.css?v=5fd77f90ada1-c2" id="chs-css">
+<link rel="stylesheet" href="combined.css?v=combined2" id="combined-css">
 <link rel="stylesheet" href="print.css?v=ed31cad7e741" media="print">
 <style id="pagehead">@page { @top-right { content: "חברותא · פרשת בראשית"; font: 9pt "Assistant", "Liberation Sans", Arial, sans-serif; color: #555; } }</style>
 <link rel="manifest" href="manifest.webmanifest">
@@ -40,10 +41,10 @@
     system: { label: "דוד / גופן המכשיר", css: 'David, "David Libre", "Times New Roman", serif' },
     arial: { label: "Arial מהמכשיר", css: 'Arial, "Assistant", sans-serif' },
   };
-  const defaults = { family: "frank", font: 21, weight: "400", leading: 1.9, paragraph: 1,
+  const defaults = { family: "noto", font: 21, weight: "400", leading: 1.9, paragraph: 1,
     word: 0, letter: 0, alignment: "justify", width: 66, margin: 30, theme: "system", palette: "sefer",
     toc: true, focus: false, quoteTint: true, sourcePlace: "auto", sourceLinked: true,
-    sourceFamily: "frank", sourceFont: 20, sourceLeading: 1.85, custom: { light: {}, dark: {} } };
+    sourceFamily: "noto", sourceFont: 20, sourceLeading: 1.85, custom: { light: {}, dark: {} } };
   const ranges = { font: [16, 36], leading: [1.35, 2.5], paragraph: [.4, 2.5], word: [0, .5],
     letter: [0, .12], width: [40, 100], margin: [12, 64], sourceFont: [16, 36], sourceLeading: [1.35, 2.5] };
   const aliases = { book: "sefer", blue: "techelet", olive: "zayit", contrast: "dyo" };
@@ -279,8 +280,8 @@
 <button class="toc-fab no-print" id="toc-btn" aria-label="תוכן עניינים"><svg aria-hidden="true"><use href="#n-toc"/></svg></button>
 <nav class="bottombar no-print" aria-label="ניווט ראשי (תחתון)"><div class="bn" id="bn"></div></nav>
 <noscript><p style="padding:2rem">האפליקציה דורשת JavaScript.</p></noscript>
-<script src="app.js?v=citing-20261117"></script>
+<script src="app.js?v=combined2"></script>
 <script src="pwa.js" defer></script>
-<script src="personalize.js?v=5fd77f90ada1" id="chs-js" defer></script>
+<script src="personalize.js?v=5fd77f90ada1-c2" id="chs-js" defer></script>
 </body>
 </html>

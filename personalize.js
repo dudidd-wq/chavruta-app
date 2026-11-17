@@ -123,25 +123,35 @@
     if (host && host.classList.contains("tools")) host.insertBefore(b, host.firstChild); else if (host) { b.style.marginInlineStart = "auto"; host.appendChild(b); }
     else { b.className = "chs-fab on chs-btn"; document.body.appendChild(b); }
   }
-  var toast;
-  function dismissToast() { if (toast) { toast.remove(); toast = null; } var s = CS.read(); if (!s.seen) { s.seen = true; try { localStorage.setItem(CS.key, JSON.stringify(s)); } catch (e) {} } }
+  /* הזמנה לבחירת סגנון בביקור ראשון: בזרימת העמוד (שורת .h-after שאחרי הפתיח ופרשת השבוע), לא שכבה צפה,
+     כדי שלעולם לא תסתיר תוכן. נפרדת מ״סביבת לימוד״ (העדפות הקריאה) שיושבת באותה שורה. */
+  function dismissToast() {
+    document.querySelectorAll(".chs-invite").forEach(function (n) { n.remove(); });
+    var s = CS.read(); if (!s.seen) { s.seen = true; try { localStorage.setItem(CS.key, JSON.stringify(s)); } catch (e) {} }
+  }
   function maybeToast() {
-    var s = CS.read(); if (s.seen || toast) return;
-    if (!/^#\/?(home)?(\?|$)/.test(location.hash || "#/home")) return;
-    toast = el("div", { class: "chs-toast", role: "status" }, '<p><b>חדש:</b> אפשר לבחור לחברותא סגנון וצבעים משלכם.</p><button type="button" class="y">לבחירה</button><button type="button" class="n">לא עכשיו</button>');
-    toast.querySelector(".y").addEventListener("click", open);
-    toast.querySelector(".n").addEventListener("click", dismissToast);
-    document.body.appendChild(toast);
+    var s = CS.read(), view = document.getElementById("view");
+    if (s.seen || !view || view.querySelector(".chs-invite")) return;
+    var lead = view.querySelector(".h-lead"); if (!lead) return;
+    var row = view.querySelector(".h-after");
+    if (!row) { row = el("div", { class: "h-after" }); lead.insertAdjacentElement("afterend", row); }
+    var box = el("aside", { class: "chs-invite no-print", "aria-labelledby": "chs-invite-h" },
+      '<div><h2 id="chs-invite-h">סגנון האתר</h2><p>אפשר לבחור לחברותא מראה וצבע משלכם: קלאסי, מגזין, אור ועומק או גילוי.</p></div>' +
+      '<div class="chs-invite-a"><button type="button" class="btn y">לבחירת סגנון</button><button type="button" class="linkbtn n">לא עכשיו</button></div>');
+    box.querySelector(".y").addEventListener("click", open);
+    box.querySelector(".n").addEventListener("click", dismissToast);
+    row.appendChild(box);
   }
 
   /* ---------- discovery: "מאיפה מתחילים" from existing app routes ---------- */
   var TOPICS = ["אור אין סוף", "צמצום", "דירה בתחתונים", "עשר הספירות", "אהבה ויראה", "ביטול", "רצוא ושוב", "שמחה", "תשובה", "תפילה", "שבת"];
   function decorate() {
     var view = document.getElementById("view"); if (!view) return;
-    var old = view.querySelector(".chs-start"), s = CS.read(), hero = view.querySelector(".h-hero");
+    // העיצוב המשולב: הפתיח ופרשת השבוע יושבים יחד ב־.h-lead; הבלוק נכנס אחרי הכניסות, כדי לא לשבור את הרשת.
+    var old = view.querySelector(".chs-start"), s = CS.read(), hero = view.querySelector(".h-entries") || view.querySelector(".h-lead") || view.querySelector(".h-hero");
     if (s.style !== "discovery" || !hero) { if (old) old.remove(); return; }
     if (old) return;
-    var wk = view.querySelector(".pc.is-week h3 a"), wkName = wk ? wk.textContent.trim() : "", wkHref = wk ? wk.getAttribute("href") : "#/biurim";
+    var wk = view.querySelector(".h-week h2 a[href*='parsha'], .h-week h2 a[href*='biurim'], .pc.is-week h3 a"), wkName = wk ? wk.textContent.trim() : "", wkHref = wk ? wk.getAttribute("href") : "#/biurim";
     var box = el("section", { class: "chs-start no-print", "aria-labelledby": "chs-start-h" });
     box.innerHTML = '<h2 id="chs-start-h">מאיפה מתחילים?</h2><div class="chs-start-grid">' +
       '<a class="chs-go" href="#/daily"><span><b>יש לי 5 דקות</b><small>לימוד יומי: תניא, תורה אור ולקוטי תורה</small></span><i aria-hidden="true">←</i></a>' +
@@ -175,7 +185,7 @@
   function init() {
     addButton(); wireMore(); syncPrefs(); CS.apply(); decorate(); maybeToast();
     var view = document.getElementById("view");
-    if (view && window.MutationObserver) new MutationObserver(function () { decorate(); }).observe(view, { childList: true });
+    if (view && window.MutationObserver) new MutationObserver(function () { decorate(); maybeToast(); }).observe(view, { childList: true });
     window.addEventListener("hashchange", function () { setTimeout(function () { decorate(); maybeToast(); }, 50); });
     // header may be re-rendered by the app; keep the button present
     if (window.MutationObserver) { var top = document.querySelector(".top"); if (top) new MutationObserver(addButton).observe(top, { childList: true, subtree: true });
