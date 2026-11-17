@@ -134,7 +134,7 @@ function loadChunk(name) {
     if (name === "new") query.set("v", newsVersion + "-" + Math.floor(Date.now() / 300000));
     if (name === "core" || name === "tree" || name === "book-catalog" || /^tree-(?:u[0-9]+|t)$/.test(name)) query.set("v", document.querySelector('meta[name="chavruta-tree-version"]')?.content || "tree");
     if (name === "core" || name === "links" || name === "search" || name === "parsha" || name.startsWith("topics") || name.startsWith("b:")) query.set("v", document.querySelector('meta[name="chavruta-corpus-version"]')?.content || document.querySelector('meta[name="chavruta-tree-version"]')?.content || "corpus");
-    if (name === "cite-resolutions" || name.startsWith("cite-text-")) query.set("v", document.querySelector('script[src^="app.js?v="]')?.getAttribute("src")?.split("?v=")[1] || "cite");
+    if (name === "cite-resolutions" || name.startsWith("cite-text-") || name === "kab-citers" || name === "kabbalah") query.set("v", document.querySelector('script[src^="app.js?v="]')?.getAttribute("src")?.split("?v=")[1] || "cite");
     if (name.startsWith("text/")) query.set("v", typeof ftVersion === "function" ? ftVersion(name) : "text");
     if (attempt) query.set("retry", String(attempt));
     s.src = chunkFile(name) + (query.size ? "?" + query : ""); s.async = true;
@@ -4173,7 +4173,7 @@ async function treeBook(main, T, b, q, ctx) {
   const wait = h("div", { class: "loading", role: "status" }, h("span", { class: "spin", "aria-hidden": "true" }), "טוען את יחידות הספר…");
   main.append(wait);
   let all;
-  try { all = await treeBookIds(T, b); } catch (e) { wait.replaceWith(h("div", { class: "empty" }, h("b", null, "לא ניתן לטעון את יחידות הספר"), String(e.message || e))); return; }
+  try { all = await treeBookIds(T, b); await loadKabCiters(); } catch (e) { wait.replaceWith(h("div", { class: "empty" }, h("b", null, "לא ניתן לטעון את יחידות הספר"), String(e.message || e))); return; }
   if (!ctx.alive()) return;
   wait.remove();
   const inp = h("input", { type: "search", class: "tree-q", placeholder: "סינון בספר…", value: q.get("f") || "" });
@@ -4206,18 +4206,23 @@ async function treeSearch(T, s, max = 300) {
 }
 
 function treeTable(T, ids, showBook) {
+  const citers = KAB_CITERS || { byUrl: {}, byCiting: {} };
   const tb = h("tbody");
   for (const i of ids) {
     const u = treeRow(T, i); if (!u) continue;
     const bk = T.books[u[0]];
     const tags = [u[6] ? "פרשת " + u[6] : "", u[7]].filter(Boolean).join(" · ");
+    const uk = u[8] || "";
+    const recs = (uk && citers.byUrl[uk]) || [];
+    const citeCell = recs.length ? h("td", null, recs.length.toLocaleString("he") + " הפניות לקבלה",
+      h("div", { class: "muted sm citing-list" }, ...recs.slice(0, 6).flatMap((r, j) => [j ? "; " : "", (r.work ? r.work + " · " : "") + (r.match || "")]))) : h("td", null, "");
     tb.append(h("tr", null,
       showBook ? h("td", null, treeDot(typeof booksAuthor === "function" ? booksAuthor(T,u[0]) : bk[0]), " ", h("a", { href: mkHash(["tree", "b", u[0]]) }, bk[1])) : null,
       h("td", null, treeSourceLink(u[2] || "(ללא כותרת)", u[8], { author: T.rebbeim[bk[0]], book: bk[1], page: u[4] }), u[3] ? h("div", { class: "muted sm" }, u[3]) : null),
-      h("td", null, T.genres[u[1]]), h("td", null, u[5]), h("td", null, u[4]), h("td", null, tags)));
+      h("td", null, T.genres[u[1]]), h("td", null, u[5]), h("td", null, u[4]), h("td", null, tags), citeCell));
   }
   return h("div", { class: "tbl-wrap" }, h("table", { class: "tree-tbl" },
-    h("thead", null, h("tr", null, showBook ? h("th", null, "ספר") : null, h("th", null, "כותרת / ד״ה"), h("th", null, "סוג"), h("th", null, "שנה"), h("th", null, "עמוד"), h("th", null, "פרשה / מועד"))), tb));
+    h("thead", null, h("tr", null, showBook ? h("th", null, "ספר") : null, h("th", null, "כותרת / ד״ה"), h("th", null, "סוג"), h("th", null, "שנה"), h("th", null, "עמוד"), h("th", null, "פרשה / מועד"), h("th", null, "איזכורים"))), tb));
 }
 
 /* ---------- עמוד פרשה: אותה תבנית של ספר הביאורים בבראשית (reader.js: libraryList) — רשימה עם עמודת הפסוק, כותרת, מספר הפריטים,
@@ -4408,16 +4413,48 @@ function kRebbeChips(K, by) {
   return by.map((n, i) => n ? h("span", { class: "chip mute" }, treeDot(i), " ", `${K.rebbeim[i]} ${n.toLocaleString("he")}`) : null).filter(Boolean);
 }
 function kLink(label, url, book) { return treeSourceLink(label, url, { book }); }
+
+let KAB_CITERS = null;
+function loadKabCiters() {
+  return KAB_CITERS ? Promise.resolve(KAB_CITERS) : loadChunk("kab-citers").then(d => {
+    const byKab = {}, byUrl = {}, byCiting = {}, byWork = {};
+    for (const row of (d.links || [])) {
+      const [cu, ku, work, match, ri, title, uk] = row;
+      const rec = { cu, ku, work, match, ri, title, uk };
+      if (ku) (byKab[ku] ||= []).push(rec);
+      if (uk) (byUrl[uk] ||= []).push(rec);
+      (byCiting[cu] ||= []).push(rec);
+      if (work) (byWork[work] ||= []).push(rec);
+    }
+    return (KAB_CITERS = { n: d.n || (d.links || []).length, rebbeim: d.rebbeim || [], byKab, byUrl, byCiting, byWork });
+  }).catch(() => (KAB_CITERS = { n: 0, rebbeim: [], byKab: {}, byUrl: {}, byCiting: {}, byWork: {} }));
+}
+function citingLinks(recs, K) {
+  const names = (K && K.rebbeim) || (KAB_CITERS && KAB_CITERS.rebbeim) || [];
+  const out = [];
+  const seen = new Set();
+  for (const r of recs || []) {
+    if (!r.cu || seen.has(r.cu + "|" + r.match)) continue;
+    seen.add(r.cu + "|" + r.match);
+    const href = r.uk && String(r.uk).startsWith("cl:") ? "https://www.chabadlibrary.org/books/" + r.uk.slice(3)
+      : (r.uk && /^https?:/.test(r.uk) ? r.uk : "");
+    const who = (r.ri >= 0 ? (names[r.ri] || "") + " — " : "") + (r.title || r.cu);
+    out.push(href ? treeSourceLink(who, href, { author: names[r.ri], title: r.title }) : h("span", null, who));
+    if (r.match) out[out.length - 1] = h("span", null, out[out.length - 1], h("small", { class: "muted" }, " · " + r.match));
+  }
+  return out;
+}
+
 async function treeKabbalah(main, rest, q, ctx) {
   let K;
-  try { K = await loadChunk("kabbalah"); } catch (e) { main.append(h("div", { class: "empty" }, h("b", null, "לא ניתן לטעון את עץ הקבלה"), String(e.message || e))); return; }
+  try { K = await loadChunk("kabbalah"); await loadKabCiters(); } catch (e) { main.append(h("div", { class: "empty" }, h("b", null, "לא ניתן לטעון את עץ הקבלה"), String(e.message || e))); return; }
   if (!ctx.alive()) return;
   const [sub, arg] = rest;
   if (sub === "w") return kWork(main, K, decodeURIComponent(arg || ""));
   if (sub === "p") return kParsha(main, K, decodeURIComponent(arg || ""));
   document.title = "עץ הקבלה · עץ הידע · חברותא";
   treeHead(main, "עץ הקבלה — מקורות קודמים", [["עץ הקבלה", null]],
-    `${K.works.length} ספרים, ${K.nunits.toLocaleString("he")} יחידות רשומות, ו־${K.total.toLocaleString("he")} הפניות שנמצאו בספרי רבותינו. היחידה היא המקום כפי שספרי החסידות מפנים אליו (״זח״א עב, ב״, ״ע״ח שער מט פ״ג״, ״שער הפסוקים פ׳ וירא״); בספרים שבספריא — עם קישור. הטקסט עצמו אינו מועתק כאן.`);
+    `${K.works.length} ספרים, ${K.nunits.toLocaleString("he")} יחידות רשומות, ו־${K.total.toLocaleString("he")} הפניות שנמצאו בספרי רבותינו, מהן ${Number(K.citing_linked || KAB_CITERS.n || 0).toLocaleString("he")} מקושרות ליחידה מפנה בעץ. היחידה היא המקום כפי שספרי החסידות מפנים אליו (״זח״א עב, ב״, ״ע״ח שער מט פ״ג״, ״שער הפסוקים פ׳ וירא״); בספרים שבספריא — עם קישור. הטקסט עצמו אינו מועתק כאן.`);
   main.append(h("p", { class: "card-note" }, `עדכון אחרון: ${K.built.split("-").reverse().join(".")}. ההפניות זוהו בשכבת הטקסט של כרכי חב״ד און ליין (סריקה — יש החמצות ורעש) ובטקסט של ספריית חב״ד. כל הפניה נבדקת בטקסט לפני שמביאים אותה.`));
   const ps = Object.keys(K.parsha || {});
   if (ps.length) main.append(h("div", { class: "sec-h" }, h("h2", null, "מקורות הקבלה לפי פרשה")),
@@ -4455,10 +4492,17 @@ function kWork(main, K, wid) {
   main.append(h("div", { class: "sec-h" }, h("h2", null, "היחידות המצוטטות ביותר"), h("span", { class: "tag" }, rows.length)));
   if (!rows.length) { main.append(h("p", { class: "muted" }, "ההפניות לספר זה נספרו בלי יחידה (הפניה כללית, או מקום שאין לו מיפוי).")); return; }
   const tb = h("tbody");
-  for (const [label, url, sec, n, by] of rows) tb.append(h("tr", null, h("td", null, kLink(label, url, w.he)), h("td", null, sec), h("td", null, n.toLocaleString("he")),
-    h("td", null, by.map((c, i) => c ? `${K.rebbeim[i]} ${c}` : null).filter(Boolean).join(" · "))));
+  for (const row of rows) {
+    const [label, url, sec, n, by, uid] = row;
+    const citers = uid && KAB_CITERS.byKab[uid] ? KAB_CITERS.byKab[uid] : [];
+    const shown = citingLinks(citers.slice(0, 8), K);
+    const more = citers.length > 8 ? h("small", { class: "muted" }, " ועוד " + (citers.length - 8)) : null;
+    tb.append(h("tr", null, h("td", null, kLink(label, url, w.he)), h("td", null, sec), h("td", null, n.toLocaleString("he")),
+      h("td", null, by.map((c, i) => c ? `${K.rebbeim[i]} ${c}` : null).filter(Boolean).join(" · ")),
+      h("td", null, shown.length ? h("div", { class: "citing-list" }, ...shown.flatMap((el, i) => i ? [h("br"), el] : [el]), more) : "—")));
+  }
   main.append(h("div", { class: "tbl-wrap" }, h("table", { class: "tree-tbl" },
-    h("thead", null, h("tr", null, h("th", null, "מקום"), h("th", null, "פרשה / שער"), h("th", null, "הפניות"), h("th", null, "אצל"))), tb)));
+    h("thead", null, h("tr", null, h("th", null, "מקום"), h("th", null, "פרשה / שער"), h("th", null, "הפניות"), h("th", null, "אצל"), h("th", null, "יחידה מפנה בעץ"))), tb)));
   chvStackTables?.(main);
   window.scrollTo(0, 0);
 }
