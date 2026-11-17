@@ -1578,7 +1578,7 @@ body.source-reader-docked { overflow: auto; }
 .ft-tools svg { width: 16px; height: 16px; vertical-align: -3px; margin-inline-end: 4px; }
 .ft-docnav { display: flex; justify-content: space-between; align-items: center; gap: 10px; margin: 16px 0; flex-wrap: wrap; }
 .ft-docnav .btn { max-width: 44%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.ft-body { max-width: var(--reading-measure, 68ch); margin: 0 auto; font: var(--reading-weight, 400) var(--fs-body, 19px)/var(--lh, 1.85) var(--serif); color: var(--ink); text-align: justify; hyphens: none; }
+.ft-body { max-width: var(--reading-measure, 68ch); margin: 0 auto; font: var(--reading-weight, 400) var(--fs-body, 19px)/var(--lh, 1.85) var(--serif); color: var(--ink); text-align: justify; text-justify: inter-word; text-align-last: start; hyphens: manual; }
 .ft-page { position: relative; padding: 6px 0 14px; scroll-margin-top: calc(var(--top-h, 56px) + 12px); }
 .ft-page + .ft-page { border-top: 1px dashed var(--rule-2, var(--rule)); }
 .ft-page.ft-target { animation: ft-flash 1.6s ease-out 1; }
@@ -1586,7 +1586,8 @@ body.source-reader-docked { overflow: auto; }
 .ft-pgmark { display: inline-block; margin: 6px 0 2px; padding: 1px 8px; border-radius: 999px; background: var(--paper-2); color: var(--ink-3); font: 12px/1.6 var(--sans); text-decoration: none; }
 .ft-pgmark:hover { color: var(--accent); }
 .ft-text p { margin: 0 0 .8em; }
-.ft-text h3, .ft-text h4, .ft-text h5, .ft-text h6 { font-family: var(--serif); color: var(--ink); margin: 1em 0 .5em; text-align: start; }
+.ft-text { text-align: justify; text-justify: inter-word; text-align-last: start; }
+.ft-text h3, .ft-text h4, .ft-text h5, .ft-text h6 { font-family: var(--serif); color: var(--ink); margin: 1em 0 .5em; text-align: start; text-align-last: start; }
 .ft-text h3 { font-size: 1.25em; } .ft-text h4 { font-size: 1.12em; } .ft-text h5, .ft-text h6 { font-size: 1em; }
 .ft-text hr { border: 0; text-align: center; margin: 1em 0; } .ft-text hr::after { content: "* * *"; color: var(--ink-3); letter-spacing: .4em; }
 .ft-text b { font-weight: 700; }
@@ -1613,7 +1614,8 @@ body.source-reader-docked { overflow: auto; }
 .ft-readlink svg { width: 16px; height: 16px; vertical-align: -3px; margin-inline-end: 4px; }
 .ft-body mark.sh { background: var(--hl); color: inherit; border-radius: 2px; }
 @media (max-width: 700px) {
-  .ft-body { text-align: start; }
+  /* Keep first-seif loose text (before <p> wrapping) justified, like later sections. */
+  .ft-body { text-align: justify; text-justify: inter-word; text-align-last: start; }
   .ft-docnav .btn { max-width: 100%; flex: 1 1 100%; }
   .ft-cards { grid-template-columns: 1fr 1fr; }
 }

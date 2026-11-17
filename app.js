@@ -5926,8 +5926,17 @@ function ftSafe(html, prefix) {
   } };
   add(doc.body, frag); return frag;
 }
-/** טקסט העמוד: שורות בודדות (בלי <p>) הופכות לפסקאות */
-function ftBlocks(html) { return /<(p|h\d)>/.test(html) ? html : String(html || "").split(/\n+/).filter(s => s.trim()).map(s => "<p>" + s + "</p>").join(""); }
+/** טקסט העמוד: שורות בלי <p> הופכות לפסקאות — גם אחרי כותרת (סעיף א בראש המאמר) */
+function ftBlocks(html) {
+  const wrap = part => String(part || "").split(/\n+/).filter(s => s.trim()).map(s => "<p>" + s + "</p>").join("");
+  const s = String(html || "");
+  if (!/<(?:p|h\d)\b/i.test(s)) return wrap(s);
+  return s.split(/(<h[1-6][\s\S]*?<\/h[1-6]>|<p\b[\s\S]*?<\/p>)/i).map(part => {
+    if (!part) return "";
+    if (/^<(?:h[1-6]|p)\b/i.test(part.trim())) return part;
+    return wrap(part);
+  }).join("");
+}
 
 function ftCrumbs(t, i, s) {
   const nav = h("nav", { class: "crumbs", "aria-label": "מיקום" }, h("a", { href: mkHash(["read"]) }, "ספרייה"));
