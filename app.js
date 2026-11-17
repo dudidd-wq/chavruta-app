@@ -5850,7 +5850,7 @@ const FT_TEXT_RE = /chabadlibrary\.org\/books\/(\d{6,12})|^(?:cl|dh):(\d{6,12})|
 function ftVersion(name) {
   if (name === "text/index") return "t" + Math.floor(Date.now() / 3600000);
   const ix = D.chunks["text/index"]; if (!ix) return "text";
-  if (name === "text/map") return ix.v;
+  if (name === "text/map" || name === "text/igr-map") return ix.v;
   const slug = name.split("/")[1];
   return ix.series.find(s => s.slug === slug)?.v || ix.v;
 }
@@ -5861,6 +5861,7 @@ function ftReady() {
       FT.idx = await loadChunk("text/index");
       const m = await loadChunk("text/map"); FT.ids = new Map();
       for (const [slug, deltas] of Object.entries(m)) { let v = 0; for (const d of deltas) { v += d; FT.ids.set(v, slug); } }
+      try { FT.igr = await loadChunk("text/igr-map"); } catch (e) { FT.igr = {}; }
     } catch (e) { FT.idx = FT.idx || null; FT.ids = FT.ids || new Map(); console.warn("fulltext", e); }
     return FT;
   })();
@@ -5870,8 +5871,11 @@ function ftSeries(slug) { return FT.idx?.series.find(s => s.slug === slug) || nu
 /** כתובת בקורא למזהה/קישור של ספריית חב״ד (cl:ID, dh:ID:n, chabadlibrary.org/books/ID) — או null */
 function ftHashFor(urlOrUid, q) {
   if (!FT.ids || !urlOrUid) return null;
-  const m = String(urlOrUid).match(FT_TEXT_RE); if (!m) return null;
-  const id = +(m[1] || m[2] || m[3]), slug = FT.ids.get(id);
+  const s = String(urlOrUid);
+  const m = s.match(FT_TEXT_RE);
+  const id = m ? +(m[1] || m[2] || m[3]) : (FT.igr && s.startsWith("igr:") ? +FT.igr[s] : 0);
+  if (!id) return null;
+  const slug = FT.ids.get(id);
   return slug ? mkHash(["read", slug, String(id)], q || {}) : null;
 }
 /** עץ התוכן של סדרה, עם אינדקסים: byId, parent, leaves (סדר הקריאה) */
