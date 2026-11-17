@@ -29,9 +29,12 @@
 }
 @media (min-width: 721px) {
   :root .top { padding-inline: var(--axis); }
+  /* בתצוגות הקריאה הכותרת כוללת גם את מתג המצבים ושדה החיפוש, ולכן לא נצמדת לציר ה-1160 */
+  :root[data-style] body.has-modes .top { padding-inline: var(--edge); }
   :root .draftbar { justify-content: flex-start; text-align: start; padding-inline: var(--axis) calc(var(--axis) + 1.6rem); }
   :root .draftbar .db-panel { margin-inline: 0; }
 }
+:root[data-style] .top :is(.brand, .psw, .historynav, .mainnav, .modesw, .tools) { flex-shrink: 0; }
 :root .site-foot { padding-inline: var(--axis); }
 
 /* ===== כותרת בנייד: שורה אחת — מותג, פרשה, חץ אחורה והכלים העיקריים =====
