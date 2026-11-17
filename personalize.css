@@ -1,4 +1,4 @@
-/* חברותא · התאמה אישית: שלושה סגנונות (מגזין · אור ועומק · גילוי), צבע מוביל, גודל טקסט.
+/* חברותא · התאמה אישית: שלושה סגנונות (מגזין · אור ועומק · גילוי), צבע מוביל, גודל וגופן טקסט.
    העיצוב המשולב: כל הסגנונות חולקים את שלושת תפקידי הגופן (כותרות Frank Ruhl Libre, ממשק Assistant, קריאה Noto Serif Hebrew)
    ואת הציר והרשת שב־combined.css; כאן משתנים רק צבע, משטח ואווירה.
    שכבה נפרדת מעל app.css: :root[data-style] × [data-tone]. "classic" = העיצוב הקיים, בלי שינוי.
@@ -329,6 +329,15 @@
 .chs-seg button[aria-checked="true"] { background: var(--ink); color: var(--paper); font-weight: 600; }
 .chs-seg button:disabled { opacity: .4; }
 .chs-seg.size button { font-family: var(--serif); }
+
+/* בחירת גופן הטקסט, ליד סגנון וצבע */
+.chs-fonts { display: grid; grid-template-columns: repeat(auto-fill, minmax(8.8rem, 1fr)); gap: .4rem; }
+.chs-fonts button { min-height: 44px; padding: .4rem .55rem; border: 1.5px solid var(--rule); border-radius: 10px; background: var(--card); color: var(--ink); text-align: start; display: flex; flex-direction: column; justify-content: center; gap: .05rem; line-height: 1.25; }
+.chs-fonts button b { font-weight: 700; font-size: .95rem; }
+.chs-fonts button small { font-family: var(--sans, system-ui, sans-serif); font-size: .72rem; color: var(--ink-3); font-weight: 400; }
+.chs-fonts button[aria-checked="true"] { border-color: var(--ink); background: var(--ink); color: var(--paper); }
+.chs-fonts button[aria-checked="true"] small { color: inherit; opacity: .85; }
+.chs-prev p { font-family: var(--text-font, var(--serif)); }
 .chs-prev { margin-top: 1.2rem; border: 1px solid var(--rule); border-radius: var(--r3); padding: 1rem; background: var(--card); }
 .chs-prev small { color: var(--accent); font-weight: 600; font-size: .8rem; }
 .chs-prev p { font: 400 1.05rem/1.75 var(--serif); margin: .3rem 0 .7rem; color: var(--ink); }

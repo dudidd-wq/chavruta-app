@@ -1,16 +1,18 @@
-@font-face { font-family: "David Libre"; font-weight: 400; font-display: swap; src: url(fonts/david-libre-hebrew-400-normal.woff2) format("woff2"); unicode-range: U+0590-05FF, U+200C-2010, U+20AA, U+25CC, U+FB1D-FB4F; }
-@font-face { font-family: "David Libre"; font-weight: 700; font-display: swap; src: url(fonts/david-libre-hebrew-700-normal.woff2) format("woff2"); unicode-range: U+0590-05FF, U+200C-2010, U+20AA, U+25CC, U+FB1D-FB4F; }
-@font-face { font-family: "Noto Serif Hebrew"; font-weight: 400; font-display: swap; src: url(fonts/noto-serif-hebrew-hebrew-400-normal.woff2) format("woff2"); unicode-range: U+0590-05FF, U+200C-2010, U+20AA, U+25CC, U+FB1D-FB4F; }
-@font-face { font-family: "Noto Serif Hebrew"; font-weight: 700; font-display: swap; src: url(fonts/noto-serif-hebrew-hebrew-700-normal.woff2) format("woff2"); unicode-range: U+0590-05FF, U+200C-2010, U+20AA, U+25CC, U+FB1D-FB4F; }
-@font-face { font-family: "Frank Ruhl Libre"; font-weight: 400; font-display: swap; src: url(fonts/frank-ruhl-libre-hebrew-400-normal.woff2) format("woff2"); unicode-range: U+0590-05FF, U+200C-2010, U+20AA, U+25CC, U+FB1D-FB4F; }
-@font-face { font-family: "Frank Ruhl Libre"; font-weight: 500; font-display: swap; src: url(fonts/frank-ruhl-libre-hebrew-500-normal.woff2) format("woff2"); unicode-range: U+0590-05FF, U+200C-2010, U+20AA, U+25CC, U+FB1D-FB4F; }
-@font-face { font-family: "Frank Ruhl Libre"; font-weight: 700; font-display: swap; src: url(fonts/frank-ruhl-libre-hebrew-700-normal.woff2) format("woff2"); unicode-range: U+0590-05FF, U+200C-2010, U+20AA, U+25CC, U+FB1D-FB4F; }
+/* Reading and UI text fonts from chitas-reader (SIL Open Font License — see fonts/chitas).
+   Hebrew/te'amim come from the fuller Chitas files. Latin faces below stay as small Google Fonts subsets.
+   font-display: swap; only Noto Serif Hebrew is preloaded. */
+@font-face { font-family: "Noto Serif Hebrew"; src: url(fonts/chitas/NotoSerifHebrew.woff2) format("woff2"); font-weight: 400; font-display: swap; unicode-range: U+0590-05FF, U+200C-2010, U+20AA, U+25CC, U+FB1D-FB4F; }
+@font-face { font-family: "Frank Ruhl Libre"; src: url(fonts/chitas/FrankRuhlLibre.woff2) format("woff2"); font-weight: 300 900; font-display: swap; unicode-range: U+0590-05FF, U+200C-2010, U+20AA, U+25CC, U+FB1D-FB4F; }
+@font-face { font-family: "David Libre"; src: url(fonts/chitas/david-libre/DavidLibre-Regular.woff2) format("woff2"); font-weight: 400; font-display: swap; unicode-range: U+0590-05FF, U+200C-2010, U+20AA, U+25CC, U+FB1D-FB4F; }
+@font-face { font-family: "David Libre"; src: url(fonts/chitas/david-libre/DavidLibre-Bold.woff2) format("woff2"); font-weight: 700; font-display: swap; unicode-range: U+0590-05FF, U+200C-2010, U+20AA, U+25CC, U+FB1D-FB4F; }
+@font-face { font-family: "Assistant"; src: url(fonts/chitas/assistant/Assistant.woff2) format("woff2"); font-weight: 200 800; font-display: swap; unicode-range: U+0590-05FF, U+200C-2010, U+20AA, U+25CC, U+FB1D-FB4F; }
+@font-face { font-family: "Ezra SIL"; src: url(fonts/chitas/EzraSIL.woff2) format("woff2"); font-weight: 400; font-display: swap; unicode-range: U+0590-05FF, U+200C-2010, U+20AA, U+25CC, U+FB1D-FB4F; }
+@font-face { font-family: "Cardo"; src: url(fonts/chitas/cardo/Cardo-Regular.woff2) format("woff2"); font-weight: 400; font-display: swap; unicode-range: U+0590-05FF, U+200C-2010, U+20AA, U+25CC, U+FB1D-FB4F; }
+@font-face { font-family: "Cardo"; src: url(fonts/chitas/cardo/Cardo-Bold.woff2) format("woff2"); font-weight: 700; font-display: swap; unicode-range: U+0590-05FF, U+200C-2010, U+20AA, U+25CC, U+FB1D-FB4F; }
+@font-face { font-family: "Noto Rashi Hebrew"; src: url(fonts/chitas/noto-rashi/NotoRashiHebrew.woff2) format("woff2"); font-weight: 100 900; font-display: swap; unicode-range: U+0590-05FF, U+200C-2010, U+20AA, U+25CC, U+FB1D-FB4F; }
 @font-face { font-family: "Frank Ruhl Libre"; font-weight: 400; font-display: swap; src: url(fonts/frank-ruhl-libre-latin-400-normal.woff2) format("woff2"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215; }
 @font-face { font-family: "Frank Ruhl Libre"; font-weight: 500; font-display: swap; src: url(fonts/frank-ruhl-libre-latin-500-normal.woff2) format("woff2"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215; }
 @font-face { font-family: "Frank Ruhl Libre"; font-weight: 700; font-display: swap; src: url(fonts/frank-ruhl-libre-latin-700-normal.woff2) format("woff2"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215; }
-@font-face { font-family: "Assistant"; font-weight: 400; font-display: swap; src: url(fonts/assistant-hebrew-400-normal.woff2) format("woff2"); unicode-range: U+0590-05FF, U+200C-2010, U+20AA, U+25CC, U+FB1D-FB4F; }
-@font-face { font-family: "Assistant"; font-weight: 600; font-display: swap; src: url(fonts/assistant-hebrew-600-normal.woff2) format("woff2"); unicode-range: U+0590-05FF, U+200C-2010, U+20AA, U+25CC, U+FB1D-FB4F; }
-@font-face { font-family: "Assistant"; font-weight: 700; font-display: swap; src: url(fonts/assistant-hebrew-700-normal.woff2) format("woff2"); unicode-range: U+0590-05FF, U+200C-2010, U+20AA, U+25CC, U+FB1D-FB4F; }
 @font-face { font-family: "Assistant"; font-weight: 400; font-display: swap; src: url(fonts/assistant-latin-400-normal.woff2) format("woff2"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215; }
 @font-face { font-family: "Assistant"; font-weight: 600; font-display: swap; src: url(fonts/assistant-latin-600-normal.woff2) format("woff2"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215; }
 @font-face { font-family: "Assistant"; font-weight: 700; font-display: swap; src: url(fonts/assistant-latin-700-normal.woff2) format("woff2"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215; }
@@ -37,7 +39,8 @@
    הצבעים — בערכות (tools/site/chrome.py · THEMES → theme_css(), נטען לפני קובץ זה): :root[data-theme-name] × [data-theme].
    כאן — מה שמשותף לכל הערכות: גופנים, סולם טיפוגרפי, מרווחים. */
 :root {
-  --serif: "Frank Ruhl Libre", "David Libre", "Noto Serif Hebrew", "SBL Hebrew", "David", "Times New Roman", "Liberation Serif", "FreeSerif", serif;
+  --text-font: "Noto Serif Hebrew", "Frank Ruhl Libre", "David Libre", "Times New Roman", "Liberation Serif", serif;
+  --serif: var(--text-font, "Frank Ruhl Libre", "David Libre", "Noto Serif Hebrew", "David", "Times New Roman", "Liberation Serif", "FreeSerif", serif);
   --sans: "Assistant", "Heebo", "Segoe UI", "Arial Hebrew", Arial, "Liberation Sans", "FreeSans", sans-serif;
   /* סולם טיפוגרפי: תצוגה (רק בשער האתר) · כותרת עמוד · כותרת ביאור · פרק · ממשק */
   --fs-xs: .78rem; --fs-sm: .875rem; --fs-md: 1rem; --fs-lg: 1.15rem; --fs-xl: 1.35rem; --fs-2xl: 1.75rem; --fs-3xl: clamp(1.9rem, 1.2rem + 1.9vw, 2.75rem);
@@ -878,15 +881,25 @@ body[data-sheet="1"] .mnotes { height: auto; }
 @media (max-width:560px) { .news-filters { display: grid; grid-template-columns: minmax(0,1fr); } }
 
 
-/* גופן הקריאה (העדפה) */
-:root[data-font="sans"] { --serif: "Assistant", "Heebo", "Segoe UI", "Arial Hebrew", Arial, "Liberation Sans", sans-serif; }
-:root[data-font="system"] { --serif: "David", "David Libre", "Times New Roman", "Noto Serif Hebrew", "SBL Hebrew", "Liberation Serif", serif; }
-:root[data-font="sans"] article.biur, :root[data-font="sans"] .verses .vs { line-height: calc(var(--lh) - .05); }
+/* גופן הקריאה (העדפה): --text-font הוא המקור, ו־--serif / --f-body נגררים אחריו */
+:root[data-font="noto"] { --text-font: "Noto Serif Hebrew", "Frank Ruhl Libre", "David Libre", "Times New Roman", serif; }
+:root[data-font="frank"] { --text-font: "Frank Ruhl Libre", "Noto Serif Hebrew", "David Libre", serif; }
+:root[data-font="ezra"] { --text-font: "Ezra SIL", "Noto Serif Hebrew", "Times New Roman", serif; }
+:root[data-font="david"] { --text-font: "David Libre", "Frank Ruhl Libre", "Noto Serif Hebrew", "David", "Times New Roman", serif; }
+:root[data-font="cardo"] { --text-font: "Cardo", "Noto Serif Hebrew", "Times New Roman", serif; }
+:root[data-font="assistant"], :root[data-font="sans"] { --text-font: "Assistant", "Heebo", "Segoe UI", "Arial Hebrew", Arial, "Liberation Sans", sans-serif; }
+:root[data-font="noto-rashi"] { --text-font: "Noto Rashi Hebrew", "Noto Serif Hebrew", serif; }
+:root[data-font="system"] { --text-font: "David", "David Libre", "Times New Roman", "Noto Serif Hebrew", "Liberation Serif", serif; }
+:root[data-font="arial"] { --text-font: Arial, "Assistant", "Segoe UI", sans-serif; }
+:root[data-font="narkisim"] { --text-font: Narkisim, "David Libre", "Times New Roman", serif; }
+:root[data-font="times"] { --text-font: "Times New Roman", "Noto Serif Hebrew", "Liberation Serif", serif; }
+:root[data-font] { --serif: var(--text-font); --f-body: var(--text-font); }
+:root[data-font="assistant"] article.biur, :root[data-font="sans"] article.biur,
+:root[data-font="assistant"] .verses .vs, :root[data-font="sans"] .verses .vs { line-height: calc(var(--lh) - .05); }
 .fontsel { font: inherit; font-size: .9rem; padding: .25rem .4rem; border: 1px solid var(--rule); border-radius: .5rem; background: var(--card); color: var(--ink); max-width: 11rem; }
 
-:root[data-font="david"] { --serif: "David Libre", "Frank Ruhl Libre", "David", "Times New Roman", serif; }
-:root[data-font="noto"] { --serif: "Noto Serif Hebrew", "Frank Ruhl Libre", "Times New Roman", serif; }
 :root[data-font="david"] article.biur, :root[data-font="noto"] article.biur { font-size: 1.04em; }
+.rashi { font-family: "Noto Rashi Hebrew", var(--text-font, var(--serif)); }
 
 /* שפת קורא (תצוגה בלבד; הטקסט במקור לא משתנה): ״[סינתזה]״ נראה כ״נעיר:״ ו״הערת המהדורה״ כ״ביאור״ */
 article.biur .smark { font-size: 0; border: 0; padding: 0; margin: 0; letter-spacing: 0; }

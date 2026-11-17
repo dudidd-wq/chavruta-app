@@ -1,10 +1,15 @@
 /* חברותא · התאמה אישית — רץ ב-<head> לפני הציור הראשון (מוזרק כ-inline על ידי tools/app/apply_personalize.py). */
 (function () {
   var K = "chavruta-style-v1", r = document.documentElement, mq = window.matchMedia("(prefers-color-scheme: dark)");
-  function read() { var s = {}; try { s = JSON.parse(localStorage.getItem(K) || "{}") || {}; } catch (e) {} return {
+  var FONT_RE = /^(noto|frank|ezra|david|cardo|assistant|noto-rashi|system|arial|narkisim|times)$/;
+  function normFont(f) { if (f === "sans") f = "assistant"; return FONT_RE.test(f || "") ? f : ""; }
+  function read() { var s = {}; try { s = JSON.parse(localStorage.getItem(K) || "{}") || {}; } catch (e) {}
+    var font = normFont(s.font);
+    if (!font) { try { font = normFont(localStorage.getItem("chavruta-font") || ""); } catch (e) {} }
+    return {
     style: /^(classic|editorial|depth|discovery)$/.test(s.style) ? s.style : "classic",
     accent: /^#[0-9a-f]{6}$/i.test(s.accent || "") ? s.accent.toLowerCase() : "",
-    size: /^(s|m|l|xl)$/.test(s.size) ? s.size : "m", seen: !!s.seen }; }
+    size: /^(s|m|l|xl)$/.test(s.size) ? s.size : "m", font: font || "noto", seen: !!s.seen }; }
   function hx(c) { c = (c || "").trim(); if (/^#[0-9a-f]{3}$/i.test(c)) c = "#" + c[1] + c[1] + c[2] + c[2] + c[3] + c[3]; return /^#[0-9a-f]{6}$/i.test(c) ? c.toLowerCase() : ""; }
   function rgb(c) { return [1, 3, 5].map(function (i) { return parseInt(c.slice(i, i + 2), 16); }); }
   function mix(a, b, t) { var x = rgb(a), y = rgb(b); return "#" + x.map(function (v, i) { return Math.round(v * (1 - t) + y[i] * t).toString(16).padStart(2, "0"); }).join(""); }
@@ -17,7 +22,7 @@
     if (st === "depth") return "dark"; if (t === "light" || t === "dark") return t; return mq.matches ? "dark" : "light"; }
   function apply(s) {
     s = s || read();
-    r.setAttribute("data-style", s.style); r.setAttribute("data-size", s.size);
+    r.setAttribute("data-style", s.style); r.setAttribute("data-size", s.size); r.setAttribute("data-font", s.font);
     if (s.style === "depth") { r.setAttribute("data-theme", "dark"); r.setAttribute("data-chs-forced", ""); }
     else if (r.hasAttribute("data-chs-forced")) { r.removeAttribute("data-chs-forced"); var t = null; try { t = localStorage.getItem("chavruta-theme"); } catch (e) {}
       if (t === "light" || t === "dark") r.setAttribute("data-theme", t); else r.removeAttribute("data-theme"); }

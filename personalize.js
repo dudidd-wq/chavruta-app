@@ -1,4 +1,4 @@
-/* חברותא · פאנל "התאמה אישית": סגנון, צבע מוביל, תאורה וגודל טקסט. נשמר ב-localStorage (chavruta-style-v1).
+/* חברותא · פאנל "התאמה אישית": סגנון, צבע מוביל, תאורה, גודל וגופן טקסט. נשמר ב-localStorage (chavruta-style-v1).
    משתמש ב-window.chavrutaStyle (סקריפט ה-head) ובממשק window.chavrutaPreferences כשהוא קיים (index.html). */
 (function () {
   "use strict";
@@ -13,6 +13,16 @@
     ["#1d5fa8", "כחול"], ["#4d6b1f", "זית"], ["#c43d64", "אלמוג"], ["#3b4252", "גרפיט"]];
   var SIZES = [["s", "קטן", 18, ".85rem"], ["m", "רגיל", 21, "1rem"], ["l", "גדול", 24, "1.18rem"], ["xl", "גדול מאוד", 28, "1.36rem"]];
   var MODES = [["system", "אוטומטי"], ["light", "בהיר"], ["dark", "כהה"]];
+  var FONTS = [
+    { id: "noto", name: "נוטו סריף", d: "ברירת המחדל לקריאה", stack: '"Noto Serif Hebrew", serif' },
+    { id: "frank", name: "פרנק־רוהל", d: "כותרות וטקסט", stack: '"Frank Ruhl Libre", serif' },
+    { id: "ezra", name: "עזרא", d: "כולל טעמים וניקוד", stack: '"Ezra SIL", serif' },
+    { id: "david", name: "דוד ליברה", d: "ללא טעמים", stack: '"David Libre", serif' },
+    { id: "cardo", name: "קרדו", d: "כולל טעמים", stack: '"Cardo", serif' },
+    { id: "assistant", name: "אסיסטנט", d: "סנס, בלי טעמים", stack: '"Assistant", sans-serif' },
+    { id: "noto-rashi", name: "נוטו רש״י", d: "כתב רש״י", stack: '"Noto Rashi Hebrew", serif' }
+  ];
+  var HOSTED = {}; FONTS.forEach(function (f) { HOSTED[f.id] = true; }); HOSTED.sans = true;
 
   function save(patch) {
     var s = CS.read(); for (var k in patch) s[k] = patch[k];
@@ -36,11 +46,24 @@
   function syncPrefs() {
     var s = CS.read(), p = P(); if (!p) return;
     var px = SIZES.filter(function (x) { return x[0] === s.size; })[0][2];
-    if (p.get().font !== px) p.update({ font: px });
+    var patch = {};
+    if (p.get().font !== px) patch.font = px;
+    if (HOSTED[s.font] && p.get().family !== s.font) patch.family = s.font;
+    if (Object.keys(patch).length) p.update(patch);
     if (s.style === "depth" && r.getAttribute("data-theme") !== "dark") r.setAttribute("data-theme", "dark");
   }
-  // The reading-preferences script rewrites data-theme on every change; re-assert the style layer after it.
-  window.addEventListener("prefchange", function () { CS.apply(); });
+  // The reading-preferences script rewrites data-theme / data-font on every change; re-assert the style layer after it.
+  window.addEventListener("prefchange", function () {
+    var p = P(), s = CS.read();
+    if (p) {
+      var f = p.get().family; if (f === "sans") f = "assistant";
+      if (HOSTED[f] && f !== s.font) {
+        s.font = f;
+        try { localStorage.setItem(CS.key, JSON.stringify(s)); } catch (e) {}
+      }
+    }
+    CS.apply();
+  });
 
   /* ---------- panel ---------- */
   var panel, scrim, opener;
@@ -61,6 +84,8 @@
       MODES.map(function (m) { return '<button type="button" role="radio" data-mode="' + m[0] + '">' + m[1] + '</button>'; }).join("") + '</div>' +
       '<h3 class="chs-h" id="chs-h-size">גודל טקסט</h3><div class="chs-seg size" role="radiogroup" aria-labelledby="chs-h-size">' +
       SIZES.map(function (z) { return '<button type="button" role="radio" data-size="' + z[0] + '" aria-label="' + z[1] + '" style="font-size:' + z[3] + '">א</button>'; }).join("") + '</div>' +
+      '<h3 class="chs-h" id="chs-h-font">גופן הטקסט</h3><div class="chs-fonts" role="radiogroup" aria-labelledby="chs-h-font">' +
+      FONTS.map(function (f) { return '<button type="button" role="radio" data-font="' + f.id + '" style="font-family:' + f.stack + '"><b>' + f.name + '</b><small>' + f.d + '</small></button>'; }).join("") + '</div>' +
       '<div class="chs-prev" aria-hidden="true"><small>תצוגה מקדימה</small><p>״אלה תולדות נח, נח איש צדיק תמים היה בדורותיו, את האלהים התהלך נח״.</p><span class="btn primary">להמשך הלימוד</span> <a class="chs-link" tabindex="-1">קישור למקור</a></div>' +
       '<div class="chs-row"><button type="button" class="btn" data-act="reset">איפוס לברירת המחדל</button>' +
       (document.getElementById("disp-btn") ? '<button type="button" class="btn ghost" data-act="reading">הגדרות קריאה מתקדמות</button>' : '') +
@@ -79,7 +104,8 @@
       if (b.hasAttribute("data-acc")) return save({ accent: b.dataset.acc });
       if (b.dataset.mode) return setMode(b.dataset.mode);
       if (b.dataset.size) return save({ size: b.dataset.size });
-      if (b.dataset.act === "reset") { save({ style: "classic", accent: "", size: "m", seen: true }); return setMode("system"); }
+      if (b.dataset.font) return save({ font: b.dataset.font });
+      if (b.dataset.act === "reset") { save({ style: "classic", accent: "", size: "m", font: "noto", seen: true }); return setMode("system"); }
       if (b.dataset.act === "reading") { close(); document.getElementById("disp-btn").click(); }
     });
     panel.querySelector("#chs-color").addEventListener("input", function (e) { save({ accent: e.target.value }); });
@@ -94,6 +120,7 @@
     if (s.accent) panel.querySelector("#chs-color").value = s.accent;
     panel.querySelectorAll("[data-mode]").forEach(function (b) { b.setAttribute("aria-checked", String(b.dataset.mode === mode)); b.disabled = s.style === "depth"; });
     panel.querySelectorAll(".chs-seg [data-size]").forEach(function (b) { b.setAttribute("aria-checked", String(b.dataset.size === s.size)); });
+    panel.querySelectorAll(".chs-fonts [data-font]").forEach(function (b) { b.setAttribute("aria-checked", String(b.dataset.font === s.font)); });
     var note = panel.querySelector("#chs-note");
     note.textContent = s.style === "depth" ? "״אור ועומק״ הוא סגנון כהה, ולכן התאורה קבועה." : "";
     if (res && res.changed) note.textContent = (note.textContent ? note.textContent + " " : "") + "הגוון הותאם מעט כדי שהטקסט יישאר קריא.";

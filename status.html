@@ -13,17 +13,23 @@
 <meta property="og:locale" content="he_IL">
 <meta property="og:title" content="מצב המערכת — חברותא">
 <meta property="og:description" content="כיסוי קישור ההפניות, מפת הקשרים, קליטת טקסט פתוח מספריא ובקרת איכות.">
-<link rel="stylesheet" href="app.css?v=262c9660d280">
-<link rel="stylesheet" href="personalize.css?v=5fd77f90ada1" id="chs-css">
+<link rel="preload" href="fonts/chitas/NotoSerifHebrew.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="app.css?v=chitas-fonts">
+<link rel="stylesheet" href="personalize.css?v=chitas-fonts" id="chs-css">
 <link rel="stylesheet" href="status.css?v=20261114b">
 <meta name="theme-color" content="#faf7f0">
 <script>(function(){var r=document.documentElement,n="sefer",t="";try{n=localStorage.getItem("chavruta-theme-name")||n;t=localStorage.getItem("chavruta-theme")||"";}catch(e){}if(!/^(sefer|techelet|zayit|dyo)$/.test(n))n="sefer";r.setAttribute("data-theme-name",n);if(t==="light"||t==="dark")r.setAttribute("data-theme",t);})();</script>
 <script id="chs-head">(function () {
   var K = "chavruta-style-v1", r = document.documentElement, mq = window.matchMedia("(prefers-color-scheme: dark)");
-  function read() { var s = {}; try { s = JSON.parse(localStorage.getItem(K) || "{}") || {}; } catch (e) {} return {
+  var FONT_RE = /^(noto|frank|ezra|david|cardo|assistant|noto-rashi|system|arial|narkisim|times)$/;
+  function normFont(f) { if (f === "sans") f = "assistant"; return FONT_RE.test(f || "") ? f : ""; }
+  function read() { var s = {}; try { s = JSON.parse(localStorage.getItem(K) || "{}") || {}; } catch (e) {}
+    var font = normFont(s.font);
+    if (!font) { try { font = normFont(localStorage.getItem("chavruta-font") || ""); } catch (e) {} }
+    return {
     style: /^(classic|editorial|depth|discovery)$/.test(s.style) ? s.style : "classic",
     accent: /^#[0-9a-f]{6}$/i.test(s.accent || "") ? s.accent.toLowerCase() : "",
-    size: /^(s|m|l|xl)$/.test(s.size) ? s.size : "m", seen: !!s.seen }; }
+    size: /^(s|m|l|xl)$/.test(s.size) ? s.size : "m", font: font || "noto", seen: !!s.seen }; }
   function hx(c) { c = (c || "").trim(); if (/^#[0-9a-f]{3}$/i.test(c)) c = "#" + c[1] + c[1] + c[2] + c[2] + c[3] + c[3]; return /^#[0-9a-f]{6}$/i.test(c) ? c.toLowerCase() : ""; }
   function rgb(c) { return [1, 3, 5].map(function (i) { return parseInt(c.slice(i, i + 2), 16); }); }
   function mix(a, b, t) { var x = rgb(a), y = rgb(b); return "#" + x.map(function (v, i) { return Math.round(v * (1 - t) + y[i] * t).toString(16).padStart(2, "0"); }).join(""); }
@@ -36,7 +42,7 @@
     if (st === "depth") return "dark"; if (t === "light" || t === "dark") return t; return mq.matches ? "dark" : "light"; }
   function apply(s) {
     s = s || read();
-    r.setAttribute("data-style", s.style); r.setAttribute("data-size", s.size);
+    r.setAttribute("data-style", s.style); r.setAttribute("data-size", s.size); r.setAttribute("data-font", s.font);
     if (s.style === "depth") { r.setAttribute("data-theme", "dark"); r.setAttribute("data-chs-forced", ""); }
     else if (r.hasAttribute("data-chs-forced")) { r.removeAttribute("data-chs-forced"); var t = null; try { t = localStorage.getItem("chavruta-theme"); } catch (e) {}
       if (t === "light" || t === "dark") r.setAttribute("data-theme", t); else r.removeAttribute("data-theme"); }
@@ -122,6 +128,6 @@
 <nav class="bottombar no-print" aria-label="ניווט ראשי (תחתון)"><div class="bn" id="bn"><a class="bn-i" data-nav="home" href="index.html#/home" aria-label="ראשי"><span class="bn-ic" aria-hidden="true"><svg aria-hidden="true"><use href="#n-home"></use></svg></span><span class="bn-l" aria-hidden="true">ראשי</span></a><a class="bn-i" data-nav="read" href="index.html#/read" aria-label="ספרייה"><span class="bn-ic" aria-hidden="true"><svg aria-hidden="true"><use href="#n-read"></use></svg></span><span class="bn-l" aria-hidden="true">ספרייה</span></a><a class="bn-i" data-nav="learn" href="index.html#/learn" aria-label="ביאורים"><span class="bn-ic" aria-hidden="true"><svg aria-hidden="true"><use href="#n-gates"></use></svg></span><span class="bn-l" aria-hidden="true">ביאורים</span></a><a class="bn-i" data-nav="search" href="index.html#/search" aria-label="חיפוש"><span class="bn-ic" aria-hidden="true"><svg aria-hidden="true"><use href="#n-search"></use></svg></span><span class="bn-l" aria-hidden="true">חיפוש</span></a><button type="button" class="bn-i bn-more" id="bn-more" aria-label="עוד יעדים" aria-haspopup="dialog" aria-expanded="false" aria-controls="bn-sheet"><span class="bn-ic" aria-hidden="true"><svg aria-hidden="true"><use href="#n-more"></use></svg></span><span class="bn-l" aria-hidden="true">עוד</span></button></div><div class="bn-sheet" id="bn-sheet" role="dialog" aria-label="עוד יעדים" hidden><div class="bn-sheet-h"><b>עוד</b><button type="button" class="bn-x" aria-label="סגירה"><svg aria-hidden="true"><use href="#n-close"></use></svg></button></div><div class="bn-grid"><a class="bn-i bn-s" data-nav="tree" href="index.html#/tree" aria-label="עץ וזמן"><span class="bn-ic" aria-hidden="true"><svg aria-hidden="true"><use href="#n-tree"></use></svg></span><span class="bn-l" aria-hidden="true">עץ וזמן</span></a><a class="bn-i bn-s" data-nav="topics" href="index.html#/topics" aria-label="מפתח"><span class="bn-ic" aria-hidden="true"><svg aria-hidden="true"><use href="#n-topics"></use></svg></span><span class="bn-l" aria-hidden="true">מפתח</span></a><a class="bn-i bn-s" data-nav="new" href="index.html#/new" aria-label="מה חדש"><span class="bn-ic" aria-hidden="true"><svg aria-hidden="true"><use href="#n-new"></use></svg></span><span class="bn-l" aria-hidden="true">מה חדש</span></a></div></div></nav>
 <script src="data/project-status.js?v=20261114b"></script>
 <script src="status.js?v=20261114b"></script>
-<script src="personalize.js?v=5fd77f90ada1" id="chs-js" defer></script>
+<script src="personalize.js?v=chitas-fonts" id="chs-js" defer></script>
 </body>
 </html>

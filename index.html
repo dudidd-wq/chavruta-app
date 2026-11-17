@@ -14,9 +14,10 @@
 <meta property="og:title" content="חברותא — ביאורים על מאמרי רבותינו נשיאינו">
 <meta property="og:description" content="ביאורים על דברי רבותינו נשיאינו על פרשות התורה — פסוק אחר פסוק, דור אחר דור. כל ציטוט מקושר אל מקורו.">
 
-<link rel="stylesheet" href="app.css?v=combined1">
-<link rel="stylesheet" href="personalize.css?v=5fd77f90ada1-c2" id="chs-css">
-<link rel="stylesheet" href="combined.css?v=combined4" id="combined-css">
+<link rel="preload" href="fonts/chitas/NotoSerifHebrew.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="app.css?v=chitas-fonts">
+<link rel="stylesheet" href="personalize.css?v=chitas-fonts" id="chs-css">
+<link rel="stylesheet" href="combined.css?v=chitas-fonts" id="combined-css">
 <link rel="stylesheet" href="print.css?v=ed31cad7e741" media="print">
 <style id="pagehead">@page { @top-right { content: "חברותא · פרשת בראשית"; font: 9pt "Assistant", "Liberation Sans", Arial, sans-serif; color: #555; } }</style>
 <link rel="manifest" href="manifest.webmanifest">
@@ -34,12 +35,18 @@
   const KEY = "chavruta-reading-preferences-v1";
   const palettes = window.__chavrutaReadingPalettes || {};
   const fonts = {
-    frank: { label: "פרנק ריהל ליברה", css: '"Frank Ruhl Libre", "David Libre", David, serif' },
-    david: { label: "דוד ליברה", css: '"David Libre", "Frank Ruhl Libre", David, serif' },
-    noto: { label: "נוטו סריף עברית", css: '"Noto Serif Hebrew", "Frank Ruhl Libre", serif' },
+    noto: { label: "נוטו סריף עברית", css: '"Noto Serif Hebrew", "Frank Ruhl Libre", "David Libre", serif' },
+    frank: { label: "פרנק ריהל ליברה", css: '"Frank Ruhl Libre", "Noto Serif Hebrew", "David Libre", serif' },
+    ezra: { label: "עזרא SIL", css: '"Ezra SIL", "Noto Serif Hebrew", serif' },
+    david: { label: "דוד ליברה", css: '"David Libre", "Frank Ruhl Libre", "Noto Serif Hebrew", David, serif' },
+    cardo: { label: "קרדו", css: '"Cardo", "Noto Serif Hebrew", serif' },
+    assistant: { label: "אסיסטנט", css: '"Assistant", "Segoe UI", Arial, sans-serif' },
+    "noto-rashi": { label: "נוטו רש״י", css: '"Noto Rashi Hebrew", "Noto Serif Hebrew", serif' },
     sans: { label: "אסיסטנט", css: '"Assistant", "Segoe UI", Arial, sans-serif' },
     system: { label: "דוד / גופן המכשיר", css: 'David, "David Libre", "Times New Roman", serif' },
     arial: { label: "Arial מהמכשיר", css: 'Arial, "Assistant", sans-serif' },
+    narkisim: { label: "Narkisim — אם מותקן", css: 'Narkisim, "David Libre", "Times New Roman", serif' },
+    times: { label: "Times New Roman — אם מותקן", css: '"Times New Roman", "Noto Serif Hebrew", serif' },
   };
   const defaults = { family: "noto", font: 21, weight: "400", leading: 1.9, paragraph: 1,
     word: 0, letter: 0, alignment: "justify", width: 66, margin: 30, theme: "system", palette: "sefer",
@@ -56,7 +63,7 @@
     for (const [k, [lo, hi]] of Object.entries(ranges)) if (typeof input[k] === "number" && Number.isFinite(input[k])) p[k] = Math.max(lo, Math.min(hi, input[k]));
     for (const k of ["toc", "focus", "quoteTint", "sourceLinked"]) if (typeof input[k] === "boolean") p[k] = input[k];
     for (const k of ["family", "sourceFamily"]) {
-      const f = input[k] === "assistant" ? "sans" : input[k];
+      const f = input[k] === "sans" ? "assistant" : input[k];
       if (typeof f === "string" && Object.hasOwn(fonts, f)) p[k] = f;
     }
     for (const [k, options] of Object.entries({ weight: ["400", "500"], alignment: ["justify"], theme: ["system", "light", "dark"], sourcePlace: ["auto", "inline"] })) if (options.includes(input[k])) p[k] = input[k];
@@ -99,12 +106,13 @@
   const tokenNames = ["paper", "paper-2", "card", "ink", "ink-2", "ink-3", "rule", "rule-2", "accent", "accent-2", "accent-soft", "accent-line", "quote-bg", "quote-ink", "hl"];
   function apply() {
     const r = document.documentElement;
-    r.dataset.font = prefs.family; r.dataset.justify = prefs.alignment === "justify" ? "on" : "off";
+    r.dataset.font = prefs.family === "sans" ? "assistant" : prefs.family; r.dataset.justify = prefs.alignment === "justify" ? "on" : "off";
     r.dataset.themeName = prefs.palette;
     if (prefs.theme === "system") r.removeAttribute("data-theme"); else r.dataset.theme = prefs.theme;
     r.dataset.readingToc = String(prefs.toc); r.dataset.readingFocus = String(prefs.focus);
     r.dataset.readingQuoteTint = String(prefs.quoteTint); r.dataset.readingSource = prefs.sourcePlace;
-    const vars = { "--serif": fonts[prefs.family].css, "--fs-body": prefs.font + "px", "--lh": String(prefs.leading),
+    const stack = fonts[prefs.family].css;
+    const vars = { "--text-font": stack, "--f-body": stack, "--serif": stack, "--fs-body": prefs.font + "px", "--lh": String(prefs.leading),
       "--reading-measure": prefs.width + "ch", "--reading-gutter": prefs.margin + "px", "--reading-paragraph": prefs.paragraph + "em", "--reading-weight": prefs.weight,
       "--reading-word": prefs.word + "em", "--reading-letter": prefs.letter + "em", "--reading-source-font": fonts[prefs.sourceLinked ? prefs.family : prefs.sourceFamily].css,
       "--reading-source-size": (prefs.sourceLinked ? prefs.font : prefs.sourceFont) + "px", "--reading-source-leading": String(prefs.sourceLinked ? prefs.leading : prefs.sourceLeading) };
@@ -169,10 +177,15 @@
 <meta name="chavruta-book-covers-version" content="9831641ff1c6d800">
 <script id="chs-head">(function () {
   var K = "chavruta-style-v1", r = document.documentElement, mq = window.matchMedia("(prefers-color-scheme: dark)");
-  function read() { var s = {}; try { s = JSON.parse(localStorage.getItem(K) || "{}") || {}; } catch (e) {} return {
+  var FONT_RE = /^(noto|frank|ezra|david|cardo|assistant|noto-rashi|system|arial|narkisim|times)$/;
+  function normFont(f) { if (f === "sans") f = "assistant"; return FONT_RE.test(f || "") ? f : ""; }
+  function read() { var s = {}; try { s = JSON.parse(localStorage.getItem(K) || "{}") || {}; } catch (e) {}
+    var font = normFont(s.font);
+    if (!font) { try { font = normFont(localStorage.getItem("chavruta-font") || ""); } catch (e) {} }
+    return {
     style: /^(classic|editorial|depth|discovery)$/.test(s.style) ? s.style : "classic",
     accent: /^#[0-9a-f]{6}$/i.test(s.accent || "") ? s.accent.toLowerCase() : "",
-    size: /^(s|m|l|xl)$/.test(s.size) ? s.size : "m", seen: !!s.seen }; }
+    size: /^(s|m|l|xl)$/.test(s.size) ? s.size : "m", font: font || "noto", seen: !!s.seen }; }
   function hx(c) { c = (c || "").trim(); if (/^#[0-9a-f]{3}$/i.test(c)) c = "#" + c[1] + c[1] + c[2] + c[2] + c[3] + c[3]; return /^#[0-9a-f]{6}$/i.test(c) ? c.toLowerCase() : ""; }
   function rgb(c) { return [1, 3, 5].map(function (i) { return parseInt(c.slice(i, i + 2), 16); }); }
   function mix(a, b, t) { var x = rgb(a), y = rgb(b); return "#" + x.map(function (v, i) { return Math.round(v * (1 - t) + y[i] * t).toString(16).padStart(2, "0"); }).join(""); }
@@ -185,7 +198,7 @@
     if (st === "depth") return "dark"; if (t === "light" || t === "dark") return t; return mq.matches ? "dark" : "light"; }
   function apply(s) {
     s = s || read();
-    r.setAttribute("data-style", s.style); r.setAttribute("data-size", s.size);
+    r.setAttribute("data-style", s.style); r.setAttribute("data-size", s.size); r.setAttribute("data-font", s.font);
     if (s.style === "depth") { r.setAttribute("data-theme", "dark"); r.setAttribute("data-chs-forced", ""); }
     else if (r.hasAttribute("data-chs-forced")) { r.removeAttribute("data-chs-forced"); var t = null; try { t = localStorage.getItem("chavruta-theme"); } catch (e) {}
       if (t === "light" || t === "dark") r.setAttribute("data-theme", t); else r.removeAttribute("data-theme"); }
@@ -280,8 +293,8 @@
 <button class="toc-fab no-print" id="toc-btn" aria-label="תוכן עניינים"><svg aria-hidden="true"><use href="#n-toc"/></svg></button>
 <nav class="bottombar no-print" aria-label="ניווט ראשי (תחתון)"><div class="bn" id="bn"></div></nav>
 <noscript><p style="padding:2rem">האפליקציה דורשת JavaScript.</p></noscript>
-<script src="app.js?v=citing-37868"></script>
+<script src="app.js?v=chitas-fonts"></script>
 <script src="pwa.js" defer></script>
-<script src="personalize.js?v=5fd77f90ada1-c2" id="chs-js" defer></script>
+<script src="personalize.js?v=chitas-fonts" id="chs-js" defer></script>
 </body>
 </html>
