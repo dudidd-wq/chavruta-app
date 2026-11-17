@@ -496,6 +496,16 @@ const NAVITEMS = [
   { id: "new", icon: "n-new", label: "מה חדש", href: () => mkHash(["new"]) },
   { id: "search", icon: "n-search", label: "חיפוש", bn: 1, main: false, act: () => openPalette(), kbd: "/" },
 ];
+/** פירורי לחם תחת «ביאורים» (שלב 4): דפי שיעור, לימוד יומי, הלימוד שלי וספר הביאורים. */
+function learnCrumbs(...tail) {
+  const parts = [h("a", { href: mkHash(["learn"]) }, "ביאורים")];
+  for (const item of tail) {
+    if (!item) continue;
+    parts.push(h("span", { "aria-hidden": "true" }, "›"));
+    parts.push(typeof item === "string" ? h("span", { "aria-current": "page" }, item) : item);
+  }
+  return h("nav", { class: "crumbs", "aria-label": "מיקום" }, ...parts);
+}
 function viewToNav(v) {
   return {
     home: "home",
@@ -1905,7 +1915,7 @@ function studyShelf() {
 VIEWS.study = function () {
   const main = $("#view"); main.className = "main page study-page";
   document.title = "הלימוד שלי · חברותא";
-  main.replaceChildren(h("h1", { class: "page-title" }, "הלימוד שלי"), h("p", { class: "lede" }, "חזרה למקום הקריאה, להערות ולמקורות ששמרת בדפדפן הזה."), studyLinks(), h("h2", null, "הביאורים האחרונים שקראת"), h("p", { class: "card-note" }, "עד 20 ביאורים שיש בהם מקום קריאה שמור. הרשימה אינה מעידה על השלמת הלימוד."));
+  main.replaceChildren(learnCrumbs("הלימוד שלי"), h("h1", { class: "page-title" }, "הלימוד שלי"), h("p", { class: "lede" }, "חזרה למקום הקריאה, להערות ולמקורות ששמרת בדפדפן הזה."), studyLinks(), h("h2", null, "הביאורים האחרונים שקראת"), h("p", { class: "card-note" }, "עד 20 ביאורים שיש בהם מקום קריאה שמור. הרשימה אינה מעידה על השלמת הלימוד."));
   const list = h("ol", { class: "study-recent" }), rows = studyRecent(S.core.docs, readPos);
   for (const row of rows) list.append(h("li", null,
     h("a", { href: studyHref(row) }, row.d.title), h("small", null, [row.d.p || S.home, studyDate(row.p.t)].filter(Boolean).join(" · ")),
@@ -1936,7 +1946,7 @@ VIEWS.sheets = async function(rest,q,ctx) {
   let rows; try { rows=await loadChunk('sheets'); } catch(e) { if(ctx.alive()) main.textContent='לא ניתן לטעון את דפי השיעור. אפשר לנסות שוב.';return; }
   if(!ctx.alive())return;
   const sheet=rows.find(s=>s.id===rest[0]);
-  main.replaceChildren(h('nav',{class:'no-print'},h('a',{href:mkHash(['home'])},'חברותא'),' · ',h('a',{href:mkHash(['sheets'])},'דפי שיעור ולימוד')));
+  main.replaceChildren(learnCrumbs(rest[0] ? h('a',{href:mkHash(['sheets'])},'דפי שיעור') : 'דפי שיעור'));
   if(!rest.length) {
     document.title='דפי שיעור ולימוד · חברותא';
     main.append(h('h1',null,'דפי שיעור ולימוד'),...rows.map(s=>h('p',null,h('a',{href:mkHash(['sheets',s.id])},s.title),' · גרסה '+s.version)));
@@ -3963,7 +3973,7 @@ VIEWS.daily = async function (rest, q, ctx) {
       h("button", { class: "btn sm", onclick: () => shift(-1) }, h("small", null, "היום הקודם"), h("span", null, lab(prevD))),
       h("button", { class: "btn sm", onclick: () => shift(1) }, h("small", null, "היום הבא"), h("span", null, lab(nextD)))));
   }
-  main.append(h("h1", { class: "page-title" }, "לימוד יומי"), head, body);
+  main.append(learnCrumbs("לימוד יומי"), h("h1", { class: "page-title" }, "לימוד יומי"), head, body);
   await draw();
   if (!ctx.keep) window.scrollTo(0, 0);
 };
@@ -5217,7 +5227,7 @@ function weekBadge(p) { return weekParshas().includes(p) ? h("span", { class: "w
 function parshaHead(p, o = {}) {
   const P = parshaInfo(p);
   return [
-    h("nav", { class: "crumbs", "aria-label": "מיקום" }, h("a", { href: mkHash(["home"]) }, "חברותא"), h("span", { class: "sep", "aria-hidden": "true" }, "›"), h("span", { "aria-current": "page" }, "פרשת " + p)),
+    learnCrumbs("פרשת " + p),
     h("header", { class: "phead2" },
       h("p", { class: "kicker" }, h("span", null, `פרשה ${P.ord} בספר ${P.book}`), h("span", { class: "stage s-" + P.stage }, STAGE_LABEL[P.stage]), weekBadge(p)),
       h("h1", { class: "page-title" }, "פרשת " + p),
