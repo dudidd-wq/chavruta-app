@@ -1992,5 +1992,47 @@
     "why": "דף המחלקה (dept=345) מקשר למוצר ERE-IK2, שסווג ב־14.11 במפתח 9888477fa3aec227: כרך ב׳ של מכתבי הרבי באנגלית (תש״י–תשי״א), ויותר מ־75% מהם בפרסום ראשון.",
     "source_url": "https://store.kehotonline.com/prodinfo.asp?number=ERE-IK2",
     "checked_at": "2026-11-16T13:20:00+00:00"
+  },
+  "a70fdca3ca7171b4": {
+    "cls": "מקור",
+    "why": "קונטרס מאמרי ד״ה ״ועינינו מאירות״ של אדמו״ר האמצעי, יוצא לאור לראשונה מכת״י (אוצר החסידים, תשפ״ז); PDF נפתח.",
+    "source_url": "https://www.hageula.com/news/press/28290.htm",
+    "checked_at": "2026-11-17T13:07:00+00:00"
+  },
+  "3de959aadf861078": {
+    "cls": "מקור",
+    "why": "קובץ דברי משיח השבועי: הנחה בלתי מוגהת מהתוועדות ש״פ ויצא י״א כסלו תשמ״ג, חלק שני (חלק ראשון סווג ב־14.11), ותוספת יחידות בפרסום ראשון.",
+    "source_url": "https://www.hageula.com/news/press/28291.htm",
+    "checked_at": "2026-11-17T13:07:00+00:00"
+  },
+  "5b27ea482024f421": {
+    "cls": "ביאור",
+    "why": "ביאור כתוב באתר ביאורים במאמרי רבינו למאמר ד״ה פדה בשלום נפשי, ש״פ ויצא יו״ד כסלו תשכ״ב, עם קובץ להורדה.",
+    "source_url": "https://biurim.co.il/podo-besholom-5722/",
+    "checked_at": "2026-11-17T13:07:00+00:00"
+  },
+  "be172ee022953df0": {
+    "cls": "מקור",
+    "why": "תשורה (PDF) ובה בפרסום ראשון הגהת אדמו״ר מוהרש״ב על כד הקמח וביאור אדמו״ר הזקן בסדר התפילין שרשם המהרי״ל, מכתבי־יד; הכתבה מקשרת לחוברת המלאה.",
+    "source_url": "https://anash.org/alter-rebbes-reason-for-rabbeinu-tam-found-in-sefer-margin/",
+    "checked_at": "2026-11-17T13:07:00+00:00"
+  },
+  "98aba81dd24d9e1c": {
+    "cls": "לא רלוונטי",
+    "why": "כתבת חדשות על ביקור משלחת באוהל; אינה פרסום כתוב של מאמר, שיחה או מכתב.",
+    "source_url": "https://anash.org/husband-of-moroccan-prime-minister-visits-the-rebbes-ohel/",
+    "checked_at": "2026-11-17T13:07:00+00:00"
+  },
+  "3c9dd7a61a7ffc78": {
+    "cls": "לא רלוונטי",
+    "why": "הודעה על התוועדות עולמית בזום לקראת 40 שנה לדידן נצח; התוועדות ואירוע, לא פרסום כתוב.",
+    "source_url": "https://anash.org/global-farbrengen-to-prepare-for-40-years-of-didan-notzach/",
+    "checked_at": "2026-11-17T13:07:00+00:00"
+  },
+  "02f5ea3b0a304293": {
+    "cls": "לא רלוונטי",
+    "why": "אותה כתבת זיכרונות שסווגה ב־16.11 במפתח 67073e6df0ef3fe1 (הכותרת בפיד השתנתה); סיפור זיכרונות, לא פרסום של מאמר, שיחה או מכתב.",
+    "source_url": "https://anash.org/the-teacher-who-needed-children-and-the-rebbes-promise/",
+    "checked_at": "2026-11-17T13:07:00+00:00"
   }
 }

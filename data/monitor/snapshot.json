@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-16T13:07:57+00:00",
+ "generated_at": "2026-11-17T13:04:38+00:00",
  "sources": [
   {
    "id": "chabadlibrary",
@@ -12,7 +12,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-11-16T13:06:43+00:00",
+   "checked_at": "2026-11-17T13:03:25+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -30,7 +30,7 @@
     "primary",
     "whatsnew"
    ],
-   "checked_at": "2026-11-16T13:06:43+00:00",
+   "checked_at": "2026-11-17T13:03:25+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -47,7 +47,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-11-16T13:06:43+00:00",
+   "checked_at": "2026-11-17T13:03:25+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -64,7 +64,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-11-16T13:06:43+00:00",
+   "checked_at": "2026-11-17T13:03:25+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -82,7 +82,7 @@
     "primary",
     "whatsnew"
    ],
-   "checked_at": "2026-11-16T13:06:43+00:00",
+   "checked_at": "2026-11-17T13:03:25+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -102,7 +102,7 @@
     }
    ],
    "total": 132,
-   "last_success_at": "2026-11-16T13:06:43+00:00"
+   "last_success_at": "2026-11-17T13:03:25+00:00"
   },
   {
    "id": "chabadlibrarybooks",
@@ -115,7 +115,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-11-16T13:06:44+00:00",
+   "checked_at": "2026-11-17T13:03:26+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -133,12 +133,12 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-16T13:06:44+00:00",
+   "checked_at": "2026-11-17T13:03:26+00:00",
    "status": "ok",
    "new": [],
    "latest": [],
    "total": 1501,
-   "last_success_at": "2026-11-16T13:06:44+00:00"
+   "last_success_at": "2026-11-17T13:03:26+00:00"
   },
   {
    "id": "chassidut_org",
@@ -152,12 +152,12 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-16T13:06:45+00:00",
+   "checked_at": "2026-11-17T13:03:27+00:00",
    "status": "ok",
    "new": [],
    "latest": [],
    "total": 4,
-   "last_success_at": "2026-11-16T13:06:45+00:00"
+   "last_success_at": "2026-11-17T13:03:27+00:00"
   },
   {
    "id": "biurim",
@@ -171,10 +171,27 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-16T13:06:46+00:00",
+   "checked_at": "2026-11-17T13:03:28+00:00",
    "status": "ok",
-   "new": [],
+   "new": [
+    {
+     "id": "https://biurim.co.il/?p=2294",
+     "title": "פדה בשלום נפשי גו' ה׳תשכ\"ב",
+     "url": "https://biurim.co.il/podo-besholom-5722/",
+     "date": "Mon, 16 Nov 2026 18:50:13 +0000",
+     "blurb": "הפוסט פדה בשלום נפשי גו' ה׳תשכ\"ב הופיע לראשונה ב- ביאורים במאמרי רבינו .",
+     "first_seen": "2026-11-17T13:03:28+00:00"
+    }
+   ],
    "latest": [
+    {
+     "id": "https://biurim.co.il/?p=2294",
+     "title": "פדה בשלום נפשי גו' ה׳תשכ\"ב",
+     "url": "https://biurim.co.il/podo-besholom-5722/",
+     "date": "Mon, 16 Nov 2026 18:50:13 +0000",
+     "blurb": "הפוסט פדה בשלום נפשי גו' ה׳תשכ\"ב הופיע לראשונה ב- ביאורים במאמרי רבינו .",
+     "first_seen": "2026-11-17T13:03:28+00:00"
+    },
     {
      "id": "https://biurim.co.il/?p=2271",
      "title": "ציון במשפט תפדה גו' ה׳תשמ\"א",
@@ -217,7 +234,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-16T13:06:46+00:00"
+   "last_success_at": "2026-11-17T13:03:28+00:00"
   },
   {
    "id": "hm_monsey",
@@ -231,7 +248,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-16T13:06:48+00:00",
+   "checked_at": "2026-11-17T13:03:30+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -317,7 +334,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-16T13:06:48+00:00"
+   "last_success_at": "2026-11-17T13:03:30+00:00"
   },
   {
    "id": "hiskashrus",
@@ -331,7 +348,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-16T13:06:50+00:00",
+   "checked_at": "2026-11-17T13:03:32+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -407,7 +424,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-16T13:06:50+00:00"
+   "last_success_at": "2026-11-17T13:03:32+00:00"
   },
   {
    "id": "lichyot_chassidus",
@@ -421,7 +438,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-16T13:06:51+00:00",
+   "checked_at": "2026-11-17T13:03:33+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -579,7 +596,7 @@
     }
    ],
    "total": 1000,
-   "last_success_at": "2026-11-16T13:06:51+00:00"
+   "last_success_at": "2026-11-17T13:03:33+00:00"
   },
   {
    "id": "chabadzoom",
@@ -593,7 +610,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-16T13:06:54+00:00",
+   "checked_at": "2026-11-17T13:03:36+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -718,7 +735,7 @@
     }
    ],
    "total": 563,
-   "last_success_at": "2026-11-16T13:06:54+00:00"
+   "last_success_at": "2026-11-17T13:03:36+00:00"
   },
   {
    "id": "kovtzimdrive",
@@ -732,7 +749,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-16T13:06:57+00:00",
+   "checked_at": "2026-11-17T13:03:38+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -745,7 +762,7 @@
     }
    ],
    "total": 1,
-   "last_success_at": "2026-11-16T13:06:57+00:00"
+   "last_success_at": "2026-11-17T13:03:38+00:00"
   },
   {
    "id": "avita",
@@ -759,7 +776,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-16T13:06:59+00:00",
+   "checked_at": "2026-11-17T13:03:40+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -777,7 +794,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-16T13:06:59+00:00",
+   "checked_at": "2026-11-17T13:03:40+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -799,7 +816,7 @@
     }
    ],
    "total": 2,
-   "last_success_at": "2026-11-16T13:06:59+00:00"
+   "last_success_at": "2026-11-17T13:03:40+00:00"
   },
   {
    "id": "dvarmalchus770",
@@ -813,7 +830,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-16T13:07:01+00:00",
+   "checked_at": "2026-11-17T13:03:43+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -947,7 +964,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-16T13:07:01+00:00"
+   "last_success_at": "2026-11-17T13:03:43+00:00"
   },
   {
    "id": "soulwords",
@@ -961,7 +978,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-16T13:07:02+00:00",
+   "checked_at": "2026-11-17T13:03:44+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1031,7 +1048,7 @@
     }
    ],
    "total": 0,
-   "last_success_at": "2026-11-16T13:07:02+00:00"
+   "last_success_at": "2026-11-17T13:03:44+00:00"
   },
   {
    "id": "sie_weekly",
@@ -1045,7 +1062,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-16T13:07:03+00:00",
+   "checked_at": "2026-11-17T13:03:45+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1121,7 +1138,7 @@
     }
    ],
    "total": 118,
-   "last_success_at": "2026-11-16T13:07:03+00:00"
+   "last_success_at": "2026-11-17T13:03:45+00:00"
   },
   {
    "id": "pls",
@@ -1135,7 +1152,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-16T13:07:05+00:00",
+   "checked_at": "2026-11-17T13:03:47+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1285,7 +1302,7 @@
     }
    ],
    "total": 200,
-   "last_success_at": "2026-11-16T13:07:05+00:00"
+   "last_success_at": "2026-11-17T13:03:47+00:00"
   },
   {
    "id": "chayenu_ls",
@@ -1299,10 +1316,25 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-16T13:07:07+00:00",
+   "checked_at": "2026-11-17T13:03:50+00:00",
    "status": "ok",
-   "new": [],
+   "new": [
+    {
+     "id": "content:da39a3ee5e6b4b0d",
+     "title": "עדכון בתוכן הדף",
+     "url": "https://chayenu.org/chayenu-section/likkutei-sichos",
+     "date": "",
+     "first_seen": "2026-11-17T13:03:50+00:00"
+    }
+   ],
    "latest": [
+    {
+     "id": "content:da39a3ee5e6b4b0d",
+     "title": "עדכון בתוכן הדף",
+     "url": "https://chayenu.org/chayenu-section/likkutei-sichos",
+     "date": "",
+     "first_seen": "2026-11-17T13:03:50+00:00"
+    },
     {
      "id": "content:033047088813eed5",
      "title": "עדכון בתוכן הדף",
@@ -1325,8 +1357,8 @@
      "first_seen": "2026-10-18T04:51:52+00:00"
     }
    ],
-   "total": 2,
-   "last_success_at": "2026-11-16T13:07:07+00:00"
+   "total": 1,
+   "last_success_at": "2026-11-17T13:03:50+00:00"
   },
   {
    "id": "weekly_sicha",
@@ -1340,7 +1372,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-16T13:07:08+00:00",
+   "checked_at": "2026-11-17T13:03:50+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1348,7 +1380,7 @@
      "id": "https://theweeklysicha.org/episode/tws-toldos-87",
      "title": "tws toldos 87",
      "url": "https://theweeklysicha.org/episode/tws-toldos-87",
-     "date": "2026-11-16T03:00:23.904Z",
+     "date": "2026-11-16T17:00:33.815Z",
      "first_seen": "2026-11-13T12:11:10+00:00"
     },
     {
@@ -1409,7 +1441,7 @@
     }
    ],
    "total": 120,
-   "last_success_at": "2026-11-16T13:07:08+00:00"
+   "last_success_at": "2026-11-17T13:03:50+00:00"
   },
   {
    "id": "theyeshiva",
@@ -1423,16 +1455,33 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-16T13:07:10+00:00",
+   "checked_at": "2026-11-17T13:03:51+00:00",
    "status": "ok",
-   "new": [],
+   "new": [
+    {
+     "id": "https://www.theyeshiva.net/item/10030",
+     "title": "Why Does Your Husband Turn Into a Two-Year-Old? - Monday: Maamar Yafeh Sha'ah Achas #4",
+     "url": "https://www.theyeshiva.net/item/10030",
+     "date": "Mon, 16 Nov 2026 08:00:00 -0500",
+     "blurb": "Upgrading to a Judaism Beyond Right and Wrong: Are You Living on Real or Fake Energy? This Chabad Chassidic discourse is the ultimate manual for healing trauma, addiction, and emotional pain. This is the fourth of a series of classes on the Maamar (discourse) Yafeh Sha'ah Achas (מאמר יפה שעה אחת) by the Miteler Rebbe, published in Maamarei Admur Haemtzarei (מאמרי אדמו\"ר האמצעי קונטריסים). The class was presented by Rabbi YY Jacobson on Monday, 6 Kislev, 5787, November 16, 2026. View Source Sheets: https://portal.theyeshiva.net/api/source-sheets/10030",
+     "first_seen": "2026-11-17T13:03:51+00:00"
+    }
+   ],
    "latest": [
+    {
+     "id": "https://www.theyeshiva.net/item/10030",
+     "title": "Why Does Your Husband Turn Into a Two-Year-Old? - Monday: Maamar Yafeh Sha'ah Achas #4",
+     "url": "https://www.theyeshiva.net/item/10030",
+     "date": "Mon, 16 Nov 2026 08:00:00 -0500",
+     "blurb": "Upgrading to a Judaism Beyond Right and Wrong: Are You Living on Real or Fake Energy? This Chabad Chassidic discourse is the ultimate manual for healing trauma, addiction, and emotional pain. This is the fourth of a series of classes on the Maamar (discourse) Yafeh Sha'ah Achas (מאמר יפה שעה אחת) by the Miteler Rebbe, published in Maamarei Admur Haemtzarei (מאמרי אדמו\"ר האמצעי קונטריסים). The class was presented by Rabbi YY Jacobson on Monday, 6 Kislev, 5787, November 16, 2026. View Source Sheets: https://portal.theyeshiva.net/api/source-sheets/10030",
+     "first_seen": "2026-11-17T13:03:51+00:00"
+    },
     {
      "id": "https://www.theyeshiva.net/item/10028",
      "title": "The Miteler Rebbe Explains Your Intimacy, Money, and Food Addictions - Maamar Yafeh Sha'ah Achas #3",
      "url": "https://www.theyeshiva.net/item/10028",
      "date": "Thu, 12 Nov 2026 08:00:00 -0500",
-     "blurb": "You Can't Just Tell an Addict to Stop. You're Asking Them to Die. This Chabad Chassidic discourse is the ultimate manual for healing trauma, addiction, and emotional pain. This is the third of a series of classes on the Maamar (discourse) Yafeh Sha'ah Achas (מאמר יפה שעה אחת) by the Miteler Rebbe, published in Maamarei Admur Haemtzarei (מאמרי אדמו\"ר האמצעי קונטריסים). The class was presented by Rabbi YY Jacobson on Thursday, 2 Kislev, 5787, November 12, 2026. Why would an intelligent, decent, loving person risk destroying their marriage, family, reputation, finances, and everything they cherish for a few moments of pleasure? Why can food, money, sexuality, or other compulsive behaviors become so overwhelmingly powerful that even the most devastating consequences cannot stop us? In this extraordinary Chassidus class, the Mitteler Rebbe takes us beneath the surface of addiction and exposes its deepest psychological and spiritual roots. The real issue is not simply the food, the money, or the sexual gratification. It is that somewhere along the journey of life, we have learned to associate certain experiences, substances, behaviors, or relationships with our very sense of being alive. They have become our oxygen, our emotional ventilator, our source of vitality. Without them, we feel as though we are suffocating. Telling someone to simply abandon the addiction may feel to that person like demanding that they pull the plug on their own life-support system. What appears to outside",
+     "blurb": "You Can't Just Tell an Addict to Stop. You're Asking Them to Die This Chabad Chassidic discourse is the ultimate manual for healing trauma, addiction, and emotional pain. This is the third of a series of classes on the Maamar (discourse) Yafeh Sha'ah Achas (מאמר יפה שעה אחת) by the Miteler Rebbe, published in Maamarei Admur Haemtzarei (מאמרי אדמו\"ר האמצעי קונטריסים). The class was presented by Rabbi YY Jacobson on Thursday, 2 Kislev, 5787, November 12, 2026. Why would an intelligent, decent, loving person risk destroying their marriage, family, reputation, finances, and everything they cherish for a few moments of pleasure? Why can food, money, sexuality, or other compulsive behaviors become so overwhelmingly powerful that even the most devastating consequences cannot stop us? In this extraordinary Chassidus class, the Mitteler Rebbe takes us beneath the surface of addiction and exposes its deepest psychological and spiritual roots. The real issue is not simply the food, the money, or the sexual gratification. It is that somewhere along the journey of life, we have learned to associate certain experiences, substances, behaviors, or relationships with our very sense of being alive. They have become our oxygen, our emotional ventilator, our source of vitality. Without them, we feel as though we are suffocating. Telling someone to simply abandon the addiction may feel to that person like demanding that they pull the plug on their own life-support system. What appears to outsider",
      "first_seen": "2026-11-13T12:11:12+00:00"
     },
     {
@@ -1572,8 +1621,8 @@
      "first_seen": "2026-10-20T07:59:51+00:00"
     }
    ],
-   "total": 1549,
-   "last_success_at": "2026-11-16T13:07:10+00:00"
+   "total": 1550,
+   "last_success_at": "2026-11-17T13:03:51+00:00"
   },
   {
    "id": "chassidus_applied",
@@ -1587,16 +1636,33 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-16T13:07:12+00:00",
+   "checked_at": "2026-11-17T13:03:53+00:00",
    "status": "ok",
-   "new": [],
+   "new": [
+    {
+     "id": "yt:video:xiu5FWoymTc",
+     "title": "Samach Vav Part 248:",
+     "url": "https://www.youtube.com/watch?v=xiu5FWoymTc",
+     "date": "2026-11-17T03:50:18+00:00",
+     "blurb": "Samach Vav p. 200-201: In prayer one can feel this bittul, but it comes from the person's own effort due to his inherent kabolas ol rooted in Atzmus. That is why he can compel himself to do Torah and mitzvos even when he has no will or desire. In truth, also yegiah in contemplation and love and reverence reaches s deeper place in the soul xxx",
+     "first_seen": "2026-11-17T13:03:53+00:00"
+    }
+   ],
    "latest": [
     {
+     "id": "yt:video:xiu5FWoymTc",
+     "title": "Samach Vav Part 248:",
+     "url": "https://www.youtube.com/watch?v=xiu5FWoymTc",
+     "date": "2026-11-17T03:50:18+00:00",
+     "blurb": "Samach Vav p. 200-201: In prayer one can feel this bittul, but it comes from the person's own effort due to his inherent kabolas ol rooted in Atzmus. That is why he can compel himself to do Torah and mitzvos even when he has no will or desire. In truth, also yegiah in contemplation and love and reverence reaches s deeper place in the soul xxx",
+     "first_seen": "2026-11-17T13:03:53+00:00"
+    },
+    {
      "id": "yt:video:RL4XSiUMY-s",
-     "title": "Samach Vav",
+     "title": "Samach Vav Part 247:",
      "url": "https://www.youtube.com/watch?v=RL4XSiUMY-s",
      "date": "2026-11-16T04:48:39+00:00",
-     "blurb": "",
+     "blurb": "Samach Vav p. 200: This inherent kabolas ol and shuv is what empowers the soul to strengthen itself to do Torah and mitzos below. Not to quench the thirst of the ratzo on prayer, but as a result of his inherent modesty and bittul of mah and ayin.",
      "first_seen": "2026-11-16T12:43:55+00:00"
     },
     {
@@ -1604,7 +1670,7 @@
      "title": "Ep. 613: What Lessons Can We Learn From the Mitteler Rebbe's Liberation 200 Years Ago?",
      "url": "https://www.youtube.com/watch?v=3lpRyThVBq8",
      "date": "2026-11-16T01:00:05+00:00",
-     "blurb": "",
+     "blurb": "Rabbi Jacobson will discuss the following topics: What should our focus be at this time of year? 02:19 • What does it mean that Kislev is the month of Geulah? 02:26 • How does that practically apply to our daily lives? 02:26 Tes-Yud Kislev: 200 years • What lessons can we learn from the Mitteler Rebbe? 08:30 • What is the story of the Mitteler Rebbe’s liberation on Yud Kislev, 200 years ago? 21:50 Vayeitzei • What lessons do we learn from living with the times, with this week’s Torah parsha? 25:25 • How do we apply Jacob's journey from Be'er Sheva to Charan to our own lives today? 28:38 • What is its connection to the Mitteler Rebbe? • How does Chassidus explain the spiritual root of Lavan and Jacob tending his sheep? 31:10 • What is the deeper meaning of \"and Lavan rose in the morning\"? 35:00 • Was Lavan’s deception of Jacob by switching Rachel with Leah retribution for Jacob deceiving his father in receiving Esau's blessings? 39:06 • What is the spiritual difference between Leah and Rachel? 40:58 • What did G-d's promise to Jacob add to the promise given to Abraham? 41:14 Current Events • Is it halachically permissible to vote for candidates who support terrorists? 44:20 • Should Jews be fleeing the United States? 46:02 • How should we respond to antisemitic protests, such as the boycott of Jewish stores in Philadelphia? 55:10 Should I delay dating in order to have more time to learn Torah? 59:12",
      "first_seen": "2026-11-16T12:43:55+00:00"
     },
     {
@@ -1617,10 +1683,10 @@
     },
     {
      "id": "yt:video:HfAwL7uY1Q8",
-     "title": "Samach Vav",
+     "title": "Samach Vav Part 246: Shuv is rooted in Atzmus, whose core desire is to have a dirah b'tachtonim",
      "url": "https://www.youtube.com/watch?v=HfAwL7uY1Q8",
      "date": "2026-11-14T03:56:19+00:00",
-     "blurb": "Shuv in Ohr due to Atzmus. Shuv in Atzmus -- seeded and rooted in Atzmus",
+     "blurb": "Samach Vav p. 199-200: Shuv also applies to ohr, not due to ohr itself, whose natural inclination is ratzo, the opposite of shuv, but due to Atzmus, whose will it is that the light be revealed, and is thus compelled (be'bechinas hechrech) to descend below. The compelling force is the root of the container, which is above the light; the beginning is wedged in the end, causing the ohr to want and desire to manifest in the container to receive its ohr atzmi. Shuv also applies to Atzmus, causing ha'mshachas ha'Atzmus. Shuv is seeded and rooted in Atzmus, who created existence not \"for waste (tohu), but to be inhabited\"; this is His Ratzon Ha'Atzmi (core desire), not for any cause or reason, but only because of the Etzem who desired to have a dirah b'tachtonim, a desire which in itself has no cause and reason why He so desired. According to the above, we can perhaps apply the same idea to souls: The ratzo in a soul is driven by reason and cause -- through an awakening from above -- and this ratzo is in the level of ohros and giluiim in the soul. Shuv, however, is embedded in the core soul m'koach atzmo from its root in Atzmus. Since shuv is seeded and rooted in Atzmus, so too is shuv inherent in the core soul's essence rooted in Atzmus. This is the bittul of the soul's core to not be in a state of dveikus and expiration (the ratzo to be absorbed in the source), but to be in a state of shuv below through the performance of Torah and mitzvos.",
      "first_seen": "2026-11-14T11:27:23+00:00"
     },
     {
@@ -1913,7 +1979,7 @@
     }
    ],
    "total": 15,
-   "last_success_at": "2026-11-16T13:07:12+00:00"
+   "last_success_at": "2026-11-17T13:03:53+00:00"
   },
   {
    "id": "neirot",
@@ -1927,7 +1993,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-16T13:07:12+00:00",
+   "checked_at": "2026-11-17T13:03:54+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1981,7 +2047,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-16T13:07:12+00:00"
+   "last_success_at": "2026-11-17T13:03:54+00:00"
   },
   {
    "id": "chassidus_explained",
@@ -1995,7 +2061,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-16T13:07:14+00:00",
+   "checked_at": "2026-11-17T13:03:56+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2065,7 +2131,7 @@
     }
    ],
    "total": 137,
-   "last_success_at": "2026-11-16T13:07:14+00:00"
+   "last_success_at": "2026-11-17T13:03:56+00:00"
   },
   {
    "id": "melukat",
@@ -2079,7 +2145,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-16T13:07:16+00:00",
+   "checked_at": "2026-11-17T13:03:57+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2141,7 +2207,7 @@
     }
    ],
    "total": 168,
-   "last_success_at": "2026-11-16T13:07:16+00:00"
+   "last_success_at": "2026-11-17T13:03:57+00:00"
   },
   {
    "id": "daily_maamar",
@@ -2155,10 +2221,27 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-16T13:07:17+00:00",
+   "checked_at": "2026-11-17T13:03:58+00:00",
    "status": "ok",
-   "new": [],
+   "new": [
+    {
+     "id": "8ce1bd8c-ff0c-4071-9f78-80e433a69940",
+     "title": "Motzaei Sh”p Vayeitze 9/Ohr l’yud Kislev 5738 (B’Chedroi), Maamorim Melukatim Vol. 2– Episode 1",
+     "url": "https://share.transistor.fm/s/f663228e",
+     "date": "Mon, 16 Nov 2026 09:30:15 -0500",
+     "blurb": "This episode covers from Chapter 1 through Chapter 3. The 2 concepts of Vayetze.",
+     "first_seen": "2026-11-17T13:03:58+00:00"
+    }
+   ],
    "latest": [
+    {
+     "id": "8ce1bd8c-ff0c-4071-9f78-80e433a69940",
+     "title": "Motzaei Sh”p Vayeitze 9/Ohr l’yud Kislev 5738 (B’Chedroi), Maamorim Melukatim Vol. 2– Episode 1",
+     "url": "https://share.transistor.fm/s/f663228e",
+     "date": "Mon, 16 Nov 2026 09:30:15 -0500",
+     "blurb": "This episode covers from Chapter 1 through Chapter 3. The 2 concepts of Vayetze.",
+     "first_seen": "2026-11-17T13:03:58+00:00"
+    },
     {
      "id": "668e5fa8-5378-421c-ac4d-5cf6d91e6de0",
      "title": "Shabbos Parshas Vayishlach 13 Kislev 5727, Toras Menachem, Vol. 48 – Episode 4",
@@ -2400,8 +2483,8 @@
      "first_seen": "2026-10-18T04:52:03+00:00"
     }
    ],
-   "total": 365,
-   "last_success_at": "2026-11-16T13:07:17+00:00"
+   "total": 366,
+   "last_success_at": "2026-11-17T13:03:58+00:00"
   },
   {
    "id": "wellsprings",
@@ -2415,7 +2498,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-16T13:07:18+00:00",
+   "checked_at": "2026-11-17T13:04:00+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2461,7 +2544,7 @@
     }
    ],
    "total": 125,
-   "last_success_at": "2026-11-16T13:07:18+00:00"
+   "last_success_at": "2026-11-17T13:04:00+00:00"
   },
   {
    "id": "daily_sicha",
@@ -2475,10 +2558,27 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-16T13:07:19+00:00",
+   "checked_at": "2026-11-17T13:04:01+00:00",
    "status": "ok",
-   "new": [],
+   "new": [
+    {
+     "id": "2026.11.17",
+     "title": "יום ג' פ' ויצא, ז' כסלו, ה'תשפ\"ז",
+     "url": "",
+     "date": "Tue, 17 Nov 2026 12:00:00 GMT",
+     "blurb": "התוכן בהפצת המעיינות חוצה ישנם כו\"כ דרגות, ובמיוחד כאשר מדפיסים ומפיצים גם את המאמרים הארוכים בכמות ובאיכות. זה כו\"כ שנים שהענין דלקמן אינו נותן לי מנוח: בין ה\"המשכים\" המפורסמים יש את \" המשך תער\"ב \" שכ\"ק אדמו\"ר (מהורש\"ב) נ\"ע \" האָט זיך אין אים געקאָכט \", ויש בו \" גדולות ונפלאות \" גם ביחס ל\"המשכים\" אחרים. צילום מהמשך זה נמצא ברשותי כבר כו\"כ שנים [פעם הפקיד כ\"ק מו\"ח אדמו\"ר בידי את הכתבים שלו וביניהם \"המשך\" זה. וכשראיתיו – עשיתי מיד צילום מזה. כיון שהוא ידע מלכתחילה שמן הסתם אעתיקם – הי' זה באופן ש\"אדעתא דהכי הפקידו \", שאז \" מותר . . להעתיק ממנו\"] – ואעפ\"כ עדיין לא נתפרסם בדפוס ?! ולאידך, מצד כמה טעמים יראתי לקבל ע\"ע האחריות למסרו לדפוס. עד שעלה ברעיוני להטיל (\"אַריינוואַרפן\") ענין זה בין החסידים – שישתתפו עמדי בנשיאת האחריות על הדפסת והפצת ההמשך, באופן שתהי' יד הכל שווה בזה. ולכן הצעתי ובקשתי שכל מי שמוכן ורוצה להשתתף בזה – הנה כדי שיהי' ברור שדעת הרבים הוא שהגיע הזמן לזה – יתן בהקדם מממונו 1$ בלבד (או שוויו) עבורו ועבור כ\"א מבני ביתו. [המשך יבוא] משיחת מוצש\"ק פ' וישלח, י\"ט כסלו ה'תשל\"ז ל\"הנחה פרטית\" או התרגום ללה\"ק של השיחה: https://thedailysicha.com/?date=17-11-2026 Synopsis One of the well-known hemsheichim is Hemshech Ayin Beis , which the Rebbe Rashab deeply invested himself in and which contains wondrous teachings . For many years there has been photographic copy of it in my possession. (My father-in-law the Rebbe once entrusted his manuscripts to me, including this hemshech , and I immediately made a copy of it; since he knew that I would make a copy, it is a case where ",
+     "first_seen": "2026-11-17T13:04:01+00:00"
+    }
+   ],
    "latest": [
+    {
+     "id": "2026.11.17",
+     "title": "יום ג' פ' ויצא, ז' כסלו, ה'תשפ\"ז",
+     "url": "",
+     "date": "Tue, 17 Nov 2026 12:00:00 GMT",
+     "blurb": "התוכן בהפצת המעיינות חוצה ישנם כו\"כ דרגות, ובמיוחד כאשר מדפיסים ומפיצים גם את המאמרים הארוכים בכמות ובאיכות. זה כו\"כ שנים שהענין דלקמן אינו נותן לי מנוח: בין ה\"המשכים\" המפורסמים יש את \" המשך תער\"ב \" שכ\"ק אדמו\"ר (מהורש\"ב) נ\"ע \" האָט זיך אין אים געקאָכט \", ויש בו \" גדולות ונפלאות \" גם ביחס ל\"המשכים\" אחרים. צילום מהמשך זה נמצא ברשותי כבר כו\"כ שנים [פעם הפקיד כ\"ק מו\"ח אדמו\"ר בידי את הכתבים שלו וביניהם \"המשך\" זה. וכשראיתיו – עשיתי מיד צילום מזה. כיון שהוא ידע מלכתחילה שמן הסתם אעתיקם – הי' זה באופן ש\"אדעתא דהכי הפקידו \", שאז \" מותר . . להעתיק ממנו\"] – ואעפ\"כ עדיין לא נתפרסם בדפוס ?! ולאידך, מצד כמה טעמים יראתי לקבל ע\"ע האחריות למסרו לדפוס. עד שעלה ברעיוני להטיל (\"אַריינוואַרפן\") ענין זה בין החסידים – שישתתפו עמדי בנשיאת האחריות על הדפסת והפצת ההמשך, באופן שתהי' יד הכל שווה בזה. ולכן הצעתי ובקשתי שכל מי שמוכן ורוצה להשתתף בזה – הנה כדי שיהי' ברור שדעת הרבים הוא שהגיע הזמן לזה – יתן בהקדם מממונו 1$ בלבד (או שוויו) עבורו ועבור כ\"א מבני ביתו. [המשך יבוא] משיחת מוצש\"ק פ' וישלח, י\"ט כסלו ה'תשל\"ז ל\"הנחה פרטית\" או התרגום ללה\"ק של השיחה: https://thedailysicha.com/?date=17-11-2026 Synopsis One of the well-known hemsheichim is Hemshech Ayin Beis , which the Rebbe Rashab deeply invested himself in and which contains wondrous teachings . For many years there has been photographic copy of it in my possession. (My father-in-law the Rebbe once entrusted his manuscripts to me, including this hemshech , and I immediately made a copy of it; since he knew that I would make a copy, it is a case where ",
+     "first_seen": "2026-11-17T13:04:01+00:00"
+    },
     {
      "id": "2026.11.16",
      "title": "יום ב' פ' ויצא, ו' כסלו, ה'תשפ\"ז",
@@ -2720,8 +2820,8 @@
      "first_seen": "2026-10-18T04:52:06+00:00"
     }
    ],
-   "total": 1429,
-   "last_success_at": "2026-11-16T13:07:19+00:00"
+   "total": 1430,
+   "last_success_at": "2026-11-17T13:04:01+00:00"
   },
   {
    "id": "learnchassidus",
@@ -2735,7 +2835,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-16T13:07:24+00:00",
+   "checked_at": "2026-11-17T13:04:05+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2747,8 +2847,8 @@
      "first_seen": "2026-10-24T08:52:39+00:00"
     }
    ],
-   "total": 5,
-   "last_success_at": "2026-11-16T13:07:24+00:00"
+   "total": 1,
+   "last_success_at": "2026-11-17T13:04:05+00:00"
   },
   {
    "id": "simplychassidus",
@@ -2762,7 +2862,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-16T13:07:24+00:00",
+   "checked_at": "2026-11-17T13:04:05+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2789,7 +2889,7 @@
     }
    ],
    "total": 4,
-   "last_success_at": "2026-11-16T13:07:24+00:00"
+   "last_success_at": "2026-11-17T13:04:05+00:00"
   },
   {
    "id": "alonei_chabad",
@@ -2802,7 +2902,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-16T13:07:26+00:00",
+   "checked_at": "2026-11-17T13:04:07+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -2819,7 +2919,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-16T13:07:26+00:00",
+   "checked_at": "2026-11-17T13:04:07+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -2836,7 +2936,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-16T13:07:26+00:00",
+   "checked_at": "2026-11-17T13:04:07+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2863,7 +2963,7 @@
     }
    ],
    "total": 303,
-   "last_success_at": "2026-11-16T13:07:26+00:00"
+   "last_success_at": "2026-11-17T13:04:07+00:00"
   },
   {
    "id": "lchaim",
@@ -2876,7 +2976,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-16T13:07:27+00:00",
+   "checked_at": "2026-11-17T13:04:07+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2945,7 +3045,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-16T13:07:27+00:00"
+   "last_success_at": "2026-11-17T13:04:07+00:00"
   },
   {
    "id": "one_point",
@@ -2958,7 +3058,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-16T13:07:28+00:00",
+   "checked_at": "2026-11-17T13:04:08+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2999,7 +3099,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-16T13:07:28+00:00"
+   "last_success_at": "2026-11-17T13:04:08+00:00"
   },
   {
    "id": "derher",
@@ -3012,7 +3112,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-16T13:07:29+00:00",
+   "checked_at": "2026-11-17T13:04:10+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -3029,7 +3129,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-16T13:07:29+00:00",
+   "checked_at": "2026-11-17T13:04:10+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -3046,7 +3146,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-16T13:07:29+00:00",
+   "checked_at": "2026-11-17T13:04:10+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -3122,7 +3222,7 @@
     }
    ],
    "total": 1,
-   "last_success_at": "2026-11-16T13:07:29+00:00"
+   "last_success_at": "2026-11-17T13:04:10+00:00"
   },
   {
    "id": "maynotecha_inst",
@@ -3135,7 +3235,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-16T13:07:31+00:00",
+   "checked_at": "2026-11-17T13:04:10+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -3152,7 +3252,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-16T13:07:31+00:00",
+   "checked_at": "2026-11-17T13:04:10+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -3190,7 +3290,7 @@
     }
    ],
    "total": 0,
-   "last_success_at": "2026-11-16T13:07:31+00:00"
+   "last_success_at": "2026-11-17T13:04:10+00:00"
   },
   {
    "id": "anash",
@@ -3203,13 +3303,62 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-16T13:07:32+00:00",
+   "checked_at": "2026-11-17T13:04:11+00:00",
    "status": "ok",
-   "new": [],
+   "new": [
+    {
+     "id": "https://anash.org/?p=1135690",
+     "title": "Husband of Moroccan Prime Minister Visits the Rebbe’s Ohel",
+     "url": "https://anash.org/husband-of-moroccan-prime-minister-visits-the-rebbes-ohel/",
+     "date": "Mon, 16 Nov 2026 20:05:59 +0000",
+     "blurb": "A special visit took place at the Rebbe’s Ohel in New York, as Sidi Nabil Baraka , husband of Moroccan Prime Minister Fatima Zahra El Mansouri , arrived to pray for world peace and strengthen ties between faith communities.",
+     "first_seen": "2026-11-17T13:04:11+00:00"
+    },
+    {
+     "id": "https://anash.org/?p=1135376",
+     "title": "Alter Rebbe’s Reason for Rabbeinu Tam’s Discovered in Moscow",
+     "url": "https://anash.org/alter-rebbes-reason-for-rabbeinu-tam-found-in-sefer-margin/",
+     "date": "Mon, 16 Nov 2026 17:36:00 +0000",
+     "blurb": "A newly discovered explanation of the Alter Rebbe on the arrangement of Rabbeinu Tam ’s tefillin, recorded by his brother, the Maharil , was uncovered on the margins of a sefer from the Rebbeim's library held captive in Moscow.",
+     "first_seen": "2026-11-17T13:04:11+00:00"
+    },
+    {
+     "id": "https://anash.org/?p=1135533",
+     "title": "Global Farbrengen to Prepare for 40 Years of Didan Notzach",
+     "url": "https://anash.org/global-farbrengen-to-prepare-for-40-years-of-didan-notzach/",
+     "date": "Mon, 16 Nov 2026 17:23:11 +0000",
+     "blurb": "As we mark 40 years since the historic victory of Hei Teves 5747, a global farbrengen will be held Tuesday evening, bringing together Chassidim from across the globe for an evening of hisorerus and strengthening hiskashrus to the Rebbe.",
+     "first_seen": "2026-11-17T13:04:11+00:00"
+    }
+   ],
    "latest": [
     {
+     "id": "https://anash.org/?p=1135690",
+     "title": "Husband of Moroccan Prime Minister Visits the Rebbe’s Ohel",
+     "url": "https://anash.org/husband-of-moroccan-prime-minister-visits-the-rebbes-ohel/",
+     "date": "Mon, 16 Nov 2026 20:05:59 +0000",
+     "blurb": "A special visit took place at the Rebbe’s Ohel in New York, as Sidi Nabil Baraka , husband of Moroccan Prime Minister Fatima Zahra El Mansouri , arrived to pray for world peace and strengthen ties between faith communities.",
+     "first_seen": "2026-11-17T13:04:11+00:00"
+    },
+    {
+     "id": "https://anash.org/?p=1135376",
+     "title": "Alter Rebbe’s Reason for Rabbeinu Tam’s Discovered in Moscow",
+     "url": "https://anash.org/alter-rebbes-reason-for-rabbeinu-tam-found-in-sefer-margin/",
+     "date": "Mon, 16 Nov 2026 17:36:00 +0000",
+     "blurb": "A newly discovered explanation of the Alter Rebbe on the arrangement of Rabbeinu Tam ’s tefillin, recorded by his brother, the Maharil , was uncovered on the margins of a sefer from the Rebbeim's library held captive in Moscow.",
+     "first_seen": "2026-11-17T13:04:11+00:00"
+    },
+    {
+     "id": "https://anash.org/?p=1135533",
+     "title": "Global Farbrengen to Prepare for 40 Years of Didan Notzach",
+     "url": "https://anash.org/global-farbrengen-to-prepare-for-40-years-of-didan-notzach/",
+     "date": "Mon, 16 Nov 2026 17:23:11 +0000",
+     "blurb": "As we mark 40 years since the historic victory of Hei Teves 5747, a global farbrengen will be held Tuesday evening, bringing together Chassidim from across the globe for an evening of hisorerus and strengthening hiskashrus to the Rebbe.",
+     "first_seen": "2026-11-17T13:04:11+00:00"
+    },
+    {
      "id": "https://anash.org/?p=1134702",
-     "title": "The Teacher Who Needed Children and the Rebbe’s Promise",
+     "title": "The Rebbe’s Incredible Promise to a Teacher Who Needed Children",
      "url": "https://anash.org/the-teacher-who-needed-children-and-the-rebbes-promise/",
      "date": "Sun, 15 Nov 2026 17:22:00 +0000",
      "blurb": "When a non-Lubavitch teacher from Yerushalayim came to the Rebbe seeking a bracha for children, she never imagined that a teaching job at Beis Rivkah in New York would become the answer to her tefillos. \"When you care for the Rebbe's children, the Rebbe will care for yours,\" the Rebbe told her.",
@@ -3561,7 +3710,7 @@
     }
    ],
    "total": 6,
-   "last_success_at": "2026-11-16T13:07:32+00:00"
+   "last_success_at": "2026-11-17T13:04:11+00:00"
   },
   {
    "id": "collive",
@@ -3574,7 +3723,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-16T13:07:33+00:00",
+   "checked_at": "2026-11-17T13:04:12+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -3591,7 +3740,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-16T13:07:33+00:00",
+   "checked_at": "2026-11-17T13:04:12+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -3608,12 +3757,42 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-16T13:07:33+00:00",
+   "checked_at": "2026-11-17T13:04:12+00:00",
    "status": "ok",
-   "new": [],
-   "latest": [],
+   "new": [
+    {
+     "id": "https://www.hageula.com/news/press/28291.htm",
+     "title": "להורדה: הקובץ השבועי של \"דברי משיח\"",
+     "url": "https://www.hageula.com/news/press/28291.htm",
+     "date": "",
+     "first_seen": "2026-11-17T13:04:12+00:00"
+    },
+    {
+     "id": "https://www.hageula.com/news/press/28290.htm",
+     "title": "חדש! מאמרי ד\"ה \"ועינינו מאירות\" לכ\"ק אדמו\"ר האמצעי - להורדה",
+     "url": "https://www.hageula.com/news/press/28290.htm",
+     "date": "",
+     "first_seen": "2026-11-17T13:04:12+00:00"
+    }
+   ],
+   "latest": [
+    {
+     "id": "https://www.hageula.com/news/press/28291.htm",
+     "title": "להורדה: הקובץ השבועי של \"דברי משיח\"",
+     "url": "https://www.hageula.com/news/press/28291.htm",
+     "date": "",
+     "first_seen": "2026-11-17T13:04:12+00:00"
+    },
+    {
+     "id": "https://www.hageula.com/news/press/28290.htm",
+     "title": "חדש! מאמרי ד\"ה \"ועינינו מאירות\" לכ\"ק אדמו\"ר האמצעי - להורדה",
+     "url": "https://www.hageula.com/news/press/28290.htm",
+     "date": "",
+     "first_seen": "2026-11-17T13:04:12+00:00"
+    }
+   ],
    "total": 20,
-   "last_success_at": "2026-11-16T13:07:33+00:00"
+   "last_success_at": "2026-11-17T13:04:12+00:00"
   },
   {
    "id": "abc770",
@@ -3626,7 +3805,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-16T13:07:35+00:00",
+   "checked_at": "2026-11-17T13:04:14+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -3672,7 +3851,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-16T13:07:35+00:00"
+   "last_success_at": "2026-11-17T13:04:14+00:00"
   },
   {
    "id": "kehot",
@@ -3685,7 +3864,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-16T13:07:38+00:00",
+   "checked_at": "2026-11-17T13:04:17+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -4395,7 +4574,7 @@
     }
    ],
    "total": 197,
-   "last_success_at": "2026-11-16T13:07:38+00:00"
+   "last_success_at": "2026-11-17T13:04:17+00:00"
   }
  ],
  "browser_checks": {
