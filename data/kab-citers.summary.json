@@ -2,6 +2,14 @@
   "schema": 1,
   "generated": "2026-11-17",
   "timezone": "Asia/Jerusalem",
-  "n": 33088,
-  "bytes": 4876990
+  "n": 37429,
+  "bytes": 7811585,
+  "missing_unit": 18,
+  "empty_kab_uid": 6887,
+  "url_key": {
+    "col": 30271,
+    "cl:": 7083,
+    "empty": 18,
+    "http": 57
+  }
 }
