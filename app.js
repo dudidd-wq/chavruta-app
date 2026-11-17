@@ -5935,11 +5935,14 @@ function ftCrumbs(t, i, s) {
   return nav;
 }
 function ftCredit(s, id) {
-  const hb = /hebrewbooks\.org/.test(s.source || "") || (id && id >= 8e9 && id < 9e9) || (s.root && s.root >= 8e9 && s.root < 9e9);
+  const src = s.source || "";
+  const col = /col\.org/.test(src) || s.ocr || (id && id >= 9e9 && id < 1e10) || (s.root && s.root >= 9e9 && s.root < 1e10);
+  const hb = /hebrewbooks\.org/.test(src) || (id && id >= 8e9 && id < 9e9) || (s.root && s.root >= 8e9 && s.root < 9e9);
   let href = "https://www.chabadlibrary.org/books/" + (id || s.root), label = "העמוד בספריית חב״ד";
-  if (hb) {
-    href = /hebrewbooks\.org/.test(s.source || "") ? s.source : "https://hebrewbooks.org/";
-    if (id && id >= 8e9) {
+  if (col) { href = src || "https://col.org.il/indexes"; label = "המקור ב־COL (OCR)"; }
+  else if (hb) {
+    href = /hebrewbooks\.org/.test(src) ? src : "https://hebrewbooks.org/";
+    if (id && id >= 8e9 && id < 9e9) {
       const req = Math.floor((id - 8e9) / 1e4), pg = (id - 8e9) % 1e4;
       if (req && pg) href = "https://hebrewbooks.org/pdfpager.aspx?req=" + req + "&pgnum=" + pg;
     }
