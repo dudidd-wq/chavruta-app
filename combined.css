@@ -7,7 +7,8 @@
 /* ===== אסימונים ===== */
 :root {
   --f-head: "Frank Ruhl Libre", "David Libre", "Noto Serif Hebrew", "Times New Roman", serif;
-  --f-body: "Noto Serif Hebrew", "Frank Ruhl Libre", "David Libre", "Times New Roman", serif;
+  --text-font: "Noto Serif Hebrew", "Frank Ruhl Libre", "David Libre", "Times New Roman", serif;
+  --f-body: var(--text-font);
   --f-ui: "Assistant", "Segoe UI", "Arial Hebrew", Arial, sans-serif;
   --wrap: 1160px;          /* רוחב התוכן המרבי — זהה לכותרת, לתוכן ולפוטר */
   --col-gap: 24px;         /* gutter של רשת 12 העמודות */
