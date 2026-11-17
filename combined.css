@@ -122,13 +122,13 @@ html body #view:is(.home, .lib-home) :is(p, li) { text-align: start; text-align-
 @media (max-width: 720px) {
   .main.home .h-kicker { margin-bottom: .6rem; }
   .main.home .h-purpose { margin-top: .9rem; }
-  .main.home .h-search { margin-top: 1.25rem; }
+  .main.home .h-search { margin-top: 1rem; }
 }
 .main.home .h-kicker { display: flex; align-items: center; gap: .75rem; margin: 0 0 1rem; font: 600 .95rem/1.4 var(--f-ui); color: var(--accent); }
 .main.home .h-kicker::before { content: ""; width: 2rem; height: 0; border-top: 1px solid currentColor; flex: none; }
 .main.home .h-title { margin: 0; font: 700 clamp(2.6rem, 1.4rem + 3.6vw, 4.4rem)/1.12 var(--f-head); color: var(--ink); text-align: start; text-wrap: balance; }
 .main.home .h-purpose { margin: 1.25rem 0 0; max-width: 34rem; font: 400 clamp(1.05rem, 1rem + .3vw, 1.2rem)/1.8 var(--f-body); color: var(--ink-2); }
-.main.home .h-search { display: block; max-width: 40rem; margin: 2rem 0 0; padding: 0; border: 0; border-radius: 0; background: none; box-shadow: none; }
+.main.home .h-search { display: block; max-width: 40rem; margin: 1.15rem 0 0; padding: 0; border: 0; border-radius: 0; background: none; box-shadow: none; }
 .main.home .h-search:focus-within { box-shadow: none; }
 .h-search-l { display: block; margin: 0 0 .5rem; font: 600 .9rem/1.4 var(--f-ui); color: var(--ink-2); }
 .h-search-row { display: flex; align-items: stretch; min-height: 52px; border: 1px solid var(--rule); border-radius: var(--r-card); background: var(--card); overflow: hidden; }
@@ -344,3 +344,13 @@ html body #view:is(.home, .lib-home) :is(p, li) { text-align: start; text-align-
   .h-week { break-inside: avoid; margin-top: 1rem; }
   .h-after, .h-quick, .lib-filter, .lib-tabs { display: none !important; }
 }
+
+
+/* הסברים ארוכים מאחורי ״מידע״ — שורה אחת כשהוא סגור */
+.page-info { margin: .25rem 0 .85rem; max-width: 40rem; font: 400 .95rem/1.65 var(--f-body); color: var(--ink-2); }
+.page-info > summary { cursor: pointer; width: fit-content; font: 600 .85rem/1.4 var(--f-ui); color: var(--ink-2); }
+.page-info > summary:hover, .page-info > summary:focus-visible { color: var(--ink); }
+.page-info[open] { margin-bottom: 1.1rem; }
+.page-info p { margin: .55rem 0 0; }
+.page-info p + p { margin-top: .4rem; }
+.main.lib-home .lib-head .page-info { margin-top: .65rem; }
