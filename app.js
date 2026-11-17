@@ -4000,7 +4000,7 @@ const treeUrl = u => u.startsWith("cl:") ? "https://www.chabadlibrary.org/books/
 function treeSourceLink(label, url, info = {}) {
   const normalized = sourceURL(treeUrl(String(url || "")));
   // טקסט מלא בספרייה (fulltext.js): הכותרת פותחת את הקורא באתר, והמקור נשאר בקישור קטן לידה
-  const read = typeof ftHashFor === "function" ? ftHashFor(String(url || "")) : null;
+  const read = typeof ftHashFor === "function" ? (ftHashFor(String(info.text || "")) || ftHashFor(String(url || ""))) : null;
   if (read) return h("span", { class: "ft-pair" }, h("a", { href: read, class: "ft-in", title: "קריאת הטקסט המלא באתר" }, label), normalized ? sourceLink({ ...info, title: info.title || label, url: normalized.href }, icon("i-ext"), { class: "ft-src", title: "המקור", "aria-label": "המקור: " + label }) : null);
   return normalized ? sourceLink({ ...info, title: info.title || label, url: normalized.href }, label) : label;
 }
@@ -4234,7 +4234,7 @@ function treeTable(T, ids, showBook) {
       h("div", { class: "muted sm citing-list" }, ...recs.slice(0, 6).flatMap((r, j) => [j ? "; " : "", (r.work ? r.work + " · " : "") + (r.match || "")]))) : h("td", null, "");
     tb.append(h("tr", null,
       showBook ? h("td", null, treeDot(typeof booksAuthor === "function" ? booksAuthor(T,u[0]) : bk[0]), " ", h("a", { href: mkHash(["tree", "b", u[0]]) }, bk[1])) : null,
-      h("td", null, treeSourceLink(u[2] || "(ללא כותרת)", u[8], { author: T.rebbeim[bk[0]], book: bk[1], page: u[4] }), u[3] ? h("div", { class: "muted sm" }, u[3]) : null),
+      h("td", null, treeSourceLink(u[2] || "(ללא כותרת)", u[8], { author: T.rebbeim[bk[0]], book: bk[1], page: u[4], text: u[9] }), u[3] ? h("div", { class: "muted sm" }, u[3]) : null),
       h("td", null, T.genres[u[1]]), h("td", null, u[5]), h("td", null, u[4]), h("td", null, tags), citeCell));
   }
   return h("div", { class: "tbl-wrap" }, h("table", { class: "tree-tbl" },
@@ -5531,7 +5531,7 @@ async function topicTree(main, t, ctx) {
     for (const [i, vol, entry, sub, sect, page] of es) {
       const where = ["ספר הערכים", vol ? "כרך " + vol : "", "ערך " + entry + (sub ? " – " + sub : ""), sect ? "ס׳ " + sect : "", page ? "ע׳ " + page : ""].filter(Boolean).join(" · ");
       const u = i >= 0 ? treeRow(T, i) : null;
-      ul.append(h("li", null, u ? h("span", null, treeSourceLink(u[2] || "(ללא כותרת)", u[8], { author: T.rebbeim[T.books[u[0]][0]], book: T.books[u[0]][1], page: u[4] }), h("small", { class: "muted" }, " · " + T.books[u[0]][1])) : h("span", { class: "muted" }, "(מקום ההערה לא שויך ליחידה)"),
+      ul.append(h("li", null, u ? h("span", null, treeSourceLink(u[2] || "(ללא כותרת)", u[8], { author: T.rebbeim[T.books[u[0]][0]], book: T.books[u[0]][1], page: u[4], text: u[9] }), h("small", { class: "muted" }, " · " + T.books[u[0]][1])) : h("span", { class: "muted" }, "(מקום ההערה לא שויך ליחידה)"),
         h("div", { class: "muted sm" }, where)));
     }
     esec.append(ul); main.append(esec);
@@ -5931,7 +5931,17 @@ function ftCrumbs(t, i, s) {
   return nav;
 }
 function ftCredit(s, id) {
-  return h("p", { class: "ft-credit" }, s.credit, " ", h("a", { href: "https://www.chabadlibrary.org/books/" + (id || s.root), target: "_blank", rel: "noopener" }, "העמוד בספריית חב״ד", icon("i-ext")));
+  const hb = /hebrewbooks\.org/.test(s.source || "") || (id && id >= 8e9 && id < 9e9) || (s.root && s.root >= 8e9 && s.root < 9e9);
+  let href = "https://www.chabadlibrary.org/books/" + (id || s.root), label = "העמוד בספריית חב״ד";
+  if (hb) {
+    href = /hebrewbooks\.org/.test(s.source || "") ? s.source : "https://hebrewbooks.org/";
+    if (id && id >= 8e9) {
+      const req = Math.floor((id - 8e9) / 1e4), pg = (id - 8e9) % 1e4;
+      if (req && pg) href = "https://hebrewbooks.org/pdfpager.aspx?req=" + req + "&pgnum=" + pg;
+    }
+    label = "העמוד בהיברובוקס (סריקה)";
+  }
+  return h("p", { class: "ft-credit" }, s.credit, " ", h("a", { href, target: "_blank", rel: "noopener" }, label, icon("i-ext")));
 }
 function ftFail(main, msg, e) { main.replaceChildren(h("div", { class: "empty" }, h("b", null, msg), e ? String(e.message || e) : "", h("br"), h("a", { href: mkHash(["read"]) }, "לספרייה"))); }
 
