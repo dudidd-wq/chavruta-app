@@ -2034,5 +2034,30 @@
     "why": "אותה כתבת זיכרונות שסווגה ב־16.11 במפתח 67073e6df0ef3fe1 (הכותרת בפיד השתנתה); סיפור זיכרונות, לא פרסום של מאמר, שיחה או מכתב.",
     "source_url": "https://anash.org/the-teacher-who-needed-children-and-the-rebbes-promise/",
     "checked_at": "2026-11-17T13:07:00+00:00"
+  },
+  "165cdc1a2c375f7f": {
+    "cls": "ביאור",
+    "why": "ביאור כתוב באנגלית לשיחת דבר מלכות ש״פ ויצא תשנ״ב (שינת יעקב במקום המקדש), שפורסם באתר ב־18.11.2026. העמוד נפתח; גוף הטקסט זהה לגרסה מ־26.11.2025 — פרסום שנתי חוזר של ביאור כתוב נכנס לפי הנחיית דודי.",
+    "source_url": "https://dvarmalchus770.org/2026/11/18/vayeitzei-5752-asleep-on-the-site-of-the-beis-hamikdash-2/",
+    "previous_url": "https://dvarmalchus770.org/2025/11/26/vayeitzei-5752-asleep-on-the-site-of-the-beis-hamikdash/",
+    "checked_at": "2026-11-18T13:10:00+00:00"
+  },
+  "cfa72475aba69c6c": {
+    "cls": "לא רלוונטי",
+    "why": "כתבת חדשות על אתר חדש לחיפוש והאזנה לניגונים שהושרו בהתוועדויות (כלי ומאגר הקלטות), לא פרסום כתוב של מאמר, שיחה או מכתב. העמוד נפתח.",
+    "source_url": "https://anash.org/looking-for-a-niggun-sung-by-the-rebbe-now-you-can-find-it/",
+    "checked_at": "2026-11-18T13:10:00+00:00"
+  },
+  "ac029aa9c65ede88": {
+    "cls": "לא רלוונטי",
+    "why": "כתבת זיכרונות מתוך ראיון פודקאסט (וידאו) עם שליח בהולנד. זיכרונות ופודקאסטים אינם נכנסים. העמוד נפתח.",
+    "source_url": "https://anash.org/a-little-boys-unforgettable-hug-with-the-rebbe/",
+    "checked_at": "2026-11-18T13:10:00+00:00"
+  },
+  "9bf990ec673fb119": {
+    "cls": "גיליון",
+    "why": "גיליון L’Chaim Weekly 1948 לשבת תולדות, ג׳ כסלו תשפ״ז (13.11.2026). ה־PDF בן 4 העמודים נפתח; אומתו השער והמדורים.",
+    "source_url": "https://torahprint.nyc3.cdn.digitaloceanspaces.com/pdfFiles/1794544154072_0e3ze_lchaim_1948.pdf",
+    "checked_at": "2026-11-18T13:10:00+00:00"
   }
 }
