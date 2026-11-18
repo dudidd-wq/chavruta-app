@@ -1565,6 +1565,13 @@ body.source-reader-docked { overflow: auto; }
 .ft-credit { margin: 28px 0 8px; padding-top: 12px; border-top: 1px solid var(--rule-2, var(--rule)); color: var(--ink-3); font: 12.5px/1.6 var(--sans); max-width: 80ch; }
 .ft-credit a { color: inherit; }
 .ft-credit svg { width: 12px; height: 12px; vertical-align: -1px; margin-inline-start: 2px; }
+.ft-related { max-width: var(--reading-measure, 68ch); margin: 28px auto 0; padding: 12px 0 4px; border-top: 1px solid var(--rule-2, var(--rule)); font: 14px/1.7 var(--sans); text-align: start; text-align-last: start; }
+.ft-related summary { cursor: pointer; font: 600 1rem/1.5 var(--serif); color: var(--ink); }
+.ft-related-body { margin-top: 10px; }
+.ft-related-note, .ft-related p { margin: 0 0 .7em; color: var(--ink-2); text-align: start; }
+.ft-related-list { margin: 0; padding: 0 1.2em 0 0; }
+.ft-related-list li { margin: 0 0 .35em; }
+.ft-related a { color: var(--accent); }
 .ft-toc { margin-top: 14px; }
 .ft-toc-l { list-style: none; margin: 0; padding: 0; }
 .ft-toc-l .ft-toc-l { padding-inline-start: 18px; border-inline-start: 1px solid var(--rule-2, var(--rule)); margin-block: 4px 8px; }

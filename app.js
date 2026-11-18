@@ -6136,7 +6136,7 @@ async function ftDocView(main, s, t, i, q, ctx) {
   try { await render(from, to, 1); } catch (e) { wait.replaceWith(h("div", { class: "empty" }, h("b", null, "לא ניתן לטעון את הטקסט"), String(e.message || e))); return; }
   if (!ctx.alive()) return;
   wait.remove(); sync();
-  main.append(nav(), ftCredit(s, t.n[target][0]));
+  main.append(nav(), ftRelated(t, target), ftCredit(s, t.n[target][0]));
   body.addEventListener("click", e => {
     const a = e.target.closest("a.ft-ref, a.ft-back"); if (!a) return;
     e.preventDefault(); const el = document.getElementById(a.dataset.note); if (!el) return;
@@ -6149,6 +6149,48 @@ async function ftDocView(main, s, t, i, q, ctx) {
   if (tEl && (ftIsLeaf(t, i) && tp > 0 || hl)) { const m = tEl.querySelector("mark.sh"); (m || tEl).scrollIntoView({ block: m ? "center" : "start" }); tEl.classList.add("ft-target"); }
   else window.scrollTo(0, 0);
 }
+
+/** הפניות לקבלה שכבר קיימות במערכת ליחידת הקורא הנוכחית (kab-citers). נטען רק בפתיחה. */
+function ftRelated(t, target) {
+  const id = t.n[target][0];
+  const box = h("details", { class: "ft-related" }, h("summary", null, "מקורות וקשרים"));
+  const body = h("div", { class: "ft-related-body" });
+  box.append(body);
+  box.addEventListener("toggle", async () => {
+    if (!box.open || box.dataset.loaded) return;
+    box.dataset.loaded = "1";
+    body.replaceChildren(h("p", { class: "muted" }, "טוען הפניות…"));
+    try {
+      if (typeof loadKabCiters === "function") await loadKabCiters();
+    } catch (e) { body.replaceChildren(h("p", { class: "muted" }, "לא ניתן לטעון את ההפניות כרגע.")); return; }
+    const C = typeof KAB_CITERS === "object" && KAB_CITERS || { byCiting: {}, byUrl: {}, rebbeim: [] };
+    const recs = [], seen = new Set();
+    const keys = ["cl:" + id, "dh:" + id, String(id)];
+    for (const key of keys) {
+      for (const r of (C.byCiting[key] || []).concat(C.byUrl[key] || [])) {
+        const k = (r.ku || "") + "|" + (r.work || "") + "|" + (r.match || "");
+        if (seen.has(k)) continue;
+        seen.add(k); recs.push(r);
+      }
+    }
+    const intro = h("p", { class: "ft-related-note" }, "הפניות לקבלה שזוהו בטקסט של היחידה הזו. המפתח המלא — ", h("a", { href: mkHash(["tree", "k"]) }, "עץ הקבלה"), " (37,971 יחידות מפנות). קשרי ביאורים על פרשה מופיעים במצב ", h("a", { href: mkHash(["biurim"]) }, "״קשרים״ בביאורים"), ".");
+    if (!recs.length) {
+      body.replaceChildren(intro, h("p", { class: "muted" }, "לא נמצאו הפניות מקושרות ליחידה הזו בנתונים שיש בידינו."));
+      return;
+    }
+    const ul = h("ul", { class: "ft-related-list" });
+    const shown = recs.slice(0, 24);
+    for (const r of shown) {
+      const label = [r.match || r.work, r.title].filter(Boolean).join(" · ");
+      const href = r.work ? mkHash(["tree", "k", "w", r.work]) : mkHash(["tree", "k"]);
+      ul.append(h("li", null, h("a", { href }, label || "מקור")));
+    }
+    if (recs.length > shown.length) ul.append(h("li", { class: "muted" }, "ועוד " + (recs.length - shown.length) + " הפניות"));
+    body.replaceChildren(intro, h("p", null, recs.length.toLocaleString("he") + " הפניות לקבלה ביחידה זו"), ul);
+  });
+  return box;
+}
+
 function ftPage(t, j, row, marker) {
   const id = t.n[j][0], sec = h("section", { class: "ft-page", id: "ft-" + id, "aria-label": t.n[j][1] || "עמוד" });
   if (marker) sec.append(h("a", { class: "ft-pgmark", href: mkHash(["read", t.slug, String(id)]), title: "קישור לעמוד הזה" }, t.n[j][1]));
