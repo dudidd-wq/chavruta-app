@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-18T13:02:14+00:00",
+ "generated_at": "2026-11-18T13:10:09+00:00",
  "sources": [
   {
    "id": "chabadlibrary",
@@ -12,7 +12,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-11-18T13:00:57+00:00",
+   "checked_at": "2026-11-18T13:08:49+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -30,7 +30,7 @@
     "primary",
     "whatsnew"
    ],
-   "checked_at": "2026-11-18T13:00:57+00:00",
+   "checked_at": "2026-11-18T13:08:49+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -47,7 +47,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-11-18T13:00:57+00:00",
+   "checked_at": "2026-11-18T13:08:49+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -64,7 +64,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-11-18T13:00:57+00:00",
+   "checked_at": "2026-11-18T13:08:49+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -82,7 +82,7 @@
     "primary",
     "whatsnew"
    ],
-   "checked_at": "2026-11-18T13:00:57+00:00",
+   "checked_at": "2026-11-18T13:08:49+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -102,7 +102,7 @@
     }
    ],
    "total": 132,
-   "last_success_at": "2026-11-18T13:00:57+00:00"
+   "last_success_at": "2026-11-18T13:08:49+00:00"
   },
   {
    "id": "chabadlibrarybooks",
@@ -115,7 +115,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-11-18T13:01:00+00:00",
+   "checked_at": "2026-11-18T13:08:50+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -133,12 +133,12 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-18T13:01:00+00:00",
+   "checked_at": "2026-11-18T13:08:50+00:00",
    "status": "ok",
    "new": [],
    "latest": [],
    "total": 1501,
-   "last_success_at": "2026-11-18T13:01:00+00:00"
+   "last_success_at": "2026-11-18T13:08:50+00:00"
   },
   {
    "id": "chassidut_org",
@@ -152,12 +152,12 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-18T13:01:02+00:00",
+   "checked_at": "2026-11-18T13:08:51+00:00",
    "status": "ok",
    "new": [],
    "latest": [],
    "total": 4,
-   "last_success_at": "2026-11-18T13:01:02+00:00"
+   "last_success_at": "2026-11-18T13:08:51+00:00"
   },
   {
    "id": "biurim",
@@ -171,7 +171,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-18T13:01:03+00:00",
+   "checked_at": "2026-11-18T13:08:52+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -225,7 +225,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-18T13:01:03+00:00"
+   "last_success_at": "2026-11-18T13:08:52+00:00"
   },
   {
    "id": "hm_monsey",
@@ -239,18 +239,9 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-18T13:01:05+00:00",
+   "checked_at": "2026-11-18T13:08:54+00:00",
    "status": "ok",
-   "new": [
-    {
-     "id": "https://heichalmenachemmonsey.org/?p=10133",
-     "title": "תורה אור: מאמר ד”ה אם לא תדעי לך – הרב חיים שלום דייטש (ה’ כסלו תשפ”ז)",
-     "url": "https://heichalmenachemmonsey.org/toldos_5787-2/",
-     "date": "Sun, 15 Nov 2026 20:00:58 +0000",
-     "blurb": "תורה אור – ויצא, דף כג במסגרת שיעורו השבועי – בשידור חי – כל יום ראשון 2:15-1:15 אחה”צ להורדת המאמר לחצו כאן",
-     "first_seen": "2026-11-18T13:01:05+00:00"
-    }
-   ],
+   "new": [],
    "latest": [
     {
      "id": "https://heichalmenachemmonsey.org/?p=9775",
@@ -342,7 +333,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-18T13:01:05+00:00"
+   "last_success_at": "2026-11-18T13:08:54+00:00"
   },
   {
    "id": "hiskashrus",
@@ -356,7 +347,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-18T13:01:07+00:00",
+   "checked_at": "2026-11-18T13:08:56+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -432,7 +423,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-18T13:01:07+00:00"
+   "last_success_at": "2026-11-18T13:08:56+00:00"
   },
   {
    "id": "lichyot_chassidus",
@@ -446,18 +437,9 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-18T13:01:08+00:00",
+   "checked_at": "2026-11-18T13:08:57+00:00",
    "status": "ok",
-   "new": [
-    {
-     "id": "da0f8aaa-0817-492d-8b30-c0389815f586",
-     "title": "מאמר ד\"ה וכל העם רואים תרס\"ה - חלק י\"א",
-     "url": "https://rabbi_osher_farkash_maamarim.captivate.fm",
-     "date": "Tue, 17 Nov 2026 04:00:00 -0500",
-     "blurb": "",
-     "first_seen": "2026-11-18T13:01:08+00:00"
-    }
-   ],
+   "new": [],
    "latest": [
     {
      "id": "da0f8aaa-0817-492d-8b30-c0389815f586",
@@ -621,7 +603,7 @@
     }
    ],
    "total": 1000,
-   "last_success_at": "2026-11-18T13:01:08+00:00"
+   "last_success_at": "2026-11-18T13:08:57+00:00"
   },
   {
    "id": "chabadzoom",
@@ -635,7 +617,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-18T13:01:11+00:00",
+   "checked_at": "2026-11-18T13:09:01+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -760,7 +742,7 @@
     }
    ],
    "total": 563,
-   "last_success_at": "2026-11-18T13:01:11+00:00"
+   "last_success_at": "2026-11-18T13:09:01+00:00"
   },
   {
    "id": "kovtzimdrive",
@@ -774,7 +756,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-18T13:01:12+00:00",
+   "checked_at": "2026-11-18T13:09:08+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -782,12 +764,12 @@
      "id": "https://www.kovtzimdrive.com/posts/bochurim-build-database-of-thousands-of-%E2%80%98he%E2%80%99aros%E2%80%99",
      "title": "bochurim build database of thousands of ‘he’aros’",
      "url": "https://www.kovtzimdrive.com/posts/bochurim-build-database-of-thousands-of-%E2%80%98he%E2%80%99aros%E2%80%99",
-     "date": "2026-11-16",
+     "date": "2026-11-18",
      "first_seen": "2026-10-20T07:59:38+00:00"
     }
    ],
    "total": 1,
-   "last_success_at": "2026-11-18T13:01:12+00:00"
+   "last_success_at": "2026-11-18T13:09:08+00:00"
   },
   {
    "id": "avita",
@@ -801,7 +783,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-18T13:01:14+00:00",
+   "checked_at": "2026-11-18T13:09:11+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -819,7 +801,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-18T13:01:14+00:00",
+   "checked_at": "2026-11-18T13:09:11+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -841,7 +823,7 @@
     }
    ],
    "total": 2,
-   "last_success_at": "2026-11-18T13:01:14+00:00"
+   "last_success_at": "2026-11-18T13:09:11+00:00"
   },
   {
    "id": "dvarmalchus770",
@@ -855,18 +837,9 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-18T13:01:15+00:00",
+   "checked_at": "2026-11-18T13:09:12+00:00",
    "status": "ok",
-   "new": [
-    {
-     "id": "http://dvarmalchus770.org/?p=5897",
-     "title": "Vayeitzei 5752: Asleep on the Site of the Beis Hamikdash?!",
-     "url": "https://dvarmalchus770.org/2026/11/18/vayeitzei-5752-asleep-on-the-site-of-the-beis-hamikdash-2/",
-     "date": "Wed, 18 Nov 2026 10:09:14 +0000",
-     "blurb": "Yaakov Avinu, fleeing the wrath of his brother Esav, arrived in Beis El as the sun was setting unexpectedly. As a result of the sudden sunset, he went to sleep there for the night. The next morning, when he woke up, he realized where he was — Har Hamoriah, the site where the Beis Hamikdash […]",
-     "first_seen": "2026-11-18T13:01:15+00:00"
-    }
-   ],
+   "new": [],
    "latest": [
     {
      "id": "http://dvarmalchus770.org/?p=5897",
@@ -1006,7 +979,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-18T13:01:15+00:00"
+   "last_success_at": "2026-11-18T13:09:12+00:00"
   },
   {
    "id": "soulwords",
@@ -1020,7 +993,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-18T13:01:17+00:00",
+   "checked_at": "2026-11-18T13:09:13+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1090,7 +1063,7 @@
     }
    ],
    "total": 0,
-   "last_success_at": "2026-11-18T13:01:17+00:00"
+   "last_success_at": "2026-11-18T13:09:13+00:00"
   },
   {
    "id": "sie_weekly",
@@ -1104,7 +1077,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-18T13:01:18+00:00",
+   "checked_at": "2026-11-18T13:09:14+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1180,7 +1153,7 @@
     }
    ],
    "total": 118,
-   "last_success_at": "2026-11-18T13:01:18+00:00"
+   "last_success_at": "2026-11-18T13:09:14+00:00"
   },
   {
    "id": "pls",
@@ -1194,7 +1167,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-18T13:01:20+00:00",
+   "checked_at": "2026-11-18T13:09:16+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1344,7 +1317,7 @@
     }
    ],
    "total": 200,
-   "last_success_at": "2026-11-18T13:01:20+00:00"
+   "last_success_at": "2026-11-18T13:09:16+00:00"
   },
   {
    "id": "chayenu_ls",
@@ -1358,7 +1331,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-18T13:01:22+00:00",
+   "checked_at": "2026-11-18T13:09:19+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1392,7 +1365,7 @@
     }
    ],
    "total": 2,
-   "last_success_at": "2026-11-18T13:01:22+00:00"
+   "last_success_at": "2026-11-18T13:09:19+00:00"
   },
   {
    "id": "weekly_sicha",
@@ -1406,7 +1379,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-18T13:01:24+00:00",
+   "checked_at": "2026-11-18T13:09:20+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1475,7 +1448,7 @@
     }
    ],
    "total": 120,
-   "last_success_at": "2026-11-18T13:01:24+00:00"
+   "last_success_at": "2026-11-18T13:09:20+00:00"
   },
   {
    "id": "theyeshiva",
@@ -1489,18 +1462,9 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-18T13:01:25+00:00",
+   "checked_at": "2026-11-18T13:09:22+00:00",
    "status": "ok",
-   "new": [
-    {
-     "id": "https://www.theyeshiva.net/item/10031",
-     "title": "“Why Did You Deceive Me?” The Question We All Ask G-d - Women's Vayetzei Class",
-     "url": "https://www.theyeshiva.net/item/10031",
-     "date": "Tue, 17 Nov 2026 09:00:00 -0500",
-     "blurb": "Why the Greatest Decisions of Your Life Are Made Beyond Your Conscious Mind Why did Jacob have to be deceived into marrying Leah? Why couldn't Lavan simply tell him that the older daughter must marry first? Why was deception necessary to bring about the most consequential marriages in Jewish history? In this profoundly moving women's class on Parshas Vayeitzei, Rabbi YY Jacobson explores one of the deepest mysteries of the human soul: The greatest choices of our lives are sometimes the very choices our conscious minds would never make. Jacob loved Rachel, but Leah represented a dimension of spiritual depth that transcended everything he could understand, anticipate, or willingly embrace. Rachel embodied the light he could recognize; Leah embodied an infinite truth that would shatter his expectations and transform his destiny. Sometimes the divine within us chooses a journey that our conscious selves would reject. What feels like the destruction of our plans may become the birthplace of a self we never knew existed. Through a strange Talmudic story about a man who forgot a bundle of grain in the field, the mysterious blessings of Isaac, the courage of Queen Esther, and the hidden origins of Moshiach, we discover why the deepest divine energy sometimes emerges only when our familiar sense of control is suspended. The class shares a heartbreaking encounter involving Rabbi Manis Friedman and a mother who lost her nineteen-year-old son, revealing how surrendering the impossible bu",
-     "first_seen": "2026-11-18T13:01:25+00:00"
-    }
-   ],
+   "new": [],
    "latest": [
     {
      "id": "https://www.theyeshiva.net/item/10031",
@@ -1664,7 +1628,7 @@
     }
    ],
    "total": 1551,
-   "last_success_at": "2026-11-18T13:01:25+00:00"
+   "last_success_at": "2026-11-18T13:09:22+00:00"
   },
   {
    "id": "chassidus_applied",
@@ -1678,18 +1642,9 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-18T13:01:29+00:00",
+   "checked_at": "2026-11-18T13:09:24+00:00",
    "status": "ok",
-   "new": [
-    {
-     "id": "yt:video:ZWPqdZ9qA1I",
-     "title": "Samach Vav Part 249:",
-     "url": "https://www.youtube.com/watch?v=ZWPqdZ9qA1I",
-     "date": "2026-11-18T03:56:07+00:00",
-     "blurb": "Samach Vav p. 201-202: Hanochas atzmuso also regulates the ratzo and causes every ratzo to be followed by a shuv. Ratzo is easier than shuv. Hafshata and halbosha. Nedarim, abstinence, easier than engagement.",
-     "first_seen": "2026-11-18T13:01:29+00:00"
-    }
-   ],
+   "new": [],
    "latest": [
     {
      "id": "yt:video:ZWPqdZ9qA1I",
@@ -2029,7 +1984,7 @@
     }
    ],
    "total": 15,
-   "last_success_at": "2026-11-18T13:01:29+00:00"
+   "last_success_at": "2026-11-18T13:09:24+00:00"
   },
   {
    "id": "neirot",
@@ -2043,7 +1998,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-18T13:01:29+00:00",
+   "checked_at": "2026-11-18T13:09:24+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2097,7 +2052,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-18T13:01:29+00:00"
+   "last_success_at": "2026-11-18T13:09:24+00:00"
   },
   {
    "id": "chassidus_explained",
@@ -2111,10 +2066,27 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-18T13:01:31+00:00",
+   "checked_at": "2026-11-18T13:09:27+00:00",
    "status": "ok",
-   "new": [],
+   "new": [
+    {
+     "id": "9af49bf0-ae2c-4331-9355-714191fed823",
+     "title": "Mitteler Rebbe's Padah Beshalom part 4/9 שערי תשובה ד\"ה פדה בשלום (פרק ה-ו)",
+     "url": "https://podcasters.spotify.com/pod/show/chassidus-explained/episodes/Mitteler-Rebbes-Padah-Beshalom-part-49---------e3sjdbv",
+     "date": "Wed, 18 Nov 2026 03:20:42 GMT",
+     "blurb": "Link to מאמר PDF Getting into the main topic of the מאמר, the מיטעלער רבי explains the difference between מקיף and פנימי using a משל from the way the נשמה energizes the body. Based on that, the מיטעלער רבי introduces us to two types of מקיף: A מקיף which is connected to פנימי, and a מקיף that remains מקיף. The explanations begins with a משל of two forms of רצון (which is generally מקיף), with this שיעור finishing with the discussion of the first type: A רצון that can be overwhelmed by a stronger רצון, being that it operates within the parameters of כחות פנימיים, which can be changed. the מיטעלער רבי provides a געשמאקע משל of someone who strongly desires money, yet when a life-or-death situation, or even an opportunity for honor and greatness, arises, that new desire overwhelms the first one.",
+     "first_seen": "2026-11-18T13:09:27+00:00"
+    }
+   ],
    "latest": [
+    {
+     "id": "9af49bf0-ae2c-4331-9355-714191fed823",
+     "title": "Mitteler Rebbe's Padah Beshalom part 4/9 שערי תשובה ד\"ה פדה בשלום (פרק ה-ו)",
+     "url": "https://podcasters.spotify.com/pod/show/chassidus-explained/episodes/Mitteler-Rebbes-Padah-Beshalom-part-49---------e3sjdbv",
+     "date": "Wed, 18 Nov 2026 03:20:42 GMT",
+     "blurb": "Link to מאמר PDF Getting into the main topic of the מאמר, the מיטעלער רבי explains the difference between מקיף and פנימי using a משל from the way the נשמה energizes the body. Based on that, the מיטעלער רבי introduces us to two types of מקיף: A מקיף which is connected to פנימי, and a מקיף that remains מקיף. The explanations begins with a משל of two forms of רצון (which is generally מקיף), with this שיעור finishing with the discussion of the first type: A רצון that can be overwhelmed by a stronger רצון, being that it operates within the parameters of כחות פנימיים, which can be changed. the מיטעלער רבי provides a געשמאקע משל of someone who strongly desires money, yet when a life-or-death situation, or even an opportunity for honor and greatness, arises, that new desire overwhelms the first one.",
+     "first_seen": "2026-11-18T13:09:27+00:00"
+    },
     {
      "id": "c5883520-db2a-41fa-96e4-8fb63bb466ab",
      "title": "Mitteler Rebbe's Padah Beshalom part 3/9 שערי תשובה ד\"ה פדה בשלום (פרק ד)",
@@ -2180,8 +2152,8 @@
      "first_seen": "2026-10-18T04:52:00+00:00"
     }
    ],
-   "total": 137,
-   "last_success_at": "2026-11-18T13:01:31+00:00"
+   "total": 138,
+   "last_success_at": "2026-11-18T13:09:27+00:00"
   },
   {
    "id": "melukat",
@@ -2195,7 +2167,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-18T13:01:33+00:00",
+   "checked_at": "2026-11-18T13:09:28+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2257,7 +2229,7 @@
     }
    ],
    "total": 168,
-   "last_success_at": "2026-11-18T13:01:33+00:00"
+   "last_success_at": "2026-11-18T13:09:28+00:00"
   },
   {
    "id": "daily_maamar",
@@ -2271,18 +2243,9 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-18T13:01:34+00:00",
+   "checked_at": "2026-11-18T13:09:29+00:00",
    "status": "ok",
-   "new": [
-    {
-     "id": "e24e7894-2f4f-4ee6-a66c-63e2c4ca14df",
-     "title": "Motzaei Sh”p Vayeitze 9/Ohr l’yud Kislev 5738 (B’Chedroi), Maamorim Melukatim Vol. 2– Episode 2",
-     "url": "https://share.transistor.fm/s/b75ad9ca",
-     "date": "Tue, 17 Nov 2026 09:22:04 -0500",
-     "blurb": "This episode covers from Chapter 4 through Chapter 5. Yaakov's Mission and the energy for the mission.",
-     "first_seen": "2026-11-18T13:01:34+00:00"
-    }
-   ],
+   "new": [],
    "latest": [
     {
      "id": "e24e7894-2f4f-4ee6-a66c-63e2c4ca14df",
@@ -2542,7 +2505,7 @@
     }
    ],
    "total": 367,
-   "last_success_at": "2026-11-18T13:01:34+00:00"
+   "last_success_at": "2026-11-18T13:09:29+00:00"
   },
   {
    "id": "wellsprings",
@@ -2556,7 +2519,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-18T13:01:35+00:00",
+   "checked_at": "2026-11-18T13:09:30+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2602,7 +2565,7 @@
     }
    ],
    "total": 125,
-   "last_success_at": "2026-11-18T13:01:35+00:00"
+   "last_success_at": "2026-11-18T13:09:30+00:00"
   },
   {
    "id": "daily_sicha",
@@ -2616,18 +2579,9 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-18T13:01:36+00:00",
+   "checked_at": "2026-11-18T13:09:31+00:00",
    "status": "ok",
-   "new": [
-    {
-     "id": "2026.11.18",
-     "title": "יום ד' פ' ויצא, ח' כסלו, ה'תשפ\"ז",
-     "url": "",
-     "date": "Wed, 18 Nov 2026 12:00:00 GMT",
-     "blurb": "התוכן [המשך] בענין זה לא נוגע שמות המשתתפים, אלא מספרם (כך וכך שקלים עבור כך וכך נפשות מישראל). ויכניסו את ההשתתפות ל\"מזכירות\" כאן (או להמשרד דמל\"ח או מחנה ישראל במדינתם) בהקדם כי כבר התחילו את ההכנות לזה וכו'. בתור יוצא מן הכלל, מצד החששות שבדבר וכו', לא ידפיסו בסופו \"הקדשות\" וגם לא שמות המדפיסים והמגיהים, כ\"א שמו של כ\"ק אדמו\"ר (מהורש\"ב) נ\"ע, המחבר, ושל כ\"ק מו\"ח אדמו\"ר. ויהי רצון שזה יצא לדפוס בקרוב ממש וילמדו בו בפועל ממש, בהתמדה ובשקידה. כיון שענין זה נעשה בנשיאותו של כ\"ק מו\"ח אדמו\"ר – חלה ע\"ז ההבטחה ש\"אנן מזרעא דיוסף קא אתינן דלא שלטא בי' עינא בישא\". משיחת מוצש\"ק פ' וישלח, י\"ט כסלו ה'תשל\"ז ל\"הנחה פרטית\" או התרגום ללה\"ק של השיחה: https://thedailysicha.com/?date=18-11-2026 Synopsis (Continued.) What matters here is not the names of the participants, but their number (so many shekels on behalf of so many Jewish souls). The contributions should be submitted to the Mazkirus here (or to the office of Merkos L’Inyonei Chinuch or Machne Israel in their respective countries) as soon as possible, because preparations for the publication have already begun etc. As an exception to the usual practice, because of the concerns involved etc., no dedications will be printed, nor will the names of those involved in the typesetting and proofreading etc. Only the names of the author – the Rebbe Rashab – and the Rebbe, my father-in-law, will be included. May it be Hashem’s will that the hemshech be published in the very near future, and that people actually study it, with diligence and persev",
-     "first_seen": "2026-11-18T13:01:36+00:00"
-    }
-   ],
+   "new": [],
    "latest": [
     {
      "id": "2026.11.18",
@@ -2887,7 +2841,7 @@
     }
    ],
    "total": 1431,
-   "last_success_at": "2026-11-18T13:01:36+00:00"
+   "last_success_at": "2026-11-18T13:09:31+00:00"
   },
   {
    "id": "learnchassidus",
@@ -2901,7 +2855,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-18T13:01:43+00:00",
+   "checked_at": "2026-11-18T13:09:36+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2914,7 +2868,7 @@
     }
    ],
    "total": 5,
-   "last_success_at": "2026-11-18T13:01:43+00:00"
+   "last_success_at": "2026-11-18T13:09:36+00:00"
   },
   {
    "id": "simplychassidus",
@@ -2928,7 +2882,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-18T13:01:43+00:00",
+   "checked_at": "2026-11-18T13:09:37+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2955,7 +2909,7 @@
     }
    ],
    "total": 4,
-   "last_success_at": "2026-11-18T13:01:43+00:00"
+   "last_success_at": "2026-11-18T13:09:37+00:00"
   },
   {
    "id": "alonei_chabad",
@@ -2968,7 +2922,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-18T13:01:45+00:00",
+   "checked_at": "2026-11-18T13:09:38+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -2985,7 +2939,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-18T13:01:45+00:00",
+   "checked_at": "2026-11-18T13:09:38+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -3002,7 +2956,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-18T13:01:45+00:00",
+   "checked_at": "2026-11-18T13:09:38+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -3029,7 +2983,7 @@
     }
    ],
    "total": 303,
-   "last_success_at": "2026-11-18T13:01:45+00:00"
+   "last_success_at": "2026-11-18T13:09:38+00:00"
   },
   {
    "id": "lchaim",
@@ -3042,17 +2996,9 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-18T13:01:46+00:00",
+   "checked_at": "2026-11-18T13:09:39+00:00",
    "status": "ok",
-   "new": [
-    {
-     "id": "39375",
-     "title": "Toldos · 5787 · The Weekly Publication for Every Jewish Person",
-     "url": "https://torahprint.nyc3.cdn.digitaloceanspaces.com/pdfFiles/1794544154072_0e3ze_lchaim_1948.pdf",
-     "date": "2026-11-13T00:00:00.000Z",
-     "first_seen": "2026-11-18T13:01:46+00:00"
-    }
-   ],
+   "new": [],
    "latest": [
     {
      "id": "39375",
@@ -3126,7 +3072,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-18T13:01:46+00:00"
+   "last_success_at": "2026-11-18T13:09:39+00:00"
   },
   {
    "id": "one_point",
@@ -3139,7 +3085,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-18T13:01:48+00:00",
+   "checked_at": "2026-11-18T13:09:40+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -3180,7 +3126,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-18T13:01:48+00:00"
+   "last_success_at": "2026-11-18T13:09:40+00:00"
   },
   {
    "id": "derher",
@@ -3193,7 +3139,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-18T13:01:49+00:00",
+   "checked_at": "2026-11-18T13:09:41+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -3210,7 +3156,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-18T13:01:49+00:00",
+   "checked_at": "2026-11-18T13:09:41+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -3227,7 +3173,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-18T13:01:49+00:00",
+   "checked_at": "2026-11-18T13:09:41+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -3303,7 +3249,7 @@
     }
    ],
    "total": 1,
-   "last_success_at": "2026-11-18T13:01:49+00:00"
+   "last_success_at": "2026-11-18T13:09:41+00:00"
   },
   {
    "id": "maynotecha_inst",
@@ -3316,7 +3262,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-18T13:01:51+00:00",
+   "checked_at": "2026-11-18T13:09:43+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -3333,7 +3279,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-18T13:01:51+00:00",
+   "checked_at": "2026-11-18T13:09:43+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -3371,7 +3317,7 @@
     }
    ],
    "total": 0,
-   "last_success_at": "2026-11-18T13:01:51+00:00"
+   "last_success_at": "2026-11-18T13:09:43+00:00"
   },
   {
    "id": "anash",
@@ -3384,26 +3330,9 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-18T13:01:52+00:00",
+   "checked_at": "2026-11-18T13:09:44+00:00",
    "status": "ok",
-   "new": [
-    {
-     "id": "https://anash.org/?p=1135366",
-     "title": "Looking for a Niggun Sung by the Rebbe? Now You Can Find It",
-     "url": "https://anash.org/looking-for-a-niggun-sung-by-the-rebbe-now-you-can-find-it/",
-     "date": "Tue, 17 Nov 2026 17:20:00 +0000",
-     "blurb": "A new groundbreaking website allows users to easily search, find and listen to niggunim sung in the Rebbe’s presence at farbrengens, rallies, and countless other occasions. What once required hours of searching through dozens of seforim and hundreds of audio recordings can now be done with just the click of a button.",
-     "first_seen": "2026-11-18T13:01:52+00:00"
-    },
-    {
-     "id": "https://anash.org/?p=1135443",
-     "title": "A Little Boy’s Unforgettable Hug With the Rebbe",
-     "url": "https://anash.org/a-little-boys-unforgettable-hug-with-the-rebbe/",
-     "date": "Tue, 17 Nov 2026 14:05:00 +0000",
-     "blurb": "In a podcast interview, Rabbi Moshe Stiefel , a shliach in Holland, shares fascinating stories and memories spanning his childhood in Atlanta, his years learning in 770, the period after Chof Zayin Adar when Lubavitch moved into the hospital in Manhattan, and the way he lives with the Rebbe following Gimmel Tammuz.",
-     "first_seen": "2026-11-18T13:01:52+00:00"
-    }
-   ],
+   "new": [],
    "latest": [
     {
      "id": "https://anash.org/?p=1135366",
@@ -3799,7 +3728,7 @@
     }
    ],
    "total": 7,
-   "last_success_at": "2026-11-18T13:01:52+00:00"
+   "last_success_at": "2026-11-18T13:09:44+00:00"
   },
   {
    "id": "collive",
@@ -3812,7 +3741,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-18T13:01:53+00:00",
+   "checked_at": "2026-11-18T13:09:46+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -3829,7 +3758,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-18T13:01:53+00:00",
+   "checked_at": "2026-11-18T13:09:46+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -3846,7 +3775,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-18T13:01:53+00:00",
+   "checked_at": "2026-11-18T13:09:46+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -3866,7 +3795,7 @@
     }
    ],
    "total": 20,
-   "last_success_at": "2026-11-18T13:01:53+00:00"
+   "last_success_at": "2026-11-18T13:09:46+00:00"
   },
   {
    "id": "abc770",
@@ -3879,7 +3808,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-18T13:01:55+00:00",
+   "checked_at": "2026-11-18T13:09:47+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -3925,7 +3854,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-18T13:01:55+00:00"
+   "last_success_at": "2026-11-18T13:09:47+00:00"
   },
   {
    "id": "kehot",
@@ -3938,7 +3867,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-18T13:01:58+00:00",
+   "checked_at": "2026-11-18T13:09:50+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -4648,7 +4577,7 @@
     }
    ],
    "total": 197,
-   "last_success_at": "2026-11-18T13:01:58+00:00"
+   "last_success_at": "2026-11-18T13:09:50+00:00"
   }
  ],
  "browser_checks": {
