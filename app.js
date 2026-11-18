@@ -6136,7 +6136,9 @@ async function ftDocView(main, s, t, i, q, ctx) {
   try { await render(from, to, 1); } catch (e) { wait.replaceWith(h("div", { class: "empty" }, h("b", null, "לא ניתן לטעון את הטקסט"), String(e.message || e))); return; }
   if (!ctx.alive()) return;
   wait.remove(); sync();
-  main.append(nav(), ftRelated(t, target), ftCredit(s, t.n[target][0]));
+  const heHost = h("div");
+  main.append(nav(), heHost, ftRelated(t, target), ftCredit(s, t.n[target][0]));
+  ftMafteiachLayer(s, t, d).then(el => { if (!ctx.alive()) return; if (el) heHost.replaceWith(el); else heHost.remove(); });
   body.addEventListener("click", e => {
     const a = e.target.closest("a.ft-ref, a.ft-back"); if (!a) return;
     e.preventDefault(); const el = document.getElementById(a.dataset.note); if (!el) return;
@@ -6151,6 +6153,48 @@ async function ftDocView(main, s, t, i, q, ctx) {
 }
 
 /** הפניות לקבלה שכבר קיימות במערכת ליחידת הקורא הנוכחית (kab-citers). נטען רק בפתיחה. */
+
+const FT_HE_LABEL = "תרגום ללשון הקודש – לא מוגה (מפתח)";
+/** שכבת תרגום מפתח (אם יש לשיחה הנוכחית). מוצגת בנפרד, מתחת לנוסח המקור. */
+async function ftMafteiachLayer(s, t, d) {
+  const mf = s && s.mafteiach;
+  if (!mf || !mf.he) return null;
+  const leaves = ftIsLeaf(t, d) ? [d] : ftKids(t, d).filter(k => ftIsLeaf(t, k));
+  if (!leaves.length) return null;
+  const firstId = t.n[leaves[0]][0];
+  const vol = Math.floor((firstId - s.root) / 10000);
+  if (Array.isArray(mf.vols) && mf.vols.length && !mf.vols.includes(vol)) return null;
+  const name = mf.he.replace("{vol}", String(vol).padStart(2, "0"));
+  let layer;
+  try { layer = await loadChunk(name); } catch (e) { return null; }
+  if (!layer) return null;
+  let entry = null;
+  for (const j of leaves) {
+    const rec = layer[String(t.n[j][0])];
+    if (rec && rec.t) { entry = rec; break; }
+  }
+  if (!entry) return null;
+  const label = mf.label || FT_HE_LABEL;
+  const text = h("div", { class: "ft-he-text ft-text" });
+  text.append(ftSafe(ftBlocks(entry.t), "ft-he-" + entry.k));
+  const body = h("div", { class: "ft-related-body ft-he-body" },
+    h("p", { class: "ft-related-note" }, "תרגום מאתר מפתח (mafteiach.app). אינו מוגה, ואינו הנוסח המקורי."),
+    text);
+  if (entry.n && entry.n.length) {
+    const ol = h("div", { class: "ft-notes-l" });
+    entry.n.forEach((n, i) => {
+      const it = h("div", { class: "ft-note" });
+      it.append(ftSafe(n, ""));
+      ol.append(it);
+    });
+    body.append(h("details", { class: "ft-notes" }, h("summary", null, "הערות (" + entry.n.length + ")"), ol));
+  }
+  if (entry.src) {
+    body.append(h("p", { class: "muted" }, h("a", { href: entry.src, target: "_blank", rel: "noopener" }, "המקור במפתח", typeof icon === "function" ? icon("i-ext") : " ↗")));
+  }
+  return h("details", { class: "ft-related ft-he-layer" }, h("summary", null, label), body);
+}
+
 function ftRelated(t, target) {
   const id = t.n[target][0];
   const box = h("details", { class: "ft-related" }, h("summary", null, "מקורות וקשרים"));

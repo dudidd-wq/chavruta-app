@@ -1572,6 +1572,9 @@ body.source-reader-docked { overflow: auto; }
 .ft-related-list { margin: 0; padding: 0 1.2em 0 0; }
 .ft-related-list li { margin: 0 0 .35em; }
 .ft-related a { color: var(--accent); }
+.ft-he-layer .ft-he-body { margin-top: 10px; }
+.ft-he-layer .ft-he-text { margin: 0 0 12px; font: var(--reading-weight, 400) var(--fs-body, 19px)/var(--lh, 1.85) var(--serif); color: var(--ink); text-align: justify; text-justify: inter-word; text-align-last: start; }
+.ft-he-layer .ft-he-text p { margin: 0 0 .85em; }
 .ft-toc { margin-top: 14px; }
 .ft-toc-l { list-style: none; margin: 0; padding: 0; }
 .ft-toc-l .ft-toc-l { padding-inline-start: 18px; border-inline-start: 1px solid var(--rule-2, var(--rule)); margin-block: 4px 8px; }
