@@ -495,9 +495,10 @@ article.biur a.xref:hover { color: var(--accent); }
 article.biur [data-conf="likely"] { text-decoration: underline dashed var(--ink-3) 1px; text-underline-offset: .22em; }
 article.biur .nmatch { background: color-mix(in srgb, var(--accent) 14%, transparent); border-radius: 3px; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
 article.biur .selel { background: color-mix(in srgb, var(--accent) 20%, transparent); border-radius: 3px; box-shadow: 0 0 0 .18em color-mix(in srgb, var(--accent) 20%, transparent); }
-article.biur .hl { animation: hlfade 3.2s ease-out 1; background: var(--hl); border-radius: 3px; }
+article.biur .hl,
+.daily-body .hl { animation: hlfade 3.2s ease-out 1; background: var(--hl); border-radius: 3px; }
 @keyframes hlfade { 0%, 55% { background: var(--hl); } 100% { background: transparent; } }
-@media (prefers-reduced-motion: reduce) { article.biur .hl { animation: none; outline: 2px solid var(--accent); outline-offset: 2px; } .top { transition: none; } }
+@media (prefers-reduced-motion: reduce) { article.biur .hl, .daily-body .hl { animation: none; outline: 2px solid var(--accent); outline-offset: 2px; } .top { transition: none; } }
 article.biur mark.sh { background: var(--hl); color: inherit; border-radius: 2px; padding: 0 .08em; }
 .pcopy { position: absolute; inset-inline-end: -2.3rem; width: 1.7rem; height: 1.7rem; display: grid; place-items: center; border-radius: 50%; color: var(--ink-3); background: var(--card); border: 1px solid var(--rule); }
 .pcopy svg { width: .9rem; height: .9rem; }

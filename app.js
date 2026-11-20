@@ -3806,14 +3806,19 @@ function dlySeg(i) { const T = D.chunks.daily && D.chunks.daily.tolt; if (!T) re
 const DLY_PARTS = new Set(["שיר השירים", "ראש השנה", "דרושים לשבת שובה", "יום כיפור", "סוכות", "דרושים לשמיני עצרת", "מגלת אסתר", "פרשת זכור"]);
 function dlyPart(he) { return he.startsWith("הוספות") || DLY_PARTS.has(he) ? he : "פרשת " + he; }
 /* פסקה: הטקסט מ־Sefaria אחרי ניקוי (רק <b> וסימני עמוד ⟦דף,טור⟧) — נבנה כצמתים, בלי innerHTML */
-function dlyPara(s) {
-  const p = h("p", { class: "daily-p" });
+function dlyPara(s, opts) {
+  const p = h("p", { class: "daily-p", id: opts && opts.id ? opts.id : undefined });
   let bold = null;
   for (const tok of s.split(/(<\/?b>|⟦[^⟧]*⟧)/)) {
     if (!tok) continue;
     if (tok === "<b>") { bold = h("b"); p.append(bold); continue; }
     if (tok === "</b>") { bold = null; continue; }
-    if (tok.startsWith("⟦")) { p.append(h("span", { class: "daily-pg", title: "עמוד בספר" }, tok.slice(1, -1))); continue; }
+    if (tok.startsWith("⟦")) {
+      const label = tok.slice(1, -1);
+      const page = window.DailyAnchors && window.DailyAnchors.parsePage(label);
+      p.append(h("span", { class: "daily-pg", title: "עמוד בספר", id: page ? window.DailyAnchors.luachPageId(page) : undefined }, label));
+      continue;
+    }
     (bold || p).append(tok);
   }
   return p;
@@ -3822,15 +3827,51 @@ function dlyPara(s) {
 VIEWS.daily = async function (rest, q, ctx) {
   const main = $("#view"); main.className = "main page daily"; main.textContent = "";
   document.title = "לימוד יומי · חברותא";
+  const DA = window.DailyAnchors;
+  const todayIso = iso(new Date());
+  let parsed = DA ? DA.parseDailyQuery(q, todayIso) : { d: q.get("d"), t: q.get("t") === "luach" ? "luach" : "tanya", ch: null, p: null, pg: null, m: null, sec: "la", explicitDate: /^\d{4}-\d{2}-\d{2}$/.test(q.get("d") || "") };
   let W;
   try { W = await loadChunk("daily"); } catch (e) { main.append(h("div", { class: "empty" }, h("b", null, "לא ניתן לטעון את הלימוד היומי"), String(e.message || e))); return; }
   if (!ctx.alive()) return;
-  let day = /^\d{4}-\d{2}-\d{2}$/.test(q.get("d") || "") ? q.get("d") : iso(new Date());
-  let tab = q.get("t") === "luach" ? "luach" : "tanya";
+  let day = parsed.d || todayIso;
+  let tab = parsed.t === "luach" || parsed.t === "rambam" ? parsed.t : "tanya";
+  let tanyaChap = null;
   const body = h("div", { class: "daily-body" });
   const head = h("div", { class: "daily-head" });
-  const go = (d, t) => { day = d ?? day; tab = t ?? tab; const qq = {}; if (day !== iso(new Date())) qq.d = day; if (tab !== "tanya") qq.t = tab; quietHash(mkHash(["daily"], qq)); draw(); };
+  const dailyHash = (withTarget) => {
+    const qq = {};
+    if (day !== iso(new Date())) qq.d = day;
+    if (tab !== "tanya") qq.t = tab;
+    if (withTarget && DA) Object.assign(qq, DA.hashQuery({ t: tab, d: day, sec: parsed.sec, ch: parsed.ch, p: parsed.p, pg: parsed.pg, m: parsed.m, n: tanyaChap && tanyaChap.n }, iso(new Date())));
+    return mkHash(["daily"], qq);
+  };
+  const go = (d, t) => { day = d ?? day; tab = t ?? tab; parsed = { ...parsed, ch: null, p: null, pg: null, m: null, explicitDate: true }; tanyaChap = null; quietHash(dailyHash(false)); draw(); };
   const shift = n => { const d = parseIso(day); d.setDate(d.getDate() + n); go(iso(d)); };
+  function focusDailyTarget() {
+    if (!DA) return false;
+    const id = DA.dailyTargetId({ t: tab, p: parsed.p, pg: parsed.pg, m: parsed.m }, tanyaChap);
+    const el = id && document.getElementById(id);
+    if (!el) return false;
+    scrollToEl(el, true);
+    requestAnimationFrame(() => scrollToEl(el, false, "auto"));
+    return true;
+  }
+  async function resolveTanyaTarget() {
+    if (!DA || tab !== "tanya" || !parsed.ch) return;
+    tanyaChap = DA.resolveTanyaChapter(W.chaps, parsed);
+    if (!tanyaChap) return;
+    let T;
+    try { T = await loadChunk("tanya"); } catch (e) { return; }
+    if (!ctx.alive()) return;
+    const found = DA.findTanyaDay(W.days, T.segs, tanyaChap.ci, parsed.p, parsed.explicitDate ? day : null, todayIso);
+    if (!found || !found.date) return;
+    if (!parsed.explicitDate) {
+      day = found.date;
+      if (day !== iso(new Date())) q.set("d", day);
+      else q.delete("d");
+      quietHash(dailyHash(true));
+    }
+  }
   async function draw() {
     const d = parseIso(day), hp = heLabel(d);
     head.textContent = "";
@@ -3842,8 +3883,12 @@ VIEWS.daily = async function (rest, q, ctx) {
         h("button", { class: "btn sm", onclick: () => shift(1) }, "היום הבא"),
         h("input", { type: "date", class: "daily-pick", value: day, "aria-label": "בחירת תאריך", onchange: e => e.target.value && go(e.target.value) })),
       h("div", { class: "chips", role: "group", "aria-label": "סוג הלימוד" },
-        ...[["tanya", "תניא יומי"], ["luach", "תורה אור ולקוטי תורה"]].map(([k, l]) => h("button", { class: "fchip", "aria-pressed": tab === k, onclick: () => go(null, k) }, l))));
+        ...[["tanya", "תניא יומי"], ["luach", "תורה אור ולקוטי תורה"], ...(tab === "rambam" ? [["rambam", "רמב״ם יומי"]] : [])].map(([k, l]) => h("button", { class: "fchip", "aria-pressed": tab === k, onclick: () => go(null, k) }, l))));
     body.textContent = "";
+    if (tab === "rambam") {
+      body.append(h("div", { class: "empty" }, h("b", null, "רמב״ם יומי עדיין אינו בקורא"), "אפשר לקשר לתניא או לתורה אור ולקוטי תורה, לפרק ולפסקה או לדף."));
+      return;
+    }
     if (tab === "tanya") await drawTanya(d); else await drawLuach(d);
   }
   async function drawTanya(d) {
@@ -3858,9 +3903,10 @@ VIEWS.daily = async function (rest, q, ctx) {
     holder.textContent = "";
     let last = -1;
     for (let i = a; i < b; i++) {
-      const [ci, t] = T.segs[i];
-      if (ci !== last) { holder.append(h("h3", { class: "tanya-ch" }, W.chaps[ci])); last = ci; }
-      holder.append(h("p", { class: "tanya-p" }, t));
+      const [ci, txt] = T.segs[i];
+      const pn = DA ? DA.tanyaParaNumber(T.segs, i) : null;
+      if (ci !== last) { holder.append(h("h3", { class: "tanya-ch", id: DA ? DA.tanyaChapterId(ci) : undefined }, W.chaps[ci])); last = ci; }
+      holder.append(h("p", { class: "tanya-p", id: DA && pn ? DA.tanyaParaId(ci, pn) : undefined }, txt));
     }
     body.append(h("p", { class: "card-note" }, `החלוקה היומית והטקסט: ${T.source}. הקטע של היום הוא מנקודת ההתחלה של היום עד נקודת ההתחלה של היום הבא. התאריך נקבע לפי חצות הלילה.`));
   }
@@ -3919,7 +3965,7 @@ VIEWS.daily = async function (rest, q, ctx) {
     if (!ctx.alive() || tab !== "luach" || day !== iso(d)) return;
     holder.textContent = "";
     // הכותרת של המאמר הראשון: ״המשך״ כשהקטע מתחיל באמצע מאמר
-    let last = -1;
+    let last = -1, paraN = 0;
     const end = b1 ? b0 : b0 - 1;
     for (let i = a0; i <= end; i++) {
       const [mi, html] = dlySeg(i);
@@ -3928,10 +3974,10 @@ VIEWS.daily = async function (rest, q, ctx) {
       if (i === a0 && a1) s = s.slice(a1);
       if (mi !== last) {
         const cont = i === a0 && mid;
-        holder.append(h("h3", { class: "daily-mh" }, cont ? h("span", { class: "daily-mh-c" }, "המשך ") : null, TL.maam[mi][1]));
+        holder.append(h("h3", { class: "daily-mh", id: DA ? DA.luachMaamarId(mi) : undefined }, cont ? h("span", { class: "daily-mh-c" }, "המשך ") : null, TL.maam[mi][1]));
         last = mi;
       }
-      if (s.replace(/⟦[^⟧]*⟧|<[^>]+>/g, "").trim()) holder.append(dlyPara(s));
+      if (s.replace(/⟦[^⟧]*⟧|<[^>]+>/g, "").trim()) { paraN++; holder.append(dlyPara(s, { id: DA ? DA.luachParaId(paraN) : undefined })); }
     }
     // הקישורים לעבודה שלנו — רק התאמות לפי ספר + עמוד (או ספר + חלק + ד״ה)
     const groups = [];
@@ -3974,8 +4020,10 @@ VIEWS.daily = async function (rest, q, ctx) {
       h("button", { class: "btn sm", onclick: () => shift(1) }, h("small", null, "היום הבא"), h("span", null, lab(nextD)))));
   }
   main.append(learnCrumbs("לימוד יומי"), h("h1", { class: "page-title" }, "לימוד יומי"), head, body);
+  await resolveTanyaTarget();
+  if (!ctx.alive()) return;
   await draw();
-  if (!ctx.keep) window.scrollTo(0, 0);
+  if (!focusDailyTarget() && !ctx.keep) window.scrollTo(0, 0);
 };
 
 function treeNativeContents(T, b) {
