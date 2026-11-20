@@ -36,10 +36,14 @@ jobs:
           node --check status.js
           node --check data/project-status.js
           node --check app.js
+          node --check daily-anchors.js
           node --check data/cite-resolutions.js
           node --check data/text/index.js
           node --check data/text/map.js
           node --check sw.js
+
+      - name: Daily deep-link unit tests
+        run: node tests/daily-anchors.test.js
 
       - name: Personalization styles smoke test (each style loads without JS errors)
         run: |

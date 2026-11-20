@@ -1,7 +1,7 @@
 /* Chavruta service worker: app-shell precache, network-first data, cache-first static assets. */
 "use strict";
 
-const CACHE_VERSION = "v6-chitas-fonts";
+const CACHE_VERSION = "v7-daily-deeplink";
 const SHELL_CACHE = "chavruta-shell-" + CACHE_VERSION;
 const ASSET_CACHE = "chavruta-assets-" + CACHE_VERSION;
 const DATA_CACHE = "chavruta-data-" + CACHE_VERSION;
@@ -16,6 +16,7 @@ const PRECACHE_URLS = [
   "./index.html",
   "./app.css",
   "./app.js",
+  "./daily-anchors.js",
   "./print.css",
   "./personalize.js",
   "./personalize.css",
