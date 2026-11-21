@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-21T12:38:58+00:00",
+ "generated_at": "2026-11-21T22:54:56+00:00",
  "sources": [
   {
    "id": "chabadlibrary",
@@ -12,7 +12,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-11-21T12:37:47+00:00",
+   "checked_at": "2026-11-21T22:53:44+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -30,7 +30,7 @@
     "primary",
     "whatsnew"
    ],
-   "checked_at": "2026-11-21T12:37:47+00:00",
+   "checked_at": "2026-11-21T22:53:44+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -47,7 +47,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-11-21T12:37:47+00:00",
+   "checked_at": "2026-11-21T22:53:44+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -64,7 +64,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-11-21T12:37:47+00:00",
+   "checked_at": "2026-11-21T22:53:44+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -82,7 +82,7 @@
     "primary",
     "whatsnew"
    ],
-   "checked_at": "2026-11-21T12:37:47+00:00",
+   "checked_at": "2026-11-21T22:53:44+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -102,7 +102,7 @@
     }
    ],
    "total": 132,
-   "last_success_at": "2026-11-21T12:37:47+00:00"
+   "last_success_at": "2026-11-21T22:53:44+00:00"
   },
   {
    "id": "chabadlibrarybooks",
@@ -115,7 +115,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-11-21T12:37:47+00:00",
+   "checked_at": "2026-11-21T22:53:44+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -133,12 +133,12 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-21T12:37:47+00:00",
+   "checked_at": "2026-11-21T22:53:44+00:00",
    "status": "ok",
    "new": [],
    "latest": [],
    "total": 1501,
-   "last_success_at": "2026-11-21T12:37:47+00:00"
+   "last_success_at": "2026-11-21T22:53:44+00:00"
   },
   {
    "id": "chassidut_org",
@@ -152,12 +152,12 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-21T12:37:49+00:00",
+   "checked_at": "2026-11-21T22:53:46+00:00",
    "status": "ok",
    "new": [],
    "latest": [],
    "total": 4,
-   "last_success_at": "2026-11-21T12:37:49+00:00"
+   "last_success_at": "2026-11-21T22:53:46+00:00"
   },
   {
    "id": "biurim",
@@ -171,7 +171,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-21T12:37:50+00:00",
+   "checked_at": "2026-11-21T22:53:47+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -225,7 +225,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-21T12:37:50+00:00"
+   "last_success_at": "2026-11-21T22:53:47+00:00"
   },
   {
    "id": "hm_monsey",
@@ -239,7 +239,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-21T12:37:52+00:00",
+   "checked_at": "2026-11-21T22:53:49+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -333,7 +333,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-21T12:37:52+00:00"
+   "last_success_at": "2026-11-21T22:53:49+00:00"
   },
   {
    "id": "hiskashrus",
@@ -347,7 +347,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-21T12:37:53+00:00",
+   "checked_at": "2026-11-21T22:53:51+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -423,7 +423,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-21T12:37:53+00:00"
+   "last_success_at": "2026-11-21T22:53:51+00:00"
   },
   {
    "id": "lichyot_chassidus",
@@ -437,7 +437,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-21T12:37:55+00:00",
+   "checked_at": "2026-11-21T22:53:52+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -611,7 +611,7 @@
     }
    ],
    "total": 1000,
-   "last_success_at": "2026-11-21T12:37:55+00:00"
+   "last_success_at": "2026-11-21T22:53:52+00:00"
   },
   {
    "id": "chabadzoom",
@@ -625,10 +625,39 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-21T12:37:57+00:00",
+   "checked_at": "2026-11-21T22:53:54+00:00",
    "status": "ok",
-   "new": [],
+   "new": [
+    {
+     "id": "content:a09ab446dc727e85",
+     "title": "עדכון בתוכן הדף",
+     "url": "https://chabadzoom.co.il/series",
+     "date": "",
+     "first_seen": "2026-11-21T22:53:54+00:00"
+    },
+    {
+     "id": "https://chabadzoom.co.il/workshop/%d7%94%d7%93%d7%a8%d7%9b%d7%aa-%d7%94%d7%95%d7%a8%d7%99%d7%9d",
+     "title": "הדרכת הורים",
+     "url": "https://chabadzoom.co.il/workshop/%d7%94%d7%93%d7%a8%d7%9b%d7%aa-%d7%94%d7%95%d7%a8%d7%99%d7%9d",
+     "date": "",
+     "first_seen": "2026-11-21T22:53:54+00:00"
+    }
+   ],
    "latest": [
+    {
+     "id": "content:a09ab446dc727e85",
+     "title": "עדכון בתוכן הדף",
+     "url": "https://chabadzoom.co.il/series",
+     "date": "",
+     "first_seen": "2026-11-21T22:53:54+00:00"
+    },
+    {
+     "id": "https://chabadzoom.co.il/workshop/%d7%94%d7%93%d7%a8%d7%9b%d7%aa-%d7%94%d7%95%d7%a8%d7%99%d7%9d",
+     "title": "הדרכת הורים",
+     "url": "https://chabadzoom.co.il/workshop/%d7%94%d7%93%d7%a8%d7%9b%d7%aa-%d7%94%d7%95%d7%a8%d7%99%d7%9d",
+     "date": "",
+     "first_seen": "2026-11-21T22:53:54+00:00"
+    },
     {
      "id": "content:8b805f9b7fdddeff",
      "title": "עדכון בתוכן הדף",
@@ -764,7 +793,7 @@
     }
    ],
    "total": 564,
-   "last_success_at": "2026-11-21T12:37:57+00:00"
+   "last_success_at": "2026-11-21T22:53:54+00:00"
   },
   {
    "id": "kovtzimdrive",
@@ -778,7 +807,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-21T12:37:59+00:00",
+   "checked_at": "2026-11-21T22:53:57+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -786,12 +815,12 @@
      "id": "https://www.kovtzimdrive.com/posts/bochurim-build-database-of-thousands-of-%E2%80%98he%E2%80%99aros%E2%80%99",
      "title": "bochurim build database of thousands of ‘he’aros’",
      "url": "https://www.kovtzimdrive.com/posts/bochurim-build-database-of-thousands-of-%E2%80%98he%E2%80%99aros%E2%80%99",
-     "date": "2026-11-20",
+     "date": "2026-11-16",
      "first_seen": "2026-10-20T07:59:38+00:00"
     }
    ],
    "total": 1,
-   "last_success_at": "2026-11-21T12:37:59+00:00"
+   "last_success_at": "2026-11-21T22:53:57+00:00"
   },
   {
    "id": "avita",
@@ -805,7 +834,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-21T12:38:01+00:00",
+   "checked_at": "2026-11-21T22:53:59+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -823,7 +852,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-21T12:38:01+00:00",
+   "checked_at": "2026-11-21T22:53:59+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -845,7 +874,7 @@
     }
    ],
    "total": 2,
-   "last_success_at": "2026-11-21T12:38:01+00:00"
+   "last_success_at": "2026-11-21T22:53:59+00:00"
   },
   {
    "id": "dvarmalchus770",
@@ -859,7 +888,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-21T12:38:03+00:00",
+   "checked_at": "2026-11-21T22:54:01+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1009,7 +1038,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-21T12:38:03+00:00"
+   "last_success_at": "2026-11-21T22:54:01+00:00"
   },
   {
    "id": "soulwords",
@@ -1023,7 +1052,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-21T12:38:04+00:00",
+   "checked_at": "2026-11-21T22:54:02+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1093,7 +1122,7 @@
     }
    ],
    "total": 0,
-   "last_success_at": "2026-11-21T12:38:04+00:00"
+   "last_success_at": "2026-11-21T22:54:02+00:00"
   },
   {
    "id": "sie_weekly",
@@ -1107,7 +1136,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-21T12:38:05+00:00",
+   "checked_at": "2026-11-21T22:54:03+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1183,7 +1212,7 @@
     }
    ],
    "total": 118,
-   "last_success_at": "2026-11-21T12:38:05+00:00"
+   "last_success_at": "2026-11-21T22:54:03+00:00"
   },
   {
    "id": "pls",
@@ -1197,7 +1226,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-21T12:38:07+00:00",
+   "checked_at": "2026-11-21T22:54:05+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1363,7 +1392,7 @@
     }
    ],
    "total": 200,
-   "last_success_at": "2026-11-21T12:38:07+00:00"
+   "last_success_at": "2026-11-21T22:54:05+00:00"
   },
   {
    "id": "chayenu_ls",
@@ -1377,7 +1406,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-21T12:38:08+00:00",
+   "checked_at": "2026-11-21T22:54:06+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1411,7 +1440,7 @@
     }
    ],
    "total": 2,
-   "last_success_at": "2026-11-21T12:38:08+00:00"
+   "last_success_at": "2026-11-21T22:54:06+00:00"
   },
   {
    "id": "weekly_sicha",
@@ -1425,7 +1454,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-21T12:38:09+00:00",
+   "checked_at": "2026-11-21T22:54:07+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1501,7 +1530,7 @@
     }
    ],
    "total": 121,
-   "last_success_at": "2026-11-21T12:38:09+00:00"
+   "last_success_at": "2026-11-21T22:54:07+00:00"
   },
   {
    "id": "theyeshiva",
@@ -1515,18 +1544,9 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-21T12:38:11+00:00",
+   "checked_at": "2026-11-21T22:54:09+00:00",
    "status": "ok",
-   "new": [
-    {
-     "id": "https://www.theyeshiva.net/item/10034",
-     "title": "Does Life Sometimes Feel Like Hell? This Class Is for You - Friday: Maamar Yafeh Sha'ah Achas #7",
-     "url": "https://www.theyeshiva.net/item/10034",
-     "date": "Fri, 20 Nov 2026 08:00:00 -0500",
-     "blurb": "What If Heaven and Hell Are the Same Place? This is the seventh of a series of classes on the Maamar (discourse) Yafeh Sha'ah Achas (מאמר יפה שעה אחת) by the Miteler Rebbe, published in Maamarei Admur Haemtzarei (מאמרי אדמו\"ר האמצעי קונטריסים). The class was presented by Rabbi YY Jacobson on Friday, 10 Kislev (the liberation day of the Miteler Rebbe), 5787, November 20, 2026. View Source Sheets: https://portal.theyeshiva.net/api/source-sheets/10034",
-     "first_seen": "2026-11-21T12:38:11+00:00"
-    }
-   ],
+   "new": [],
    "latest": [
     {
      "id": "https://www.theyeshiva.net/item/10034",
@@ -1714,7 +1734,7 @@
     }
    ],
    "total": 1554,
-   "last_success_at": "2026-11-21T12:38:11+00:00"
+   "last_success_at": "2026-11-21T22:54:09+00:00"
   },
   {
    "id": "chassidus_applied",
@@ -1728,18 +1748,9 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-21T12:38:14+00:00",
+   "checked_at": "2026-11-21T22:54:12+00:00",
    "status": "ok",
-   "new": [
-    {
-     "id": "yt:video:sKTidiW3YQg",
-     "title": "Chapter 37.05: How a Mitzvah Impacts the Larger World",
-     "url": "https://www.youtube.com/watch?v=sKTidiW3YQg",
-     "date": "2026-11-20T18:44:46+00:00",
-     "blurb": "Chapter 37.05: How a Mitzvah Impacts the Larger World The Tanya Applied radio show is broadcast every Saturday night, 10–10:30PM ET on WSNR 620 AM – Metro NY area WJPR 1640 AM — Highland Park and Edison, NJ Online: www.talklinenetwork.com By phone: Listen Line: 641-741-0389 Many of us may be familiar with some of the central ideas in Tanya – including the battle of the two souls; what defines man and makes us tick; how we can control our temptations; how we can become more loving; what we can do to curb and harness our vices, like anger, jealousy, and depression; the formula for growth; how we can develop a healthy relationship with G-d; and why we are here. In this 30-minute program, you will learn how these ideas can be applied to your life today. You will discover secrets to a successful life that will transform you and your relationships. Rabbi Simon Jacobson is the best-selling author of Toward a Meaningful Life, and he is the creator of the acclaimed and popular MyLife: Chassidus Applied series, which has empowered and transformed hundreds of thousands through Torah and Chassidus. Now, Rabbi Jacobson brings his vast scholarship and years of experience to Tanya. Please join Rabbi Simon Jacobson for this exhilarating journey into your psyche and soul. You will come away with life-changing practical guidance and direction, addressing all the issues and challenges you face in life. For more info: www.chassidusapplied.com/tanya Music by Zalman Goldstein • www.ChabadMusic.com",
-     "first_seen": "2026-11-21T12:38:14+00:00"
-    }
-   ],
+   "new": [],
    "latest": [
     {
      "id": "yt:video:sKTidiW3YQg",
@@ -2095,7 +2106,7 @@
     }
    ],
    "total": 15,
-   "last_success_at": "2026-11-21T12:38:14+00:00"
+   "last_success_at": "2026-11-21T22:54:12+00:00"
   },
   {
    "id": "neirot",
@@ -2109,7 +2120,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-21T12:38:14+00:00",
+   "checked_at": "2026-11-21T22:54:12+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2163,7 +2174,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-21T12:38:14+00:00"
+   "last_success_at": "2026-11-21T22:54:12+00:00"
   },
   {
    "id": "chassidus_explained",
@@ -2177,7 +2188,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-21T12:38:16+00:00",
+   "checked_at": "2026-11-21T22:54:14+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2255,7 +2266,7 @@
     }
    ],
    "total": 138,
-   "last_success_at": "2026-11-21T12:38:16+00:00"
+   "last_success_at": "2026-11-21T22:54:14+00:00"
   },
   {
    "id": "melukat",
@@ -2269,7 +2280,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-21T12:38:17+00:00",
+   "checked_at": "2026-11-21T22:54:16+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2331,7 +2342,7 @@
     }
    ],
    "total": 168,
-   "last_success_at": "2026-11-21T12:38:17+00:00"
+   "last_success_at": "2026-11-21T22:54:16+00:00"
   },
   {
    "id": "daily_maamar",
@@ -2345,18 +2356,9 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-21T12:38:18+00:00",
+   "checked_at": "2026-11-21T22:54:17+00:00",
    "status": "ok",
-   "new": [
-    {
-     "id": "e69dd593-34cc-4caa-a3a6-3eb71b5aa004",
-     "title": "Motzaei Sh”p Vayeitze 9/Ohr l’yud Kislev 5738 (B’Chedroi), Maamorim Melukatim Vol. 2– Episode 5",
-     "url": "https://share.transistor.fm/s/d0a026e5",
-     "date": "Fri, 20 Nov 2026 09:27:49 -0500",
-     "blurb": "This episode covers from Chapter 10 through the 1st paragraph in Chapter 12. The power of words and action.",
-     "first_seen": "2026-11-21T12:38:18+00:00"
-    }
-   ],
+   "new": [],
    "latest": [
     {
      "id": "e69dd593-34cc-4caa-a3a6-3eb71b5aa004",
@@ -2640,7 +2642,7 @@
     }
    ],
    "total": 370,
-   "last_success_at": "2026-11-21T12:38:18+00:00"
+   "last_success_at": "2026-11-21T22:54:17+00:00"
   },
   {
    "id": "wellsprings",
@@ -2654,7 +2656,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-21T12:38:20+00:00",
+   "checked_at": "2026-11-21T22:54:18+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2700,7 +2702,7 @@
     }
    ],
    "total": 125,
-   "last_success_at": "2026-11-21T12:38:20+00:00"
+   "last_success_at": "2026-11-21T22:54:18+00:00"
   },
   {
    "id": "daily_sicha",
@@ -2714,7 +2716,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-21T12:38:21+00:00",
+   "checked_at": "2026-11-21T22:54:19+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2992,7 +2994,7 @@
     }
    ],
    "total": 1433,
-   "last_success_at": "2026-11-21T12:38:21+00:00"
+   "last_success_at": "2026-11-21T22:54:19+00:00"
   },
   {
    "id": "learnchassidus",
@@ -3006,7 +3008,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-21T12:38:26+00:00",
+   "checked_at": "2026-11-21T22:54:24+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -3019,7 +3021,7 @@
     }
    ],
    "total": 5,
-   "last_success_at": "2026-11-21T12:38:26+00:00"
+   "last_success_at": "2026-11-21T22:54:24+00:00"
   },
   {
    "id": "simplychassidus",
@@ -3033,7 +3035,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-21T12:38:27+00:00",
+   "checked_at": "2026-11-21T22:54:25+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -3060,7 +3062,7 @@
     }
    ],
    "total": 4,
-   "last_success_at": "2026-11-21T12:38:27+00:00"
+   "last_success_at": "2026-11-21T22:54:25+00:00"
   },
   {
    "id": "alonei_chabad",
@@ -3073,7 +3075,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-21T12:38:28+00:00",
+   "checked_at": "2026-11-21T22:54:26+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -3090,7 +3092,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-21T12:38:28+00:00",
+   "checked_at": "2026-11-21T22:54:26+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -3107,7 +3109,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-21T12:38:28+00:00",
+   "checked_at": "2026-11-21T22:54:26+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -3134,7 +3136,7 @@
     }
    ],
    "total": 303,
-   "last_success_at": "2026-11-21T12:38:28+00:00"
+   "last_success_at": "2026-11-21T22:54:26+00:00"
   },
   {
    "id": "lchaim",
@@ -3147,7 +3149,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-21T12:38:29+00:00",
+   "checked_at": "2026-11-21T22:54:27+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -3223,7 +3225,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-21T12:38:29+00:00"
+   "last_success_at": "2026-11-21T22:54:27+00:00"
   },
   {
    "id": "one_point",
@@ -3236,7 +3238,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-21T12:38:30+00:00",
+   "checked_at": "2026-11-21T22:54:29+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -3277,7 +3279,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-21T12:38:30+00:00"
+   "last_success_at": "2026-11-21T22:54:29+00:00"
   },
   {
    "id": "derher",
@@ -3290,7 +3292,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-21T12:38:32+00:00",
+   "checked_at": "2026-11-21T22:54:30+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -3307,7 +3309,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-21T12:38:32+00:00",
+   "checked_at": "2026-11-21T22:54:30+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -3324,7 +3326,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-21T12:38:32+00:00",
+   "checked_at": "2026-11-21T22:54:30+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -3414,7 +3416,7 @@
     }
    ],
    "total": 2,
-   "last_success_at": "2026-11-21T12:38:32+00:00"
+   "last_success_at": "2026-11-21T22:54:30+00:00"
   },
   {
    "id": "maynotecha_inst",
@@ -3427,7 +3429,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-21T12:38:34+00:00",
+   "checked_at": "2026-11-21T22:54:32+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -3444,7 +3446,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-21T12:38:34+00:00",
+   "checked_at": "2026-11-21T22:54:32+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -3490,7 +3492,7 @@
     }
    ],
    "total": 1,
-   "last_success_at": "2026-11-21T12:38:34+00:00"
+   "last_success_at": "2026-11-21T22:54:32+00:00"
   },
   {
    "id": "anash",
@@ -3503,19 +3505,27 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-21T12:38:35+00:00",
+   "checked_at": "2026-11-21T22:54:33+00:00",
    "status": "ok",
    "new": [
     {
-     "id": "https://anash.org/?p=1136330",
-     "title": "The Uncle For Whom the Rebbe Said Kaddish on Yud Kislev",
-     "url": "https://anash.org/the-uncle-for-whom-the-rebbe-said-kaddish-on-yud-kislev/",
-     "date": "Fri, 20 Nov 2026 14:05:00 +0000",
-     "blurb": "Yud Kislev was one of the few days each year when the Rebbe said Kaddish at the end of davening , marking the yahrtzeit of Reb Shmuel Schneerson , the rav of Nikolayev and the Rebbe’s uncle on both sides of the family.",
-     "first_seen": "2026-11-21T12:38:35+00:00"
+     "id": "https://anash.org/?p=556249",
+     "title": "‘Why Do You Ask Me? Ask Someone Who Knows Chassidus!’",
+     "url": "https://anash.org/why-do-you-ask-me-ask-someone-who-knows-chassidus/",
+     "date": "Sat, 21 Nov 2026 22:25:00 +0000",
+     "blurb": "When Yerucham Garelik asked him for pshat in his father's maamar , the yet-to-be Frierdiker Rebbe played unlearned. But then R. Avrohom Elye Plotkin caught him writing an explanation on the question, and advised Yerucham to extract it from him.",
+     "first_seen": "2026-11-21T22:54:33+00:00"
     }
    ],
    "latest": [
+    {
+     "id": "https://anash.org/?p=556249",
+     "title": "‘Why Do You Ask Me? Ask Someone Who Knows Chassidus!’",
+     "url": "https://anash.org/why-do-you-ask-me-ask-someone-who-knows-chassidus/",
+     "date": "Sat, 21 Nov 2026 22:25:00 +0000",
+     "blurb": "When Yerucham Garelik asked him for pshat in his father's maamar , the yet-to-be Frierdiker Rebbe played unlearned. But then R. Avrohom Elye Plotkin caught him writing an explanation on the question, and advised Yerucham to extract it from him.",
+     "first_seen": "2026-11-21T22:54:33+00:00"
+    },
     {
      "id": "https://anash.org/?p=1136330",
      "title": "The Uncle For Whom the Rebbe Said Kaddish on Yud Kislev",
@@ -3981,8 +3991,8 @@
      "first_seen": "2026-10-18T04:52:22+00:00"
     }
    ],
-   "total": 9,
-   "last_success_at": "2026-11-21T12:38:35+00:00"
+   "total": 8,
+   "last_success_at": "2026-11-21T22:54:33+00:00"
   },
   {
    "id": "collive",
@@ -3995,7 +4005,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-21T12:38:36+00:00",
+   "checked_at": "2026-11-21T22:54:34+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -4012,7 +4022,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-21T12:38:36+00:00",
+   "checked_at": "2026-11-21T22:54:34+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -4029,7 +4039,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-21T12:38:36+00:00",
+   "checked_at": "2026-11-21T22:54:34+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -4063,7 +4073,7 @@
     }
    ],
    "total": 20,
-   "last_success_at": "2026-11-21T12:38:36+00:00"
+   "last_success_at": "2026-11-21T22:54:34+00:00"
   },
   {
    "id": "abc770",
@@ -4076,7 +4086,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-21T12:38:37+00:00",
+   "checked_at": "2026-11-21T22:54:36+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -4122,7 +4132,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-21T12:38:37+00:00"
+   "last_success_at": "2026-11-21T22:54:36+00:00"
   },
   {
    "id": "kehot",
@@ -4135,7 +4145,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-21T12:38:40+00:00",
+   "checked_at": "2026-11-21T22:54:39+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -4845,7 +4855,7 @@
     }
    ],
    "total": 197,
-   "last_success_at": "2026-11-21T12:38:40+00:00"
+   "last_success_at": "2026-11-21T22:54:39+00:00"
   }
  ],
  "browser_checks": {
