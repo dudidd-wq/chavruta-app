@@ -5958,6 +5958,77 @@ function ftDocs(t) {
 /* ---- ניקוי HTML: רק תגים מותרים, בלי מאפיינים (מלבד data-k / data-n מוכרים) ---- */
 const FT_TAGS = new Set(["P", "BR", "B", "I", "SUP", "SUB", "SMALL", "SPAN", "H1", "H2", "H3", "H4", "H5", "H6", "HR"]);
 const FT_KINDS = { pg: "ft-old", gp: "ft-gp", sm: "ft-sm", q: "ft-q", ks: "ft-ks" };
+function ftIsCoreChar(ch) {
+  return (ch >= "\u05D0" && ch <= "\u05EA") || (ch >= "0" && ch <= "9");
+}
+function ftIsNiqqudChar(ch) {
+  const c = ch.charCodeAt(0);
+  return c >= 0x0591 && c <= 0x05C7;
+}
+/** מחזיר סימני <sup> (והפניות) מהמקור אל טקסט ש־Dicta הסירה ממנו תגיות */
+function ftRestoreMarkup(srcHtml, destText) {
+  if (!destText) return srcHtml || "";
+  if (!srcHtml || !/<sup\b/i.test(srcHtml)) return destText;
+  if (/<sup\b/i.test(destText)) {
+    return destText.replace(/<sup(\s[^>]*)?>(\s*)(e?\d{1,9})(\s*)<\/sup>/gi, (m, a, pre, n, post) => {
+      if (/\bdata-n\s*=/.test(a || "")) return m;
+      return "<sup data-n=\"" + n + "\">" + pre + n + post + "</sup>";
+    });
+  }
+  const src = [];
+  const pushText = (s, n) => {
+    s = String(s || "").replace(/<[^>]+>/g, "");
+    for (const ch of s) src.push({ ch, n });
+  };
+  const re = /<sup(\s[^>]*)?>([\s\S]*?)<\/sup>/gi;
+  let last = 0, m;
+  while ((m = re.exec(srcHtml))) {
+    if (m.index > last) pushText(srcHtml.slice(last, m.index), null);
+    const inner = m[2].replace(/<[^>]+>/g, "").trim();
+    const dn = /data-n\s*=\s*["']?(e?\d+)/i.exec(m[1] || "");
+    const n = (dn && dn[1]) || (/^e?\d{1,9}$/.test(inner) ? inner : null);
+    pushText(inner, n);
+    last = m.index + m[0].length;
+  }
+  if (last < srcHtml.length) pushText(srcHtml.slice(last), null);
+  let i = 0, si = 0, open = null, out = "";
+  const close = () => { if (open) { out += "</sup>"; open = null; } };
+  const openSup = n => { if (open === n) return; close(); if (n) { out += "<sup data-n=\"" + n + "\">"; open = n; } };
+  const dest = String(destText);
+  while (si < dest.length && i < src.length) {
+    const dch = dest[si];
+    if (!ftIsCoreChar(dch)) {
+      if (open && !ftIsNiqqudChar(dch)) close();
+      out += dch; si++; continue;
+    }
+    const sch = src[i].ch;
+    if (!ftIsCoreChar(sch)) { i++; continue; }
+    if (sch === dch) { openSup(src[i].n); out += dch; i++; si++; continue; }
+    if (sch === "י" || sch === "ו") { i++; continue; }
+    if (dch === "י" || dch === "ו") { out += dch; si++; continue; }
+    close(); out += dch; si++; i++;
+  }
+  close();
+  if (si < dest.length) out += dest.slice(si);
+  return out;
+}
+function ftAlignNotes(orig, vocal) {
+  if (!orig || !orig.length) return vocal || orig || [];
+  if (vocal && vocal.length === orig.length) return vocal;
+  if (!vocal || !vocal.length) return orig;
+  const joined = vocal.join("\n");
+  const idxs = [];
+  const re = /(?:^|\n)\s*\*?\d+\s*[).]\s*/g;
+  let m;
+  while ((m = re.exec(joined))) idxs.push(m.index);
+  if (idxs.length !== orig.length) return orig;
+  return idxs.map((st, i) => joined.slice(st, i + 1 < idxs.length ? idxs[i + 1] : joined.length).trim());
+}
+function ftNoteNum(s, i) {
+  const m = String(s || "").match(/^\s*\*?(\d{1,9})\s*[).]/);
+  return m ? m[1] : String(i + 1);
+}
+
 function ftSafe(html, prefix) {
   const doc = new DOMParser().parseFromString("<body>" + String(html || "") + "</body>", "text/html"), frag = document.createDocumentFragment();
   const add = (from, to) => { for (const node of from.childNodes) {
@@ -5969,8 +6040,9 @@ function ftSafe(html, prefix) {
     const el = document.createElement(tagName.toLowerCase());
     if (tag === "SPAN") { const k = node.getAttribute("data-k"); if (FT_KINDS[k]) el.className = FT_KINDS[k]; if (k === "pg") el.title = "עמוד במהדורה הקודמת"; if (k === "gp") el.textContent = "עמ׳ "; }
     if (tag === "SUP" && prefix) {
-      const n = node.getAttribute("data-n");
-      if (/^e?\d{1,9}$/.test(n || "")) { const a = h("a", { class: "ft-ref", href: "#", id: prefix + "-r-" + n, "data-note": prefix + "-n-" + n, "aria-label": "הערה " + node.textContent }); el.append(a); add(node, a); to.append(el); continue; }
+      let n = node.getAttribute("data-n");
+      if (!n) { const t = (node.textContent || "").trim(); if (/^e?\d{1,9}$/.test(t)) n = t; }
+      if (/^e?\d{1,9}$/.test(n || "")) { const a = h("a", { class: "ft-ref", href: "#", id: prefix + "-r-" + n, "data-note": prefix + "-n-" + n, "aria-label": "הערה " + n }); el.append(a); add(node, a); to.append(el); continue; }
     }
     to.append(el); add(node, el);
   } };
@@ -6249,14 +6321,18 @@ async function ftMafteiachLayer(s, t, d, toolsHost) {
     } catch (e) { /* שכבת ניקוד אופציונלית */ }
   }
   const paint = useNikud => {
-    const rec = useNikud && nikudEntry ? nikudEntry : entry;
+    const rec = (useNikud && nikudEntry)
+      ? { t: ftRestoreMarkup(entry.t, nikudEntry.t), n: ftAlignNotes(entry.n, nikudEntry.n), k: nikudEntry.k || entry.k }
+      : entry;
+    const pre = "ft-he-" + rec.k;
     text.replaceChildren();
-    text.append(ftSafe(ftBlocks(rec.t), "ft-he-" + rec.k + (useNikud && nikudEntry ? "-nikud" : "")));
+    text.append(ftSafe(ftBlocks(rec.t), pre));
     notesHost.replaceChildren();
     if (rec.n && rec.n.length) {
       const ol = h("div", { class: "ft-notes-l" });
-      rec.n.forEach(n => {
-        const it = h("div", { class: "ft-note" });
+      rec.n.forEach((n, i) => {
+        const num = ftNoteNum(n, i);
+        const it = h("div", { class: "ft-note", id: pre + "-n-" + num, tabindex: "-1" });
         it.append(ftSafe(n, ""));
         ol.append(it);
       });
@@ -6268,6 +6344,14 @@ async function ftMafteiachLayer(s, t, d, toolsHost) {
     h("p", { class: "ft-related-note" }, "תרגום מאתר מפתח (mafteiach.app). אינו מוגה, ואינו הנוסח המקורי."),
     text, notesHost);
   const wrap = h("details", { class: "ft-related ft-he-layer" }, h("summary", null, label), body);
+  wrap.addEventListener("click", e => {
+    const a = e.target.closest("a.ft-ref, a.ft-back"); if (!a) return;
+    e.preventDefault();
+    const el = document.getElementById(a.dataset.note); if (!el) return;
+    const det = el.closest("details"); if (det) det.open = true;
+    wrap.open = true;
+    el.scrollIntoView({ block: "center" }); el.focus({ preventScroll: true });
+  });
   if (nikudEntry) {
     const buttons = [];
     const note = h("p", { class: "ft-related-note ft-nikud-note" }, "ניקוד אוטומטי מאת Dicta (שירות חינמי). ייתכנו טעויות.");
