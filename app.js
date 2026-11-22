@@ -137,7 +137,8 @@ function loadChunk(name) {
     if (name === "cite-resolutions" || name.startsWith("cite-text-") || name === "kab-citers" || name === "kabbalah") query.set("v", document.querySelector('script[src^="app.js?v="]')?.getAttribute("src")?.split("?v=")[1] || "cite");
     if (name.startsWith("text/")) query.set("v", typeof ftVersion === "function" ? ftVersion(name) : "text");
     if (attempt) query.set("retry", String(attempt));
-    s.src = chunkFile(name) + (query.size ? "?" + query : ""); s.async = true;
+    const assetBase = (document.querySelector('meta[name="chavruta-asset-base"]') || {}).content || "";
+    s.src = assetBase + chunkFile(name) + (query.size ? "?" + query : ""); s.async = true;
     s.onerror = fail;
     s.onload = () => { if (!settled) fail(); };
     document.head.append(s);
@@ -674,6 +675,7 @@ async function route(opts = {}) {
   const handler = VIEWS[view];
   const main = $("#view");
   closeMenu(); hideTip(); closePalette?.(); Notes.hide?.();
+  document.querySelectorAll("#top .ft-nikud-toggle, #top .ft-nikud-tools, .ft-nikud-float").forEach(el => el.remove());
   document.body.classList.remove("toc-open");
   if (!handler) { main.replaceChildren(h("div", { class: "empty" }, h("b", null, "העמוד לא נמצא"), "הכתובת אינה מוכרת. ", h("a", { href: mkHash(["home"]) }, "לדף הבית"))); R.view = ""; updateChrome(); return; }
   const sameView = R.view === view && R.cur.seg[1] === rest[0];
@@ -6154,7 +6156,9 @@ async function ftDocView(main, s, t, i, q, ctx) {
     dp > 0 ? h("a", { class: "btn", href: mkHash(["read", t.slug, String(t.n[docs[dp - 1]][0])]), rel: "prev" }, "→ ", trunc(t.n[docs[dp - 1]][1], 40)) : h("span"),
     h("a", { class: "btn ghost", href: mkHash(["read", t.slug, String(t.n[t.parent[d] >= 0 ? t.parent[d] : 0][0])]) }, "תוכן"),
     dp < docs.length - 1 ? h("a", { class: "btn", href: mkHash(["read", t.slug, String(t.n[docs[dp + 1]][0])]), rel: "next" }, trunc(t.n[docs[dp + 1]][1], 40), " ←") : h("span"));
+  const nikudTools = h("span", { class: "ft-nikud-tools" });
   const tools = h("div", { class: "ft-tools" },
+    nikudTools,
     h("button", { type: "button", class: "btn sm", onclick: () => typeof openReadingPreferences === "function" && openReadingPreferences() }, icon("n-type"), "התאמת הקריאה"),
     h("button", { type: "button", class: "btn sm", onclick: async () => { await copyText(absUrl(mkHash(["read", t.slug, String(t.n[target][0])], {}, { nomode: true }))); toast("הקישור הועתק"); } }, "העתקת קישור"));
   const body = h("article", { class: "ft-body", lang: "he", dir: "rtl" });
@@ -6186,7 +6190,7 @@ async function ftDocView(main, s, t, i, q, ctx) {
   wait.remove(); sync();
   const heHost = h("div");
   main.append(nav(), heHost, ftRelated(t, target), ftCredit(s, t.n[target][0]));
-  ftMafteiachLayer(s, t, d).then(el => { if (!ctx.alive()) return; if (el) heHost.replaceWith(el); else heHost.remove(); });
+  ftMafteiachLayer(s, t, d, nikudTools).then(el => { if (!ctx.alive()) return; if (el) heHost.replaceWith(el); else heHost.remove(); });
   body.addEventListener("click", e => {
     const a = e.target.closest("a.ft-ref, a.ft-back"); if (!a) return;
     e.preventDefault(); const el = document.getElementById(a.dataset.note); if (!el) return;
@@ -6204,7 +6208,7 @@ async function ftDocView(main, s, t, i, q, ctx) {
 
 const FT_HE_LABEL = "תרגום ללשון הקודש – לא מוגה (מפתח)";
 /** שכבת תרגום מפתח (אם יש לשיחה הנוכחית). מוצגת בנפרד, מתחת לנוסח המקור. */
-async function ftMafteiachLayer(s, t, d) {
+async function ftMafteiachLayer(s, t, d, toolsHost) {
   const mf = s && s.mafteiach;
   if (!mf || !mf.he) return null;
   const leaves = ftIsLeaf(t, d) ? [d] : ftKids(t, d).filter(k => ftIsLeaf(t, k));
@@ -6263,26 +6267,53 @@ async function ftMafteiachLayer(s, t, d) {
   const body = h("div", { class: "ft-related-body ft-he-body" },
     h("p", { class: "ft-related-note" }, "תרגום מאתר מפתח (mafteiach.app). אינו מוגה, ואינו הנוסח המקורי."),
     text, notesHost);
+  const wrap = h("details", { class: "ft-related ft-he-layer" }, h("summary", null, label), body);
   if (nikudEntry) {
-    const btn = h("button", { type: "button", class: "btn sm ft-nikud-toggle", "aria-pressed": "false" }, "הצג ניקוד");
+    const buttons = [];
     const note = h("p", { class: "ft-related-note ft-nikud-note" }, "ניקוד אוטומטי מאת Dicta (שירות חינמי). ייתכנו טעויות.");
-    const apply = on => {
-      writePref(on);
+    const labelBtn = (btn, on) => {
       btn.setAttribute("aria-pressed", on ? "true" : "false");
-      btn.textContent = on ? "הסתר ניקוד" : "הצג ניקוד";
+      btn.replaceChildren(
+        h("span", { class: "ft-nikud-long" }, on ? "הסתר ניקוד" : "הצג ניקוד"),
+        h("span", { class: "ft-nikud-short" }, "ניקוד")
+      );
+    };
+    const apply = (on, scroll) => {
+      writePref(on);
+      for (const b of buttons) labelBtn(b, on);
       note.hidden = !on;
       paint(on);
+      if (on) wrap.open = true;
+      if (on && scroll) {
+        try { wrap.scrollIntoView({ block: "start", behavior: "smooth" }); } catch (e) { wrap.scrollIntoView(true); }
+      }
     };
-    btn.addEventListener("click", () => apply(btn.getAttribute("aria-pressed") !== "true"));
-    body.prepend(h("div", { class: "ft-nikud-bar" }, btn), note);
-    if (readPref()) apply(true);
+    const makeBtn = () => {
+      const btn = h("button", { type: "button", class: "btn sm ft-nikud-toggle", "aria-pressed": "false", title: "הצג או הסתר ניקוד בתרגום ללשון הקודש" });
+      labelBtn(btn, false);
+      btn.addEventListener("click", () => apply(btn.getAttribute("aria-pressed") !== "true", true));
+      buttons.push(btn);
+      return btn;
+    };
+    body.prepend(h("div", { class: "ft-nikud-bar" }, note));
+    if (toolsHost) toolsHost.append(makeBtn());
+    const topTools = document.querySelector("#top .tools");
+    if (topTools) topTools.prepend(makeBtn());
+    const topBar = document.getElementById("top");
+    if (topBar) {
+      const float = h("div", { class: "ft-nikud-float no-print" }, makeBtn());
+      topBar.after(float);
+    }
+    if (!buttons.length) body.prepend(h("div", { class: "ft-nikud-bar" }, makeBtn()));
+    if (readPref()) apply(true, false);
     else note.hidden = true;
   }
   if (entry.src) {
     body.append(h("p", { class: "muted" }, h("a", { href: entry.src, target: "_blank", rel: "noopener" }, "המקור במפתח", typeof icon === "function" ? icon("i-ext") : " ↗")));
   }
-  return h("details", { class: "ft-related ft-he-layer", open: !!(nikudEntry && readPref()) }, h("summary", null, label), body);
+  return wrap;
 }
+
 
 function ftRelated(t, target) {
   const id = t.n[target][0];
