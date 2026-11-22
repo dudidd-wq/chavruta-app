@@ -6238,10 +6238,14 @@ async function ftDocView(main, s, t, i, q, ctx) {
   const before = h("button", { type: "button", class: "btn ft-more", onclick: () => grow(-1) }), after = h("button", { type: "button", class: "btn ft-more", onclick: () => grow(1) });
   body.append(before, after);
   const chunkOf = j => t.n[j][2];
-  const render = async (a, b, where) => {
+  const loadRows = async (a, b) => {
     const need = [...new Set(docLeaves.slice(a, b).map(chunkOf).filter(c => c >= 0))];
     const loaded = await Promise.all(need.map(c => loadChunk(`text/${t.slug}/c${String(c).padStart(3, "0")}`)));
     const rows = new Map(); for (const c of loaded) for (const r of c.p) rows.set(r[0], r);
+    return rows;
+  };
+  const render = async (a, b, where, readyRows) => {
+    const rows = readyRows || await loadRows(a, b);
     const frag = document.createDocumentFragment();
     for (const j of docLeaves.slice(a, b)) frag.append(ftPage(t, j, rows.get(t.n[j][0]), docLeaves.length > 1));
     if (where < 0) before.after(frag); else after.before(frag);
@@ -6257,7 +6261,18 @@ async function ftDocView(main, s, t, i, q, ctx) {
   };
   const wait = h("div", { class: "loading", role: "status" }, h("span", { class: "spin", "aria-hidden": "true" }), "טוען את הטקסט…");
   body.prepend(wait);
-  try { await render(from, to, 1); } catch (e) { wait.replaceWith(h("div", { class: "empty" }, h("b", null, "לא ניתן לטעון את הטקסט"), String(e.message || e))); return; }
+  try {
+    const rows0 = await loadRows(from, to);
+    if (!ctx.alive()) return;
+    let vis = tp;
+    for (let k = tp - 1; k >= from; k--) {
+      const row = rows0.get(t.n[docLeaves[k]][0]);
+      if (!row || ftPageIsGarbage(row[1] || "")) break;
+      vis = k;
+    }
+    from = vis;
+    await render(from, to, 1, rows0);
+  } catch (e) { wait.replaceWith(h("div", { class: "empty" }, h("b", null, "לא ניתן לטעון את הטקסט"), String(e.message || e))); return; }
   if (!ctx.alive()) return;
   wait.remove(); sync();
   const heHost = h("div");
@@ -6322,8 +6337,8 @@ async function ftMafteiachLayer(s, t, d, toolsHost) {
   }
   const paint = useNikud => {
     const rec = (useNikud && nikudEntry)
-      ? { t: ftRestoreMarkup(entry.t, nikudEntry.t), n: ftAlignNotes(entry.n, nikudEntry.n), k: nikudEntry.k || entry.k }
-      : entry;
+      ? { t: ftCleanOcrHtml(ftRestoreMarkup(entry.t, nikudEntry.t)), n: ftAlignNotes(entry.n, nikudEntry.n), k: nikudEntry.k || entry.k }
+      : { ...entry, t: ftCleanOcrHtml(entry.t) };
     const pre = "ft-he-" + rec.k;
     text.replaceChildren();
     text.append(ftSafe(ftBlocks(rec.t), pre));
@@ -6439,11 +6454,77 @@ function ftRelated(t, target) {
   return box;
 }
 
+
+function ftPlainOcr(s) {
+  return String(s || "").replace(/<[^>]+>/g, "").replace(/&[a-z]+;/gi, " ").replace(/[ \t]+/g, " ").trim();
+}
+
+function ftStripNiqqud(s) {
+  return String(s || "").replace(/[\u0591-\u05C7]/g, "");
+}
+
+function ftIsGarbageLine(line) {
+  if (/<(?:sup|h[1-6])\b/i.test(line)) return false;
+  const text = ftPlainOcr(line);
+  if (!text) return true;
+  const bare = ftStripNiqqud(text).replace(/[\"״'"׳]/g, "");
+  if (/^(?:\*\s*){1,6}$/.test(text) || /\*\s+\*\s+\*/.test(text)) return false;
+  if (/^[\u05D0-\u05EA]{1,3}[).:]$/.test(bare.trim()) || /^[\u05D0-\u05EA]{1,3}\.\s*.+/.test(bare)) return false;
+  if (/^[\u05D0-\u05EA]$/.test(bare.trim())) return false;
+  if (/^ב[\s]*[הד][\s]*\.?$/.test(bare.trim())) return false;
+  if (/^פרשת\s/.test(bare)) return false;
+  if (/^[\u05D0-\u05EA]{2,12}$/.test(bare.trim())) return false;
+  const heb = (bare.match(/[\u05D0-\u05EA]/g) || []).length;
+  const w3 = (bare.match(/[\u05D0-\u05EA]{3,}/g) || []).length;
+  const w2 = (bare.match(/[\u05D0-\u05EA]{2,}/g) || []).length;
+  const n = bare.length;
+  const punct = (bare.match(/[.\-–,;:!?\[\]()%*|/=_*]/g) || []).length;
+  if (w3 >= 3) return false;
+  if (w3 >= 2 && n && heb / n >= 0.45) return false;
+  if (w3 >= 1 && n && heb / n >= 0.55 && n >= 8) return false;
+  if (w3 === 0 && w2 <= 2) return true;
+  if (n && heb / n < 0.4 && w3 <= 1) return true;
+  if (n && punct / n > 0.5 && w3 <= 2) return true;
+  return false;
+}
+
+function ftCleanOcrHtml(html) {
+  if (!html) return html || "";
+  const s = String(html).replace(/<br\s*\/?>/gi, "\n");
+  const parts = s.split(/(<(?:h[1-6])[\s\S]*?<\/(?:h[1-6])>|<p\b[\s\S]*?<\/p>)/i);
+  const out = [];
+  for (const part of parts) {
+    if (!part) continue;
+    const t = part.trim();
+    if (/^<h[1-6]\b/i.test(t)) { out.push(part); continue; }
+    if (/^<p\b/i.test(t)) { if (!ftIsGarbageLine(part)) out.push(part); continue; }
+    for (const ln of part.split("\n")) {
+      if (!ln.trim()) { out.push(ln); continue; }
+      if (!ftIsGarbageLine(ln)) out.push(ln);
+    }
+  }
+  return out.join("\n").replace(/^\s+|\s+$/g, "");
+}
+
+function ftPageIsGarbage(html) {
+  const text = ftStripNiqqud(ftPlainOcr(ftCleanOcrHtml(html)));
+  if (!text) return true;
+  const w3 = (text.match(/[\u05D0-\u05EA]{3,}/g) || []).length;
+  const heb = (text.match(/[\u05D0-\u05EA]/g) || []).length;
+  const n = text.length;
+  if (w3 <= 3 && n < 120) return true;
+  if (w3 <= 5 && n < 80) return true;
+  if (heb / n < 0.28 && w3 < 15) return true;
+  return false;
+}
+
 function ftPage(t, j, row, marker) {
   const id = t.n[j][0], sec = h("section", { class: "ft-page", id: "ft-" + id, "aria-label": t.n[j][1] || "עמוד" });
   if (marker) sec.append(h("a", { class: "ft-pgmark", href: mkHash(["read", t.slug, String(id)]), title: "קישור לעמוד הזה" }, t.n[j][1]));
   if (!row) { sec.append(h("p", { class: "muted" }, "הטקסט של העמוד הזה אינו זמין.")); return sec; }
-  const pre = "ft" + id, text = h("div", { class: "ft-text" }); text.append(ftSafe(ftBlocks(row[1]), pre)); sec.append(text);
+  const html = ftCleanOcrHtml(row[1] || "");
+  if (ftPageIsGarbage(row[1] || "")) sec.classList.add("ft-page-empty");
+  const pre = "ft" + id, text = h("div", { class: "ft-text" }); text.append(ftSafe(ftBlocks(html), pre)); sec.append(text);
   const notes = row[2] || [];
   if (notes.length) {
     const ol = h("div", { class: "ft-notes-l" });
