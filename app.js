@@ -137,7 +137,8 @@ function loadChunk(name) {
     if (name === "cite-resolutions" || name.startsWith("cite-text-") || name === "kab-citers" || name === "kabbalah") query.set("v", document.querySelector('script[src^="app.js?v="]')?.getAttribute("src")?.split("?v=")[1] || "cite");
     if (name.startsWith("text/")) query.set("v", typeof ftVersion === "function" ? ftVersion(name) : "text");
     if (attempt) query.set("retry", String(attempt));
-    s.src = chunkFile(name) + (query.size ? "?" + query : ""); s.async = true;
+    const assetBase = (document.querySelector('meta[name="chavruta-asset-base"]') || {}).content || "";
+    s.src = assetBase + chunkFile(name) + (query.size ? "?" + query : ""); s.async = true;
     s.onerror = fail;
     s.onload = () => { if (!settled) fail(); };
     document.head.append(s);
@@ -674,6 +675,7 @@ async function route(opts = {}) {
   const handler = VIEWS[view];
   const main = $("#view");
   closeMenu(); hideTip(); closePalette?.(); Notes.hide?.();
+  document.querySelectorAll("#top .ft-nikud-toggle, #top .ft-nikud-tools, .ft-nikud-float").forEach(el => el.remove());
   document.body.classList.remove("toc-open");
   if (!handler) { main.replaceChildren(h("div", { class: "empty" }, h("b", null, "העמוד לא נמצא"), "הכתובת אינה מוכרת. ", h("a", { href: mkHash(["home"]) }, "לדף הבית"))); R.view = ""; updateChrome(); return; }
   const sameView = R.view === view && R.cur.seg[1] === rest[0];
@@ -5956,6 +5958,77 @@ function ftDocs(t) {
 /* ---- ניקוי HTML: רק תגים מותרים, בלי מאפיינים (מלבד data-k / data-n מוכרים) ---- */
 const FT_TAGS = new Set(["P", "BR", "B", "I", "SUP", "SUB", "SMALL", "SPAN", "H1", "H2", "H3", "H4", "H5", "H6", "HR"]);
 const FT_KINDS = { pg: "ft-old", gp: "ft-gp", sm: "ft-sm", q: "ft-q", ks: "ft-ks" };
+function ftIsCoreChar(ch) {
+  return (ch >= "\u05D0" && ch <= "\u05EA") || (ch >= "0" && ch <= "9");
+}
+function ftIsNiqqudChar(ch) {
+  const c = ch.charCodeAt(0);
+  return c >= 0x0591 && c <= 0x05C7;
+}
+/** מחזיר סימני <sup> (והפניות) מהמקור אל טקסט ש־Dicta הסירה ממנו תגיות */
+function ftRestoreMarkup(srcHtml, destText) {
+  if (!destText) return srcHtml || "";
+  if (!srcHtml || !/<sup\b/i.test(srcHtml)) return destText;
+  if (/<sup\b/i.test(destText)) {
+    return destText.replace(/<sup(\s[^>]*)?>(\s*)(e?\d{1,9})(\s*)<\/sup>/gi, (m, a, pre, n, post) => {
+      if (/\bdata-n\s*=/.test(a || "")) return m;
+      return "<sup data-n=\"" + n + "\">" + pre + n + post + "</sup>";
+    });
+  }
+  const src = [];
+  const pushText = (s, n) => {
+    s = String(s || "").replace(/<[^>]+>/g, "");
+    for (const ch of s) src.push({ ch, n });
+  };
+  const re = /<sup(\s[^>]*)?>([\s\S]*?)<\/sup>/gi;
+  let last = 0, m;
+  while ((m = re.exec(srcHtml))) {
+    if (m.index > last) pushText(srcHtml.slice(last, m.index), null);
+    const inner = m[2].replace(/<[^>]+>/g, "").trim();
+    const dn = /data-n\s*=\s*["']?(e?\d+)/i.exec(m[1] || "");
+    const n = (dn && dn[1]) || (/^e?\d{1,9}$/.test(inner) ? inner : null);
+    pushText(inner, n);
+    last = m.index + m[0].length;
+  }
+  if (last < srcHtml.length) pushText(srcHtml.slice(last), null);
+  let i = 0, si = 0, open = null, out = "";
+  const close = () => { if (open) { out += "</sup>"; open = null; } };
+  const openSup = n => { if (open === n) return; close(); if (n) { out += "<sup data-n=\"" + n + "\">"; open = n; } };
+  const dest = String(destText);
+  while (si < dest.length && i < src.length) {
+    const dch = dest[si];
+    if (!ftIsCoreChar(dch)) {
+      if (open && !ftIsNiqqudChar(dch)) close();
+      out += dch; si++; continue;
+    }
+    const sch = src[i].ch;
+    if (!ftIsCoreChar(sch)) { i++; continue; }
+    if (sch === dch) { openSup(src[i].n); out += dch; i++; si++; continue; }
+    if (sch === "י" || sch === "ו") { i++; continue; }
+    if (dch === "י" || dch === "ו") { out += dch; si++; continue; }
+    close(); out += dch; si++; i++;
+  }
+  close();
+  if (si < dest.length) out += dest.slice(si);
+  return out;
+}
+function ftAlignNotes(orig, vocal) {
+  if (!orig || !orig.length) return vocal || orig || [];
+  if (vocal && vocal.length === orig.length) return vocal;
+  if (!vocal || !vocal.length) return orig;
+  const joined = vocal.join("\n");
+  const idxs = [];
+  const re = /(?:^|\n)\s*\*?\d+\s*[).]\s*/g;
+  let m;
+  while ((m = re.exec(joined))) idxs.push(m.index);
+  if (idxs.length !== orig.length) return orig;
+  return idxs.map((st, i) => joined.slice(st, i + 1 < idxs.length ? idxs[i + 1] : joined.length).trim());
+}
+function ftNoteNum(s, i) {
+  const m = String(s || "").match(/^\s*\*?(\d{1,9})\s*[).]/);
+  return m ? m[1] : String(i + 1);
+}
+
 function ftSafe(html, prefix) {
   const doc = new DOMParser().parseFromString("<body>" + String(html || "") + "</body>", "text/html"), frag = document.createDocumentFragment();
   const add = (from, to) => { for (const node of from.childNodes) {
@@ -5967,8 +6040,9 @@ function ftSafe(html, prefix) {
     const el = document.createElement(tagName.toLowerCase());
     if (tag === "SPAN") { const k = node.getAttribute("data-k"); if (FT_KINDS[k]) el.className = FT_KINDS[k]; if (k === "pg") el.title = "עמוד במהדורה הקודמת"; if (k === "gp") el.textContent = "עמ׳ "; }
     if (tag === "SUP" && prefix) {
-      const n = node.getAttribute("data-n");
-      if (/^e?\d{1,9}$/.test(n || "")) { const a = h("a", { class: "ft-ref", href: "#", id: prefix + "-r-" + n, "data-note": prefix + "-n-" + n, "aria-label": "הערה " + node.textContent }); el.append(a); add(node, a); to.append(el); continue; }
+      let n = node.getAttribute("data-n");
+      if (!n) { const t = (node.textContent || "").trim(); if (/^e?\d{1,9}$/.test(t)) n = t; }
+      if (/^e?\d{1,9}$/.test(n || "")) { const a = h("a", { class: "ft-ref", href: "#", id: prefix + "-r-" + n, "data-note": prefix + "-n-" + n, "aria-label": "הערה " + n }); el.append(a); add(node, a); to.append(el); continue; }
     }
     to.append(el); add(node, el);
   } };
@@ -6154,7 +6228,9 @@ async function ftDocView(main, s, t, i, q, ctx) {
     dp > 0 ? h("a", { class: "btn", href: mkHash(["read", t.slug, String(t.n[docs[dp - 1]][0])]), rel: "prev" }, "→ ", trunc(t.n[docs[dp - 1]][1], 40)) : h("span"),
     h("a", { class: "btn ghost", href: mkHash(["read", t.slug, String(t.n[t.parent[d] >= 0 ? t.parent[d] : 0][0])]) }, "תוכן"),
     dp < docs.length - 1 ? h("a", { class: "btn", href: mkHash(["read", t.slug, String(t.n[docs[dp + 1]][0])]), rel: "next" }, trunc(t.n[docs[dp + 1]][1], 40), " ←") : h("span"));
+  const nikudTools = h("span", { class: "ft-nikud-tools" });
   const tools = h("div", { class: "ft-tools" },
+    nikudTools,
     h("button", { type: "button", class: "btn sm", onclick: () => typeof openReadingPreferences === "function" && openReadingPreferences() }, icon("n-type"), "התאמת הקריאה"),
     h("button", { type: "button", class: "btn sm", onclick: async () => { await copyText(absUrl(mkHash(["read", t.slug, String(t.n[target][0])], {}, { nomode: true }))); toast("הקישור הועתק"); } }, "העתקת קישור"));
   const body = h("article", { class: "ft-body", lang: "he", dir: "rtl" });
@@ -6162,10 +6238,14 @@ async function ftDocView(main, s, t, i, q, ctx) {
   const before = h("button", { type: "button", class: "btn ft-more", onclick: () => grow(-1) }), after = h("button", { type: "button", class: "btn ft-more", onclick: () => grow(1) });
   body.append(before, after);
   const chunkOf = j => t.n[j][2];
-  const render = async (a, b, where) => {
+  const loadRows = async (a, b) => {
     const need = [...new Set(docLeaves.slice(a, b).map(chunkOf).filter(c => c >= 0))];
     const loaded = await Promise.all(need.map(c => loadChunk(`text/${t.slug}/c${String(c).padStart(3, "0")}`)));
     const rows = new Map(); for (const c of loaded) for (const r of c.p) rows.set(r[0], r);
+    return rows;
+  };
+  const render = async (a, b, where, readyRows) => {
+    const rows = readyRows || await loadRows(a, b);
     const frag = document.createDocumentFragment();
     for (const j of docLeaves.slice(a, b)) frag.append(ftPage(t, j, rows.get(t.n[j][0]), docLeaves.length > 1));
     if (where < 0) before.after(frag); else after.before(frag);
@@ -6181,12 +6261,23 @@ async function ftDocView(main, s, t, i, q, ctx) {
   };
   const wait = h("div", { class: "loading", role: "status" }, h("span", { class: "spin", "aria-hidden": "true" }), "טוען את הטקסט…");
   body.prepend(wait);
-  try { await render(from, to, 1); } catch (e) { wait.replaceWith(h("div", { class: "empty" }, h("b", null, "לא ניתן לטעון את הטקסט"), String(e.message || e))); return; }
+  try {
+    const rows0 = await loadRows(from, to);
+    if (!ctx.alive()) return;
+    let vis = tp;
+    for (let k = tp - 1; k >= from; k--) {
+      const row = rows0.get(t.n[docLeaves[k]][0]);
+      if (!row || ftPageIsGarbage(row[1] || "")) break;
+      vis = k;
+    }
+    from = vis;
+    await render(from, to, 1, rows0);
+  } catch (e) { wait.replaceWith(h("div", { class: "empty" }, h("b", null, "לא ניתן לטעון את הטקסט"), String(e.message || e))); return; }
   if (!ctx.alive()) return;
   wait.remove(); sync();
   const heHost = h("div");
   main.append(nav(), heHost, ftRelated(t, target), ftCredit(s, t.n[target][0]));
-  ftMafteiachLayer(s, t, d).then(el => { if (!ctx.alive()) return; if (el) heHost.replaceWith(el); else heHost.remove(); });
+  ftMafteiachLayer(s, t, d, nikudTools).then(el => { if (!ctx.alive()) return; if (el) heHost.replaceWith(el); else heHost.remove(); });
   body.addEventListener("click", e => {
     const a = e.target.closest("a.ft-ref, a.ft-back"); if (!a) return;
     e.preventDefault(); const el = document.getElementById(a.dataset.note); if (!el) return;
@@ -6204,7 +6295,7 @@ async function ftDocView(main, s, t, i, q, ctx) {
 
 const FT_HE_LABEL = "תרגום ללשון הקודש – לא מוגה (מפתח)";
 /** שכבת תרגום מפתח (אם יש לשיחה הנוכחית). מוצגת בנפרד, מתחת לנוסח המקור. */
-async function ftMafteiachLayer(s, t, d) {
+async function ftMafteiachLayer(s, t, d, toolsHost) {
   const mf = s && s.mafteiach;
   if (!mf || !mf.he) return null;
   const leaves = ftIsLeaf(t, d) ? [d] : ftKids(t, d).filter(k => ftIsLeaf(t, k));
@@ -6224,24 +6315,104 @@ async function ftMafteiachLayer(s, t, d) {
   if (!entry) return null;
   const label = mf.label || FT_HE_LABEL;
   const text = h("div", { class: "ft-he-text ft-text" });
-  text.append(ftSafe(ftBlocks(entry.t), "ft-he-" + entry.k));
+  const notesHost = h("div", { class: "ft-he-notes-host" });
+  const prefKey = "chavruta-nikud-v1";
+  const readPref = () => { try { return localStorage.getItem(prefKey) === "1"; } catch (e) { return false; } };
+  const writePref = v => { try { localStorage.setItem(prefKey, v ? "1" : "0"); } catch (e) {} };
+  let nikudEntry = null;
+  const nikudName = (mf.nikud && mf.nikud.he)
+    ? mf.nikud.he.replace("{vol}", String(vol).padStart(2, "0"))
+    : name + "-nikud";
+  const nikudVols = mf.nikud && Array.isArray(mf.nikud.vols) ? mf.nikud.vols : null;
+  if (!nikudVols || nikudVols.includes(vol)) {
+    try {
+      const nk = await loadChunk(nikudName);
+      if (nk) {
+        for (const j of leaves) {
+          const rec = nk[String(t.n[j][0])];
+          if (rec && rec.t) { nikudEntry = rec; break; }
+        }
+      }
+    } catch (e) { /* שכבת ניקוד אופציונלית */ }
+  }
+  const paint = useNikud => {
+    const rec = (useNikud && nikudEntry)
+      ? { t: ftCleanOcrHtml(ftRestoreMarkup(entry.t, nikudEntry.t)), n: ftAlignNotes(entry.n, nikudEntry.n), k: nikudEntry.k || entry.k }
+      : { ...entry, t: ftCleanOcrHtml(entry.t) };
+    const pre = "ft-he-" + rec.k;
+    text.replaceChildren();
+    text.append(ftSafe(ftBlocks(rec.t), pre));
+    notesHost.replaceChildren();
+    if (rec.n && rec.n.length) {
+      const ol = h("div", { class: "ft-notes-l" });
+      rec.n.forEach((n, i) => {
+        const num = ftNoteNum(n, i);
+        const it = h("div", { class: "ft-note", id: pre + "-n-" + num, tabindex: "-1" });
+        it.append(ftSafe(n, ""));
+        ol.append(it);
+      });
+      notesHost.append(h("details", { class: "ft-notes" }, h("summary", null, "הערות (" + rec.n.length + ")"), ol));
+    }
+  };
+  paint(false);
   const body = h("div", { class: "ft-related-body ft-he-body" },
     h("p", { class: "ft-related-note" }, "תרגום מאתר מפתח (mafteiach.app). אינו מוגה, ואינו הנוסח המקורי."),
-    text);
-  if (entry.n && entry.n.length) {
-    const ol = h("div", { class: "ft-notes-l" });
-    entry.n.forEach((n, i) => {
-      const it = h("div", { class: "ft-note" });
-      it.append(ftSafe(n, ""));
-      ol.append(it);
-    });
-    body.append(h("details", { class: "ft-notes" }, h("summary", null, "הערות (" + entry.n.length + ")"), ol));
+    text, notesHost);
+  const wrap = h("details", { class: "ft-related ft-he-layer" }, h("summary", null, label), body);
+  wrap.addEventListener("click", e => {
+    const a = e.target.closest("a.ft-ref, a.ft-back"); if (!a) return;
+    e.preventDefault();
+    const el = document.getElementById(a.dataset.note); if (!el) return;
+    const det = el.closest("details"); if (det) det.open = true;
+    wrap.open = true;
+    el.scrollIntoView({ block: "center" }); el.focus({ preventScroll: true });
+  });
+  if (nikudEntry) {
+    const buttons = [];
+    const note = h("p", { class: "ft-related-note ft-nikud-note" }, "ניקוד אוטומטי מאת Dicta (שירות חינמי). ייתכנו טעויות.");
+    const labelBtn = (btn, on) => {
+      btn.setAttribute("aria-pressed", on ? "true" : "false");
+      btn.replaceChildren(
+        h("span", { class: "ft-nikud-long" }, on ? "הסתר ניקוד" : "הצג ניקוד"),
+        h("span", { class: "ft-nikud-short" }, "ניקוד")
+      );
+    };
+    const apply = (on, scroll) => {
+      writePref(on);
+      for (const b of buttons) labelBtn(b, on);
+      note.hidden = !on;
+      paint(on);
+      if (on) wrap.open = true;
+      if (on && scroll) {
+        try { wrap.scrollIntoView({ block: "start", behavior: "smooth" }); } catch (e) { wrap.scrollIntoView(true); }
+      }
+    };
+    const makeBtn = () => {
+      const btn = h("button", { type: "button", class: "btn sm ft-nikud-toggle", "aria-pressed": "false", title: "הצג או הסתר ניקוד בתרגום ללשון הקודש" });
+      labelBtn(btn, false);
+      btn.addEventListener("click", () => apply(btn.getAttribute("aria-pressed") !== "true", true));
+      buttons.push(btn);
+      return btn;
+    };
+    body.prepend(h("div", { class: "ft-nikud-bar" }, note));
+    if (toolsHost) toolsHost.append(makeBtn());
+    const topTools = document.querySelector("#top .tools");
+    if (topTools) topTools.prepend(makeBtn());
+    const topBar = document.getElementById("top");
+    if (topBar) {
+      const float = h("div", { class: "ft-nikud-float no-print" }, makeBtn());
+      topBar.after(float);
+    }
+    if (!buttons.length) body.prepend(h("div", { class: "ft-nikud-bar" }, makeBtn()));
+    if (readPref()) apply(true, false);
+    else note.hidden = true;
   }
   if (entry.src) {
     body.append(h("p", { class: "muted" }, h("a", { href: entry.src, target: "_blank", rel: "noopener" }, "המקור במפתח", typeof icon === "function" ? icon("i-ext") : " ↗")));
   }
-  return h("details", { class: "ft-related ft-he-layer" }, h("summary", null, label), body);
+  return wrap;
 }
+
 
 function ftRelated(t, target) {
   const id = t.n[target][0];
@@ -6283,11 +6454,77 @@ function ftRelated(t, target) {
   return box;
 }
 
+
+function ftPlainOcr(s) {
+  return String(s || "").replace(/<[^>]+>/g, "").replace(/&[a-z]+;/gi, " ").replace(/[ \t]+/g, " ").trim();
+}
+
+function ftStripNiqqud(s) {
+  return String(s || "").replace(/[\u0591-\u05C7]/g, "");
+}
+
+function ftIsGarbageLine(line) {
+  if (/<(?:sup|h[1-6])\b/i.test(line)) return false;
+  const text = ftPlainOcr(line);
+  if (!text) return true;
+  const bare = ftStripNiqqud(text).replace(/[\"״'"׳]/g, "");
+  if (/^(?:\*\s*){1,6}$/.test(text) || /\*\s+\*\s+\*/.test(text)) return false;
+  if (/^[\u05D0-\u05EA]{1,3}[).:]$/.test(bare.trim()) || /^[\u05D0-\u05EA]{1,3}\.\s*.+/.test(bare)) return false;
+  if (/^[\u05D0-\u05EA]$/.test(bare.trim())) return false;
+  if (/^ב[\s]*[הד][\s]*\.?$/.test(bare.trim())) return false;
+  if (/^פרשת\s/.test(bare)) return false;
+  if (/^[\u05D0-\u05EA]{2,12}$/.test(bare.trim())) return false;
+  const heb = (bare.match(/[\u05D0-\u05EA]/g) || []).length;
+  const w3 = (bare.match(/[\u05D0-\u05EA]{3,}/g) || []).length;
+  const w2 = (bare.match(/[\u05D0-\u05EA]{2,}/g) || []).length;
+  const n = bare.length;
+  const punct = (bare.match(/[.\-–,;:!?\[\]()%*|/=_*]/g) || []).length;
+  if (w3 >= 3) return false;
+  if (w3 >= 2 && n && heb / n >= 0.45) return false;
+  if (w3 >= 1 && n && heb / n >= 0.55 && n >= 8) return false;
+  if (w3 === 0 && w2 <= 2) return true;
+  if (n && heb / n < 0.4 && w3 <= 1) return true;
+  if (n && punct / n > 0.5 && w3 <= 2) return true;
+  return false;
+}
+
+function ftCleanOcrHtml(html) {
+  if (!html) return html || "";
+  const s = String(html).replace(/<br\s*\/?>/gi, "\n");
+  const parts = s.split(/(<(?:h[1-6])[\s\S]*?<\/(?:h[1-6])>|<p\b[\s\S]*?<\/p>)/i);
+  const out = [];
+  for (const part of parts) {
+    if (!part) continue;
+    const t = part.trim();
+    if (/^<h[1-6]\b/i.test(t)) { out.push(part); continue; }
+    if (/^<p\b/i.test(t)) { if (!ftIsGarbageLine(part)) out.push(part); continue; }
+    for (const ln of part.split("\n")) {
+      if (!ln.trim()) { out.push(ln); continue; }
+      if (!ftIsGarbageLine(ln)) out.push(ln);
+    }
+  }
+  return out.join("\n").replace(/^\s+|\s+$/g, "");
+}
+
+function ftPageIsGarbage(html) {
+  const text = ftStripNiqqud(ftPlainOcr(ftCleanOcrHtml(html)));
+  if (!text) return true;
+  const w3 = (text.match(/[\u05D0-\u05EA]{3,}/g) || []).length;
+  const heb = (text.match(/[\u05D0-\u05EA]/g) || []).length;
+  const n = text.length;
+  if (w3 <= 3 && n < 120) return true;
+  if (w3 <= 5 && n < 80) return true;
+  if (heb / n < 0.28 && w3 < 15) return true;
+  return false;
+}
+
 function ftPage(t, j, row, marker) {
   const id = t.n[j][0], sec = h("section", { class: "ft-page", id: "ft-" + id, "aria-label": t.n[j][1] || "עמוד" });
   if (marker) sec.append(h("a", { class: "ft-pgmark", href: mkHash(["read", t.slug, String(id)]), title: "קישור לעמוד הזה" }, t.n[j][1]));
   if (!row) { sec.append(h("p", { class: "muted" }, "הטקסט של העמוד הזה אינו זמין.")); return sec; }
-  const pre = "ft" + id, text = h("div", { class: "ft-text" }); text.append(ftSafe(ftBlocks(row[1]), pre)); sec.append(text);
+  const html = ftCleanOcrHtml(row[1] || "");
+  if (ftPageIsGarbage(row[1] || "")) sec.classList.add("ft-page-empty");
+  const pre = "ft" + id, text = h("div", { class: "ft-text" }); text.append(ftSafe(ftBlocks(html), pre)); sec.append(text);
   const notes = row[2] || [];
   if (notes.length) {
     const ol = h("div", { class: "ft-notes-l" });
