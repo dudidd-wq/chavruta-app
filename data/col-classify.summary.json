@@ -1,10 +1,11 @@
 {
-  "mapped": 347,
-  "unique_uids": 140,
-  "unique_citations": 233,
+  "mapped": 674,
+  "unique_uids": 265,
+  "unique_citations": 666,
   "queued": 7952,
-  "results": 6224,
-  "remaining": 1728,
-  "with_any_uid": 896,
+  "prev_mapped": 347,
+  "rerun_525": 525,
+  "rerun_applied": 327,
+  "rerun_overwritten": 0,
   "applied_threshold": 0.9
 }
