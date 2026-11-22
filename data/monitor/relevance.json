@@ -2135,5 +2135,29 @@
   "d97c9516edf0ada7": {
     "cls": "לא רלוונטי",
     "why": "כתבת יארצייט על דודו של הרבי, לא פרסום חדש של מקור, ביאור או גיליון"
+  },
+  "96e20e81d1a99d92": {
+    "cls": "מקור",
+    "why": "תרגום ועיבוד לאנגלית של המשך תער״ב (בשעה שהקדימו) לאדמו״ר הרש״ב, כרך א (Neirot, 2026) — תרגום של מאמרי אדמו״ר נכנס כמקור. ה־PDF נפתח.",
+    "source_url": "https://neirot.com/wp-content/uploads/2026/11/Hemshech-Ayin-Beis-Vol-1.pdf",
+    "checked_at": "2026-11-22T13:10:00+00:00"
+  },
+  "b4ff65a51790279e": {
+    "cls": "ביאור",
+    "why": "ביאור כתוב (Dvar Malchus 770) לשיחת ש״פ וישלח תשנ״ב, עם תרגום קטעים והערות. פרסום שנתי חוזר של ביאור כתוב (הכתובת מסתיימת ב־2-, קובץ השמע מ־2024), נכנס לפי הנוהג. העמוד נפתח.",
+    "source_url": "https://dvarmalchus770.org/2026/11/21/vayishlach-5752-the-moon-becomes-like-the-sun-2/",
+    "checked_at": "2026-11-22T13:10:00+00:00"
+  },
+  "c9d411c2db66cdfc": {
+    "cls": "לא רלוונטי",
+    "why": "מדור The Weekly Farbrengen — סיפורים וזיכרונות על ר׳ ירוחם גורליק והרבי הריי״צ; זיכרונות אינם נכנסים. העמוד נפתח.",
+    "source_url": "https://anash.org/why-do-you-ask-me-ask-someone-who-knows-chassidus/",
+    "checked_at": "2026-11-22T13:10:00+00:00"
+  },
+  "b7c174378de6ef0b": {
+    "cls": "לא רלוונטי",
+    "why": "וידאו הסבר על י״ט כסלו (Aryeh Weinstein) — וידאו אינו נכנס. הכותרת מציינת Video.",
+    "source_url": "https://www.chabad.org/article.asp?aid=7630997",
+    "checked_at": "2026-11-22T13:10:00+00:00"
   }
 }
