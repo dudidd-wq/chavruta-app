@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-21T22:54:56+00:00",
+ "generated_at": "2026-11-22T12:34:30+00:00",
  "sources": [
   {
    "id": "chabadlibrary",
@@ -12,7 +12,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-11-21T22:53:44+00:00",
+   "checked_at": "2026-11-22T12:33:18+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -30,7 +30,7 @@
     "primary",
     "whatsnew"
    ],
-   "checked_at": "2026-11-21T22:53:44+00:00",
+   "checked_at": "2026-11-22T12:33:18+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -47,7 +47,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-11-21T22:53:44+00:00",
+   "checked_at": "2026-11-22T12:33:18+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -64,7 +64,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-11-21T22:53:44+00:00",
+   "checked_at": "2026-11-22T12:33:18+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -82,7 +82,7 @@
     "primary",
     "whatsnew"
    ],
-   "checked_at": "2026-11-21T22:53:44+00:00",
+   "checked_at": "2026-11-22T12:33:18+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -102,7 +102,7 @@
     }
    ],
    "total": 132,
-   "last_success_at": "2026-11-21T22:53:44+00:00"
+   "last_success_at": "2026-11-22T12:33:18+00:00"
   },
   {
    "id": "chabadlibrarybooks",
@@ -115,7 +115,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-11-21T22:53:44+00:00",
+   "checked_at": "2026-11-22T12:33:19+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -133,12 +133,12 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-21T22:53:44+00:00",
+   "checked_at": "2026-11-22T12:33:19+00:00",
    "status": "ok",
    "new": [],
    "latest": [],
    "total": 1501,
-   "last_success_at": "2026-11-21T22:53:44+00:00"
+   "last_success_at": "2026-11-22T12:33:19+00:00"
   },
   {
    "id": "chassidut_org",
@@ -152,12 +152,12 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-21T22:53:46+00:00",
+   "checked_at": "2026-11-22T12:33:20+00:00",
    "status": "ok",
    "new": [],
    "latest": [],
    "total": 4,
-   "last_success_at": "2026-11-21T22:53:46+00:00"
+   "last_success_at": "2026-11-22T12:33:20+00:00"
   },
   {
    "id": "biurim",
@@ -171,7 +171,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-21T22:53:47+00:00",
+   "checked_at": "2026-11-22T12:33:21+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -225,7 +225,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-21T22:53:47+00:00"
+   "last_success_at": "2026-11-22T12:33:21+00:00"
   },
   {
    "id": "hm_monsey",
@@ -239,7 +239,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-21T22:53:49+00:00",
+   "checked_at": "2026-11-22T12:33:23+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -333,7 +333,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-21T22:53:49+00:00"
+   "last_success_at": "2026-11-22T12:33:23+00:00"
   },
   {
    "id": "hiskashrus",
@@ -347,7 +347,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-21T22:53:51+00:00",
+   "checked_at": "2026-11-22T12:33:25+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -423,7 +423,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-21T22:53:51+00:00"
+   "last_success_at": "2026-11-22T12:33:25+00:00"
   },
   {
    "id": "lichyot_chassidus",
@@ -437,7 +437,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-21T22:53:52+00:00",
+   "checked_at": "2026-11-22T12:33:26+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -611,7 +611,7 @@
     }
    ],
    "total": 1000,
-   "last_success_at": "2026-11-21T22:53:52+00:00"
+   "last_success_at": "2026-11-22T12:33:26+00:00"
   },
   {
    "id": "chabadzoom",
@@ -625,24 +625,9 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-21T22:53:54+00:00",
+   "checked_at": "2026-11-22T12:33:28+00:00",
    "status": "ok",
-   "new": [
-    {
-     "id": "content:a09ab446dc727e85",
-     "title": "עדכון בתוכן הדף",
-     "url": "https://chabadzoom.co.il/series",
-     "date": "",
-     "first_seen": "2026-11-21T22:53:54+00:00"
-    },
-    {
-     "id": "https://chabadzoom.co.il/workshop/%d7%94%d7%93%d7%a8%d7%9b%d7%aa-%d7%94%d7%95%d7%a8%d7%99%d7%9d",
-     "title": "הדרכת הורים",
-     "url": "https://chabadzoom.co.il/workshop/%d7%94%d7%93%d7%a8%d7%9b%d7%aa-%d7%94%d7%95%d7%a8%d7%99%d7%9d",
-     "date": "",
-     "first_seen": "2026-11-21T22:53:54+00:00"
-    }
-   ],
+   "new": [],
    "latest": [
     {
      "id": "content:a09ab446dc727e85",
@@ -793,7 +778,7 @@
     }
    ],
    "total": 564,
-   "last_success_at": "2026-11-21T22:53:54+00:00"
+   "last_success_at": "2026-11-22T12:33:28+00:00"
   },
   {
    "id": "kovtzimdrive",
@@ -807,7 +792,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-21T22:53:57+00:00",
+   "checked_at": "2026-11-22T12:33:31+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -815,12 +800,12 @@
      "id": "https://www.kovtzimdrive.com/posts/bochurim-build-database-of-thousands-of-%E2%80%98he%E2%80%99aros%E2%80%99",
      "title": "bochurim build database of thousands of ‘he’aros’",
      "url": "https://www.kovtzimdrive.com/posts/bochurim-build-database-of-thousands-of-%E2%80%98he%E2%80%99aros%E2%80%99",
-     "date": "2026-11-16",
+     "date": "2026-11-20",
      "first_seen": "2026-10-20T07:59:38+00:00"
     }
    ],
    "total": 1,
-   "last_success_at": "2026-11-21T22:53:57+00:00"
+   "last_success_at": "2026-11-22T12:33:31+00:00"
   },
   {
    "id": "avita",
@@ -834,7 +819,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-21T22:53:59+00:00",
+   "checked_at": "2026-11-22T12:33:33+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -852,7 +837,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-21T22:53:59+00:00",
+   "checked_at": "2026-11-22T12:33:33+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -874,7 +859,7 @@
     }
    ],
    "total": 2,
-   "last_success_at": "2026-11-21T22:53:59+00:00"
+   "last_success_at": "2026-11-22T12:33:33+00:00"
   },
   {
    "id": "dvarmalchus770",
@@ -888,10 +873,27 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-21T22:54:01+00:00",
+   "checked_at": "2026-11-22T12:33:35+00:00",
    "status": "ok",
-   "new": [],
+   "new": [
+    {
+     "id": "http://dvarmalchus770.org/?p=5713",
+     "title": "Vayishlach 5752: The Moon Becomes Like the Sun",
+     "url": "https://dvarmalchus770.org/2026/11/21/vayishlach-5752-the-moon-becomes-like-the-sun-2/",
+     "date": "Sat, 21 Nov 2026 23:09:00 +0000",
+     "blurb": "Our sages tell us that the Jewish people are likened to the moon and thus we count according to the moon. The months of the Jewish calendar begin with the birth of the new moon each month. This means that the 15th of every month is the date of the full moon. What is a full […]",
+     "first_seen": "2026-11-22T12:33:35+00:00"
+    }
+   ],
    "latest": [
+    {
+     "id": "http://dvarmalchus770.org/?p=5713",
+     "title": "Vayishlach 5752: The Moon Becomes Like the Sun",
+     "url": "https://dvarmalchus770.org/2026/11/21/vayishlach-5752-the-moon-becomes-like-the-sun-2/",
+     "date": "Sat, 21 Nov 2026 23:09:00 +0000",
+     "blurb": "Our sages tell us that the Jewish people are likened to the moon and thus we count according to the moon. The months of the Jewish calendar begin with the birth of the new moon each month. This means that the 15th of every month is the date of the full moon. What is a full […]",
+     "first_seen": "2026-11-22T12:33:35+00:00"
+    },
     {
      "id": "http://dvarmalchus770.org/?p=5714",
      "title": "16) Kuntres Yud/Yud Daled Kislev, 5752: Reveal the Yechida",
@@ -1038,7 +1040,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-21T22:54:01+00:00"
+   "last_success_at": "2026-11-22T12:33:35+00:00"
   },
   {
    "id": "soulwords",
@@ -1052,7 +1054,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-21T22:54:02+00:00",
+   "checked_at": "2026-11-22T12:33:36+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1122,7 +1124,7 @@
     }
    ],
    "total": 0,
-   "last_success_at": "2026-11-21T22:54:02+00:00"
+   "last_success_at": "2026-11-22T12:33:36+00:00"
   },
   {
    "id": "sie_weekly",
@@ -1136,7 +1138,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-21T22:54:03+00:00",
+   "checked_at": "2026-11-22T12:33:38+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1212,7 +1214,7 @@
     }
    ],
    "total": 118,
-   "last_success_at": "2026-11-21T22:54:03+00:00"
+   "last_success_at": "2026-11-22T12:33:38+00:00"
   },
   {
    "id": "pls",
@@ -1226,10 +1228,27 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-21T22:54:05+00:00",
+   "checked_at": "2026-11-22T12:33:39+00:00",
    "status": "ok",
-   "new": [],
+   "new": [
+    {
+     "id": "cd1e9e54-987b-429c-958b-ca0e51053667",
+     "title": "Chelek 30, Vayishlach 1 - Rabbi Yaakov Moshe Wolberg",
+     "url": "https://sichaindepth.captivate.fm",
+     "date": "Sun, 22 Nov 2026 00:40:00 -0500",
+     "blurb": "Chelek 30, Vayishlach 1 - Rabbi Yaakov Moshe Wolberg",
+     "first_seen": "2026-11-22T12:33:39+00:00"
+    }
+   ],
    "latest": [
+    {
+     "id": "cd1e9e54-987b-429c-958b-ca0e51053667",
+     "title": "Chelek 30, Vayishlach 1 - Rabbi Yaakov Moshe Wolberg",
+     "url": "https://sichaindepth.captivate.fm",
+     "date": "Sun, 22 Nov 2026 00:40:00 -0500",
+     "blurb": "Chelek 30, Vayishlach 1 - Rabbi Yaakov Moshe Wolberg",
+     "first_seen": "2026-11-22T12:33:39+00:00"
+    },
     {
      "id": "c353f4b9-e307-4922-8f6b-8b2b46dff0e9",
      "title": "חלק ל, וישלח שיחה א - הרב שמואל שור - חלק א (א-ד)",
@@ -1392,7 +1411,7 @@
     }
    ],
    "total": 200,
-   "last_success_at": "2026-11-21T22:54:05+00:00"
+   "last_success_at": "2026-11-22T12:33:39+00:00"
   },
   {
    "id": "chayenu_ls",
@@ -1406,7 +1425,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-21T22:54:06+00:00",
+   "checked_at": "2026-11-22T12:33:40+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1440,7 +1459,7 @@
     }
    ],
    "total": 2,
-   "last_success_at": "2026-11-21T22:54:06+00:00"
+   "last_success_at": "2026-11-22T12:33:40+00:00"
   },
   {
    "id": "weekly_sicha",
@@ -1454,7 +1473,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-21T22:54:07+00:00",
+   "checked_at": "2026-11-22T12:33:42+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1530,7 +1549,7 @@
     }
    ],
    "total": 121,
-   "last_success_at": "2026-11-21T22:54:07+00:00"
+   "last_success_at": "2026-11-22T12:33:42+00:00"
   },
   {
    "id": "theyeshiva",
@@ -1544,7 +1563,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-21T22:54:09+00:00",
+   "checked_at": "2026-11-22T12:33:43+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1734,7 +1753,7 @@
     }
    ],
    "total": 1554,
-   "last_success_at": "2026-11-21T22:54:09+00:00"
+   "last_success_at": "2026-11-22T12:33:43+00:00"
   },
   {
    "id": "chassidus_applied",
@@ -1748,7 +1767,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-21T22:54:12+00:00",
+   "checked_at": "2026-11-22T12:33:45+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1756,7 +1775,7 @@
      "id": "yt:video:sKTidiW3YQg",
      "title": "Chapter 37.05: How a Mitzvah Impacts the Larger World",
      "url": "https://www.youtube.com/watch?v=sKTidiW3YQg",
-     "date": "2026-11-20T18:44:46+00:00",
+     "date": "2026-11-22T03:00:17+00:00",
      "blurb": "Chapter 37.05: How a Mitzvah Impacts the Larger World The Tanya Applied radio show is broadcast every Saturday night, 10–10:30PM ET on WSNR 620 AM – Metro NY area WJPR 1640 AM — Highland Park and Edison, NJ Online: www.talklinenetwork.com By phone: Listen Line: 641-741-0389 Many of us may be familiar with some of the central ideas in Tanya – including the battle of the two souls; what defines man and makes us tick; how we can control our temptations; how we can become more loving; what we can do to curb and harness our vices, like anger, jealousy, and depression; the formula for growth; how we can develop a healthy relationship with G-d; and why we are here. In this 30-minute program, you will learn how these ideas can be applied to your life today. You will discover secrets to a successful life that will transform you and your relationships. Rabbi Simon Jacobson is the best-selling author of Toward a Meaningful Life, and he is the creator of the acclaimed and popular MyLife: Chassidus Applied series, which has empowered and transformed hundreds of thousands through Torah and Chassidus. Now, Rabbi Jacobson brings his vast scholarship and years of experience to Tanya. Please join Rabbi Simon Jacobson for this exhilarating journey into your psyche and soul. You will come away with life-changing practical guidance and direction, addressing all the issues and challenges you face in life. For more info: www.chassidusapplied.com/tanya Music by Zalman Goldstein • www.ChabadMusic.com",
      "first_seen": "2026-11-21T12:38:14+00:00"
     },
@@ -1765,23 +1784,23 @@
      "title": "Samach Vav Part 250: Fusing yechuda i'laah and yechuda ta'taah -- utter bittul while engaging",
      "url": "https://www.youtube.com/watch?v=OB5vGuBhcxc",
      "date": "2026-11-19T03:57:07+00:00",
-     "blurb": "Samach Vav p. 202: Fusing yechuda i'laah and yechuda ta'taah -- utter bittul while engaging -- higher than yechuda i'laah alone, which negates and nullifies all of existence. and from the G-dly perspective, there is no concealment, and Elokus radiates in existence just like before existence. By contrast, the yichud of yechuda i'laah and yechuda ta'taah is that even existence itself recognizes the utter bittul of non-existence. Even when engaged in a meal, like in the meals of Shabbos, he doesn't feel the pleasure of the material food. The same is with the meals of tzaddikim in the weekdays. This level of yichus is far higher than yechuda i'laah, which does not engage with the world, and certainly higher than the bittul of klos ha'nefesh.",
+     "blurb": "Samach Vav p. 202: Fusing yechuda i'laah and yechuda ta'taah -- utter bittul while engaging -- is higher than yechuda i'laah alone, which negates and nullifies all of existence, and from the G-dly perspective, there is no concealment, and Elokus radiates in existence just like pre-existence. By contrast, the yichud of yechuda i'laah and yechuda ta'taah is that even existence itself recognizes the utter bittul of non-existence. Even while engaged in a meal, like in the meals of Shabbos, he doesn't feel the pleasure of the material food. The same is with the weekday meals of tzaddikim. This level of yichud is far higher than yechuda i'laah, which does not engage with the world, and certainly higher than the bittul of klos ha'nefesh.",
      "first_seen": "2026-11-19T13:01:22+00:00"
     },
     {
      "id": "yt:video:ZWPqdZ9qA1I",
-     "title": "Samach Vav Part 249:",
+     "title": "Samach Vav Part 249: Hanochas atzmuso also regulates ratzo and causes it to be followed by shuv",
      "url": "https://www.youtube.com/watch?v=ZWPqdZ9qA1I",
      "date": "2026-11-18T03:56:07+00:00",
-     "blurb": "Samach Vav p. 201-202: Hanochas atzmuso also regulates the ratzo and causes every ratzo to be followed by a shuv. Ratzo is easier than shuv. Hafshata and halbosha. Nedarim, abstinence, easier than engagement.",
+     "blurb": "Samach Vav p. 201-202: Avodah b'koach atzmo due to hanochas atzmuso also regulates the ratzo and causes every ratzo to be followed by a shuv. Ratzo is easier than shuv. Hafshata is easier than halbosha. Abstinence through a vow (neder) is because the person does not have the power to refine something through engagement, only through abstinence. Refinement through engagement in the world requires far more strength (the bittul of chacham who can annul a vow).",
      "first_seen": "2026-11-18T13:01:29+00:00"
     },
     {
      "id": "yt:video:xiu5FWoymTc",
-     "title": "Samach Vav Part 248:",
+     "title": "Samach Vav Part 248: The ultimate power of avodah b'koach atzmo due to the soul's essential bittul",
      "url": "https://www.youtube.com/watch?v=xiu5FWoymTc",
      "date": "2026-11-17T03:50:18+00:00",
-     "blurb": "Samach Vav p. 200-201: In prayer, one can feel this bittul atzmi that leads to shuv (either through re'iyah of chochma felt in the heart, or through kabolas ol), but the actual bittul does not come due to an inspiration from above, but b'koach atzmo -- from the inherent kabolas ol of the soul (rooted in Atzmus), being totally dedicated not to his own will of ahava and dveikus (ratzo), but to G-d's true will, which is to draw down Elokus through Torah and mitzvos (shuv). That is why he can compel himself to do Torah and mitzvos even when he has no will or desire to do so. In truth, also yegiah in contemplation and love and reverence, especially to remove blockages to the heart and mind, is very precious, and reaches a deeper place in the soul, and impacts the soul in a deeper and more sustainable way.",
+     "blurb": "Samach Vav p. 200-201: Through prayer, one can feel (and actualize) the bittul atzmi that leads to shuv (either through re'iyah of chochma felt in the heart, or through kabolas ol), but the actual bittul does not come due to an inspiration from above, but b'koach atzmo -- from the inherent kabolas ol of the soul (rooted in Atzmus), being totally dedicated not to his own desire of ratzo -- to love and be attached (ahava and dveikus) to G-dliness -- but to G-d's true will, which is to draw down Elokus through Torah and mitzvos (shuv). That is why he can compel himself to do Torah and mitzvos even when he has no will or desire to do so, because this power comes from his essential connection and dedication to G-d. In truth, avodah b'koach atzmo -- when someone applies and exerts himself with his own effort (not relying on inspiration from above), also in contemplation, love and reverence, especially the great effort exerted to remove blockages to the heart and mind -- when this is done b'koach atzmo -- it is very precious, and the bittul has far greater and more sustainable impact on the soul.",
      "first_seen": "2026-11-17T13:03:53+00:00"
     },
     {
@@ -2106,7 +2125,7 @@
     }
    ],
    "total": 15,
-   "last_success_at": "2026-11-21T22:54:12+00:00"
+   "last_success_at": "2026-11-22T12:33:45+00:00"
   },
   {
    "id": "neirot",
@@ -2120,10 +2139,27 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-21T22:54:12+00:00",
+   "checked_at": "2026-11-22T12:33:45+00:00",
    "status": "ok",
-   "new": [],
+   "new": [
+    {
+     "id": "8271",
+     "title": "Hemshech Ayin Beis – Vol 1",
+     "url": "https://neirot.com/wp-content/uploads/2026/11/Hemshech-Ayin-Beis-Vol-1.pdf",
+     "date": "2026-11-22T10:10:05",
+     "blurb": "",
+     "first_seen": "2026-11-22T12:33:45+00:00"
+    }
+   ],
    "latest": [
+    {
+     "id": "8271",
+     "title": "Hemshech Ayin Beis – Vol 1",
+     "url": "https://neirot.com/wp-content/uploads/2026/11/Hemshech-Ayin-Beis-Vol-1.pdf",
+     "date": "2026-11-22T10:10:05",
+     "blurb": "",
+     "first_seen": "2026-11-22T12:33:45+00:00"
+    },
     {
      "id": "8234",
      "title": "The Teachings of The Rebbe – 5737 – Volume 1",
@@ -2174,7 +2210,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-21T22:54:12+00:00"
+   "last_success_at": "2026-11-22T12:33:45+00:00"
   },
   {
    "id": "chassidus_explained",
@@ -2188,7 +2224,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-21T22:54:14+00:00",
+   "checked_at": "2026-11-22T12:33:48+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2266,7 +2302,7 @@
     }
    ],
    "total": 138,
-   "last_success_at": "2026-11-21T22:54:14+00:00"
+   "last_success_at": "2026-11-22T12:33:48+00:00"
   },
   {
    "id": "melukat",
@@ -2280,7 +2316,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-21T22:54:16+00:00",
+   "checked_at": "2026-11-22T12:33:49+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2342,7 +2378,7 @@
     }
    ],
    "total": 168,
-   "last_success_at": "2026-11-21T22:54:16+00:00"
+   "last_success_at": "2026-11-22T12:33:49+00:00"
   },
   {
    "id": "daily_maamar",
@@ -2356,7 +2392,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-21T22:54:17+00:00",
+   "checked_at": "2026-11-22T12:33:50+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2642,7 +2678,7 @@
     }
    ],
    "total": 370,
-   "last_success_at": "2026-11-21T22:54:17+00:00"
+   "last_success_at": "2026-11-22T12:33:50+00:00"
   },
   {
    "id": "wellsprings",
@@ -2656,7 +2692,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-21T22:54:18+00:00",
+   "checked_at": "2026-11-22T12:33:51+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2702,7 +2738,7 @@
     }
    ],
    "total": 125,
-   "last_success_at": "2026-11-21T22:54:18+00:00"
+   "last_success_at": "2026-11-22T12:33:51+00:00"
   },
   {
    "id": "daily_sicha",
@@ -2716,10 +2752,27 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-21T22:54:19+00:00",
+   "checked_at": "2026-11-22T12:33:52+00:00",
    "status": "ok",
-   "new": [],
+   "new": [
+    {
+     "id": "2026.11.22",
+     "title": "יום א' פ' וישלח, י\"ב כסלו, ה'תשפ\"ז",
+     "url": "",
+     "date": "Sun, 22 Nov 2026 12:00:00 GMT",
+     "blurb": "התוכן בעמדנו ביום שלמחרת והמשך ליו\"ד כסלו , חג הגאולה של אדמו\"ר האמצעי, יש לעורר עוה\"פ אודות המשך הפעולה בכל הענינים הקשורים עם אדמו\"ר האמצעי באופן של \" רחובות הנהר\". נוסף על המשך ההתוועדויות דיום הגאולה, יש להוסיף בזה מיום ליום, מיו\"ד כסלו לי\"א, לי\"ב, לי\"ג לי\"ד, עד לט\"ו בכסלו וכו'; תוכן התחלת פ' וישלח, \"וישלח יעקב מלאכים אל עשו אחיו וגו'\", הוא, שמצדו של יעקב כבר נתברר עשו ומוכן ללכת יחד עם יעקב אל הגאולה. ומכיון שמאז כבר עברו ריבוי זמן שבו עסקו בעבודת הבירורים, בודאי שכבר נשלם הבירור דעשו גם מצדו של עשו כפשוטו , וכבר סיימו גם את \"צחצוח הכפתורים\", ומוכנים אל הגאולה בפועל ממש ! וע\"י ההוספה עוד יותר בלימוד התורה וקיום המצוות מתוך הרחבה ובהידור באופן של \"מהדרין מן המהדרין\" (כהוראת ימי החנוכה וכו'), יזרזו עוד יותר את הגאולה האמיתית והשלימה תיכף ומיד ממש! ב' חלקים משיחת י\"א כסלו ה'תשמ\"ט ל\"הנחה פרטית\" או התרגום ללה\"ק של השיחה: https://thedailysicha.com/?date=22-11-2026 Synopsis On the day after 10 Kislev, it is appropriate to once again encourage everyone to continue in all the activities associated with the Mitteler Rebbe, in a manner of rechovos hanahar . In addition to continuing the farbrengens of the day of liberation, there should be an increase from day to day, from the 10th of Kislev to the 11th, the 12th, the 13th, the 14th, until the 15th etc. The verse “Yaakov sent angels to his brother Esav etc.” (at the beginning of Parashas Vayishlach) means that as far as Yaakov was concerned, Esav had already been refined and was ready to proceed together with him toward the Redempt",
+     "first_seen": "2026-11-22T12:33:52+00:00"
+    }
+   ],
    "latest": [
+    {
+     "id": "2026.11.22",
+     "title": "יום א' פ' וישלח, י\"ב כסלו, ה'תשפ\"ז",
+     "url": "",
+     "date": "Sun, 22 Nov 2026 12:00:00 GMT",
+     "blurb": "התוכן בעמדנו ביום שלמחרת והמשך ליו\"ד כסלו , חג הגאולה של אדמו\"ר האמצעי, יש לעורר עוה\"פ אודות המשך הפעולה בכל הענינים הקשורים עם אדמו\"ר האמצעי באופן של \" רחובות הנהר\". נוסף על המשך ההתוועדויות דיום הגאולה, יש להוסיף בזה מיום ליום, מיו\"ד כסלו לי\"א, לי\"ב, לי\"ג לי\"ד, עד לט\"ו בכסלו וכו'; תוכן התחלת פ' וישלח, \"וישלח יעקב מלאכים אל עשו אחיו וגו'\", הוא, שמצדו של יעקב כבר נתברר עשו ומוכן ללכת יחד עם יעקב אל הגאולה. ומכיון שמאז כבר עברו ריבוי זמן שבו עסקו בעבודת הבירורים, בודאי שכבר נשלם הבירור דעשו גם מצדו של עשו כפשוטו , וכבר סיימו גם את \"צחצוח הכפתורים\", ומוכנים אל הגאולה בפועל ממש ! וע\"י ההוספה עוד יותר בלימוד התורה וקיום המצוות מתוך הרחבה ובהידור באופן של \"מהדרין מן המהדרין\" (כהוראת ימי החנוכה וכו'), יזרזו עוד יותר את הגאולה האמיתית והשלימה תיכף ומיד ממש! ב' חלקים משיחת י\"א כסלו ה'תשמ\"ט ל\"הנחה פרטית\" או התרגום ללה\"ק של השיחה: https://thedailysicha.com/?date=22-11-2026 Synopsis On the day after 10 Kislev, it is appropriate to once again encourage everyone to continue in all the activities associated with the Mitteler Rebbe, in a manner of rechovos hanahar . In addition to continuing the farbrengens of the day of liberation, there should be an increase from day to day, from the 10th of Kislev to the 11th, the 12th, the 13th, the 14th, until the 15th etc. The verse “Yaakov sent angels to his brother Esav etc.” (at the beginning of Parashas Vayishlach) means that as far as Yaakov was concerned, Esav had already been refined and was ready to proceed together with him toward the Redempt",
+     "first_seen": "2026-11-22T12:33:52+00:00"
+    },
     {
      "id": "2026.11.20",
      "title": "יום ועש\"ק פ' ויצא, יו\"ד כסלו – חג הגאולה של כ\"ק אדמו\"ר האמצעי נ\"ע, ה'תשפ\"ז",
@@ -2993,8 +3046,8 @@
      "first_seen": "2026-10-18T04:52:06+00:00"
     }
    ],
-   "total": 1433,
-   "last_success_at": "2026-11-21T22:54:19+00:00"
+   "total": 1434,
+   "last_success_at": "2026-11-22T12:33:52+00:00"
   },
   {
    "id": "learnchassidus",
@@ -3008,7 +3061,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-21T22:54:24+00:00",
+   "checked_at": "2026-11-22T12:33:56+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -3021,7 +3074,7 @@
     }
    ],
    "total": 5,
-   "last_success_at": "2026-11-21T22:54:24+00:00"
+   "last_success_at": "2026-11-22T12:33:56+00:00"
   },
   {
    "id": "simplychassidus",
@@ -3035,7 +3088,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-21T22:54:25+00:00",
+   "checked_at": "2026-11-22T12:33:58+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -3062,7 +3115,7 @@
     }
    ],
    "total": 4,
-   "last_success_at": "2026-11-21T22:54:25+00:00"
+   "last_success_at": "2026-11-22T12:33:58+00:00"
   },
   {
    "id": "alonei_chabad",
@@ -3075,7 +3128,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-21T22:54:26+00:00",
+   "checked_at": "2026-11-22T12:33:59+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -3092,7 +3145,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-21T22:54:26+00:00",
+   "checked_at": "2026-11-22T12:33:59+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -3109,7 +3162,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-21T22:54:26+00:00",
+   "checked_at": "2026-11-22T12:33:59+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -3136,7 +3189,7 @@
     }
    ],
    "total": 303,
-   "last_success_at": "2026-11-21T22:54:26+00:00"
+   "last_success_at": "2026-11-22T12:33:59+00:00"
   },
   {
    "id": "lchaim",
@@ -3149,7 +3202,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-21T22:54:27+00:00",
+   "checked_at": "2026-11-22T12:34:00+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -3225,7 +3278,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-21T22:54:27+00:00"
+   "last_success_at": "2026-11-22T12:34:00+00:00"
   },
   {
    "id": "one_point",
@@ -3238,7 +3291,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-21T22:54:29+00:00",
+   "checked_at": "2026-11-22T12:34:01+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -3279,7 +3332,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-21T22:54:29+00:00"
+   "last_success_at": "2026-11-22T12:34:01+00:00"
   },
   {
    "id": "derher",
@@ -3292,7 +3345,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-21T22:54:30+00:00",
+   "checked_at": "2026-11-22T12:34:03+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -3309,7 +3362,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-21T22:54:30+00:00",
+   "checked_at": "2026-11-22T12:34:03+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -3326,7 +3379,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-21T22:54:30+00:00",
+   "checked_at": "2026-11-22T12:34:03+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -3416,7 +3469,7 @@
     }
    ],
    "total": 2,
-   "last_success_at": "2026-11-21T22:54:30+00:00"
+   "last_success_at": "2026-11-22T12:34:03+00:00"
   },
   {
    "id": "maynotecha_inst",
@@ -3429,7 +3482,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-21T22:54:32+00:00",
+   "checked_at": "2026-11-22T12:34:05+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -3446,10 +3499,27 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-21T22:54:32+00:00",
+   "checked_at": "2026-11-22T12:34:05+00:00",
    "status": "ok",
-   "new": [],
+   "new": [
+    {
+     "id": "https://www.chabad.org/article.asp?aid=7630997",
+     "title": "Video: Yud-Tes Kislev Explainer: The Chassidic Festival By Aryeh Weinstein",
+     "url": "https://www.chabad.org/article.asp?aid=7630997",
+     "date": "Sat, 21 Nov 2026 12:00:00 EST",
+     "blurb": "Discover how a 1798 Russian prison release became the \"New Year of Chassidus\" on the 19th of Kislev, unlocking divine permission to bring the inner, mystical wisdom of Torah into everyday life.",
+     "first_seen": "2026-11-22T12:34:05+00:00"
+    }
+   ],
    "latest": [
+    {
+     "id": "https://www.chabad.org/article.asp?aid=7630997",
+     "title": "Video: Yud-Tes Kislev Explainer: The Chassidic Festival By Aryeh Weinstein",
+     "url": "https://www.chabad.org/article.asp?aid=7630997",
+     "date": "Sat, 21 Nov 2026 12:00:00 EST",
+     "blurb": "Discover how a 1798 Russian prison release became the \"New Year of Chassidus\" on the 19th of Kislev, unlocking divine permission to bring the inner, mystical wisdom of Torah into everyday life.",
+     "first_seen": "2026-11-22T12:34:05+00:00"
+    },
     {
      "id": "https://www.chabad.org/article.asp?aid=4574469",
      "title": "Video: A Whole New Light: The Mitteler Rebbe’s Liberation Living Torah",
@@ -3492,7 +3562,7 @@
     }
    ],
    "total": 1,
-   "last_success_at": "2026-11-21T22:54:32+00:00"
+   "last_success_at": "2026-11-22T12:34:05+00:00"
   },
   {
    "id": "anash",
@@ -3505,18 +3575,9 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-21T22:54:33+00:00",
+   "checked_at": "2026-11-22T12:34:06+00:00",
    "status": "ok",
-   "new": [
-    {
-     "id": "https://anash.org/?p=556249",
-     "title": "‘Why Do You Ask Me? Ask Someone Who Knows Chassidus!’",
-     "url": "https://anash.org/why-do-you-ask-me-ask-someone-who-knows-chassidus/",
-     "date": "Sat, 21 Nov 2026 22:25:00 +0000",
-     "blurb": "When Yerucham Garelik asked him for pshat in his father's maamar , the yet-to-be Frierdiker Rebbe played unlearned. But then R. Avrohom Elye Plotkin caught him writing an explanation on the question, and advised Yerucham to extract it from him.",
-     "first_seen": "2026-11-21T22:54:33+00:00"
-    }
-   ],
+   "new": [],
    "latest": [
     {
      "id": "https://anash.org/?p=556249",
@@ -3538,7 +3599,7 @@
      "id": "https://anash.org/?p=1000264",
      "title": "Is It 200 Years Since the Mitteler Rebbe’s Geulah?",
      "url": "https://anash.org/is-it-200-years-since-the-mitteler-rebbes-geulah/",
-     "date": "Fri, 20 Nov 2026 03:55:58 +0000",
+     "date": "Fri, 20 Nov 2026 13:55:58 +0000",
      "blurb": "This year, calendars and announcements are marking Yud Kislev as a major milestone - the 200th year since the Mitteler Rebbe’s geulah. But some sources seem to indicate otherwise.",
      "first_seen": "2026-11-20T12:52:31+00:00"
     },
@@ -3991,8 +4052,8 @@
      "first_seen": "2026-10-18T04:52:22+00:00"
     }
    ],
-   "total": 8,
-   "last_success_at": "2026-11-21T22:54:33+00:00"
+   "total": 6,
+   "last_success_at": "2026-11-22T12:34:06+00:00"
   },
   {
    "id": "collive",
@@ -4005,7 +4066,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-21T22:54:34+00:00",
+   "checked_at": "2026-11-22T12:34:07+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -4022,7 +4083,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-21T22:54:34+00:00",
+   "checked_at": "2026-11-22T12:34:07+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -4039,7 +4100,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-21T22:54:34+00:00",
+   "checked_at": "2026-11-22T12:34:07+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -4073,7 +4134,7 @@
     }
    ],
    "total": 20,
-   "last_success_at": "2026-11-21T22:54:34+00:00"
+   "last_success_at": "2026-11-22T12:34:07+00:00"
   },
   {
    "id": "abc770",
@@ -4086,7 +4147,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-21T22:54:36+00:00",
+   "checked_at": "2026-11-22T12:34:08+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -4132,7 +4193,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-21T22:54:36+00:00"
+   "last_success_at": "2026-11-22T12:34:08+00:00"
   },
   {
    "id": "kehot",
@@ -4145,7 +4206,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-21T22:54:39+00:00",
+   "checked_at": "2026-11-22T12:34:11+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -4855,7 +4916,7 @@
     }
    ],
    "total": 197,
-   "last_success_at": "2026-11-21T22:54:39+00:00"
+   "last_success_at": "2026-11-22T12:34:11+00:00"
   }
  ],
  "browser_checks": {
