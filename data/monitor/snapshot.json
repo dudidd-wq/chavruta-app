@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-22T12:34:30+00:00",
+ "generated_at": "2026-11-22T13:06:42+00:00",
  "sources": [
   {
    "id": "chabadlibrary",
@@ -12,7 +12,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-11-22T12:33:18+00:00",
+   "checked_at": "2026-11-22T13:05:27+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -30,7 +30,7 @@
     "primary",
     "whatsnew"
    ],
-   "checked_at": "2026-11-22T12:33:18+00:00",
+   "checked_at": "2026-11-22T13:05:27+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -47,7 +47,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-11-22T12:33:18+00:00",
+   "checked_at": "2026-11-22T13:05:27+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -64,7 +64,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-11-22T12:33:18+00:00",
+   "checked_at": "2026-11-22T13:05:27+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -82,7 +82,7 @@
     "primary",
     "whatsnew"
    ],
-   "checked_at": "2026-11-22T12:33:18+00:00",
+   "checked_at": "2026-11-22T13:05:27+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -102,7 +102,7 @@
     }
    ],
    "total": 132,
-   "last_success_at": "2026-11-22T12:33:18+00:00"
+   "last_success_at": "2026-11-22T13:05:27+00:00"
   },
   {
    "id": "chabadlibrarybooks",
@@ -115,7 +115,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-11-22T12:33:19+00:00",
+   "checked_at": "2026-11-22T13:05:28+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -133,12 +133,12 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-22T12:33:19+00:00",
+   "checked_at": "2026-11-22T13:05:28+00:00",
    "status": "ok",
    "new": [],
    "latest": [],
    "total": 1501,
-   "last_success_at": "2026-11-22T12:33:19+00:00"
+   "last_success_at": "2026-11-22T13:05:28+00:00"
   },
   {
    "id": "chassidut_org",
@@ -152,12 +152,12 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-22T12:33:20+00:00",
+   "checked_at": "2026-11-22T13:05:29+00:00",
    "status": "ok",
    "new": [],
    "latest": [],
    "total": 4,
-   "last_success_at": "2026-11-22T12:33:20+00:00"
+   "last_success_at": "2026-11-22T13:05:29+00:00"
   },
   {
    "id": "biurim",
@@ -171,7 +171,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-22T12:33:21+00:00",
+   "checked_at": "2026-11-22T13:05:31+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -225,7 +225,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-22T12:33:21+00:00"
+   "last_success_at": "2026-11-22T13:05:31+00:00"
   },
   {
    "id": "hm_monsey",
@@ -239,7 +239,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-22T12:33:23+00:00",
+   "checked_at": "2026-11-22T13:05:33+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -333,7 +333,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-22T12:33:23+00:00"
+   "last_success_at": "2026-11-22T13:05:33+00:00"
   },
   {
    "id": "hiskashrus",
@@ -347,7 +347,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-22T12:33:25+00:00",
+   "checked_at": "2026-11-22T13:05:34+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -423,7 +423,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-22T12:33:25+00:00"
+   "last_success_at": "2026-11-22T13:05:34+00:00"
   },
   {
    "id": "lichyot_chassidus",
@@ -437,7 +437,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-22T12:33:26+00:00",
+   "checked_at": "2026-11-22T13:05:36+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -611,7 +611,7 @@
     }
    ],
    "total": 1000,
-   "last_success_at": "2026-11-22T12:33:26+00:00"
+   "last_success_at": "2026-11-22T13:05:36+00:00"
   },
   {
    "id": "chabadzoom",
@@ -625,7 +625,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-22T12:33:28+00:00",
+   "checked_at": "2026-11-22T13:05:38+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -778,7 +778,7 @@
     }
    ],
    "total": 564,
-   "last_success_at": "2026-11-22T12:33:28+00:00"
+   "last_success_at": "2026-11-22T13:05:38+00:00"
   },
   {
    "id": "kovtzimdrive",
@@ -792,7 +792,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-22T12:33:31+00:00",
+   "checked_at": "2026-11-22T13:05:40+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -800,12 +800,12 @@
      "id": "https://www.kovtzimdrive.com/posts/bochurim-build-database-of-thousands-of-%E2%80%98he%E2%80%99aros%E2%80%99",
      "title": "bochurim build database of thousands of ‘he’aros’",
      "url": "https://www.kovtzimdrive.com/posts/bochurim-build-database-of-thousands-of-%E2%80%98he%E2%80%99aros%E2%80%99",
-     "date": "2026-11-20",
+     "date": "2026-11-16",
      "first_seen": "2026-10-20T07:59:38+00:00"
     }
    ],
    "total": 1,
-   "last_success_at": "2026-11-22T12:33:31+00:00"
+   "last_success_at": "2026-11-22T13:05:40+00:00"
   },
   {
    "id": "avita",
@@ -819,7 +819,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-22T12:33:33+00:00",
+   "checked_at": "2026-11-22T13:05:43+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -837,7 +837,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-22T12:33:33+00:00",
+   "checked_at": "2026-11-22T13:05:43+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -859,7 +859,7 @@
     }
    ],
    "total": 2,
-   "last_success_at": "2026-11-22T12:33:33+00:00"
+   "last_success_at": "2026-11-22T13:05:43+00:00"
   },
   {
    "id": "dvarmalchus770",
@@ -873,18 +873,9 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-22T12:33:35+00:00",
+   "checked_at": "2026-11-22T13:05:45+00:00",
    "status": "ok",
-   "new": [
-    {
-     "id": "http://dvarmalchus770.org/?p=5713",
-     "title": "Vayishlach 5752: The Moon Becomes Like the Sun",
-     "url": "https://dvarmalchus770.org/2026/11/21/vayishlach-5752-the-moon-becomes-like-the-sun-2/",
-     "date": "Sat, 21 Nov 2026 23:09:00 +0000",
-     "blurb": "Our sages tell us that the Jewish people are likened to the moon and thus we count according to the moon. The months of the Jewish calendar begin with the birth of the new moon each month. This means that the 15th of every month is the date of the full moon. What is a full […]",
-     "first_seen": "2026-11-22T12:33:35+00:00"
-    }
-   ],
+   "new": [],
    "latest": [
     {
      "id": "http://dvarmalchus770.org/?p=5713",
@@ -1040,7 +1031,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-22T12:33:35+00:00"
+   "last_success_at": "2026-11-22T13:05:45+00:00"
   },
   {
    "id": "soulwords",
@@ -1054,7 +1045,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-22T12:33:36+00:00",
+   "checked_at": "2026-11-22T13:05:46+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1124,7 +1115,7 @@
     }
    ],
    "total": 0,
-   "last_success_at": "2026-11-22T12:33:36+00:00"
+   "last_success_at": "2026-11-22T13:05:46+00:00"
   },
   {
    "id": "sie_weekly",
@@ -1138,7 +1129,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-22T12:33:38+00:00",
+   "checked_at": "2026-11-22T13:05:48+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1214,7 +1205,7 @@
     }
    ],
    "total": 118,
-   "last_success_at": "2026-11-22T12:33:38+00:00"
+   "last_success_at": "2026-11-22T13:05:48+00:00"
   },
   {
    "id": "pls",
@@ -1228,18 +1219,9 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-22T12:33:39+00:00",
+   "checked_at": "2026-11-22T13:05:49+00:00",
    "status": "ok",
-   "new": [
-    {
-     "id": "cd1e9e54-987b-429c-958b-ca0e51053667",
-     "title": "Chelek 30, Vayishlach 1 - Rabbi Yaakov Moshe Wolberg",
-     "url": "https://sichaindepth.captivate.fm",
-     "date": "Sun, 22 Nov 2026 00:40:00 -0500",
-     "blurb": "Chelek 30, Vayishlach 1 - Rabbi Yaakov Moshe Wolberg",
-     "first_seen": "2026-11-22T12:33:39+00:00"
-    }
-   ],
+   "new": [],
    "latest": [
     {
      "id": "cd1e9e54-987b-429c-958b-ca0e51053667",
@@ -1411,7 +1393,7 @@
     }
    ],
    "total": 200,
-   "last_success_at": "2026-11-22T12:33:39+00:00"
+   "last_success_at": "2026-11-22T13:05:49+00:00"
   },
   {
    "id": "chayenu_ls",
@@ -1425,7 +1407,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-22T12:33:40+00:00",
+   "checked_at": "2026-11-22T13:05:51+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1459,7 +1441,7 @@
     }
    ],
    "total": 2,
-   "last_success_at": "2026-11-22T12:33:40+00:00"
+   "last_success_at": "2026-11-22T13:05:51+00:00"
   },
   {
    "id": "weekly_sicha",
@@ -1473,7 +1455,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-22T12:33:42+00:00",
+   "checked_at": "2026-11-22T13:05:52+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1549,7 +1531,7 @@
     }
    ],
    "total": 121,
-   "last_success_at": "2026-11-22T12:33:42+00:00"
+   "last_success_at": "2026-11-22T13:05:52+00:00"
   },
   {
    "id": "theyeshiva",
@@ -1563,7 +1545,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-22T12:33:43+00:00",
+   "checked_at": "2026-11-22T13:05:53+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1753,7 +1735,7 @@
     }
    ],
    "total": 1554,
-   "last_success_at": "2026-11-22T12:33:43+00:00"
+   "last_success_at": "2026-11-22T13:05:53+00:00"
   },
   {
    "id": "chassidus_applied",
@@ -1767,7 +1749,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-22T12:33:45+00:00",
+   "checked_at": "2026-11-22T13:05:57+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2125,7 +2107,7 @@
     }
    ],
    "total": 15,
-   "last_success_at": "2026-11-22T12:33:45+00:00"
+   "last_success_at": "2026-11-22T13:05:57+00:00"
   },
   {
    "id": "neirot",
@@ -2139,18 +2121,9 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-22T12:33:45+00:00",
+   "checked_at": "2026-11-22T13:05:57+00:00",
    "status": "ok",
-   "new": [
-    {
-     "id": "8271",
-     "title": "Hemshech Ayin Beis – Vol 1",
-     "url": "https://neirot.com/wp-content/uploads/2026/11/Hemshech-Ayin-Beis-Vol-1.pdf",
-     "date": "2026-11-22T10:10:05",
-     "blurb": "",
-     "first_seen": "2026-11-22T12:33:45+00:00"
-    }
-   ],
+   "new": [],
    "latest": [
     {
      "id": "8271",
@@ -2210,7 +2183,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-22T12:33:45+00:00"
+   "last_success_at": "2026-11-22T13:05:57+00:00"
   },
   {
    "id": "chassidus_explained",
@@ -2224,7 +2197,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-22T12:33:48+00:00",
+   "checked_at": "2026-11-22T13:05:59+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2302,7 +2275,7 @@
     }
    ],
    "total": 138,
-   "last_success_at": "2026-11-22T12:33:48+00:00"
+   "last_success_at": "2026-11-22T13:05:59+00:00"
   },
   {
    "id": "melukat",
@@ -2316,7 +2289,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-22T12:33:49+00:00",
+   "checked_at": "2026-11-22T13:06:01+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2378,7 +2351,7 @@
     }
    ],
    "total": 168,
-   "last_success_at": "2026-11-22T12:33:49+00:00"
+   "last_success_at": "2026-11-22T13:06:01+00:00"
   },
   {
    "id": "daily_maamar",
@@ -2392,7 +2365,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-22T12:33:50+00:00",
+   "checked_at": "2026-11-22T13:06:02+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2678,7 +2651,7 @@
     }
    ],
    "total": 370,
-   "last_success_at": "2026-11-22T12:33:50+00:00"
+   "last_success_at": "2026-11-22T13:06:02+00:00"
   },
   {
    "id": "wellsprings",
@@ -2692,7 +2665,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-22T12:33:51+00:00",
+   "checked_at": "2026-11-22T13:06:03+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2738,7 +2711,7 @@
     }
    ],
    "total": 125,
-   "last_success_at": "2026-11-22T12:33:51+00:00"
+   "last_success_at": "2026-11-22T13:06:03+00:00"
   },
   {
    "id": "daily_sicha",
@@ -2752,18 +2725,9 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-22T12:33:52+00:00",
+   "checked_at": "2026-11-22T13:06:04+00:00",
    "status": "ok",
-   "new": [
-    {
-     "id": "2026.11.22",
-     "title": "יום א' פ' וישלח, י\"ב כסלו, ה'תשפ\"ז",
-     "url": "",
-     "date": "Sun, 22 Nov 2026 12:00:00 GMT",
-     "blurb": "התוכן בעמדנו ביום שלמחרת והמשך ליו\"ד כסלו , חג הגאולה של אדמו\"ר האמצעי, יש לעורר עוה\"פ אודות המשך הפעולה בכל הענינים הקשורים עם אדמו\"ר האמצעי באופן של \" רחובות הנהר\". נוסף על המשך ההתוועדויות דיום הגאולה, יש להוסיף בזה מיום ליום, מיו\"ד כסלו לי\"א, לי\"ב, לי\"ג לי\"ד, עד לט\"ו בכסלו וכו'; תוכן התחלת פ' וישלח, \"וישלח יעקב מלאכים אל עשו אחיו וגו'\", הוא, שמצדו של יעקב כבר נתברר עשו ומוכן ללכת יחד עם יעקב אל הגאולה. ומכיון שמאז כבר עברו ריבוי זמן שבו עסקו בעבודת הבירורים, בודאי שכבר נשלם הבירור דעשו גם מצדו של עשו כפשוטו , וכבר סיימו גם את \"צחצוח הכפתורים\", ומוכנים אל הגאולה בפועל ממש ! וע\"י ההוספה עוד יותר בלימוד התורה וקיום המצוות מתוך הרחבה ובהידור באופן של \"מהדרין מן המהדרין\" (כהוראת ימי החנוכה וכו'), יזרזו עוד יותר את הגאולה האמיתית והשלימה תיכף ומיד ממש! ב' חלקים משיחת י\"א כסלו ה'תשמ\"ט ל\"הנחה פרטית\" או התרגום ללה\"ק של השיחה: https://thedailysicha.com/?date=22-11-2026 Synopsis On the day after 10 Kislev, it is appropriate to once again encourage everyone to continue in all the activities associated with the Mitteler Rebbe, in a manner of rechovos hanahar . In addition to continuing the farbrengens of the day of liberation, there should be an increase from day to day, from the 10th of Kislev to the 11th, the 12th, the 13th, the 14th, until the 15th etc. The verse “Yaakov sent angels to his brother Esav etc.” (at the beginning of Parashas Vayishlach) means that as far as Yaakov was concerned, Esav had already been refined and was ready to proceed together with him toward the Redempt",
-     "first_seen": "2026-11-22T12:33:52+00:00"
-    }
-   ],
+   "new": [],
    "latest": [
     {
      "id": "2026.11.22",
@@ -3047,7 +3011,7 @@
     }
    ],
    "total": 1434,
-   "last_success_at": "2026-11-22T12:33:52+00:00"
+   "last_success_at": "2026-11-22T13:06:04+00:00"
   },
   {
    "id": "learnchassidus",
@@ -3061,7 +3025,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-22T12:33:56+00:00",
+   "checked_at": "2026-11-22T13:06:10+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -3074,7 +3038,7 @@
     }
    ],
    "total": 5,
-   "last_success_at": "2026-11-22T12:33:56+00:00"
+   "last_success_at": "2026-11-22T13:06:10+00:00"
   },
   {
    "id": "simplychassidus",
@@ -3088,7 +3052,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-22T12:33:58+00:00",
+   "checked_at": "2026-11-22T13:06:11+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -3115,7 +3079,7 @@
     }
    ],
    "total": 4,
-   "last_success_at": "2026-11-22T12:33:58+00:00"
+   "last_success_at": "2026-11-22T13:06:11+00:00"
   },
   {
    "id": "alonei_chabad",
@@ -3128,7 +3092,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-22T12:33:59+00:00",
+   "checked_at": "2026-11-22T13:06:12+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -3145,7 +3109,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-22T12:33:59+00:00",
+   "checked_at": "2026-11-22T13:06:12+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -3162,7 +3126,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-22T12:33:59+00:00",
+   "checked_at": "2026-11-22T13:06:12+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -3189,7 +3153,7 @@
     }
    ],
    "total": 303,
-   "last_success_at": "2026-11-22T12:33:59+00:00"
+   "last_success_at": "2026-11-22T13:06:12+00:00"
   },
   {
    "id": "lchaim",
@@ -3202,7 +3166,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-22T12:34:00+00:00",
+   "checked_at": "2026-11-22T13:06:13+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -3278,7 +3242,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-22T12:34:00+00:00"
+   "last_success_at": "2026-11-22T13:06:13+00:00"
   },
   {
    "id": "one_point",
@@ -3291,7 +3255,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-22T12:34:01+00:00",
+   "checked_at": "2026-11-22T13:06:15+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -3332,7 +3296,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-22T12:34:01+00:00"
+   "last_success_at": "2026-11-22T13:06:15+00:00"
   },
   {
    "id": "derher",
@@ -3345,7 +3309,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-22T12:34:03+00:00",
+   "checked_at": "2026-11-22T13:06:16+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -3362,7 +3326,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-22T12:34:03+00:00",
+   "checked_at": "2026-11-22T13:06:16+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -3379,7 +3343,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-22T12:34:03+00:00",
+   "checked_at": "2026-11-22T13:06:16+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -3469,7 +3433,7 @@
     }
    ],
    "total": 2,
-   "last_success_at": "2026-11-22T12:34:03+00:00"
+   "last_success_at": "2026-11-22T13:06:16+00:00"
   },
   {
    "id": "maynotecha_inst",
@@ -3482,7 +3446,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-22T12:34:05+00:00",
+   "checked_at": "2026-11-22T13:06:18+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -3499,18 +3463,9 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-22T12:34:05+00:00",
+   "checked_at": "2026-11-22T13:06:18+00:00",
    "status": "ok",
-   "new": [
-    {
-     "id": "https://www.chabad.org/article.asp?aid=7630997",
-     "title": "Video: Yud-Tes Kislev Explainer: The Chassidic Festival By Aryeh Weinstein",
-     "url": "https://www.chabad.org/article.asp?aid=7630997",
-     "date": "Sat, 21 Nov 2026 12:00:00 EST",
-     "blurb": "Discover how a 1798 Russian prison release became the \"New Year of Chassidus\" on the 19th of Kislev, unlocking divine permission to bring the inner, mystical wisdom of Torah into everyday life.",
-     "first_seen": "2026-11-22T12:34:05+00:00"
-    }
-   ],
+   "new": [],
    "latest": [
     {
      "id": "https://www.chabad.org/article.asp?aid=7630997",
@@ -3562,7 +3517,7 @@
     }
    ],
    "total": 1,
-   "last_success_at": "2026-11-22T12:34:05+00:00"
+   "last_success_at": "2026-11-22T13:06:18+00:00"
   },
   {
    "id": "anash",
@@ -3575,10 +3530,18 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-22T12:34:06+00:00",
+   "checked_at": "2026-11-22T13:06:19+00:00",
    "status": "ok",
    "new": [],
    "latest": [
+    {
+     "id": "https://anash.org/?p=1136251",
+     "title": "Your Chance to Own Chanukah Gelt from the Rebbe",
+     "url": "https://anash.org/your-chance-to-own-chanukah-gelt-from-the-rebbe/",
+     "date": "Sun, 22 Nov 2026 13:00:00 +0000",
+     "blurb": "A Kislev auction will feature Chanukah gelt distributed by the Rebbe, an original teshurah from the Rebbe and Rebbetzin’s wedding, and a Tehillim from which the Rebbe davened.",
+     "first_seen": "2026-11-20T12:52:31+00:00"
+    },
     {
      "id": "https://anash.org/?p=556249",
      "title": "‘Why Do You Ask Me? Ask Someone Who Knows Chassidus!’",
@@ -3609,14 +3572,6 @@
      "url": "https://anash.org/what-do-you-know-about-the-mitteler-rebbe/",
      "date": "Fri, 20 Nov 2026 02:10:00 +0000",
      "blurb": "The era of the Mitteler Rebbe, his Chassidus and nesi’us, is perhaps the most misunderstood and underappreciated. A fascinating conversation with Rabbi Sholom Avtzon , reframing the Mitteler Rebbe's relevance in Chassidus Chabad and our lives.",
-     "first_seen": "2026-11-20T12:52:31+00:00"
-    },
-    {
-     "id": "https://anash.org/?p=1136251",
-     "title": "Your Chance to Own Chanukah Gelt from the Rebbe",
-     "url": "https://anash.org/your-chance-to-own-chanukah-gelt-from-the-rebbe/",
-     "date": "Thu, 19 Nov 2026 23:43:00 +0000",
-     "blurb": "A Kislev auction will feature Chanukah gelt distributed by the Rebbe, an original teshurah from the Rebbe and Rebbetzin’s wedding, and a Tehillim from which the Rebbe davened.",
      "first_seen": "2026-11-20T12:52:31+00:00"
     },
     {
@@ -4053,7 +4008,7 @@
     }
    ],
    "total": 6,
-   "last_success_at": "2026-11-22T12:34:06+00:00"
+   "last_success_at": "2026-11-22T13:06:19+00:00"
   },
   {
    "id": "collive",
@@ -4066,7 +4021,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-22T12:34:07+00:00",
+   "checked_at": "2026-11-22T13:06:21+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -4083,7 +4038,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-22T12:34:07+00:00",
+   "checked_at": "2026-11-22T13:06:21+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -4100,7 +4055,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-22T12:34:07+00:00",
+   "checked_at": "2026-11-22T13:06:21+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -4134,7 +4089,7 @@
     }
    ],
    "total": 20,
-   "last_success_at": "2026-11-22T12:34:07+00:00"
+   "last_success_at": "2026-11-22T13:06:21+00:00"
   },
   {
    "id": "abc770",
@@ -4147,7 +4102,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-22T12:34:08+00:00",
+   "checked_at": "2026-11-22T13:06:22+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -4193,7 +4148,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-22T12:34:08+00:00"
+   "last_success_at": "2026-11-22T13:06:22+00:00"
   },
   {
    "id": "kehot",
@@ -4206,7 +4161,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-22T12:34:11+00:00",
+   "checked_at": "2026-11-22T13:06:25+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -4916,7 +4871,7 @@
     }
    ],
    "total": 197,
-   "last_success_at": "2026-11-22T12:34:11+00:00"
+   "last_success_at": "2026-11-22T13:06:25+00:00"
   }
  ],
  "browser_checks": {
