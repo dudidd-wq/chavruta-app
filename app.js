@@ -6224,23 +6224,64 @@ async function ftMafteiachLayer(s, t, d) {
   if (!entry) return null;
   const label = mf.label || FT_HE_LABEL;
   const text = h("div", { class: "ft-he-text ft-text" });
-  text.append(ftSafe(ftBlocks(entry.t), "ft-he-" + entry.k));
+  const notesHost = h("div", { class: "ft-he-notes-host" });
+  const prefKey = "chavruta-nikud-v1";
+  const readPref = () => { try { return localStorage.getItem(prefKey) === "1"; } catch (e) { return false; } };
+  const writePref = v => { try { localStorage.setItem(prefKey, v ? "1" : "0"); } catch (e) {} };
+  let nikudEntry = null;
+  const nikudName = (mf.nikud && mf.nikud.he)
+    ? mf.nikud.he.replace("{vol}", String(vol).padStart(2, "0"))
+    : name + "-nikud";
+  const nikudVols = mf.nikud && Array.isArray(mf.nikud.vols) ? mf.nikud.vols : null;
+  if (!nikudVols || nikudVols.includes(vol)) {
+    try {
+      const nk = await loadChunk(nikudName);
+      if (nk) {
+        for (const j of leaves) {
+          const rec = nk[String(t.n[j][0])];
+          if (rec && rec.t) { nikudEntry = rec; break; }
+        }
+      }
+    } catch (e) { /* שכבת ניקוד אופציונלית */ }
+  }
+  const paint = useNikud => {
+    const rec = useNikud && nikudEntry ? nikudEntry : entry;
+    text.replaceChildren();
+    text.append(ftSafe(ftBlocks(rec.t), "ft-he-" + rec.k + (useNikud && nikudEntry ? "-nikud" : "")));
+    notesHost.replaceChildren();
+    if (rec.n && rec.n.length) {
+      const ol = h("div", { class: "ft-notes-l" });
+      rec.n.forEach(n => {
+        const it = h("div", { class: "ft-note" });
+        it.append(ftSafe(n, ""));
+        ol.append(it);
+      });
+      notesHost.append(h("details", { class: "ft-notes" }, h("summary", null, "הערות (" + rec.n.length + ")"), ol));
+    }
+  };
+  paint(false);
   const body = h("div", { class: "ft-related-body ft-he-body" },
     h("p", { class: "ft-related-note" }, "תרגום מאתר מפתח (mafteiach.app). אינו מוגה, ואינו הנוסח המקורי."),
-    text);
-  if (entry.n && entry.n.length) {
-    const ol = h("div", { class: "ft-notes-l" });
-    entry.n.forEach((n, i) => {
-      const it = h("div", { class: "ft-note" });
-      it.append(ftSafe(n, ""));
-      ol.append(it);
-    });
-    body.append(h("details", { class: "ft-notes" }, h("summary", null, "הערות (" + entry.n.length + ")"), ol));
+    text, notesHost);
+  if (nikudEntry) {
+    const btn = h("button", { type: "button", class: "btn sm ft-nikud-toggle", "aria-pressed": "false" }, "הצג ניקוד");
+    const note = h("p", { class: "ft-related-note ft-nikud-note" }, "ניקוד אוטומטי מאת Dicta (שירות חינמי). ייתכנו טעויות.");
+    const apply = on => {
+      writePref(on);
+      btn.setAttribute("aria-pressed", on ? "true" : "false");
+      btn.textContent = on ? "הסתר ניקוד" : "הצג ניקוד";
+      note.hidden = !on;
+      paint(on);
+    };
+    btn.addEventListener("click", () => apply(btn.getAttribute("aria-pressed") !== "true"));
+    body.prepend(h("div", { class: "ft-nikud-bar" }, btn), note);
+    if (readPref()) apply(true);
+    else note.hidden = true;
   }
   if (entry.src) {
     body.append(h("p", { class: "muted" }, h("a", { href: entry.src, target: "_blank", rel: "noopener" }, "המקור במפתח", typeof icon === "function" ? icon("i-ext") : " ↗")));
   }
-  return h("details", { class: "ft-related ft-he-layer" }, h("summary", null, label), body);
+  return h("details", { class: "ft-related ft-he-layer", open: !!(nikudEntry && readPref()) }, h("summary", null, label), body);
 }
 
 function ftRelated(t, target) {
