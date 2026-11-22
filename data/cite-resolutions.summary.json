@@ -1,18 +1,11 @@
 {
-  "schema": 1,
-  "generated": "2026-11-13",
-  "parashot": [
-    "בראשית",
-    "נח",
-    "לך לך",
-    "וירא"
-  ],
+  "generated": "2026-11-22",
   "stats": {
-    "files": 87,
-    "excerpts": 18479,
-    "unique": 3497,
-    "text": 3493,
-    "with_uid": 2262,
+    "files": 103,
+    "excerpts": 18704,
+    "unique": 3527,
+    "text": 3523,
+    "with_uid": 2292,
     "otzar_links": 18,
     "with_sefaria": 8,
     "ref_only": 4,
@@ -35,9 +28,18 @@
   },
   "licenses": {
     "kehot-nc": 3032,
-    "chabadlibrary": 453,
+    "chabadlibrary": 483,
     "sefaria-pd": 6,
     "excerpt": 4,
     "pd-foundational": 2
+  },
+  "merge": {
+    "copied_tx_byNode": 860,
+    "copied_tx_byUrl": 3027,
+    "byNode_without_tx": 60,
+    "byNode_old": 890,
+    "byNode_new": 920,
+    "byUrl_old": 3125,
+    "byUrl_new": 3154
   }
 }
