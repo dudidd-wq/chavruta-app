@@ -4865,7 +4865,20 @@ function booksCovers(T) {
   const enqueue = host => { const id = jobs.get(host); if (id == null) return; jobs.delete(host); queue.push({ host, id }); schedule(); };
   const observer = typeof IntersectionObserver === "function" ? new IntersectionObserver(entries => { for (const e of entries) if (e.isIntersecting) { observer.unobserve(e.target); enqueue(e.target); } }, { rootMargin: "120px" }) : null;
   return {
-    add(host, id) { jobs.set(host, id); if (observer) observer.observe(host); else queueMicrotask(() => enqueue(host)); },
+    add(host, id) {
+      jobs.set(host, id);
+      if (!observer) { queueMicrotask(() => enqueue(host)); return; }
+      observer.observe(host);
+      // After a filter redraw, IntersectionObserver can miss the first callback in some browsers (including headless CI).
+      queueMicrotask(() => {
+        if (!jobs.has(host) || !host.isConnected) return;
+        const r = host.getBoundingClientRect(), vh = window.innerHeight || 0, vw = window.innerWidth || 0;
+        if (r.width && r.height && r.bottom > -120 && r.top < vh + 120 && r.right > -120 && r.left < vw + 120) {
+          observer.unobserve(host);
+          enqueue(host);
+        }
+      });
+    },
     close() { stopped = true; clearTimeout(scheduled); observer?.disconnect(); queue.length = 0; jobs.clear(); for (const c of controllers) c.abort(); }
   };
 }

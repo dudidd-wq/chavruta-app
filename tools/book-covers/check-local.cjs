@@ -30,12 +30,20 @@ const {chromium}=require(path.join(process.env.PLAYWRIGHT_NODE_MODULES,'playwrig
   // Search so the Haggadah card is on screen even if the Rebbe's shelf is paginated.
   const search=page.locator('input[type="search"][aria-label="חיפוש ספר"]');
   await search.fill('הגדה של פסח');
-  const haggadah=page.locator('.books-card').filter({hasText:'הגדה של פסח עם לקוטי טעמים ומנהגים'});
-  await haggadah.first().waitFor({state:'visible',timeout:10000});
-  await haggadah.scrollIntoViewIfNeeded();await haggadah.locator('img').waitFor({state:'visible',timeout:90000});
-  const cover=await haggadah.locator('img').getAttribute('src');
+  const haggadah=page.locator('.books-card').filter({hasText:'הגדה של פסח עם לקוטי טעמים ומנהגים'}).first();
+  await haggadah.waitFor({state:'visible',timeout:10000});
+  await haggadah.evaluate(el=>{el.scrollIntoView({block:'center',inline:'nearest'});window.scrollBy(0,1);window.scrollBy(0,-1);});
+  const coverHost=haggadah.locator('.books-cover');
+  const img=coverHost.locator('img');
+  try { await img.waitFor({state:'visible',timeout:30000}); }
+  catch (err) {
+    const hostText=(await coverHost.innerText().catch(()=>''))||'';
+    if (/הצילום לא נטען|צילום השער בהכנה|צילום שער אינו זמין/.test(hostText)) throw new Error('Haggadah cover failed to load: '+hostText);
+    throw new Error('Haggadah cover img did not appear (host: '+hostText+')');
+  }
+  const cover=await img.getAttribute('src');
   assert.match(cover,/^data\/book-covers\/c-46dc297f9c8a413f5d557d8e-[a-f0-9]{16}\.webp$/);
-  await haggadah.locator('img').evaluate(img=>img.decode());await page.screenshot({path:'book-snapshot-live.png',fullPage:false});
+  await img.evaluate(el=>el.decode());await page.screenshot({path:'book-snapshot-live.png',fullPage:false});
   // Tanya (series 8) is a stable Alter Rebbe work; book ids such as 763 shift as the catalog grows.
   await page.goto(origin+'/#/books/g/s/8');await page.locator('.books-book-head h1').waitFor();
   assert.match(await page.locator('.books-book-head').innerText(),/אדה״ז|אדמו["״]ר הזקן/);
