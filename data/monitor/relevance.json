@@ -2159,5 +2159,55 @@
     "why": "וידאו הסבר על י״ט כסלו (Aryeh Weinstein) — וידאו אינו נכנס. הכותרת מציינת Video.",
     "source_url": "https://www.chabad.org/article.asp?aid=7630997",
     "checked_at": "2026-11-22T13:10:00+00:00"
+  },
+  "04ea83f2ea3e0993": {
+    "cls": "מקור",
+    "why": "תרגום חדש לאנגלית של שיחת וישלח מלקוטי שיחות חלק ג׳ במסגרת SIE Weekly; אומת בשער ה־PDF.",
+    "source_url": "https://drive.google.com/file/d/1tZsHt_e_S5m9CjF9ne-vzV2oHdu4AAgA/view",
+    "checked_at": "2026-11-23T13:05:00+00:00"
+  },
+  "10a20d35bd7978e9": {
+    "cls": "מקור",
+    "why": "תרגום חדש לאנגלית של שיחת י״ט כסלו מלקוטי שיחות חלק ג׳ במסגרת SIE Weekly; אומת בשער ה־PDF.",
+    "source_url": "https://drive.google.com/file/d/1vCUgnMl4l-q8HlfD6S0xM6-arW2yL_cg/view",
+    "checked_at": "2026-11-23T13:05:00+00:00"
+  },
+  "aa05cce982e84189": {
+    "cls": "כפול",
+    "why": "קישור Download הכללי זוהה בקובץ המקורי כוישלח לקוטי שיחות חלק ג׳, ונשמר כרשומה המזוהה 04ea83f2ea3e0993.",
+    "duplicate_of": "04ea83f2ea3e0993",
+    "checked_at": "2026-11-23T13:05:00+00:00",
+    "source_url": "https://drive.google.com/file/d/1tZsHt_e_S5m9CjF9ne-vzV2oHdu4AAgA/view"
+  },
+  "0baa41fb680e0480": {
+    "cls": "כפול",
+    "why": "קישור Download הכללי זוהה בקובץ המקורי כי״ט כסלו לקוטי שיחות חלק ג׳, ונשמר כרשומה המזוהה 10a20d35bd7978e9.",
+    "duplicate_of": "10a20d35bd7978e9",
+    "checked_at": "2026-11-23T13:05:00+00:00",
+    "source_url": "https://drive.google.com/file/d/1vCUgnMl4l-q8HlfD6S0xM6-arW2yL_cg/view"
+  },
+  "a9fd1dc8cad9251f": {
+    "cls": "מקור",
+    "why": "גיליון בני היכלא לכסלו: הערות הצמח צדק על תשובת ״דברי נחמיה״ בפרסום ראשון מכתב יד, וכן שיחה של הרבי; לפי הכתבה ב־Anash.",
+    "source_url": "https://anash.org/new-bnei-heichala-journal-published-for-month-of-kislev/",
+    "checked_at": "2026-11-23T13:05:00+00:00"
+  },
+  "0a838d97546e1802": {
+    "cls": "לא רלוונטי",
+    "why": "חדשות על פסטיבל צמאה (הופעות, התוועדויות, יריד ספרים); אין פרסום כתוב חדש",
+    "source_url": "https://anash.org/tens-of-thousands-expected-at-tzama-chassidus-week/",
+    "checked_at": "2026-11-23T13:05:00+00:00"
+  },
+  "75e138d6caa2bd42": {
+    "cls": "לא רלוונטי",
+    "why": "חדשות על כינוס בחורים ומבצע מכירות ספרי חסידות; אין פרסום כתוב חדש",
+    "source_url": "https://anash.org/didan-notzach-bochurim-take-on-40-chassidus-seforim-sales/",
+    "checked_at": "2026-11-23T13:05:00+00:00"
+  },
+  "60990606d48f8016": {
+    "cls": "לא רלוונטי",
+    "why": "מאמר דעה על מניין 200 שנה לגאולת אדמו״ר האמצעי; אינו ביאור של מאמר, שיחה או מכתב מסוים",
+    "source_url": "https://anash.org/the-rebbes-words-are-our-only-source/",
+    "checked_at": "2026-11-23T13:05:00+00:00"
   }
 }
