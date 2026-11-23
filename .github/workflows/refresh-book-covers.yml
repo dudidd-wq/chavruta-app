@@ -29,14 +29,17 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - name: Verify adapter and pinned baseline
+      - name: Verify adapter and catalog baseline
         run: |
           node --check tools/book-covers/pdf-source.mjs
+          node --check tools/book-covers/cover-ids.mjs
           node --check tools/book-covers/build.mjs
           node --input-type=module <<'NODE'
           import assert from 'node:assert/strict';
           import fs from 'node:fs';
+          import vm from 'node:vm';
           import {openCataloguePDF} from './tools/book-covers/pdf-source.mjs';
+          import {collectCoverSourceIds,assertCoverReportBaseline} from './tools/book-covers/cover-ids.mjs';
           let calls=0;
           const source=await openCataloguePDF('https://media.col.org.il/files/uploads/original/test.pdf',{},{
             retryDelay:0,
@@ -50,10 +53,11 @@ jobs:
             fetchImpl:async()=>{failures++;throw new TypeError('terminated');}
           }),/terminated/);
           assert.equal(failures,3);
+          const parse=name=>{let value;vm.runInNewContext(fs.readFileSync('data/'+name+'.js','utf8'),{window:{__D:(key,obj)=>{if(key===name)value=obj;}}},{timeout:3000});return value;};
+          const expected=collectCoverSourceIds(parse('tree'),parse('book-catalog')).size;
           const report=JSON.parse(fs.readFileSync('data/book-covers/report.json','utf8'));
-          assert.equal(report.total,1270);
-          assert.ok(report.prepared>=1248);
-          assert.ok(report.failures.length<=22);
+          assertCoverReportBaseline(report, expected);
+          console.log(JSON.stringify({expected,total:report.total,prepared:report.prepared,failures:report.failures.length}));
           NODE
   refresh:
     needs: preflight
@@ -98,9 +102,13 @@ jobs:
           NODE
           node --input-type=module <<'NODE'
           import fs from 'node:fs';
+          import vm from 'node:vm';
+          import {collectCoverSourceIds,assertCoverReportBaseline} from './tools/book-covers/cover-ids.mjs';
+          const parse=name=>{let value;vm.runInNewContext(fs.readFileSync('data/'+name+'.js','utf8'),{window:{__D:(key,obj)=>{if(key===name)value=obj;}}},{timeout:3000});return value;};
+          const expected=collectCoverSourceIds(parse('tree'),parse('book-catalog')).size;
           const report=JSON.parse(fs.readFileSync('data/book-covers/report.json','utf8'));
-          if(report.total!==1270||report.prepared<1248||report.failures.length>22)throw Error('Unexpected public cover baseline');
-          console.log(JSON.stringify({total:report.total,prepared:report.prepared,failures:report.failures.length}));
+          assertCoverReportBaseline(report, expected);
+          console.log(JSON.stringify({expected,total:report.total,prepared:report.prepared,failures:report.failures.length}));
           NODE
       - name: Install pinned renderer
         run: npm install --prefix tools/book-covers --ignore-scripts --no-audit --no-fund
@@ -124,8 +132,11 @@ jobs:
             if(bytes.toString('ascii',0,4)!=='RIFF'||bytes.toString('ascii',8,12)!=='WEBP')throw Error('Invalid WebP '+id);
             if(crypto.createHash('sha256').update(bytes).digest('hex').slice(0,16)!==match[1])throw Error('Hash mismatch '+id);
           }
-          if(report.total!==1270||report.prepared!==Object.keys(manifest.covers).length||report.prepared<1248)throw Error('Invalid final report');
-          console.log(JSON.stringify({total:report.total,prepared:report.prepared,failures:report.failures.length}));
+          const parse=name=>{let value;vm.runInNewContext(fs.readFileSync('data/'+name+'.js','utf8'),{window:{__D:(key,obj)=>{if(key===name)value=obj;}}},{timeout:3000});return value;};
+          const {collectCoverSourceIds,assertCoverReportBaseline}=await import('./tools/book-covers/cover-ids.mjs');
+          const expected=collectCoverSourceIds(parse('tree'),parse('book-catalog')).size;
+          assertCoverReportBaseline(report, expected, {preparedCount:Object.keys(manifest.covers).length});
+          console.log(JSON.stringify({expected,total:report.total,prepared:report.prepared,failures:report.failures.length}));
           NODE
       - name: Wait for Pages and verify every live asset
         run: |
