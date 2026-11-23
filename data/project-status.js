@@ -1,6 +1,6 @@
 window.CHAVRUTA_PROJECT_STATUS = {
-  "generated": "2026-11-23T10:44+02:00",
-  "generated_label": "23.11.2026, 10:44 שעון ישראל",
+  "generated": "2026-11-23T12:20+02:00",
+  "generated_label": "23.11.2026, 12:20 שעון ישראל",
   "timezone": "Asia/Jerusalem",
   "coverage": {
     "rows": [
@@ -16,62 +16,62 @@ window.CHAVRUTA_PROJECT_STATUS = {
       {
         "id": "אדמו״ר האמצעי",
         "name": "אדמו״ר האמצעי",
-        "linked": 5858,
+        "linked": 5952,
         "total": 8277,
-        "pct": 70.8,
+        "pct": 71.9,
         "status": "in_progress",
         "status_label": "בתהליך"
       },
       {
         "id": "אדמו״ר מהר״ש",
         "name": "אדמו״ר מהר״ש",
-        "linked": 4507,
+        "linked": 4516,
         "total": 4992,
-        "pct": 90.3,
+        "pct": 90.5,
         "status": "in_progress",
         "status_label": "בתהליך"
       },
       {
         "id": "אדמו״ר הרש״ב",
         "name": "אדמו״ר הרש״ב",
-        "linked": 4097,
+        "linked": 4122,
         "total": 4565,
-        "pct": 89.7,
+        "pct": 90.3,
         "status": "in_progress",
         "status_label": "בתהליך"
       },
       {
         "id": "אדמו״ר הריי״צ",
         "name": "אדמו״ר הריי״צ",
-        "linked": 1416,
+        "linked": 1450,
         "total": 1781,
-        "pct": 79.5,
+        "pct": 81.4,
         "status": "in_progress",
         "status_label": "בתהליך"
       },
       {
         "id": "הרבי",
         "name": "הרבי",
-        "linked": 9297,
+        "linked": 9805,
         "total": 11967,
-        "pct": 77.7,
+        "pct": 81.9,
         "status": "in_progress",
         "status_label": "בתהליך"
       }
     ],
     "totals": {
-      "linked": 33601,
+      "linked": 34271,
       "total": 41124,
-      "pct": 81.7
+      "pct": 83.3
     },
     "rest": {
-      "linked": 25175,
+      "linked": 25845,
       "total": 31582,
-      "pct": 79.7,
+      "pct": 81.8,
       "status": "in_progress",
       "status_label": "בתהליך",
       "rule_haiku_confirmed": 7999,
-      "note": "הקישורים לפי הכללים. Haiku אישר 7,999 מהם; הכרעת המשך עדיין רצה."
+      "note": "הוזנו 670 שיבוצים בביטחון גבוה (≥0.9) מהכרעת OCR שכבר נעשתה ולא מוזגה. נשארו 6,853 הפניות לא מקושרות."
     }
   },
   "correlation": {
