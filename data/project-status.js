@@ -1,6 +1,6 @@
 window.CHAVRUTA_PROJECT_STATUS = {
-  "generated": "2026-11-23T12:20+02:00",
-  "generated_label": "23.11.2026, 12:20 שעון ישראל",
+  "generated": "2026-11-23T12:52+02:00",
+  "generated_label": "23.11.2026, 12:52 שעון ישראל",
   "timezone": "Asia/Jerusalem",
   "coverage": {
     "rows": [
@@ -71,7 +71,7 @@ window.CHAVRUTA_PROJECT_STATUS = {
       "status": "in_progress",
       "status_label": "בתהליך",
       "rule_haiku_confirmed": 7999,
-      "note": "הוזנו 670 שיבוצים בביטחון גבוה (≥0.9) מהכרעת OCR שכבר נעשתה ולא מוזגה. נשארו 6,853 הפניות לא מקושרות."
+      "note": "הקישורים לפי הכללים. Haiku אישר 7,999 מהם; הכרעת המשך עדיין רצה."
     }
   },
   "correlation": {
