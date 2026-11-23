@@ -1,15 +1,15 @@
 {
-  "generated": "2026-11-24T00:09+02:00",
-  "generated_label": "24.11.2026, 00:09 שעון ישראל",
+  "generated": "2026-11-24T00:34+02:00",
+  "generated_label": "24.11.2026, 00:34 שעון ישראל",
   "timezone": "Asia/Jerusalem",
   "coverage": {
     "rows": [
       {
         "id": "adhz",
         "name": "אדמו״ר הזקן",
-        "linked": 8547,
+        "linked": 8604,
         "total": 9542,
-        "pct": 89.6,
+        "pct": 90.2,
         "status": "final",
         "status_label": "סופי"
       },
@@ -60,9 +60,9 @@
       }
     ],
     "totals": {
-      "linked": 36274,
+      "linked": 36331,
       "total": 41124,
-      "pct": 88.2
+      "pct": 88.3
     },
     "rest": {
       "linked": 27727,
