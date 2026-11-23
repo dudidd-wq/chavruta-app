@@ -4613,15 +4613,16 @@ function booksCoverManifest(force = false) {
 function booksCoverScans(T, id) {
   const entry = booksEntry(T, id), index = BOOK_CATALOG_INDEX.get(T);
   if (entry?.scan) return [entry.scan];
-  if (!entry || !index) return null;
+  if (!entry) return null;
+  if (!index && !entry.sourceIdentity) return null;
   const keys = entry.sourceIdentity ? [entry.sourceIdentity] : entry.unitBooks.flatMap(b => index.sourceKeys?.[b] || []);
   const linked = [...new Set(keys)].map(key => {
-    const book = index.coverSources?.[key];
+    const book = index?.coverSources?.[key];
     return key.startsWith("pdf:") && /^c-[a-f0-9]{24}$/.test(book || "") ? { book, url: key.slice(4) } :
       key.startsWith("h:") && /^[0-9]{1,8}$/.test(book || "") ? { book, url: "https://hebrewbooks.org/" + book } : null;
   }).filter(Boolean);
   if (linked.length) return linked;
-  const scans = new Set(entry.unitBooks.flatMap(b => index.scans[b] || []));
+  const scans = new Set(entry.unitBooks.flatMap(b => index?.scans?.[b] || []));
   return [...scans].filter(book => /^[0-9]{1,8}$/.test(book)).map(book => ({ book, url: "https://hebrewbooks.org/" + book }));
 }
 async function booksCoverStored(book, value) {
@@ -4691,7 +4692,11 @@ function booksEntry(T, id) {
   return { id, r: series.r, name: label && label !== series.n ? series.n + " · " + label : series.n,
     source: match ? "היברובוקס · עותק מקושר" : metadata?.source_key?.startsWith("pdf:") ? "חב״ד און ליין · PDF" : metadata?.source_key?.startsWith("cl:") ? "ספריית חב״ד · עץ המקור" : "קטלוג הסדרות והכרכים", unitBooks, mapped: !!unitBooks.length,
     overview: kind === "s", series: Number(si), volume: volume ? Number(vi) : null, sourceIdentity: metadata?.confirmed ? metadata.source_key : null, document: metadata?.confirmed && !match ? metadata.url : null,
-    unverifiedSource: metadata?.confirmed === false, scan: match ? { book: match[1], url: "https://hebrewbooks.org/" + match[1] } : null };
+    unverifiedSource: metadata?.confirmed === false,
+    scan: match ? { book: match[1], url: "https://hebrewbooks.org/" + match[1] }
+      : (metadata?.confirmed && /^c:[a-f0-9]{24}$/.test(metadata.key || "")
+        ? { book: "c-" + metadata.key.slice(2), url: metadata.url || (String(metadata.source_key || "").startsWith("pdf:") ? metadata.source_key.slice(4) : "") }
+        : null) };
 }
 function booksPath(id) {
   return typeof id === "number" ? ["books", "b", id] : ["books", ...String(id).split(":")];
@@ -4903,7 +4908,7 @@ VIEWS.books = async function(rest, q, ctx) {
   try { [T] = await Promise.all([loadChunk("tree"), booksCoverManifest()]); }
   catch (_) { if (ctx.alive()) main.replaceChildren(h("div", { class: "empty" }, "לא ניתן לטעון את הספרים כעת.", h("button", { class: "btn", type: "button", onclick: () => route() }, "ניסיון נוסף"))); return; }
   if (!ctx.alive()) return;
-  if (T.series) try { booksRegisterCatalog(T, await loadChunk("book-catalog")); } catch (_) { /* The original tree remains usable if the optional shelf index is unavailable. */ }
+  if (T.series) try { booksRegisterCatalog(T, await loadChunk("book-catalog")); } catch (err) { console.warn("book-catalog not applied", err); }
   main.replaceChildren();
   const covers = booksCovers(T); ctx.cleanup = () => covers.close();
   if (rest[0] === "e" && /^[0-9]+$/.test(rest[1] || "") && /^(?:h|c|l)$/.test(rest[2] || "") && /^[0-9a-f]+$/.test(rest[3] || "")) {
@@ -6140,7 +6145,7 @@ async function libraryEditions(main, q, ctx) {
   try { [T] = await Promise.all([loadChunk("tree"), booksCoverManifest()]); }
   catch (_) { if (ctx.alive()) host.replaceChildren(h("div", { class: "empty" }, "לא ניתן לטעון את המהדורות כעת.", h("button", { class: "btn", type: "button", onclick: () => route() }, "ניסיון נוסף"))); return; }
   if (!ctx.alive()) return;
-  if (T.series) try { booksRegisterCatalog(T, await loadChunk("book-catalog")); } catch (_) { /* The original tree remains usable if the optional shelf index is unavailable. */ }
+  if (T.series) try { booksRegisterCatalog(T, await loadChunk("book-catalog")); } catch (err) { console.warn("book-catalog not applied", err); }
   host.replaceChildren();
   const covers = booksCovers(T); ctx.cleanup = () => covers.close();
   booksShelf(host, T, q, ctx, covers, { embedded: true });
