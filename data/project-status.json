@@ -1,6 +1,6 @@
 {
-  "generated": "2026-11-23T17:17+02:00",
-  "generated_label": "23.11.2026, 17:17 שעון ישראל",
+  "generated": "2026-11-23T17:32+02:00",
+  "generated_label": "23.11.2026, 17:32 שעון ישראל",
   "timezone": "Asia/Jerusalem",
   "coverage": {
     "rows": [
@@ -16,18 +16,18 @@
       {
         "id": "אדמו״ר האמצעי",
         "name": "אדמו״ר האמצעי",
-        "linked": 6163,
+        "linked": 6252,
         "total": 8277,
-        "pct": 74.5,
+        "pct": 75.5,
         "status": "in_progress",
         "status_label": "בתהליך"
       },
       {
         "id": "אדמו״ר מהר״ש",
         "name": "אדמו״ר מהר״ש",
-        "linked": 4562,
+        "linked": 4594,
         "total": 4992,
-        "pct": 91.4,
+        "pct": 92.0,
         "status": "in_progress",
         "status_label": "בתהליך"
       },
@@ -43,31 +43,31 @@
       {
         "id": "אדמו״ר הריי״צ",
         "name": "אדמו״ר הריי״צ",
-        "linked": 1528,
+        "linked": 1535,
         "total": 1781,
-        "pct": 85.8,
+        "pct": 86.2,
         "status": "in_progress",
         "status_label": "בתהליך"
       },
       {
         "id": "הרבי",
         "name": "הרבי",
-        "linked": 10147,
+        "linked": 10155,
         "total": 11967,
-        "pct": 84.8,
+        "pct": 84.9,
         "status": "in_progress",
         "status_label": "בתהליך"
       }
     ],
     "totals": {
-      "linked": 35018,
+      "linked": 35154,
       "total": 41124,
-      "pct": 85.2
+      "pct": 85.5
     },
     "rest": {
-      "linked": 26592,
+      "linked": 26728,
       "total": 31582,
-      "pct": 84.2,
+      "pct": 84.6,
       "status": "in_progress",
       "status_label": "בתהליך",
       "rule_haiku_confirmed": 7999,
