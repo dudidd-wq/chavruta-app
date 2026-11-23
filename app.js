@@ -4887,9 +4887,10 @@ VIEWS.books = async function(rest, q, ctx) {
   const main = $("#view"); main.className = "main page wide books"; main.replaceChildren(h("p", { class: "loading", role: "status" }, "טוען את מדף הספרים…"));
   document.title = "ספרים · חברותא";
   let T;
-  try { [T] = await Promise.all([loadChunk("tree"), booksCoverManifest()]); if (T.series) booksRegisterCatalog(T, await loadChunk("book-catalog")); }
+  try { [T] = await Promise.all([loadChunk("tree"), booksCoverManifest()]); }
   catch (_) { if (ctx.alive()) main.replaceChildren(h("div", { class: "empty" }, "לא ניתן לטעון את הספרים כעת.", h("button", { class: "btn", type: "button", onclick: () => route() }, "ניסיון נוסף"))); return; }
   if (!ctx.alive()) return;
+  if (T.series) try { booksRegisterCatalog(T, await loadChunk("book-catalog")); } catch (_) { /* The original tree remains usable if the optional shelf index is unavailable. */ }
   main.replaceChildren();
   const covers = booksCovers(T); ctx.cleanup = () => covers.close();
   if (rest[0] === "e" && /^[0-9]+$/.test(rest[1] || "") && /^(?:h|c|l)$/.test(rest[2] || "") && /^[0-9a-f]+$/.test(rest[3] || "")) {
@@ -6123,9 +6124,10 @@ async function libraryEditions(main, q, ctx) {
   const host = h("div", { class: "lib-editions" }, h("p", { class: "loading", role: "status" }, "טוען את מדף המהדורות…"));
   main.append(host);
   let T;
-  try { [T] = await Promise.all([loadChunk("tree"), booksCoverManifest()]); if (T.series) booksRegisterCatalog(T, await loadChunk("book-catalog")); }
+  try { [T] = await Promise.all([loadChunk("tree"), booksCoverManifest()]); }
   catch (_) { if (ctx.alive()) host.replaceChildren(h("div", { class: "empty" }, "לא ניתן לטעון את המהדורות כעת.", h("button", { class: "btn", type: "button", onclick: () => route() }, "ניסיון נוסף"))); return; }
   if (!ctx.alive()) return;
+  if (T.series) try { booksRegisterCatalog(T, await loadChunk("book-catalog")); } catch (_) { /* The original tree remains usable if the optional shelf index is unavailable. */ }
   host.replaceChildren();
   const covers = booksCovers(T); ctx.cleanup = () => covers.close();
   booksShelf(host, T, q, ctx, covers, { embedded: true });

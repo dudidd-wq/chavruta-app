@@ -54,3 +54,6 @@ jobs:
           node --check personalize.js
           node --check personalize-head.js
           python tests/theme_smoke.py http://127.0.0.1:8765/
+
+      - name: Editions shelf smoke test (local tree and catalog)
+        run: python tests/shelf_smoke.py http://127.0.0.1:8765/
