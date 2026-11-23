@@ -162,6 +162,61 @@ STATUS_PATHS = (
 )
 
 
+
+def _read_chunk(path: Path):
+    text = path.read_text(encoding="utf-8")
+    start = text.find("window.__D(")
+    if start < 0:
+        raise SystemExit(f"no window.__D in {path.relative_to(ROOT)}")
+    comma = text.find(",", start)
+    raw = text[comma + 1 :].lstrip()
+    if raw.endswith(");\n"):
+        raw = raw[:-3]
+    elif raw.endswith(");"):
+        raw = raw[:-2]
+    return json.loads(raw)
+
+
+def check_book_catalog() -> None:
+    """The editions shelf refuses to render if catalog.links does not cover every series volume."""
+    tree = _read_chunk(ROOT / "data/tree.js")
+    catalog = _read_chunk(ROOT / "data/book-catalog.js")
+    nbooks = len(tree["books"])
+    nseries = len(tree["series"])
+    nunits = tree.get("nunits")
+    if catalog.get("schema") != 1:
+        raise SystemExit("book-catalog schema must be 1")
+    if catalog.get("nbooks") != nbooks or len(catalog.get("bookScans") or []) != nbooks:
+        raise SystemExit("book-catalog nbooks/bookScans do not match the tree")
+    if catalog.get("nunits") != nunits:
+        raise SystemExit(f"book-catalog nunits {catalog.get('nunits')} != tree.nunits {nunits}")
+    if catalog.get("nseries") != nseries:
+        raise SystemExit(f"book-catalog nseries {catalog.get('nseries')} != tree series {nseries}")
+    links = catalog.get("links")
+    if not isinstance(links, list):
+        raise SystemExit("book-catalog links must be an array")
+    seen = set()
+    for item in links:
+        if not (isinstance(item, list) and len(item) >= 3 and isinstance(item[0], int) and isinstance(item[1], int)):
+            raise SystemExit(f"book-catalog link is malformed: {item!r}")
+        si, vi = item[0], item[1]
+        if si < 0 or si >= nseries or vi < 0 or vi >= len(tree["series"][si].get("vols") or []):
+            raise SystemExit(f"book-catalog link {si}:{vi} does not match a tree volume")
+        if (si, vi) in seen:
+            raise SystemExit(f"book-catalog has a duplicate link for {si}:{vi}")
+        seen.add((si, vi))
+    missing = [
+        f"{si}:{vi}"
+        for si, series in enumerate(tree["series"])
+        for vi in range(len(series.get("vols") or []))
+        if (si, vi) not in seen
+    ]
+    if missing:
+        raise SystemExit(
+            "book-catalog is missing volume links (editions shelf will fail to load): " + ", ".join(missing[:30])
+        )
+
+
 def check_repo_guard() -> None:
     for path in ROOT.rglob("*"):
         if not path.is_file():
@@ -193,6 +248,7 @@ def check_repo_guard() -> None:
 def main() -> int:
     check_status_json()
     check_status_html()
+    check_book_catalog()
     check_repo_guard()
     print("pr-check ok")
     return 0
