@@ -1,6 +1,6 @@
 window.CHAVRUTA_PROJECT_STATUS = {
-  "generated": "2026-11-23T18:13+02:00",
-  "generated_label": "23.11.2026, 18:13 שעון ישראל",
+  "generated": "2026-11-23T18:33+02:00",
+  "generated_label": "23.11.2026, 18:33 שעון ישראל",
   "timezone": "Asia/Jerusalem",
   "coverage": {
     "rows": [
@@ -16,58 +16,58 @@ window.CHAVRUTA_PROJECT_STATUS = {
       {
         "id": "אדמו״ר האמצעי",
         "name": "אדמו״ר האמצעי",
-        "linked": 6313,
+        "linked": 6332,
         "total": 8277,
-        "pct": 76.3,
+        "pct": 76.5,
         "status": "in_progress",
         "status_label": "בתהליך"
       },
       {
         "id": "אדמו״ר מהר״ש",
         "name": "אדמו״ר מהר״ש",
-        "linked": 4594,
+        "linked": 4607,
         "total": 4992,
-        "pct": 92.0,
+        "pct": 92.3,
         "status": "in_progress",
         "status_label": "בתהליך"
       },
       {
         "id": "אדמו״ר הרש״ב",
         "name": "אדמו״ר הרש״ב",
-        "linked": 4225,
+        "linked": 4230,
         "total": 4565,
-        "pct": 92.6,
+        "pct": 92.7,
         "status": "in_progress",
         "status_label": "בתהליך"
       },
       {
         "id": "אדמו״ר הריי״צ",
         "name": "אדמו״ר הריי״צ",
-        "linked": 1549,
+        "linked": 1557,
         "total": 1781,
-        "pct": 87.0,
+        "pct": 87.4,
         "status": "in_progress",
         "status_label": "בתהליך"
       },
       {
         "id": "הרבי",
         "name": "הרבי",
-        "linked": 10337,
+        "linked": 10402,
         "total": 11967,
-        "pct": 86.4,
+        "pct": 86.9,
         "status": "in_progress",
         "status_label": "בתהליך"
       }
     ],
     "totals": {
-      "linked": 35444,
+      "linked": 35554,
       "total": 41124,
-      "pct": 86.2
+      "pct": 86.5
     },
     "rest": {
-      "linked": 27018,
+      "linked": 27128,
       "total": 31582,
-      "pct": 85.5,
+      "pct": 85.9,
       "status": "in_progress",
       "status_label": "בתהליך",
       "rule_haiku_confirmed": 7999,
