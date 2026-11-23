@@ -384,7 +384,7 @@
     "last_attempt_at": "2026-11-04T06:53:04+00:00"
   },
   "sie_weekly": {
-    "checked_at": "2026-11-16T13:20:00+00:00",
+    "checked_at": "2026-11-23T13:05:00+00:00",
     "items": [
       {
         "title": "SIE Weekly · Noach · Likkutei Sichos Volume 3",
@@ -445,9 +445,29 @@
         "sections": [
           "whatsnew"
         ]
+      },
+      {
+        "title": "SIE Weekly · Vayishlach · Likkutei Sichos Volume 3",
+        "url": "https://drive.google.com/file/d/1tZsHt_e_S5m9CjF9ne-vzV2oHdu4AAgA/view",
+        "lang": "en",
+        "first_seen": "2026-11-23T12:57:40+00:00",
+        "genre": "תרגום שיחה",
+        "sections": [
+          "whatsnew"
+        ]
+      },
+      {
+        "title": "SIE Weekly · 19 Kislev · Likkutei Sichos Volume 3",
+        "url": "https://drive.google.com/file/d/1vCUgnMl4l-q8HlfD6S0xM6-arW2yL_cg/view",
+        "lang": "en",
+        "first_seen": "2026-11-23T12:57:40+00:00",
+        "genre": "תרגום שיחה",
+        "sections": [
+          "whatsnew"
+        ]
       }
     ],
-    "note": "החוברת החדשה לויצא נפתחה. שער ה־PDF מאמת 26 עמודים ועמודי מקור 787–794 (חלק ג׳)."
+    "note": "נפתחו שתי החוברות החדשות: וישלח (18 עמ׳, לקוטי שיחות חלק ג׳ עמ׳ 795–799) וי״ט כסלו (20 עמ׳, חלק ג׳ עמ׳ 799–804); שערי ה־PDF מאמתים את הפרטים."
   },
   "hiskashrus": {
     "checked_at": "2026-10-30T07:03:39+00:00",
