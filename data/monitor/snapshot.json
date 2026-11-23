@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-23T13:05:26+00:00",
+ "generated_at": "2026-11-23T14:36:03+00:00",
  "sources": [
   {
    "id": "chabadlibrary",
@@ -12,7 +12,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-11-23T13:04:17+00:00",
+   "checked_at": "2026-11-23T14:34:45+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -30,7 +30,7 @@
     "primary",
     "whatsnew"
    ],
-   "checked_at": "2026-11-23T13:04:17+00:00",
+   "checked_at": "2026-11-23T14:34:45+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -47,7 +47,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-11-23T13:04:17+00:00",
+   "checked_at": "2026-11-23T14:34:45+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -64,7 +64,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-11-23T13:04:17+00:00",
+   "checked_at": "2026-11-23T14:34:45+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -82,7 +82,7 @@
     "primary",
     "whatsnew"
    ],
-   "checked_at": "2026-11-23T13:04:17+00:00",
+   "checked_at": "2026-11-23T14:34:45+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -102,7 +102,7 @@
     }
    ],
    "total": 132,
-   "last_success_at": "2026-11-23T13:04:17+00:00"
+   "last_success_at": "2026-11-23T14:34:45+00:00"
   },
   {
    "id": "chabadlibrarybooks",
@@ -115,7 +115,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-11-23T13:04:17+00:00",
+   "checked_at": "2026-11-23T14:34:45+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -133,12 +133,12 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-23T13:04:17+00:00",
+   "checked_at": "2026-11-23T14:34:45+00:00",
    "status": "ok",
    "new": [],
    "latest": [],
    "total": 1501,
-   "last_success_at": "2026-11-23T13:04:17+00:00"
+   "last_success_at": "2026-11-23T14:34:45+00:00"
   },
   {
    "id": "chassidut_org",
@@ -152,12 +152,12 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-23T13:04:18+00:00",
+   "checked_at": "2026-11-23T14:34:47+00:00",
    "status": "ok",
    "new": [],
    "latest": [],
    "total": 4,
-   "last_success_at": "2026-11-23T13:04:18+00:00"
+   "last_success_at": "2026-11-23T14:34:47+00:00"
   },
   {
    "id": "biurim",
@@ -171,7 +171,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-23T13:04:20+00:00",
+   "checked_at": "2026-11-23T14:34:48+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -225,7 +225,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-23T13:04:20+00:00"
+   "last_success_at": "2026-11-23T14:34:48+00:00"
   },
   {
    "id": "hm_monsey",
@@ -239,7 +239,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-23T13:04:21+00:00",
+   "checked_at": "2026-11-23T14:34:50+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -333,7 +333,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-23T13:04:21+00:00"
+   "last_success_at": "2026-11-23T14:34:50+00:00"
   },
   {
    "id": "hiskashrus",
@@ -347,7 +347,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-23T13:04:23+00:00",
+   "checked_at": "2026-11-23T14:34:52+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -423,7 +423,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-23T13:04:23+00:00"
+   "last_success_at": "2026-11-23T14:34:52+00:00"
   },
   {
    "id": "lichyot_chassidus",
@@ -437,7 +437,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-23T13:04:25+00:00",
+   "checked_at": "2026-11-23T14:34:53+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -611,7 +611,7 @@
     }
    ],
    "total": 1000,
-   "last_success_at": "2026-11-23T13:04:25+00:00"
+   "last_success_at": "2026-11-23T14:34:53+00:00"
   },
   {
    "id": "chabadzoom",
@@ -625,7 +625,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-23T13:04:26+00:00",
+   "checked_at": "2026-11-23T14:34:55+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -799,7 +799,7 @@
     }
    ],
    "total": 566,
-   "last_success_at": "2026-11-23T13:04:26+00:00"
+   "last_success_at": "2026-11-23T14:34:55+00:00"
   },
   {
    "id": "kovtzimdrive",
@@ -813,7 +813,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-23T13:04:27+00:00",
+   "checked_at": "2026-11-23T14:34:59+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -826,7 +826,7 @@
     }
    ],
    "total": 1,
-   "last_success_at": "2026-11-23T13:04:27+00:00"
+   "last_success_at": "2026-11-23T14:34:59+00:00"
   },
   {
    "id": "avita",
@@ -840,7 +840,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-23T13:04:29+00:00",
+   "checked_at": "2026-11-23T14:35:01+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -858,7 +858,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-23T13:04:29+00:00",
+   "checked_at": "2026-11-23T14:35:01+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -880,7 +880,7 @@
     }
    ],
    "total": 2,
-   "last_success_at": "2026-11-23T13:04:29+00:00"
+   "last_success_at": "2026-11-23T14:35:01+00:00"
   },
   {
    "id": "dvarmalchus770",
@@ -894,7 +894,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-23T13:04:31+00:00",
+   "checked_at": "2026-11-23T14:35:04+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1052,7 +1052,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-23T13:04:31+00:00"
+   "last_success_at": "2026-11-23T14:35:04+00:00"
   },
   {
    "id": "soulwords",
@@ -1066,7 +1066,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-23T13:04:32+00:00",
+   "checked_at": "2026-11-23T14:35:06+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1136,7 +1136,7 @@
     }
    ],
    "total": 0,
-   "last_success_at": "2026-11-23T13:04:32+00:00"
+   "last_success_at": "2026-11-23T14:35:06+00:00"
   },
   {
    "id": "sie_weekly",
@@ -1150,7 +1150,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-23T13:04:34+00:00",
+   "checked_at": "2026-11-23T14:35:07+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1240,7 +1240,7 @@
     }
    ],
    "total": 120,
-   "last_success_at": "2026-11-23T13:04:34+00:00"
+   "last_success_at": "2026-11-23T14:35:07+00:00"
   },
   {
    "id": "pls",
@@ -1254,7 +1254,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-23T13:04:35+00:00",
+   "checked_at": "2026-11-23T14:35:09+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1428,7 +1428,7 @@
     }
    ],
    "total": 200,
-   "last_success_at": "2026-11-23T13:04:35+00:00"
+   "last_success_at": "2026-11-23T14:35:09+00:00"
   },
   {
    "id": "chayenu_ls",
@@ -1442,7 +1442,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-23T13:04:36+00:00",
+   "checked_at": "2026-11-23T14:35:10+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1476,7 +1476,7 @@
     }
    ],
    "total": 2,
-   "last_success_at": "2026-11-23T13:04:36+00:00"
+   "last_success_at": "2026-11-23T14:35:10+00:00"
   },
   {
    "id": "weekly_sicha",
@@ -1490,7 +1490,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-23T13:04:38+00:00",
+   "checked_at": "2026-11-23T14:35:11+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1566,7 +1566,7 @@
     }
    ],
    "total": 121,
-   "last_success_at": "2026-11-23T13:04:38+00:00"
+   "last_success_at": "2026-11-23T14:35:11+00:00"
   },
   {
    "id": "theyeshiva",
@@ -1580,7 +1580,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-23T13:04:39+00:00",
+   "checked_at": "2026-11-23T14:35:12+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1770,7 +1770,7 @@
     }
    ],
    "total": 1558,
-   "last_success_at": "2026-11-23T13:04:39+00:00"
+   "last_success_at": "2026-11-23T14:35:12+00:00"
   },
   {
    "id": "chassidus_applied",
@@ -1784,7 +1784,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-23T13:04:41+00:00",
+   "checked_at": "2026-11-23T14:35:15+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2158,7 +2158,7 @@
     }
    ],
    "total": 15,
-   "last_success_at": "2026-11-23T13:04:41+00:00"
+   "last_success_at": "2026-11-23T14:35:15+00:00"
   },
   {
    "id": "neirot",
@@ -2172,7 +2172,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-23T13:04:41+00:00",
+   "checked_at": "2026-11-23T14:35:16+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2234,7 +2234,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-23T13:04:41+00:00"
+   "last_success_at": "2026-11-23T14:35:16+00:00"
   },
   {
    "id": "chassidus_explained",
@@ -2248,7 +2248,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-23T13:04:43+00:00",
+   "checked_at": "2026-11-23T14:35:19+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2334,7 +2334,7 @@
     }
    ],
    "total": 139,
-   "last_success_at": "2026-11-23T13:04:43+00:00"
+   "last_success_at": "2026-11-23T14:35:19+00:00"
   },
   {
    "id": "melukat",
@@ -2348,7 +2348,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-23T13:04:44+00:00",
+   "checked_at": "2026-11-23T14:35:21+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2410,7 +2410,7 @@
     }
    ],
    "total": 168,
-   "last_success_at": "2026-11-23T13:04:44+00:00"
+   "last_success_at": "2026-11-23T14:35:21+00:00"
   },
   {
    "id": "daily_maamar",
@@ -2424,10 +2424,27 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-23T13:04:45+00:00",
+   "checked_at": "2026-11-23T14:35:22+00:00",
    "status": "ok",
-   "new": [],
+   "new": [
+    {
+     "id": "df4d3db0-bd1c-4555-8e5c-421165c44cb1",
+     "title": "Motzaei Sh”p Vayeitze 9/Ohr l’yud Kislev 5738 (B’Chedroi), Maamorim Melukatim Vol. 2– Episode 7",
+     "url": "https://share.transistor.fm/s/b65fac67",
+     "date": "Mon, 23 Nov 2026 09:22:48 -0500",
+     "blurb": "This episode covers Chapter 13. Mesirus Nefesh of one who is poor in Daas and of one who has a wealth of Daas. Start with poverty achieve wealth.",
+     "first_seen": "2026-11-23T14:35:22+00:00"
+    }
+   ],
    "latest": [
+    {
+     "id": "df4d3db0-bd1c-4555-8e5c-421165c44cb1",
+     "title": "Motzaei Sh”p Vayeitze 9/Ohr l’yud Kislev 5738 (B’Chedroi), Maamorim Melukatim Vol. 2– Episode 7",
+     "url": "https://share.transistor.fm/s/b65fac67",
+     "date": "Mon, 23 Nov 2026 09:22:48 -0500",
+     "blurb": "This episode covers Chapter 13. Mesirus Nefesh of one who is poor in Daas and of one who has a wealth of Daas. Start with poverty achieve wealth.",
+     "first_seen": "2026-11-23T14:35:22+00:00"
+    },
     {
      "id": "b0b53546-b250-452d-a45e-b0263f6a8c96",
      "title": "Motzaei Sh”p Vayeitze 9/Ohr l’yud Kislev 5738 (B’Chedroi), Maamorim Melukatim Vol. 2– Episode 6",
@@ -2717,8 +2734,8 @@
      "first_seen": "2026-10-18T04:52:03+00:00"
     }
    ],
-   "total": 371,
-   "last_success_at": "2026-11-23T13:04:45+00:00"
+   "total": 372,
+   "last_success_at": "2026-11-23T14:35:22+00:00"
   },
   {
    "id": "wellsprings",
@@ -2732,7 +2749,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-23T13:04:47+00:00",
+   "checked_at": "2026-11-23T14:35:23+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2778,7 +2795,7 @@
     }
    ],
    "total": 125,
-   "last_success_at": "2026-11-23T13:04:47+00:00"
+   "last_success_at": "2026-11-23T14:35:23+00:00"
   },
   {
    "id": "daily_sicha",
@@ -2792,7 +2809,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-23T13:04:48+00:00",
+   "checked_at": "2026-11-23T14:35:24+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -3086,7 +3103,7 @@
     }
    ],
    "total": 1435,
-   "last_success_at": "2026-11-23T13:04:48+00:00"
+   "last_success_at": "2026-11-23T14:35:24+00:00"
   },
   {
    "id": "learnchassidus",
@@ -3100,7 +3117,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-23T13:04:52+00:00",
+   "checked_at": "2026-11-23T14:35:29+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -3113,7 +3130,7 @@
     }
    ],
    "total": 5,
-   "last_success_at": "2026-11-23T13:04:52+00:00"
+   "last_success_at": "2026-11-23T14:35:29+00:00"
   },
   {
    "id": "simplychassidus",
@@ -3127,7 +3144,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-23T13:04:53+00:00",
+   "checked_at": "2026-11-23T14:35:30+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -3154,7 +3171,7 @@
     }
    ],
    "total": 4,
-   "last_success_at": "2026-11-23T13:04:53+00:00"
+   "last_success_at": "2026-11-23T14:35:30+00:00"
   },
   {
    "id": "alonei_chabad",
@@ -3167,7 +3184,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-23T13:04:54+00:00",
+   "checked_at": "2026-11-23T14:35:31+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -3184,7 +3201,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-23T13:04:54+00:00",
+   "checked_at": "2026-11-23T14:35:31+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -3201,7 +3218,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-23T13:04:54+00:00",
+   "checked_at": "2026-11-23T14:35:31+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -3228,7 +3245,7 @@
     }
    ],
    "total": 303,
-   "last_success_at": "2026-11-23T13:04:54+00:00"
+   "last_success_at": "2026-11-23T14:35:31+00:00"
   },
   {
    "id": "lchaim",
@@ -3241,7 +3258,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-23T13:04:55+00:00",
+   "checked_at": "2026-11-23T14:35:32+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -3317,7 +3334,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-23T13:04:55+00:00"
+   "last_success_at": "2026-11-23T14:35:32+00:00"
   },
   {
    "id": "one_point",
@@ -3330,7 +3347,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-23T13:04:56+00:00",
+   "checked_at": "2026-11-23T14:35:34+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -3371,7 +3388,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-23T13:04:56+00:00"
+   "last_success_at": "2026-11-23T14:35:34+00:00"
   },
   {
    "id": "derher",
@@ -3384,7 +3401,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-23T13:04:58+00:00",
+   "checked_at": "2026-11-23T14:35:35+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -3401,7 +3418,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-23T13:04:58+00:00",
+   "checked_at": "2026-11-23T14:35:35+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -3418,7 +3435,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-23T13:04:58+00:00",
+   "checked_at": "2026-11-23T14:35:35+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -3508,7 +3525,7 @@
     }
    ],
    "total": 2,
-   "last_success_at": "2026-11-23T13:04:58+00:00"
+   "last_success_at": "2026-11-23T14:35:35+00:00"
   },
   {
    "id": "maynotecha_inst",
@@ -3521,7 +3538,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-23T13:04:59+00:00",
+   "checked_at": "2026-11-23T14:35:37+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -3538,7 +3555,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-23T13:04:59+00:00",
+   "checked_at": "2026-11-23T14:35:37+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -3592,7 +3609,7 @@
     }
    ],
    "total": 1,
-   "last_success_at": "2026-11-23T13:04:59+00:00"
+   "last_success_at": "2026-11-23T14:35:37+00:00"
   },
   {
    "id": "anash",
@@ -3605,7 +3622,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-23T13:05:00+00:00",
+   "checked_at": "2026-11-23T14:35:38+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -4114,8 +4131,8 @@
      "first_seen": "2026-10-18T04:52:22+00:00"
     }
    ],
-   "total": 8,
-   "last_success_at": "2026-11-23T13:05:00+00:00"
+   "total": 7,
+   "last_success_at": "2026-11-23T14:35:38+00:00"
   },
   {
    "id": "collive",
@@ -4128,7 +4145,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-23T13:05:02+00:00",
+   "checked_at": "2026-11-23T14:35:39+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -4145,7 +4162,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-23T13:05:02+00:00",
+   "checked_at": "2026-11-23T14:35:39+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -4162,7 +4179,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-23T13:05:02+00:00",
+   "checked_at": "2026-11-23T14:35:39+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -4196,7 +4213,7 @@
     }
    ],
    "total": 20,
-   "last_success_at": "2026-11-23T13:05:02+00:00"
+   "last_success_at": "2026-11-23T14:35:39+00:00"
   },
   {
    "id": "abc770",
@@ -4209,7 +4226,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-23T13:05:05+00:00",
+   "checked_at": "2026-11-23T14:35:41+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -4255,7 +4272,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-23T13:05:05+00:00"
+   "last_success_at": "2026-11-23T14:35:41+00:00"
   },
   {
    "id": "kehot",
@@ -4268,7 +4285,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-23T13:05:08+00:00",
+   "checked_at": "2026-11-23T14:35:44+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -4978,7 +4995,7 @@
     }
    ],
    "total": 197,
-   "last_success_at": "2026-11-23T13:05:08+00:00"
+   "last_success_at": "2026-11-23T14:35:44+00:00"
   }
  ],
  "browser_checks": {
