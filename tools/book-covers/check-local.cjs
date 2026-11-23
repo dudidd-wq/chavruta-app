@@ -32,7 +32,7 @@ const {chromium}=require(path.join(process.env.PLAYWRIGHT_NODE_MODULES,'playwrig
   await search.fill('הגדה של פסח');
   const haggadah=page.locator('.books-card').filter({hasText:'הגדה של פסח עם לקוטי טעמים ומנהגים'});
   await haggadah.first().waitFor({state:'visible',timeout:10000});
-  await haggadah.scrollIntoViewIfNeeded();await haggadah.locator('img').waitFor();
+  await haggadah.scrollIntoViewIfNeeded();await haggadah.locator('img').waitFor({state:'visible',timeout:90000});
   const cover=await haggadah.locator('img').getAttribute('src');
   assert.match(cover,/^data\/book-covers\/c-46dc297f9c8a413f5d557d8e-[a-f0-9]{16}\.webp$/);
   await haggadah.locator('img').evaluate(img=>img.decode());await page.screenshot({path:'book-snapshot-live.png',fullPage:false});
