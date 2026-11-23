@@ -6,7 +6,8 @@ import crypto from 'node:crypto';
 import {execFileSync} from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 import canvas from '@napi-rs/canvas';
-import {cataloguePDFURL,openCataloguePDF} from './pdf-source.mjs';
+import {openCataloguePDF} from './pdf-source.mjs';
+import {collectCoverSources} from './cover-ids.mjs';
 const {createCanvas,DOMMatrix,ImageData,Path2D}=canvas;
 Object.assign(globalThis,{DOMMatrix,ImageData,Path2D});
 const lib=await import('pdfjs-dist/legacy/build/pdf.mjs');
@@ -23,17 +24,9 @@ class CanvasFactory {
 const data=path.resolve(process.argv[2]||'data'),out=path.join(data,'book-covers');
 const parse=async name=>{let value;vm.runInNewContext(await fs.readFile(path.join(data,name+'.js'),'utf8'),{window:{__D:(key,obj)=>{if(key===name)value=obj;}}},{timeout:3000});return value;};
 const [T,C]=await Promise.all([parse('tree'),parse('book-catalog')]);
-if(C?.schema!==1||C.nbooks!==T.books.length||C.nunits!==T.nunits)throw Error('Catalogue mismatch');
-const sources=new Map(), sourceIDs=C.coverSources||{};
-for(const id of C.bookScans.flat())sources.set(id,{kind:'hb'});
-for(const [identity,id]of Object.entries(sourceIDs))if(identity.startsWith('pdf:')){
-  const url=cataloguePDFURL(identity.slice(4));
-  if(!/^c-[a-f0-9]{24}$/.test(id)||id!=='c-'+crypto.createHash('sha256').update(identity).digest('hex').slice(0,24))throw Error('Invalid document cover identity');
-  sources.set(id,{kind:'pdf',url});
-}
-for(const series of T.series)for(const volume of series.vols){const match=volume[3]?.confirmed===false?null:/^hb:([0-9]{1,8})$/.exec(volume[2]);if(match)sources.set(match[1],{kind:'hb'});}
+const sources=collectCoverSources(T,C);
+const sourceIDs=C.coverSources||{};
 const ids=new Set(sources.keys());
-if([...ids].some(id=>!/^(?:[0-9]{1,8}|c-[a-f0-9]{24})$/.test(id)))throw Error('Invalid scan ID');
 const scansForBook=i=>[...new Set([...(C.bookScans[i]||[]),...(C.bookSourceKeys?.[i]||[]).map(key=>sourceIDs[key]).filter(Boolean)])];
 const scansForSeries=s=>s.vols.filter(v=>v[3]?.confirmed!==false).map(v=>sourceIDs[v[3]?.source_key]||/^hb:([0-9]{1,8})$/.exec(v[2])?.[1]).filter(Boolean);
 await fs.mkdir(out,{recursive:true});
