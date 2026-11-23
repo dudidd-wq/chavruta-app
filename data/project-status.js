@@ -1,6 +1,6 @@
 window.CHAVRUTA_PROJECT_STATUS = {
-  "generated": "2026-11-23T18:33+02:00",
-  "generated_label": "23.11.2026, 18:33 שעון ישראל",
+  "generated": "2026-11-23T18:49+02:00",
+  "generated_label": "23.11.2026, 18:49 שעון ישראל",
   "timezone": "Asia/Jerusalem",
   "coverage": {
     "rows": [
@@ -16,18 +16,18 @@ window.CHAVRUTA_PROJECT_STATUS = {
       {
         "id": "אדמו״ר האמצעי",
         "name": "אדמו״ר האמצעי",
-        "linked": 6332,
+        "linked": 6411,
         "total": 8277,
-        "pct": 76.5,
+        "pct": 77.5,
         "status": "in_progress",
         "status_label": "בתהליך"
       },
       {
         "id": "אדמו״ר מהר״ש",
         "name": "אדמו״ר מהר״ש",
-        "linked": 4607,
+        "linked": 4697,
         "total": 4992,
-        "pct": 92.3,
+        "pct": 94.1,
         "status": "in_progress",
         "status_label": "בתהליך"
       },
@@ -52,22 +52,22 @@ window.CHAVRUTA_PROJECT_STATUS = {
       {
         "id": "הרבי",
         "name": "הרבי",
-        "linked": 10402,
+        "linked": 10420,
         "total": 11967,
-        "pct": 86.9,
+        "pct": 87.1,
         "status": "in_progress",
         "status_label": "בתהליך"
       }
     ],
     "totals": {
-      "linked": 35554,
+      "linked": 35741,
       "total": 41124,
-      "pct": 86.5
+      "pct": 86.9
     },
     "rest": {
-      "linked": 27128,
+      "linked": 27315,
       "total": 31582,
-      "pct": 85.9,
+      "pct": 86.5,
       "status": "in_progress",
       "status_label": "בתהליך",
       "rule_haiku_confirmed": 7999,
