@@ -1,6 +1,6 @@
 {
-  "generated": "2026-11-23T17:32+02:00",
-  "generated_label": "23.11.2026, 17:32 שעון ישראל",
+  "generated": "2026-11-23T17:50+02:00",
+  "generated_label": "23.11.2026, 17:50 שעון ישראל",
   "timezone": "Asia/Jerusalem",
   "coverage": {
     "rows": [
@@ -16,9 +16,9 @@
       {
         "id": "אדמו״ר האמצעי",
         "name": "אדמו״ר האמצעי",
-        "linked": 6252,
+        "linked": 6298,
         "total": 8277,
-        "pct": 75.5,
+        "pct": 76.1,
         "status": "in_progress",
         "status_label": "בתהליך"
       },
@@ -34,40 +34,40 @@
       {
         "id": "אדמו״ר הרש״ב",
         "name": "אדמו״ר הרש״ב",
-        "linked": 4192,
+        "linked": 4221,
         "total": 4565,
-        "pct": 91.8,
+        "pct": 92.5,
         "status": "in_progress",
         "status_label": "בתהליך"
       },
       {
         "id": "אדמו״ר הריי״צ",
         "name": "אדמו״ר הריי״צ",
-        "linked": 1535,
+        "linked": 1539,
         "total": 1781,
-        "pct": 86.2,
+        "pct": 86.4,
         "status": "in_progress",
         "status_label": "בתהליך"
       },
       {
         "id": "הרבי",
         "name": "הרבי",
-        "linked": 10155,
+        "linked": 10183,
         "total": 11967,
-        "pct": 84.9,
+        "pct": 85.1,
         "status": "in_progress",
         "status_label": "בתהליך"
       }
     ],
     "totals": {
-      "linked": 35154,
+      "linked": 35261,
       "total": 41124,
-      "pct": 85.5
+      "pct": 85.7
     },
     "rest": {
-      "linked": 26728,
+      "linked": 26835,
       "total": 31582,
-      "pct": 84.6,
+      "pct": 85.0,
       "status": "in_progress",
       "status_label": "בתהליך",
       "rule_haiku_confirmed": 7999,
@@ -1213,16 +1213,6 @@
       "status": "done",
       "status_label": "הסתיים",
       "note": "קודם דרך המנויים, והשארית ל־Sonnet בתוך התקרה שאושרה."
-    },
-    {
-      "id": "fulltext",
-      "label": "טקסט מלא בחלון הציטוטים באתר",
-      "done": 3887,
-      "total": 4074,
-      "pct": 95.4,
-      "status": "running",
-      "status_label": "בתהליך",
-      "note": "ספרי קה״ת שזמינים רק באוצר החכמה עוד לא נטענו."
     },
     {
       "id": "chrono",
