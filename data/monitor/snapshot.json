@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-23T14:36:03+00:00",
+ "generated_at": "2026-11-24T13:02:16+00:00",
  "sources": [
   {
    "id": "chabadlibrary",
@@ -12,7 +12,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-11-23T14:34:45+00:00",
+   "checked_at": "2026-11-24T13:01:05+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -30,7 +30,7 @@
     "primary",
     "whatsnew"
    ],
-   "checked_at": "2026-11-23T14:34:45+00:00",
+   "checked_at": "2026-11-24T13:01:05+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -47,7 +47,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-11-23T14:34:45+00:00",
+   "checked_at": "2026-11-24T13:01:05+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -64,7 +64,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-11-23T14:34:45+00:00",
+   "checked_at": "2026-11-24T13:01:05+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -82,7 +82,7 @@
     "primary",
     "whatsnew"
    ],
-   "checked_at": "2026-11-23T14:34:45+00:00",
+   "checked_at": "2026-11-24T13:01:05+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -102,7 +102,7 @@
     }
    ],
    "total": 132,
-   "last_success_at": "2026-11-23T14:34:45+00:00"
+   "last_success_at": "2026-11-24T13:01:05+00:00"
   },
   {
    "id": "chabadlibrarybooks",
@@ -115,7 +115,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-11-23T14:34:45+00:00",
+   "checked_at": "2026-11-24T13:01:06+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -133,12 +133,12 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-23T14:34:45+00:00",
+   "checked_at": "2026-11-24T13:01:06+00:00",
    "status": "ok",
    "new": [],
    "latest": [],
    "total": 1501,
-   "last_success_at": "2026-11-23T14:34:45+00:00"
+   "last_success_at": "2026-11-24T13:01:06+00:00"
   },
   {
    "id": "chassidut_org",
@@ -152,12 +152,12 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-23T14:34:47+00:00",
+   "checked_at": "2026-11-24T13:01:07+00:00",
    "status": "ok",
    "new": [],
    "latest": [],
    "total": 4,
-   "last_success_at": "2026-11-23T14:34:47+00:00"
+   "last_success_at": "2026-11-24T13:01:07+00:00"
   },
   {
    "id": "biurim",
@@ -171,7 +171,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-23T14:34:48+00:00",
+   "checked_at": "2026-11-24T13:01:08+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -225,7 +225,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-23T14:34:48+00:00"
+   "last_success_at": "2026-11-24T13:01:08+00:00"
   },
   {
    "id": "hm_monsey",
@@ -239,7 +239,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-23T14:34:50+00:00",
+   "checked_at": "2026-11-24T13:01:10+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -333,7 +333,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-23T14:34:50+00:00"
+   "last_success_at": "2026-11-24T13:01:10+00:00"
   },
   {
    "id": "hiskashrus",
@@ -347,7 +347,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-23T14:34:52+00:00",
+   "checked_at": "2026-11-24T13:01:12+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -423,7 +423,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-23T14:34:52+00:00"
+   "last_success_at": "2026-11-24T13:01:12+00:00"
   },
   {
    "id": "lichyot_chassidus",
@@ -437,10 +437,43 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-23T14:34:53+00:00",
+   "checked_at": "2026-11-24T13:01:13+00:00",
    "status": "ok",
-   "new": [],
+   "new": [
+    {
+     "id": "cdd82d3a-fa83-41e7-9af9-b8fd9b95089c",
+     "title": "מאמר ד\"ה קטונתי תשי\"ז (סיכום) - חלק א",
+     "url": "https://rabbi_osher_farkash_maamarim.captivate.fm",
+     "date": "Mon, 23 Nov 2026 04:00:00 -0500",
+     "blurb": "הצמצום מכריח את הגילוי, ענין העכבה בנפש ובאלוקות",
+     "first_seen": "2026-11-24T13:01:13+00:00"
+    },
+    {
+     "id": "75a353d9-e5cc-491b-81d9-cc246556e0a8",
+     "title": "מאמר ד\"ה וכל העם רואים תרס\"ה - חלק י\"ג",
+     "url": "https://rabbi_osher_farkash_maamarim.captivate.fm",
+     "date": "Mon, 23 Nov 2026 04:00:00 -0500",
+     "blurb": "משל הנפש לבירור ענין ההתחדשות.",
+     "first_seen": "2026-11-24T13:01:13+00:00"
+    }
+   ],
    "latest": [
+    {
+     "id": "cdd82d3a-fa83-41e7-9af9-b8fd9b95089c",
+     "title": "מאמר ד\"ה קטונתי תשי\"ז (סיכום) - חלק א",
+     "url": "https://rabbi_osher_farkash_maamarim.captivate.fm",
+     "date": "Mon, 23 Nov 2026 04:00:00 -0500",
+     "blurb": "הצמצום מכריח את הגילוי, ענין העכבה בנפש ובאלוקות",
+     "first_seen": "2026-11-24T13:01:13+00:00"
+    },
+    {
+     "id": "75a353d9-e5cc-491b-81d9-cc246556e0a8",
+     "title": "מאמר ד\"ה וכל העם רואים תרס\"ה - חלק י\"ג",
+     "url": "https://rabbi_osher_farkash_maamarim.captivate.fm",
+     "date": "Mon, 23 Nov 2026 04:00:00 -0500",
+     "blurb": "משל הנפש לבירור ענין ההתחדשות.",
+     "first_seen": "2026-11-24T13:01:13+00:00"
+    },
     {
      "id": "f3dd88af-e7bb-4949-9bfb-79d8c0688c4d",
      "title": "מאמר ד\"ה וכל העם רואים תרס\"ה - חלק י\"ב",
@@ -611,7 +644,7 @@
     }
    ],
    "total": 1000,
-   "last_success_at": "2026-11-23T14:34:53+00:00"
+   "last_success_at": "2026-11-24T13:01:13+00:00"
   },
   {
    "id": "chabadzoom",
@@ -625,7 +658,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-23T14:34:55+00:00",
+   "checked_at": "2026-11-24T13:01:15+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -799,7 +832,7 @@
     }
    ],
    "total": 566,
-   "last_success_at": "2026-11-23T14:34:55+00:00"
+   "last_success_at": "2026-11-24T13:01:15+00:00"
   },
   {
    "id": "kovtzimdrive",
@@ -813,7 +846,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-23T14:34:59+00:00",
+   "checked_at": "2026-11-24T13:01:18+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -826,7 +859,7 @@
     }
    ],
    "total": 1,
-   "last_success_at": "2026-11-23T14:34:59+00:00"
+   "last_success_at": "2026-11-24T13:01:18+00:00"
   },
   {
    "id": "avita",
@@ -840,7 +873,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-23T14:35:01+00:00",
+   "checked_at": "2026-11-24T13:01:20+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -858,7 +891,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-23T14:35:01+00:00",
+   "checked_at": "2026-11-24T13:01:20+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -880,7 +913,7 @@
     }
    ],
    "total": 2,
-   "last_success_at": "2026-11-23T14:35:01+00:00"
+   "last_success_at": "2026-11-24T13:01:20+00:00"
   },
   {
    "id": "dvarmalchus770",
@@ -894,10 +927,27 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-23T14:35:04+00:00",
+   "checked_at": "2026-11-24T13:01:22+00:00",
    "status": "ok",
-   "new": [],
+   "new": [
+    {
+     "id": "http://dvarmalchus770.org/?p=5715",
+     "title": "Vayishlach 5752: The Job After the Birurim Are Completed",
+     "url": "https://dvarmalchus770.org/2026/11/23/vayishlach-5752-the-job-after-the-birurim-are-completed-2/",
+     "date": "Mon, 23 Nov 2026 15:09:00 +0000",
+     "blurb": "The sicha of Vayishlach 5752 contains several threads, each of considerable significance. Firstly, the Rebbe explains the concept of the diminution of the moon — that the full moon on the 15th of the lunar month, when the moon fully receives and reflects the light of the sun, is followed by a decrease in the […]",
+     "first_seen": "2026-11-24T13:01:22+00:00"
+    }
+   ],
    "latest": [
+    {
+     "id": "http://dvarmalchus770.org/?p=5715",
+     "title": "Vayishlach 5752: The Job After the Birurim Are Completed",
+     "url": "https://dvarmalchus770.org/2026/11/23/vayishlach-5752-the-job-after-the-birurim-are-completed-2/",
+     "date": "Mon, 23 Nov 2026 15:09:00 +0000",
+     "blurb": "The sicha of Vayishlach 5752 contains several threads, each of considerable significance. Firstly, the Rebbe explains the concept of the diminution of the moon — that the full moon on the 15th of the lunar month, when the moon fully receives and reflects the light of the sun, is followed by a decrease in the […]",
+     "first_seen": "2026-11-24T13:01:22+00:00"
+    },
     {
      "id": "http://dvarmalchus770.org/?p=5713",
      "title": "Vayishlach 5752: The Moon Becomes Like the Sun",
@@ -1052,7 +1102,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-23T14:35:04+00:00"
+   "last_success_at": "2026-11-24T13:01:22+00:00"
   },
   {
    "id": "soulwords",
@@ -1066,7 +1116,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-23T14:35:06+00:00",
+   "checked_at": "2026-11-24T13:01:23+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1136,7 +1186,7 @@
     }
    ],
    "total": 0,
-   "last_success_at": "2026-11-23T14:35:06+00:00"
+   "last_success_at": "2026-11-24T13:01:23+00:00"
   },
   {
    "id": "sie_weekly",
@@ -1150,7 +1200,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-23T14:35:07+00:00",
+   "checked_at": "2026-11-24T13:01:24+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1240,7 +1290,7 @@
     }
    ],
    "total": 120,
-   "last_success_at": "2026-11-23T14:35:07+00:00"
+   "last_success_at": "2026-11-24T13:01:24+00:00"
   },
   {
    "id": "pls",
@@ -1254,7 +1304,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-23T14:35:09+00:00",
+   "checked_at": "2026-11-24T13:01:26+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1428,7 +1478,7 @@
     }
    ],
    "total": 200,
-   "last_success_at": "2026-11-23T14:35:09+00:00"
+   "last_success_at": "2026-11-24T13:01:26+00:00"
   },
   {
    "id": "chayenu_ls",
@@ -1442,7 +1492,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-23T14:35:10+00:00",
+   "checked_at": "2026-11-24T13:01:27+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1475,8 +1525,8 @@
      "first_seen": "2026-10-18T04:51:52+00:00"
     }
    ],
-   "total": 2,
-   "last_success_at": "2026-11-23T14:35:10+00:00"
+   "total": 1,
+   "last_success_at": "2026-11-24T13:01:27+00:00"
   },
   {
    "id": "weekly_sicha",
@@ -1490,7 +1540,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-23T14:35:11+00:00",
+   "checked_at": "2026-11-24T13:01:27+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1566,7 +1616,7 @@
     }
    ],
    "total": 121,
-   "last_success_at": "2026-11-23T14:35:11+00:00"
+   "last_success_at": "2026-11-24T13:01:27+00:00"
   },
   {
    "id": "theyeshiva",
@@ -1580,16 +1630,33 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-23T14:35:12+00:00",
+   "checked_at": "2026-11-24T13:01:28+00:00",
    "status": "ok",
-   "new": [],
+   "new": [
+    {
+     "id": "https://www.theyeshiva.net/item/10036",
+     "title": "What Exactly Happens to Your Soul After You Die? - Monday: Maamar Yafeh Sha'ah Achas #8",
+     "url": "https://www.theyeshiva.net/item/10036",
+     "date": "Mon, 23 Nov 2026 08:00:00 -0500",
+     "blurb": "The Pain of Saying Goodbye to Fakeness: When All Illusions Disappear and You Encounter Who You Really Are What really happens to us after we die? What are Gan Eden and Gehenna? Are heaven and hell two different destinations, or two radically different experiences of the same reality? In this extraordinary class, exploring the profound teachings of the Mitteler Rebbe, Rabbi YY Jacobson takes us on a remarkable journey into the soul's experience after death, describing what unfolds when the body falls away and the soul encounters the unfiltered truth of its existence. Every thought, word, desire, craving, action, and experience generates spiritual energy that never disappears. After death, the soul encounters the reality it has created, without the protective veil of denial. Heaven and hell are not merely external rewards and punishments; they are the soul's experience of its own accumulated reality. The soul, which is inherently Divine and infinite, longs to dissolve into its Source. But if a lifetime has been invested in constructing an identity of separateness, insecurity, ego, and falsehood, surrendering that identity can feel unbearable. What is paradise for one soul may become excruciating torment for another. Yet the most transformative revelation is that this process does not begin after death. We experience heaven and hell every day, in the very identities we construct and the defenses we cling to. Sometimes the greatest Divine kindness comes disguised as the collapse ",
+     "first_seen": "2026-11-24T13:01:28+00:00"
+    }
+   ],
    "latest": [
+    {
+     "id": "https://www.theyeshiva.net/item/10036",
+     "title": "What Exactly Happens to Your Soul After You Die? - Monday: Maamar Yafeh Sha'ah Achas #8",
+     "url": "https://www.theyeshiva.net/item/10036",
+     "date": "Mon, 23 Nov 2026 08:00:00 -0500",
+     "blurb": "The Pain of Saying Goodbye to Fakeness: When All Illusions Disappear and You Encounter Who You Really Are What really happens to us after we die? What are Gan Eden and Gehenna? Are heaven and hell two different destinations, or two radically different experiences of the same reality? In this extraordinary class, exploring the profound teachings of the Mitteler Rebbe, Rabbi YY Jacobson takes us on a remarkable journey into the soul's experience after death, describing what unfolds when the body falls away and the soul encounters the unfiltered truth of its existence. Every thought, word, desire, craving, action, and experience generates spiritual energy that never disappears. After death, the soul encounters the reality it has created, without the protective veil of denial. Heaven and hell are not merely external rewards and punishments; they are the soul's experience of its own accumulated reality. The soul, which is inherently Divine and infinite, longs to dissolve into its Source. But if a lifetime has been invested in constructing an identity of separateness, insecurity, ego, and falsehood, surrendering that identity can feel unbearable. What is paradise for one soul may become excruciating torment for another. Yet the most transformative revelation is that this process does not begin after death. We experience heaven and hell every day, in the very identities we construct and the defenses we cling to. Sometimes the greatest Divine kindness comes disguised as the collapse ",
+     "first_seen": "2026-11-24T13:01:28+00:00"
+    },
     {
      "id": "https://www.theyeshiva.net/item/10034",
      "title": "Does Life Sometimes Feel Like Hell? This Class Is for You - Friday: Maamar Yafeh Sha'ah Achas #7",
      "url": "https://www.theyeshiva.net/item/10034",
      "date": "Fri, 20 Nov 2026 08:00:00 -0500",
-     "blurb": "What If Heaven and Hell Are the Same Place? This is the seventh of a series of classes on the Maamar (discourse) Yafeh Sha'ah Achas (מאמר יפה שעה אחת) by the Miteler Rebbe, published in Maamarei Admur Haemtzarei (מאמרי אדמו\"ר האמצעי קונטריסים). The class was presented by Rabbi YY Jacobson on Friday, 10 Kislev (the liberation day of the Miteler Rebbe), 5787, November 20, 2026. View Source Sheets: https://portal.theyeshiva.net/api/source-sheets/10034",
+     "blurb": "What If Heaven and Hell Are the Same Place? The Talmud declares: אין בן דוד בא אלא בהיסח הדעת —Moshiach arrives only through a suspension of ordinary consciousness. But how can this be? Every day, Jews pray for redemption, yearn for Moshiach, and proclaim that they await his coming. In this extraordinary class, Rabbi YY Jacobson explores a revolutionary insight in the teachings of the Mitteler Rebbe, revealing that היסח הדעת is not about forgetting Moshiach but about surrendering the false consciousness through which we have learned to define ourselves. Since the Tree of Knowledge, humanity has become trapped in a manufactured sense of identity, disconnected from the infinite Divine oneness at the core of existence. We construct personalities from our wounds, fears, insecurities, shame, survival mechanisms, and desperate search for approval. Eventually, the masks become indistinguishable from our skin. When life begins stripping them away, we experience unbearable pain because we believe our very existence is being destroyed. But what if Hashem is not destroying our authentic lives? What if He is exposing the house of cards we have mistaken for reality? This is the deeper significance of קול דודי דופק —G-d knocking at our door, yearning for us to emerge from our hiding places and discover who we truly are. Our generation, described by the Rebbe as the last generation of exile and the first generation of redemption, carries both the wounds of galus and the emerging consciousne",
      "first_seen": "2026-11-21T12:38:11+00:00"
     },
     {
@@ -1769,8 +1836,8 @@
      "first_seen": "2026-10-20T07:59:51+00:00"
     }
    ],
-   "total": 1558,
-   "last_success_at": "2026-11-23T14:35:12+00:00"
+   "total": 1559,
+   "last_success_at": "2026-11-24T13:01:28+00:00"
   },
   {
    "id": "chassidus_applied",
@@ -1784,10 +1851,27 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-23T14:35:15+00:00",
+   "checked_at": "2026-11-24T13:01:30+00:00",
    "status": "ok",
-   "new": [],
+   "new": [
+    {
+     "id": "yt:video:fOkBCOcIJZ8",
+     "title": "Samach Vav Part 252: Kabolas ol regulates the ratzo; it is decidedly b'koach atzmo",
+     "url": "https://www.youtube.com/watch?v=fOkBCOcIJZ8",
+     "date": "2026-11-24T04:03:35+00:00",
+     "blurb": "Samach Vav p. 203-204: Hanochos atzmuso of kabolas ol also regulates the ratzo so that it (not become overly excited and intense, but) be followed by integration of shuv. For example: The joy of the king's minister attending a celebratory feast of the king is tempered by his reverence for the king (unlike a close advisor of the king, whose joy is revealed and reverence concealed), like a servant whose constant dedication to his master never lets him cross the line into defiance, even when he is joyous. This kabolas ol is decidedly self-generated by the person (m'koach atzmo), not due to an inspiration from above, but through his choice and volition (bechira v'ratzon) to accept and crown G-d as his sovereign King. Nevertheless, we must say that this kabolas ol is due to the core soul being bound and united with Atzmus. However, this bond is very concealed, to the point that the essential kabolas ol is b'koach atzmo.",
+     "first_seen": "2026-11-24T13:01:30+00:00"
+    }
+   ],
    "latest": [
+    {
+     "id": "yt:video:fOkBCOcIJZ8",
+     "title": "Samach Vav Part 252: Kabolas ol regulates the ratzo; it is decidedly b'koach atzmo",
+     "url": "https://www.youtube.com/watch?v=fOkBCOcIJZ8",
+     "date": "2026-11-24T04:03:35+00:00",
+     "blurb": "Samach Vav p. 203-204: Hanochos atzmuso of kabolas ol also regulates the ratzo so that it (not become overly excited and intense, but) be followed by integration of shuv. For example: The joy of the king's minister attending a celebratory feast of the king is tempered by his reverence for the king (unlike a close advisor of the king, whose joy is revealed and reverence concealed), like a servant whose constant dedication to his master never lets him cross the line into defiance, even when he is joyous. This kabolas ol is decidedly self-generated by the person (m'koach atzmo), not due to an inspiration from above, but through his choice and volition (bechira v'ratzon) to accept and crown G-d as his sovereign King. Nevertheless, we must say that this kabolas ol is due to the core soul being bound and united with Atzmus. However, this bond is very concealed, to the point that the essential kabolas ol is b'koach atzmo.",
+     "first_seen": "2026-11-24T13:01:30+00:00"
+    },
     {
      "id": "yt:video:zCEaIXL5Bro",
      "title": "Samach Vav Part 251: The only way to reach shuv is through total hanochas atzmuso to the Divine Will",
@@ -1801,7 +1885,7 @@
      "title": "Ep. 614: 14 Kislev: What Exemplifies a Loving Marriage and Shared Mission?",
      "url": "https://www.youtube.com/watch?v=gxcAFF6l-5Q",
      "date": "2026-11-23T01:00:06+00:00",
-     "blurb": "",
+     "blurb": "Rabbi Jacobson will discuss the following topics: What should our focus be at this time of year? • What is the meaning of Kislev and how does it represent the energy of miracles and redemption? 06:24 • 14 Kislev — The Rebbe and Rebbetzin’s Wedding Anniversary 10:35 • Why did this anniversary become a communal celebration instead of a private one? 11:50 • What lessons do we learn from this day? 18:00 • What best exemplifies a loving, mutually supportive marriage partnership and shared mission? 20:18 Vayishlach • What lessons do we learn from living with the times, with this week’s Torah parsha? 31:18 • What is the deeper meaning of Jacob and Esau's encounter and reconciliation? 31:29 • What are its cosmic, historical and personal implications? • Why do the commentaries interpret the verse of Esau kissing Jacob differently than its apparent literal meaning? 40:18 • Why did Yaakov become Yisrael, and what does the name reveal about his mission and the quality of tiferes? 42:00 Vayeitzei • What was special about the site Jacob rested on? 44:00 • Did Jacob's ladder represent prayer and its ratzo and shuv dynamics? 45:55 Thanksgiving • What is the Torah perspective on this day? 48:47 • Did the Rebbe say that every day is Thanksgiving, by reciting modeh ani each morning? 49:20 • Do we eat turkey on Thanksgiving because the Hebrew word for turkey is hodu, which also means to give Thanks? 49:57 The Rebbe’s Teachings — Accuracy and Integrity • How should we respond when simonjacobson.a",
      "first_seen": "2026-11-23T12:57:47+00:00"
     },
     {
@@ -2158,7 +2242,7 @@
     }
    ],
    "total": 15,
-   "last_success_at": "2026-11-23T14:35:15+00:00"
+   "last_success_at": "2026-11-24T13:01:30+00:00"
   },
   {
    "id": "neirot",
@@ -2172,7 +2256,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-23T14:35:16+00:00",
+   "checked_at": "2026-11-24T13:01:31+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2234,7 +2318,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-23T14:35:16+00:00"
+   "last_success_at": "2026-11-24T13:01:31+00:00"
   },
   {
    "id": "chassidus_explained",
@@ -2248,7 +2332,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-23T14:35:19+00:00",
+   "checked_at": "2026-11-24T13:01:33+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2334,7 +2418,7 @@
     }
    ],
    "total": 139,
-   "last_success_at": "2026-11-23T14:35:19+00:00"
+   "last_success_at": "2026-11-24T13:01:33+00:00"
   },
   {
    "id": "melukat",
@@ -2348,7 +2432,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-23T14:35:21+00:00",
+   "checked_at": "2026-11-24T13:01:34+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2410,7 +2494,7 @@
     }
    ],
    "total": 168,
-   "last_success_at": "2026-11-23T14:35:21+00:00"
+   "last_success_at": "2026-11-24T13:01:34+00:00"
   },
   {
    "id": "daily_maamar",
@@ -2424,19 +2508,27 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-23T14:35:22+00:00",
+   "checked_at": "2026-11-24T13:01:35+00:00",
    "status": "ok",
    "new": [
     {
-     "id": "df4d3db0-bd1c-4555-8e5c-421165c44cb1",
-     "title": "Motzaei Sh”p Vayeitze 9/Ohr l’yud Kislev 5738 (B’Chedroi), Maamorim Melukatim Vol. 2– Episode 7",
-     "url": "https://share.transistor.fm/s/b65fac67",
-     "date": "Mon, 23 Nov 2026 09:22:48 -0500",
-     "blurb": "This episode covers Chapter 13. Mesirus Nefesh of one who is poor in Daas and of one who has a wealth of Daas. Start with poverty achieve wealth.",
-     "first_seen": "2026-11-23T14:35:22+00:00"
+     "id": "0a7637f5-a4c2-4108-89c9-cfb95c2f8eea",
+     "title": "Motzaei Sh”p Vayeitze 9/Ohr l’yud Kislev 5738 (B’Chedroi), Maamorim Melukatim Vol. 2– Episode 8",
+     "url": "https://share.transistor.fm/s/d9594193",
+     "date": "Tue, 24 Nov 2026 00:05:17 -0500",
+     "blurb": "This episode covers from Chapter 14 through Chapter 15. The joy and pleasure of the Baal Teshuvah.",
+     "first_seen": "2026-11-24T13:01:35+00:00"
     }
    ],
    "latest": [
+    {
+     "id": "0a7637f5-a4c2-4108-89c9-cfb95c2f8eea",
+     "title": "Motzaei Sh”p Vayeitze 9/Ohr l’yud Kislev 5738 (B’Chedroi), Maamorim Melukatim Vol. 2– Episode 8",
+     "url": "https://share.transistor.fm/s/d9594193",
+     "date": "Tue, 24 Nov 2026 00:05:17 -0500",
+     "blurb": "This episode covers from Chapter 14 through Chapter 15. The joy and pleasure of the Baal Teshuvah.",
+     "first_seen": "2026-11-24T13:01:35+00:00"
+    },
     {
      "id": "df4d3db0-bd1c-4555-8e5c-421165c44cb1",
      "title": "Motzaei Sh”p Vayeitze 9/Ohr l’yud Kislev 5738 (B’Chedroi), Maamorim Melukatim Vol. 2– Episode 7",
@@ -2734,8 +2826,8 @@
      "first_seen": "2026-10-18T04:52:03+00:00"
     }
    ],
-   "total": 372,
-   "last_success_at": "2026-11-23T14:35:22+00:00"
+   "total": 373,
+   "last_success_at": "2026-11-24T13:01:35+00:00"
   },
   {
    "id": "wellsprings",
@@ -2749,7 +2841,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-23T14:35:23+00:00",
+   "checked_at": "2026-11-24T13:01:37+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2795,7 +2887,7 @@
     }
    ],
    "total": 125,
-   "last_success_at": "2026-11-23T14:35:23+00:00"
+   "last_success_at": "2026-11-24T13:01:37+00:00"
   },
   {
    "id": "daily_sicha",
@@ -2809,10 +2901,27 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-23T14:35:24+00:00",
+   "checked_at": "2026-11-24T13:01:38+00:00",
    "status": "ok",
-   "new": [],
+   "new": [
+    {
+     "id": "2026.11.24",
+     "title": "יום ג' פ' וישלח, י\"ד כסלו – יום החתונה של הרבי והרבנית הצדקנית נ\"ע, ה'תשפ\"ז",
+     "url": "",
+     "date": "Tue, 24 Nov 2026 12:00:00 GMT",
+     "blurb": "התוכן בהמשך למדובר בהתוועדות שלפנ\"ז ע\"ד גודל ענין טהרת המשפחה: חיי הנישואין, שתכליתן \"פרו ורבו וגו'\", צ\"ל באופן של פירוד וקירוב . זה מתחיל ב\"ימין מקרבת\" בזמן המותר, ואחרי הלידה וזמנים אחרים צ\"ל פירוד [ולהעיר, שלעת\"ל יתבטל כללות הענין דדם נדות משא\"כ דיני טומאה הקשורים עם לידה]. כמו שענין ה\"שלום\" מתאים רק בין ב' צדדים , כן ענין ב' הזמנים ד\"עת לחבק \" ו\"עת לרחוק מחבק\" מביא שלום אמיתי בין איש לאשתו ובינם לילדיהם שנולדים עפ\"י תורה ש\"נתיבותי' שלום\". המענה לטענת היצה\"ר שזהו\"ע של פירוד: אדרבה, זה מביא לקירוב ביתר שאת. המענה לטענה היתכן לתת כסף לבניית מקוואות במקום לנצרכים: ה' הוא \"א-ל רחום וחנון\", ואם זהו רצונו ה\"ז גופא ההוכחה שזוהי מדת הרחמנות האהבה והחסד. המענה לטענה שזה נוגע רק לנשים נשואות ובזמן מסויים: יש לזה השפעה על הילדים וכו' עד סוף כל הדורות ! משיחת י\"ט כסלו ה'תשל\"ט ל\"הנחה פרטית\" או התרגום ללה\"ק של השיחה: https://thedailysicha.com/?date=24-11-2026 Synopsis Regarding our discussion during the previous farbrengen about Taharas Hamishpachah : The purpose of married life is to “Be fruitful and multiply…,” and it requires times of both separation and closeness . Just as real peace is possible only when there are two sides , so too, observing both (the “time to embrace and the time to refrain from embracing”) brings about greater closeness and peace between husband and wife, and peace between them and their children (contrary to the argument of the yetzer that these laws create distance and separation). As for the question: Why should money be spent on building mikvaos which serve",
+     "first_seen": "2026-11-24T13:01:38+00:00"
+    }
+   ],
    "latest": [
+    {
+     "id": "2026.11.24",
+     "title": "יום ג' פ' וישלח, י\"ד כסלו – יום החתונה של הרבי והרבנית הצדקנית נ\"ע, ה'תשפ\"ז",
+     "url": "",
+     "date": "Tue, 24 Nov 2026 12:00:00 GMT",
+     "blurb": "התוכן בהמשך למדובר בהתוועדות שלפנ\"ז ע\"ד גודל ענין טהרת המשפחה: חיי הנישואין, שתכליתן \"פרו ורבו וגו'\", צ\"ל באופן של פירוד וקירוב . זה מתחיל ב\"ימין מקרבת\" בזמן המותר, ואחרי הלידה וזמנים אחרים צ\"ל פירוד [ולהעיר, שלעת\"ל יתבטל כללות הענין דדם נדות משא\"כ דיני טומאה הקשורים עם לידה]. כמו שענין ה\"שלום\" מתאים רק בין ב' צדדים , כן ענין ב' הזמנים ד\"עת לחבק \" ו\"עת לרחוק מחבק\" מביא שלום אמיתי בין איש לאשתו ובינם לילדיהם שנולדים עפ\"י תורה ש\"נתיבותי' שלום\". המענה לטענת היצה\"ר שזהו\"ע של פירוד: אדרבה, זה מביא לקירוב ביתר שאת. המענה לטענה היתכן לתת כסף לבניית מקוואות במקום לנצרכים: ה' הוא \"א-ל רחום וחנון\", ואם זהו רצונו ה\"ז גופא ההוכחה שזוהי מדת הרחמנות האהבה והחסד. המענה לטענה שזה נוגע רק לנשים נשואות ובזמן מסויים: יש לזה השפעה על הילדים וכו' עד סוף כל הדורות ! משיחת י\"ט כסלו ה'תשל\"ט ל\"הנחה פרטית\" או התרגום ללה\"ק של השיחה: https://thedailysicha.com/?date=24-11-2026 Synopsis Regarding our discussion during the previous farbrengen about Taharas Hamishpachah : The purpose of married life is to “Be fruitful and multiply…,” and it requires times of both separation and closeness . Just as real peace is possible only when there are two sides , so too, observing both (the “time to embrace and the time to refrain from embracing”) brings about greater closeness and peace between husband and wife, and peace between them and their children (contrary to the argument of the yetzer that these laws create distance and separation). As for the question: Why should money be spent on building mikvaos which serve",
+     "first_seen": "2026-11-24T13:01:38+00:00"
+    },
     {
      "id": "2026.11.23",
      "title": "יום ב' פ' וישלח, י\"ג כסלו, ה'תשפ\"ז",
@@ -3102,8 +3211,8 @@
      "first_seen": "2026-10-18T04:52:06+00:00"
     }
    ],
-   "total": 1435,
-   "last_success_at": "2026-11-23T14:35:24+00:00"
+   "total": 1436,
+   "last_success_at": "2026-11-24T13:01:38+00:00"
   },
   {
    "id": "learnchassidus",
@@ -3117,7 +3226,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-23T14:35:29+00:00",
+   "checked_at": "2026-11-24T13:01:42+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -3130,7 +3239,7 @@
     }
    ],
    "total": 5,
-   "last_success_at": "2026-11-23T14:35:29+00:00"
+   "last_success_at": "2026-11-24T13:01:42+00:00"
   },
   {
    "id": "simplychassidus",
@@ -3144,7 +3253,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-23T14:35:30+00:00",
+   "checked_at": "2026-11-24T13:01:42+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -3171,7 +3280,7 @@
     }
    ],
    "total": 4,
-   "last_success_at": "2026-11-23T14:35:30+00:00"
+   "last_success_at": "2026-11-24T13:01:42+00:00"
   },
   {
    "id": "alonei_chabad",
@@ -3184,7 +3293,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-23T14:35:31+00:00",
+   "checked_at": "2026-11-24T13:01:44+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -3201,7 +3310,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-23T14:35:31+00:00",
+   "checked_at": "2026-11-24T13:01:44+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -3218,7 +3327,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-23T14:35:31+00:00",
+   "checked_at": "2026-11-24T13:01:44+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -3245,7 +3354,7 @@
     }
    ],
    "total": 303,
-   "last_success_at": "2026-11-23T14:35:31+00:00"
+   "last_success_at": "2026-11-24T13:01:44+00:00"
   },
   {
    "id": "lchaim",
@@ -3258,7 +3367,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-23T14:35:32+00:00",
+   "checked_at": "2026-11-24T13:01:44+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -3334,7 +3443,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-23T14:35:32+00:00"
+   "last_success_at": "2026-11-24T13:01:44+00:00"
   },
   {
    "id": "one_point",
@@ -3347,7 +3456,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-23T14:35:34+00:00",
+   "checked_at": "2026-11-24T13:01:45+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -3388,7 +3497,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-23T14:35:34+00:00"
+   "last_success_at": "2026-11-24T13:01:45+00:00"
   },
   {
    "id": "derher",
@@ -3401,7 +3510,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-23T14:35:35+00:00",
+   "checked_at": "2026-11-24T13:01:46+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -3418,7 +3527,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-23T14:35:35+00:00",
+   "checked_at": "2026-11-24T13:01:46+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -3435,7 +3544,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-23T14:35:35+00:00",
+   "checked_at": "2026-11-24T13:01:46+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -3525,7 +3634,7 @@
     }
    ],
    "total": 2,
-   "last_success_at": "2026-11-23T14:35:35+00:00"
+   "last_success_at": "2026-11-24T13:01:46+00:00"
   },
   {
    "id": "maynotecha_inst",
@@ -3538,7 +3647,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-23T14:35:37+00:00",
+   "checked_at": "2026-11-24T13:01:46+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -3555,7 +3664,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-23T14:35:37+00:00",
+   "checked_at": "2026-11-24T13:01:46+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -3609,7 +3718,7 @@
     }
    ],
    "total": 1,
-   "last_success_at": "2026-11-23T14:35:37+00:00"
+   "last_success_at": "2026-11-24T13:01:46+00:00"
   },
   {
    "id": "anash",
@@ -3622,10 +3731,27 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-23T14:35:38+00:00",
+   "checked_at": "2026-11-24T13:01:48+00:00",
    "status": "ok",
-   "new": [],
+   "new": [
+    {
+     "id": "https://anash.org/?p=1137361",
+     "title": "Yud Daled Kislev: The Day That Connected the Rebbe and Chassidim",
+     "url": "https://anash.org/yud-daled-kislev-the-day-that-connected-the-rebbe-and-chassidim/",
+     "date": "Tue, 24 Nov 2026 00:45:22 +0000",
+     "blurb": "On Yud Daled Kislev 5689 (1928), the Rebbe married Rebbetzin Chaya Mushka in Warsaw. At the 25th anniversary farbrengen, the Rebbe famously said, “This is the day that bound me to you, and you to me.”",
+     "first_seen": "2026-11-24T13:01:48+00:00"
+    }
+   ],
    "latest": [
+    {
+     "id": "https://anash.org/?p=1137361",
+     "title": "Yud Daled Kislev: The Day That Connected the Rebbe and Chassidim",
+     "url": "https://anash.org/yud-daled-kislev-the-day-that-connected-the-rebbe-and-chassidim/",
+     "date": "Tue, 24 Nov 2026 00:45:22 +0000",
+     "blurb": "On Yud Daled Kislev 5689 (1928), the Rebbe married Rebbetzin Chaya Mushka in Warsaw. At the 25th anniversary farbrengen, the Rebbe famously said, “This is the day that bound me to you, and you to me.”",
+     "first_seen": "2026-11-24T13:01:48+00:00"
+    },
     {
      "id": "https://anash.org/?p=1136949",
      "title": "Tens of Thousands Expected at Tzama Chassidus Week",
@@ -4131,8 +4257,8 @@
      "first_seen": "2026-10-18T04:52:22+00:00"
     }
    ],
-   "total": 7,
-   "last_success_at": "2026-11-23T14:35:38+00:00"
+   "total": 6,
+   "last_success_at": "2026-11-24T13:01:48+00:00"
   },
   {
    "id": "collive",
@@ -4145,7 +4271,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-23T14:35:39+00:00",
+   "checked_at": "2026-11-24T13:01:49+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -4162,7 +4288,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-23T14:35:39+00:00",
+   "checked_at": "2026-11-24T13:01:49+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -4179,7 +4305,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-23T14:35:39+00:00",
+   "checked_at": "2026-11-24T13:01:49+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -4213,7 +4339,7 @@
     }
    ],
    "total": 20,
-   "last_success_at": "2026-11-23T14:35:39+00:00"
+   "last_success_at": "2026-11-24T13:01:49+00:00"
   },
   {
    "id": "abc770",
@@ -4226,7 +4352,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-23T14:35:41+00:00",
+   "checked_at": "2026-11-24T13:01:52+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -4272,7 +4398,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-23T14:35:41+00:00"
+   "last_success_at": "2026-11-24T13:01:52+00:00"
   },
   {
    "id": "kehot",
@@ -4285,7 +4411,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-23T14:35:44+00:00",
+   "checked_at": "2026-11-24T13:01:55+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -4995,7 +5121,7 @@
     }
    ],
    "total": 197,
-   "last_success_at": "2026-11-23T14:35:44+00:00"
+   "last_success_at": "2026-11-24T13:01:55+00:00"
   }
  ],
  "browser_checks": {
