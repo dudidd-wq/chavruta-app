@@ -1,73 +1,73 @@
 window.CHAVRUTA_PROJECT_STATUS = {
-  "generated": "2026-11-24T02:37+02:00",
-  "generated_label": "24.11.2026, 02:37 שעון ישראל",
+  "generated": "2026-11-24T06:55+02:00",
+  "generated_label": "24.11.2026, 06:55 שעון ישראל",
   "timezone": "Asia/Jerusalem",
   "coverage": {
     "rows": [
       {
         "id": "adhz",
         "name": "אדמו״ר הזקן",
-        "linked": 8791,
+        "linked": 8813,
         "total": 9542,
-        "pct": 92.1,
+        "pct": 92.4,
         "status": "final",
         "status_label": "סופי"
       },
       {
         "id": "אדמו״ר האמצעי",
         "name": "אדמו״ר האמצעי",
-        "linked": 6478,
+        "linked": 6875,
         "total": 8277,
-        "pct": 78.3,
+        "pct": 83.1,
         "status": "in_progress",
         "status_label": "בתהליך"
       },
       {
         "id": "אדמו״ר מהר״ש",
         "name": "אדמו״ר מהר״ש",
-        "linked": 4784,
+        "linked": 4809,
         "total": 4992,
-        "pct": 95.8,
+        "pct": 96.3,
         "status": "in_progress",
         "status_label": "בתהליך"
       },
       {
         "id": "אדמו״ר הרש״ב",
         "name": "אדמו״ר הרש״ב",
-        "linked": 4279,
+        "linked": 4312,
         "total": 4565,
-        "pct": 93.7,
+        "pct": 94.5,
         "status": "in_progress",
         "status_label": "בתהליך"
       },
       {
         "id": "אדמו״ר הריי״צ",
         "name": "אדמו״ר הריי״צ",
-        "linked": 1583,
+        "linked": 1593,
         "total": 1781,
-        "pct": 88.9,
+        "pct": 89.4,
         "status": "in_progress",
         "status_label": "בתהליך"
       },
       {
         "id": "הרבי",
         "name": "הרבי",
-        "linked": 10659,
+        "linked": 10737,
         "total": 11967,
-        "pct": 89.1,
+        "pct": 89.7,
         "status": "in_progress",
         "status_label": "בתהליך"
       }
     ],
     "totals": {
-      "linked": 36574,
+      "linked": 37139,
       "total": 41124,
-      "pct": 88.9
+      "pct": 90.3
     },
     "rest": {
-      "linked": 27783,
+      "linked": 28326,
       "total": 31582,
-      "pct": 88.0,
+      "pct": 89.7,
       "status": "in_progress",
       "status_label": "בתהליך",
       "rule_haiku_confirmed": 7999,
