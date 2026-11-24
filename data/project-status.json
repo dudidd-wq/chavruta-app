@@ -1,15 +1,15 @@
 {
-  "generated": "2026-11-24T00:55+02:00",
-  "generated_label": "24.11.2026, 00:55 שעון ישראל",
+  "generated": "2026-11-24T02:37+02:00",
+  "generated_label": "24.11.2026, 02:37 שעון ישראל",
   "timezone": "Asia/Jerusalem",
   "coverage": {
     "rows": [
       {
         "id": "adhz",
         "name": "אדמו״ר הזקן",
-        "linked": 8604,
+        "linked": 8791,
         "total": 9542,
-        "pct": 90.2,
+        "pct": 92.1,
         "status": "final",
         "status_label": "סופי"
       },
@@ -52,22 +52,22 @@
       {
         "id": "הרבי",
         "name": "הרבי",
-        "linked": 10624,
+        "linked": 10659,
         "total": 11967,
-        "pct": 88.8,
+        "pct": 89.1,
         "status": "in_progress",
         "status_label": "בתהליך"
       }
     ],
     "totals": {
-      "linked": 36352,
+      "linked": 36574,
       "total": 41124,
-      "pct": 88.4
+      "pct": 88.9
     },
     "rest": {
-      "linked": 27748,
+      "linked": 27783,
       "total": 31582,
-      "pct": 87.9,
+      "pct": 88.0,
       "status": "in_progress",
       "status_label": "בתהליך",
       "rule_haiku_confirmed": 7999,
