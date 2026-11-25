@@ -6238,6 +6238,269 @@ function ftTocView(main, s, t, i, q) {
 }
 
 /* ---- קריאה: מסמך (מאמר/פרק) — כל עמודיו ברצף, עם חלון סביב היעד במסמך ארוך ---- */
+const FT_SCAN_LAYOUT_KEY = "chavruta-reader-layout-v1";
+const FT_SCAN_ZOOM_KEY = "chavruta-reader-scan-zoom-v1";
+const FT_HB_PAGE_BASE = 8e9;
+
+function ftScanList(s) {
+  const list = [];
+  const add = sc => {
+    if (sc && sc.kind === "hebrewbooks" && /^\d{1,8}$/.test(String(sc.id || ""))) list.push(sc);
+  };
+  if (Array.isArray(s?.scans)) s.scans.forEach(add);
+  else add(s?.scan);
+  return list;
+}
+
+function ftHbFromPageId(pageId) {
+  const id = Number(pageId);
+  if (!Number.isSafeInteger(id) || id < FT_HB_PAGE_BASE || id >= 9e9) return null;
+  const off = id - FT_HB_PAGE_BASE, book = Math.floor(off / 10000), page = off % 10000;
+  return book > 0 && page > 0 && page < 10000 ? { book: String(book), page } : null;
+}
+
+function ftPageIdFromHb(book, page) {
+  const b = Number(book), p = Number(page);
+  return Number.isSafeInteger(b) && b > 0 && Number.isSafeInteger(p) && p > 0 && p < 10000 ? FT_HB_PAGE_BASE + b * 10000 + p : null;
+}
+
+function ftScanTarget(s, pageId) {
+  const scans = ftScanList(s), fromId = ftHbFromPageId(pageId);
+  if (fromId) {
+    const known = scans.find(sc => String(sc.id) === fromId.book);
+    return { kind: "hebrewbooks", provider: "היברובוקס", book: fromId.book, page: fromId.page, align: known?.pageAlign || "exact", original: "https://hebrewbooks.org/pdfpager.aspx?req=" + fromId.book + "&pgnum=" + fromId.page };
+  }
+  const first = scans[0];
+  if (!first) return null;
+  return { kind: "hebrewbooks", provider: "היברובוקס", book: String(first.id), page: 1, align: first.pageAlign || "series", original: "https://hebrewbooks.org/pdfpager.aspx?req=" + first.id + "&pgnum=1" };
+}
+
+function ftScanPref(q) {
+  const fromUrl = q?.get?.("view");
+  if (fromUrl === "text" || fromUrl === "split" || fromUrl === "scan") return fromUrl;
+  try {
+    const v = localStorage.getItem(FT_SCAN_LAYOUT_KEY);
+    if (v === "text" || v === "split" || v === "scan") return v;
+  } catch (_) {}
+  return window.matchMedia("(min-width: 901px)").matches ? "split" : "text";
+}
+
+function ftScanZoomPref() {
+  try {
+    const v = localStorage.getItem(FT_SCAN_ZOOM_KEY);
+    if (v === "page-width" || v === "75" || v === "100" || v === "125" || v === "150" || v === "200") return v;
+  } catch (_) {}
+  return "page-width";
+}
+
+function ftScanLocalProxy() {
+  const host = location.hostname;
+  if ((host === "127.0.0.1" || host === "localhost") && /^https?:$/.test(location.protocol)) return location.origin + "/hb-page";
+  const value = document.querySelector?.('meta[name="chavruta-scan-proxy"]')?.content;
+  try {
+    const u = new URL(value);
+    return !u.username && !u.password && !u.search && !u.hash && (u.protocol === "https:" || (u.protocol === "http:" && ["127.0.0.1", "localhost"].includes(u.hostname))) ? u.href.replace(/\/$/, "") : "";
+  } catch (_) { return ""; }
+}
+
+function ftScanCache() {
+  if (!ftScanCache.map) ftScanCache.map = new Map();
+  return ftScanCache.map;
+}
+
+async function ftScanFetch(book, page, signal) {
+  const key = book + "/" + page, cache = ftScanCache();
+  if (cache.has(key)) return cache.get(key);
+  const urls = [];
+  const gw = typeof sourceGateway === "function" ? sourceGateway() : "";
+  if (gw) urls.push(gw + "/v1/hebrewbooks/" + key);
+  const proxy = ftScanLocalProxy();
+  if (proxy) urls.push(proxy + "/" + key);
+  urls.push("https://beta.hebrewbooks.org/pagefeed/hebrewbooks_org_" + book + "_" + page + ".pdf");
+  let last;
+  for (const url of urls) {
+    try {
+      const response = await fetch(url, { signal, credentials: "omit", referrerPolicy: "no-referrer" });
+      if (response.status === 429) throw Object.assign(Error("rate_limited"), { retrySeconds: sourceRetrySeconds(response) });
+      if (response.status === 404) throw Object.assign(Error("not_found"), { notFound: true });
+      if (!response.ok) throw Error("unavailable");
+      const bytes = new Uint8Array(await response.arrayBuffer());
+      if (bytes.length > 6 * 1024 * 1024 || new TextDecoder().decode(bytes.slice(0, 5)) !== "%PDF-") throw Error("invalid PDF");
+      if (cache.size >= 8) cache.delete(cache.keys().next().value);
+      cache.set(key, bytes);
+      return bytes;
+    } catch (error) {
+      if (signal?.aborted) throw error;
+      last = error;
+      if (error.retrySeconds || error.notFound) throw error;
+    }
+  }
+  throw last || Error("unavailable");
+}
+
+async function ftScanDraw(canvasHost, book, page, zoom, signal) {
+  const [lib, bytes] = await Promise.all([sourcePDFLibrary(), ftScanFetch(book, page, signal)]);
+  if (signal?.aborted) throw Error("PDF scan canceled");
+  const loading = lib.getDocument(sourcePDFOptions(bytes.slice()));
+  try {
+    const pdf = await loading.promise;
+    if (signal?.aborted) throw Error("PDF scan canceled");
+    const pdfPage = await pdf.getPage(1);
+    if (signal?.aborted) throw Error("PDF scan canceled");
+    const natural = pdfPage.getViewport({ scale: 1 });
+    const width = Math.max(220, (canvasHost.clientWidth || 480) - 8);
+    const scale = zoom === "page-width" ? width / natural.width : Number(zoom) / 100;
+    const viewport = pdfPage.getViewport({ scale }), ratio = Math.min(devicePixelRatio || 1, 2, Math.sqrt(6000000 / (viewport.width * viewport.height)));
+    const canvas = h("canvas", { role: "img", "aria-label": "צילום הספר המקורי מהיברובוקס, דף " + page });
+    canvas.width = Math.ceil(viewport.width * ratio); canvas.height = Math.ceil(viewport.height * ratio);
+    canvas.style.width = Math.ceil(viewport.width) + "px"; canvas.style.height = Math.ceil(viewport.height) + "px";
+    const render = pdfPage.render({ canvas, canvasContext: canvas.getContext("2d"), viewport, transform: ratio === 1 ? null : [ratio, 0, 0, ratio, 0, 0] });
+    await render.promise;
+    if (signal?.aborted) throw Error("PDF scan canceled");
+    await sourcePDFValidateImages(lib, pdfPage, signal);
+    if (signal?.aborted) throw Error("PDF scan canceled");
+    return canvas;
+  } finally { loading.destroy().catch(() => {}); }
+}
+
+function ftScanBind({ s, t, body, scanPane, layoutTools, stage, docLeaves, initialPageId, q, ctx, revealTextPage }) {
+  const hasScan = !!ftScanTarget(s, initialPageId) || ftScanList(s).length;
+  layoutTools.replaceChildren();
+  if (!hasScan) { scanPane.hidden = true; scanPane.replaceChildren(); stage.className = "ft-stage is-text"; return null; }
+
+  let mode = ftScanPref(q), zoom = ftScanZoomPref(), book, page, align, seq = 0, controller, observer, syncing = false;
+  const status = h("p", { class: "ft-scan-status", role: "status" });
+  const view = h("div", { class: "ft-scan-view", tabindex: "0", "aria-label": "צילום הדף — אפשר לגלול ולהגדיל" });
+  const pageInput = h("input", { type: "number", min: "1", max: "99999", class: "ft-scan-page", "aria-label": "מספר הדף בסריקה" });
+  const credit = h("p", { class: "ft-scan-credit" }, s.credit || "צילום המקור מהיברובוקס. שימוש לא מסחרי, בייחוס לקה״ת ולהיברובוקס.");
+  const notice = h("p", { class: "ft-scan-notice" });
+  const original = h("a", { class: "linkbtn ft-scan-original", href: "#", target: "_blank", rel: "noopener noreferrer" }, "הדף בהיברובוקס", typeof icon === "function" ? icon("i-ext") : "");
+
+  const applyTarget = pageId => {
+    const target = ftScanTarget(s, pageId) || ftScanTarget(s, initialPageId);
+    if (!target) return false;
+    book = target.book; page = target.page; align = target.align;
+    pageInput.value = page;
+    original.href = "https://hebrewbooks.org/pdfpager.aspx?req=" + book + "&pgnum=" + page;
+    notice.textContent = align === "exact" ? "הסריקה מיושרת לדף הנוכחי בטקסט." : "הסריקה שייכת לכרך, ולא בהכרח לדף המדויק של הטקסט.";
+    return true;
+  };
+  applyTarget(initialPageId);
+
+  const setMode = (next, persist) => {
+    mode = next;
+    stage.className = "ft-stage is-" + mode;
+    scanPane.hidden = mode === "text";
+    for (const btn of layoutTools.querySelectorAll("button[data-layout]")) btn.setAttribute("aria-pressed", btn.dataset.layout === mode ? "true" : "false");
+    if (persist !== false) try { localStorage.setItem(FT_SCAN_LAYOUT_KEY, mode); } catch (_) {}
+    if (mode !== "text") requestAnimationFrame(() => draw());
+  };
+
+  const modes = [["text", "טקסט", "טקסט"], ["split", "טקסט וסריקה", "יחד"], ["scan", "סריקה", "סריקה"]];
+  for (const [id, long, short] of modes) {
+    const btn = h("button", { type: "button", class: "btn sm", "data-layout": id, "aria-pressed": "false" },
+      h("span", { class: "ft-layout-long" }, long), h("span", { class: "ft-layout-short" }, short));
+    btn.addEventListener("click", () => setMode(id));
+    layoutTools.append(btn);
+  }
+
+  const go = async (nextPage, syncText) => {
+    const p = Number(nextPage);
+    if (!Number.isSafeInteger(p) || p < 1 || p > 99999 || (p === page && view.querySelector("canvas") && seq)) return;
+    page = p; pageInput.value = p;
+    original.href = "https://hebrewbooks.org/pdfpager.aspx?req=" + book + "&pgnum=" + page;
+    if (mode !== "text") await draw();
+    if (syncText && align === "exact" && typeof revealTextPage === "function") {
+      const id = ftPageIdFromHb(book, page);
+      if (id) { syncing = true; try { await revealTextPage(id); } finally { setTimeout(() => { syncing = false; }, 80); } }
+    }
+  };
+
+  const prevBtn = h("button", { type: "button", class: "btn sm", onclick: () => go(page - 1, true) }, "הדף הקודם");
+  const nextBtn = h("button", { type: "button", class: "btn sm", onclick: () => go(page + 1, true) }, "הדף הבא");
+  const zoomSel = h("select", { "aria-label": "הגדלת הסריקה", onchange: () => {
+    zoom = zoomSel.value; try { localStorage.setItem(FT_SCAN_ZOOM_KEY, zoom); } catch (_) {} draw();
+  } }, ...[["page-width", "התאמה לרוחב"], ["75", "75%"], ["100", "100%"], ["125", "125%"], ["150", "150%"], ["200", "200%"]].map(([v, lab]) => h("option", { value: v, selected: zoom === v }, lab)));
+  const tools = h("div", { class: "ft-scan-tools" },
+    prevBtn,
+    h("form", { class: "ft-scan-jump", onsubmit: e => { e.preventDefault(); go(Number(pageInput.value), true); } }, h("label", null, "דף ", pageInput), h("button", { type: "submit", class: "btn sm" }, "מעבר")),
+    nextBtn, zoomSel);
+
+  scanPane.replaceChildren(tools, status, view, notice, credit, original);
+
+  const draw = async () => {
+    if (mode === "text" || !book || !ctx.alive()) return;
+    const my = ++seq;
+    controller?.abort(); controller = new AbortController();
+    prevBtn.disabled = page <= 1; nextBtn.disabled = page >= 99999;
+    status.textContent = "טוען את צילום הדף…";
+    view.replaceChildren();
+    try {
+      const canvas = await ftScanDraw(view, book, page, zoom, controller.signal);
+      if (my !== seq || !ctx.alive()) return;
+      view.replaceChildren(canvas);
+      status.textContent = "צילום הדף " + page;
+      const nxt = book + "/" + (page + 1);
+      if (!ftScanCache().has(nxt)) ftScanFetch(book, page + 1, controller.signal).catch(() => {});
+    } catch (error) {
+      if (my !== seq || error.name === "AbortError" || /canceled/i.test(String(error.message || ""))) return;
+      const wait = error.retrySeconds || 0;
+      const note = error.notFound ? "אין דף בסריקה במספר הזה."
+        : wait ? "שירות המקור מגביל בקשות כרגע. אפשר לנסות שוב בעוד " + wait + " שניות."
+        : "לא ניתן לטעון את צילום הדף מהכתובת הנוכחית. הקורא המובנה מצייר את הסריקה כתמונה (בלי מציג ה-PDF של הדפדפן) כשיש שער מקורות, או כשהאתר מוגש מקומית עם הכלי שמתווך את דפי היברובוקס.";
+      const retry = h("button", { type: "button", class: "btn sm", disabled: !!wait, onclick: () => draw() }, "ניסיון נוסף");
+      status.textContent = "צילום הדף לא נטען";
+      view.replaceChildren(h("div", { class: "ft-scan-empty", role: "status" }, h("p", null, note), retry));
+      if (wait) setTimeout(() => { if (my === seq) { retry.disabled = false; } }, wait * 1000);
+    }
+  };
+
+  const onKey = e => {
+    if (!ctx.alive() || mode === "text") return;
+    if (e.defaultPrevented || e.altKey || e.metaKey || e.ctrlKey) return;
+    const tag = (e.target && e.target.closest) ? e.target.closest("input, textarea, select, [contenteditable=true]") : null;
+    if (tag) return;
+    if (e.key === "ArrowLeft") { e.preventDefault(); go(page + 1, true); }
+    else if (e.key === "ArrowRight") { e.preventDefault(); go(page - 1, true); }
+    else if (e.key === "+" || e.key === "=") { zoomSel.selectedIndex = Math.min(zoomSel.options.length - 1, zoomSel.selectedIndex + 1); zoomSel.dispatchEvent(new Event("change")); }
+    else if (e.key === "-") { zoomSel.selectedIndex = Math.max(0, zoomSel.selectedIndex - 1); zoomSel.dispatchEvent(new Event("change")); }
+  };
+  document.addEventListener("keydown", onKey);
+
+  observer = new IntersectionObserver(entries => {
+    if (syncing || !ctx.alive() || align !== "exact") return;
+    const vis = entries.filter(en => en.isIntersecting).sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+    if (!vis) return;
+    const id = Number(String(vis.target.id || "").replace(/^ft-/, ""));
+    const hb = ftHbFromPageId(id);
+    if (!hb || (hb.book === book && hb.page === page)) return;
+    if (applyTarget(id) && mode !== "text") draw();
+  }, { root: null, threshold: [0.35, 0.6] });
+  const watch = () => { if (align !== "exact") return; for (const el of body.querySelectorAll(".ft-page[id]")) observer.observe(el); };
+  watch();
+  const mo = new MutationObserver(watch);
+  mo.observe(body, { childList: true, subtree: true });
+
+  let lastW = 0;
+  const ro = new ResizeObserver(() => {
+    const w = view.clientWidth;
+    if (mode === "text" || w < 40 || Math.abs(w - lastW) < 8) return;
+    lastW = w;
+    draw();
+  });
+  ro.observe(view);
+
+  const tick = setInterval(() => {
+    if (ctx.alive()) return;
+    clearInterval(tick); document.removeEventListener("keydown", onKey);
+    observer?.disconnect(); mo.disconnect(); ro.disconnect(); controller?.abort();
+  }, 500);
+
+  setMode(mode, false);
+  return { refreshFromText(pageId) { if (syncing || align !== "exact") return; if (applyTarget(pageId) && mode !== "text") draw(); }, reveal: watch };
+}
+
+
 async function ftDocView(main, s, t, i, q, ctx) {
   const d = ftDocOf(t, i), docLeaves = ftIsLeaf(t, d) ? [d] : ftKids(t, d).filter(k => ftIsLeaf(t, k));
   const target = ftIsLeaf(t, i) ? i : docLeaves[0];
@@ -6255,8 +6518,12 @@ async function ftDocView(main, s, t, i, q, ctx) {
     nikudTools,
     h("button", { type: "button", class: "btn sm", onclick: () => typeof openReadingPreferences === "function" && openReadingPreferences() }, icon("n-type"), "התאמת הקריאה"),
     h("button", { type: "button", class: "btn sm", onclick: async () => { await copyText(absUrl(mkHash(["read", t.slug, String(t.n[target][0])], {}, { nomode: true }))); toast("הקישור הועתק"); } }, "העתקת קישור"));
+  const layoutTools = h("span", { class: "ft-layout-tools", role: "group", "aria-label": "תצוגת הטקסט והסריקה" });
+  tools.append(layoutTools);
   const body = h("article", { class: "ft-body", lang: "he", dir: "rtl" });
-  main.append(ftCrumbs(t, d, s), h("header", { class: "ft-head" }, h("h1", { class: "page-title" }, title), h("p", { class: "lede" }, s.rebbe + " · " + s.title + (docLeaves.length > 1 ? " · " + docLeaves.length + " עמ׳" : "")), tools), nav(), body);
+  const scanPane = h("aside", { class: "ft-scan", hidden: true, "aria-label": "צילום הספר המקורי" });
+  const stage = h("div", { class: "ft-stage is-text" }, body, scanPane);
+  main.append(ftCrumbs(t, d, s), h("header", { class: "ft-head" }, h("h1", { class: "page-title" }, title), h("p", { class: "lede" }, s.rebbe + " · " + s.title + (docLeaves.length > 1 ? " · " + docLeaves.length + " עמ׳" : "")), tools), nav(), stage);
   const before = h("button", { type: "button", class: "btn ft-more", onclick: () => grow(-1) }), after = h("button", { type: "button", class: "btn ft-more", onclick: () => grow(1) });
   body.append(before, after);
   const chunkOf = j => t.n[j][2];
@@ -6297,6 +6564,17 @@ async function ftDocView(main, s, t, i, q, ctx) {
   } catch (e) { wait.replaceWith(h("div", { class: "empty" }, h("b", null, "לא ניתן לטעון את הטקסט"), String(e.message || e))); return; }
   if (!ctx.alive()) return;
   wait.remove(); sync();
+  const revealTextPage = async pageId => {
+    const el0 = document.getElementById("ft-" + pageId);
+    if (el0) { el0.scrollIntoView({ block: "start" }); return; }
+    const idx = docLeaves.findIndex(j => t.n[j][0] === pageId);
+    if (idx < 0) return;
+    if (idx < from) { const a = idx; const anchor = body.querySelector(".ft-page"), y = anchor?.getBoundingClientRect().top; await render(a, from, -1); from = a; if (anchor) window.scrollBy(0, anchor.getBoundingClientRect().top - y); }
+    else if (idx >= to) { await render(to, idx + 1, 1); to = idx + 1; }
+    sync();
+    document.getElementById("ft-" + pageId)?.scrollIntoView({ block: "start" });
+  };
+  ftScanBind({ s, t, body, scanPane, layoutTools, stage, docLeaves, initialPageId: t.n[target][0], q, ctx, revealTextPage });
   const heHost = h("div");
   main.append(nav(), heHost, ftRelated(t, target), ftCredit(s, t.n[target][0]));
   ftMafteiachLayer(s, t, d, nikudTools).then(el => { if (!ctx.alive()) return; if (el) heHost.replaceWith(el); else heHost.remove(); });
