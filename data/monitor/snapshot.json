@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-25T13:07:10+00:00",
+ "generated_at": "2026-11-25T13:14:00+00:00",
  "sources": [
   {
    "id": "chabadlibrary",
@@ -12,7 +12,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-11-25T13:05:52+00:00",
+   "checked_at": "2026-11-25T13:12:43+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -30,7 +30,7 @@
     "primary",
     "whatsnew"
    ],
-   "checked_at": "2026-11-25T13:05:52+00:00",
+   "checked_at": "2026-11-25T13:12:43+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -47,7 +47,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-11-25T13:05:52+00:00",
+   "checked_at": "2026-11-25T13:12:43+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -64,7 +64,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-11-25T13:05:52+00:00",
+   "checked_at": "2026-11-25T13:12:43+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -82,7 +82,7 @@
     "primary",
     "whatsnew"
    ],
-   "checked_at": "2026-11-25T13:05:52+00:00",
+   "checked_at": "2026-11-25T13:12:43+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -102,7 +102,7 @@
     }
    ],
    "total": 132,
-   "last_success_at": "2026-11-25T13:05:52+00:00"
+   "last_success_at": "2026-11-25T13:12:43+00:00"
   },
   {
    "id": "chabadlibrarybooks",
@@ -115,7 +115,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-11-25T13:05:53+00:00",
+   "checked_at": "2026-11-25T13:12:43+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -133,12 +133,12 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-25T13:05:53+00:00",
+   "checked_at": "2026-11-25T13:12:43+00:00",
    "status": "ok",
    "new": [],
    "latest": [],
    "total": 1501,
-   "last_success_at": "2026-11-25T13:05:53+00:00"
+   "last_success_at": "2026-11-25T13:12:43+00:00"
   },
   {
    "id": "chassidut_org",
@@ -152,12 +152,12 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-25T13:05:54+00:00",
+   "checked_at": "2026-11-25T13:12:45+00:00",
    "status": "ok",
    "new": [],
    "latest": [],
    "total": 4,
-   "last_success_at": "2026-11-25T13:05:54+00:00"
+   "last_success_at": "2026-11-25T13:12:45+00:00"
   },
   {
    "id": "biurim",
@@ -171,7 +171,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-25T13:05:55+00:00",
+   "checked_at": "2026-11-25T13:12:46+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -225,7 +225,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-25T13:05:55+00:00"
+   "last_success_at": "2026-11-25T13:12:46+00:00"
   },
   {
    "id": "hm_monsey",
@@ -239,7 +239,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-25T13:05:58+00:00",
+   "checked_at": "2026-11-25T13:12:48+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -333,7 +333,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-25T13:05:58+00:00"
+   "last_success_at": "2026-11-25T13:12:48+00:00"
   },
   {
    "id": "hiskashrus",
@@ -347,17 +347,9 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-25T13:05:59+00:00",
+   "checked_at": "2026-11-25T13:12:49+00:00",
    "status": "ok",
-   "new": [
-    {
-     "id": "40080",
-     "title": "Vayishlach · 5787 · קונטרס שבועי לאנ\"ש חסידי חב\"ד לחיזוק ההתקשרות לכ\"ק אדמו\"ר רבי מנחם מענדל בהרה\"ק רלו\"י מליובאוויטש",
-     "url": "https://torahprint.nyc3.cdn.digitaloceanspaces.com/pdfFiles/1795610786198_hnifp_.pdf",
-     "date": "2026-11-27T00:00:00.000Z",
-     "first_seen": "2026-11-25T13:05:59+00:00"
-    }
-   ],
+   "new": [],
    "latest": [
     {
      "id": "40080",
@@ -438,7 +430,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-25T13:05:59+00:00"
+   "last_success_at": "2026-11-25T13:12:49+00:00"
   },
   {
    "id": "lichyot_chassidus",
@@ -452,7 +444,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-25T13:06:01+00:00",
+   "checked_at": "2026-11-25T13:12:51+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -642,7 +634,7 @@
     }
    ],
    "total": 1000,
-   "last_success_at": "2026-11-25T13:06:01+00:00"
+   "last_success_at": "2026-11-25T13:12:51+00:00"
   },
   {
    "id": "chabadzoom",
@@ -656,7 +648,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-25T13:06:05+00:00",
+   "checked_at": "2026-11-25T13:12:54+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -830,7 +822,7 @@
     }
    ],
    "total": 566,
-   "last_success_at": "2026-11-25T13:06:05+00:00"
+   "last_success_at": "2026-11-25T13:12:54+00:00"
   },
   {
    "id": "kovtzimdrive",
@@ -844,7 +836,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-25T13:06:09+00:00",
+   "checked_at": "2026-11-25T13:12:56+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -852,12 +844,12 @@
      "id": "https://www.kovtzimdrive.com/posts/bochurim-build-database-of-thousands-of-%E2%80%98he%E2%80%99aros%E2%80%99",
      "title": "bochurim build database of thousands of ‘he’aros’",
      "url": "https://www.kovtzimdrive.com/posts/bochurim-build-database-of-thousands-of-%E2%80%98he%E2%80%99aros%E2%80%99",
-     "date": "2026-11-20",
+     "date": "2026-11-25",
      "first_seen": "2026-10-20T07:59:38+00:00"
     }
    ],
    "total": 1,
-   "last_success_at": "2026-11-25T13:06:09+00:00"
+   "last_success_at": "2026-11-25T13:12:56+00:00"
   },
   {
    "id": "avita",
@@ -871,7 +863,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-25T13:06:12+00:00",
+   "checked_at": "2026-11-25T13:12:59+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -889,7 +881,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-25T13:06:12+00:00",
+   "checked_at": "2026-11-25T13:12:59+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -911,7 +903,7 @@
     }
    ],
    "total": 2,
-   "last_success_at": "2026-11-25T13:06:12+00:00"
+   "last_success_at": "2026-11-25T13:12:59+00:00"
   },
   {
    "id": "dvarmalchus770",
@@ -925,7 +917,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-25T13:06:13+00:00",
+   "checked_at": "2026-11-25T13:13:01+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1091,7 +1083,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-25T13:06:13+00:00"
+   "last_success_at": "2026-11-25T13:13:01+00:00"
   },
   {
    "id": "soulwords",
@@ -1105,7 +1097,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-25T13:06:14+00:00",
+   "checked_at": "2026-11-25T13:13:02+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1175,7 +1167,7 @@
     }
    ],
    "total": 0,
-   "last_success_at": "2026-11-25T13:06:14+00:00"
+   "last_success_at": "2026-11-25T13:13:02+00:00"
   },
   {
    "id": "sie_weekly",
@@ -1189,7 +1181,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-25T13:06:16+00:00",
+   "checked_at": "2026-11-25T13:13:03+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1279,7 +1271,7 @@
     }
    ],
    "total": 120,
-   "last_success_at": "2026-11-25T13:06:16+00:00"
+   "last_success_at": "2026-11-25T13:13:03+00:00"
   },
   {
    "id": "pls",
@@ -1293,18 +1285,9 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-25T13:06:17+00:00",
+   "checked_at": "2026-11-25T13:13:05+00:00",
    "status": "ok",
-   "new": [
-    {
-     "id": "05558152-21a0-4394-a616-6db08f93a213",
-     "title": "חלק ל, וישלח שיחה א - הרב שמואל שור - חלק ב (ד-ז)",
-     "url": "https://sichaindepth.captivate.fm",
-     "date": "Fri, 20 Nov 2026 10:40:00 -0500",
-     "blurb": "נמסר בבית מנחם - בורו פארק",
-     "first_seen": "2026-11-25T13:06:17+00:00"
-    }
-   ],
+   "new": [],
    "latest": [
     {
      "id": "cd1e9e54-987b-429c-958b-ca0e51053667",
@@ -1484,7 +1467,7 @@
     }
    ],
    "total": 200,
-   "last_success_at": "2026-11-25T13:06:17+00:00"
+   "last_success_at": "2026-11-25T13:13:05+00:00"
   },
   {
    "id": "chayenu_ls",
@@ -1498,7 +1481,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-25T13:06:20+00:00",
+   "checked_at": "2026-11-25T13:13:06+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1531,8 +1514,8 @@
      "first_seen": "2026-10-18T04:51:52+00:00"
     }
    ],
-   "total": 1,
-   "last_success_at": "2026-11-25T13:06:20+00:00"
+   "total": 2,
+   "last_success_at": "2026-11-25T13:13:06+00:00"
   },
   {
    "id": "weekly_sicha",
@@ -1546,7 +1529,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-25T13:06:20+00:00",
+   "checked_at": "2026-11-25T13:13:08+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1622,7 +1605,7 @@
     }
    ],
    "total": 121,
-   "last_success_at": "2026-11-25T13:06:20+00:00"
+   "last_success_at": "2026-11-25T13:13:08+00:00"
   },
   {
    "id": "theyeshiva",
@@ -1636,18 +1619,9 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-25T13:06:21+00:00",
+   "checked_at": "2026-11-25T13:13:09+00:00",
    "status": "ok",
-   "new": [
-    {
-     "id": "https://www.theyeshiva.net/item/10037",
-     "title": "Women's Vayishlach Class - Are You Living on Your Own Energy or Borrowing Someone Else’s?",
-     "url": "https://www.theyeshiva.net/item/10037",
-     "date": "Tue, 24 Nov 2026 09:30:00 -0500",
-     "blurb": "Yaakov and Esav Reveal Two Radically Different Ways of Experiencing Life When Yaakov and Esav reunite after twenty years, two seemingly similar expressions reveal two radically different experiences of existence. Esav declares, יש לי רב—I have plenty. Yaakov declares, יש לי כל—I have everything. How could Yaakov make such an audacious statement? His life was hardly devoid of pain, loss, or unfulfilled needs. And how can we proclaim daily in Grace After Meals, דורשי ה' לא יחסרו כל טוב, that those who seek Hashem lack nothing good? In a breathtaking insight, the Sfas Emes opens an entirely new understanding of abundance. When you connect to the infinite divine spark that constitutes the inner essence of all reality, you are touching everything. Just as the genetic blueprint of an entire organism is contained within a single nucleated cell, the infinite is present within every fragment of existence. Yaakov was not merely declaring his satisfaction with what he possessed; he was expressing his intimate attachment to the source of all existence. This class explores the profound psychological and spiritual difference between living in authentic self-energy and constantly seeking external sources of energy to fill an internal void. We can spend our lives pursuing relationships, wealth, pleasure, recognition, entertainment, and success, yet remain haunted by an inexplicable emptiness. These experiences can enrich our lives, but they cannot substitute for our connection to the very es",
-     "first_seen": "2026-11-25T13:06:21+00:00"
-    }
-   ],
+   "new": [],
    "latest": [
     {
      "id": "https://www.theyeshiva.net/item/10037",
@@ -1851,7 +1825,7 @@
     }
    ],
    "total": 1560,
-   "last_success_at": "2026-11-25T13:06:21+00:00"
+   "last_success_at": "2026-11-25T13:13:09+00:00"
   },
   {
    "id": "chassidus_applied",
@@ -1865,7 +1839,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-25T13:06:24+00:00",
+   "checked_at": "2026-11-25T13:13:13+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2255,7 +2229,7 @@
     }
    ],
    "total": 15,
-   "last_success_at": "2026-11-25T13:06:24+00:00"
+   "last_success_at": "2026-11-25T13:13:13+00:00"
   },
   {
    "id": "neirot",
@@ -2269,7 +2243,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-25T13:06:24+00:00",
+   "checked_at": "2026-11-25T13:13:13+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2331,7 +2305,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-25T13:06:24+00:00"
+   "last_success_at": "2026-11-25T13:13:13+00:00"
   },
   {
    "id": "chassidus_explained",
@@ -2345,7 +2319,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-25T13:06:26+00:00",
+   "checked_at": "2026-11-25T13:13:16+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2431,7 +2405,7 @@
     }
    ],
    "total": 139,
-   "last_success_at": "2026-11-25T13:06:26+00:00"
+   "last_success_at": "2026-11-25T13:13:16+00:00"
   },
   {
    "id": "melukat",
@@ -2445,7 +2419,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-25T13:06:28+00:00",
+   "checked_at": "2026-11-25T13:13:17+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2507,7 +2481,7 @@
     }
    ],
    "total": 168,
-   "last_success_at": "2026-11-25T13:06:28+00:00"
+   "last_success_at": "2026-11-25T13:13:17+00:00"
   },
   {
    "id": "daily_maamar",
@@ -2521,18 +2495,9 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-25T13:06:29+00:00",
+   "checked_at": "2026-11-25T13:13:19+00:00",
    "status": "ok",
-   "new": [
-    {
-     "id": "cdcd98dc-ab3d-4875-9fbf-ed0a5691501b",
-     "title": "Motzaei Sh”p Vayeitze 9/Ohr l’yud Kislev 5738 (B’Chedroi), Maamorim Melukatim Vol. 2– Episode 9",
-     "url": "https://share.transistor.fm/s/058633d3",
-     "date": "Wed, 25 Nov 2026 07:41:59 -0500",
-     "blurb": "This episode covers from Chapter 16 through Chapter 17. The Tzadik within each Jew.",
-     "first_seen": "2026-11-25T13:06:29+00:00"
-    }
-   ],
+   "new": [],
    "latest": [
     {
      "id": "cdcd98dc-ab3d-4875-9fbf-ed0a5691501b",
@@ -2848,7 +2813,7 @@
     }
    ],
    "total": 374,
-   "last_success_at": "2026-11-25T13:06:29+00:00"
+   "last_success_at": "2026-11-25T13:13:19+00:00"
   },
   {
    "id": "wellsprings",
@@ -2862,7 +2827,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-25T13:06:30+00:00",
+   "checked_at": "2026-11-25T13:13:21+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2908,7 +2873,7 @@
     }
    ],
    "total": 125,
-   "last_success_at": "2026-11-25T13:06:30+00:00"
+   "last_success_at": "2026-11-25T13:13:21+00:00"
   },
   {
    "id": "daily_sicha",
@@ -2922,18 +2887,9 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-25T13:06:31+00:00",
+   "checked_at": "2026-11-25T13:13:21+00:00",
    "status": "ok",
-   "new": [
-    {
-     "id": "2026.11.25",
-     "title": "יום ד' פ' וישלח, ט\"ו כסלו, ה'תשפ\"ז",
-     "url": "",
-     "date": "Wed, 25 Nov 2026 12:00:00 GMT",
-     "blurb": "התוכן 1) יה\"ר שיתקיים הענין ד\" ויבא יעקב שלם \" [שנאמר ברביעי דפ' וישלח] – אצל בני יעקב שנמצאים בגלות במצב של טלטולי דרך וכו', ויוצאים מזה תיכף ומיד באופן של \" שלם \" – \"בגופו .. בממונו .. בתורתו\", ובאים אל ארצנו הקדושה בגאולה האמיתית והשלימה (וזה נפעל ע\"י הענין ד\"ויגש אליו יהודה\" – התפלה והחיבור של בנ\"י עם הקב\"ה); גם אם ישנו תכלית השלימות והטוב בגלות, \" ויחי יעקב בארמ\"צ\", צועקים יהודים \" דאַלאָי גלות !!!\"... 2) פס\"ד ברור ברמב\"ם שכל יהודי יהי' חסיד : ענינו של חסיד הוא שלומד תורת החסידות באופן של הבנה והשגה, והרמב\"ם פוסק ש\"באותו הזמן\", בימות המשיח, \"יהיו כל ישראל חכמים גדולים .. וישיגו דעת בוראם וכו' – שהוא הוא תורת החסידות! ומכיון שהרמב\"ם פוסק ש\" אין בין עוה\"ז לימות המשיח אלא שעבוד מלכיות בלבד \", בהכרח לומר שכבר לפני ימות המשיח יהי' הענין דהשגת דעת בוראם ע\"י לימוד תורת החסידות , עד כדי כך ששייך לומר שבענין זה אין שינוי בין עוה\"ז לימות המשיח! ווכך גם מפורש בהתחלת הרמב\"ם: \"יסוד היסודות ועמוד החכמות לידע שיש שם מצוי ראשון .. וכל הנמצאים .. לא נמצאו אלא מאמיתת המצאו .. כל הנמצאים צריכים לו \" גם לאחרי שנתהוו, שזהו תוכן דתורת הבעש\"ט ואדה\"ז ע\"ד הצורך בחידוש ההתהוות בכל רגע ורגע. ב' חלקים מהתוועדות מוצאי \"זאת חנוכה\" ה'תשמ\"ו ל\"הנחה פרטית\" או התרגום ללה\"ק של השיחה: https://thedailysicha.com/?date=25-11-2026 Synopsis (1) Just as “ Yaakov arrived complete ” (as the verse states in revi’i of parashas Vayishlach), so may his children (despite the hardships of the journey of exile etc.) arrive upon the true and complete Redemption “ Intact in body...in their wealth…and in their Torah” (as a r",
-     "first_seen": "2026-11-25T13:06:31+00:00"
-    }
-   ],
+   "new": [],
    "latest": [
     {
      "id": "2026.11.25",
@@ -3241,7 +3197,7 @@
     }
    ],
    "total": 1437,
-   "last_success_at": "2026-11-25T13:06:31+00:00"
+   "last_success_at": "2026-11-25T13:13:21+00:00"
   },
   {
    "id": "learnchassidus",
@@ -3255,7 +3211,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-25T13:06:36+00:00",
+   "checked_at": "2026-11-25T13:13:27+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -3268,7 +3224,7 @@
     }
    ],
    "total": 5,
-   "last_success_at": "2026-11-25T13:06:36+00:00"
+   "last_success_at": "2026-11-25T13:13:27+00:00"
   },
   {
    "id": "simplychassidus",
@@ -3282,7 +3238,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-25T13:06:36+00:00",
+   "checked_at": "2026-11-25T13:13:28+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -3309,7 +3265,7 @@
     }
    ],
    "total": 4,
-   "last_success_at": "2026-11-25T13:06:36+00:00"
+   "last_success_at": "2026-11-25T13:13:28+00:00"
   },
   {
    "id": "alonei_chabad",
@@ -3322,7 +3278,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-25T13:06:37+00:00",
+   "checked_at": "2026-11-25T13:13:29+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -3339,7 +3295,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-25T13:06:37+00:00",
+   "checked_at": "2026-11-25T13:13:29+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -3356,7 +3312,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-25T13:06:37+00:00",
+   "checked_at": "2026-11-25T13:13:29+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -3383,7 +3339,7 @@
     }
    ],
    "total": 303,
-   "last_success_at": "2026-11-25T13:06:37+00:00"
+   "last_success_at": "2026-11-25T13:13:29+00:00"
   },
   {
    "id": "lchaim",
@@ -3396,7 +3352,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-25T13:06:37+00:00",
+   "checked_at": "2026-11-25T13:13:31+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -3472,7 +3428,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-25T13:06:37+00:00"
+   "last_success_at": "2026-11-25T13:13:31+00:00"
   },
   {
    "id": "one_point",
@@ -3485,7 +3441,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-25T13:06:39+00:00",
+   "checked_at": "2026-11-25T13:13:32+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -3526,7 +3482,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-25T13:06:39+00:00"
+   "last_success_at": "2026-11-25T13:13:32+00:00"
   },
   {
    "id": "derher",
@@ -3539,7 +3495,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-25T13:06:40+00:00",
+   "checked_at": "2026-11-25T13:13:34+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -3556,7 +3512,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-25T13:06:40+00:00",
+   "checked_at": "2026-11-25T13:13:34+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -3573,7 +3529,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-25T13:06:40+00:00",
+   "checked_at": "2026-11-25T13:13:34+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -3663,7 +3619,7 @@
     }
    ],
    "total": 2,
-   "last_success_at": "2026-11-25T13:06:40+00:00"
+   "last_success_at": "2026-11-25T13:13:34+00:00"
   },
   {
    "id": "maynotecha_inst",
@@ -3676,7 +3632,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-25T13:06:40+00:00",
+   "checked_at": "2026-11-25T13:13:36+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -3693,7 +3649,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-25T13:06:40+00:00",
+   "checked_at": "2026-11-25T13:13:36+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -3747,7 +3703,7 @@
     }
    ],
    "total": 1,
-   "last_success_at": "2026-11-25T13:06:40+00:00"
+   "last_success_at": "2026-11-25T13:13:36+00:00"
   },
   {
    "id": "anash",
@@ -3760,18 +3716,9 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-25T13:06:41+00:00",
+   "checked_at": "2026-11-25T13:13:37+00:00",
    "status": "ok",
-   "new": [
-    {
-     "id": "https://anash.org/?p=1137525",
-     "title": "Bomb Plot Foiled at Historic Shul With Ties to the Rebbe",
-     "url": "https://anash.org/bomb-plot-foiled-at-historic-shul-with-ties-to-the-rebbe/",
-     "date": "Tue, 24 Nov 2026 17:46:30 +0000",
-     "blurb": "Russian authorities announced on 14 Kislev that they had foiled a bombing at the historic shul in Kislovodsk, the city where the Rebbe and Rebbetzin’s shidduch first took shape.",
-     "first_seen": "2026-11-25T13:06:41+00:00"
-    }
-   ],
+   "new": [],
    "latest": [
     {
      "id": "https://anash.org/?p=1137525",
@@ -4303,7 +4250,7 @@
     }
    ],
    "total": 7,
-   "last_success_at": "2026-11-25T13:06:41+00:00"
+   "last_success_at": "2026-11-25T13:13:37+00:00"
   },
   {
    "id": "collive",
@@ -4316,7 +4263,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-25T13:06:42+00:00",
+   "checked_at": "2026-11-25T13:13:38+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -4333,7 +4280,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-25T13:06:42+00:00",
+   "checked_at": "2026-11-25T13:13:38+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -4350,7 +4297,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-25T13:06:42+00:00",
+   "checked_at": "2026-11-25T13:13:38+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -4384,7 +4331,7 @@
     }
    ],
    "total": 20,
-   "last_success_at": "2026-11-25T13:06:42+00:00"
+   "last_success_at": "2026-11-25T13:13:38+00:00"
   },
   {
    "id": "abc770",
@@ -4397,7 +4344,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-25T13:06:44+00:00",
+   "checked_at": "2026-11-25T13:13:40+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -4443,7 +4390,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-25T13:06:44+00:00"
+   "last_success_at": "2026-11-25T13:13:40+00:00"
   },
   {
    "id": "kehot",
@@ -4456,7 +4403,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-25T13:06:47+00:00",
+   "checked_at": "2026-11-25T13:13:43+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -5166,7 +5113,7 @@
     }
    ],
    "total": 197,
-   "last_success_at": "2026-11-25T13:06:47+00:00"
+   "last_success_at": "2026-11-25T13:13:43+00:00"
   }
  ],
  "browser_checks": {
