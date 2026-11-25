@@ -2222,5 +2222,24 @@
     "why": "כתבת היסטוריה וזיכרונות על חתונת הרבי בי״ד כסלו תרפ״ט, עם קישורים לגלריה, הקלטות ופרק לילדים; אין פרסום כתוב חדש של מקור או ביאור. העמוד נפתח.",
     "source_url": "https://anash.org/yud-daled-kislev-the-day-that-connected-the-rebbe-and-chassidim/",
     "checked_at": "2026-11-24T13:10:00+00:00"
+  },
+  "a963e368bf471e3c": {
+    "cls": "ביאור",
+    "why": "אותו פוסט של Dvar Malchus 770 (p=5715) שסווג אתמול כביאור (d0815245f93d6803); המפרסם שינה את הכותרת והסיר ממנה 5752, ולכן נוצר מפתח חדש. ביאור כתוב לשיחת ש״פ וישלח תשנ״ב, פרסום שנתי חוזר. העמוד נפתח.",
+    "source_url": "https://dvarmalchus770.org/2026/11/23/vayishlach-5752-the-job-after-the-birurim-are-completed-2/",
+    "previous_url": "https://dvarmalchus770.org/2025/12/01/vayishlach-5752-the-job-after-the-birurim-are-completed/",
+    "checked_at": "2026-11-25T13:15:00+00:00"
+  },
+  "7af761bb8837e9c0": {
+    "cls": "לא רלוונטי",
+    "why": "חדשות: סיכול פיגוע בבית הכנסת ההיסטורי בקיסלובודסק. אין פרסום כתוב של מאמר, שיחה או מכתב. העמוד נפתח (WebFetch; חסום ב-Cloudflare לתיבה).",
+    "source_url": "https://anash.org/bomb-plot-foiled-at-historic-shul-with-ties-to-the-rebbe/",
+    "checked_at": "2026-11-25T13:15:00+00:00"
+  },
+  "0d2ad65fa0b55af0": {
+    "cls": "לא רלוונטי",
+    "why": "חדשות ואירוע: חנוכת גן ילדים על שם הרבי בקלינינגרד. אין פרסום כתוב של מקור או ביאור. העמוד נפתח (WebFetch; חסום ב-Cloudflare לתיבה).",
+    "source_url": "https://anash.org/kaliningrad-dedicates-new-preschool-named-for-the-rebbe/",
+    "checked_at": "2026-11-25T13:15:00+00:00"
   }
 }
