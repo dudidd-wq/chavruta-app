@@ -1,6 +1,6 @@
 {
  "seen": [
-  "content:c5e9e3299e4ed2b9",
+  "content:c243a2a4fbda11fe",
   "https://chabadzoom.co.il/series#content",
   "https://chabadzoom.co.il/us",
   "https://chabadzoom.co.il/talk",
@@ -97,6 +97,7 @@
   "https://chabadzoom.co.il/talk?_speaker=79",
   "https://chabadzoom.co.il/talk?_speaker=223",
   "https://chabadzoom.co.il/talk?_speaker=203",
+  "https://chabadzoom.co.il/talk?_speaker=241",
   "https://chabadzoom.co.il/talk?_speaker=80",
   "https://chabadzoom.co.il/talk?_speaker=82",
   "https://chabadzoom.co.il/talk?_speaker=83",
@@ -486,6 +487,7 @@
   "https://chabadzoom.co.il/talk?_favorites=yes",
   "https://chabadzoom.co.il/serie/%d7%94%d7%99%d7%95%d7%9d-%d7%99%d7%95%d7%9d-%d7%a1%d7%93%d7%a8%d7%aa-%d7%94%d7%90%d7%9e%d7%a8%d7%95%d7%aa-%d7%95%d7%94%d7%a4%d7%aa%d7%92%d7%9e%d7%99%d7%9d-%d7%94%d7%99%d7%95%d7%9e%d7%99%d7%aa",
   "https://chabadzoom.co.il/serie/13-%d7%a2%d7%99%d7%a7%d7%a8%d7%99-%d7%94%d7%90%d7%9e%d7%95%d7%a0%d7%94-%d7%94%d7%a8%d7%91-%d7%95%d7%99%d7%a6%d7%94%d7%a0%d7%93%d7%9c%d7%a8",
+  "https://chabadzoom.co.il/serie/%d7%90%d7%b3%d7%9e%d7%a2%d7%a9%d7%94-%d7%a1%d7%99%d7%a4%d7%95%d7%a8%d7%99%d7%9d-%d7%97%d7%a1%d7%99%d7%93%d7%99%d7%99%d7%9d-%d7%9c%d7%99%d7%9c%d7%93%d7%99%d7%9d",
   "https://chabadzoom.co.il/serie/%d7%90%d7%95%d7%9e%d7%a0%d7%95%d7%aa-%d7%94%d7%97%d7%99%d7%a0%d7%95%d7%9a",
   "https://chabadzoom.co.il/serie/%d7%90%d7%99%d7%9e%d7%95%d7%9f-%d7%9e%d7%a9%d7%a4%d7%97%d7%aa%d7%99-%d7%94%d7%a8%d7%91-%d7%9e%d7%90%d7%99%d7%a8-%d7%a2%d7%a8%d7%93",
   "https://chabadzoom.co.il/serie/%d7%91%d7%99%d7%95%d7%9d-%d7%a2%d7%a9%d7%aa%d7%99-%d7%a2%d7%a9%d7%a8-%d7%94%d7%92%d7%91-%d7%a8%d7%97%d7%9c-%d7%a9%d7%90%d7%91%d7%99",
@@ -566,6 +568,7 @@
   "https://chabadzoom.co.il/accessibility",
   "https://chabadzoom.co.il/cookie-policy",
   "https://chabadzoom.co.il/tos",
+  "content:c5e9e3299e4ed2b9",
   "content:a09ab446dc727e85",
   "content:8b805f9b7fdddeff",
   "https://chabadzoom.co.il/serie/%d7%94%d7%93%d7%a8%d7%9b%d7%aa-%d7%94%d7%95%d7%a8%d7%99%d7%9d",
@@ -587,6 +590,6 @@
   "content:8fa62ed7b23cbbca",
   "content:1488b43eb1baf5fe"
  ],
- "updated": "2026-11-25T14:19:11+00:00",
- "count": 566
+ "updated": "2026-11-26T13:10:51+00:00",
+ "count": 568
 }
