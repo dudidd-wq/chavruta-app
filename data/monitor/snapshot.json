@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-26T13:11:47+00:00",
+ "generated_at": "2026-11-26T13:19:35+00:00",
  "sources": [
   {
    "id": "chabadlibrary",
@@ -12,7 +12,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-11-26T13:10:39+00:00",
+   "checked_at": "2026-11-26T13:18:25+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -30,7 +30,7 @@
     "primary",
     "whatsnew"
    ],
-   "checked_at": "2026-11-26T13:10:39+00:00",
+   "checked_at": "2026-11-26T13:18:25+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -47,7 +47,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-11-26T13:10:39+00:00",
+   "checked_at": "2026-11-26T13:18:25+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -64,7 +64,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-11-26T13:10:39+00:00",
+   "checked_at": "2026-11-26T13:18:25+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -82,7 +82,7 @@
     "primary",
     "whatsnew"
    ],
-   "checked_at": "2026-11-26T13:10:39+00:00",
+   "checked_at": "2026-11-26T13:18:25+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -102,7 +102,7 @@
     }
    ],
    "total": 132,
-   "last_success_at": "2026-11-26T13:10:39+00:00"
+   "last_success_at": "2026-11-26T13:18:25+00:00"
   },
   {
    "id": "chabadlibrarybooks",
@@ -115,7 +115,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-11-26T13:10:40+00:00",
+   "checked_at": "2026-11-26T13:18:25+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -133,12 +133,12 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-26T13:10:40+00:00",
+   "checked_at": "2026-11-26T13:18:25+00:00",
    "status": "ok",
    "new": [],
    "latest": [],
    "total": 1501,
-   "last_success_at": "2026-11-26T13:10:40+00:00"
+   "last_success_at": "2026-11-26T13:18:25+00:00"
   },
   {
    "id": "chassidut_org",
@@ -152,12 +152,12 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-26T13:10:41+00:00",
+   "checked_at": "2026-11-26T13:18:26+00:00",
    "status": "ok",
    "new": [],
    "latest": [],
    "total": 4,
-   "last_success_at": "2026-11-26T13:10:41+00:00"
+   "last_success_at": "2026-11-26T13:18:26+00:00"
   },
   {
    "id": "biurim",
@@ -171,7 +171,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-26T13:10:42+00:00",
+   "checked_at": "2026-11-26T13:18:27+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -225,7 +225,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-26T13:10:42+00:00"
+   "last_success_at": "2026-11-26T13:18:27+00:00"
   },
   {
    "id": "hm_monsey",
@@ -239,7 +239,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-26T13:10:44+00:00",
+   "checked_at": "2026-11-26T13:18:29+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -333,7 +333,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-26T13:10:44+00:00"
+   "last_success_at": "2026-11-26T13:18:29+00:00"
   },
   {
    "id": "hiskashrus",
@@ -347,7 +347,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-26T13:10:46+00:00",
+   "checked_at": "2026-11-26T13:18:31+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -430,7 +430,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-26T13:10:46+00:00"
+   "last_success_at": "2026-11-26T13:18:31+00:00"
   },
   {
    "id": "lichyot_chassidus",
@@ -444,26 +444,9 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-26T13:10:47+00:00",
+   "checked_at": "2026-11-26T13:18:32+00:00",
    "status": "ok",
-   "new": [
-    {
-     "id": "bfb7b663-2b1c-49f9-89e8-9ad23f69c98d",
-     "title": "מאמר ד\"ה קטונתי תשי\"ז (סיכום) - מאמר ב",
-     "url": "https://rabbi_osher_farkash_maamarim.captivate.fm",
-     "date": "Wed, 25 Nov 2026 04:00:00 -0500",
-     "blurb": "ביאור מאמר חז״ל כל מי שנעשה לו נס מנכין לו מזכויותיו",
-     "first_seen": "2026-11-26T13:10:47+00:00"
-    },
-    {
-     "id": "cb492c54-3008-491f-b3a8-45c709d07cc5",
-     "title": "מאמר ד\"ה וכל העם רואים תרס\"ה - חלק י\"ד",
-     "url": "https://rabbi_osher_farkash_maamarim.captivate.fm",
-     "date": "Wed, 25 Nov 2026 04:00:00 -0500",
-     "blurb": "כח הרצון ואופן המשכתו מהנפש",
-     "first_seen": "2026-11-26T13:10:47+00:00"
-    }
-   ],
+   "new": [],
    "latest": [
     {
      "id": "bfb7b663-2b1c-49f9-89e8-9ad23f69c98d",
@@ -667,7 +650,7 @@
     }
    ],
    "total": 1000,
-   "last_success_at": "2026-11-26T13:10:47+00:00"
+   "last_success_at": "2026-11-26T13:18:32+00:00"
   },
   {
    "id": "chabadzoom",
@@ -681,31 +664,9 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-26T13:10:49+00:00",
+   "checked_at": "2026-11-26T13:18:35+00:00",
    "status": "ok",
-   "new": [
-    {
-     "id": "content:c243a2a4fbda11fe",
-     "title": "עדכון בתוכן הדף",
-     "url": "https://chabadzoom.co.il/series",
-     "date": "",
-     "first_seen": "2026-11-26T13:10:49+00:00"
-    },
-    {
-     "id": "https://chabadzoom.co.il/talk?_speaker=241",
-     "title": "הרב בני מרקוביץ",
-     "url": "https://chabadzoom.co.il/talk?_speaker=241",
-     "date": "",
-     "first_seen": "2026-11-26T13:10:49+00:00"
-    },
-    {
-     "id": "https://chabadzoom.co.il/serie/%d7%90%d7%b3%d7%9e%d7%a2%d7%a9%d7%94-%d7%a1%d7%99%d7%a4%d7%95%d7%a8%d7%99%d7%9d-%d7%97%d7%a1%d7%99%d7%93%d7%99%d7%99%d7%9d-%d7%9c%d7%99%d7%9c%d7%93%d7%99%d7%9d",
-     "title": "א'מעשה | סיפורים חסידיים לילדים",
-     "url": "https://chabadzoom.co.il/serie/%d7%90%d7%b3%d7%9e%d7%a2%d7%a9%d7%94-%d7%a1%d7%99%d7%a4%d7%95%d7%a8%d7%99%d7%9d-%d7%97%d7%a1%d7%99%d7%93%d7%99%d7%99%d7%9d-%d7%9c%d7%99%d7%9c%d7%93%d7%99%d7%9d",
-     "date": "",
-     "first_seen": "2026-11-26T13:10:49+00:00"
-    }
-   ],
+   "new": [],
    "latest": [
     {
      "id": "content:c243a2a4fbda11fe",
@@ -898,7 +859,7 @@
     }
    ],
    "total": 568,
-   "last_success_at": "2026-11-26T13:10:49+00:00"
+   "last_success_at": "2026-11-26T13:18:35+00:00"
   },
   {
    "id": "kovtzimdrive",
@@ -912,7 +873,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-26T13:10:51+00:00",
+   "checked_at": "2026-11-26T13:18:35+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -925,7 +886,7 @@
     }
    ],
    "total": 1,
-   "last_success_at": "2026-11-26T13:10:51+00:00"
+   "last_success_at": "2026-11-26T13:18:35+00:00"
   },
   {
    "id": "avita",
@@ -939,7 +900,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-26T13:10:53+00:00",
+   "checked_at": "2026-11-26T13:18:37+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -957,7 +918,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-26T13:10:53+00:00",
+   "checked_at": "2026-11-26T13:18:37+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -979,7 +940,7 @@
     }
    ],
    "total": 2,
-   "last_success_at": "2026-11-26T13:10:53+00:00"
+   "last_success_at": "2026-11-26T13:18:37+00:00"
   },
   {
    "id": "dvarmalchus770",
@@ -993,7 +954,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-26T13:10:55+00:00",
+   "checked_at": "2026-11-26T13:18:39+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1159,7 +1120,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-26T13:10:55+00:00"
+   "last_success_at": "2026-11-26T13:18:39+00:00"
   },
   {
    "id": "soulwords",
@@ -1173,7 +1134,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-26T13:10:56+00:00",
+   "checked_at": "2026-11-26T13:18:40+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1243,7 +1204,7 @@
     }
    ],
    "total": 0,
-   "last_success_at": "2026-11-26T13:10:56+00:00"
+   "last_success_at": "2026-11-26T13:18:40+00:00"
   },
   {
    "id": "sie_weekly",
@@ -1257,7 +1218,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-26T13:10:57+00:00",
+   "checked_at": "2026-11-26T13:18:41+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1347,7 +1308,7 @@
     }
    ],
    "total": 120,
-   "last_success_at": "2026-11-26T13:10:57+00:00"
+   "last_success_at": "2026-11-26T13:18:41+00:00"
   },
   {
    "id": "pls",
@@ -1361,7 +1322,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-26T13:10:58+00:00",
+   "checked_at": "2026-11-26T13:18:42+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1543,7 +1504,7 @@
     }
    ],
    "total": 200,
-   "last_success_at": "2026-11-26T13:10:58+00:00"
+   "last_success_at": "2026-11-26T13:18:42+00:00"
   },
   {
    "id": "chayenu_ls",
@@ -1557,7 +1518,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-26T13:10:59+00:00",
+   "checked_at": "2026-11-26T13:18:44+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1590,8 +1551,8 @@
      "first_seen": "2026-10-18T04:51:52+00:00"
     }
    ],
-   "total": 1,
-   "last_success_at": "2026-11-26T13:10:59+00:00"
+   "total": 2,
+   "last_success_at": "2026-11-26T13:18:44+00:00"
   },
   {
    "id": "weekly_sicha",
@@ -1605,17 +1566,9 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-26T13:10:59+00:00",
+   "checked_at": "2026-11-26T13:18:45+00:00",
    "status": "ok",
-   "new": [
-    {
-     "id": "https://theweeklysicha.org/episode/tws-vayishlach-87",
-     "title": "tws vayishlach 87",
-     "url": "https://theweeklysicha.org/episode/tws-vayishlach-87",
-     "date": "2026-11-26T13:00:06.400Z",
-     "first_seen": "2026-11-26T13:10:59+00:00"
-    }
-   ],
+   "new": [],
    "latest": [
     {
      "id": "https://theweeklysicha.org/episode/tws-vayeitzei-87",
@@ -1696,7 +1649,7 @@
     }
    ],
    "total": 122,
-   "last_success_at": "2026-11-26T13:10:59+00:00"
+   "last_success_at": "2026-11-26T13:18:45+00:00"
   },
   {
    "id": "theyeshiva",
@@ -1710,18 +1663,9 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-26T13:11:00+00:00",
+   "checked_at": "2026-11-26T13:18:46+00:00",
    "status": "ok",
-   "new": [
-    {
-     "id": "https://www.theyeshiva.net/item/10038",
-     "title": "What Did You Really See on Ayahuasca? - Wednesday: Maamar Yafeh Sha'ah Achas #9",
-     "url": "https://www.theyeshiva.net/item/10038",
-     "date": "Wed, 25 Nov 2026 08:00:00 -0500",
-     "blurb": "What Does It Feel Like to Burn in Hell? Can I Trust the G-d Who Created It? Can I Trust the G-d Who Created Hell? Are There Really Fires in Hell? How can we heal our trauma around paradise and purgatory? For many of us, the words Gan Eden and Gehenna evoke a terrifying picture of God and the afterlife. Even when we question that picture intellectually, our bodies may still brace for punishment every time we make a mistake. This class returns to the very language that frightened us, including the Talmud’s teaching that earthly fire is one-sixtieth of the fire of Gehenom. Through the Mitteler Rebbe’s maamar, we explore purgatory as the experience of having our own lives reflected back to us with a clarity we can't always perceive in this world. There is the pain of losing a mask we mistook for our skin. And there is the deeper grief of discovering how much of our passion went into securing a feeling of love or validation at the cost of our own truth. Why can an affair feel so alive to a person who has felt invisible for years? What happens when that same person can finally feel both the warmth they craved and what they sacrificed to get it? When we discover how we betrayed our own souls, we feel compelled to purge. The pain is profound, and it is followed by paradise and redemption. The class traces this painful awakening back to the first question Hashem asks Adam after he eats from the Tree of Knowledge: Ayekah? Where are you? Adam can tell Hashem why he is hiding. He has los",
-     "first_seen": "2026-11-26T13:11:00+00:00"
-    }
-   ],
+   "new": [],
    "latest": [
     {
      "id": "https://www.theyeshiva.net/item/10038",
@@ -1933,7 +1877,7 @@
     }
    ],
    "total": 1561,
-   "last_success_at": "2026-11-26T13:11:00+00:00"
+   "last_success_at": "2026-11-26T13:18:46+00:00"
   },
   {
    "id": "chassidus_applied",
@@ -1947,18 +1891,9 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-26T13:11:03+00:00",
+   "checked_at": "2026-11-26T13:18:49+00:00",
    "status": "ok",
-   "new": [
-    {
-     "id": "yt:video:YZXbgKRs7JY",
-     "title": "Samach Vav",
-     "url": "https://www.youtube.com/watch?v=YZXbgKRs7JY",
-     "date": "2026-11-26T03:59:31+00:00",
-     "blurb": "",
-     "first_seen": "2026-11-26T13:11:03+00:00"
-    }
-   ],
+   "new": [],
    "latest": [
     {
      "id": "yt:video:YZXbgKRs7JY",
@@ -2354,7 +2289,7 @@
     }
    ],
    "total": 15,
-   "last_success_at": "2026-11-26T13:11:03+00:00"
+   "last_success_at": "2026-11-26T13:18:49+00:00"
   },
   {
    "id": "neirot",
@@ -2368,7 +2303,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-26T13:11:03+00:00",
+   "checked_at": "2026-11-26T13:18:49+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2430,7 +2365,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-26T13:11:03+00:00"
+   "last_success_at": "2026-11-26T13:18:49+00:00"
   },
   {
    "id": "chassidus_explained",
@@ -2444,18 +2379,9 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-26T13:11:05+00:00",
+   "checked_at": "2026-11-26T13:18:52+00:00",
    "status": "ok",
-   "new": [
-    {
-     "id": "3ca0c5ce-1c70-4519-9b23-a54c5770aa13",
-     "title": "Mitteler Rebbe's Padah Beshalom part 6/9 שערי תשובה ד\"ה פדה בשלום (פרק ז-ח)",
-     "url": "https://podcasters.spotify.com/pod/show/chassidus-explained/episodes/Mitteler-Rebbes-Padah-Beshalom-part-69---------e3t1j3j",
-     "date": "Wed, 25 Nov 2026 22:25:34 GMT",
-     "blurb": "Link to מאמר PDF⁠⁠ Finishing the explanation of חיה, the מיטעלער רבי demonstrates how the strong ביטול of the נפש הבהמית to the נפש האלקית is merely a ביטול of its רצון, and not of the actual נפש, which means that the נפש might still revert back to its original status. The מיטעלער רבי then introduces the level of יחידה by first explaining the level of \"השתוות\" equilibrium. To explain this, the מיטעלער רבי launches into a fascinating exploration of the two polar experiences at a person's core being - pleasure and pain. The מיטעלער רבי explains how pain is only experienced by lack of pleasure, and as much pleasure as a person has from any given experience will dictate how much pain they will feel from the absence of that pleasure.",
-     "first_seen": "2026-11-26T13:11:05+00:00"
-    }
-   ],
+   "new": [],
    "latest": [
     {
      "id": "3ca0c5ce-1c70-4519-9b23-a54c5770aa13",
@@ -2547,7 +2473,7 @@
     }
    ],
    "total": 140,
-   "last_success_at": "2026-11-26T13:11:05+00:00"
+   "last_success_at": "2026-11-26T13:18:52+00:00"
   },
   {
    "id": "melukat",
@@ -2561,7 +2487,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-26T13:11:07+00:00",
+   "checked_at": "2026-11-26T13:18:53+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2623,7 +2549,7 @@
     }
    ],
    "total": 168,
-   "last_success_at": "2026-11-26T13:11:07+00:00"
+   "last_success_at": "2026-11-26T13:18:53+00:00"
   },
   {
    "id": "daily_maamar",
@@ -2637,7 +2563,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-26T13:11:08+00:00",
+   "checked_at": "2026-11-26T13:18:54+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2955,7 +2881,7 @@
     }
    ],
    "total": 374,
-   "last_success_at": "2026-11-26T13:11:08+00:00"
+   "last_success_at": "2026-11-26T13:18:54+00:00"
   },
   {
    "id": "wellsprings",
@@ -2969,7 +2895,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-26T13:11:09+00:00",
+   "checked_at": "2026-11-26T13:18:56+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -3015,7 +2941,7 @@
     }
    ],
    "total": 125,
-   "last_success_at": "2026-11-26T13:11:09+00:00"
+   "last_success_at": "2026-11-26T13:18:56+00:00"
   },
   {
    "id": "daily_sicha",
@@ -3029,18 +2955,9 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-26T13:11:10+00:00",
+   "checked_at": "2026-11-26T13:18:56+00:00",
    "status": "ok",
-   "new": [
-    {
-     "id": "2026.11.26",
-     "title": "יום ה' פ' וישלח, ט\"ז כסלו, ה'תשפ\"ז",
-     "url": "",
-     "date": "Thu, 26 Nov 2026 12:00:00 GMT",
-     "blurb": "התוכן [התחיל לנגן \"עסן עסט זיך וכו', ואח\"כ אמר:] וכל זה (ש\"עסן עסט זיך וכו') – לאחרי שרבותינו נשיאינו מסרו נפשם עבורנו! כי באמת כל נשיא מוכן כבר לקיום היעוד \"ועלו מושיעים בהר ציון וגו'\", אלא שמרחמים עלינו שלא יהי' באופן ד\"ודפקום יום אחד\" (\"אחישנה\"), שאז \"ומתו כל הצאן\" וכו' [כמ\"ש ברביעי דפ' וישלח], ובשביל זה הוצרך הרבי לעבור הענין ד\"ואל עפר תשוב\".. ולהמתין בגלות עד.. שנסיים להכין את עצמנו להיות ראויים לצאת מהגלות, ובשביל זה מעכבים בגלות את השכינה יחד עם כל הנשיאים.., ולאחכ\"ז – הנה \"עסן עסט זיך, טרינקען טרינקט זיך, און שלאָפן שלאָפט זיך\".. ואילו כאשר עומדים להתפלל או לומדים תורה או איזה מאמר חסידות ה\"ז באופן ד\"מצות אנשים מלומדה\" וכו', ובגלל כ\"ז מעכבים את כל הענינים בגלות.., והרי הובטחנו שב\" שעתא חדא וברגעא חדא\" \"אַ קער-טאָן זיך ווי ס'דאַרף צו זיין\" ועושים תשובה – \" מיד הן נגאלין \"! ב' שיחות דהתוועדות י\"ט כסלו ה'תשט\"ז ל\"הנחה פרטית\" או התרגום ללה\"ק של השיחה: https://thedailysicha.com/?date=26-11-2026 Synopsis (After singing the niggun Essen est zich ,the Rebbe said the following:) Every Nasi is ready for the time when “Saviors will ascend Mount Tzion,” etc., but they have compassion upon us not to “drive them hard for one day” (“I will hasten it”) in which case “all the flocks will die” etc. (as it says in revi’i of parashas Vayishlach). And for this, the Rebbe had to undergo the process of “to dust you will return” and remain in exile until we finish preparing ourselves to be fit to leave exile, and all the while we are holding back the Shechinah in exile along with all the Nesi",
-     "first_seen": "2026-11-26T13:11:10+00:00"
-    }
-   ],
+   "new": [],
    "latest": [
     {
      "id": "2026.11.26",
@@ -3356,7 +3273,7 @@
     }
    ],
    "total": 1438,
-   "last_success_at": "2026-11-26T13:11:10+00:00"
+   "last_success_at": "2026-11-26T13:18:56+00:00"
   },
   {
    "id": "learnchassidus",
@@ -3370,7 +3287,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-26T13:11:14+00:00",
+   "checked_at": "2026-11-26T13:19:03+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -3383,7 +3300,7 @@
     }
    ],
    "total": 5,
-   "last_success_at": "2026-11-26T13:11:14+00:00"
+   "last_success_at": "2026-11-26T13:19:03+00:00"
   },
   {
    "id": "simplychassidus",
@@ -3397,7 +3314,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-26T13:11:15+00:00",
+   "checked_at": "2026-11-26T13:19:03+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -3424,7 +3341,7 @@
     }
    ],
    "total": 4,
-   "last_success_at": "2026-11-26T13:11:15+00:00"
+   "last_success_at": "2026-11-26T13:19:03+00:00"
   },
   {
    "id": "alonei_chabad",
@@ -3437,7 +3354,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-26T13:11:16+00:00",
+   "checked_at": "2026-11-26T13:19:05+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -3454,7 +3371,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-26T13:11:16+00:00",
+   "checked_at": "2026-11-26T13:19:05+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -3471,7 +3388,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-26T13:11:16+00:00",
+   "checked_at": "2026-11-26T13:19:05+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -3498,7 +3415,7 @@
     }
    ],
    "total": 303,
-   "last_success_at": "2026-11-26T13:11:16+00:00"
+   "last_success_at": "2026-11-26T13:19:05+00:00"
   },
   {
    "id": "lchaim",
@@ -3511,7 +3428,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-26T13:11:16+00:00",
+   "checked_at": "2026-11-26T13:19:06+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -3587,7 +3504,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-26T13:11:16+00:00"
+   "last_success_at": "2026-11-26T13:19:06+00:00"
   },
   {
    "id": "one_point",
@@ -3600,7 +3517,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-26T13:11:17+00:00",
+   "checked_at": "2026-11-26T13:19:07+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -3641,7 +3558,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-26T13:11:17+00:00"
+   "last_success_at": "2026-11-26T13:19:07+00:00"
   },
   {
    "id": "derher",
@@ -3654,7 +3571,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-26T13:11:19+00:00",
+   "checked_at": "2026-11-26T13:19:08+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -3671,7 +3588,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-26T13:11:19+00:00",
+   "checked_at": "2026-11-26T13:19:08+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -3688,10 +3605,39 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-26T13:11:19+00:00",
+   "checked_at": "2026-11-26T13:19:08+00:00",
    "status": "ok",
-   "new": [],
+   "new": [
+    {
+     "id": "https://dvarmalchus.com/Download/A51ECC3F-9F27-4118-87D2-10742583B482.pdf",
+     "title": "דבר מלכות · מקץ תשפ״ז",
+     "url": "https://dvarmalchus.com/Download/A51ECC3F-9F27-4118-87D2-10742583B482.pdf",
+     "date": "",
+     "first_seen": "2026-11-26T13:19:08+00:00"
+    },
+    {
+     "id": "https://dvarmalchus.com/Download/95D56F30-3D18-4382-B1EA-69B26AB1707F.pdf",
+     "title": "דבר מלכות · ויגש תשפ״ז",
+     "url": "https://dvarmalchus.com/Download/95D56F30-3D18-4382-B1EA-69B26AB1707F.pdf",
+     "date": "",
+     "first_seen": "2026-11-26T13:19:08+00:00"
+    }
+   ],
    "latest": [
+    {
+     "id": "https://dvarmalchus.com/Download/A51ECC3F-9F27-4118-87D2-10742583B482.pdf",
+     "title": "דבר מלכות · מקץ תשפ״ז",
+     "url": "https://dvarmalchus.com/Download/A51ECC3F-9F27-4118-87D2-10742583B482.pdf",
+     "date": "",
+     "first_seen": "2026-11-26T13:19:08+00:00"
+    },
+    {
+     "id": "https://dvarmalchus.com/Download/95D56F30-3D18-4382-B1EA-69B26AB1707F.pdf",
+     "title": "דבר מלכות · ויגש תשפ״ז",
+     "url": "https://dvarmalchus.com/Download/95D56F30-3D18-4382-B1EA-69B26AB1707F.pdf",
+     "date": "",
+     "first_seen": "2026-11-26T13:19:08+00:00"
+    },
     {
      "id": "https://dvarmalchus.com/Download/94F52A7E-BA5E-4450-B146-74158D552047.pdf",
      "title": "דבר מלכות · וישלח תשפ״ז",
@@ -3777,8 +3723,8 @@
      "first_seen": "2026-10-18T04:52:19+00:00"
     }
    ],
-   "total": 2,
-   "last_success_at": "2026-11-26T13:11:19+00:00"
+   "total": 4,
+   "last_success_at": "2026-11-26T13:19:08+00:00"
   },
   {
    "id": "maynotecha_inst",
@@ -3791,7 +3737,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-26T13:11:19+00:00",
+   "checked_at": "2026-11-26T13:19:10+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -3808,7 +3754,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-26T13:11:19+00:00",
+   "checked_at": "2026-11-26T13:19:10+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -3862,7 +3808,7 @@
     }
    ],
    "total": 1,
-   "last_success_at": "2026-11-26T13:11:19+00:00"
+   "last_success_at": "2026-11-26T13:19:10+00:00"
   },
   {
    "id": "anash",
@@ -3875,18 +3821,9 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-26T13:11:20+00:00",
+   "checked_at": "2026-11-26T13:19:11+00:00",
    "status": "ok",
-   "new": [
-    {
-     "id": "https://anash.org/?p=1137909",
-     "title": "Yud Tes Kislev Celebrations Open at Tzama Chassidus Week",
-     "url": "https://anash.org/yud-tes-kislev-celebrations-open-at-tzama-chassidus-week/",
-     "date": "Wed, 25 Nov 2026 22:02:00 +0000",
-     "blurb": "Farbrengens, a Chassidus seforim fair, and niggunim concerts featuring Avraham Fried and Ishay Ribo are drawing crowds to Binyanei Ha’uma for the 17th annual Tzama Chassidus Week.",
-     "first_seen": "2026-11-26T13:11:20+00:00"
-    }
-   ],
+   "new": [],
    "latest": [
     {
      "id": "https://anash.org/?p=1137909",
@@ -4434,7 +4371,7 @@
     }
    ],
    "total": 5,
-   "last_success_at": "2026-11-26T13:11:20+00:00"
+   "last_success_at": "2026-11-26T13:19:11+00:00"
   },
   {
    "id": "collive",
@@ -4447,7 +4384,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-26T13:11:21+00:00",
+   "checked_at": "2026-11-26T13:19:12+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -4464,7 +4401,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-26T13:11:21+00:00",
+   "checked_at": "2026-11-26T13:19:12+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -4481,38 +4418,9 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-26T13:11:21+00:00",
+   "checked_at": "2026-11-26T13:19:12+00:00",
    "status": "ok",
-   "new": [
-    {
-     "id": "https://www.hageula.com/news/press/28330.htm",
-     "title": "להורדה: הקובץ השבועי של ״דברי משיח״",
-     "url": "https://www.hageula.com/news/press/28330.htm",
-     "date": "",
-     "first_seen": "2026-11-26T13:11:21+00:00"
-    },
-    {
-     "id": "https://www.hageula.com/news/press/28329.htm",
-     "title": "פרסום ראשון: הגהות ומענות בנוגע להדפסת ה\"שארית יהודה\" וה\"שדי חמד\"",
-     "url": "https://www.hageula.com/news/press/28329.htm",
-     "date": "",
-     "first_seen": "2026-11-26T13:11:21+00:00"
-    },
-    {
-     "id": "https://www.hageula.com/news/press/28328.htm",
-     "title": "קובץ \"הערות התמימים ואנ\"ש 770 בית משיח\"",
-     "url": "https://www.hageula.com/news/press/28328.htm",
-     "date": "",
-     "first_seen": "2026-11-26T13:11:21+00:00"
-    },
-    {
-     "id": "https://www.hageula.com/news/press/28254.htm",
-     "title": "לקראת יום הבהיר ר\"ח כסלו: הופיע קובץ \"היכל המלך\" חי\"ח",
-     "url": "https://www.hageula.com/news/press/28254.htm",
-     "date": "",
-     "first_seen": "2026-11-26T13:11:21+00:00"
-    }
-   ],
+   "new": [],
    "latest": [
     {
      "id": "https://www.hageula.com/news/press/28330.htm",
@@ -4572,7 +4480,7 @@
     }
    ],
    "total": 19,
-   "last_success_at": "2026-11-26T13:11:21+00:00"
+   "last_success_at": "2026-11-26T13:19:12+00:00"
   },
   {
    "id": "abc770",
@@ -4585,7 +4493,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-26T13:11:23+00:00",
+   "checked_at": "2026-11-26T13:19:14+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -4631,7 +4539,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-26T13:11:23+00:00"
+   "last_success_at": "2026-11-26T13:19:14+00:00"
   },
   {
    "id": "kehot",
@@ -4644,7 +4552,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-26T13:11:25+00:00",
+   "checked_at": "2026-11-26T13:19:16+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -5354,7 +5262,7 @@
     }
    ],
    "total": 197,
-   "last_success_at": "2026-11-26T13:11:25+00:00"
+   "last_success_at": "2026-11-26T13:19:16+00:00"
   }
  ],
  "browser_checks": {
@@ -5893,7 +5801,7 @@
      "genre": "גיליון"
     }
    ],
-   "checked_at": "2026-11-26T13:10:32+00:00",
+   "checked_at": "2026-11-14T19:05:00+00:00",
    "note": "החוברת השבועית ויצא תשפ״ז (256 עמ׳) נפתחה מ־dvarmalchus.org דרך רשת המחשב; השער ותוכן השיחות לט׳–י׳ כסלו אומתו."
   }
  }
