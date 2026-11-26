@@ -6305,6 +6305,26 @@ function ftPageIdFromHb(book, page) {
   return Number.isSafeInteger(b) && b > 0 && Number.isSafeInteger(p) && p > 0 && p < 10000 ? FT_HB_PAGE_BASE + b * 10000 + p : null;
 }
 
+
+function ftAnchorFor(scans, pageId) {
+  const id = Number(pageId);
+  if (!Number.isFinite(id) || !scans) return null;
+  let best = null, bestTid = -Infinity;
+  for (const sc of scans) {
+    if (!Array.isArray(sc?.anchors)) continue;
+    for (const a of sc.anchors) {
+      const tid = Number(a.typographyId), page = Number(a.page);
+      if (!Number.isFinite(tid) || !Number.isFinite(page) || page < 1 || tid > id) continue;
+      if (tid >= bestTid) { bestTid = tid; best = { sc, page }; }
+    }
+  }
+  return best;
+}
+
+function ftFollowsText(align) {
+  return align === "exact" || align === "anchor";
+}
+
 function ftScanTarget(s, pageId) {
   const scans = ftScanList(s), ia = ftIaFromPageId(s, pageId);
   if (ia) return ia;
@@ -6315,6 +6335,13 @@ function ftScanTarget(s, pageId) {
   }
   const first = scans[0];
   if (!first) return null;
+  const anchored = ftAnchorFor(scans, pageId);
+  if (anchored && (anchored.sc.pageAlign === "anchor" || first.pageAlign === "anchor")) {
+    const kind = anchored.sc.kind === "internetarchive" ? "internetarchive" : "hebrewbooks";
+    const book = String(anchored.sc.id);
+    const page = anchored.page;
+    return { kind, provider: kind === "internetarchive" ? "ארכיון האינטרנט" : "היברובוקס", book, page, align: "anchor", original: ftScanOriginalUrl(kind, book, page) };
+  }
   if (first.kind === "internetarchive") {
     return { kind: "internetarchive", provider: "ארכיון האינטרנט", book: String(first.id), page: 1, align: first.pageAlign || "series", original: ftScanOriginalUrl("internetarchive", first.id, 1) };
   }
@@ -6472,7 +6499,7 @@ function ftScanBind({ s, t, body, scanPane, layoutTools, stage, docLeaves, initi
     pageInput.value = page;
     original.href = target.original || ftScanOriginalUrl(kind, book, page);
     original.childNodes[0].textContent = ftScanOriginalLabel(kind);
-    notice.textContent = align === "exact" ? "הסריקה מיושרת לדף הנוכחי בטקסט." : "הסריקה שייכת לכרך, ולא בהכרח לדף המדויק של הטקסט.";
+    notice.textContent = align === "exact" ? "הסריקה מיושרת לדף הנוכחי בטקסט." : align === "anchor" ? "הסריקה קופצת לתחילת היחידה בטקסט." : "הסריקה שייכת לכרך, ולא בהכרח לדף המדויק של הטקסט.";
     return true;
   };
   applyTarget(initialPageId);
@@ -6558,7 +6585,7 @@ function ftScanBind({ s, t, body, scanPane, layoutTools, stage, docLeaves, initi
   document.addEventListener("keydown", onKey);
 
   observer = new IntersectionObserver(entries => {
-    if (syncing || !ctx.alive() || align !== "exact") return;
+    if (syncing || !ctx.alive() || !ftFollowsText(align)) return;
     const vis = entries.filter(en => en.isIntersecting).sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
     if (!vis) return;
     const id = Number(String(vis.target.id || "").replace(/^ft-/, ""));
@@ -6566,7 +6593,7 @@ function ftScanBind({ s, t, body, scanPane, layoutTools, stage, docLeaves, initi
     if (!hb || (hb.book === book && hb.page === page)) return;
     if (applyTarget(id) && mode !== "text") draw();
   }, { root: null, threshold: [0.35, 0.6] });
-  const watch = () => { if (align !== "exact") return; for (const el of body.querySelectorAll(".ft-page[id]")) observer.observe(el); };
+  const watch = () => { if (!ftFollowsText(align)) return; for (const el of body.querySelectorAll(".ft-page[id]")) observer.observe(el); };
   watch();
   const mo = new MutationObserver(watch);
   mo.observe(body, { childList: true, subtree: true });
@@ -6587,7 +6614,7 @@ function ftScanBind({ s, t, body, scanPane, layoutTools, stage, docLeaves, initi
   }, 500);
 
   setMode(mode, false);
-  return { refreshFromText(pageId) { if (syncing || align !== "exact") return; if (applyTarget(pageId) && mode !== "text") draw(); }, reveal: watch };
+  return { refreshFromText(pageId) { if (syncing || !ftFollowsText(align)) return; if (applyTarget(pageId) && mode !== "text") draw(); }, reveal: watch };
 }
 
 
