@@ -6,6 +6,7 @@ on:
       - 'app.js'
       - 'data/book-catalog.js'
       - 'tools/book-covers/check-local.cjs'
+      - 'tools/book-covers/audit.mjs'
       - '.github/workflows/book-snapshot-check.yml'
   workflow_dispatch:
 permissions:
