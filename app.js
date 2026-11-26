@@ -6246,10 +6246,41 @@ function ftScanList(s) {
   const list = [];
   const add = sc => {
     if (sc && sc.kind === "hebrewbooks" && /^\d{1,8}$/.test(String(sc.id || ""))) list.push(sc);
+    if (sc && sc.kind === "internetarchive" && /^[a-zA-Z][a-zA-Z0-9._-]{2,64}$/.test(String(sc.id || ""))) list.push(sc);
   };
   if (Array.isArray(s?.scans)) s.scans.forEach(add);
   else add(s?.scan);
   return list;
+}
+
+function ftScanOriginalUrl(kind, book, page) {
+  return kind === "internetarchive"
+    ? "https://archive.org/details/" + book + "/page/n" + (page - 1)
+    : "https://hebrewbooks.org/pdfpager.aspx?req=" + book + "&pgnum=" + page;
+}
+
+function ftScanOriginalLabel(kind) {
+  return kind === "internetarchive" ? "הדף בארכיון האינטרנט" : "הדף בהיברובוקס";
+}
+
+function ftIaFromPageId(s, pageId) {
+  if (!s || s.slug !== "sefer-hazichronot-yiddish") return null;
+  const id = Number(pageId), root = Number(s.root);
+  if (!Number.isSafeInteger(id) || !Number.isSafeInteger(root) || id < root) return null;
+  const volCode = Math.floor((id - root) / 100000), page = id % 10000;
+  if (volCode < 1 || page < 1) return null;
+  const sc = ftScanList(s).find(x => x.kind === "internetarchive" && Number(x.catalogVolume) === volCode - 1);
+  if (!sc) return null;
+  return { kind: "internetarchive", provider: "ארכיון האינטרנט", book: String(sc.id), page, align: "exact", original: ftScanOriginalUrl("internetarchive", sc.id, page) };
+}
+
+function ftPageIdFromIa(s, book, page) {
+  if (!s || s.slug !== "sefer-hazichronot-yiddish") return null;
+  const p = Number(page);
+  if (!Number.isSafeInteger(p) || p < 1 || p >= 10000) return null;
+  const sc = ftScanList(s).find(x => x.kind === "internetarchive" && String(x.id) === String(book));
+  if (!sc || !Number.isInteger(Number(sc.catalogVolume))) return null;
+  return s.root + (Number(sc.catalogVolume) + 1) * 100000 + p;
 }
 
 function ftHbFromPageId(pageId) {
@@ -6265,14 +6296,19 @@ function ftPageIdFromHb(book, page) {
 }
 
 function ftScanTarget(s, pageId) {
-  const scans = ftScanList(s), fromId = ftHbFromPageId(pageId);
+  const scans = ftScanList(s), ia = ftIaFromPageId(s, pageId);
+  if (ia) return ia;
+  const fromId = ftHbFromPageId(pageId);
   if (fromId) {
-    const known = scans.find(sc => String(sc.id) === fromId.book);
-    return { kind: "hebrewbooks", provider: "היברובוקס", book: fromId.book, page: fromId.page, align: known?.pageAlign || "exact", original: "https://hebrewbooks.org/pdfpager.aspx?req=" + fromId.book + "&pgnum=" + fromId.page };
+    const known = scans.find(sc => sc.kind === "hebrewbooks" && String(sc.id) === fromId.book);
+    return { kind: "hebrewbooks", provider: "היברובוקס", book: fromId.book, page: fromId.page, align: known?.pageAlign || "exact", original: ftScanOriginalUrl("hebrewbooks", fromId.book, fromId.page) };
   }
   const first = scans[0];
   if (!first) return null;
-  return { kind: "hebrewbooks", provider: "היברובוקס", book: String(first.id), page: 1, align: first.pageAlign || "series", original: "https://hebrewbooks.org/pdfpager.aspx?req=" + first.id + "&pgnum=1" };
+  if (first.kind === "internetarchive") {
+    return { kind: "internetarchive", provider: "ארכיון האינטרנט", book: String(first.id), page: 1, align: first.pageAlign || "series", original: ftScanOriginalUrl("internetarchive", first.id, 1) };
+  }
+  return { kind: "hebrewbooks", provider: "היברובוקס", book: String(first.id), page: 1, align: first.pageAlign || "series", original: ftScanOriginalUrl("hebrewbooks", first.id, 1) };
 }
 
 function ftScanPref(q) {
@@ -6293,13 +6329,14 @@ function ftScanZoomPref() {
   return "page-width";
 }
 
-function ftScanLocalProxy() {
+function ftScanLocalProxy(kind) {
+  const suffix = kind === "internetarchive" ? "/ia-page" : "/hb-page";
   const host = location.hostname;
-  if ((host === "127.0.0.1" || host === "localhost") && /^https?:$/.test(location.protocol)) return location.origin + "/hb-page";
+  if ((host === "127.0.0.1" || host === "localhost") && /^https?:$/.test(location.protocol)) return location.origin + suffix;
   const value = document.querySelector?.('meta[name="chavruta-scan-proxy"]')?.content;
   try {
     const u = new URL(value);
-    return !u.username && !u.password && !u.search && !u.hash && (u.protocol === "https:" || (u.protocol === "http:" && ["127.0.0.1", "localhost"].includes(u.hostname))) ? u.href.replace(/\/$/, "") : "";
+    return !u.username && !u.password && !u.search && !u.hash && (u.protocol === "https:" || (u.protocol === "http:" && ["127.0.0.1", "localhost"].includes(u.hostname))) ? u.href.replace(/\/$/, "") + suffix : "";
   } catch (_) { return ""; }
 }
 
@@ -6308,15 +6345,30 @@ function ftScanCache() {
   return ftScanCache.map;
 }
 
-async function ftScanFetch(book, page, signal) {
-  const key = book + "/" + page, cache = ftScanCache();
+function ftScanPayloadType(bytes) {
+  if (!bytes || bytes.length < 8 || bytes.length > 6 * 1024 * 1024) return null;
+  if (bytes[0] === 0x25 && bytes[1] === 0x50 && bytes[2] === 0x44 && bytes[3] === 0x46 && bytes[4] === 0x2d) return "pdf";
+  if (bytes[0] === 0xff && bytes[1] === 0xd8 && bytes[2] === 0xff) return "image";
+  if (bytes[0] === 0x89 && bytes[1] === 0x50 && bytes[2] === 0x4e && bytes[3] === 0x47) return "image";
+  return null;
+}
+
+async function ftScanFetch(book, page, signal, kind) {
+  kind = kind || "hebrewbooks";
+  const key = kind + "/" + book + "/" + page, cache = ftScanCache();
   if (cache.has(key)) return cache.get(key);
   const urls = [];
   const gw = typeof sourceGateway === "function" ? sourceGateway() : "";
-  if (gw) urls.push(gw + "/v1/hebrewbooks/" + key);
-  const proxy = ftScanLocalProxy();
-  if (proxy) urls.push(proxy + "/" + key);
-  urls.push("https://beta.hebrewbooks.org/pagefeed/hebrewbooks_org_" + book + "_" + page + ".pdf");
+  if (kind === "internetarchive") {
+    if (gw) urls.push(gw + "/v1/internetarchive/" + book + "/" + page);
+    const proxy = ftScanLocalProxy("internetarchive");
+    if (proxy) urls.push(proxy + "/" + book + "/" + page);
+  } else {
+    if (gw) urls.push(gw + "/v1/hebrewbooks/" + book + "/" + page);
+    const proxy = ftScanLocalProxy("hebrewbooks");
+    if (proxy) urls.push(proxy + "/" + book + "/" + page);
+    urls.push("https://beta.hebrewbooks.org/pagefeed/hebrewbooks_org_" + book + "_" + page + ".pdf");
+  }
   let last;
   for (const url of urls) {
     try {
@@ -6325,10 +6377,14 @@ async function ftScanFetch(book, page, signal) {
       if (response.status === 404) throw Object.assign(Error("not_found"), { notFound: true });
       if (!response.ok) throw Error("unavailable");
       const bytes = new Uint8Array(await response.arrayBuffer());
-      if (bytes.length > 6 * 1024 * 1024 || new TextDecoder().decode(bytes.slice(0, 5)) !== "%PDF-") throw Error("invalid PDF");
+      const type = ftScanPayloadType(bytes);
+      if (!type) throw Error("invalid scan");
+      if (kind === "internetarchive" && type !== "image") throw Error("invalid scan");
+      if (kind !== "internetarchive" && type !== "pdf") throw Error("invalid PDF");
+      const payload = { type, bytes };
       if (cache.size >= 8) cache.delete(cache.keys().next().value);
-      cache.set(key, bytes);
-      return bytes;
+      cache.set(key, payload);
+      return payload;
     } catch (error) {
       if (signal?.aborted) throw error;
       last = error;
@@ -6338,28 +6394,51 @@ async function ftScanFetch(book, page, signal) {
   throw last || Error("unavailable");
 }
 
-async function ftScanDraw(canvasHost, book, page, zoom, signal) {
-  const [lib, bytes] = await Promise.all([sourcePDFLibrary(), ftScanFetch(book, page, signal)]);
+function ftScanMakeCanvas(naturalWidth, naturalHeight, zoom, canvasHost, label) {
+  const width = Math.max(220, (canvasHost.clientWidth || 480) - 8);
+  const scale = zoom === "page-width" ? width / naturalWidth : Number(zoom) / 100;
+  const w = naturalWidth * scale, hgt = naturalHeight * scale;
+  const ratio = Math.min(devicePixelRatio || 1, 2, Math.sqrt(6000000 / Math.max(1, w * hgt)));
+  const canvas = h("canvas", { role: "img", "aria-label": label });
+  canvas.width = Math.ceil(w * ratio); canvas.height = Math.ceil(hgt * ratio);
+  canvas.style.width = Math.ceil(w) + "px"; canvas.style.height = Math.ceil(hgt) + "px";
+  return { canvas, ratio, width: w, height: hgt };
+}
+
+async function ftScanDraw(canvasHost, book, page, zoom, signal, kind) {
+  kind = kind || "hebrewbooks";
+  const payload = await ftScanFetch(book, page, signal, kind);
+  if (signal?.aborted) throw Error("scan canceled");
+  const label = kind === "internetarchive"
+    ? "צילום הספר המקורי מארכיון האינטרנט, דף " + page
+    : "צילום הספר המקורי מהיברובוקס, דף " + page;
+  if (payload.type === "image") {
+    const blob = new Blob([payload.bytes], { type: "image/jpeg" });
+    const bmp = await createImageBitmap(blob);
+    try {
+      if (signal?.aborted) throw Error("scan canceled");
+      const made = ftScanMakeCanvas(bmp.width, bmp.height, zoom, canvasHost, label);
+      made.canvas.getContext("2d").drawImage(bmp, 0, 0, made.canvas.width, made.canvas.height);
+      return made.canvas;
+    } finally { bmp.close?.(); }
+  }
+  const lib = await sourcePDFLibrary();
   if (signal?.aborted) throw Error("PDF scan canceled");
-  const loading = lib.getDocument(sourcePDFOptions(bytes.slice()));
+  const loading = lib.getDocument(sourcePDFOptions(payload.bytes.slice()));
   try {
     const pdf = await loading.promise;
     if (signal?.aborted) throw Error("PDF scan canceled");
     const pdfPage = await pdf.getPage(1);
     if (signal?.aborted) throw Error("PDF scan canceled");
     const natural = pdfPage.getViewport({ scale: 1 });
-    const width = Math.max(220, (canvasHost.clientWidth || 480) - 8);
-    const scale = zoom === "page-width" ? width / natural.width : Number(zoom) / 100;
-    const viewport = pdfPage.getViewport({ scale }), ratio = Math.min(devicePixelRatio || 1, 2, Math.sqrt(6000000 / (viewport.width * viewport.height)));
-    const canvas = h("canvas", { role: "img", "aria-label": "צילום הספר המקורי מהיברובוקס, דף " + page });
-    canvas.width = Math.ceil(viewport.width * ratio); canvas.height = Math.ceil(viewport.height * ratio);
-    canvas.style.width = Math.ceil(viewport.width) + "px"; canvas.style.height = Math.ceil(viewport.height) + "px";
-    const render = pdfPage.render({ canvas, canvasContext: canvas.getContext("2d"), viewport, transform: ratio === 1 ? null : [ratio, 0, 0, ratio, 0, 0] });
+    const made = ftScanMakeCanvas(natural.width, natural.height, zoom, canvasHost, label);
+    const viewport = pdfPage.getViewport({ scale: made.width / natural.width });
+    const render = pdfPage.render({ canvas: made.canvas, canvasContext: made.canvas.getContext("2d"), viewport, transform: made.ratio === 1 ? null : [made.ratio, 0, 0, made.ratio, 0, 0] });
     await render.promise;
     if (signal?.aborted) throw Error("PDF scan canceled");
     await sourcePDFValidateImages(lib, pdfPage, signal);
     if (signal?.aborted) throw Error("PDF scan canceled");
-    return canvas;
+    return made.canvas;
   } finally { loading.destroy().catch(() => {}); }
 }
 
@@ -6368,7 +6447,7 @@ function ftScanBind({ s, t, body, scanPane, layoutTools, stage, docLeaves, initi
   layoutTools.replaceChildren();
   if (!hasScan) { scanPane.hidden = true; scanPane.replaceChildren(); stage.className = "ft-stage is-text"; return null; }
 
-  let mode = ftScanPref(q), zoom = ftScanZoomPref(), book, page, align, seq = 0, controller, observer, syncing = false;
+  let mode = ftScanPref(q), zoom = ftScanZoomPref(), kind, book, page, align, seq = 0, controller, observer, syncing = false;
   const status = h("p", { class: "ft-scan-status", role: "status" });
   const view = h("div", { class: "ft-scan-view", tabindex: "0", "aria-label": "צילום הדף — אפשר לגלול ולהגדיל" });
   const pageInput = h("input", { type: "number", min: "1", max: "99999", class: "ft-scan-page", "aria-label": "מספר הדף בסריקה" });
@@ -6379,9 +6458,10 @@ function ftScanBind({ s, t, body, scanPane, layoutTools, stage, docLeaves, initi
   const applyTarget = pageId => {
     const target = ftScanTarget(s, pageId) || ftScanTarget(s, initialPageId);
     if (!target) return false;
-    book = target.book; page = target.page; align = target.align;
+    kind = target.kind; book = target.book; page = target.page; align = target.align;
     pageInput.value = page;
-    original.href = "https://hebrewbooks.org/pdfpager.aspx?req=" + book + "&pgnum=" + page;
+    original.href = target.original || ftScanOriginalUrl(kind, book, page);
+    original.childNodes[0].textContent = ftScanOriginalLabel(kind);
     notice.textContent = align === "exact" ? "הסריקה מיושרת לדף הנוכחי בטקסט." : "הסריקה שייכת לכרך, ולא בהכרח לדף המדויק של הטקסט.";
     return true;
   };
@@ -6408,10 +6488,10 @@ function ftScanBind({ s, t, body, scanPane, layoutTools, stage, docLeaves, initi
     const p = Number(nextPage);
     if (!Number.isSafeInteger(p) || p < 1 || p > 99999 || (p === page && view.querySelector("canvas") && seq)) return;
     page = p; pageInput.value = p;
-    original.href = "https://hebrewbooks.org/pdfpager.aspx?req=" + book + "&pgnum=" + page;
+    original.href = ftScanOriginalUrl(kind, book, page);
     if (mode !== "text") await draw();
     if (syncText && align === "exact" && typeof revealTextPage === "function") {
-      const id = ftPageIdFromHb(book, page);
+      const id = kind === "internetarchive" ? ftPageIdFromIa(s, book, page) : ftPageIdFromHb(book, page);
       if (id) { syncing = true; try { await revealTextPage(id); } finally { setTimeout(() => { syncing = false; }, 80); } }
     }
   };
@@ -6436,12 +6516,12 @@ function ftScanBind({ s, t, body, scanPane, layoutTools, stage, docLeaves, initi
     status.textContent = "טוען את צילום הדף…";
     view.replaceChildren();
     try {
-      const canvas = await ftScanDraw(view, book, page, zoom, controller.signal);
+      const canvas = await ftScanDraw(view, book, page, zoom, controller.signal, kind);
       if (my !== seq || !ctx.alive()) return;
       view.replaceChildren(canvas);
       status.textContent = "צילום הדף " + page;
-      const nxt = book + "/" + (page + 1);
-      if (!ftScanCache().has(nxt)) ftScanFetch(book, page + 1, controller.signal).catch(() => {});
+      const nxt = (kind || "hebrewbooks") + "/" + book + "/" + (page + 1);
+      if (!ftScanCache().has(nxt)) ftScanFetch(book, page + 1, controller.signal, kind).catch(() => {});
     } catch (error) {
       if (my !== seq || error.name === "AbortError" || /canceled/i.test(String(error.message || ""))) return;
       const wait = error.retrySeconds || 0;
