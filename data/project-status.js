@@ -1,6 +1,6 @@
 window.CHAVRUTA_PROJECT_STATUS = {
-  "generated": "2026-11-26T08:30+02:00",
-  "generated_label": "26.11.2026, 08:30 שעון ישראל",
+  "generated": "2026-11-26T15:40+02:00",
+  "generated_label": "26.11.2026, 15:40 שעון ישראל",
   "timezone": "Asia/Jerusalem",
   "coverage": {
     "rows": [
