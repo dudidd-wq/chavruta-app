@@ -1719,3 +1719,80 @@ body.source-reader-docked { overflow: auto; }
 @media (max-width: 640px) {
   .h-entries, .lib-soon-grid { grid-template-columns: 1fr; }
 }
+
+/* ---- קורא טיפוגרפיה: סריקה מובנית (בלי מציג ה-PDF של הדפדפן) ---- */
+.ft-layout-tools { display: inline-flex; flex-wrap: wrap; gap: 4px; }
+.ft-layout-tools .btn[aria-pressed="true"] {
+  border-color: var(--accent);
+  background: var(--accent-soft, color-mix(in srgb, var(--accent) 12%, var(--paper)));
+  color: var(--accent-2, var(--accent));
+  font-weight: 600;
+}
+.ft-layout-short { display: none; }
+.ft-stage { display: block; }
+.ft-stage.is-split {
+  display: flex;
+  flex-direction: row; /* במסמך RTL: הטקסט מימין, הסריקה משמאל */
+  align-items: flex-start;
+  gap: 1.25rem;
+}
+.ft-stage.is-split .ft-body {
+  flex: 1 1 0;
+  min-width: 0;
+  max-width: min(var(--reading-measure, 68ch), 100%);
+  margin: 0;
+}
+.ft-stage.is-scan .ft-body,
+.ft-stage.is-text .ft-scan { display: none; }
+.ft-scan {
+  display: none;
+  flex-direction: column;
+  min-width: 0;
+  background: var(--card, var(--paper));
+  border: 1px solid var(--rule);
+  border-radius: var(--r2, 10px);
+  overflow: hidden;
+}
+.ft-stage.is-split .ft-scan,
+.ft-stage.is-scan .ft-scan { display: flex; }
+.ft-stage.is-split .ft-scan {
+  flex: 1 1 0;
+  position: sticky;
+  top: calc(var(--top-h, 56px) + 8px);
+  max-height: calc(100dvh - var(--top-h, 56px) - var(--bn-h, 0px) - 16px);
+}
+.ft-stage.is-scan .ft-scan { min-height: min(80dvh, 900px); }
+.ft-scan-tools {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 10px;
+  border-bottom: 1px solid var(--rule);
+  background: var(--paper-2, var(--paper));
+}
+.ft-scan-jump { display: inline-flex; align-items: center; gap: 6px; }
+.ft-scan-page { width: 5.2rem; min-height: 36px; }
+.ft-scan-status, .ft-scan-notice, .ft-scan-credit {
+  margin: 0;
+  padding: 6px 12px;
+  font-size: .88rem;
+  color: var(--ink-3, var(--ink-2));
+}
+.ft-scan-credit { border-top: 1px solid var(--rule-2, var(--rule)); }
+.ft-scan-original { margin: 0 12px 12px; }
+.ft-scan-view {
+  overflow: auto;
+  flex: 1 1 auto;
+  min-height: 320px;
+  background: color-mix(in srgb, var(--ink) 18%, var(--paper-2, #2a241c));
+}
+.ft-scan-view canvas { display: block; margin: 0 auto; max-width: 100%; height: auto; background: #fff; }
+.ft-scan-empty { padding: 1.25rem; color: var(--ink-2); max-width: 36rem; }
+@media (max-width: 900px) {
+  .ft-layout-long { display: none; }
+  .ft-layout-short { display: inline; }
+  .ft-stage.is-split { flex-direction: column; }
+  .ft-stage.is-split .ft-body { max-width: var(--reading-measure, 68ch); margin: 0 auto; }
+  .ft-stage.is-split .ft-scan { position: static; max-height: none; width: 100%; min-height: 55dvh; }
+}
