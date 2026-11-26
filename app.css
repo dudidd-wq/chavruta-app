@@ -1573,6 +1573,10 @@ body.source-reader-docked { overflow: auto; }
 .ft-related-list { margin: 0; padding: 0 1.2em 0 0; }
 .ft-related-list li { margin: 0 0 .35em; }
 .ft-related a { color: var(--accent); }
+.ft-corr-h { margin: 1.1em 0 .35em; font: 600 1rem/1.4 var(--serif); color: var(--ink); }
+.ft-corr-item { line-height: 1.55; }
+.ft-corr-tag { display: inline-block; margin-inline-start: .45em; padding: 0 .4em; border-radius: 4px; font: 600 11px/1.6 var(--sans); background: color-mix(in srgb, var(--accent) 14%, transparent); color: var(--accent); vertical-align: middle; }
+.ft-corr-tag-hyp { background: color-mix(in srgb, var(--ink-2, #666) 12%, transparent); color: var(--ink-2, #555); font-weight: 500; }
 .ft-he-layer .ft-he-body { margin-top: 10px; }
 .ft-he-layer .ft-he-text { margin: 0 0 12px; font: var(--reading-weight, 400) var(--fs-body, 19px)/var(--lh, 1.85) var(--serif); color: var(--ink); text-align: justify; text-justify: inter-word; text-align-last: start; }
 .ft-he-layer .ft-he-text p { margin: 0 0 .85em; }

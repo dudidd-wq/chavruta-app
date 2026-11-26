@@ -134,7 +134,7 @@ function loadChunk(name) {
     if (name === "new") query.set("v", newsVersion + "-" + Math.floor(Date.now() / 300000));
     if (name === "core" || name === "tree" || name === "book-catalog" || /^tree-(?:u[0-9]+|t)$/.test(name)) query.set("v", document.querySelector('meta[name="chavruta-tree-version"]')?.content || "tree");
     if (name === "core" || name === "links" || name === "search" || name === "parsha" || name.startsWith("topics") || name.startsWith("b:")) query.set("v", document.querySelector('meta[name="chavruta-corpus-version"]')?.content || document.querySelector('meta[name="chavruta-tree-version"]')?.content || "corpus");
-    if (name === "cite-resolutions" || name.startsWith("cite-text-") || name === "kab-citers" || name === "kabbalah") query.set("v", document.querySelector('script[src^="app.js?v="]')?.getAttribute("src")?.split("?v=")[1] || "cite");
+    if (name === "cite-resolutions" || name.startsWith("cite-text-") || name === "kab-citers" || name === "kabbalah" || name === "corr-links") query.set("v", document.querySelector('script[src^="app.js?v="]')?.getAttribute("src")?.split("?v=")[1] || "cite");
     if (name.startsWith("text/")) query.set("v", typeof ftVersion === "function" ? ftVersion(name) : "text");
     if (attempt) query.set("retry", String(attempt));
     const assetBase = (document.querySelector('meta[name="chavruta-asset-base"]') || {}).content || "";
@@ -6850,6 +6850,32 @@ function ftKabTarget(r) {
   return { href: id ? mkHash(["read", slug, String(id)]) : mkHash(["read", slug]), packed: true, page: !!id };
 }
 
+function ftCorrHref(x) {
+  if (x && x.slug && x.nid) return mkHash(["read", x.slug, String(x.nid)]);
+  if (x && x.slug) return mkHash(["read", x.slug]);
+  return "";
+}
+
+function ftCorrItem(x, kind) {
+  const href = ftCorrHref(x);
+  const title = [x.heading, x.book].filter(Boolean).join(" · ") || "מקור";
+  const meta = [x.rebbe, x.year].filter(Boolean).join(" · ");
+  const item = h("li", { class: "ft-corr-item" });
+  if (href) item.append(h("a", { href }, title));
+  else item.append(h("span", null, title));
+  if (meta) item.append(h("small", { class: "muted" }, " · " + meta));
+  if (kind === "e5") item.append(h("span", { class: "ft-corr-tag ft-corr-tag-hyp", title: "קשר ענייני על פי דמיון הטקסט, לא אימות ידני" }, "השערה"));
+  else if (kind === "dh") item.append(h("span", { class: "ft-corr-tag" }, "אותו ד״ה"));
+  if (href && x.slug && !x.nid) item.append(h("small", { class: "muted" }, " · בספרייה"));
+  if (!href) item.append(h("small", { class: "muted" }, " · אין עמוד באתר"));
+  return item;
+}
+
+let CORR_LINKS = null;
+function loadCorrLinks() {
+  return CORR_LINKS ? Promise.resolve(CORR_LINKS) : loadChunk("corr-links").then(d => (CORR_LINKS = d || { byNid: {} })).catch(() => (CORR_LINKS = { byNid: {} }));
+}
+
 function ftRelated(t, target) {
   const id = t.n[target][0];
   const box = h("details", { class: "ft-related" }, h("summary", null, "מקורות וקשרים"));
@@ -6860,7 +6886,10 @@ function ftRelated(t, target) {
     box.dataset.loaded = "1";
     body.replaceChildren(h("p", { class: "muted" }, "טוען הפניות…"));
     try {
-      if (typeof loadKabCiters === "function") await loadKabCiters();
+      await Promise.all([
+        typeof loadKabCiters === "function" ? loadKabCiters() : Promise.resolve(),
+        loadCorrLinks(),
+      ]);
     } catch (e) { body.replaceChildren(h("p", { class: "muted" }, "לא ניתן לטעון את ההפניות כרגע.")); return; }
     const C = typeof KAB_CITERS === "object" && KAB_CITERS || { byCiting: {}, byUrl: {}, rebbeim: [] };
     const recs = [], seen = new Set();
@@ -6872,23 +6901,41 @@ function ftRelated(t, target) {
         seen.add(k); recs.push(r);
       }
     }
-    const intro = h("p", { class: "ft-related-note" }, "הפניות לקבלה שזוהו בטקסט של היחידה הזו. אם הספר כבר ארוז בספרייה, הקישור מוביל לעמוד הטיפוגרפיה (או לשורש הסדרה כשאין יישור מדויק של היחידה). אחרת — ", h("a", { href: mkHash(["tree", "k"]) }, "לעץ הקבלה"), ". קשרי ביאורים על פרשה מופיעים במצב ", h("a", { href: mkHash(["biurim"]) }, "״קשרים״ בביאורים"), ".");
-    if (!recs.length) {
-      body.replaceChildren(intro, h("p", { class: "muted" }, "לא נמצאו הפניות מקושרות ליחידה הזו בנתונים שיש בידינו."));
-      return;
+    const corr = (CORR_LINKS && CORR_LINKS.byNid && CORR_LINKS.byNid[String(id)]) || { same_dh: [], e5: [] };
+    const dh = (corr.same_dh || []).slice(0, 6);
+    const e5 = (corr.e5 || []).slice(0, 5);
+    const parts = [];
+    const intro = h("p", { class: "ft-related-note" }, "שלוש שכבות: מאמרים באותו ד״ה (מאומת לפי הכותרת), קשרים ענייניים כהשערה בלבד, והפניות לקבלה שבטקסט. אם הספר ארוז, הקישור מוביל לעמוד הטיפוגרפיה. אחרת — ", h("a", { href: mkHash(["tree", "k"]) }, "לעץ הקבלה"), ".");
+    parts.push(intro);
+    if (dh.length) {
+      const ul = h("ul", { class: "ft-related-list" });
+      for (const x of dh) ul.append(ftCorrItem(x, "dh"));
+      const head = corr.heading ? "עוד על ד״ה «" + corr.heading + "»" : "עוד על ד״ה זה";
+      parts.push(h("h3", { class: "ft-corr-h" }, head), ul);
     }
-    const ul = h("ul", { class: "ft-related-list" });
-    const shown = recs.slice(0, 24);
-    for (const r of shown) {
-      const label = [r.match || r.work, r.title].filter(Boolean).join(" · ");
-      const dest = ftKabTarget(r);
-      const item = h("li", null, h("a", { href: dest.href }, label || "מקור"));
-      if (!dest.packed) item.append(h("small", { class: "muted" }, " · בעץ הקבלה"));
-      else if (!dest.page) item.append(h("small", { class: "muted" }, " · בספרייה"));
-      ul.append(item);
+    if (e5.length) {
+      const ul = h("ul", { class: "ft-related-list" });
+      for (const x of e5) ul.append(ftCorrItem(x, "e5"));
+      parts.push(h("h3", { class: "ft-corr-h" }, "מאמרים קרובים"), h("p", { class: "ft-related-note" }, "השערה על פי דמיון הטקסט, לא התאמת כותרת ולא אימות ידני."), ul);
     }
-    if (recs.length > shown.length) ul.append(h("li", { class: "muted" }, "ועוד " + (recs.length - shown.length) + " הפניות"));
-    body.replaceChildren(intro, h("p", null, recs.length.toLocaleString("he") + " הפניות לקבלה ביחידה זו"), ul);
+    if (recs.length) {
+      const ul = h("ul", { class: "ft-related-list" });
+      const shown = recs.slice(0, 24);
+      for (const r of shown) {
+        const label = [r.match || r.work, r.title].filter(Boolean).join(" · ");
+        const dest = ftKabTarget(r);
+        const item = h("li", null, h("a", { href: dest.href }, label || "מקור"));
+        if (!dest.packed) item.append(h("small", { class: "muted" }, " · בעץ הקבלה"));
+        else if (!dest.page) item.append(h("small", { class: "muted" }, " · בספרייה"));
+        ul.append(item);
+      }
+      if (recs.length > shown.length) ul.append(h("li", { class: "muted" }, "ועוד " + (recs.length - shown.length) + " הפניות"));
+      parts.push(h("h3", { class: "ft-corr-h" }, "הפניות לקבלה"), h("p", null, recs.length.toLocaleString("he") + " הפניות לקבלה ביחידה זו"), ul);
+    }
+    if (!dh.length && !e5.length && !recs.length) {
+      parts.push(h("p", { class: "muted" }, "לא נמצאו הפניות או מאמרים מקבילים ליחידה הזו בנתונים שיש בידינו."));
+    }
+    body.replaceChildren(...parts);
   });
   return box;
 }
