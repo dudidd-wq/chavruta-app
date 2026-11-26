@@ -6714,6 +6714,52 @@ async function ftMafteiachLayer(s, t, d, toolsHost) {
 }
 
 
+/** ספרי קבלה שכבר ארוזים בטיפוגרפיה — קישור לעמוד הטקסט במקום לעץ. */
+const FT_KAB_SLUG = {
+  zohar: "zohar", tz: "tikkunei-zohar", zh: "zohar-chadash",
+  ec: "etz-chaim", pec: "pri-etz-chaim", pardes: "pardes-rimonim",
+  mm: "mikdash-melekh", ramaz: "ramaz-on-zohar", shelah: "shenei-luchot-haberit",
+  shaar_hakavanot: "shaar-hakavanot", shaar_hapesukim: "shaar-hapesukim",
+  shaar_hagilgulim: "shaar-hagilgulim", shaar_maamarei_rashbi: "shaar-maamarei-rashbi",
+  shaar_maamarei_razal: "shaar-maamarei-razal", shaar_ruach_hakodesh: "shaar-ruach-hakodesh",
+  yetzirah: "sefer-yetzirah", bahir: "sefer-habahir", reshit_chochmah: "reshit-chochmah",
+  shaarei_kedusha: "shaarei-kedusha", tomer_devorah: "tomer-devorah", or_neerav: "or-neerav"
+};
+
+function ftKabSlug(work) { return FT_KAB_SLUG[work] || ""; }
+
+function ftKabRoot(slug) {
+  const s = typeof FT === "object" && FT.idx && Array.isArray(FT.idx.series) ? FT.idx.series.find(x => x.slug === slug) : null;
+  return s && s.root ? s.root : 0;
+}
+
+/** מזהה עמוד טיפוגרפיה רק כשהסכימה של ku תואמת את אריזת הסדרה. אחרת null — ייפתח שורש הסדרה. */
+function ftKabPageId(work, ku) {
+  const slug = ftKabSlug(work);
+  const root = slug ? ftKabRoot(slug) : 0;
+  if (!root || !ku) return null;
+  const parts = String(ku).split(":");
+  const leaf = (vol, n) => (n >= 1 && n <= 2000) ? root + vol * 10000 + 1000 + n : null;
+  if ((work === "tz" || work === "bahir" || work === "shaar_hagilgulim") && parts.length === 2) {
+    const m = /^(\d+)([ab])?$/.exec(parts[1]);
+    return m ? leaf(1, Number(m[1])) : null;
+  }
+  if ((work === "ec" || work === "pardes") && parts.length === 3 && /^\d+$/.test(parts[1]) && /^\d+$/.test(parts[2])) {
+    return leaf(Number(parts[1]), Number(parts[2]));
+  }
+  if (work === "yetzirah" && parts.length >= 2 && /^\d+$/.test(parts[1])) {
+    return leaf(1, Number(parts[1]));
+  }
+  return null;
+}
+
+function ftKabTarget(r) {
+  const slug = ftKabSlug(r.work);
+  if (!slug) return { href: r.work ? mkHash(["tree", "k", "w", r.work]) : mkHash(["tree", "k"]), packed: false, page: false };
+  const id = ftKabPageId(r.work, r.ku);
+  return { href: id ? mkHash(["read", slug, String(id)]) : mkHash(["read", slug]), packed: true, page: !!id };
+}
+
 function ftRelated(t, target) {
   const id = t.n[target][0];
   const box = h("details", { class: "ft-related" }, h("summary", null, "מקורות וקשרים"));
@@ -6736,7 +6782,7 @@ function ftRelated(t, target) {
         seen.add(k); recs.push(r);
       }
     }
-    const intro = h("p", { class: "ft-related-note" }, "הפניות לקבלה שזוהו בטקסט של היחידה הזו. המפתח המלא — ", h("a", { href: mkHash(["tree", "k"]) }, "עץ הקבלה"), " (37,971 יחידות מפנות). קשרי ביאורים על פרשה מופיעים במצב ", h("a", { href: mkHash(["biurim"]) }, "״קשרים״ בביאורים"), ".");
+    const intro = h("p", { class: "ft-related-note" }, "הפניות לקבלה שזוהו בטקסט של היחידה הזו. אם הספר כבר ארוז בספרייה, הקישור מוביל לעמוד הטיפוגרפיה (או לשורש הסדרה כשאין יישור מדויק של היחידה). אחרת — ", h("a", { href: mkHash(["tree", "k"]) }, "לעץ הקבלה"), ". קשרי ביאורים על פרשה מופיעים במצב ", h("a", { href: mkHash(["biurim"]) }, "״קשרים״ בביאורים"), ".");
     if (!recs.length) {
       body.replaceChildren(intro, h("p", { class: "muted" }, "לא נמצאו הפניות מקושרות ליחידה הזו בנתונים שיש בידינו."));
       return;
@@ -6745,8 +6791,11 @@ function ftRelated(t, target) {
     const shown = recs.slice(0, 24);
     for (const r of shown) {
       const label = [r.match || r.work, r.title].filter(Boolean).join(" · ");
-      const href = r.work ? mkHash(["tree", "k", "w", r.work]) : mkHash(["tree", "k"]);
-      ul.append(h("li", null, h("a", { href }, label || "מקור")));
+      const dest = ftKabTarget(r);
+      const item = h("li", null, h("a", { href: dest.href }, label || "מקור"));
+      if (!dest.packed) item.append(h("small", { class: "muted" }, " · בעץ הקבלה"));
+      else if (!dest.page) item.append(h("small", { class: "muted" }, " · בספרייה"));
+      ul.append(item);
     }
     if (recs.length > shown.length) ul.append(h("li", { class: "muted" }, "ועוד " + (recs.length - shown.length) + " הפניות"));
     body.replaceChildren(intro, h("p", null, recs.length.toLocaleString("he") + " הפניות לקבלה ביחידה זו"), ul);
