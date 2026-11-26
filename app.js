@@ -6174,20 +6174,22 @@ function ftHome(main, q) {
   const ix = FT.idx, pages = ix.series.reduce((a, s) => a + s.pages, 0), nGen = new Set(ix.series.map(s => s.gen)).size;
   libraryIntro(main, "read", null,
     [[ix.series.length, "סדרות"], [pages, "עמודים"], [nGen, "דורות"]],
-    pageInfo("ספרי קה״ת כפי שהם בספריית חב״ד, מסודרים לפי דורות מהבעש״ט ועד הרבי. לשימוש לא מסחרי ובייחוס לקה״ת."));
+    pageInfo("ספרי קה״ת כפי שהם בספריית חב״ד, מסודרים לפי דורות מהבעש״ט ועד הרבי, ואחריהם ספרי חסידים וקבלה. לשימוש לא מסחרי ובייחוס לקה״ת."));
   const inp = h("input", { type: "search", class: "tree-q", placeholder: "סינון לפי שם ספר או רבי…", "aria-label": "סינון הספרייה", value: q.get("f") || "" });
   /* העיצוב המשולב: כל דור הוא שורה — שם הדור בעמודה הימנית (3), והספרים כרשימה טיפוגרפית בזרימה (9). אין רשת עם חורים. */
   const box = h("div", { class: "ft-shelf" });
   /* שם הדור נקבע מכל ספרי הדור, לפני הסינון — כך שהכותרת לא משתנה לפי תוצאות החיפוש */
   const genRebbes = new Map();
   for (const s of ix.series) { const a = genRebbes.get(s.gen) || genRebbes.set(s.gen, []).get(s.gen); if (!a.includes(s.rebbe)) a.push(s.rebbe); }
-  const genName = g => { const a = genRebbes.get(g) || []; return a.includes("הבעש״ט") && a.includes("המגיד ממעזריטש") ? "הבעש״ט והמגיד" : a[0] || ""; };
+  /* מדף "חסידים" (gen 9): ספרי חסידים גדולים — בא אחרי הרבי ולפני הקבלה; לכל ספר שם המחבר שלו */
+  const SHELF_NAME = { 9: "חסידים" }, shelfOrder = g => g === 9 ? 7.5 : g;
+  const genName = g => { if (SHELF_NAME[g]) return SHELF_NAME[g]; const a = genRebbes.get(g) || []; return a.includes("הבעש״ט") && a.includes("המגיד ממעזריטש") ? "הבעש״ט והמגיד" : a[0] || ""; };
   const draw = () => {
     const f = norm(inp.value || ""); box.textContent = "";
     const by = new Map();
     for (const s of ix.series) { if (f && !norm(s.title + " " + s.rebbe).includes(f)) continue; (by.get(s.gen) || by.set(s.gen, []).get(s.gen)).push(s); }
-    for (const [g, list] of [...by].sort((a, b) => a[0] - b[0])) {
-      const name = genName(g), lead = (genRebbes.get(g) || [])[0], sum = list.reduce((a, s) => a + s.pages, 0);
+    for (const [g, list] of [...by].sort((a, b) => shelfOrder(a[0]) - shelfOrder(b[0]))) {
+      const name = genName(g), lead = SHELF_NAME[g] ? null : (genRebbes.get(g) || [])[0], sum = list.reduce((a, s) => a + s.pages, 0);
       box.append(h("section", { class: "ft-gen", style: "--gc:" + gcol(g), "aria-label": name },
         h("header", { class: "ft-gen-h" }, h("h2", null, h("i", { class: "dot", "aria-hidden": "true" }), name),
           h("p", null, (list.length === 1 ? "ספר אחד" : list.length + " ספרים") + " · " + sum.toLocaleString("he") + " עמ׳")),
