@@ -6864,8 +6864,7 @@ function ftCorrItem(x, kind) {
   if (href) item.append(h("a", { href }, title));
   else item.append(h("span", null, title));
   if (meta) item.append(h("small", { class: "muted" }, " · " + meta));
-  if (kind === "e5") item.append(h("span", { class: "ft-corr-tag ft-corr-tag-hyp", title: "קשר ענייני על פי דמיון הטקסט, לא אימות ידני" }, "השערה"));
-  else if (kind === "dh") item.append(h("span", { class: "ft-corr-tag" }, "אותו ד״ה"));
+  if (kind === "dh") item.append(h("span", { class: "ft-corr-tag" }, "אותו ד״ה"));
   if (href && x.slug && !x.nid) item.append(h("small", { class: "muted" }, " · בספרייה"));
   if (!href) item.append(h("small", { class: "muted" }, " · אין עמוד באתר"));
   return item;
@@ -6901,22 +6900,16 @@ function ftRelated(t, target) {
         seen.add(k); recs.push(r);
       }
     }
-    const corr = (CORR_LINKS && CORR_LINKS.byNid && CORR_LINKS.byNid[String(id)]) || { same_dh: [], e5: [] };
+    const corr = (CORR_LINKS && CORR_LINKS.byNid && CORR_LINKS.byNid[String(id)]) || { same_dh: [] };
     const dh = (corr.same_dh || []).slice(0, 6);
-    const e5 = (corr.e5 || []).slice(0, 5);
     const parts = [];
-    const intro = h("p", { class: "ft-related-note" }, "שלוש שכבות: מאמרים באותו ד״ה (מאומת לפי הכותרת), קשרים ענייניים כהשערה בלבד, והפניות לקבלה שבטקסט. אם הספר ארוז, הקישור מוביל לעמוד הטיפוגרפיה. אחרת — ", h("a", { href: mkHash(["tree", "k"]) }, "לעץ הקבלה"), ".");
+    const intro = h("p", { class: "ft-related-note" }, "מאמרים באותו ד״ה, מאומתים לפי הכותרת, והפניות לקבלה שבטקסט. אם הספר ארוז, הקישור מוביל לעמוד הטיפוגרפיה. אחרת — ", h("a", { href: mkHash(["tree", "k"]) }, "לעץ הקבלה"), ".");
     parts.push(intro);
     if (dh.length) {
       const ul = h("ul", { class: "ft-related-list" });
       for (const x of dh) ul.append(ftCorrItem(x, "dh"));
       const head = corr.heading ? "עוד על ד״ה «" + corr.heading + "»" : "עוד על ד״ה זה";
       parts.push(h("h3", { class: "ft-corr-h" }, head), ul);
-    }
-    if (e5.length) {
-      const ul = h("ul", { class: "ft-related-list" });
-      for (const x of e5) ul.append(ftCorrItem(x, "e5"));
-      parts.push(h("h3", { class: "ft-corr-h" }, "מאמרים קרובים"), h("p", { class: "ft-related-note" }, "השערה על פי דמיון הטקסט, לא התאמת כותרת ולא אימות ידני."), ul);
     }
     if (recs.length) {
       const ul = h("ul", { class: "ft-related-list" });
@@ -6932,7 +6925,7 @@ function ftRelated(t, target) {
       if (recs.length > shown.length) ul.append(h("li", { class: "muted" }, "ועוד " + (recs.length - shown.length) + " הפניות"));
       parts.push(h("h3", { class: "ft-corr-h" }, "הפניות לקבלה"), h("p", null, recs.length.toLocaleString("he") + " הפניות לקבלה ביחידה זו"), ul);
     }
-    if (!dh.length && !e5.length && !recs.length) {
+    if (!dh.length && !recs.length) {
       parts.push(h("p", { class: "muted" }, "לא נמצאו הפניות או מאמרים מקבילים ליחידה הזו בנתונים שיש בידינו."));
     }
     body.replaceChildren(...parts);
