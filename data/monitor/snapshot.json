@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-25T14:20:12+00:00",
+ "generated_at": "2026-11-26T13:11:47+00:00",
  "sources": [
   {
    "id": "chabadlibrary",
@@ -12,7 +12,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-11-25T14:18:58+00:00",
+   "checked_at": "2026-11-26T13:10:39+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -30,7 +30,7 @@
     "primary",
     "whatsnew"
    ],
-   "checked_at": "2026-11-25T14:18:58+00:00",
+   "checked_at": "2026-11-26T13:10:39+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -47,7 +47,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-11-25T14:18:58+00:00",
+   "checked_at": "2026-11-26T13:10:39+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -64,7 +64,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-11-25T14:18:58+00:00",
+   "checked_at": "2026-11-26T13:10:39+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -82,7 +82,7 @@
     "primary",
     "whatsnew"
    ],
-   "checked_at": "2026-11-25T14:18:58+00:00",
+   "checked_at": "2026-11-26T13:10:39+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -102,7 +102,7 @@
     }
    ],
    "total": 132,
-   "last_success_at": "2026-11-25T14:18:58+00:00"
+   "last_success_at": "2026-11-26T13:10:39+00:00"
   },
   {
    "id": "chabadlibrarybooks",
@@ -115,7 +115,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-11-25T14:18:58+00:00",
+   "checked_at": "2026-11-26T13:10:40+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -133,12 +133,12 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-25T14:18:58+00:00",
+   "checked_at": "2026-11-26T13:10:40+00:00",
    "status": "ok",
    "new": [],
    "latest": [],
    "total": 1501,
-   "last_success_at": "2026-11-25T14:18:58+00:00"
+   "last_success_at": "2026-11-26T13:10:40+00:00"
   },
   {
    "id": "chassidut_org",
@@ -152,12 +152,12 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-25T14:19:00+00:00",
+   "checked_at": "2026-11-26T13:10:41+00:00",
    "status": "ok",
    "new": [],
    "latest": [],
    "total": 4,
-   "last_success_at": "2026-11-25T14:19:00+00:00"
+   "last_success_at": "2026-11-26T13:10:41+00:00"
   },
   {
    "id": "biurim",
@@ -171,7 +171,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-25T14:19:01+00:00",
+   "checked_at": "2026-11-26T13:10:42+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -225,7 +225,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-25T14:19:01+00:00"
+   "last_success_at": "2026-11-26T13:10:42+00:00"
   },
   {
    "id": "hm_monsey",
@@ -239,7 +239,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-25T14:19:03+00:00",
+   "checked_at": "2026-11-26T13:10:44+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -247,8 +247,16 @@
      "id": "https://heichalmenachemmonsey.org/?p=7899",
      "title": "לעבן מיט די פרשה על פי חסידות – הרב אשר פרקש (מתעדכן)",
      "url": "https://heichalmenachemmonsey.org/reb_osher_forkosh_weekly/",
-     "date": "Wed, 18 Nov 2026 18:00:35 +0000",
-     "blurb": "וישכם לבן בבוקר: ווער איז לבן און וואס זענען צאן לבן (פרשת ויצא תשפ”ז) מקורות: ד”ה וישכם לבן בבוקר בתורה אור, ובתורת חיים; ד”ה פדה בשלום תשל”ז ויזרע יצחק: פארזייען צדקה (פרשת תולדות תשפ”ז)...",
+     "date": "Tue, 24 Nov 2026 18:00:35 +0000",
+     "blurb": "ויאבק איש עמו: די ערשטע תורה פון דעם אלטן רבין נאך פעטערבורג (פרשת וישלח – י”ט כסלו תשפ”ז) מקורות: שיחת י”ט כסלו תרצ”ג; ד”ה כמים הפנים תרל”ט; שיחת שבת וישב תשכ”א וישכם לבן בבוקר:...",
+     "first_seen": "2026-10-18T04:51:34+00:00"
+    },
+    {
+     "id": "https://heichalmenachemmonsey.org/?p=9269",
+     "title": "המשך בשעה שהקדימו תער”ב חלק ג [מאמרים נז-צג] – הרב לימא וילהעלם (מתעדכן)",
+     "url": "https://heichalmenachemmonsey.org/ayen_beis_vol_3_shiurim/",
+     "date": "Tue, 24 Nov 2026 04:30:37 +0000",
+     "blurb": "כל יום שני 9:45-10:45 בערב להמשך תער”ב חלק ראשון לחצו כאן להמשך תער”ב חלק שני לחצו כאן להורדת השיעורים בפורמט MP3 לחצו כאן להורדת חוברת המאמרים: “ראה אנכי”, “שופטים ושוטרים”, “כי תצא” לחצו כאן...",
      "first_seen": "2026-10-18T04:51:34+00:00"
     },
     {
@@ -257,14 +265,6 @@
      "url": "https://heichalmenachemmonsey.org/derech_mitzvosech_klyne/",
      "date": "Tue, 17 Nov 2026 13:30:57 +0000",
      "blurb": "סדרת שיעורים שנמסרו למשתתפי רשת כוללי בוקר ללימוד החסידות, בבית מדרש “בית מנחם” – בארא-פארק, בבית מדרש “היכל מנחם” – מאנסי, בבית מדרש “היכל החסידות” – לייקוואוד, בבית מדרש “היכל החסידות” – אוק-ענד-וויין (לייקוואוד),...",
-     "first_seen": "2026-10-18T04:51:34+00:00"
-    },
-    {
-     "id": "https://heichalmenachemmonsey.org/?p=9269",
-     "title": "המשך בשעה שהקדימו תער”ב חלק ג [מאמרים נז-צג] – הרב לימא וילהעלם (מתעדכן)",
-     "url": "https://heichalmenachemmonsey.org/ayen_beis_vol_3_shiurim/",
-     "date": "Tue, 17 Nov 2026 04:30:37 +0000",
-     "blurb": "כל יום שני 9:45-10:45 בערב להמשך תער”ב חלק ראשון לחצו כאן להמשך תער”ב חלק שני לחצו כאן להורדת השיעורים בפורמט MP3 לחצו כאן להורדת חוברת המאמרים: “ראה אנכי”, “שופטים ושוטרים”, “כי תצא” לחצו כאן...",
      "first_seen": "2026-10-18T04:51:34+00:00"
     },
     {
@@ -333,7 +333,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-25T14:19:03+00:00"
+   "last_success_at": "2026-11-26T13:10:44+00:00"
   },
   {
    "id": "hiskashrus",
@@ -347,7 +347,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-25T14:19:05+00:00",
+   "checked_at": "2026-11-26T13:10:46+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -380,18 +380,18 @@
      "first_seen": "2026-10-29T06:06:38+00:00"
     },
     {
-     "id": "38132",
-     "title": "Vayeira · 5787 · גיליון שבועי לאנ\"ש חסידי חב\"ד לחיזוק ההתקשרות לכ\"ק אדמו\"ר",
-     "url": "https://torahprint.nyc3.cdn.digitaloceanspaces.com/pdfFiles/1793199135955_6gmi1_.pdf",
-     "date": "2026-10-30T00:00:00.000Z",
-     "first_seen": "2026-10-29T06:06:38+00:00"
-    },
-    {
      "id": "37659",
      "title": "Lech-Lecha · 5787 · קונטרס שבועי לאנ\"ש חסידי חב\"ד לחיזוק ההתקשרות לכ\"ק אדמו\"ר",
      "url": "https://torahprint.nyc3.cdn.digitaloceanspaces.com/pdfFiles/1792588384099_1xivd_.pdf",
      "date": "2026-10-23T00:00:00.000Z",
      "first_seen": "2026-10-22T05:09:31+00:00"
+    },
+    {
+     "id": "38132",
+     "title": "Vayeira · 5787 · גיליון שבועי לאנ\"ש חסידי חב\"ד לחיזוק ההתקשרות לכ\"ק אדמו\"ר",
+     "url": "https://torahprint.nyc3.cdn.digitaloceanspaces.com/pdfFiles/1793199135955_6gmi1_.pdf",
+     "date": "2026-10-30T00:00:00.000Z",
+     "first_seen": "2026-10-29T06:06:38+00:00"
     },
     {
      "id": "37188",
@@ -430,7 +430,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-25T14:19:05+00:00"
+   "last_success_at": "2026-11-26T13:10:46+00:00"
   },
   {
    "id": "lichyot_chassidus",
@@ -444,13 +444,46 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-25T14:19:06+00:00",
+   "checked_at": "2026-11-26T13:10:47+00:00",
    "status": "ok",
-   "new": [],
+   "new": [
+    {
+     "id": "bfb7b663-2b1c-49f9-89e8-9ad23f69c98d",
+     "title": "מאמר ד\"ה קטונתי תשי\"ז (סיכום) - מאמר ב",
+     "url": "https://rabbi_osher_farkash_maamarim.captivate.fm",
+     "date": "Wed, 25 Nov 2026 04:00:00 -0500",
+     "blurb": "ביאור מאמר חז״ל כל מי שנעשה לו נס מנכין לו מזכויותיו",
+     "first_seen": "2026-11-26T13:10:47+00:00"
+    },
+    {
+     "id": "cb492c54-3008-491f-b3a8-45c709d07cc5",
+     "title": "מאמר ד\"ה וכל העם רואים תרס\"ה - חלק י\"ד",
+     "url": "https://rabbi_osher_farkash_maamarim.captivate.fm",
+     "date": "Wed, 25 Nov 2026 04:00:00 -0500",
+     "blurb": "כח הרצון ואופן המשכתו מהנפש",
+     "first_seen": "2026-11-26T13:10:47+00:00"
+    }
+   ],
    "latest": [
     {
+     "id": "bfb7b663-2b1c-49f9-89e8-9ad23f69c98d",
+     "title": "מאמר ד\"ה קטונתי תשי\"ז (סיכום) - מאמר ב",
+     "url": "https://rabbi_osher_farkash_maamarim.captivate.fm",
+     "date": "Wed, 25 Nov 2026 04:00:00 -0500",
+     "blurb": "ביאור מאמר חז״ל כל מי שנעשה לו נס מנכין לו מזכויותיו",
+     "first_seen": "2026-11-26T13:10:47+00:00"
+    },
+    {
+     "id": "cb492c54-3008-491f-b3a8-45c709d07cc5",
+     "title": "מאמר ד\"ה וכל העם רואים תרס\"ה - חלק י\"ד",
+     "url": "https://rabbi_osher_farkash_maamarim.captivate.fm",
+     "date": "Wed, 25 Nov 2026 04:00:00 -0500",
+     "blurb": "כח הרצון ואופן המשכתו מהנפש",
+     "first_seen": "2026-11-26T13:10:47+00:00"
+    },
+    {
      "id": "cdd82d3a-fa83-41e7-9af9-b8fd9b95089c",
-     "title": "מאמר ד\"ה קטונתי תשי\"ז (סיכום) - חלק א",
+     "title": "מאמר ד\"ה קטונתי תשי\"ז (סיכום) - מאמר א",
      "url": "https://rabbi_osher_farkash_maamarim.captivate.fm",
      "date": "Mon, 23 Nov 2026 04:00:00 -0500",
      "blurb": "הצמצום מכריח את הגילוי, ענין העכבה בנפש ובאלוקות",
@@ -634,7 +667,7 @@
     }
    ],
    "total": 1000,
-   "last_success_at": "2026-11-25T14:19:06+00:00"
+   "last_success_at": "2026-11-26T13:10:47+00:00"
   },
   {
    "id": "chabadzoom",
@@ -648,10 +681,53 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-25T14:19:08+00:00",
+   "checked_at": "2026-11-26T13:10:49+00:00",
    "status": "ok",
-   "new": [],
+   "new": [
+    {
+     "id": "content:c243a2a4fbda11fe",
+     "title": "עדכון בתוכן הדף",
+     "url": "https://chabadzoom.co.il/series",
+     "date": "",
+     "first_seen": "2026-11-26T13:10:49+00:00"
+    },
+    {
+     "id": "https://chabadzoom.co.il/talk?_speaker=241",
+     "title": "הרב בני מרקוביץ",
+     "url": "https://chabadzoom.co.il/talk?_speaker=241",
+     "date": "",
+     "first_seen": "2026-11-26T13:10:49+00:00"
+    },
+    {
+     "id": "https://chabadzoom.co.il/serie/%d7%90%d7%b3%d7%9e%d7%a2%d7%a9%d7%94-%d7%a1%d7%99%d7%a4%d7%95%d7%a8%d7%99%d7%9d-%d7%97%d7%a1%d7%99%d7%93%d7%99%d7%99%d7%9d-%d7%9c%d7%99%d7%9c%d7%93%d7%99%d7%9d",
+     "title": "א'מעשה | סיפורים חסידיים לילדים",
+     "url": "https://chabadzoom.co.il/serie/%d7%90%d7%b3%d7%9e%d7%a2%d7%a9%d7%94-%d7%a1%d7%99%d7%a4%d7%95%d7%a8%d7%99%d7%9d-%d7%97%d7%a1%d7%99%d7%93%d7%99%d7%99%d7%9d-%d7%9c%d7%99%d7%9c%d7%93%d7%99%d7%9d",
+     "date": "",
+     "first_seen": "2026-11-26T13:10:49+00:00"
+    }
+   ],
    "latest": [
+    {
+     "id": "content:c243a2a4fbda11fe",
+     "title": "עדכון בתוכן הדף",
+     "url": "https://chabadzoom.co.il/series",
+     "date": "",
+     "first_seen": "2026-11-26T13:10:49+00:00"
+    },
+    {
+     "id": "https://chabadzoom.co.il/talk?_speaker=241",
+     "title": "הרב בני מרקוביץ",
+     "url": "https://chabadzoom.co.il/talk?_speaker=241",
+     "date": "",
+     "first_seen": "2026-11-26T13:10:49+00:00"
+    },
+    {
+     "id": "https://chabadzoom.co.il/serie/%d7%90%d7%b3%d7%9e%d7%a2%d7%a9%d7%94-%d7%a1%d7%99%d7%a4%d7%95%d7%a8%d7%99%d7%9d-%d7%97%d7%a1%d7%99%d7%93%d7%99%d7%99%d7%9d-%d7%9c%d7%99%d7%9c%d7%93%d7%99%d7%9d",
+     "title": "א'מעשה | סיפורים חסידיים לילדים",
+     "url": "https://chabadzoom.co.il/serie/%d7%90%d7%b3%d7%9e%d7%a2%d7%a9%d7%94-%d7%a1%d7%99%d7%a4%d7%95%d7%a8%d7%99%d7%9d-%d7%97%d7%a1%d7%99%d7%93%d7%99%d7%99%d7%9d-%d7%9c%d7%99%d7%9c%d7%93%d7%99%d7%9d",
+     "date": "",
+     "first_seen": "2026-11-26T13:10:49+00:00"
+    },
     {
      "id": "content:c5e9e3299e4ed2b9",
      "title": "עדכון בתוכן הדף",
@@ -821,8 +897,8 @@
      "first_seen": "2026-10-18T04:51:41+00:00"
     }
    ],
-   "total": 566,
-   "last_success_at": "2026-11-25T14:19:08+00:00"
+   "total": 568,
+   "last_success_at": "2026-11-26T13:10:49+00:00"
   },
   {
    "id": "kovtzimdrive",
@@ -836,7 +912,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-25T14:19:11+00:00",
+   "checked_at": "2026-11-26T13:10:51+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -849,7 +925,7 @@
     }
    ],
    "total": 1,
-   "last_success_at": "2026-11-25T14:19:11+00:00"
+   "last_success_at": "2026-11-26T13:10:51+00:00"
   },
   {
    "id": "avita",
@@ -863,7 +939,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-25T14:19:13+00:00",
+   "checked_at": "2026-11-26T13:10:53+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -881,7 +957,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-25T14:19:13+00:00",
+   "checked_at": "2026-11-26T13:10:53+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -903,7 +979,7 @@
     }
    ],
    "total": 2,
-   "last_success_at": "2026-11-25T14:19:13+00:00"
+   "last_success_at": "2026-11-26T13:10:53+00:00"
   },
   {
    "id": "dvarmalchus770",
@@ -917,7 +993,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-25T14:19:15+00:00",
+   "checked_at": "2026-11-26T13:10:55+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1083,7 +1159,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-25T14:19:15+00:00"
+   "last_success_at": "2026-11-26T13:10:55+00:00"
   },
   {
    "id": "soulwords",
@@ -1097,7 +1173,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-25T14:19:16+00:00",
+   "checked_at": "2026-11-26T13:10:56+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1167,7 +1243,7 @@
     }
    ],
    "total": 0,
-   "last_success_at": "2026-11-25T14:19:16+00:00"
+   "last_success_at": "2026-11-26T13:10:56+00:00"
   },
   {
    "id": "sie_weekly",
@@ -1181,7 +1257,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-25T14:19:17+00:00",
+   "checked_at": "2026-11-26T13:10:57+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1271,7 +1347,7 @@
     }
    ],
    "total": 120,
-   "last_success_at": "2026-11-25T14:19:17+00:00"
+   "last_success_at": "2026-11-26T13:10:57+00:00"
   },
   {
    "id": "pls",
@@ -1285,7 +1361,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-25T14:19:19+00:00",
+   "checked_at": "2026-11-26T13:10:58+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1467,7 +1543,7 @@
     }
    ],
    "total": 200,
-   "last_success_at": "2026-11-25T14:19:19+00:00"
+   "last_success_at": "2026-11-26T13:10:58+00:00"
   },
   {
    "id": "chayenu_ls",
@@ -1481,7 +1557,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-25T14:19:20+00:00",
+   "checked_at": "2026-11-26T13:10:59+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1514,8 +1590,8 @@
      "first_seen": "2026-10-18T04:51:52+00:00"
     }
    ],
-   "total": 2,
-   "last_success_at": "2026-11-25T14:19:20+00:00"
+   "total": 1,
+   "last_success_at": "2026-11-26T13:10:59+00:00"
   },
   {
    "id": "weekly_sicha",
@@ -1529,16 +1605,31 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-25T14:19:21+00:00",
+   "checked_at": "2026-11-26T13:10:59+00:00",
    "status": "ok",
-   "new": [],
+   "new": [
+    {
+     "id": "https://theweeklysicha.org/episode/tws-vayishlach-87",
+     "title": "tws vayishlach 87",
+     "url": "https://theweeklysicha.org/episode/tws-vayishlach-87",
+     "date": "2026-11-26T13:00:06.400Z",
+     "first_seen": "2026-11-26T13:10:59+00:00"
+    }
+   ],
    "latest": [
     {
      "id": "https://theweeklysicha.org/episode/tws-vayeitzei-87",
      "title": "tws vayeitzei 87",
      "url": "https://theweeklysicha.org/episode/tws-vayeitzei-87",
-     "date": "2026-11-24T22:00:24.956Z",
+     "date": "2026-11-26T13:00:40.346Z",
      "first_seen": "2026-11-20T12:52:04+00:00"
+    },
+    {
+     "id": "https://theweeklysicha.org/episode/tws-vayishlach-87",
+     "title": "tws vayishlach 87",
+     "url": "https://theweeklysicha.org/episode/tws-vayishlach-87",
+     "date": "2026-11-26T13:00:06.400Z",
+     "first_seen": "2026-11-26T13:10:59+00:00"
     },
     {
      "id": "https://theweeklysicha.org/episode/tws-toldos-87",
@@ -1604,8 +1695,8 @@
      "first_seen": "2026-10-18T04:51:53+00:00"
     }
    ],
-   "total": 121,
-   "last_success_at": "2026-11-25T14:19:21+00:00"
+   "total": 122,
+   "last_success_at": "2026-11-26T13:10:59+00:00"
   },
   {
    "id": "theyeshiva",
@@ -1619,10 +1710,27 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-25T14:19:22+00:00",
+   "checked_at": "2026-11-26T13:11:00+00:00",
    "status": "ok",
-   "new": [],
+   "new": [
+    {
+     "id": "https://www.theyeshiva.net/item/10038",
+     "title": "What Did You Really See on Ayahuasca? - Wednesday: Maamar Yafeh Sha'ah Achas #9",
+     "url": "https://www.theyeshiva.net/item/10038",
+     "date": "Wed, 25 Nov 2026 08:00:00 -0500",
+     "blurb": "What Does It Feel Like to Burn in Hell? Can I Trust the G-d Who Created It? Can I Trust the G-d Who Created Hell? Are There Really Fires in Hell? How can we heal our trauma around paradise and purgatory? For many of us, the words Gan Eden and Gehenna evoke a terrifying picture of God and the afterlife. Even when we question that picture intellectually, our bodies may still brace for punishment every time we make a mistake. This class returns to the very language that frightened us, including the Talmud’s teaching that earthly fire is one-sixtieth of the fire of Gehenom. Through the Mitteler Rebbe’s maamar, we explore purgatory as the experience of having our own lives reflected back to us with a clarity we can't always perceive in this world. There is the pain of losing a mask we mistook for our skin. And there is the deeper grief of discovering how much of our passion went into securing a feeling of love or validation at the cost of our own truth. Why can an affair feel so alive to a person who has felt invisible for years? What happens when that same person can finally feel both the warmth they craved and what they sacrificed to get it? When we discover how we betrayed our own souls, we feel compelled to purge. The pain is profound, and it is followed by paradise and redemption. The class traces this painful awakening back to the first question Hashem asks Adam after he eats from the Tree of Knowledge: Ayekah? Where are you? Adam can tell Hashem why he is hiding. He has los",
+     "first_seen": "2026-11-26T13:11:00+00:00"
+    }
+   ],
    "latest": [
+    {
+     "id": "https://www.theyeshiva.net/item/10038",
+     "title": "What Did You Really See on Ayahuasca? - Wednesday: Maamar Yafeh Sha'ah Achas #9",
+     "url": "https://www.theyeshiva.net/item/10038",
+     "date": "Wed, 25 Nov 2026 08:00:00 -0500",
+     "blurb": "What Does It Feel Like to Burn in Hell? Can I Trust the G-d Who Created It? Can I Trust the G-d Who Created Hell? Are There Really Fires in Hell? How can we heal our trauma around paradise and purgatory? For many of us, the words Gan Eden and Gehenna evoke a terrifying picture of God and the afterlife. Even when we question that picture intellectually, our bodies may still brace for punishment every time we make a mistake. This class returns to the very language that frightened us, including the Talmud’s teaching that earthly fire is one-sixtieth of the fire of Gehenom. Through the Mitteler Rebbe’s maamar, we explore purgatory as the experience of having our own lives reflected back to us with a clarity we can't always perceive in this world. There is the pain of losing a mask we mistook for our skin. And there is the deeper grief of discovering how much of our passion went into securing a feeling of love or validation at the cost of our own truth. Why can an affair feel so alive to a person who has felt invisible for years? What happens when that same person can finally feel both the warmth they craved and what they sacrificed to get it? When we discover how we betrayed our own souls, we feel compelled to purge. The pain is profound, and it is followed by paradise and redemption. The class traces this painful awakening back to the first question Hashem asks Adam after he eats from the Tree of Knowledge: Ayekah? Where are you? Adam can tell Hashem why he is hiding. He has los",
+     "first_seen": "2026-11-26T13:11:00+00:00"
+    },
     {
      "id": "https://www.theyeshiva.net/item/10037",
      "title": "Women's Vayishlach Class - Are You Living on Your Own Energy or Borrowing Someone Else’s?",
@@ -1824,8 +1932,8 @@
      "first_seen": "2026-10-20T07:59:51+00:00"
     }
    ],
-   "total": 1560,
-   "last_success_at": "2026-11-25T14:19:22+00:00"
+   "total": 1561,
+   "last_success_at": "2026-11-26T13:11:00+00:00"
   },
   {
    "id": "chassidus_applied",
@@ -1839,10 +1947,27 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-25T14:19:25+00:00",
+   "checked_at": "2026-11-26T13:11:03+00:00",
    "status": "ok",
-   "new": [],
+   "new": [
+    {
+     "id": "yt:video:YZXbgKRs7JY",
+     "title": "Samach Vav",
+     "url": "https://www.youtube.com/watch?v=YZXbgKRs7JY",
+     "date": "2026-11-26T03:59:31+00:00",
+     "blurb": "",
+     "first_seen": "2026-11-26T13:11:03+00:00"
+    }
+   ],
    "latest": [
+    {
+     "id": "yt:video:YZXbgKRs7JY",
+     "title": "Samach Vav",
+     "url": "https://www.youtube.com/watch?v=YZXbgKRs7JY",
+     "date": "2026-11-26T03:59:31+00:00",
+     "blurb": "",
+     "first_seen": "2026-11-26T13:11:03+00:00"
+    },
     {
      "id": "yt:video:m7WMbXwyX2Y",
      "title": "Samach Vav Part 253: Our avodah of ratzo v'shuv today will elevate in the future to Atzmus",
@@ -2229,7 +2354,7 @@
     }
    ],
    "total": 15,
-   "last_success_at": "2026-11-25T14:19:25+00:00"
+   "last_success_at": "2026-11-26T13:11:03+00:00"
   },
   {
    "id": "neirot",
@@ -2243,7 +2368,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-25T14:19:25+00:00",
+   "checked_at": "2026-11-26T13:11:03+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2305,7 +2430,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-25T14:19:25+00:00"
+   "last_success_at": "2026-11-26T13:11:03+00:00"
   },
   {
    "id": "chassidus_explained",
@@ -2319,10 +2444,27 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-25T14:19:28+00:00",
+   "checked_at": "2026-11-26T13:11:05+00:00",
    "status": "ok",
-   "new": [],
+   "new": [
+    {
+     "id": "3ca0c5ce-1c70-4519-9b23-a54c5770aa13",
+     "title": "Mitteler Rebbe's Padah Beshalom part 6/9 שערי תשובה ד\"ה פדה בשלום (פרק ז-ח)",
+     "url": "https://podcasters.spotify.com/pod/show/chassidus-explained/episodes/Mitteler-Rebbes-Padah-Beshalom-part-69---------e3t1j3j",
+     "date": "Wed, 25 Nov 2026 22:25:34 GMT",
+     "blurb": "Link to מאמר PDF⁠⁠ Finishing the explanation of חיה, the מיטעלער רבי demonstrates how the strong ביטול of the נפש הבהמית to the נפש האלקית is merely a ביטול of its רצון, and not of the actual נפש, which means that the נפש might still revert back to its original status. The מיטעלער רבי then introduces the level of יחידה by first explaining the level of \"השתוות\" equilibrium. To explain this, the מיטעלער רבי launches into a fascinating exploration of the two polar experiences at a person's core being - pleasure and pain. The מיטעלער רבי explains how pain is only experienced by lack of pleasure, and as much pleasure as a person has from any given experience will dictate how much pain they will feel from the absence of that pleasure.",
+     "first_seen": "2026-11-26T13:11:05+00:00"
+    }
+   ],
    "latest": [
+    {
+     "id": "3ca0c5ce-1c70-4519-9b23-a54c5770aa13",
+     "title": "Mitteler Rebbe's Padah Beshalom part 6/9 שערי תשובה ד\"ה פדה בשלום (פרק ז-ח)",
+     "url": "https://podcasters.spotify.com/pod/show/chassidus-explained/episodes/Mitteler-Rebbes-Padah-Beshalom-part-69---------e3t1j3j",
+     "date": "Wed, 25 Nov 2026 22:25:34 GMT",
+     "blurb": "Link to מאמר PDF⁠⁠ Finishing the explanation of חיה, the מיטעלער רבי demonstrates how the strong ביטול of the נפש הבהמית to the נפש האלקית is merely a ביטול of its רצון, and not of the actual נפש, which means that the נפש might still revert back to its original status. The מיטעלער רבי then introduces the level of יחידה by first explaining the level of \"השתוות\" equilibrium. To explain this, the מיטעלער רבי launches into a fascinating exploration of the two polar experiences at a person's core being - pleasure and pain. The מיטעלער רבי explains how pain is only experienced by lack of pleasure, and as much pleasure as a person has from any given experience will dictate how much pain they will feel from the absence of that pleasure.",
+     "first_seen": "2026-11-26T13:11:05+00:00"
+    },
     {
      "id": "15d07da0-0617-47b4-abd8-082c03588fba",
      "title": "Mitteler Rebbe's Padah Beshalom part 5/9 שערי תשובה ד\"ה פדה בשלום (פרק ו-ז)",
@@ -2404,8 +2546,8 @@
      "first_seen": "2026-10-18T04:52:00+00:00"
     }
    ],
-   "total": 139,
-   "last_success_at": "2026-11-25T14:19:28+00:00"
+   "total": 140,
+   "last_success_at": "2026-11-26T13:11:05+00:00"
   },
   {
    "id": "melukat",
@@ -2419,7 +2561,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-25T14:19:30+00:00",
+   "checked_at": "2026-11-26T13:11:07+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2481,7 +2623,7 @@
     }
    ],
    "total": 168,
-   "last_success_at": "2026-11-25T14:19:30+00:00"
+   "last_success_at": "2026-11-26T13:11:07+00:00"
   },
   {
    "id": "daily_maamar",
@@ -2495,7 +2637,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-25T14:19:31+00:00",
+   "checked_at": "2026-11-26T13:11:08+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2813,7 +2955,7 @@
     }
    ],
    "total": 374,
-   "last_success_at": "2026-11-25T14:19:31+00:00"
+   "last_success_at": "2026-11-26T13:11:08+00:00"
   },
   {
    "id": "wellsprings",
@@ -2827,7 +2969,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-25T14:19:32+00:00",
+   "checked_at": "2026-11-26T13:11:09+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2873,7 +3015,7 @@
     }
    ],
    "total": 125,
-   "last_success_at": "2026-11-25T14:19:32+00:00"
+   "last_success_at": "2026-11-26T13:11:09+00:00"
   },
   {
    "id": "daily_sicha",
@@ -2887,10 +3029,27 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-25T14:19:33+00:00",
+   "checked_at": "2026-11-26T13:11:10+00:00",
    "status": "ok",
-   "new": [],
+   "new": [
+    {
+     "id": "2026.11.26",
+     "title": "יום ה' פ' וישלח, ט\"ז כסלו, ה'תשפ\"ז",
+     "url": "",
+     "date": "Thu, 26 Nov 2026 12:00:00 GMT",
+     "blurb": "התוכן [התחיל לנגן \"עסן עסט זיך וכו', ואח\"כ אמר:] וכל זה (ש\"עסן עסט זיך וכו') – לאחרי שרבותינו נשיאינו מסרו נפשם עבורנו! כי באמת כל נשיא מוכן כבר לקיום היעוד \"ועלו מושיעים בהר ציון וגו'\", אלא שמרחמים עלינו שלא יהי' באופן ד\"ודפקום יום אחד\" (\"אחישנה\"), שאז \"ומתו כל הצאן\" וכו' [כמ\"ש ברביעי דפ' וישלח], ובשביל זה הוצרך הרבי לעבור הענין ד\"ואל עפר תשוב\".. ולהמתין בגלות עד.. שנסיים להכין את עצמנו להיות ראויים לצאת מהגלות, ובשביל זה מעכבים בגלות את השכינה יחד עם כל הנשיאים.., ולאחכ\"ז – הנה \"עסן עסט זיך, טרינקען טרינקט זיך, און שלאָפן שלאָפט זיך\".. ואילו כאשר עומדים להתפלל או לומדים תורה או איזה מאמר חסידות ה\"ז באופן ד\"מצות אנשים מלומדה\" וכו', ובגלל כ\"ז מעכבים את כל הענינים בגלות.., והרי הובטחנו שב\" שעתא חדא וברגעא חדא\" \"אַ קער-טאָן זיך ווי ס'דאַרף צו זיין\" ועושים תשובה – \" מיד הן נגאלין \"! ב' שיחות דהתוועדות י\"ט כסלו ה'תשט\"ז ל\"הנחה פרטית\" או התרגום ללה\"ק של השיחה: https://thedailysicha.com/?date=26-11-2026 Synopsis (After singing the niggun Essen est zich ,the Rebbe said the following:) Every Nasi is ready for the time when “Saviors will ascend Mount Tzion,” etc., but they have compassion upon us not to “drive them hard for one day” (“I will hasten it”) in which case “all the flocks will die” etc. (as it says in revi’i of parashas Vayishlach). And for this, the Rebbe had to undergo the process of “to dust you will return” and remain in exile until we finish preparing ourselves to be fit to leave exile, and all the while we are holding back the Shechinah in exile along with all the Nesi",
+     "first_seen": "2026-11-26T13:11:10+00:00"
+    }
+   ],
    "latest": [
+    {
+     "id": "2026.11.26",
+     "title": "יום ה' פ' וישלח, ט\"ז כסלו, ה'תשפ\"ז",
+     "url": "",
+     "date": "Thu, 26 Nov 2026 12:00:00 GMT",
+     "blurb": "התוכן [התחיל לנגן \"עסן עסט זיך וכו', ואח\"כ אמר:] וכל זה (ש\"עסן עסט זיך וכו') – לאחרי שרבותינו נשיאינו מסרו נפשם עבורנו! כי באמת כל נשיא מוכן כבר לקיום היעוד \"ועלו מושיעים בהר ציון וגו'\", אלא שמרחמים עלינו שלא יהי' באופן ד\"ודפקום יום אחד\" (\"אחישנה\"), שאז \"ומתו כל הצאן\" וכו' [כמ\"ש ברביעי דפ' וישלח], ובשביל זה הוצרך הרבי לעבור הענין ד\"ואל עפר תשוב\".. ולהמתין בגלות עד.. שנסיים להכין את עצמנו להיות ראויים לצאת מהגלות, ובשביל זה מעכבים בגלות את השכינה יחד עם כל הנשיאים.., ולאחכ\"ז – הנה \"עסן עסט זיך, טרינקען טרינקט זיך, און שלאָפן שלאָפט זיך\".. ואילו כאשר עומדים להתפלל או לומדים תורה או איזה מאמר חסידות ה\"ז באופן ד\"מצות אנשים מלומדה\" וכו', ובגלל כ\"ז מעכבים את כל הענינים בגלות.., והרי הובטחנו שב\" שעתא חדא וברגעא חדא\" \"אַ קער-טאָן זיך ווי ס'דאַרף צו זיין\" ועושים תשובה – \" מיד הן נגאלין \"! ב' שיחות דהתוועדות י\"ט כסלו ה'תשט\"ז ל\"הנחה פרטית\" או התרגום ללה\"ק של השיחה: https://thedailysicha.com/?date=26-11-2026 Synopsis (After singing the niggun Essen est zich ,the Rebbe said the following:) Every Nasi is ready for the time when “Saviors will ascend Mount Tzion,” etc., but they have compassion upon us not to “drive them hard for one day” (“I will hasten it”) in which case “all the flocks will die” etc. (as it says in revi’i of parashas Vayishlach). And for this, the Rebbe had to undergo the process of “to dust you will return” and remain in exile until we finish preparing ourselves to be fit to leave exile, and all the while we are holding back the Shechinah in exile along with all the Nesi",
+     "first_seen": "2026-11-26T13:11:10+00:00"
+    },
     {
      "id": "2026.11.25",
      "title": "יום ד' פ' וישלח, ט\"ו כסלו, ה'תשפ\"ז",
@@ -3196,8 +3355,8 @@
      "first_seen": "2026-10-18T04:52:06+00:00"
     }
    ],
-   "total": 1437,
-   "last_success_at": "2026-11-25T14:19:33+00:00"
+   "total": 1438,
+   "last_success_at": "2026-11-26T13:11:10+00:00"
   },
   {
    "id": "learnchassidus",
@@ -3211,7 +3370,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-25T14:19:38+00:00",
+   "checked_at": "2026-11-26T13:11:14+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -3224,7 +3383,7 @@
     }
    ],
    "total": 5,
-   "last_success_at": "2026-11-25T14:19:38+00:00"
+   "last_success_at": "2026-11-26T13:11:14+00:00"
   },
   {
    "id": "simplychassidus",
@@ -3238,7 +3397,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-25T14:19:38+00:00",
+   "checked_at": "2026-11-26T13:11:15+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -3265,7 +3424,7 @@
     }
    ],
    "total": 4,
-   "last_success_at": "2026-11-25T14:19:38+00:00"
+   "last_success_at": "2026-11-26T13:11:15+00:00"
   },
   {
    "id": "alonei_chabad",
@@ -3278,7 +3437,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-25T14:19:40+00:00",
+   "checked_at": "2026-11-26T13:11:16+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -3295,7 +3454,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-25T14:19:40+00:00",
+   "checked_at": "2026-11-26T13:11:16+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -3312,7 +3471,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-25T14:19:40+00:00",
+   "checked_at": "2026-11-26T13:11:16+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -3339,7 +3498,7 @@
     }
    ],
    "total": 303,
-   "last_success_at": "2026-11-25T14:19:40+00:00"
+   "last_success_at": "2026-11-26T13:11:16+00:00"
   },
   {
    "id": "lchaim",
@@ -3352,7 +3511,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-25T14:19:41+00:00",
+   "checked_at": "2026-11-26T13:11:16+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -3428,7 +3587,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-25T14:19:41+00:00"
+   "last_success_at": "2026-11-26T13:11:16+00:00"
   },
   {
    "id": "one_point",
@@ -3441,7 +3600,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-25T14:19:42+00:00",
+   "checked_at": "2026-11-26T13:11:17+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -3482,7 +3641,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-25T14:19:42+00:00"
+   "last_success_at": "2026-11-26T13:11:17+00:00"
   },
   {
    "id": "derher",
@@ -3495,7 +3654,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-25T14:19:43+00:00",
+   "checked_at": "2026-11-26T13:11:19+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -3512,7 +3671,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-25T14:19:43+00:00",
+   "checked_at": "2026-11-26T13:11:19+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -3529,7 +3688,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-25T14:19:43+00:00",
+   "checked_at": "2026-11-26T13:11:19+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -3619,7 +3778,7 @@
     }
    ],
    "total": 2,
-   "last_success_at": "2026-11-25T14:19:43+00:00"
+   "last_success_at": "2026-11-26T13:11:19+00:00"
   },
   {
    "id": "maynotecha_inst",
@@ -3632,7 +3791,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-25T14:19:45+00:00",
+   "checked_at": "2026-11-26T13:11:19+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -3649,13 +3808,13 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-25T14:19:45+00:00",
+   "checked_at": "2026-11-26T13:11:19+00:00",
    "status": "ok",
    "new": [],
    "latest": [
     {
      "id": "https://www.chabad.org/article.asp?aid=7630997",
-     "title": "Video: Yud-Tes Kislev Explainer: The Chassidic Festival By Aryeh Weinstein",
+     "title": "Video: What Is Yud-Tes Kislev? The Chassidic New Year, Explained By Aryeh Weinstein",
      "url": "https://www.chabad.org/article.asp?aid=7630997",
      "date": "Sat, 21 Nov 2026 12:00:00 EST",
      "blurb": "Discover how a 1798 Russian prison release became the \"New Year of Chassidus\" on the 19th of Kislev, unlocking divine permission to bring the inner, mystical wisdom of Torah into everyday life.",
@@ -3703,7 +3862,7 @@
     }
    ],
    "total": 1,
-   "last_success_at": "2026-11-25T14:19:45+00:00"
+   "last_success_at": "2026-11-26T13:11:19+00:00"
   },
   {
    "id": "anash",
@@ -3716,19 +3875,27 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-25T14:19:47+00:00",
+   "checked_at": "2026-11-26T13:11:20+00:00",
    "status": "ok",
    "new": [
     {
-     "id": "https://anash.org/?p=1137754",
-     "title": "Kingston Talmidim Follow Clues to the Rebbe’s Chuppah",
-     "url": "https://anash.org/kingston-talmidim-follow-clues-to-the-rebbes-chuppah/",
-     "date": "Wed, 25 Nov 2026 14:02:00 +0000",
-     "blurb": "In honor of the Rebbe and Rebbetzin’s chassuna day, talmidim in grades 2–8 at Cheder Menachem in Kingston, Pennsylvania, participated in a unique and interactive project focused on strengthening their hiskashrus to the Rebbe.",
-     "first_seen": "2026-11-25T14:19:47+00:00"
+     "id": "https://anash.org/?p=1137909",
+     "title": "Yud Tes Kislev Celebrations Open at Tzama Chassidus Week",
+     "url": "https://anash.org/yud-tes-kislev-celebrations-open-at-tzama-chassidus-week/",
+     "date": "Wed, 25 Nov 2026 22:02:00 +0000",
+     "blurb": "Farbrengens, a Chassidus seforim fair, and niggunim concerts featuring Avraham Fried and Ishay Ribo are drawing crowds to Binyanei Ha’uma for the 17th annual Tzama Chassidus Week.",
+     "first_seen": "2026-11-26T13:11:20+00:00"
     }
    ],
    "latest": [
+    {
+     "id": "https://anash.org/?p=1137909",
+     "title": "Yud Tes Kislev Celebrations Open at Tzama Chassidus Week",
+     "url": "https://anash.org/yud-tes-kislev-celebrations-open-at-tzama-chassidus-week/",
+     "date": "Wed, 25 Nov 2026 22:02:00 +0000",
+     "blurb": "Farbrengens, a Chassidus seforim fair, and niggunim concerts featuring Avraham Fried and Ishay Ribo are drawing crowds to Binyanei Ha’uma for the 17th annual Tzama Chassidus Week.",
+     "first_seen": "2026-11-26T13:11:20+00:00"
+    },
     {
      "id": "https://anash.org/?p=1137754",
      "title": "Kingston Talmidim Follow Clues to the Rebbe’s Chuppah",
@@ -4266,8 +4433,8 @@
      "first_seen": "2026-10-18T04:52:22+00:00"
     }
    ],
-   "total": 6,
-   "last_success_at": "2026-11-25T14:19:47+00:00"
+   "total": 5,
+   "last_success_at": "2026-11-26T13:11:20+00:00"
   },
   {
    "id": "collive",
@@ -4280,7 +4447,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-25T14:19:48+00:00",
+   "checked_at": "2026-11-26T13:11:21+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -4297,7 +4464,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-25T14:19:48+00:00",
+   "checked_at": "2026-11-26T13:11:21+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -4314,10 +4481,67 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-25T14:19:48+00:00",
+   "checked_at": "2026-11-26T13:11:21+00:00",
    "status": "ok",
-   "new": [],
+   "new": [
+    {
+     "id": "https://www.hageula.com/news/press/28330.htm",
+     "title": "להורדה: הקובץ השבועי של ״דברי משיח״",
+     "url": "https://www.hageula.com/news/press/28330.htm",
+     "date": "",
+     "first_seen": "2026-11-26T13:11:21+00:00"
+    },
+    {
+     "id": "https://www.hageula.com/news/press/28329.htm",
+     "title": "פרסום ראשון: הגהות ומענות בנוגע להדפסת ה\"שארית יהודה\" וה\"שדי חמד\"",
+     "url": "https://www.hageula.com/news/press/28329.htm",
+     "date": "",
+     "first_seen": "2026-11-26T13:11:21+00:00"
+    },
+    {
+     "id": "https://www.hageula.com/news/press/28328.htm",
+     "title": "קובץ \"הערות התמימים ואנ\"ש 770 בית משיח\"",
+     "url": "https://www.hageula.com/news/press/28328.htm",
+     "date": "",
+     "first_seen": "2026-11-26T13:11:21+00:00"
+    },
+    {
+     "id": "https://www.hageula.com/news/press/28254.htm",
+     "title": "לקראת יום הבהיר ר\"ח כסלו: הופיע קובץ \"היכל המלך\" חי\"ח",
+     "url": "https://www.hageula.com/news/press/28254.htm",
+     "date": "",
+     "first_seen": "2026-11-26T13:11:21+00:00"
+    }
+   ],
    "latest": [
+    {
+     "id": "https://www.hageula.com/news/press/28330.htm",
+     "title": "להורדה: הקובץ השבועי של ״דברי משיח״",
+     "url": "https://www.hageula.com/news/press/28330.htm",
+     "date": "",
+     "first_seen": "2026-11-26T13:11:21+00:00"
+    },
+    {
+     "id": "https://www.hageula.com/news/press/28329.htm",
+     "title": "פרסום ראשון: הגהות ומענות בנוגע להדפסת ה\"שארית יהודה\" וה\"שדי חמד\"",
+     "url": "https://www.hageula.com/news/press/28329.htm",
+     "date": "",
+     "first_seen": "2026-11-26T13:11:21+00:00"
+    },
+    {
+     "id": "https://www.hageula.com/news/press/28328.htm",
+     "title": "קובץ \"הערות התמימים ואנ\"ש 770 בית משיח\"",
+     "url": "https://www.hageula.com/news/press/28328.htm",
+     "date": "",
+     "first_seen": "2026-11-26T13:11:21+00:00"
+    },
+    {
+     "id": "https://www.hageula.com/news/press/28254.htm",
+     "title": "לקראת יום הבהיר ר\"ח כסלו: הופיע קובץ \"היכל המלך\" חי\"ח",
+     "url": "https://www.hageula.com/news/press/28254.htm",
+     "date": "",
+     "first_seen": "2026-11-26T13:11:21+00:00"
+    },
     {
      "id": "https://www.hageula.com/news/press/28303.htm",
      "title": "חדש: קונטרס 'חי לעד וקיים לנצח'",
@@ -4347,8 +4571,8 @@
      "first_seen": "2026-11-17T13:04:12+00:00"
     }
    ],
-   "total": 20,
-   "last_success_at": "2026-11-25T14:19:48+00:00"
+   "total": 19,
+   "last_success_at": "2026-11-26T13:11:21+00:00"
   },
   {
    "id": "abc770",
@@ -4361,7 +4585,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-25T14:19:50+00:00",
+   "checked_at": "2026-11-26T13:11:23+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -4407,7 +4631,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-25T14:19:50+00:00"
+   "last_success_at": "2026-11-26T13:11:23+00:00"
   },
   {
    "id": "kehot",
@@ -4420,7 +4644,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-25T14:19:52+00:00",
+   "checked_at": "2026-11-26T13:11:25+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -5130,7 +5354,7 @@
     }
    ],
    "total": 197,
-   "last_success_at": "2026-11-25T14:19:52+00:00"
+   "last_success_at": "2026-11-26T13:11:25+00:00"
   }
  ],
  "browser_checks": {
@@ -5669,7 +5893,7 @@
      "genre": "גיליון"
     }
    ],
-   "checked_at": "2026-11-14T19:05:00+00:00",
+   "checked_at": "2026-11-26T13:10:32+00:00",
    "note": "החוברת השבועית ויצא תשפ״ז (256 עמ׳) נפתחה מ־dvarmalchus.org דרך רשת המחשב; השער ותוכן השיחות לט׳–י׳ כסלו אומתו."
   }
  }
