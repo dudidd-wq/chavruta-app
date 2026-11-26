@@ -5975,7 +5975,7 @@ function ftDocs(t) {
 }
 
 /* ---- ניקוי HTML: רק תגים מותרים, בלי מאפיינים (מלבד data-k / data-n מוכרים) ---- */
-const FT_TAGS = new Set(["P", "BR", "B", "I", "SUP", "SUB", "SMALL", "SPAN", "H1", "H2", "H3", "H4", "H5", "H6", "HR"]);
+const FT_TAGS = new Set(["P", "BR", "B", "I", "SUP", "SUB", "SMALL", "SPAN", "A", "H1", "H2", "H3", "H4", "H5", "H6", "HR"]);
 const FT_KINDS = { pg: "ft-old", gp: "ft-gp", sm: "ft-sm", q: "ft-q", ks: "ft-ks" };
 function ftIsCoreChar(ch) {
   return (ch >= "\u05D0" && ch <= "\u05EA") || (ch >= "0" && ch <= "9");
@@ -6058,6 +6058,16 @@ function ftSafe(html, prefix) {
     const tagName = /^H[1-6]$/.test(tag) ? "H" + Math.min(6, Math.max(3, +tag[1] + 2)) : tag;   // כותרות הספר — מתחת לכותרת העמוד
     const el = document.createElement(tagName.toLowerCase());
     if (tag === "SPAN") { const k = node.getAttribute("data-k"); if (FT_KINDS[k]) el.className = FT_KINDS[k]; if (k === "pg") el.title = "עמוד במהדורה הקודמת"; if (k === "gp") el.textContent = "עמ׳ "; }
+    if (tag === "A") {
+      const href = node.getAttribute("href") || "";
+      if (!/^#\/read\/[a-z0-9-]+\/\d+$/.test(href)) { add(node, to); continue; }
+      el.setAttribute("href", href);
+      el.className = "ft-cite";
+      const slug = node.getAttribute("data-slug") || "";
+      const id = node.getAttribute("data-id") || "";
+      if (/^[a-z0-9-]+$/.test(slug)) el.setAttribute("data-slug", slug);
+      if (/^\d+$/.test(id)) el.setAttribute("data-id", id);
+    }
     if (tag === "SUP" && prefix) {
       let n = node.getAttribute("data-n");
       if (!n) { const t = (node.textContent || "").trim(); if (/^e?\d{1,9}$/.test(t)) n = t; }
