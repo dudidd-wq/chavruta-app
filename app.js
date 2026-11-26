@@ -5909,7 +5909,7 @@ function highlightWordsIn(root, qs) {
 }
 
 /* חברותא · קורא הטקסט המלא (#/read). ספרי קה״ת כפי שהם בספריית חב״ד, בחלקים שנטענים לפי הצורך (data/text/**, build_fulltext.py).
-   ספרייה → סדרה (עץ תוכן) → מאמר/פרק (כל עמודיו ברצף) → עמוד (עוגן #ft-<id>). כתובות: #/read · #/read/<slug> · #/read/<slug>/<id>[?hl=מילים]
+   ספרייה → סדרה (עץ תוכן) → מאמר/פרק (כל עמודיו ברצף) → עמוד (עוגן #ft-<id>). כתובות: #/read · #/read/<slug> · #/read/<slug>/<id>[?at=דף או עמ׳][?hl=מילים]
    קישורים מבחוץ: יחידות עץ הידע ומפות הפרשות (treeSourceLink), חלון המקור בביאורים, החיפוש. */
 const FT = { idx: null, ids: null, tocs: new Map(), ready: null };
 const FT_WINDOW = [12, 24];      // כמה עמודים לפני ואחרי עמוד היעד במאמר ארוך
@@ -6591,6 +6591,34 @@ function ftScanBind({ s, t, body, scanPane, layoutTools, stage, docLeaves, initi
 }
 
 
+
+/** גלילה מודגשת לעמוד יעד בתוך המאמר (אחרי פריסה / גופנים / חלון הסריקה). */
+function ftNormAt(s) { return String(s || "").replace(/[\s,.'׳״"]/g, ""); }
+function ftLeafByAt(t, docLeaves, at) {
+  if (!at) return null;
+  const want = ftNormAt(at);
+  if (!want) return null;
+  if (/^\d+$/.test(want)) {
+    const id = +want;
+    const byId = docLeaves.find(k => t.n[k][0] === id);
+    if (byId != null) return byId;
+    const byTitle = docLeaves.find(k => (String(t.n[k][1] || "").match(/\d+/) || [])[0] === want);
+    if (byTitle != null) return byTitle;
+  }
+  return docLeaves.find(k => ftNormAt(t.n[k][1]) === want) || null;
+}
+function ftRevealPage(el, mark) {
+  if (!el) return;
+  document.querySelectorAll(".ft-page.ft-target").forEach(x => x.classList.remove("ft-target"));
+  el.classList.add("ft-target");
+  const target = mark || el;
+  const go = () => { if (el.isConnected) target.scrollIntoView({ block: mark ? "center" : "start", behavior: "auto" }); };
+  go();
+  requestAnimationFrame(() => { requestAnimationFrame(go); });
+  setTimeout(go, 120);
+  setTimeout(go, 400);
+}
+
 async function ftDocView(main, s, t, i, q, ctx) {
   const d = ftDocOf(t, i), docLeaves = ftIsLeaf(t, d) ? [d] : ftKids(t, d).filter(k => ftIsLeaf(t, k));
   const target = ftIsLeaf(t, i) ? i : docLeaves[0];
@@ -6655,14 +6683,14 @@ async function ftDocView(main, s, t, i, q, ctx) {
   if (!ctx.alive()) return;
   wait.remove(); sync();
   const revealTextPage = async pageId => {
-    const el0 = document.getElementById("ft-" + pageId);
-    if (el0) { el0.scrollIntoView({ block: "start" }); return; }
+    const show = () => { const el = document.getElementById("ft-" + pageId); if (el) ftRevealPage(el); };
+    if (document.getElementById("ft-" + pageId)) { show(); return; }
     const idx = docLeaves.findIndex(j => t.n[j][0] === pageId);
     if (idx < 0) return;
     if (idx < from) { const a = idx; const anchor = body.querySelector(".ft-page"), y = anchor?.getBoundingClientRect().top; await render(a, from, -1); from = a; if (anchor) window.scrollBy(0, anchor.getBoundingClientRect().top - y); }
     else if (idx >= to) { await render(to, idx + 1, 1); to = idx + 1; }
     sync();
-    document.getElementById("ft-" + pageId)?.scrollIntoView({ block: "start" });
+    show();
   };
   ftScanBind({ s, t, body, scanPane, layoutTools, stage, docLeaves, initialPageId: t.n[target][0], q, ctx, revealTextPage });
   const heHost = h("div");
@@ -6675,9 +6703,15 @@ async function ftDocView(main, s, t, i, q, ctx) {
     el.scrollIntoView({ block: "center" }); el.focus({ preventScroll: true });
   });
   const hl = q.get("hl");
-  const tEl = document.getElementById("ft-" + t.n[target][0]);
+  const at = q.get("at");
+  let revealId = t.n[target][0];
+  if (at) {
+    const j = ftLeafByAt(t, docLeaves, at);
+    if (j != null) revealId = t.n[j][0];
+  }
+  const tEl = document.getElementById("ft-" + revealId);
   if (hl && tEl && typeof highlightWordsIn === "function") highlightWordsIn(tEl, hl);
-  if (tEl && (ftIsLeaf(t, i) && tp > 0 || hl)) { const m = tEl.querySelector("mark.sh"); (m || tEl).scrollIntoView({ block: m ? "center" : "start" }); tEl.classList.add("ft-target"); }
+  if (tEl) ftRevealPage(tEl, tEl.querySelector("mark.sh"));
   else window.scrollTo(0, 0);
 }
 

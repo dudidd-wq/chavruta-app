@@ -1660,8 +1660,9 @@ body.source-reader-docked { overflow: auto; }
 .ft-page { position: relative; padding: 6px 0 14px; scroll-margin-top: calc(var(--top-h, 56px) + 12px); }
 .ft-page.ft-page-empty { display: none; }
 .ft-page + .ft-page { border-top: 1px dashed var(--rule-2, var(--rule)); }
-.ft-page.ft-target { animation: ft-flash 1.6s ease-out 1; }
-@keyframes ft-flash { from { background: var(--accent-soft); } to { background: transparent; } }
+.ft-page.ft-target { animation: ft-flash 1.6s ease-out 1; background: color-mix(in srgb, var(--accent) 8%, transparent); border-radius: 8px; box-shadow: inset 0 0 0 2px color-mix(in srgb, var(--accent) 45%, transparent); }
+@keyframes ft-flash { from { background: var(--accent-soft); } to { background: color-mix(in srgb, var(--accent) 8%, transparent); } }
+.ft-page.ft-target .ft-pgmark { background: var(--accent); color: #fff; }
 .ft-pgmark { display: inline-block; margin: 6px 0 2px; padding: 1px 8px; border-radius: 999px; background: var(--paper-2); color: var(--ink-3); font: 12px/1.6 var(--sans); text-decoration: none; }
 .ft-pgmark:hover { color: var(--accent); }
 .ft-text p { margin: 0 0 .8em; }
