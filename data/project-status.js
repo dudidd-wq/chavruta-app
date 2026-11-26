@@ -1,6 +1,6 @@
 window.CHAVRUTA_PROJECT_STATUS = {
-  "generated": "2026-11-26T15:40+02:00",
-  "generated_label": "26.11.2026, 15:40 שעון ישראל",
+  "generated": "2026-11-26T21:04+02:00",
+  "generated_label": "26.11.2026, 21:04 שעון ישראל",
   "timezone": "Asia/Jerusalem",
   "coverage": {
     "rows": [
@@ -1209,7 +1209,7 @@ window.CHAVRUTA_PROJECT_STATUS = {
       "done": 10650,
       "total": 10650,
       "pct": 100.0,
-      "as_of": "26.11 08:03",
+      "as_of": "26.11 21:04",
       "status": "done",
       "status_label": "הסתיים",
       "note": "קודם דרך המנויים, והשארית ל־Sonnet בתוך התקרה שאושרה."
