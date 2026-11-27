@@ -1,6 +1,6 @@
 {
-  "generated": "2026-11-27T20:47+02:00",
-  "generated_label": "27.11.2026, 20:47 שעון ישראל",
+  "generated": "2026-11-27T21:00+02:00",
+  "generated_label": "27.11.2026, 21:00 שעון ישראל",
   "timezone": "Asia/Jerusalem",
   "coverage": {
     "rows": [
@@ -1209,7 +1209,7 @@
       "done": 10650,
       "total": 10650,
       "pct": 100.0,
-      "as_of": "27.11 14:10",
+      "as_of": "27.11 21:00",
       "status": "done",
       "status_label": "הסתיים",
       "note": "קודם דרך המנויים, והשארית ל־Sonnet בתוך התקרה שאושרה."
