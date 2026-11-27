@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-27T13:09:04+00:00",
+ "generated_at": "2026-11-27T13:51:29+00:00",
  "sources": [
   {
    "id": "chabadlibrary",
@@ -12,7 +12,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-11-27T13:07:46+00:00",
+   "checked_at": "2026-11-27T13:50:14+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -30,7 +30,7 @@
     "primary",
     "whatsnew"
    ],
-   "checked_at": "2026-11-27T13:07:46+00:00",
+   "checked_at": "2026-11-27T13:50:14+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -47,7 +47,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-11-27T13:07:46+00:00",
+   "checked_at": "2026-11-27T13:50:14+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -64,7 +64,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-11-27T13:07:46+00:00",
+   "checked_at": "2026-11-27T13:50:14+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -82,7 +82,7 @@
     "primary",
     "whatsnew"
    ],
-   "checked_at": "2026-11-27T13:07:46+00:00",
+   "checked_at": "2026-11-27T13:50:14+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -102,7 +102,7 @@
     }
    ],
    "total": 132,
-   "last_success_at": "2026-11-27T13:07:46+00:00"
+   "last_success_at": "2026-11-27T13:50:14+00:00"
   },
   {
    "id": "chabadlibrarybooks",
@@ -115,7 +115,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-11-27T13:07:47+00:00",
+   "checked_at": "2026-11-27T13:50:15+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -133,12 +133,12 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-27T13:07:47+00:00",
+   "checked_at": "2026-11-27T13:50:15+00:00",
    "status": "ok",
    "new": [],
    "latest": [],
    "total": 1501,
-   "last_success_at": "2026-11-27T13:07:47+00:00"
+   "last_success_at": "2026-11-27T13:50:15+00:00"
   },
   {
    "id": "chassidut_org",
@@ -152,12 +152,12 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-27T13:07:48+00:00",
+   "checked_at": "2026-11-27T13:50:16+00:00",
    "status": "ok",
    "new": [],
    "latest": [],
    "total": 4,
-   "last_success_at": "2026-11-27T13:07:48+00:00"
+   "last_success_at": "2026-11-27T13:50:16+00:00"
   },
   {
    "id": "biurim",
@@ -171,7 +171,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-27T13:07:49+00:00",
+   "checked_at": "2026-11-27T13:50:17+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -225,7 +225,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-27T13:07:49+00:00"
+   "last_success_at": "2026-11-27T13:50:17+00:00"
   },
   {
    "id": "hm_monsey",
@@ -239,7 +239,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-27T13:07:51+00:00",
+   "checked_at": "2026-11-27T13:50:19+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -333,7 +333,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-27T13:07:51+00:00"
+   "last_success_at": "2026-11-27T13:50:19+00:00"
   },
   {
    "id": "hiskashrus",
@@ -347,7 +347,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-27T13:07:53+00:00",
+   "checked_at": "2026-11-27T13:50:21+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -430,7 +430,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-27T13:07:53+00:00"
+   "last_success_at": "2026-11-27T13:50:21+00:00"
   },
   {
    "id": "lichyot_chassidus",
@@ -444,7 +444,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-27T13:07:55+00:00",
+   "checked_at": "2026-11-27T13:50:22+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -650,7 +650,7 @@
     }
    ],
    "total": 1000,
-   "last_success_at": "2026-11-27T13:07:55+00:00"
+   "last_success_at": "2026-11-27T13:50:22+00:00"
   },
   {
    "id": "chabadzoom",
@@ -664,7 +664,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-27T13:07:59+00:00",
+   "checked_at": "2026-11-27T13:50:24+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -859,7 +859,7 @@
     }
    ],
    "total": 568,
-   "last_success_at": "2026-11-27T13:07:59+00:00"
+   "last_success_at": "2026-11-27T13:50:24+00:00"
   },
   {
    "id": "kovtzimdrive",
@@ -873,7 +873,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-27T13:08:01+00:00",
+   "checked_at": "2026-11-27T13:50:27+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -886,7 +886,7 @@
     }
    ],
    "total": 1,
-   "last_success_at": "2026-11-27T13:08:01+00:00"
+   "last_success_at": "2026-11-27T13:50:27+00:00"
   },
   {
    "id": "avita",
@@ -900,7 +900,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-27T13:08:03+00:00",
+   "checked_at": "2026-11-27T13:50:29+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -918,7 +918,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-27T13:08:03+00:00",
+   "checked_at": "2026-11-27T13:50:29+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -940,7 +940,7 @@
     }
    ],
    "total": 2,
-   "last_success_at": "2026-11-27T13:08:03+00:00"
+   "last_success_at": "2026-11-27T13:50:29+00:00"
   },
   {
    "id": "dvarmalchus770",
@@ -954,7 +954,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-27T13:08:06+00:00",
+   "checked_at": "2026-11-27T13:50:31+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1120,7 +1120,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-27T13:08:06+00:00"
+   "last_success_at": "2026-11-27T13:50:31+00:00"
   },
   {
    "id": "soulwords",
@@ -1134,7 +1134,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-27T13:08:07+00:00",
+   "checked_at": "2026-11-27T13:50:32+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1204,7 +1204,7 @@
     }
    ],
    "total": 0,
-   "last_success_at": "2026-11-27T13:08:07+00:00"
+   "last_success_at": "2026-11-27T13:50:32+00:00"
   },
   {
    "id": "sie_weekly",
@@ -1218,7 +1218,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-27T13:08:09+00:00",
+   "checked_at": "2026-11-27T13:50:33+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1308,7 +1308,7 @@
     }
    ],
    "total": 120,
-   "last_success_at": "2026-11-27T13:08:09+00:00"
+   "last_success_at": "2026-11-27T13:50:33+00:00"
   },
   {
    "id": "pls",
@@ -1322,7 +1322,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-27T13:08:10+00:00",
+   "checked_at": "2026-11-27T13:50:35+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1520,7 +1520,7 @@
     }
    ],
    "total": 200,
-   "last_success_at": "2026-11-27T13:08:10+00:00"
+   "last_success_at": "2026-11-27T13:50:35+00:00"
   },
   {
    "id": "chayenu_ls",
@@ -1534,7 +1534,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-27T13:08:13+00:00",
+   "checked_at": "2026-11-27T13:50:36+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1568,7 +1568,7 @@
     }
    ],
    "total": 2,
-   "last_success_at": "2026-11-27T13:08:13+00:00"
+   "last_success_at": "2026-11-27T13:50:36+00:00"
   },
   {
    "id": "weekly_sicha",
@@ -1582,7 +1582,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-27T13:08:15+00:00",
+   "checked_at": "2026-11-27T13:50:37+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1665,7 +1665,7 @@
     }
    ],
    "total": 122,
-   "last_success_at": "2026-11-27T13:08:15+00:00"
+   "last_success_at": "2026-11-27T13:50:37+00:00"
   },
   {
    "id": "theyeshiva",
@@ -1679,7 +1679,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-27T13:08:16+00:00",
+   "checked_at": "2026-11-27T13:50:39+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1901,7 +1901,7 @@
     }
    ],
    "total": 1563,
-   "last_success_at": "2026-11-27T13:08:16+00:00"
+   "last_success_at": "2026-11-27T13:50:39+00:00"
   },
   {
    "id": "chassidus_applied",
@@ -1915,7 +1915,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-27T13:08:19+00:00",
+   "checked_at": "2026-11-27T13:50:42+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2329,7 +2329,7 @@
     }
    ],
    "total": 15,
-   "last_success_at": "2026-11-27T13:08:19+00:00"
+   "last_success_at": "2026-11-27T13:50:42+00:00"
   },
   {
    "id": "neirot",
@@ -2343,7 +2343,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-27T13:08:19+00:00",
+   "checked_at": "2026-11-27T13:50:42+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2405,7 +2405,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-27T13:08:19+00:00"
+   "last_success_at": "2026-11-27T13:50:42+00:00"
   },
   {
    "id": "chassidus_explained",
@@ -2419,7 +2419,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-27T13:08:22+00:00",
+   "checked_at": "2026-11-27T13:50:45+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2513,7 +2513,7 @@
     }
    ],
    "total": 140,
-   "last_success_at": "2026-11-27T13:08:22+00:00"
+   "last_success_at": "2026-11-27T13:50:45+00:00"
   },
   {
    "id": "melukat",
@@ -2527,7 +2527,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-27T13:08:23+00:00",
+   "checked_at": "2026-11-27T13:50:46+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2589,7 +2589,7 @@
     }
    ],
    "total": 168,
-   "last_success_at": "2026-11-27T13:08:23+00:00"
+   "last_success_at": "2026-11-27T13:50:46+00:00"
   },
   {
    "id": "daily_maamar",
@@ -2603,7 +2603,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-27T13:08:24+00:00",
+   "checked_at": "2026-11-27T13:50:47+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2929,7 +2929,7 @@
     }
    ],
    "total": 375,
-   "last_success_at": "2026-11-27T13:08:24+00:00"
+   "last_success_at": "2026-11-27T13:50:47+00:00"
   },
   {
    "id": "wellsprings",
@@ -2943,7 +2943,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-27T13:08:26+00:00",
+   "checked_at": "2026-11-27T13:50:49+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2989,7 +2989,7 @@
     }
    ],
    "total": 125,
-   "last_success_at": "2026-11-27T13:08:26+00:00"
+   "last_success_at": "2026-11-27T13:50:49+00:00"
   },
   {
    "id": "daily_sicha",
@@ -3003,7 +3003,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-27T13:08:27+00:00",
+   "checked_at": "2026-11-27T13:50:50+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -3329,7 +3329,7 @@
     }
    ],
    "total": 1439,
-   "last_success_at": "2026-11-27T13:08:27+00:00"
+   "last_success_at": "2026-11-27T13:50:50+00:00"
   },
   {
    "id": "learnchassidus",
@@ -3343,7 +3343,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-27T13:08:32+00:00",
+   "checked_at": "2026-11-27T13:50:56+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -3356,7 +3356,7 @@
     }
    ],
    "total": 5,
-   "last_success_at": "2026-11-27T13:08:32+00:00"
+   "last_success_at": "2026-11-27T13:50:56+00:00"
   },
   {
    "id": "simplychassidus",
@@ -3370,7 +3370,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-27T13:08:33+00:00",
+   "checked_at": "2026-11-27T13:50:56+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -3397,7 +3397,7 @@
     }
    ],
    "total": 4,
-   "last_success_at": "2026-11-27T13:08:33+00:00"
+   "last_success_at": "2026-11-27T13:50:56+00:00"
   },
   {
    "id": "alonei_chabad",
@@ -3410,7 +3410,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-27T13:08:34+00:00",
+   "checked_at": "2026-11-27T13:50:58+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -3427,7 +3427,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-27T13:08:34+00:00",
+   "checked_at": "2026-11-27T13:50:58+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -3444,7 +3444,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-27T13:08:34+00:00",
+   "checked_at": "2026-11-27T13:50:58+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -3471,7 +3471,7 @@
     }
    ],
    "total": 303,
-   "last_success_at": "2026-11-27T13:08:34+00:00"
+   "last_success_at": "2026-11-27T13:50:58+00:00"
   },
   {
    "id": "lchaim",
@@ -3484,7 +3484,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-27T13:08:35+00:00",
+   "checked_at": "2026-11-27T13:50:59+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -3560,7 +3560,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-27T13:08:35+00:00"
+   "last_success_at": "2026-11-27T13:50:59+00:00"
   },
   {
    "id": "one_point",
@@ -3573,7 +3573,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-27T13:08:37+00:00",
+   "checked_at": "2026-11-27T13:51:00+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -3614,7 +3614,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-27T13:08:37+00:00"
+   "last_success_at": "2026-11-27T13:51:00+00:00"
   },
   {
    "id": "derher",
@@ -3627,7 +3627,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-27T13:08:38+00:00",
+   "checked_at": "2026-11-27T13:51:02+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -3644,7 +3644,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-27T13:08:38+00:00",
+   "checked_at": "2026-11-27T13:51:02+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -3661,7 +3661,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-27T13:08:38+00:00",
+   "checked_at": "2026-11-27T13:51:02+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -3765,7 +3765,7 @@
     }
    ],
    "total": 4,
-   "last_success_at": "2026-11-27T13:08:38+00:00"
+   "last_success_at": "2026-11-27T13:51:02+00:00"
   },
   {
    "id": "maynotecha_inst",
@@ -3778,7 +3778,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-27T13:08:40+00:00",
+   "checked_at": "2026-11-27T13:51:04+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -3795,7 +3795,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-27T13:08:40+00:00",
+   "checked_at": "2026-11-27T13:51:04+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -3849,7 +3849,7 @@
     }
    ],
    "total": 1,
-   "last_success_at": "2026-11-27T13:08:40+00:00"
+   "last_success_at": "2026-11-27T13:51:04+00:00"
   },
   {
    "id": "anash",
@@ -3862,7 +3862,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-27T13:08:41+00:00",
+   "checked_at": "2026-11-27T13:51:05+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -4436,7 +4436,7 @@
     }
    ],
    "total": 5,
-   "last_success_at": "2026-11-27T13:08:41+00:00"
+   "last_success_at": "2026-11-27T13:51:05+00:00"
   },
   {
    "id": "collive",
@@ -4449,7 +4449,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-27T13:08:43+00:00",
+   "checked_at": "2026-11-27T13:51:07+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -4466,7 +4466,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-27T13:08:43+00:00",
+   "checked_at": "2026-11-27T13:51:07+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -4483,7 +4483,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-27T13:08:43+00:00",
+   "checked_at": "2026-11-27T13:51:07+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -4545,7 +4545,7 @@
     }
    ],
    "total": 19,
-   "last_success_at": "2026-11-27T13:08:43+00:00"
+   "last_success_at": "2026-11-27T13:51:07+00:00"
   },
   {
    "id": "abc770",
@@ -4558,7 +4558,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-27T13:08:44+00:00",
+   "checked_at": "2026-11-27T13:51:10+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -4604,7 +4604,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-27T13:08:44+00:00"
+   "last_success_at": "2026-11-27T13:51:10+00:00"
   },
   {
    "id": "kehot",
@@ -4617,7 +4617,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-27T13:08:47+00:00",
+   "checked_at": "2026-11-27T13:51:12+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -5327,7 +5327,7 @@
     }
    ],
    "total": 197,
-   "last_success_at": "2026-11-27T13:08:47+00:00"
+   "last_success_at": "2026-11-27T13:51:12+00:00"
   }
  ],
  "browser_checks": {
