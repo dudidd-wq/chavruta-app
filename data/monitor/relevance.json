@@ -2283,5 +2283,23 @@
     "why": "סרטון הסבר על י״ט כסלו (Aryeh Weinstein) — וידאו/שיעור, לא פרסום כתוב. העמוד נפתח.",
     "source_url": "https://www.chabad.org/article.asp?aid=7630997",
     "checked_at": "2026-11-26T13:20:00+00:00"
+  },
+  "9a4d09951d8e7f9b": {
+    "cls": "לא רלוונטי",
+    "why": "מדור דעה (Opinion): התכתבות כללית בין משפיע לחבר ליטאי על דרך חסידות חב״ד; לא נאמר שהיא מבארת מאמר, שיחה או מכתב מסוים. הדף חסום (Cloudflare) גם מהמחשב; נבדק לפי תיאור ה־RSS.",
+    "source_url": "https://anash.org/is-chabad-for-everyone-a-debate-on-living-chassidus/",
+    "checked_at": "2026-11-27T13:20:00+00:00"
+  },
+  "4ed9f189186e3f82": {
+    "cls": "לא רלוונטי",
+    "why": "סיפור זיכרונות (Here's My Story) על הצגת י״ט כסלו של ילדים ותשובת הרבי; זיכרונות אינם בתחום. הדף חסום (Cloudflare) גם מהמחשב; נבדק לפי תיאור ה־RSS.",
+    "source_url": "https://anash.org/the-rebbe-read-our-basement-play-about-the-alter-rebbes-arrest/",
+    "checked_at": "2026-11-27T13:20:00+00:00"
+  },
+  "c8e4d35749bc0bd4": {
+    "cls": "לא רלוונטי",
+    "why": "חדשות/אירועים: רשימת התוועדויות י״ט כסלו בקהילות. הדף חסום (Cloudflare) גם מהמחשב; נבדק לפי תיאור ה־RSS.",
+    "source_url": "https://anash.org/yud-tes-kislev-farbrengens-in-crown-heights-and-beyond/",
+    "checked_at": "2026-11-27T13:20:00+00:00"
   }
 }

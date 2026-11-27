@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-26T13:54:15+00:00",
+ "generated_at": "2026-11-27T13:02:07+00:00",
  "sources": [
   {
    "id": "chabadlibrary",
@@ -12,7 +12,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-11-26T13:53:05+00:00",
+   "checked_at": "2026-11-27T13:00:49+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -30,7 +30,7 @@
     "primary",
     "whatsnew"
    ],
-   "checked_at": "2026-11-26T13:53:05+00:00",
+   "checked_at": "2026-11-27T13:00:49+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -47,7 +47,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-11-26T13:53:05+00:00",
+   "checked_at": "2026-11-27T13:00:49+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -64,7 +64,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-11-26T13:53:05+00:00",
+   "checked_at": "2026-11-27T13:00:49+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -82,7 +82,7 @@
     "primary",
     "whatsnew"
    ],
-   "checked_at": "2026-11-26T13:53:05+00:00",
+   "checked_at": "2026-11-27T13:00:49+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -102,7 +102,7 @@
     }
    ],
    "total": 132,
-   "last_success_at": "2026-11-26T13:53:05+00:00"
+   "last_success_at": "2026-11-27T13:00:49+00:00"
   },
   {
    "id": "chabadlibrarybooks",
@@ -115,7 +115,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-11-26T13:53:06+00:00",
+   "checked_at": "2026-11-27T13:00:54+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -133,12 +133,12 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-26T13:53:06+00:00",
+   "checked_at": "2026-11-27T13:00:54+00:00",
    "status": "ok",
    "new": [],
    "latest": [],
    "total": 1501,
-   "last_success_at": "2026-11-26T13:53:06+00:00"
+   "last_success_at": "2026-11-27T13:00:54+00:00"
   },
   {
    "id": "chassidut_org",
@@ -152,12 +152,12 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-26T13:53:07+00:00",
+   "checked_at": "2026-11-27T13:00:55+00:00",
    "status": "ok",
    "new": [],
    "latest": [],
    "total": 4,
-   "last_success_at": "2026-11-26T13:53:07+00:00"
+   "last_success_at": "2026-11-27T13:00:55+00:00"
   },
   {
    "id": "biurim",
@@ -171,7 +171,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-26T13:53:08+00:00",
+   "checked_at": "2026-11-27T13:00:56+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -225,7 +225,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-26T13:53:08+00:00"
+   "last_success_at": "2026-11-27T13:00:56+00:00"
   },
   {
    "id": "hm_monsey",
@@ -239,7 +239,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-26T13:53:10+00:00",
+   "checked_at": "2026-11-27T13:00:58+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -260,6 +260,22 @@
      "first_seen": "2026-10-18T04:51:34+00:00"
     },
     {
+     "id": "https://heichalmenachemmonsey.org/?p=9896",
+     "title": "תורה אור-לקוטי תורה – הרב לימא ווילהעלם {לשמיעה בלבד} (מתעדכן)",
+     "url": "https://heichalmenachemmonsey.org/likutei_torah_lima/",
+     "date": "Sun, 22 Nov 2026 19:00:23 +0000",
+     "blurb": "שיעור שבועי שנמסר ב’היכל התורה – תפארת דוד’, עירמאנט כל יום ראשון 1:30-12:30 שיעור 13: מאמר ד”ה ויאבק איש עמו [פרשת וישלח, דף כו] – אך ברא הקב”ה קליפות שנלחמים עם הקדושה? ואיך מבטלים...",
+     "first_seen": "2026-10-18T04:51:34+00:00"
+    },
+    {
+     "id": "https://heichalmenachemmonsey.org/?p=10091",
+     "title": "המשך יו”ט של ר”ה תרס”ו – הרב משה אליהו גוראריה (מתעדכן)",
+     "url": "https://heichalmenachemmonsey.org/5666_moshe_gurary_monsey/",
+     "date": "Fri, 20 Nov 2026 04:45:50 +0000",
+     "blurb": "כל ליל שישי 11:00-10:00 להורדת חוברת המאמרים: “יו”ט של ר”ה”, “זה היום”, “שובה ישראל” לחצו כאן 3 – ד”ה יו”ט של ר”ה תרס”ו (ליל שישי פרשת ויצא תשפ”ז) 2 – ד”ה יו”ט של ר”ה...",
+     "first_seen": "2026-11-12T12:40:50+00:00"
+    },
+    {
      "id": "https://heichalmenachemmonsey.org/?p=9775",
      "title": "דרך מצותיך – הרב יוסף קליין (מתעדכן)",
      "url": "https://heichalmenachemmonsey.org/derech_mitzvosech_klyne/",
@@ -274,22 +290,6 @@
      "date": "Sun, 15 Nov 2026 20:00:58 +0000",
      "blurb": "תורה אור – ויצא, דף כג במסגרת שיעורו השבועי – בשידור חי – כל יום ראשון 2:15-1:15 אחה”צ להורדת המאמר לחצו כאן",
      "first_seen": "2026-11-18T13:01:05+00:00"
-    },
-    {
-     "id": "https://heichalmenachemmonsey.org/?p=9896",
-     "title": "תורה אור-לקוטי תורה – הרב לימא ווילהעלם {לשמיעה בלבד} (מתעדכן)",
-     "url": "https://heichalmenachemmonsey.org/likutei_torah_lima/",
-     "date": "Sun, 15 Nov 2026 19:00:23 +0000",
-     "blurb": "שיעור שבועי שנמסר ב’היכל התורה – תפארת דוד’, עירמאנט כל יום ראשון 1:30-12:30 שיעור 12: מאמר ד”ה ושבתי בשלום [פרשת ויצא, דף כא] – למה התעסקו האבות הקדושים בחפירות בארות ובעבודת ה’? (כ”ח מרחשון...",
-     "first_seen": "2026-10-18T04:51:34+00:00"
-    },
-    {
-     "id": "https://heichalmenachemmonsey.org/?p=10091",
-     "title": "המשך יו”ט של ר”ה תרס”ו – הרב משה אליהו גוראריה (מתעדכן)",
-     "url": "https://heichalmenachemmonsey.org/5666_moshe_gurary_monsey/",
-     "date": "Fri, 13 Nov 2026 04:45:50 +0000",
-     "blurb": "כל ליל שישי 11:00-10:00 להורדת חוברת המאמרים: “יו”ט של ר”ה”, “זה היום”, “שובה ישראל” לחצו כאן 2 – ד”ה יו”ט של ר”ה תרס”ו (ליל שישי פרשת תולדות תשפ”ז) 1 – ד”ה יו”ט של ר”ה...",
-     "first_seen": "2026-11-12T12:40:50+00:00"
     },
     {
      "id": "https://heichalmenachemmonsey.org/?p=10108",
@@ -333,7 +333,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-26T13:53:10+00:00"
+   "last_success_at": "2026-11-27T13:00:58+00:00"
   },
   {
    "id": "hiskashrus",
@@ -347,7 +347,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-26T13:53:12+00:00",
+   "checked_at": "2026-11-27T13:01:00+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -430,7 +430,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-26T13:53:12+00:00"
+   "last_success_at": "2026-11-27T13:01:00+00:00"
   },
   {
    "id": "lichyot_chassidus",
@@ -444,7 +444,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-26T13:53:13+00:00",
+   "checked_at": "2026-11-27T13:01:01+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -650,7 +650,7 @@
     }
    ],
    "total": 1000,
-   "last_success_at": "2026-11-26T13:53:13+00:00"
+   "last_success_at": "2026-11-27T13:01:01+00:00"
   },
   {
    "id": "chabadzoom",
@@ -664,7 +664,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-26T13:53:15+00:00",
+   "checked_at": "2026-11-27T13:01:04+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -859,7 +859,7 @@
     }
    ],
    "total": 568,
-   "last_success_at": "2026-11-26T13:53:15+00:00"
+   "last_success_at": "2026-11-27T13:01:04+00:00"
   },
   {
    "id": "kovtzimdrive",
@@ -873,7 +873,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-26T13:53:16+00:00",
+   "checked_at": "2026-11-27T13:01:10+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -881,12 +881,12 @@
      "id": "https://www.kovtzimdrive.com/posts/bochurim-build-database-of-thousands-of-%E2%80%98he%E2%80%99aros%E2%80%99",
      "title": "bochurim build database of thousands of ‘he’aros’",
      "url": "https://www.kovtzimdrive.com/posts/bochurim-build-database-of-thousands-of-%E2%80%98he%E2%80%99aros%E2%80%99",
-     "date": "2026-11-25",
+     "date": "2026-11-27",
      "first_seen": "2026-10-20T07:59:38+00:00"
     }
    ],
    "total": 1,
-   "last_success_at": "2026-11-26T13:53:16+00:00"
+   "last_success_at": "2026-11-27T13:01:10+00:00"
   },
   {
    "id": "avita",
@@ -900,7 +900,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-26T13:53:19+00:00",
+   "checked_at": "2026-11-27T13:01:13+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -918,7 +918,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-26T13:53:19+00:00",
+   "checked_at": "2026-11-27T13:01:13+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -940,7 +940,7 @@
     }
    ],
    "total": 2,
-   "last_success_at": "2026-11-26T13:53:19+00:00"
+   "last_success_at": "2026-11-27T13:01:13+00:00"
   },
   {
    "id": "dvarmalchus770",
@@ -954,7 +954,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-26T13:53:20+00:00",
+   "checked_at": "2026-11-27T13:01:14+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1120,7 +1120,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-26T13:53:20+00:00"
+   "last_success_at": "2026-11-27T13:01:14+00:00"
   },
   {
    "id": "soulwords",
@@ -1134,7 +1134,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-26T13:53:21+00:00",
+   "checked_at": "2026-11-27T13:01:15+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1204,7 +1204,7 @@
     }
    ],
    "total": 0,
-   "last_success_at": "2026-11-26T13:53:21+00:00"
+   "last_success_at": "2026-11-27T13:01:15+00:00"
   },
   {
    "id": "sie_weekly",
@@ -1218,7 +1218,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-26T13:53:22+00:00",
+   "checked_at": "2026-11-27T13:01:17+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1308,7 +1308,7 @@
     }
    ],
    "total": 120,
-   "last_success_at": "2026-11-26T13:53:22+00:00"
+   "last_success_at": "2026-11-27T13:01:17+00:00"
   },
   {
    "id": "pls",
@@ -1322,10 +1322,43 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-26T13:53:24+00:00",
+   "checked_at": "2026-11-27T13:01:18+00:00",
    "status": "ok",
-   "new": [],
+   "new": [
+    {
+     "id": "4e3fbbea-7633-4198-ba6f-fc179be7f01a",
+     "title": "Chelek 30, Vayeshev 1 - Rabbi Yaakov Moshe Wolberg",
+     "url": "https://sichaindepth.captivate.fm",
+     "date": "Fri, 27 Nov 2026 00:50:00 -0500",
+     "blurb": "Chelek 30, Vayeshev 1 - Rabbi Yaakov Moshe Wolberg",
+     "first_seen": "2026-11-27T13:01:18+00:00"
+    },
+    {
+     "id": "e3f92cb8-62fc-4fb9-97e1-7e4b1926f4d8",
+     "title": "Chelek 25, Vayeshev 2 - Rabbi Yaakov Moshe Wolberg",
+     "url": "https://sichaindepth.captivate.fm",
+     "date": "Thu, 26 Nov 2026 23:55:00 -0500",
+     "blurb": "Chelek 25, Vayeshev 2 - Rabbi Yaakov Moshe Wolberg",
+     "first_seen": "2026-11-27T13:01:18+00:00"
+    }
+   ],
    "latest": [
+    {
+     "id": "4e3fbbea-7633-4198-ba6f-fc179be7f01a",
+     "title": "Chelek 30, Vayeshev 1 - Rabbi Yaakov Moshe Wolberg",
+     "url": "https://sichaindepth.captivate.fm",
+     "date": "Fri, 27 Nov 2026 00:50:00 -0500",
+     "blurb": "Chelek 30, Vayeshev 1 - Rabbi Yaakov Moshe Wolberg",
+     "first_seen": "2026-11-27T13:01:18+00:00"
+    },
+    {
+     "id": "e3f92cb8-62fc-4fb9-97e1-7e4b1926f4d8",
+     "title": "Chelek 25, Vayeshev 2 - Rabbi Yaakov Moshe Wolberg",
+     "url": "https://sichaindepth.captivate.fm",
+     "date": "Thu, 26 Nov 2026 23:55:00 -0500",
+     "blurb": "Chelek 25, Vayeshev 2 - Rabbi Yaakov Moshe Wolberg",
+     "first_seen": "2026-11-27T13:01:18+00:00"
+    },
     {
      "id": "cd1e9e54-987b-429c-958b-ca0e51053667",
      "title": "Chelek 30, Vayishlach 1 - Rabbi Yaakov Moshe Wolberg",
@@ -1504,7 +1537,7 @@
     }
    ],
    "total": 200,
-   "last_success_at": "2026-11-26T13:53:24+00:00"
+   "last_success_at": "2026-11-27T13:01:18+00:00"
   },
   {
    "id": "chayenu_ls",
@@ -1518,7 +1551,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-26T13:53:25+00:00",
+   "checked_at": "2026-11-27T13:01:19+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1551,8 +1584,8 @@
      "first_seen": "2026-10-18T04:51:52+00:00"
     }
    ],
-   "total": 2,
-   "last_success_at": "2026-11-26T13:53:25+00:00"
+   "total": 1,
+   "last_success_at": "2026-11-27T13:01:19+00:00"
   },
   {
    "id": "weekly_sicha",
@@ -1566,7 +1599,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-26T13:53:27+00:00",
+   "checked_at": "2026-11-27T13:01:19+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1574,14 +1607,14 @@
      "id": "https://theweeklysicha.org/episode/tws-vayeitzei-87",
      "title": "tws vayeitzei 87",
      "url": "https://theweeklysicha.org/episode/tws-vayeitzei-87",
-     "date": "2026-11-26T13:00:40.346Z",
+     "date": "2026-11-26T19:00:42.618Z",
      "first_seen": "2026-11-20T12:52:04+00:00"
     },
     {
      "id": "https://theweeklysicha.org/episode/tws-vayishlach-87",
      "title": "tws vayishlach 87",
      "url": "https://theweeklysicha.org/episode/tws-vayishlach-87",
-     "date": "2026-11-26T13:00:06.400Z",
+     "date": "2026-11-26T19:00:08.008Z",
      "first_seen": "2026-11-26T13:10:59+00:00"
     },
     {
@@ -1649,7 +1682,7 @@
     }
    ],
    "total": 122,
-   "last_success_at": "2026-11-26T13:53:27+00:00"
+   "last_success_at": "2026-11-27T13:01:19+00:00"
   },
   {
    "id": "theyeshiva",
@@ -1663,10 +1696,34 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-26T13:53:28+00:00",
+   "checked_at": "2026-11-27T13:01:20+00:00",
    "status": "ok",
-   "new": [],
+   "new": [
+    {
+     "id": "https://www.theyeshiva.net/item/10039",
+     "title": "What If Hell and Paradise Are Just the End of Denial? - Thursday: Maamar Yafeh Sha'ah Achas #10",
+     "url": "https://www.theyeshiva.net/item/10039",
+     "date": "Thu, 26 Nov 2026 08:00:00 -0500",
+     "blurb": "Letting Go: How the Ache of Our Generation Can Open Us to the Bliss of Redemption What if paradise vs. hell is the experience of re-experiencing your life, but this time without denial? The imagery of fire and snow, snakes and scorpions, gives form to something deeply personal. Your own choices and passions come back to you, and this time you feel them from the deepest truth of who you are. You see your preciousness, your capacity to love, and the divine presence within your human life. From that place, you relive the moments you went numb to get through something, the years you spent trying to win approval, and the choices in which you betrayed your soul. The pleasure that once helped you escape can return as pain of equal intensity. You can finally feel what you gave up for that pleasure. And that very pain allows you to purge the filth and move freely into the bliss of oneness. The Mitteler Rebbe takes this a step further. In His grace, Hashem gives us a chance to go through this purging and cleansing in our lifetime. That is the startling meaning in Avraham’s prayer for Gehenom in this world. A person can have everything that looks like success and still feel an ache inside. Sometimes that ache is truth banging on the walls of a life we built to feel secure. We can patch the crack and reach for another layer of control, or we can let it open and see what our defenses have kept us from feeling. What feels like Hashem peeling away our skin may be the loss of a mask we have ",
+     "first_seen": "2026-11-27T13:01:20+00:00"
+    },
+    {
+     "id": "https://www.theyeshiva.net/item/2612",
+     "title": "Coal and Pearls: Discovering Your Light and your Bliss - Likkutei Sichos Yud-Tes Kislev",
+     "url": "https://www.theyeshiva.net/item/2612",
+     "date": "Thu, 26 Nov 2015 15:35:00 -0500",
+     "blurb": "The Dual Contribution of Chassidus to Judaism This text-based class, in Likkutei Sichos vol. 20 Yud Yes Kislev, explains the dual function of Chassidus, described both as coal and pearls. Coal is found in the earth; pearls in the sea. Coal are vital for life; pearls are luxury. For one, Chassidus presented a depth and sophisticated to Judaism that would allow it to withstand the onslaught of modernity in all of its manifestations. In addition, Chassidus introduced a new consciousness as a foretaste of the times of Moshiach. View Source Sheets: https://portal.theyeshiva.net/api/source-sheets/2612"
+    }
+   ],
    "latest": [
+    {
+     "id": "https://www.theyeshiva.net/item/10039",
+     "title": "What If Hell and Paradise Are Just the End of Denial? - Thursday: Maamar Yafeh Sha'ah Achas #10",
+     "url": "https://www.theyeshiva.net/item/10039",
+     "date": "Thu, 26 Nov 2026 08:00:00 -0500",
+     "blurb": "Letting Go: How the Ache of Our Generation Can Open Us to the Bliss of Redemption What if paradise vs. hell is the experience of re-experiencing your life, but this time without denial? The imagery of fire and snow, snakes and scorpions, gives form to something deeply personal. Your own choices and passions come back to you, and this time you feel them from the deepest truth of who you are. You see your preciousness, your capacity to love, and the divine presence within your human life. From that place, you relive the moments you went numb to get through something, the years you spent trying to win approval, and the choices in which you betrayed your soul. The pleasure that once helped you escape can return as pain of equal intensity. You can finally feel what you gave up for that pleasure. And that very pain allows you to purge the filth and move freely into the bliss of oneness. The Mitteler Rebbe takes this a step further. In His grace, Hashem gives us a chance to go through this purging and cleansing in our lifetime. That is the startling meaning in Avraham’s prayer for Gehenom in this world. A person can have everything that looks like success and still feel an ache inside. Sometimes that ache is truth banging on the walls of a life we built to feel secure. We can patch the crack and reach for another layer of control, or we can let it open and see what our defenses have kept us from feeling. What feels like Hashem peeling away our skin may be the loss of a mask we have ",
+     "first_seen": "2026-11-27T13:01:20+00:00"
+    },
     {
      "id": "https://www.theyeshiva.net/item/10038",
      "title": "What Did You Really See on Ayahuasca? - Wednesday: Maamar Yafeh Sha'ah Achas #9",
@@ -1876,8 +1933,8 @@
      "first_seen": "2026-10-20T07:59:51+00:00"
     }
    ],
-   "total": 1561,
-   "last_success_at": "2026-11-26T13:53:28+00:00"
+   "total": 1563,
+   "last_success_at": "2026-11-27T13:01:20+00:00"
   },
   {
    "id": "chassidus_applied",
@@ -1891,16 +1948,49 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-26T13:53:31+00:00",
+   "checked_at": "2026-11-27T13:01:23+00:00",
    "status": "ok",
-   "new": [],
+   "new": [
+    {
+     "id": "yt:video:Y2S0cpTHUhY",
+     "title": "Samach Vav Part 255: Two ways to serve G-d, and two types of souls: Son and servant",
+     "url": "https://www.youtube.com/watch?v=Y2S0cpTHUhY",
+     "date": "2026-11-27T04:27:02+00:00",
+     "blurb": "Samach Vav p. 206: [To understand the power of self-generated effort, which draws down new, unprecedented energy, and the way the light becomes integrated and revealed in existence, a lengthy discussion begins about two types of service and two types of souls: The soul of Atzilut is an extension of the Divine, and therefore serves like a son who has access to the inner revelations of the Divine. The soul of B’iya is a “new” entity outside the Divine and serves like a servant through hard work, earning its right to the divine through exertion (unlike a son who naturally inherits his father’s wealth). Essentially, the underlying theme is to explain how deep we can reach and how much it becomes ours; how new the revelation is and how much it is integrated into our beings; how we reach the essence and we also reveal it in our parameters.] Question: Why is there a need for avodah b'koach atzmo (self-generated effort), (why is self-generated effort ultimately necessary) and what is its contribution when the love and reverence from above is a superior state (of revelation)? (Answer in Maamar 26; 40-42. pp 519. 525. 532). There are two levels -- a son and a servant. At times souls are called sons, and at times servants. Specifically, there are two types of souls: 1. Servant -- soul from nara\"n of biy\"a, who has a rational understanding of G-d (\"knows G-d in a general way\"). 2. Son -- who has merited naranc\"h of atzilus, like a son who has intimate access to the “innermost chambers an",
+     "first_seen": "2026-11-27T13:01:23+00:00"
+    },
+    {
+     "id": "yt:video:M3D84DJhA4g",
+     "title": "Chapter 37.06: Building a Healthy World",
+     "url": "https://www.youtube.com/watch?v=M3D84DJhA4g",
+     "date": "2026-11-26T20:35:33+00:00",
+     "blurb": "Chapter 37.06: Building a Healthy World The Tanya Applied radio show is broadcast every Saturday night, 10–10:30PM ET on WSNR 620 AM – Metro NY area WJPR 1640 AM — Highland Park and Edison, NJ Online: www.talklinenetwork.com By phone: Listen Line: 641-741-0389 Many of us may be familiar with some of the central ideas in Tanya – including the battle of the two souls; what defines man and makes us tick; how we can control our temptations; how we can become more loving; what we can do to curb and harness our vices, like anger, jealousy, and depression; the formula for growth; how we can develop a healthy relationship with G-d; and why we are here. In this 30-minute program, you will learn how these ideas can be applied to your life today. You will discover secrets to a successful life that will transform you and your relationships. Rabbi Simon Jacobson is the best-selling author of Toward a Meaningful Life, and he is the creator of the acclaimed and popular MyLife: Chassidus Applied series, which has empowered and transformed hundreds of thousands through Torah and Chassidus. Now, Rabbi Jacobson brings his vast scholarship and years of experience to Tanya. Please join Rabbi Simon Jacobson for this exhilarating journey into your psyche and soul. You will come away with life-changing practical guidance and direction, addressing all the issues and challenges you face in life. For more info: www.chassidusapplied.com/tanya Music by Zalman Goldstein • www.ChabadMusic.coms of the Torah",
+     "first_seen": "2026-11-27T13:01:23+00:00"
+    }
+   ],
    "latest": [
     {
+     "id": "yt:video:Y2S0cpTHUhY",
+     "title": "Samach Vav Part 255: Two ways to serve G-d, and two types of souls: Son and servant",
+     "url": "https://www.youtube.com/watch?v=Y2S0cpTHUhY",
+     "date": "2026-11-27T04:27:02+00:00",
+     "blurb": "Samach Vav p. 206: [To understand the power of self-generated effort, which draws down new, unprecedented energy, and the way the light becomes integrated and revealed in existence, a lengthy discussion begins about two types of service and two types of souls: The soul of Atzilut is an extension of the Divine, and therefore serves like a son who has access to the inner revelations of the Divine. The soul of B’iya is a “new” entity outside the Divine and serves like a servant through hard work, earning its right to the divine through exertion (unlike a son who naturally inherits his father’s wealth). Essentially, the underlying theme is to explain how deep we can reach and how much it becomes ours; how new the revelation is and how much it is integrated into our beings; how we reach the essence and we also reveal it in our parameters.] Question: Why is there a need for avodah b'koach atzmo (self-generated effort), (why is self-generated effort ultimately necessary) and what is its contribution when the love and reverence from above is a superior state (of revelation)? (Answer in Maamar 26; 40-42. pp 519. 525. 532). There are two levels -- a son and a servant. At times souls are called sons, and at times servants. Specifically, there are two types of souls: 1. Servant -- soul from nara\"n of biy\"a, who has a rational understanding of G-d (\"knows G-d in a general way\"). 2. Son -- who has merited naranc\"h of atzilus, like a son who has intimate access to the “innermost chambers an",
+     "first_seen": "2026-11-27T13:01:23+00:00"
+    },
+    {
+     "id": "yt:video:M3D84DJhA4g",
+     "title": "Chapter 37.06: Building a Healthy World",
+     "url": "https://www.youtube.com/watch?v=M3D84DJhA4g",
+     "date": "2026-11-26T20:35:33+00:00",
+     "blurb": "Chapter 37.06: Building a Healthy World The Tanya Applied radio show is broadcast every Saturday night, 10–10:30PM ET on WSNR 620 AM – Metro NY area WJPR 1640 AM — Highland Park and Edison, NJ Online: www.talklinenetwork.com By phone: Listen Line: 641-741-0389 Many of us may be familiar with some of the central ideas in Tanya – including the battle of the two souls; what defines man and makes us tick; how we can control our temptations; how we can become more loving; what we can do to curb and harness our vices, like anger, jealousy, and depression; the formula for growth; how we can develop a healthy relationship with G-d; and why we are here. In this 30-minute program, you will learn how these ideas can be applied to your life today. You will discover secrets to a successful life that will transform you and your relationships. Rabbi Simon Jacobson is the best-selling author of Toward a Meaningful Life, and he is the creator of the acclaimed and popular MyLife: Chassidus Applied series, which has empowered and transformed hundreds of thousands through Torah and Chassidus. Now, Rabbi Jacobson brings his vast scholarship and years of experience to Tanya. Please join Rabbi Simon Jacobson for this exhilarating journey into your psyche and soul. You will come away with life-changing practical guidance and direction, addressing all the issues and challenges you face in life. For more info: www.chassidusapplied.com/tanya Music by Zalman Goldstein • www.ChabadMusic.coms of the Torah",
+     "first_seen": "2026-11-27T13:01:23+00:00"
+    },
+    {
      "id": "yt:video:YZXbgKRs7JY",
-     "title": "Samach Vav",
+     "title": "Samach Vav Part 254: Recognizing G-d's greatness in two ways; Ratzo v'shuv driven by koach atzmo",
      "url": "https://www.youtube.com/watch?v=YZXbgKRs7JY",
      "date": "2026-11-26T03:59:31+00:00",
-     "blurb": "",
+     "blurb": "Samach Vav p. 205-206: [Beginning of discourse 19:] Question: Why is Rosh Chodesh Nisan considered the beginning of the year, when Rosh Chodesh Tishrei is Rosh Hashana? We recognize G-d's greatness in two ways: 1. Through the unwavering consistency of nature. 2. Through miracles that suspend the laws of nature. Summary review: The soul, like a flame, is in a continuous movement of ratzo v'shuv. Inspiration from above inspires ratzo v'shuv, but its primary drive is avodah b'koach atzmo, both the ratzo, and even more so, the shuv, driven by the bittul and kabolas ol of the core soul.",
      "first_seen": "2026-11-26T13:11:03+00:00"
     },
     {
@@ -2289,7 +2379,7 @@
     }
    ],
    "total": 15,
-   "last_success_at": "2026-11-26T13:53:31+00:00"
+   "last_success_at": "2026-11-27T13:01:23+00:00"
   },
   {
    "id": "neirot",
@@ -2303,7 +2393,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-26T13:53:31+00:00",
+   "checked_at": "2026-11-27T13:01:23+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2365,7 +2455,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-26T13:53:31+00:00"
+   "last_success_at": "2026-11-27T13:01:23+00:00"
   },
   {
    "id": "chassidus_explained",
@@ -2379,10 +2469,18 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-26T13:53:34+00:00",
+   "checked_at": "2026-11-27T13:01:25+00:00",
    "status": "ok",
    "new": [],
    "latest": [
+    {
+     "id": "3ca0c5ce-1c70-4519-9b23-a54c5770aa13",
+     "title": "Mitteler Rebbe's Padah Beshalom part 6/9 שערי תשובה ד\"ה פדה בשלום (פרק ז-ח)",
+     "url": "https://podcasters.spotify.com/pod/show/chassidus-explained/episodes/Mitteler-Rebbes-Padah-Beshalom-part-69---------e3t1j3j",
+     "date": "Wed, 25 Nov 2026 22:25:34 GMT",
+     "blurb": "Link to מאמר PDF⁠⁠ Finishing the explanation of חיה, the מיטעלער רבי demonstrates how the strong ביטול of the נפש הבהמית to the נפש האלקית is merely a ביטול of its רצון, and not of the actual נפש, which means that the נפש might still revert back to its original status. The מיטעלער רבי then introduces the level of יחידה by first explaining the level of \"השתוות\" equilibrium. To explain this, the מיטעלער רבי launches into a fascinating exploration of the two polar experiences at a person's core being - pleasure and pain. The מיטעלער רבי explains how pain is only experienced by lack of pleasure, and as much pleasure as a person has from any given experience will dictate how much pain they will feel from the absence of that pleasure.",
+     "first_seen": "2026-11-26T13:11:05+00:00"
+    },
     {
      "id": "15d07da0-0617-47b4-abd8-082c03588fba",
      "title": "Mitteler Rebbe's Padah Beshalom part 5/9 שערי תשובה ד\"ה פדה בשלום (פרק ו-ז)",
@@ -2422,14 +2520,6 @@
      "date": "Tue, 20 Oct 2026 09:29:53 GMT",
      "blurb": "Link to מאמר PDF In honor of the 200th anniversary of the מיטעלער רבי's חג הגאולה, on י' כסלו תקפ\"ז, we are learning the father מאמר of the פדה בשלום מאמרים - the מיטעלער רבי's פדה בשלום, from his ספר שערי תשובה. We begin with the brief story of the arrest and liberation of י' כסלו, as well as the history of this ספר and מאמר. In פרק א, the מיטעלער רבי offers a fascinating insight into the nature of war: is it a display of distance between the two sides, or is it the moment of ultimate closeness? Why is it that to achieve the desired outcome of total victory one must bond with the enemy? Using this analogy to better understand the battle of the two נפשות, the מיטעלער רבי begins פרק ב describing two forms of Davening - a peaceful one, and a warring one.",
      "first_seen": "2026-10-21T05:57:38+00:00"
-    },
-    {
-     "id": "3ca0c5ce-1c70-4519-9b23-a54c5770aa13",
-     "title": "Mitteler Rebbe's Padah Beshalom part 6/9 שערי תשובה ד\"ה פדה בשלום (פרק ז-ח)",
-     "url": "https://podcasters.spotify.com/pod/show/chassidus-explained/episodes/Mitteler-Rebbes-Padah-Beshalom-part-69---------e3t1j3j",
-     "date": "Wed, 25 Nov 2026 22:25:34 GMT",
-     "blurb": "Link to מאמר PDF⁠⁠ Finishing the explanation of חיה, the מיטעלער רבי demonstrates how the strong ביטול of the נפש הבהמית to the נפש האלקית is merely a ביטול of its רצון, and not of the actual נפש, which means that the נפש might still revert back to its original status. The מיטעלער רבי then introduces the level of יחידה by first explaining the level of \"השתוות\" equilibrium. To explain this, the מיטעלער רבי launches into a fascinating exploration of the two polar experiences at a person's core being - pleasure and pain. The מיטעלער רבי explains how pain is only experienced by lack of pleasure, and as much pleasure as a person has from any given experience will dictate how much pain they will feel from the absence of that pleasure.",
-     "first_seen": "2026-11-26T13:11:05+00:00"
     },
     {
      "id": "fcfb1509-4666-44c0-8e6d-8eeaf5cf047b",
@@ -2472,8 +2562,8 @@
      "first_seen": "2026-10-18T04:52:00+00:00"
     }
    ],
-   "total": 139,
-   "last_success_at": "2026-11-26T13:53:34+00:00"
+   "total": 140,
+   "last_success_at": "2026-11-27T13:01:25+00:00"
   },
   {
    "id": "melukat",
@@ -2487,7 +2577,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-26T13:53:35+00:00",
+   "checked_at": "2026-11-27T13:01:26+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2549,7 +2639,7 @@
     }
    ],
    "total": 168,
-   "last_success_at": "2026-11-26T13:53:35+00:00"
+   "last_success_at": "2026-11-27T13:01:26+00:00"
   },
   {
    "id": "daily_maamar",
@@ -2563,10 +2653,27 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-26T13:53:36+00:00",
+   "checked_at": "2026-11-27T13:01:27+00:00",
    "status": "ok",
-   "new": [],
+   "new": [
+    {
+     "id": "12a1cd7b-c48a-491e-8b88-11225dc4331b",
+     "title": "Motzaei Sh”p Vayeitze 9/Ohr l’yud Kislev 5738 (B’Chedroi), Maamorim Melukatim Vol. 2– Episode 10",
+     "url": "https://share.transistor.fm/s/49646afd",
+     "date": "Thu, 26 Nov 2026 09:20:54 -0500",
+     "blurb": "This episode covers from Chapter 18 through Chapter 19. Three types of Teshuva.",
+     "first_seen": "2026-11-27T13:01:27+00:00"
+    }
+   ],
    "latest": [
+    {
+     "id": "12a1cd7b-c48a-491e-8b88-11225dc4331b",
+     "title": "Motzaei Sh”p Vayeitze 9/Ohr l’yud Kislev 5738 (B’Chedroi), Maamorim Melukatim Vol. 2– Episode 10",
+     "url": "https://share.transistor.fm/s/49646afd",
+     "date": "Thu, 26 Nov 2026 09:20:54 -0500",
+     "blurb": "This episode covers from Chapter 18 through Chapter 19. Three types of Teshuva.",
+     "first_seen": "2026-11-27T13:01:27+00:00"
+    },
     {
      "id": "cdcd98dc-ab3d-4875-9fbf-ed0a5691501b",
      "title": "Motzaei Sh”p Vayeitze 9/Ohr l’yud Kislev 5738 (B’Chedroi), Maamorim Melukatim Vol. 2– Episode 9",
@@ -2880,8 +2987,8 @@
      "first_seen": "2026-10-18T04:52:03+00:00"
     }
    ],
-   "total": 374,
-   "last_success_at": "2026-11-26T13:53:36+00:00"
+   "total": 375,
+   "last_success_at": "2026-11-27T13:01:27+00:00"
   },
   {
    "id": "wellsprings",
@@ -2895,7 +3002,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-26T13:53:37+00:00",
+   "checked_at": "2026-11-27T13:01:29+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2941,7 +3048,7 @@
     }
    ],
    "total": 125,
-   "last_success_at": "2026-11-26T13:53:37+00:00"
+   "last_success_at": "2026-11-27T13:01:29+00:00"
   },
   {
    "id": "daily_sicha",
@@ -2955,10 +3062,27 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-26T13:53:38+00:00",
+   "checked_at": "2026-11-27T13:01:30+00:00",
    "status": "ok",
-   "new": [],
+   "new": [
+    {
+     "id": "2026.11.27",
+     "title": "יום ועש\"ק פ' וישלח, י\"ז כסלו, ה'תשפ\"ז",
+     "url": "",
+     "date": "Fri, 27 Nov 2026 12:00:00 GMT",
+     "blurb": "התוכן מזה שחג הגאולה די\"ט כסלו נק' \"מועד תמידי \" ו\" ראש השנה\" מוכח, שהתועלת של תורת חסידות אינה רק בנוגע למצב וזמן מסויים , אלא ענין כללי . ויובן זה עפ\"י הבנת הלשון שנאמר בנוגע לתורת הבעש\"ט \" יפוצו מעיינותיך חוצה \": ענינו של \" מעיין \" הוא – מים חיים . שלכן, אע\"פ שרוב המעיינות מתחילין בטיפין טיפין , נעשה מזה הנהר הגדול שמימיו עולין על כל גדותיו, ועי\"ז \" והרוה את הארץ והולידה והצמיחה \" – התכלית של המעיין. וא\"כ מובן שה\"מעיין\" אינו ענין פרטי בלבד, אלא בו תלויים כל הענינים שתלויים במים. וחידוש החסידות הוא לא רק הפצת מי המעיין ל\"חוצה\", אלא גם המעיינות עצמם: מתחיל מ תורה – שכל ענין שאדם לומד בתורה, אפי' קטן בכמות , יהי' באופן של \" חדשים \" ממש – \" מעיין \" עצמו , וע\"י היגיעה ייצא מזה \"נהר גדול\". ומזה נמשך בהנהגותיו בעולם – חסידות מגלה בכ\"א את החיות והחמימות של ה\" מעיין \" שמוסתר בפנימיותו, ועי\"ז יש לו את הכח לא רק שלא להתפעל מהעולם, ה\" מדבר שממה \", אלא גם \"להרוות\" העולם ב\"מים חיים\", עד \" והצמיחה \". א' השיחות דהתוועדות י\"ט כסלו ה'תשכ\"ז ל\"הנחה פרטית\" או התרגום ללה\"ק של השיחה: https://thedailysicha.com/?date=27-11-2026 Synopsis The fact that 19 Kislev is called an “ eternal festival” and a Rosh Hashanah proves that the benefit of Chassidus is not limited to a particular circumstance or time, but an all-encompassing one. This can be understood based on the expression, “ unt il your wellsprings spread outward ”: A wellspring produces living water; therefore, even if it begins with mere drops , these eventually become a great river until “ it has watered the earth and has caused it to produc",
+     "first_seen": "2026-11-27T13:01:30+00:00"
+    }
+   ],
    "latest": [
+    {
+     "id": "2026.11.27",
+     "title": "יום ועש\"ק פ' וישלח, י\"ז כסלו, ה'תשפ\"ז",
+     "url": "",
+     "date": "Fri, 27 Nov 2026 12:00:00 GMT",
+     "blurb": "התוכן מזה שחג הגאולה די\"ט כסלו נק' \"מועד תמידי \" ו\" ראש השנה\" מוכח, שהתועלת של תורת חסידות אינה רק בנוגע למצב וזמן מסויים , אלא ענין כללי . ויובן זה עפ\"י הבנת הלשון שנאמר בנוגע לתורת הבעש\"ט \" יפוצו מעיינותיך חוצה \": ענינו של \" מעיין \" הוא – מים חיים . שלכן, אע\"פ שרוב המעיינות מתחילין בטיפין טיפין , נעשה מזה הנהר הגדול שמימיו עולין על כל גדותיו, ועי\"ז \" והרוה את הארץ והולידה והצמיחה \" – התכלית של המעיין. וא\"כ מובן שה\"מעיין\" אינו ענין פרטי בלבד, אלא בו תלויים כל הענינים שתלויים במים. וחידוש החסידות הוא לא רק הפצת מי המעיין ל\"חוצה\", אלא גם המעיינות עצמם: מתחיל מ תורה – שכל ענין שאדם לומד בתורה, אפי' קטן בכמות , יהי' באופן של \" חדשים \" ממש – \" מעיין \" עצמו , וע\"י היגיעה ייצא מזה \"נהר גדול\". ומזה נמשך בהנהגותיו בעולם – חסידות מגלה בכ\"א את החיות והחמימות של ה\" מעיין \" שמוסתר בפנימיותו, ועי\"ז יש לו את הכח לא רק שלא להתפעל מהעולם, ה\" מדבר שממה \", אלא גם \"להרוות\" העולם ב\"מים חיים\", עד \" והצמיחה \". א' השיחות דהתוועדות י\"ט כסלו ה'תשכ\"ז ל\"הנחה פרטית\" או התרגום ללה\"ק של השיחה: https://thedailysicha.com/?date=27-11-2026 Synopsis The fact that 19 Kislev is called an “ eternal festival” and a Rosh Hashanah proves that the benefit of Chassidus is not limited to a particular circumstance or time, but an all-encompassing one. This can be understood based on the expression, “ unt il your wellsprings spread outward ”: A wellspring produces living water; therefore, even if it begins with mere drops , these eventually become a great river until “ it has watered the earth and has caused it to produc",
+     "first_seen": "2026-11-27T13:01:30+00:00"
+    },
     {
      "id": "2026.11.26",
      "title": "יום ה' פ' וישלח, ט\"ז כסלו, ה'תשפ\"ז",
@@ -3272,8 +3396,8 @@
      "first_seen": "2026-10-18T04:52:06+00:00"
     }
    ],
-   "total": 1438,
-   "last_success_at": "2026-11-26T13:53:38+00:00"
+   "total": 1439,
+   "last_success_at": "2026-11-27T13:01:30+00:00"
   },
   {
    "id": "learnchassidus",
@@ -3287,7 +3411,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-26T13:53:43+00:00",
+   "checked_at": "2026-11-27T13:01:34+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -3299,8 +3423,8 @@
      "first_seen": "2026-10-24T08:52:39+00:00"
     }
    ],
-   "total": 5,
-   "last_success_at": "2026-11-26T13:53:43+00:00"
+   "total": 1,
+   "last_success_at": "2026-11-27T13:01:34+00:00"
   },
   {
    "id": "simplychassidus",
@@ -3314,7 +3438,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-26T13:53:43+00:00",
+   "checked_at": "2026-11-27T13:01:34+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -3341,7 +3465,7 @@
     }
    ],
    "total": 4,
-   "last_success_at": "2026-11-26T13:53:43+00:00"
+   "last_success_at": "2026-11-27T13:01:34+00:00"
   },
   {
    "id": "alonei_chabad",
@@ -3354,7 +3478,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-26T13:53:45+00:00",
+   "checked_at": "2026-11-27T13:01:35+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -3371,7 +3495,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-26T13:53:45+00:00",
+   "checked_at": "2026-11-27T13:01:35+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -3388,7 +3512,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-26T13:53:45+00:00",
+   "checked_at": "2026-11-27T13:01:35+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -3415,7 +3539,7 @@
     }
    ],
    "total": 303,
-   "last_success_at": "2026-11-26T13:53:45+00:00"
+   "last_success_at": "2026-11-27T13:01:35+00:00"
   },
   {
    "id": "lchaim",
@@ -3428,7 +3552,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-26T13:53:46+00:00",
+   "checked_at": "2026-11-27T13:01:35+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -3504,7 +3628,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-26T13:53:46+00:00"
+   "last_success_at": "2026-11-27T13:01:35+00:00"
   },
   {
    "id": "one_point",
@@ -3517,7 +3641,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-26T13:53:47+00:00",
+   "checked_at": "2026-11-27T13:01:37+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -3558,7 +3682,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-26T13:53:47+00:00"
+   "last_success_at": "2026-11-27T13:01:37+00:00"
   },
   {
    "id": "derher",
@@ -3571,7 +3695,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-26T13:53:49+00:00",
+   "checked_at": "2026-11-27T13:01:38+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -3588,7 +3712,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-26T13:53:49+00:00",
+   "checked_at": "2026-11-27T13:01:38+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -3605,7 +3729,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-26T13:53:49+00:00",
+   "checked_at": "2026-11-27T13:01:38+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -3709,7 +3833,7 @@
     }
    ],
    "total": 4,
-   "last_success_at": "2026-11-26T13:53:49+00:00"
+   "last_success_at": "2026-11-27T13:01:38+00:00"
   },
   {
    "id": "maynotecha_inst",
@@ -3722,7 +3846,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-26T13:53:51+00:00",
+   "checked_at": "2026-11-27T13:01:38+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -3739,7 +3863,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-26T13:53:51+00:00",
+   "checked_at": "2026-11-27T13:01:38+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -3793,7 +3917,7 @@
     }
    ],
    "total": 1,
-   "last_success_at": "2026-11-26T13:53:51+00:00"
+   "last_success_at": "2026-11-27T13:01:38+00:00"
   },
   {
    "id": "anash",
@@ -3806,10 +3930,59 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-26T13:53:52+00:00",
+   "checked_at": "2026-11-27T13:01:39+00:00",
    "status": "ok",
-   "new": [],
+   "new": [
+    {
+     "id": "https://anash.org/?p=1138647",
+     "title": "‘Is Chabad for Everyone?’ A Debate on Living Chassidus",
+     "url": "https://anash.org/is-chabad-for-everyone-a-debate-on-living-chassidus/",
+     "date": "Fri, 27 Nov 2026 05:08:21 +0000",
+     "blurb": "Over twelve letters, Rabbi Chaim Chazan , mashpia in Pomona, NY, and a Litvishe friend, explore the nature of Chabad Chassidus, questioning whether its approach of avodah pnimis is within reach of the average person in our times.",
+     "first_seen": "2026-11-27T13:01:39+00:00"
+    },
+    {
+     "id": "https://anash.org/?p=1138294",
+     "title": "The Rebbe Read Our Basement Play About the Alter Rebbe’s Arrest",
+     "url": "https://anash.org/the-rebbe-read-our-basement-play-about-the-alter-rebbes-arrest/",
+     "date": "Thu, 26 Nov 2026 23:00:46 +0000",
+     "blurb": "When nine-year-old Chaim Block and his classmates put on a Yud Tes Kislev play to raise money for a pencil sharpener, the Rebbe’s reply to their script arrived by special delivery on Shabbos.",
+     "first_seen": "2026-11-27T13:01:39+00:00"
+    },
+    {
+     "id": "https://anash.org/?p=1138268",
+     "title": "Yud Tes Kislev Farbrengens in Crown Heights and Beyond",
+     "url": "https://anash.org/yud-tes-kislev-farbrengens-in-crown-heights-and-beyond/",
+     "date": "Thu, 26 Nov 2026 19:50:00 +0000",
+     "blurb": "Farbrengens will be held in Anash communities across the U.S. and Canada to mark Yud Tes Kislev, the chag hageulah of the Alter Rebbe and the Rosh Hashana of Chassidus. Find a farbrengen near you in Anash.org’s list.",
+     "first_seen": "2026-11-27T13:01:39+00:00"
+    }
+   ],
    "latest": [
+    {
+     "id": "https://anash.org/?p=1138647",
+     "title": "‘Is Chabad for Everyone?’ A Debate on Living Chassidus",
+     "url": "https://anash.org/is-chabad-for-everyone-a-debate-on-living-chassidus/",
+     "date": "Fri, 27 Nov 2026 05:08:21 +0000",
+     "blurb": "Over twelve letters, Rabbi Chaim Chazan , mashpia in Pomona, NY, and a Litvishe friend, explore the nature of Chabad Chassidus, questioning whether its approach of avodah pnimis is within reach of the average person in our times.",
+     "first_seen": "2026-11-27T13:01:39+00:00"
+    },
+    {
+     "id": "https://anash.org/?p=1138294",
+     "title": "The Rebbe Read Our Basement Play About the Alter Rebbe’s Arrest",
+     "url": "https://anash.org/the-rebbe-read-our-basement-play-about-the-alter-rebbes-arrest/",
+     "date": "Thu, 26 Nov 2026 23:00:46 +0000",
+     "blurb": "When nine-year-old Chaim Block and his classmates put on a Yud Tes Kislev play to raise money for a pencil sharpener, the Rebbe’s reply to their script arrived by special delivery on Shabbos.",
+     "first_seen": "2026-11-27T13:01:39+00:00"
+    },
+    {
+     "id": "https://anash.org/?p=1138268",
+     "title": "Yud Tes Kislev Farbrengens in Crown Heights and Beyond",
+     "url": "https://anash.org/yud-tes-kislev-farbrengens-in-crown-heights-and-beyond/",
+     "date": "Thu, 26 Nov 2026 19:50:00 +0000",
+     "blurb": "Farbrengens will be held in Anash communities across the U.S. and Canada to mark Yud Tes Kislev, the chag hageulah of the Alter Rebbe and the Rosh Hashana of Chassidus. Find a farbrengen near you in Anash.org’s list.",
+     "first_seen": "2026-11-27T13:01:39+00:00"
+    },
     {
      "id": "https://anash.org/?p=1137909",
      "title": "Yud Tes Kislev Celebrations Open at Tzama Chassidus Week",
@@ -4356,7 +4529,7 @@
     }
    ],
    "total": 5,
-   "last_success_at": "2026-11-26T13:53:52+00:00"
+   "last_success_at": "2026-11-27T13:01:39+00:00"
   },
   {
    "id": "collive",
@@ -4369,7 +4542,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-26T13:53:53+00:00",
+   "checked_at": "2026-11-27T13:01:40+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -4386,7 +4559,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-26T13:53:53+00:00",
+   "checked_at": "2026-11-27T13:01:40+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -4403,7 +4576,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-26T13:53:53+00:00",
+   "checked_at": "2026-11-27T13:01:40+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -4465,7 +4638,7 @@
     }
    ],
    "total": 19,
-   "last_success_at": "2026-11-26T13:53:53+00:00"
+   "last_success_at": "2026-11-27T13:01:40+00:00"
   },
   {
    "id": "abc770",
@@ -4478,7 +4651,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-26T13:53:55+00:00",
+   "checked_at": "2026-11-27T13:01:42+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -4524,7 +4697,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-26T13:53:55+00:00"
+   "last_success_at": "2026-11-27T13:01:42+00:00"
   },
   {
    "id": "kehot",
@@ -4537,7 +4710,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-26T13:53:58+00:00",
+   "checked_at": "2026-11-27T13:01:44+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -5247,7 +5420,7 @@
     }
    ],
    "total": 197,
-   "last_success_at": "2026-11-26T13:53:58+00:00"
+   "last_success_at": "2026-11-27T13:01:44+00:00"
   }
  ],
  "browser_checks": {
