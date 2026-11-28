@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-27T13:51:29+00:00",
+ "generated_at": "2026-11-28T12:59:35+00:00",
  "sources": [
   {
    "id": "chabadlibrary",
@@ -12,7 +12,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-11-27T13:50:14+00:00",
+   "checked_at": "2026-11-28T12:58:17+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -30,7 +30,7 @@
     "primary",
     "whatsnew"
    ],
-   "checked_at": "2026-11-27T13:50:14+00:00",
+   "checked_at": "2026-11-28T12:58:17+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -47,7 +47,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-11-27T13:50:14+00:00",
+   "checked_at": "2026-11-28T12:58:17+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -64,7 +64,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-11-27T13:50:14+00:00",
+   "checked_at": "2026-11-28T12:58:17+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -82,7 +82,7 @@
     "primary",
     "whatsnew"
    ],
-   "checked_at": "2026-11-27T13:50:14+00:00",
+   "checked_at": "2026-11-28T12:58:17+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -102,7 +102,7 @@
     }
    ],
    "total": 132,
-   "last_success_at": "2026-11-27T13:50:14+00:00"
+   "last_success_at": "2026-11-28T12:58:17+00:00"
   },
   {
    "id": "chabadlibrarybooks",
@@ -115,7 +115,7 @@
    "sections": [
     "primary"
    ],
-   "checked_at": "2026-11-27T13:50:15+00:00",
+   "checked_at": "2026-11-28T12:58:17+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -133,12 +133,12 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-27T13:50:15+00:00",
+   "checked_at": "2026-11-28T12:58:17+00:00",
    "status": "ok",
    "new": [],
    "latest": [],
    "total": 1501,
-   "last_success_at": "2026-11-27T13:50:15+00:00"
+   "last_success_at": "2026-11-28T12:58:17+00:00"
   },
   {
    "id": "chassidut_org",
@@ -152,12 +152,12 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-27T13:50:16+00:00",
+   "checked_at": "2026-11-28T12:58:19+00:00",
    "status": "ok",
    "new": [],
    "latest": [],
    "total": 4,
-   "last_success_at": "2026-11-27T13:50:16+00:00"
+   "last_success_at": "2026-11-28T12:58:19+00:00"
   },
   {
    "id": "biurim",
@@ -171,7 +171,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-27T13:50:17+00:00",
+   "checked_at": "2026-11-28T12:58:20+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -225,7 +225,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-27T13:50:17+00:00"
+   "last_success_at": "2026-11-28T12:58:20+00:00"
   },
   {
    "id": "hm_monsey",
@@ -239,7 +239,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-27T13:50:19+00:00",
+   "checked_at": "2026-11-28T12:58:22+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -333,7 +333,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-27T13:50:19+00:00"
+   "last_success_at": "2026-11-28T12:58:22+00:00"
   },
   {
    "id": "hiskashrus",
@@ -347,7 +347,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-27T13:50:21+00:00",
+   "checked_at": "2026-11-28T12:58:24+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -430,7 +430,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-27T13:50:21+00:00"
+   "last_success_at": "2026-11-28T12:58:24+00:00"
   },
   {
    "id": "lichyot_chassidus",
@@ -444,7 +444,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-27T13:50:22+00:00",
+   "checked_at": "2026-11-28T12:58:25+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -650,7 +650,7 @@
     }
    ],
    "total": 1000,
-   "last_success_at": "2026-11-27T13:50:22+00:00"
+   "last_success_at": "2026-11-28T12:58:25+00:00"
   },
   {
    "id": "chabadzoom",
@@ -664,7 +664,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-27T13:50:24+00:00",
+   "checked_at": "2026-11-28T12:58:27+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -859,7 +859,7 @@
     }
    ],
    "total": 568,
-   "last_success_at": "2026-11-27T13:50:24+00:00"
+   "last_success_at": "2026-11-28T12:58:27+00:00"
   },
   {
    "id": "kovtzimdrive",
@@ -873,7 +873,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-27T13:50:27+00:00",
+   "checked_at": "2026-11-28T12:58:30+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -886,7 +886,7 @@
     }
    ],
    "total": 1,
-   "last_success_at": "2026-11-27T13:50:27+00:00"
+   "last_success_at": "2026-11-28T12:58:30+00:00"
   },
   {
    "id": "avita",
@@ -900,7 +900,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-27T13:50:29+00:00",
+   "checked_at": "2026-11-28T12:58:32+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -918,7 +918,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-27T13:50:29+00:00",
+   "checked_at": "2026-11-28T12:58:32+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -940,7 +940,7 @@
     }
    ],
    "total": 2,
-   "last_success_at": "2026-11-27T13:50:29+00:00"
+   "last_success_at": "2026-11-28T12:58:32+00:00"
   },
   {
    "id": "dvarmalchus770",
@@ -954,7 +954,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-27T13:50:31+00:00",
+   "checked_at": "2026-11-28T12:58:34+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1120,7 +1120,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-27T13:50:31+00:00"
+   "last_success_at": "2026-11-28T12:58:34+00:00"
   },
   {
    "id": "soulwords",
@@ -1134,7 +1134,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-27T13:50:32+00:00",
+   "checked_at": "2026-11-28T12:58:35+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1204,7 +1204,7 @@
     }
    ],
    "total": 0,
-   "last_success_at": "2026-11-27T13:50:32+00:00"
+   "last_success_at": "2026-11-28T12:58:35+00:00"
   },
   {
    "id": "sie_weekly",
@@ -1218,7 +1218,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-27T13:50:33+00:00",
+   "checked_at": "2026-11-28T12:58:36+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1308,7 +1308,7 @@
     }
    ],
    "total": 120,
-   "last_success_at": "2026-11-27T13:50:33+00:00"
+   "last_success_at": "2026-11-28T12:58:36+00:00"
   },
   {
    "id": "pls",
@@ -1322,7 +1322,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-27T13:50:35+00:00",
+   "checked_at": "2026-11-28T12:58:37+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1520,7 +1520,7 @@
     }
    ],
    "total": 200,
-   "last_success_at": "2026-11-27T13:50:35+00:00"
+   "last_success_at": "2026-11-28T12:58:37+00:00"
   },
   {
    "id": "chayenu_ls",
@@ -1534,7 +1534,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-27T13:50:36+00:00",
+   "checked_at": "2026-11-28T12:58:39+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1568,7 +1568,7 @@
     }
    ],
    "total": 2,
-   "last_success_at": "2026-11-27T13:50:36+00:00"
+   "last_success_at": "2026-11-28T12:58:39+00:00"
   },
   {
    "id": "weekly_sicha",
@@ -1582,23 +1582,23 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-27T13:50:37+00:00",
+   "checked_at": "2026-11-28T12:58:40+00:00",
    "status": "ok",
    "new": [],
    "latest": [
     {
-     "id": "https://theweeklysicha.org/episode/tws-vayeitzei-87",
-     "title": "tws vayeitzei 87",
-     "url": "https://theweeklysicha.org/episode/tws-vayeitzei-87",
-     "date": "2026-11-26T19:00:42.618Z",
-     "first_seen": "2026-11-20T12:52:04+00:00"
-    },
-    {
      "id": "https://theweeklysicha.org/episode/tws-vayishlach-87",
      "title": "tws vayishlach 87",
      "url": "https://theweeklysicha.org/episode/tws-vayishlach-87",
-     "date": "2026-11-26T19:00:08.008Z",
+     "date": "2026-11-28T10:00:13.474Z",
      "first_seen": "2026-11-26T13:10:59+00:00"
+    },
+    {
+     "id": "https://theweeklysicha.org/episode/tws-vayeitzei-87",
+     "title": "tws vayeitzei 87",
+     "url": "https://theweeklysicha.org/episode/tws-vayeitzei-87",
+     "date": "2026-11-28T08:00:43.798Z",
+     "first_seen": "2026-11-20T12:52:04+00:00"
     },
     {
      "id": "https://theweeklysicha.org/episode/tws-toldos-87",
@@ -1665,7 +1665,7 @@
     }
    ],
    "total": 122,
-   "last_success_at": "2026-11-27T13:50:37+00:00"
+   "last_success_at": "2026-11-28T12:58:40+00:00"
   },
   {
    "id": "theyeshiva",
@@ -1679,7 +1679,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-27T13:50:39+00:00",
+   "checked_at": "2026-11-28T12:58:41+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -1901,7 +1901,7 @@
     }
    ],
    "total": 1563,
-   "last_success_at": "2026-11-27T13:50:39+00:00"
+   "last_success_at": "2026-11-28T12:58:41+00:00"
   },
   {
    "id": "chassidus_applied",
@@ -1915,16 +1915,33 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-27T13:50:42+00:00",
+   "checked_at": "2026-11-28T12:58:44+00:00",
    "status": "ok",
-   "new": [],
+   "new": [
+    {
+     "id": "yt:video:QhgBnSWe5NQ",
+     "title": "Samach Vav Part 256:",
+     "url": "https://www.youtube.com/watch?v=QhgBnSWe5NQ",
+     "date": "2026-11-28T04:03:51+00:00",
+     "blurb": "Samach Vav p. 207: There are two levels -- a son and a servant. At times souls are called sons, and at times servants. Specifically, there are two types of souls: 1. Servant -- soul from nara\"n of biy\"a, who has a rational understanding of G-d (\"knows G-d in a general way\"). 2. Son -- who has merited naranc\"h of atzilus, like a son who has intimate access to the “innermost chambers and secrets of his fathers’ home” (\"knows G-d in a specific way,\" students of Kabbalah). Both these levels of souls (son and servant) are produced through the union of z\"a and malchus of atzilus. (Zu\"n of beriya creates angels, but not souls. Souls of atzilus mamash are born through the union of abba and ima).",
+     "first_seen": "2026-11-28T12:58:44+00:00"
+    }
+   ],
    "latest": [
+    {
+     "id": "yt:video:QhgBnSWe5NQ",
+     "title": "Samach Vav Part 256:",
+     "url": "https://www.youtube.com/watch?v=QhgBnSWe5NQ",
+     "date": "2026-11-28T04:03:51+00:00",
+     "blurb": "Samach Vav p. 207: There are two levels -- a son and a servant. At times souls are called sons, and at times servants. Specifically, there are two types of souls: 1. Servant -- soul from nara\"n of biy\"a, who has a rational understanding of G-d (\"knows G-d in a general way\"). 2. Son -- who has merited naranc\"h of atzilus, like a son who has intimate access to the “innermost chambers and secrets of his fathers’ home” (\"knows G-d in a specific way,\" students of Kabbalah). Both these levels of souls (son and servant) are produced through the union of z\"a and malchus of atzilus. (Zu\"n of beriya creates angels, but not souls. Souls of atzilus mamash are born through the union of abba and ima).",
+     "first_seen": "2026-11-28T12:58:44+00:00"
+    },
     {
      "id": "yt:video:Y2S0cpTHUhY",
      "title": "Samach Vav Part 255: Two ways to serve G-d, and two types of souls: Son and servant",
      "url": "https://www.youtube.com/watch?v=Y2S0cpTHUhY",
      "date": "2026-11-27T04:27:02+00:00",
-     "blurb": "Samach Vav p. 206: [To understand the power of self-generated effort, which draws down new, unprecedented energy, and the way the light becomes integrated and revealed in existence, a lengthy discussion begins about two types of service and two types of souls: The soul of Atzilut is an extension of the Divine, and therefore serves like a son who has access to the inner revelations of the Divine. The soul of B’iya is a “new” entity outside the Divine and serves like a servant through hard work, earning its right to the divine through exertion (unlike a son who naturally inherits his father’s wealth). Essentially, the underlying theme is to explain how deep we can reach and how much it becomes ours; how new the revelation is and how much it is integrated into our beings; how we reach the essence and we also reveal it in our parameters.] Question: Why is there a need for avodah b'koach atzmo (self-generated effort), (why is self-generated effort ultimately necessary) and what is its contribution when the love and reverence from above is a superior state (of revelation)? (Answer in Maamar 26; 40-42. pp 519. 525. 532). There are two levels -- a son and a servant. At times souls are called sons, and at times servants. Specifically, there are two types of souls: 1. Servant -- soul from nara\"n of biy\"a, who has a rational understanding of G-d (\"knows G-d in a general way\"). 2. Son -- who has merited naranc\"h of atzilus, like a son who has intimate access to the “innermost chambers an",
+     "blurb": "Samach Vav p. 206-207: [To understand the power of self-generated effort, which draws down new, unprecedented energy, and the way the light becomes integrated and revealed in existence, a lengthy discussion begins about two types of service and two types of souls: The soul of Atzilut is an extension of the Divine, and therefore serves like a son who has access to the inner revelations of the Divine. The soul of B’iya is a “new” entity outside the Divine and serves like a servant through hard work, earning its right to the divine through exertion (unlike a son who naturally inherits his father’s wealth). Essentially, the underlying theme is to explain how deep we can reach and how much it becomes ours; how new the revelation is and how much it is integrated into our beings; how we reach the essence and we also reveal it in our parameters.] Question: Why is there a need for avodah b'koach atzmo (self-generated effort), (why is self-generated effort ultimately necessary) and what is its contribution when the love and reverence from above is a superior state (of revelation)? (Answer in Maamar 26; 40-42. pp 519. 525. 532). There are two levels -- a son and a servant. At times souls are called sons, and at times servants. Specifically, there are two types of souls: 1. Servant -- soul from nara\"n of biy\"a, who has a rational understanding of G-d (\"knows G-d in a general way\"). 2. Son -- who has merited naranc\"h of atzilus, like a son who has intimate access to the “innermost chamber",
      "first_seen": "2026-11-27T13:01:23+00:00"
     },
     {
@@ -2329,7 +2346,7 @@
     }
    ],
    "total": 15,
-   "last_success_at": "2026-11-27T13:50:42+00:00"
+   "last_success_at": "2026-11-28T12:58:44+00:00"
   },
   {
    "id": "neirot",
@@ -2343,7 +2360,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-27T13:50:42+00:00",
+   "checked_at": "2026-11-28T12:58:45+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2405,7 +2422,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-27T13:50:42+00:00"
+   "last_success_at": "2026-11-28T12:58:45+00:00"
   },
   {
    "id": "chassidus_explained",
@@ -2419,7 +2436,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-27T13:50:45+00:00",
+   "checked_at": "2026-11-28T12:58:49+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2513,7 +2530,7 @@
     }
    ],
    "total": 140,
-   "last_success_at": "2026-11-27T13:50:45+00:00"
+   "last_success_at": "2026-11-28T12:58:49+00:00"
   },
   {
    "id": "melukat",
@@ -2527,7 +2544,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-27T13:50:46+00:00",
+   "checked_at": "2026-11-28T12:58:50+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2589,7 +2606,7 @@
     }
    ],
    "total": 168,
-   "last_success_at": "2026-11-27T13:50:46+00:00"
+   "last_success_at": "2026-11-28T12:58:50+00:00"
   },
   {
    "id": "daily_maamar",
@@ -2603,10 +2620,27 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-27T13:50:47+00:00",
+   "checked_at": "2026-11-28T12:58:51+00:00",
    "status": "ok",
-   "new": [],
+   "new": [
+    {
+     "id": "488db6b1-688c-411c-930e-311677531289",
+     "title": "Motzaei Sh”p Vayeitze 9/Ohr l’yud Kislev 5738 (B’Chedroi), Maamorim Melukatim Vol. 2– Episode 11",
+     "url": "https://share.transistor.fm/s/42687276",
+     "date": "Fri, 27 Nov 2026 09:24:09 -0500",
+     "blurb": "This episode covers from Chapter 20 through Chapter 21. Changing the world is what it's all about.",
+     "first_seen": "2026-11-28T12:58:51+00:00"
+    }
+   ],
    "latest": [
+    {
+     "id": "488db6b1-688c-411c-930e-311677531289",
+     "title": "Motzaei Sh”p Vayeitze 9/Ohr l’yud Kislev 5738 (B’Chedroi), Maamorim Melukatim Vol. 2– Episode 11",
+     "url": "https://share.transistor.fm/s/42687276",
+     "date": "Fri, 27 Nov 2026 09:24:09 -0500",
+     "blurb": "This episode covers from Chapter 20 through Chapter 21. Changing the world is what it's all about.",
+     "first_seen": "2026-11-28T12:58:51+00:00"
+    },
     {
      "id": "12a1cd7b-c48a-491e-8b88-11225dc4331b",
      "title": "Motzaei Sh”p Vayeitze 9/Ohr l’yud Kislev 5738 (B’Chedroi), Maamorim Melukatim Vol. 2– Episode 10",
@@ -2928,8 +2962,8 @@
      "first_seen": "2026-10-18T04:52:03+00:00"
     }
    ],
-   "total": 375,
-   "last_success_at": "2026-11-27T13:50:47+00:00"
+   "total": 376,
+   "last_success_at": "2026-11-28T12:58:51+00:00"
   },
   {
    "id": "wellsprings",
@@ -2943,7 +2977,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-27T13:50:49+00:00",
+   "checked_at": "2026-11-28T12:58:53+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -2989,7 +3023,7 @@
     }
    ],
    "total": 125,
-   "last_success_at": "2026-11-27T13:50:49+00:00"
+   "last_success_at": "2026-11-28T12:58:53+00:00"
   },
   {
    "id": "daily_sicha",
@@ -3003,7 +3037,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-27T13:50:50+00:00",
+   "checked_at": "2026-11-28T12:58:54+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -3329,7 +3363,7 @@
     }
    ],
    "total": 1439,
-   "last_success_at": "2026-11-27T13:50:50+00:00"
+   "last_success_at": "2026-11-28T12:58:54+00:00"
   },
   {
    "id": "learnchassidus",
@@ -3343,7 +3377,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-27T13:50:56+00:00",
+   "checked_at": "2026-11-28T12:59:00+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -3356,7 +3390,7 @@
     }
    ],
    "total": 5,
-   "last_success_at": "2026-11-27T13:50:56+00:00"
+   "last_success_at": "2026-11-28T12:59:00+00:00"
   },
   {
    "id": "simplychassidus",
@@ -3370,7 +3404,7 @@
     "trigger",
     "whatsnew"
    ],
-   "checked_at": "2026-11-27T13:50:56+00:00",
+   "checked_at": "2026-11-28T12:59:01+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -3397,7 +3431,7 @@
     }
    ],
    "total": 4,
-   "last_success_at": "2026-11-27T13:50:56+00:00"
+   "last_success_at": "2026-11-28T12:59:01+00:00"
   },
   {
    "id": "alonei_chabad",
@@ -3410,7 +3444,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-27T13:50:58+00:00",
+   "checked_at": "2026-11-28T12:59:02+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -3427,7 +3461,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-27T13:50:58+00:00",
+   "checked_at": "2026-11-28T12:59:02+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -3444,7 +3478,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-27T13:50:58+00:00",
+   "checked_at": "2026-11-28T12:59:02+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -3471,7 +3505,7 @@
     }
    ],
    "total": 303,
-   "last_success_at": "2026-11-27T13:50:58+00:00"
+   "last_success_at": "2026-11-28T12:59:02+00:00"
   },
   {
    "id": "lchaim",
@@ -3484,7 +3518,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-27T13:50:59+00:00",
+   "checked_at": "2026-11-28T12:59:03+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -3560,7 +3594,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-27T13:50:59+00:00"
+   "last_success_at": "2026-11-28T12:59:03+00:00"
   },
   {
    "id": "one_point",
@@ -3573,7 +3607,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-27T13:51:00+00:00",
+   "checked_at": "2026-11-28T12:59:05+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -3614,7 +3648,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-27T13:51:00+00:00"
+   "last_success_at": "2026-11-28T12:59:05+00:00"
   },
   {
    "id": "derher",
@@ -3627,7 +3661,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-27T13:51:02+00:00",
+   "checked_at": "2026-11-28T12:59:06+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -3644,7 +3678,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-27T13:51:02+00:00",
+   "checked_at": "2026-11-28T12:59:06+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -3661,7 +3695,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-27T13:51:02+00:00",
+   "checked_at": "2026-11-28T12:59:06+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -3764,8 +3798,8 @@
      "first_seen": "2026-10-18T04:52:19+00:00"
     }
    ],
-   "total": 4,
-   "last_success_at": "2026-11-27T13:51:02+00:00"
+   "total": 3,
+   "last_success_at": "2026-11-28T12:59:06+00:00"
   },
   {
    "id": "maynotecha_inst",
@@ -3778,7 +3812,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-27T13:51:04+00:00",
+   "checked_at": "2026-11-28T12:59:08+00:00",
    "status": "manual",
    "new": [],
    "latest": [],
@@ -3795,7 +3829,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-27T13:51:04+00:00",
+   "checked_at": "2026-11-28T12:59:08+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -3849,7 +3883,7 @@
     }
    ],
    "total": 1,
-   "last_success_at": "2026-11-27T13:51:04+00:00"
+   "last_success_at": "2026-11-28T12:59:08+00:00"
   },
   {
    "id": "anash",
@@ -3862,10 +3896,35 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-27T13:51:05+00:00",
+   "checked_at": "2026-11-28T12:59:09+00:00",
    "status": "ok",
-   "new": [],
+   "new": [
+    {
+     "id": "https://anash.org/?p=1138796",
+     "title": "After Selling Out 80,000 Copies, ‘Tanya Hasholeim’ Goes Online",
+     "url": "https://anash.org/after-selling-out-80000-copies-tanya-hasholeim-goes-online/",
+     "date": "Fri, 27 Nov 2026 17:55:00 +0000",
+     "blurb": "Marking 230 years since the printing of the Tanya, and in honor of Yud-Tes Kislev, the publishing house makes the full text of 'Tanya Hasholeim' accessible to the public at no cost.",
+     "first_seen": "2026-11-28T12:59:09+00:00"
+    }
+   ],
    "latest": [
+    {
+     "id": "https://anash.org/?p=1138796",
+     "title": "After Selling Out 80,000 Copies, ‘Tanya Hasholeim’ Goes Online",
+     "url": "https://anash.org/after-selling-out-80000-copies-tanya-hasholeim-goes-online/",
+     "date": "Fri, 27 Nov 2026 17:55:00 +0000",
+     "blurb": "Marking 230 years since the printing of the Tanya, and in honor of Yud-Tes Kislev, the publishing house makes the full text of 'Tanya Hasholeim' accessible to the public at no cost.",
+     "first_seen": "2026-11-28T12:59:09+00:00"
+    },
+    {
+     "id": "https://anash.org/?p=1138268",
+     "title": "Yud Tes Kislev Farbrengens in Crown Heights and Beyond",
+     "url": "https://anash.org/yud-tes-kislev-farbrengens-in-crown-heights-and-beyond/",
+     "date": "Fri, 27 Nov 2026 16:59:27 +0000",
+     "blurb": "Updated Friday : Farbrengens will be held in Anash communities across the U.S. and Canada to mark Yud Tes Kislev, the chag hageulah of the Alter Rebbe and the Rosh Hashana of Chassidus. Find a farbrengen near you in Anash.org’s list.",
+     "first_seen": "2026-11-27T13:01:39+00:00"
+    },
     {
      "id": "https://anash.org/?p=1138647",
      "title": "‘Is Chabad for Everyone?’ A Debate on Living Chassidus",
@@ -3880,14 +3939,6 @@
      "url": "https://anash.org/the-rebbe-read-our-basement-play-about-the-alter-rebbes-arrest/",
      "date": "Thu, 26 Nov 2026 23:00:46 +0000",
      "blurb": "When nine-year-old Chaim Block and his classmates put on a Yud Tes Kislev play to raise money for a pencil sharpener, the Rebbe’s reply to their script arrived by special delivery on Shabbos.",
-     "first_seen": "2026-11-27T13:01:39+00:00"
-    },
-    {
-     "id": "https://anash.org/?p=1138268",
-     "title": "Yud Tes Kislev Farbrengens in Crown Heights and Beyond",
-     "url": "https://anash.org/yud-tes-kislev-farbrengens-in-crown-heights-and-beyond/",
-     "date": "Thu, 26 Nov 2026 19:50:00 +0000",
-     "blurb": "Farbrengens will be held in Anash communities across the U.S. and Canada to mark Yud Tes Kislev, the chag hageulah of the Alter Rebbe and the Rosh Hashana of Chassidus. Find a farbrengen near you in Anash.org’s list.",
      "first_seen": "2026-11-27T13:01:39+00:00"
     },
     {
@@ -4436,7 +4487,7 @@
     }
    ],
    "total": 5,
-   "last_success_at": "2026-11-27T13:51:05+00:00"
+   "last_success_at": "2026-11-28T12:59:09+00:00"
   },
   {
    "id": "collive",
@@ -4449,7 +4500,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-27T13:51:07+00:00",
+   "checked_at": "2026-11-28T12:59:10+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -4466,7 +4517,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-27T13:51:07+00:00",
+   "checked_at": "2026-11-28T12:59:10+00:00",
    "status": "browser",
    "new": [],
    "latest": [],
@@ -4483,10 +4534,25 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-27T13:51:07+00:00",
+   "checked_at": "2026-11-28T12:59:10+00:00",
    "status": "ok",
-   "new": [],
+   "new": [
+    {
+     "id": "https://www.hageula.com/news/press/28334.htm",
+     "title": "קובץ \"הערות התמימים ואנ\"ש 770 בית משיח\"",
+     "url": "https://www.hageula.com/news/press/28334.htm",
+     "date": "",
+     "first_seen": "2026-11-28T12:59:10+00:00"
+    }
+   ],
    "latest": [
+    {
+     "id": "https://www.hageula.com/news/press/28334.htm",
+     "title": "קובץ \"הערות התמימים ואנ\"ש 770 בית משיח\"",
+     "url": "https://www.hageula.com/news/press/28334.htm",
+     "date": "",
+     "first_seen": "2026-11-28T12:59:10+00:00"
+    },
     {
      "id": "https://www.hageula.com/news/press/28330.htm",
      "title": "להורדה: הקובץ השבועי של ״דברי משיח״",
@@ -4545,7 +4611,7 @@
     }
    ],
    "total": 19,
-   "last_success_at": "2026-11-27T13:51:07+00:00"
+   "last_success_at": "2026-11-28T12:59:10+00:00"
   },
   {
    "id": "abc770",
@@ -4558,7 +4624,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-27T13:51:10+00:00",
+   "checked_at": "2026-11-28T12:59:12+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -4604,7 +4670,7 @@
     }
    ],
    "total": 10,
-   "last_success_at": "2026-11-27T13:51:10+00:00"
+   "last_success_at": "2026-11-28T12:59:12+00:00"
   },
   {
    "id": "kehot",
@@ -4617,7 +4683,7 @@
    "sections": [
     "whatsnew"
    ],
-   "checked_at": "2026-11-27T13:51:12+00:00",
+   "checked_at": "2026-11-28T12:59:14+00:00",
    "status": "ok",
    "new": [],
    "latest": [
@@ -5327,7 +5393,7 @@
     }
    ],
    "total": 197,
-   "last_success_at": "2026-11-27T13:51:12+00:00"
+   "last_success_at": "2026-11-28T12:59:14+00:00"
   }
  ],
  "browser_checks": {
